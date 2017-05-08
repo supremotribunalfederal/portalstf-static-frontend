@@ -1,0 +1,1 @@
+webpackJsonp([1],[,function(e,t,d){"use strict";var u=d(0),n=function(e){return e&&e.__esModule?e:{default:e}}(u),a=(0,n.default)("<div>Teste</div>");(0,n.default)("body").append(a)}],[1]);
