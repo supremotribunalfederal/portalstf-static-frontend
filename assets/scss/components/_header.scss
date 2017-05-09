@@ -1,0 +1,36 @@
+.header {
+  background: $stfBranco;
+  border: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+
+  &.navbar {
+    .navbar-header {
+      .navbar-brand {
+        height: auto;
+        margin: 0;
+        padding: 0;
+      }
+
+      .navbar-toggle {
+        background: $stfAzul;
+        border: 1px solid $stfAzulEscuro;
+        border-radius: 0;
+        color: $stfBranco;
+        height: 30px;
+        line-height: 30px;
+        margin: 0;
+        padding: 0;
+        width: 32px;
+        .icon-bar {
+          background: $stfBranco;
+          margin: 4px auto;
+          width: 16px;
+        }
+      }
+    }
+
+    .navbar-collapse {
+      border: 0;
+    }
+  }
+}

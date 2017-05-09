@@ -7,7 +7,9 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const PATHS = {
   dist: path.join(__dirname, '/dist'),
   src: path.join(__dirname, '/src'),
-  assets: path.join(__dirname, '/assets')
+  assets: path.join(__dirname, '/assets'),
+  scss: path.join(__dirname, '/assets/scss'),
+  img: path.join(__dirname, '/assets/img')
 };
 
 const VENDORS = ['bootstrap-loader'];
@@ -19,7 +21,7 @@ const common = {
   entry: {
     bundle: [
       path.join(PATHS.src, '/index.js'),
-      path.join(PATHS.src, '/scss/main.scss')
+      path.join(PATHS.scss, '/main.scss')
     ],
     vendor: VENDORS
   },
@@ -43,10 +45,15 @@ const common = {
       },
       {
         test: /\.scss$/,
-        loader: customCss.extract({
-          loader: 'css-loader!sass-loader'
+        use: customCss.extract({
+          use: 'css-loader!sass-loader'
         }),
         exclude: /node_modules/
+      },
+      {
+        test: /\.(jpg|jpeg|gif|png|svg|ico)$/i,
+        use: 'url-loader?limit=24000&publicPath=/&outputPath=assets/img/',
+        include: PATHS.img
       },
       {
         test:/\.(woff2?|svg)$/,

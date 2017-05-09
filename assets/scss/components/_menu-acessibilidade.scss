@@ -1,13 +1,13 @@
 .menu-acessibilidade {
-  background: $stfBlack;
-  color: $stfWhite;
+  background: $stfPreto;
+  color: $stfBranco;
   height: 36px;
   text-align: center;
 
   .btn {
     background: transparent;
     border: 0;
-    color: $stfWhite;
+    color: $stfBranco;
     height: 36px;
     line-height: 36px;
     padding: 0;
@@ -23,14 +23,14 @@
       &.active:focus {
         background: rgba(255, 255, 255, 0.16);
         border: 0;
-        color: $stfWhite;
+        color: $stfBranco;
         outline: 0 none;
       }
     }
   }
 
   .menu-internacionalizacao {
-    border-right: 1px solid $stfWhite;
+    border-right: 1px solid $stfBranco;
 
     .dropdown {
       .open {
@@ -38,7 +38,7 @@
         > .btn-default.dropdown-toggle.focus {
           background: transparent;
           border: 0;
-          color: $stfWhite;
+          color: $stfBranco;
           outline: 0 none;
         }
       }
@@ -46,7 +46,7 @@
   }
 
   .link-servidores {
-    border-right: 1px solid $stfWhite;
+    border-right: 1px solid $stfBranco;
   }
 
   .telefone-stf {
