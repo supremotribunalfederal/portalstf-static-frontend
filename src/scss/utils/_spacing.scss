@@ -1,0 +1,41 @@
+@for $i from 0 to 12 {
+  .m-#{$i * 8} {
+    margin: if($i==0, #{$i * 8}, #{$i * 8}px);
+  }
+
+  .m-t-#{$i * 8} {
+    margin-top: if($i==0, #{$i * 8}, #{$i * 8}px);
+  }
+
+  .m-r-#{$i * 8} {
+    margin-bottom: if($i==0, #{$i * 8}, #{$i * 8}px);
+  }
+
+  .m-b-#{$i * 8} {
+    margin-right: if($i==0, #{$i * 8}, #{$i * 8}px);
+  }
+
+  .m-l-#{$i * 8} {
+    margin-left: if($i==0, #{$i * 8}, #{$i * 8}px);
+  }
+
+  .p-#{$i * 8} {
+    padding: if($i==0, #{$i * 8}, #{$i * 8}px);
+  }
+
+  .p-t-#{$i * 8} {
+    padding-top: if($i==0, #{$i * 8}, #{$i * 8}px);
+  }
+
+  .p-r-#{$i * 8} {
+    padding-right: if($i==0, #{$i * 8}, #{$i * 8}px);
+  }
+
+  .p-b-#{$i * 8} {
+    padding-bottom: if($i==0, #{$i * 8}, #{$i * 8}px);
+  }
+
+  .p-l-#{$i * 8} {
+    padding-left: if($i==0, #{$i * 8}, #{$i * 8}px);
+  }
+}

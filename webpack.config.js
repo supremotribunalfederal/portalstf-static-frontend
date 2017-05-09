@@ -1,8 +1,8 @@
 const webpack = require('webpack');
 const path = require('path');
 const merge = require('merge');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
+const HtmlPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const PATHS = {
   dist: path.join(__dirname, '/dist'),
@@ -10,12 +10,17 @@ const PATHS = {
   assets: path.join(__dirname, '/assets')
 };
 
-const VENDORS = ['jquery'];
+const VENDORS = ['bootstrap-loader'];
+
+const customCss = new ExtractTextPlugin("styles/[name].css");
 
 var config = {};
 const common = {
   entry: {
-    bundle: path.join(PATHS.src, '/index.js'),
+    bundle: [
+      path.join(PATHS.src, '/index.js'),
+      path.join(PATHS.src, '/scss/main.scss')
+    ],
     vendor: VENDORS
   },
 
@@ -35,17 +40,37 @@ const common = {
         use: 'babel-loader',
         test: /\.js$/,
         include: PATHS.src
+      },
+      {
+        test: /\.scss$/,
+        loader: customCss.extract({
+          loader: 'css-loader!sass-loader'
+        }),
+        exclude: /node_modules/
+      },
+      {
+        test:/\.(woff2?|svg)$/,
+        use: 'url-loader?limit=10000'
+      },
+      {
+        test: /\.(ttf|eot)$/,
+        use: 'file-loader'
+      },
+      {
+        test:/bootstrap-sass[\/\\]assets[\/\\]javascripts[\/\\]/,
+        use: 'imports-loader?jQuery=jquery'
       }
     ]
   },
 
   plugins: [
-    new HtmlWebpackPlugin({
+    new HtmlPlugin({
       template: path.join(PATHS.src, '/index.html')
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: ['vendor', 'manifest']
-    })
+    }),
+    customCss
   ]
 };
 
