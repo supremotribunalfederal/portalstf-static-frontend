@@ -1,7 +1,9 @@
 // Utils
 @import "./utils/colors.scss";
 @import "./utils/spacing.scss";
+@import "./utils/sizing.scss";
 
 // Components
-@import "./components/header";
-@import "./components/menu-acessibilidade";
+@import "./secoes/header";
+@import "./secoes/menu-acessibilidade";
+@import "./secoes/pesquisa";

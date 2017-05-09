@@ -1,0 +1,62 @@
+.pesquisa {
+  background: $stfAzul;
+  opacity: 0.7;
+  padding: 0 24px;
+
+  .pesquisa-titulo {
+    color: $stfBranco;
+  }
+
+  .pesquisa-campos {
+    .campo-container {
+      margin: 16px 0;
+      overflow: hidden;
+      width: 100%;
+
+      .pesquisa-select {
+        border: 0;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 8px;
+      }
+
+      .campo-texto {
+        border: 0;
+        border-radius: 0;
+        height: 40px;
+        padding: 0 40px 0 8px;
+        width: 100%;
+      }
+
+      .btn {
+        background: $stfAzulClaro;
+        border: 0;
+        border-radius: 0;
+        color: $stfBranco;
+        height: 40px;
+        line-height: 40px;
+        padding: 0;
+        position: relative;
+        right: 0;
+        top: -40px;
+        width: 40px;
+
+        &.btn-default {
+          &:focus,
+          &:active,
+          &:active:focus,
+          &:active:hover,
+          &.dropdown-toggle:hover,
+          &.focus,
+          &.active:focus {
+            background: $stfAzulClaro;
+            border: 0;
+            color: $stfBranco;
+            opacity: 0.8;
+            outline: 0 none;
+          }
+        }
+      }
+    }
+  }
+}
