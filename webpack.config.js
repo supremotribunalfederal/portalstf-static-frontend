@@ -26,7 +26,7 @@ const common = {
 
   output: {
     path: PATHS.dist,
-    filename: '[name].[chunkhash].js',
+    filename: 'scripts/[name].[chunkhash].js',
     publicPath: '/'
   },
 
@@ -50,11 +50,11 @@ const common = {
       },
       {
         test:/\.(woff2?|svg)$/,
-        use: 'url-loader?limit=10000'
+        use: 'url-loader?limit=10000&name=[name].[ext]&publicPath=/&outputPath=assets/fonts/'
       },
       {
         test: /\.(ttf|eot)$/,
-        use: 'file-loader'
+        use: 'file-loader?name=[name].[ext]&publicPath=/&outputPath=assets/fonts/'
       },
       {
         test:/bootstrap-sass[\/\\]assets[\/\\]javascripts[\/\\]/,

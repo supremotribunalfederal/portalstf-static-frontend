@@ -1,0 +1,60 @@
+.menu-acessibilidade {
+  background: $stfBlack;
+  color: $stfWhite;
+  height: 36px;
+  text-align: center;
+
+  .btn {
+    background: transparent;
+    border: 0;
+    color: $stfWhite;
+    height: 36px;
+    line-height: 36px;
+    padding: 0;
+    width: 100%;
+
+    &.btn-default {
+      &:focus,
+      &:active,
+      &:active:focus,
+      &:active:hover,
+      &.dropdown-toggle:hover,
+      &.focus,
+      &.active:focus {
+        background: rgba(255, 255, 255, 0.16);
+        border: 0;
+        color: $stfWhite;
+        outline: 0 none;
+      }
+    }
+  }
+
+  .menu-internacionalizacao {
+    border-right: 1px solid $stfWhite;
+
+    .dropdown {
+      .open {
+        > .btn-default.dropdown-toggle:focus,
+        > .btn-default.dropdown-toggle.focus {
+          background: transparent;
+          border: 0;
+          color: $stfWhite;
+          outline: 0 none;
+        }
+      }
+    }
+  }
+
+  .link-servidores {
+    border-right: 1px solid $stfWhite;
+  }
+
+  .telefone-stf {
+    line-height: 36px;
+  }
+
+  div[class*="col-"] {
+    margin: 0;
+    padding: 0;
+  }
+}
