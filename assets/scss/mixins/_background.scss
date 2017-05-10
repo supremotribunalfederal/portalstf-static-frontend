@@ -1,0 +1,9 @@
+@mixin set-bg-img-1x-2x($image1x, $image2x) {
+  @media all and (max-width: $breakpointXLargeDevices - 1) {
+    background-image: url($image1x);
+  }
+
+  @media only screen and (min-resolution: 2dppx) {
+    background-image: url($image2x);
+  }
+}

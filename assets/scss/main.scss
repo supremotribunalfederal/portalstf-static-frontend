@@ -1,7 +1,13 @@
+@import "./variaveis/breakpoints";
+@import "./variaveis/colors";
+
+// Mixins
+@import "./mixins/background";
+
 // Utils
-@import "./utils/colors.scss";
-@import "./utils/spacing.scss";
-@import "./utils/sizing.scss";
+@import "./utils/spacing";
+@import "./utils/sizing";
+@import "./utils/tipografia";
 
 // Components
 @import "./secoes/header";

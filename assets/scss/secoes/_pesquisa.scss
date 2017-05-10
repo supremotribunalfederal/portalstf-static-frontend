@@ -1,6 +1,9 @@
 .pesquisa {
-  background: $stfAzul;
-  opacity: 0.7;
+  @include set-bg-img-1x-2x("../img/interface/top-bg-blue.jpg", "../img/interface/top-bg-blue@2x.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
   padding: 0 24px;
 
   .pesquisa-titulo {
