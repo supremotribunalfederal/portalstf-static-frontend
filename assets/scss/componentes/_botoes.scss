@@ -1,0 +1,39 @@
+.btn {
+  background: $stfBranco;
+  border: 0;
+  border-radius: 0;
+  color: $stfPreto;
+  font-size: 16px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 24px;
+
+  &.btn-raised {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.45);
+  }
+
+  &.com-icone {
+    padding-left: 0;
+    position: relative;
+
+    .icone {
+      background: $stfAzul;
+      color: $stfBranco;
+      float: left;
+      font-size: 24px;
+      height: 40px;
+      line-height: 40px;
+      top: 0;
+      width: 40px;
+      &:before {
+        position: relative;
+        top: 0;
+        left: -1px;
+      }
+    }
+
+    .texto {
+      padding-left: 24px;
+    }
+  }
+}

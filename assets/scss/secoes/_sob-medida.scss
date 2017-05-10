@@ -1,0 +1,15 @@
+.sob-medida {
+  background: $stfCinzaClaro;
+  padding: 24px 16px;
+
+  .sob-medida-item {
+    float: left;
+    
+    .item-titulo {
+      color: $stfCinza;
+      font-size: 18px;
+      line-height: 18px;
+      text-transform: uppercase;
+    }
+  } 
+}

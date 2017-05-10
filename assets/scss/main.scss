@@ -1,15 +1,20 @@
 @import "./variaveis/breakpoints";
-@import "./variaveis/colors";
+@import "./variaveis/cores";
 
 // Mixins
 @import "./mixins/background";
 
-// Utils
-@import "./utils/spacing";
-@import "./utils/sizing";
-@import "./utils/tipografia";
+// Componentes
+@import "./componentes/botoes";
 
-// Components
+// Seções
 @import "./secoes/header";
 @import "./secoes/menu-acessibilidade";
 @import "./secoes/pesquisa";
+@import "./secoes/sob-medida";
+
+// Utils
+@import "./utils/cores";
+@import "./utils/espacamento";
+@import "./utils/dimensoes";
+@import "./utils/tipografia";
