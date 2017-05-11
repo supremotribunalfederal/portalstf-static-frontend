@@ -1,0 +1,50 @@
+.calendario {
+  .header {
+    color: $stfBranco;
+    font-size: 1.143rem;
+    font-weight: bold;
+    text-align: center;
+
+    .mes {
+      background: $stfAzul;
+      margin: 0 4px;
+      padding: 4px 0;
+    }
+  }
+
+  table {
+    border-collapse: separate;
+    border-spacing: 4px;
+    width: 100%;
+
+    .celula {
+      padding: 8px;
+      text-align: center;
+      width: 0% + (100 / 7);
+    }
+
+    th {
+      background: $stfAzulClaro;
+      color: $stfBranco;      
+      @extend .celula;
+    }
+
+    td {
+      color: $stfCinzaEscuro;
+      @extend .celula;
+
+      &.ativa {
+        padding: 0;
+        a {
+          border: 1px solid $stfAzulClaro;
+          color: $stfAzulClaro;
+          display: block;
+          font-weight: bold;
+          padding: 8px;
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

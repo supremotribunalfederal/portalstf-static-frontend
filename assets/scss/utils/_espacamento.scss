@@ -1,41 +1,41 @@
 @for $i from 0 to 12 {
   .m-#{$i * 8} {
-    margin: if($i==0, #{$i * 8}, #{$i * 8}px);
+    margin: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
   }
 
   .m-t-#{$i * 8} {
-    margin-top: if($i==0, #{$i * 8}, #{$i * 8}px);
+    margin-top: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
   }
 
   .m-r-#{$i * 8} {
-    margin-bottom: if($i==0, #{$i * 8}, #{$i * 8}px);
+    margin-right: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
   }
 
   .m-b-#{$i * 8} {
-    margin-right: if($i==0, #{$i * 8}, #{$i * 8}px);
+    margin-bottom: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
   }
 
   .m-l-#{$i * 8} {
-    margin-left: if($i==0, #{$i * 8}, #{$i * 8}px);
+    margin-left: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
   }
 
   .p-#{$i * 8} {
-    padding: if($i==0, #{$i * 8}, #{$i * 8}px);
+    padding: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
   }
 
   .p-t-#{$i * 8} {
-    padding-top: if($i==0, #{$i * 8}, #{$i * 8}px);
+    padding-top: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
   }
 
   .p-r-#{$i * 8} {
-    padding-right: if($i==0, #{$i * 8}, #{$i * 8}px);
+    padding-right: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
   }
 
   .p-b-#{$i * 8} {
-    padding-bottom: if($i==0, #{$i * 8}, #{$i * 8}px);
+    padding-bottom: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
   }
 
   .p-l-#{$i * 8} {
-    padding-left: if($i==0, #{$i * 8}, #{$i * 8}px);
+    padding-left: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
   }
 }

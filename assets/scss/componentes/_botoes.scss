@@ -3,13 +3,13 @@
   border: 0;
   border-radius: 0;
   color: $stfPreto;
-  font-size: 16px;
+  font-size: 1rem;
   height: 40px;
   line-height: 40px;
   padding: 0 24px;
 
   &.btn-raised {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.45);
+    @include card-box-shadow();
   }
 
   &.com-icone {
@@ -20,7 +20,7 @@
       background: $stfAzul;
       color: $stfBranco;
       float: left;
-      font-size: 24px;
+      font-size: 1.714rem;
       height: 40px;
       line-height: 40px;
       top: 0;

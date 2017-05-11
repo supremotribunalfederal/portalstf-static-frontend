@@ -23,7 +23,14 @@
   font-weight: bold;
 }
 
+html {
+  font-size: 14px;
+  @media all and (min-width: $breakpointPhones) {
+    font-size: 16px;
+  }
+}
+
 body {
   font-family: 'Roboto', 'sans-serif';
-  font-size: 16px;
+  font-size: 1rem;
 }

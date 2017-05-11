@@ -1,0 +1,40 @@
+.noticias {
+  .noticia {
+    > * {
+      margin: 0;
+      padding: 8px;
+    }
+
+    .noticia-categoria {
+      padding-top: 8px;
+      text-transform: uppercase;
+    }
+
+    .noticia-titulo {
+      color: $stfAzulEscuro;
+      font-size: 1.286rem;
+    }
+
+    .noticia-imagem-xs {
+      height: 110px;
+      overflow: hidden;
+      padding: 0;
+      position: relative;
+      width: 100%;
+
+      img {
+        height: auto;
+        left: 50%;
+        position: relative;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+      }
+    }
+
+    .noticia-data-xs {
+      color: $stfCinza;
+      text-transform: uppercase;
+    }
+  }
+}

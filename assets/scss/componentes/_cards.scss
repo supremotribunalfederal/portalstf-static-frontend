@@ -1,0 +1,28 @@
+@mixin card() {
+  @include card-box-shadow();
+  .card-titulo {
+    background: $stfAzulClaro;
+    color: $stfBranco;
+    padding: 16px;
+    text-transform: uppercase;
+
+    h3 {
+      font-size: 1.286rem;
+      font-weight: 400;
+    }
+  }
+
+  .card-conteudo {
+    padding: 16px;
+  }
+}
+
+.card {
+  @include card();
+}
+
+.card-xs {
+  @media all and (max-width: $breakpointPhones - 1) {
+    @include card();
+  }
+}
