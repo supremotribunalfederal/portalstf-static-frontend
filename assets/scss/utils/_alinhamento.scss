@@ -1,0 +1,5 @@
+.text-center-xs {
+  @media all and (max-width: $breakpointPhones - 1) {
+    text-align: center;
+  }
+}

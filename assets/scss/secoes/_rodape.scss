@@ -1,0 +1,48 @@
+#rodape {
+  > div > div {
+    margin: 16px 0;
+  }
+  .social-links {
+    .midias-sociais {
+      div {
+        background-position: left top;
+        background-repeat: no-repeat;
+        background-size: 30px 30px;
+        display: inline-block;
+        height: 30px;
+        margin: 8px 4px;
+        width: 30px;
+
+        &.facebook {
+          @include set-bg-img-1x-2x("../img/social/post-facebook.png", "../img/social/post-facebook@2x.png");
+        }
+
+        &.twitter {
+          @include set-bg-img-1x-2x("../img/social/post-twitter.png", "../img/social/post-twitter@2x.png");
+        }
+
+        &.youtube {
+          @include set-bg-img-1x-2x("../img/social/video-youtube.png", "../img/social/video-youtube@2x.png");
+        }
+
+        a {
+          display: block;
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+
+    .midias-internas {
+      div {
+        a {
+          @include set-bg-img-1x-2x("../img/portleticon/tvjustica.png", "../img/portleticon/tvjustica@2x.png");
+          background-position: left center;
+          background-repeat: no-repeat;
+          background-size: 18px 18px;
+          padding-left: 24px;
+        }
+      }
+    }
+  }
+}
