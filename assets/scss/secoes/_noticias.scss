@@ -1,4 +1,4 @@
-.noticias {
+#noticias {
   .noticia {
     > * {
       margin: 0;
@@ -27,6 +27,7 @@
         left: 50%;
         position: relative;
         top: 50%;
+        -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         width: 100%;
       }
