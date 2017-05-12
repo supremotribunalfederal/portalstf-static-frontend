@@ -15,6 +15,20 @@
   .card-conteudo {
     padding: 16px;
 
+    .card-media-video {
+      height: 0;
+      padding-bottom: 0% + (9/16 * 100);
+      position: relative;
+
+      iframe {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+    }
+
     .card-media-lista {
       .media-lista-item {
         cursor: pointer;
