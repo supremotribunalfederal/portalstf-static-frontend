@@ -1,0 +1,22 @@
+#mapa-do-site {
+  background: $stfAzulEscuro;
+  padding: 16px;
+  @include card-box-shadow();
+
+  .lista-links {
+    border-left: 2px dotted $stfBrancoAlfa40;
+    color: $stfBranco;
+    margin: 16px 8px;
+    padding-left: 8px;
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    a {
+      color: inherit;
+      font-size: 0.875rem;
+    }
+  }
+}
