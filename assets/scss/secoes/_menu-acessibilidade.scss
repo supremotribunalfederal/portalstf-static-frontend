@@ -1,8 +1,50 @@
 .menu-acessibilidade {
   background: $stfPreto;
   color: $stfBranco;
+  
+  * {
+    font-size: 0.875rem;
+  }
+
   height: 36px;
   text-align: center;
+
+  .acessibilidade {
+    > div, 
+    > ul {
+      display: inline-block;
+      line-height: 36px;
+      margin: auto 8px;
+    }
+
+    a {
+      color: $stfBranco;
+      i {
+        font-size: 1rem;
+        top: 2px;
+      }
+    }
+
+    text-align: left;
+
+    .atalhos {
+      list-style: none;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        margin-right: 8px;
+
+        a {
+          span {
+            background: $stfBranco;
+            color: $stfPreto;
+            padding: 0 4px;
+          }
+        }
+      }
+    }
+  }
 
   .btn {
     background: transparent;
