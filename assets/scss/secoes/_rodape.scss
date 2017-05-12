@@ -1,8 +1,18 @@
 #rodape {
   > div > div {
-    margin: 16px 0;
+    margin: 0;
   }
+
+  .logo-STF {
+    height: 100%;
+    
+    a {
+      display: inline-block;
+    }
+  }
+
   .social-links {
+    font-size: 0;
     .midias-sociais {
       div {
         background-position: left top;
@@ -10,7 +20,7 @@
         background-size: 30px 30px;
         display: inline-block;
         height: 30px;
-        margin: 8px 4px;
+        margin-right: 4px;
         width: 30px;
 
         &.facebook {
@@ -34,6 +44,7 @@
     }
 
     .midias-internas {
+      font-size: 1rem;
       div {
         a {
           @include set-bg-img-1x-2x("../img/portleticon/tvjustica.png", "../img/portleticon/tvjustica@2x.png");

@@ -1,5 +1,23 @@
-.text-center-xs {
-  @media all and (max-width: $breakpointPhones - 1) {
+@media all and (max-width: $breakpointPhones - 1) {
+  .text-center-xs {
     text-align: center;
+  }
+}
+
+@media all and (max-width: $breakpointMediumDevices - 1) {
+  .text-center-lt-md {
+    text-align: center;
+  }
+}
+
+@media all and (min-width: $breakpointMediumDevices) {
+  .content-middle-md {
+    position: relative;
+    > * {
+      position: absolute;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
   }
 }
