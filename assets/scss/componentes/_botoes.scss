@@ -12,6 +12,19 @@
     @include card-box-shadow();
   }
 
+  &.btn-fluid {
+    width: 100%;
+  }
+
+  &.btn-default-borded {
+    border: 1px solid $stfAzul;
+    color: $stfAzul;
+  }
+
+  &.btn-upper {
+    text-transform: uppercase;
+  }
+
   &.com-icone {
     padding-left: 0;
     position: relative;

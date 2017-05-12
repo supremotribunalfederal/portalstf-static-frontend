@@ -1,0 +1,28 @@
+#tv-justica {
+  .card-titulo {
+    position: relative;
+
+    .ao-vivo {
+      position: absolute;
+      right: 16px;
+      text-transform: none;
+      top: 50%;
+
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+
+      img {
+        margin-right: 8px;
+      }
+    }
+
+    h3{
+      @include set-bg-img-1x-2x("../img/portleticon/tvjustica.png", "../img/portleticon/tvjustica@2x.png");
+      background-position: left top;
+      background-repeat: no-repeat;
+      background-size: 30px 30px;
+      line-height: 30px;
+      padding-left: 40px;
+    }
+  }
+}

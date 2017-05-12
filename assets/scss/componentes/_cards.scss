@@ -14,6 +14,25 @@
 
   .card-conteudo {
     padding: 16px;
+
+    .card-media-lista {
+      .media-lista-item {
+        cursor: pointer;
+        margin: 16px 0;
+
+        .item-texto {
+          padding:0 0 0 8px;
+        }
+      }
+    }
+
+    h4 {
+      font-size: 0.875rem;
+    }
+    small {
+      color: $stfCinza;
+      font-size: 0.75rem;
+    }
   }
 }
 
