@@ -52,10 +52,12 @@
       display: block;
       float: left;
       padding: 2px;
+      text-align: center;
       width: 0% + calc-porcentagem(57, 288);
 
       img {
         width: 100%;
+        max-width: 80px;
       }
     }
   }
