@@ -32,7 +32,7 @@ html {
   @media all and (min-width: $breakpointPhones) {
     font-size: 16px;
   }
-  @media screen and (min-resolution: 2dppx) {
+  @media screen and (min-resolution: 2dppx) and (min-width: $breakpointPhones) {
     font-size: 18px;
   }
 }
