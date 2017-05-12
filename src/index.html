@@ -10,14 +10,14 @@
   <div id="main" class="container-fluid p-0">
 
     <div class="menu-acessibilidade row p-0 m-0">
-      <div class="hidden-xs col-sm-3 col-md-4 p-0">
+      <div class="hidden-xs col-sm-3 col-md-2 col-lg-6 p-0">
         <div class="acessibilidade">
           <div>Acessibilidade</div>
           <div>
             <a href="#"><i class="glyphicon glyphicon-adjust"></i></a>
           </div>
-          <div class="hidden-sm">Ir para:</div>
-          <ul class="atalhos hidden-sm">
+          <div class="hidden-sm hidden-md">Ir para:</div>
+          <ul class="atalhos hidden-sm hidden-md">
             <li><a accesskey="1" href="#"><span>1</span> conteúdo</a></li>
             <li><a accesskey="2" href="#"><span>2</span> menu</a></li>
             <li><a accesskey="3" href="#pesquisa"><span>3</span> busca</a></li>
@@ -25,9 +25,9 @@
           </ul>
         </div>
       </div>
-      <div class="col-xs-12 col-sm-9 col-md-8 p-0">
+      <div class="col-xs-12 col-sm-9 col-md-10 col-lg-6 p-0">
         <div class="col-xs-6 col-sm-9">
-          <div class="col-xs-4 col-sm-4">
+          <div class="col-xs-4 col-sm-4 col-lg-6">
             <div class="dropdown menu-internacionalizacao">
               <button class="btn btn-default dropdown-toggle" type="button" id="internacionalizacao" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 <span class="hidden-xs hidden-sm">Relações internacionais</span>
@@ -40,10 +40,10 @@
               </ul>
             </div>
           </div>
-          <div class="col-xs-8 col-sm-4 link-servidores">
+          <div class="col-xs-8 col-sm-4 col-lg-3 link-servidores">
             <a href="https://servidor.stf.jus.br" target="_blank" class="btn btn-default">Servidores</a>
           </div>
-          <div class="hidden-xs col-sm-4 link-servidores">
+          <div class="hidden-xs col-sm-4 col-lg-3 link-servidores">
             <a href="https://servidor.stf.jus.br" target="_blank" class="btn btn-default">Fale conosco</a>
           </div>
         </div>
@@ -52,33 +52,34 @@
       
     </div>
 
-    <header class="header navbar navbar-default p-8">
-      <div class="navbar-header">
-        <h1 class="hidden">Supremo Tribunal Federal</h1>
-        <a href="#" class="navbar-brand">
-          <img src="assets/img/institucional/logo-STF.png" alt="Supremo Tribunal Federal">
-        </a>
-        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#menu-principal" aria-expanded="false">
-          <span class="sr-only">Abrir menu principal</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+    <div id="header" class="header navbar navbar-default p-8">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#menu-principal" aria-expanded="false">
+            <span class="sr-only">Abrir menu principal</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <h1 class="hidden">Supremo Tribunal Federal</h1>
+          <a href="#" class="navbar-brand">
+            <img src="assets/img/institucional/logo-STF.png" alt="Supremo Tribunal Federal">
+          </a>
+        </div>
+        <div id="menu-principal" class="collapse navbar-collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li><a href="#">O STF</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Processos</a></li>
+            <li><a href="#">Jurisprudência</a></li>
+            <li><a href="#">Repercussão Geral</a></li>
+            <li><a href="#">Leis e Publicações</a></li>
+            <li><a href="#">Transparência</a></li>
+          </ul>
+        </div>
       </div>
-      <div id="menu-principal" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <li>
-            <a href="#">O STF</a>
-            <a href="#">Serviços</a>
-            <a href="#">Processos</a>
-            <a href="#">Jurisprudência</a>
-            <a href="#">Repercussão Geral</a>
-            <a href="#">Leis e Publicações</a>
-            <a href="#">Transparência</a>
-          </li>
-        </ul>
-      </div>
-    </header>
+      
+    </div>
 
     <div id="pesquisa" class="pesquisa row m-0">
       <h3 class="pesquisa-titulo">O que você procura?</h3>
