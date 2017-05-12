@@ -5,12 +5,16 @@
 @import "./mixins/background";
 @import "./mixins/sombras";
 
+// Funcoes
+@import "./funcoes/dimensoes";
+
 // Componentes
 @import "./componentes/botoes";
 @import "./componentes/calendarios";
 @import "./componentes/cards";
 
 // Seções
+@import "./secoes/agenda-dos-ministros";
 @import "./secoes/header";
 @import "./secoes/menu-acessibilidade";
 @import "./secoes/noticias";
