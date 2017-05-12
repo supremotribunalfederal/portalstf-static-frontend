@@ -1,0 +1,26 @@
+#audiencias-publicas {
+  overflow: hidden;
+  .audiencia-icone {
+    float: left;
+  }
+
+  .audiencia-processo {
+    float: left;
+
+    .processo-numero {
+      color: $stfAzulClaro;
+      font-size: 1.286rem;
+      line-height: 1.1;
+    }
+
+    .processo-relator {
+      color: $stfCinza;
+    }
+  }
+
+  .audiencia-descricao {
+    background: $stfAzulCinza;
+    clear: both;
+    padding: 4px 8px;
+  }
+}
