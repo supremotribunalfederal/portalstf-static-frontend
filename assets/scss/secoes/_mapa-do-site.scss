@@ -3,10 +3,16 @@
   padding: 16px;
   @include card-box-shadow();
 
+  @media all and (min-width: $breakpointMediumDevices) {
+    .col-md-20p{ 
+      width: 20%;
+    }
+  }
+
   .lista-links {
     border-left: 2px dotted $stfBrancoAlfa40;
     color: $stfBranco;
-    margin: 16px 8px;
+    margin: 16px;
     padding-left: 8px;
 
     ul {

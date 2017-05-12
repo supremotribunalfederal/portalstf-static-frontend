@@ -1,28 +1,28 @@
 @font-face {
-  font-family: 'Roboto', 'sans-serif';
-  src: url(../fonts/Roboto-regular.woff) format('woff'),
-       url(../fonts/Roboto-regular.woff) format('woff2');
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-regular.woff') format('woff'),
+       url('../fonts/Roboto-regular.woff') format('woff2');
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Roboto', 'sans-serif';
-  src: url(../fonts/Roboto-italic.woff) format('woff'),
-       url(../fonts/Roboto-italic.woff) format('woff2');
+  src: url('../fonts/Roboto-italic.woff') format('woff'),
+       url('../fonts/Roboto-italic.woff') format('woff2');
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Roboto', 'sans-serif';
-  src: url(../fonts/Roboto-700.woff) format('woff'),
-       url(../fonts/Roboto-700.woff) format('woff2');
+  src: url('../fonts/Roboto-700.woff') format('woff'),
+       url('../fonts/Roboto-700.woff') format('woff2');
   font-weight: bold;
 }
 
 @font-face {
   font-family: 'Roboto', 'sans-serif';
-  src: url(../fonts/Roboto-700italic.woff) format('woff'),
-       url(../fonts/Roboto-700italic.woff) format('woff2');
+  src: url('../fonts/Roboto-700italic.woff') format('woff'),
+       url('../fonts/Roboto-700italic.woff') format('woff2');
   font-style: italic;
   font-weight: bold;
 }
@@ -31,6 +31,9 @@ html {
   font-size: 16px;
   @media all and (min-width: $breakpointPhones) {
     font-size: 16px;
+  }
+  @media screen and (min-resolution: 2dppx) {
+    font-size: 18px;
   }
 }
 
