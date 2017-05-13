@@ -54,8 +54,14 @@
   @include card();
 }
 
-.card-xs {
-  @media all and (max-width: $breakpointPhones - 1) {
+@media all and (max-width: $breakpointPhones - 1) {
+  .card-xs {
+    @include card();
+  }
+}
+
+@media all and (max-width: $breakpointMediumDevices - 1) {
+  .card-lt-md {
     @include card();
   }
 }
