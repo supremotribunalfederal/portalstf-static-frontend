@@ -84,6 +84,50 @@
   }
 }
 
+@media all and (min-width: $breakpointPhones) and (max-width: $breakpointMediumDevices - 1) {
+  @for $i from 0 to 12 {
+    .m-sm-#{$i * 8} {
+      margin: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
+    }
+
+    .m-t-sm-#{$i * 8} {
+      margin-top: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
+    }
+
+    .m-r-sm-#{$i * 8} {
+      margin-right: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
+    }
+
+    .m-b-sm-#{$i * 8} {
+      margin-bottom: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
+    }
+
+    .m-l-sm-#{$i * 8} {
+      margin-left: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
+    }
+
+    .p-sm-#{$i * 8} {
+      padding: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
+    }
+
+    .p-t-sm-#{$i * 8} {
+      padding-top: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
+    }
+
+    .p-r-sm-#{$i * 8} {
+      padding-right: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
+    }
+
+    .p-b-sm-#{$i * 8} {
+      padding-bottom: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
+    }
+
+    .p-l-sm-#{$i * 8} {
+      padding-left: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
+    }
+  }
+}
+
 @media all and (min-width: $breakpointMediumDevices) and (max-width: $breakpointLargeDevices - 1) {
   @for $i from 0 to 12 {
     .m-md-#{$i * 8} {

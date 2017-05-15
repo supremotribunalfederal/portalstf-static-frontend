@@ -9,13 +9,15 @@
     font-size: 0.875rem;
   }
   small {
-    color: $stfCinza;
     font-size: 0.75rem;
   }
 
   ul {
     list-style: none;
     padding: 0;
+    li {
+      margin: 8px 0;
+    }
   }
   
   .card-titulo {
@@ -62,17 +64,9 @@
       h4 {
         font-size: 1rem;
       }
-      
+
       background: $stfAzulCinza;
       padding: 4px 8px;
-
-      &.__fundo-escuro {
-        background: $stfAzulEscuro;
-        color: $stfBranco;
-        a {
-          color: $stfBranco;
-        }
-      }
     }
   }
 }
