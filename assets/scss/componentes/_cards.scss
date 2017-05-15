@@ -40,6 +40,28 @@
       }
     }
 
+    .card-caixa-texto {
+      background: $stfAzulCinza;
+      padding: 4px 8px;
+
+      &.__fundo-escuro {
+        background: $stfAzulEscuro;
+        color: $stfBranco;
+        a {
+          color: $stfBranco;
+        }
+      }
+
+      h4 {
+        font-size: 1rem;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+    }
+
     h4 {
       font-size: 0.875rem;
     }

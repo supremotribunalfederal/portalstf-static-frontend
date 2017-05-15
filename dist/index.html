@@ -8,8 +8,7 @@
 <link href="/styles/vendor.css" rel="stylesheet"><link href="/styles/bundle.css" rel="stylesheet"></head>
 <body>
   <div id="main" class="container-fluid p-0">
-
-    <div class="menu-acessibilidade row p-0 m-0">
+    <section class="menu-acessibilidade row p-0 m-0">
       <div class="hidden-xs col-sm-3 col-md-2 col-lg-6 p-0">
         <div class="acessibilidade">
           <div>Acessibilidade</div>
@@ -18,8 +17,8 @@
           </div>
           <div class="hidden-sm hidden-md">Ir para:</div>
           <ul class="atalhos hidden-sm hidden-md">
-            <li><a accesskey="1" href="#"><span>1</span> conteúdo</a></li>
-            <li><a accesskey="2" href="#"><span>2</span> menu</a></li>
+            <li><a accesskey="1" href="#conteudo"><span>1</span> conteúdo</a></li>
+            <li><a accesskey="2" href="#menu-principal"><span>2</span> menu</a></li>
             <li><a accesskey="3" href="#pesquisa"><span>3</span> busca</a></li>
             <li><a accesskey="4" href="#rodape"><span>4</span> rodapé</a></li>
           </ul>
@@ -50,7 +49,7 @@
         <div class="col-xs-6 col-sm-3 telefone-stf"><i class="glyphicon glyphicon-earphone"></i> 3217-3000</div>
       </div>
       
-    </div>
+    </section>
 
     <header id="header" class="header navbar navbar-default p-8">
       <div class="container-fluid">
@@ -81,7 +80,7 @@
       
     </header>
 
-    <div id="pesquisa" class="pesquisa row m-0">
+    <section id="pesquisa" class="pesquisa row m-0">
       <h3 class="pesquisa-titulo">O que você procura?</h3>
       <div class="pesquisa-campos">
         <div class="hide-md campo-container">
@@ -98,11 +97,11 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div id="sob-medida" class="sob-medida">
+    <section id="sob-medida" class="sob-medida m-b-24">
       <div class="row p-0 m-0">
-        <div class="sob-medida-item p-0">
+        <div class="sob-medida-item p-0 m-r-8">
           <div class="item-titulo">Sob medida</div>
           <div class="item-titulo __stf-azul-escuro">Para <strong>você</strong></div>
         </div>
@@ -124,392 +123,592 @@
           </div>
         </div>
 
-        <div class="sob-medida-item p-0 pull-left hidden-xs">
+        <div class="sob-medida-item p-0 pull-left hidden-xs m-r-8">
           <button class="btn btn-default btn-raised com-icone" type="button" id="sob-medida-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="icone glyphicon glyphicon-list-alt" aria-hidden="true"></span>
             <span class="texto">Advogados</span>
           </button>
         </div>
 
-        <div class="sob-medida-item p-0 pull-left hidden-xs">
+        <div class="sob-medida-item p-0 pull-left hidden-xs m-r-8">
           <button class="btn btn-default btn-raised com-icone" type="button" id="sob-medida-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="icone glyphicon glyphicon-list-alt" aria-hidden="true"></span>
             <span class="texto">Estudantes</span>
           </button>
         </div>
 
-        <div class="sob-medida-item p-0 pull-left hidden-xs">
+        <div class="sob-medida-item p-0 pull-left visible-sm">
+          <div class="dropdown">
+            <button class="btn btn-default btn-raised com-icone" type="button" id="sob-medida-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="icone glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+              <span class="texto">Selecione</span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="sob-medida-dropdown">
+              <li>
+                <a href="#">Órgãos</a>
+                <a href="#">Cidadãos</a>
+                <a href="#">Imprensa</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sob-medida-item p-0 pull-left hidden-xs hidden-sm m-r-8">
           <button class="btn btn-default btn-raised com-icone" type="button" id="sob-medida-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="icone glyphicon glyphicon-list-alt" aria-hidden="true"></span>
             <span class="texto">Órgãos</span>
           </button>
         </div>
 
-        <div class="sob-medida-item p-0 pull-left hidden-xs">
+        <div class="sob-medida-item p-0 pull-left visible-md">
+          <div class="dropdown">
+            <button class="btn btn-default btn-raised com-icone" type="button" id="sob-medida-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="icone glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+              <span class="texto">Selecione</span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="sob-medida-dropdown">
+              <li>
+                <a href="#">Cidadãos</a>
+                <a href="#">Imprensa</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sob-medida-item p-0 pull-left hidden-xs hidden-sm hidden-md m-r-8">
           <button class="btn btn-default btn-raised com-icone" type="button" id="sob-medida-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="icone glyphicon glyphicon-list-alt" aria-hidden="true"></span>
             <span class="texto">Cidadãos</span>
           </button>
         </div>
 
-        <div class="sob-medida-item p-0 pull-left hidden-xs">
+        <div class="sob-medida-item p-0 pull-left hidden-xs hidden-sm hidden-md">
           <button class="btn btn-default btn-raised com-icone" type="button" id="sob-medida-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="icone glyphicon glyphicon-list-alt" aria-hidden="true"></span>
             <span class="texto">Imprensa</span>
           </button>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div id="conteudo" class="container-fluid p-0">
-      <div id="noticias" class="noticias p-16">
-        <div class="card-xs noticia m-b-24">
-          <div class="noticia-categoria">Plenário do STF</div>
-          <h3 class="noticia-titulo">Plenário do STF elege ministro substituto do TSE e vota lista tríplice</h3>
-          <p class="noticia-resumo">A lista é composta pelos advogados: Tarcísio Vieira de Carvalho Neto, Sérgio Silveira Banhos e Carlos Bastide Horbach.</p>
-          <div class="noticia-imagem-xs visible-xs">
-            <img src="https://fakeimg.pl/330x190/" alt="">
-          </div>
-          <div class="noticia-data-xs">Há 3 minutos</div>
-        </div>
-
-        <div class="card-xs noticia m-b-24">
-          <div class="noticia-categoria">Plenário do STF</div>
-          <h3 class="noticia-titulo">Plenário do STF elege ministro substituto do TSE e vota lista tríplice</h3>
-          <p class="noticia-resumo">A lista é composta pelos advogados: Tarcísio Vieira de Carvalho Neto, Sérgio Silveira Banhos e Carlos Bastide Horbach.</p>
-          <div class="noticia-imagem-xs visible-xs">
-            <img src="https://fakeimg.pl/330x190/" alt="">
-          </div>
-          <div class="noticia-data-xs">Há 3 minutos</div>
-        </div>
-      </div>
-      <div id="pautas-julgamento" class="pautas-julgamento card m-b-24">
-        <div class="card-titulo">
-          <h3 class="m-0">Pautas de julgamento</h3>
-        </div>
-        <div class="card-conteudo">
-          <div class="calendario">
-            <div class="header">
-              <div class="mes">Janeiro/17</div>
-            </div>
-            <table>
-              <thead>
-                <tr>
-                  <th>D</th>
-                  <th>S</th>
-                  <th>T</th>
-                  <th>Q</th>
-                  <th>Q</th>
-                  <th>S</th>
-                  <th>S</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td></td>
-                  <td>1</td>
-                  <td>2</td>
-                  <td class="ativa"><a href="#">3</a></td>
-                  <td class="ativa"><a href="#">4</a></td>
-                  <td>5</td>
-                  <td>6</td>
-                </tr>
-                <tr>
-                  <td>7</td>
-                  <td>8</td>
-                  <td>9</td>
-                  <td class="ativa"><a href="#">10</a></td>
-                  <td class="ativa"><a href="#">11</a></td>
-                  <td>12</td>
-                  <td>13</td>
-                </tr>
-                <tr>
-                  <td>14</td>
-                  <td>15</td>
-                  <td>6</td>
-                  <td class="ativa"><a href="#">17</a></td>
-                  <td class="ativa"><a href="#">18</a></td>
-                  <td>19</td>
-                  <td>20</td>
-                </tr>
-                <tr>
-                  <td>21</td>
-                  <td>22</td>
-                  <td>23</td>
-                  <td class="ativa"><a href="#">24</a></td>
-                  <td class="ativa"><a href="#">25</a></td>
-                  <td>26</td>
-                  <td>27</td>
-                </tr>
-                <tr>
-                  <td>28</td>
-                  <td>29</td>
-                  <td>30</td>
-                  <td class="ativa"><a href="#">31</a></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <div id="tv-justica" class="tv-justica card m-b-24">
-        <div class="card-titulo">
-          <h3 class="m-0">TV Justiça</h3>
-          <div class="ao-vivo"><img src="assets/img/portleticon/videocam.svg" alt="ao vivo">ao vivo</div>
-        </div>
-        <div class="card-conteudo">
-          <div class="card-media-video">
-            <iframe width="560" height="349" src="https://www.youtube.com/embed/lMX9c4bYxvw" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <div class="card-media-lista">
-            <div class="media-lista-item row">
-              <div class="item-imagem col-xs-4 col-md-2 p-0">
-                <img width="100%" src="https://i.ytimg.com/vi/JCTxR4jDoxQ/hqdefault.jpg?custom=true&w=168&h=94&stc=true&jpg444=true&jpgq=90&sp=68&sigh=88oMebqkLyq0lnDuhOu00Qut_ow" alt="">
+    <section id="conteudo" class="container-fluid m-0 p-0">
+      <div class="row m-0 p-0">
+        <div class="col-xs-12 col-sm-6 col-md-7 col-lg-8 row m-0 p-16">
+          <div id="noticias" class="noticias m-b-48">
+            
+            <div class="card-lt-md noticia m-b-24 row m-0">
+              <div class="col-md-6 hidden-xs hidden-sm p-0">
+                <div class="noticia-imagem hidden-xs">
+                  <img src="https://fakeimg.pl/330x190/" alt="">
+                </div>
               </div>
-              <div class="item-texto col-xs-8 col-md-10">
-                <h4 class="m-0">Pleno - Negada extradição de argentino acusado de crimes prescritos</h4>
-                <small>1.896 visualizações</small>
+              <div class="col-xs-12 col-md-6 p-0">
+                <div class="noticia-categoria p-l-16 p-r-16">Plenário do STF <span class="hidden-xs hidden-sm noticia-data">·</span><span class="hidden-xs hidden-sm noticia-data">Há 3 minutos</span></div>
+                <h3 class="noticia-titulo p-l-16 p-r-16">Plenário do STF elege ministro substituto do TSE e vota lista tríplice</h3>
+                <p class="noticia-resumo p-l-16 p-r-16">A lista é composta pelos advogados: Tarcísio Vieira de Carvalho Neto, Sérgio Silveira Banhos e Carlos Bastide Horbach.</p>
+                <div class="noticia-compartilhar hidde-xs hidden-sm p-l-16 m-t-32">
+                  <div class="facebook">
+                    <a href="#" class="text-hide"></a>
+                  </div>
+                  <div class="twitter">
+                    <a href="#" class="text-hide"></a>
+                  </div>
+                </div>
+                <div class="noticia-imagem-xs visible-xs visible-sm">
+                  <img src="https://fakeimg.pl/330x190/" alt="">
+                </div>
+                <div class="noticia-data-xs visible-xs visible-sm p-l-16 p-r-16 m-t-8 m-b-8">Há 3 minutos</div>
               </div>
             </div>
 
-            <div class="media-lista-item row">
-              <div class="item-imagem col-xs-4 col-md-2 p-0">
-                <img width="100%" src="https://i.ytimg.com/vi/JCTxR4jDoxQ/hqdefault.jpg?custom=true&w=168&h=94&stc=true&jpg444=true&jpgq=90&sp=68&sigh=88oMebqkLyq0lnDuhOu00Qut_ow" alt="">
+            <div class="card-lt-md noticia m-b-24 row m-0">
+              <div class="col-md-6 hidden-xs hidden-sm p-0">
+                <div class="noticia-imagem hidden-xs">
+                  <img src="https://fakeimg.pl/330x190/" alt="">
+                </div>
               </div>
-              <div class="item-texto col-xs-8 col-md-10">
-                <h4 class="m-0">Pleno - Negada extradição de argentino acusado de crimes prescritos</h4>
-                <small>1.896 visualizações</small>
+              <div class="col-xs-12 col-md-6 p-0">
+                <div class="noticia-categoria p-l-16 p-r-16">Plenário do STF <span class="hidden-xs hidden-sm noticia-data">·</span><span class="hidden-xs hidden-sm noticia-data">Há 3 minutos</span></div>
+                <h3 class="noticia-titulo p-l-16 p-r-16">Plenário do STF elege ministro substituto do TSE e vota lista tríplice</h3>
+                <p class="noticia-resumo p-l-16 p-r-16">A lista é composta pelos advogados: Tarcísio Vieira de Carvalho Neto, Sérgio Silveira Banhos e Carlos Bastide Horbach.</p>
+                <div class="noticia-compartilhar hidde-xs hidden-sm p-l-16 m-t-32">
+                  <div class="facebook">
+                    <a href="#" class="text-hide"></a>
+                  </div>
+                  <div class="twitter">
+                    <a href="#" class="text-hide"></a>
+                  </div>
+                </div>
+                <div class="noticia-imagem-xs visible-xs visible-sm">
+                  <img src="https://fakeimg.pl/330x190/" alt="">
+                </div>
+                <div class="noticia-data-xs visible-xs visible-sm p-l-16 p-r-16 m-t-8 m-b-8">Há 3 minutos</div>
               </div>
             </div>
 
-            <div class="media-lista-item row">
-              <div class="item-imagem col-xs-4 col-md-2 p-0">
-                <img width="100%" src="https://i.ytimg.com/vi/JCTxR4jDoxQ/hqdefault.jpg?custom=true&w=168&h=94&stc=true&jpg444=true&jpgq=90&sp=68&sigh=88oMebqkLyq0lnDuhOu00Qut_ow" alt="">
-              </div>
-              <div class="item-texto col-xs-8 col-md-10">
-                <h4 class="m-0">Pleno - Negada extradição de argentino acusado de crimes prescritos</h4>
-                <small>1.896 visualizações</small>
+            <div class="card-lt-md noticia m-b-24 row m-0">
+              <div class="col-xs-12 p-0">
+                <div class="noticia-categoria p-l-16 p-r-16">Plenário do STF <span class="hidden-xs hidden-sm noticia-data">·</span><span class="hidden-xs hidden-sm noticia-data">Há 3 minutos</span></div>
+                <h3 class="noticia-titulo p-l-16 p-r-16">Plenário do STF elege ministro substituto do TSE e vota lista tríplice</h3>
+                <p class="noticia-resumo p-l-16 p-r-16">A lista é composta pelos advogados: Tarcísio Vieira de Carvalho Neto, Sérgio Silveira Banhos e Carlos Bastide Horbach.</p>
+                <div class="noticia-compartilhar hidde-xs hidden-sm p-l-16 m-t-32">
+                  <div class="facebook">
+                    <a href="#" class="text-hide"></a>
+                  </div>
+                  <div class="twitter">
+                    <a href="#" class="text-hide"></a>
+                  </div>
+                </div>
+                <div class="noticia-data-xs visible-xs visible-sm p-l-16 p-r-16 m-t-8 m-b-8">Há 3 minutos</div>
               </div>
             </div>
             
-            <div class="row m-0">
-              <a href="#" target="_blank" class="btn btn-raised btn-fluid btn-default-borded btn-upper">Mais vídeos da TV Justiça</a>
+            <div class="noticias-titulo-area">
+              Processos em destaque
+            </div>
+
+            <div class="card-lt-md noticia m-b-24 row m-0">
+              <div class="col-md-6 hidden-xs hidden-sm p-0">
+                <div class="noticia-imagem hidden-xs">
+                  <img src="https://fakeimg.pl/330x190/" alt="">
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-6 p-0">
+                <div class="noticia-categoria p-l-16 p-r-16">Plenário do STF <span class="hidden-xs hidden-sm noticia-data">·</span><span class="hidden-xs hidden-sm noticia-data">Há 3 minutos</span></div>
+                <h3 class="noticia-titulo p-l-16 p-r-16">Plenário do STF elege ministro substituto do TSE e vota lista tríplice</h3>
+                <p class="noticia-resumo p-l-16 p-r-16">A lista é composta pelos advogados: Tarcísio Vieira de Carvalho Neto, Sérgio Silveira Banhos e Carlos Bastide Horbach.</p>
+                <div class="noticia-compartilhar hidde-xs hidden-sm p-l-16 m-t-32">
+                  <div class="facebook">
+                    <a href="#" class="text-hide"></a>
+                  </div>
+                  <div class="twitter">
+                    <a href="#" class="text-hide"></a>
+                  </div>
+                </div>
+                <div class="noticia-imagem-xs visible-xs visible-sm">
+                  <img src="https://fakeimg.pl/330x190/" alt="">
+                </div>
+                <div class="noticia-data-xs visible-xs visible-sm p-l-16 p-r-16 m-t-8 m-b-8">Há 3 minutos</div>
+              </div>
+            </div>
+          </div>
+
+          <div id="cadastro-newsletter" class="card m-b-48"></div>
+
+          <div id="jurisprudencia" class="card m-b-48">
+            <div class="card-titulo">Jurisprudência do STF</div>
+            <div class="card-conteudo row">
+              <div class="col-md-6 col-lg-4">
+                <div class="card-caixa-texto m-b-16">
+                  <h4 class="m-0 m-t-8 m-b-16">Pesquisas prontas</h4>
+                  <ul>
+                    <li><a href="#">Por ramo do Direito</a></li>
+                    <li><a href="#">Casos notórios</a></li>
+                  </ul>
+                </div>
+
+                <div class="card-caixa-texto m-b-16">
+                  <h4 class="m-0 m-t-8 m-b-16">Jurisprudência selecionada</h4>
+                  <ul>
+                    <li><a href="#">Temas relevantes</a></li>
+                    <li><a href="#">Indicada por Ministros</a></li>
+                  </ul>
+                </div>
+
+                <div class="card-caixa-texto m-b-16 m-b-lg-0">
+                  <h4 class="m-0 m-t-8 m-b-16">Acórdãos</h4>
+                  <ul>
+                    <li><a href="#">Inteiro teor de acórdãos</a></li>                    
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card-caixa-texto m-b-16">
+                  <h4 class="m-0 m-t-8 m-b-16">Súmulas</h4>
+                  <ul>
+                    <li><a href="#">Súmulas</a></li>
+                    <li><a href="#">Súmulas Vinculantes</a></li>
+                    <li><a href="#">Propstas de Súmulas Vinculantes</a></li>
+                    <li><a href="#">Aplicação das Súmulas no STF</a></li>
+                  </ul>
+                </div>
+
+                <div class="card-caixa-texto m-b-16">
+                  <h4 class="m-0 m-t-8 m-b-16">Informativos</h4>
+                  <ul>
+                    <li><a href="#">Informativo semanal</a></li>
+                    <li><a href="#">Informativo por temas</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-12 col-lg-4 row m-0">
+                <div class="col-md-6 col-lg-12 p-0 p-r-16 p-r-lg-0">
+                  <div class="card-caixa-texto __fundo-escuro p-b-16 m-b-16">
+                    <h4 class="m-0 m-t-8 m-b-16">Colicitação de pesquisas</h4>
+                    <p>Não encontrou uma jurisprudência?<br>Nós te ajudamos a pesquisar!</p>
+                    <button class="btn btn-default btn-raised btn-fluid btn-upper __stf-azul-claro" type="button" href="#">Quero Ajuda!</button>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-12 p-0 p-l-16 p-l-lg-0">
+                  <div class="card-caixa-texto">
+                    <h4 class="m-0 m-t-8 m-b-16">Mais informações</h4>
+                    <ul>
+                      <li><a href="#">Repositório de jurisprudência</a></li>
+                      <li><a href="#">Teses jurídicas</a></li>
+                      <li><a href="#">Omissão inconstitucional</a></li>
+                      <li><a href="#">Glossário jurídico</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="estatiscas-processuais" class="col-md-8">
+            <h3>Estatísticas processuais</h3>
+            <div class="estatisticas-conteudo">
+              <img width="100%" src="assets/img/estatisticas/placeholder.png" alt="">
+            </div>
+          </div>
+
+          <div id="stf-em-numeros" class="col-md-4 card">
+            <div class="card-conteudo">
+              <h3 class="m-0">STF em números</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cards laterais -->
+        <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 p-16 m-0">
+          <div id="pautas-julgamento" class="pautas-julgamento card m-b-24">
+            <div class="card-titulo">
+              <h3 class="m-0">Pautas de julgamento</h3>
+            </div>
+            <div class="card-conteudo">
+              <div class="calendario">
+                <div class="header">
+                  <div class="mes">Janeiro/17</div>
+                </div>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>D</th>
+                      <th>S</th>
+                      <th>T</th>
+                      <th>Q</th>
+                      <th>Q</th>
+                      <th>S</th>
+                      <th>S</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td></td>
+                      <td>1</td>
+                      <td>2</td>
+                      <td class="ativa"><a href="#">3</a></td>
+                      <td class="ativa"><a href="#">4</a></td>
+                      <td>5</td>
+                      <td>6</td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td>8</td>
+                      <td>9</td>
+                      <td class="ativa"><a href="#">10</a></td>
+                      <td class="ativa"><a href="#">11</a></td>
+                      <td>12</td>
+                      <td>13</td>
+                    </tr>
+                    <tr>
+                      <td>14</td>
+                      <td>15</td>
+                      <td>6</td>
+                      <td class="ativa"><a href="#">17</a></td>
+                      <td class="ativa"><a href="#">18</a></td>
+                      <td>19</td>
+                      <td>20</td>
+                    </tr>
+                    <tr>
+                      <td>21</td>
+                      <td>22</td>
+                      <td>23</td>
+                      <td class="ativa"><a href="#">24</a></td>
+                      <td class="ativa"><a href="#">25</a></td>
+                      <td>26</td>
+                      <td>27</td>
+                    </tr>
+                    <tr>
+                      <td>28</td>
+                      <td>29</td>
+                      <td>30</td>
+                      <td class="ativa"><a href="#">31</a></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div id="tv-justica" class="tv-justica card m-b-24">
+            <div class="card-titulo">
+              <h3 class="m-0">TV Justiça</h3>
+              <div class="ao-vivo"><img src="assets/img/portleticon/videocam.svg" alt="ao vivo">ao vivo</div>
+            </div>
+            <div class="card-conteudo">
+              <div class="card-media-video">
+                <iframe width="560" height="349" src="https://www.youtube.com/embed/lMX9c4bYxvw" frameborder="0" allowfullscreen></iframe>
+              </div>
+              <div class="card-media-lista">
+                <div class="media-lista-item row">
+                  <div class="item-imagem col-xs-4 col-md-2 p-0">
+                    <img width="100%" src="https://i.ytimg.com/vi/JCTxR4jDoxQ/hqdefault.jpg?custom=true&w=168&h=94&stc=true&jpg444=true&jpgq=90&sp=68&sigh=88oMebqkLyq0lnDuhOu00Qut_ow" alt="">
+                  </div>
+                  <div class="item-texto col-xs-8 col-md-10">
+                    <h4 class="m-0">Pleno - Negada extradição de argentino acusado de crimes prescritos</h4>
+                    <small>1.896 visualizações</small>
+                  </div>
+                </div>
+
+                <div class="media-lista-item row">
+                  <div class="item-imagem col-xs-4 col-md-2 p-0">
+                    <img width="100%" src="https://i.ytimg.com/vi/JCTxR4jDoxQ/hqdefault.jpg?custom=true&w=168&h=94&stc=true&jpg444=true&jpgq=90&sp=68&sigh=88oMebqkLyq0lnDuhOu00Qut_ow" alt="">
+                  </div>
+                  <div class="item-texto col-xs-8 col-md-10">
+                    <h4 class="m-0">Pleno - Negada extradição de argentino acusado de crimes prescritos</h4>
+                    <small>1.896 visualizações</small>
+                  </div>
+                </div>
+
+                <div class="media-lista-item row">
+                  <div class="item-imagem col-xs-4 col-md-2 p-0">
+                    <img width="100%" src="https://i.ytimg.com/vi/JCTxR4jDoxQ/hqdefault.jpg?custom=true&w=168&h=94&stc=true&jpg444=true&jpgq=90&sp=68&sigh=88oMebqkLyq0lnDuhOu00Qut_ow" alt="">
+                  </div>
+                  <div class="item-texto col-xs-8 col-md-10">
+                    <h4 class="m-0">Pleno - Negada extradição de argentino acusado de crimes prescritos</h4>
+                    <small>1.896 visualizações</small>
+                  </div>
+                </div>
+                
+                <div class="row m-0">
+                  <a href="#" target="_blank" class="btn btn-raised btn-fluid btn-default-borded btn-upper">Mais vídeos da TV Justiça</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="agenda-dos-ministros" class="agenda-dos-ministros card m-b-24">
+            <div class="card-titulo">Agenda dos ministros</div>
+            <div class="card-conteudo">
+              <div class="agenda-destaque">
+                <div class="destaque-foto">
+                  <img width="80" height="80" src="assets/img/conteudo/agenda/carmen.jpg">
+                </div>
+                <div class="destaque-conteudo">
+                  <div class="destaque-data">Segunda-feira, 13/02/2017</div>
+                  <div class="destaque-eventos">
+                    <div class="eventos"><a href="#">3 eventos</a></div>
+                    <div class="nome-ministro">Min. Cármen Lúcia</div>
+                  </div>
+                </div>
+              </div>
+
+              <ul class="lista-ministros">
+                <li><a href=""><img src="assets/img/conteudo/agenda/carmen.jpg" alt=""></a></li>
+                <li><a href=""><img src="assets/img/conteudo/agenda/ministro1.jpg" alt=""></a></li>
+                <li><a href=""><img src="assets/img/conteudo/agenda/ministro2.jpg" alt=""></a></li>
+                <li><a href=""><img src="assets/img/conteudo/agenda/ministro3.jpg" alt=""></a></li>
+                <li><a href=""><img src="assets/img/conteudo/agenda/ministro4.jpg" alt=""></a></li>
+                <li><a href=""><img src="assets/img/conteudo/agenda/ministro5.jpg" alt=""></a></li>
+                <li><a href=""><img src="assets/img/conteudo/agenda/ministro6.jpg" alt=""></a></li>
+                <li><a href=""><img src="assets/img/conteudo/agenda/ministro7.jpg" alt=""></a></li>
+                <li><a href=""><img src="assets/img/conteudo/agenda/ministro8.jpg" alt=""></a></li>
+                <li><a href=""><img src="assets/img/conteudo/agenda/ministro1.jpg" alt=""></a></li>
+                <li><a href=""><img src="assets/img/conteudo/agenda/ministro2.jpg" alt=""></a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="audiencias-publicas" class="audiencias-publicas card m-b-24">
+            <div class="card-titulo">Audiências públicas</div>
+            <div class="card-conteudo">
+              <div class="audiencia-icone">
+                <img src="assets/img/conteudo/icone-audiencia-whatsapp.png" alt="Whatsapp">
+              </div>
+              <div class="audiencia-processo m-b-24 m-l-8">
+                <div class="processo-numero">ADI 5.527</div>
+                <div class="processo-relator">Min. Fachin</div>
+              </div>
+              <div class="audiencia-descricao m-b-24">
+                Marco civil da internet e a suspensão do Whatsapp por decisões judiciais no Brasil.
+              </div>
+              <div class="audiencia-inscricao">
+                Inscreva-se enviando um e-mail para <a href="mailto:adpf403@stf.jus.br">adpf403@stf.jus.br</a> até 01/02/2017.
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div id="agenda-dos-ministros" class="agenda-dos-ministros card m-b-24">
-        <div class="card-titulo">Agenda dos ministros</div>
-        <div class="card-conteudo">
-          <div class="agenda-destaque">
-            <div class="destaque-foto">
-              <img width="80" height="80" src="assets/img/conteudo/agenda/carmen.jpg">
-            </div>
-            <div class="destaque-conteudo">
-              <div class="destaque-data">Segunda-feira, 13/02/2017</div>
-              <div class="destaque-eventos">
-                <div class="eventos"><a href="#">3 eventos</a></div>
-                <div class="nome-ministro">Min. Cármen Lúcia</div>
-              </div>
-            </div>
+    </section>
+
+    <section id="mapa-do-site">
+      <div class="row m-0">
+        <div class="col-xs-6 col-sm-4 col-md-20p p-0">
+          <div class="lista-links">
+            <h4>O STF</h4>
+            <ul>
+              <li><a href="#">Conheça o STF</a></li>
+              <li><a href="#">Ministros</a></li>
+              <li><a href="#">Histórico</a></li>
+              <li><a href="#">Quem é quem</a></li>
+              <li><a href="#">Programas e ações</a></li>
+              <li><a href="#">Gestão</a></li>
+            </ul>
           </div>
 
-          <ul class="lista-ministros">
-            <li><a href=""><img src="assets/img/conteudo/agenda/carmen.jpg" alt=""></a></li>
-            <li><a href=""><img src="assets/img/conteudo/agenda/ministro1.jpg" alt=""></a></li>
-            <li><a href=""><img src="assets/img/conteudo/agenda/ministro2.jpg" alt=""></a></li>
-            <li><a href=""><img src="assets/img/conteudo/agenda/ministro3.jpg" alt=""></a></li>
-            <li><a href=""><img src="assets/img/conteudo/agenda/ministro4.jpg" alt=""></a></li>
-            <li><a href=""><img src="assets/img/conteudo/agenda/ministro5.jpg" alt=""></a></li>
-            <li><a href=""><img src="assets/img/conteudo/agenda/ministro6.jpg" alt=""></a></li>
-            <li><a href=""><img src="assets/img/conteudo/agenda/ministro7.jpg" alt=""></a></li>
-            <li><a href=""><img src="assets/img/conteudo/agenda/ministro8.jpg" alt=""></a></li>
-            <li><a href=""><img src="assets/img/conteudo/agenda/ministro1.jpg" alt=""></a></li>
-            <li><a href=""><img src="assets/img/conteudo/agenda/ministro2.jpg" alt=""></a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div id="audiencias-publicas" class="audiencias-publicas card m-b-24">
-        <div class="card-titulo">Audiências públicas</div>
-        <div class="card-conteudo">
-          <div class="audiencia-icone">
-            <img src="assets/img/conteudo/icone-audiencia-whatsapp.png" alt="Whatsapp">
-          </div>
-          <div class="audiencia-processo m-b-24 m-l-8">
-            <div class="processo-numero">ADI 5.527</div>
-            <div class="processo-relator">Min. Fachin</div>
-          </div>
-          <div class="audiencia-descricao m-b-24">
-            Marco civil da internet e a suspensão do Whatsapp por decisões judiciais no Brasil.
-          </div>
-          <div class="audiencia-inscricao">
-            Inscreva-se enviando um e-mail para <a href="mailto:adpf403@stf.jus.br">adpf403@stf.jus.br</a> até 01/02/2017.
+          <div class="lista-links">
+            <h4>Serviços</h4>
+            <ul>
+              <li><a href="#">Pedidos de certidão</a></li>
+              <li><a href="#">Visitação pública</a></li>
+              <li><a href="#">Biblioteca</a></li>
+              <li><a href="#">Plantão judicial</a></li>
+              <li><a href="#">Audiências públicas</a></li>
+            </ul>
           </div>
         </div>
-      </div>
-
-      <div id="mapa-do-site">
-        <div class="row m-0">
-          <div class="col-xs-6 col-sm-4 col-md-3 p-0">
-            <div class="lista-links">
-              <h4>O STF</h4>
-              <ul>
-                <li><a href="#">Conheça o STF</a></li>
-                <li><a href="#">Ministros</a></li>
-                <li><a href="#">Histórico</a></li>
-                <li><a href="#">Quem é quem</a></li>
-                <li><a href="#">Programas e ações</a></li>
-                <li><a href="#">Gestão</a></li>
-              </ul>
-            </div>
-
-            <div class="lista-links">
-              <h4>Serviços</h4>
-              <ul>
-                <li><a href="#">Pedidos de certidão</a></li>
-                <li><a href="#">Visitação pública</a></li>
-                <li><a href="#">Biblioteca</a></li>
-                <li><a href="#">Plantão judicial</a></li>
-                <li><a href="#">Audiências públicas</a></li>
-              </ul>
-            </div>
+        <div class="col-xs-6 col-sm-4 col-md-20p p-0">
+          <div class="lista-links">
+            <h4>Processos</h4>
+            <ul>
+              <li><a href="#">Pesquisa</a></li>
+              <li><a href="#">Peticionamento</a></li>
+              <li><a href="#">Editais</a></li>
+              <li><a href="#">ADI, ADC, ADPF e ADO</a></li>
+              <li><a href="#">Pedidos de vista</a></li>
+              <li><a href="#">Estatísticas processuais</a></li>
+            </ul>
           </div>
-          <div class="col-xs-6 col-sm-4 col-md-3 p-0">
-            <div class="lista-links">
-              <h4>Processos</h4>
-              <ul>
-                <li><a href="#">Pesquisa</a></li>
-                <li><a href="#">Peticionamento</a></li>
-                <li><a href="#">Editais</a></li>
-                <li><a href="#">ADI, ADC, ADPF e ADO</a></li>
-                <li><a href="#">Pedidos de vista</a></li>
-                <li><a href="#">Estatísticas processuais</a></li>
-              </ul>
-            </div>
-            <div class="lista-links">
-              <h4>Jurisprudência</h4>
-              <ul>
-                <li><a href="#">Pesquisa</a></li>
-                <li><a href="#">Inteiro teor de acórdãos</a></li>
-                <li><a href="#">Súmulas vinculantes</a></li>
-                <li><a href="#">Súmulas</a></li>
-                <li><a href="#">Teses jurídicas</a></li>
-                <li><a href="#">Informativos</a></li>
-              </ul>
-            </div>
+          <div class="lista-links">
+            <h4>Jurisprudência</h4>
+            <ul>
+              <li><a href="#">Pesquisa</a></li>
+              <li><a href="#">Inteiro teor de acórdãos</a></li>
+              <li><a href="#">Súmulas vinculantes</a></li>
+              <li><a href="#">Súmulas</a></li>
+              <li><a href="#">Teses jurídicas</a></li>
+              <li><a href="#">Informativos</a></li>
+            </ul>
           </div>
-          <div class="col-xs-6 col-sm-4 col-md-3 p-0">
-            <div class="lista-links">
-              <h4>Repercussão Geral</h4>
-              <ul>
-                <li><a href="#">Pesquisa</a></li>
-                <li><a href="#">Temas</a></li>
-                <li><a href="#">Estatísticas</a></li>
-                <li><a href="#">Fórum</a></li>
-              </ul>
-            </div>
-            <div class="lista-links">
-              <h4>Leis e publicações</h4>
-              <ul>
-                <li><a href="#">Legislação</a></li>
-                <li><a href="#">Legislação anotada</a></li>
-                <li><a href="#">Livraria</a></li>
-                <li><a href="#">DJ/DJe</a></li>
-                <li><a href="#">RTJ eletrônica</a></li>
-                <li><a href="#">Boletim Repercussão Geral</a></li>
-                <li><a href="#">Publicações temáticas</a></li>
-                <li><a href="#">Publicações institucionais</a></li>
-              </ul>
-            </div>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-20p p-0">
+          <div class="lista-links">
+            <h4>Repercussão Geral</h4>
+            <ul>
+              <li><a href="#">Pesquisa</a></li>
+              <li><a href="#">Temas</a></li>
+              <li><a href="#">Estatísticas</a></li>
+              <li><a href="#">Fórum</a></li>
+            </ul>
           </div>
-          <div class="col-xs-6 col-sm-4 col-md-3 p-0">
-            <div class="lista-links">
-              <h4>Agenda</h4>
-              <ul>
-                <li><a href="#">Pautas de plenário</a></li>
-                <li><a href="#">Pautas das turmas</a></li>
-                <li><a href="#">Agenda do Presidente</a></li>
-                <li><a href="#">Agenda dos Ministros</a></li>
-              </ul>
-            </div>
-            <div class="lista-links">
-              <h4>Transparência</h4>
-              <ul>
-                <li><a href="#">Ações e programas</a></li>
-                <li><a href="#">Gestão orçamentária</a></li>
-                <li><a href="#">Licitações e contratos</a></li>
-                <li><a href="#">Auditoria</a></li>
-                <li><a href="#">Gestão de pessoas</a></li>
-                <li><a href="#">Gestão estratégica</a></li>
-                <li><a href="#">Remuneração</a></li>
-              </ul>
-            </div>
+          <div class="lista-links">
+            <h4>Leis e publicações</h4>
+            <ul>
+              <li><a href="#">Legislação</a></li>
+              <li><a href="#">Legislação anotada</a></li>
+              <li><a href="#">Livraria</a></li>
+              <li><a href="#">DJ/DJe</a></li>
+              <li><a href="#">RTJ eletrônica</a></li>
+              <li><a href="#">Boletim Repercussão Geral</a></li>
+              <li><a href="#">Publicações temáticas</a></li>
+              <li><a href="#">Publicações institucionais</a></li>
+            </ul>
           </div>
-          <div class="col-xs-6 col-sm-4 col-md-3 p-0">
-            <div class="lista-links">
-              <h4>Sob medida</h4>
-              <ul>
-                <li><a href="#">Advogado</a></li>
-                <li><a href="#">Estudante</a></li>
-                <li><a href="#">Órgãos parceiros</a></li>
-                <li><a href="#">Cidadão</a></li>
-                <li><a href="#">Imprensa</a></li>
-              </ul>
-            </div>
-            <div class="lista-links">
-              <h4>Fale conosco</h4>
-              <ul>
-                <li><a href="#">Contato</a></li>
-                <li><a href="#">Ouvidoria</a></li>
-              </ul>
-            </div>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-20p p-0">
+          <div class="lista-links">
+            <h4>Agenda</h4>
+            <ul>
+              <li><a href="#">Pautas de plenário</a></li>
+              <li><a href="#">Pautas das turmas</a></li>
+              <li><a href="#">Agenda do Presidente</a></li>
+              <li><a href="#">Agenda dos Ministros</a></li>
+            </ul>
+          </div>
+          <div class="lista-links">
+            <h4>Transparência</h4>
+            <ul>
+              <li><a href="#">Ações e programas</a></li>
+              <li><a href="#">Gestão orçamentária</a></li>
+              <li><a href="#">Licitações e contratos</a></li>
+              <li><a href="#">Auditoria</a></li>
+              <li><a href="#">Gestão de pessoas</a></li>
+              <li><a href="#">Gestão estratégica</a></li>
+              <li><a href="#">Remuneração</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-20p p-0">
+          <div class="lista-links">
+            <h4>Sob medida</h4>
+            <ul>
+              <li><a href="#">Advogado</a></li>
+              <li><a href="#">Estudante</a></li>
+              <li><a href="#">Órgãos parceiros</a></li>
+              <li><a href="#">Cidadão</a></li>
+              <li><a href="#">Imprensa</a></li>
+            </ul>
+          </div>
+          <div class="lista-links">
+            <h4>Fale conosco</h4>
+            <ul>
+              <li><a href="#">Contato</a></li>
+              <li><a href="#">Ouvidoria</a></li>
+            </ul>
           </div>
         </div>
       </div>
+    </section>
 
-      <footer id="rodape" class="p-16">
-        <div class="row m-0">
-          <div class="logo-STF col-xs-12 text-center-xs">
-            <a href="#">
-              <img src="assets/img/institucional/logo-STF.png" alt="Supremo Tribunal Federal">
-            </a>
-          </div>
-          <div class="social-links col-xs-12 text-center-xs">
-            <div class="midias-sociais">
-              <div class="facebook">
-                <a href="#" class="text-hide">Facebook</a>
-              </div>
-              <div class="twitter">
-                <a href="#" class="text-hide">Twitter</a>
-              </div>
-              <div class="youtube">
-                <a href="#" class="text-hide">YouTube</a>
-              </div>
+    <footer id="rodape" class="p-16">
+      <div class="row m-0">
+        <div class="logo-STF col-xs-12 col-md-3 col-lg-2 text-center-lt-md m-b-16">
+          <a href="#">
+            <img src="assets/img/institucional/logo-STF.png" alt="Supremo Tribunal Federal">
+          </a>
+        </div>
+        <div class="social-links col-xs-12 col-md-3 col-lg-2 text-center-lt-md m-b-16">
+          <div class="midias-sociais">
+            <div class="facebook">
+              <a href="#" class="text-hide">Facebook</a>
             </div>
-            <div class="midias-internas">
-              <div>
-                <a href="#" target="_blank">TV Justiça</a>
-              </div>
-              <div>
-                <a href="#" target="_blank">Rádio Justiça</a>
-              </div>
+            <div class="twitter">
+              <a href="#" class="text-hide">Twitter</a>
+            </div>
+            <div class="youtube">
+              <a href="#" class="text-hide">YouTube</a>
             </div>
           </div>
-          <div class="contatos col-xs-12 text-center-xs">
-            <p><i class="glyphicon glyphicon-map-marker"></i> Praça dos Três Poderes, Brasília - DF - CEP 70175-900 <a href="#" target="_blank">Veja a localização no Google Maps</a></small></p>
-            <p><i class="glyphicon glyphicon-earphone"></i> Telefone: +55 61 3217-3000 <a href="#">Outros telefones úteis</a></small></p>
-            <p><i class="glyphicon glyphicon-time"></i> Horário de funcionamento: 12:00 às 19:00</p>
+          <div class="midias-internas m-t-8">
+            <div>
+              <a href="#" target="_blank">TV Justiça</a>
+            </div>
+            <div>
+              <a href="#" target="_blank">Rádio Justiça</a>
+            </div>
           </div>
         </div>
-      </footer>
-    </div>
-
+        <div class="contatos col-xs-12 col-md-6  col-lg-8 text-center-lt-md">
+          <p><i class="glyphicon glyphicon-map-marker"></i> Praça dos Três Poderes, Brasília - DF - CEP 70175-900 <a href="#" target="_blank">Veja a localização no Google Maps</a></small></p>
+          <p><i class="glyphicon glyphicon-earphone"></i> Telefone: +55 61 3217-3000 <a href="#">Outros telefones úteis</a></small></p>
+          <p><i class="glyphicon glyphicon-time"></i> Horário de funcionamento: 12:00 às 19:00</p>
+        </div>
+      </div>
+    </footer>
   </div>
-<script type="text/javascript" src="/scripts/manifest.a80cb4eddeea097184c9.js"></script><script type="text/javascript" src="/scripts/vendor.4dcf344f05c94c90ad80.js"></script><script type="text/javascript" src="/scripts/bundle.47a01a3ae3b72cabc386.js"></script></body>
+<script type="text/javascript" src="/scripts/manifest.bad2e1f3483f6d80e0b8.js"></script><script type="text/javascript" src="/scripts/vendor.a48f960a77b403f9eda0.js"></script><script type="text/javascript" src="/scripts/bundle.47a01a3ae3b72cabc386.js"></script></body>
 </html>

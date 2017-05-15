@@ -39,3 +39,91 @@
     padding-left: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
   }
 }
+
+@media all and (max-width: $breakpointPhones - 1) {
+  @for $i from 0 to 12 {
+    .m-xs-#{$i * 8} {
+      margin: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
+    }
+
+    .m-t-xs-#{$i * 8} {
+      margin-top: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
+    }
+
+    .m-r-xs-#{$i * 8} {
+      margin-right: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
+    }
+
+    .m-b-xs-#{$i * 8} {
+      margin-bottom: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
+    }
+
+    .m-l-xs-#{$i * 8} {
+      margin-left: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
+    }
+
+    .p-xs-#{$i * 8} {
+      padding: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
+    }
+
+    .p-t-xs-#{$i * 8} {
+      padding-top: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
+    }
+
+    .p-r-xs-#{$i * 8} {
+      padding-right: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
+    }
+
+    .p-b-xs-#{$i * 8} {
+      padding-bottom: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
+    }
+
+    .p-l-xs-#{$i * 8} {
+      padding-left: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
+    }
+  }
+}
+
+@media all and (min-width: $breakpointLargeDevices) {
+  @for $i from 0 to 12 {
+    .m-lg-#{$i * 8} {
+      margin: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
+    }
+
+    .m-t-lg-#{$i * 8} {
+      margin-top: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
+    }
+
+    .m-r-lg-#{$i * 8} {
+      margin-right: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
+    }
+
+    .m-b-lg-#{$i * 8} {
+      margin-bottom: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
+    }
+
+    .m-l-lg-#{$i * 8} {
+      margin-left: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
+    }
+
+    .p-lg-#{$i * 8} {
+      padding: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
+    }
+
+    .p-t-lg-#{$i * 8} {
+      padding-top: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
+    }
+
+    .p-r-lg-#{$i * 8} {
+      padding-right: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
+    }
+
+    .p-b-lg-#{$i * 8} {
+      padding-bottom: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
+    }
+
+    .p-l-lg-#{$i * 8} {
+      padding-left: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
+    }
+  }
+}
