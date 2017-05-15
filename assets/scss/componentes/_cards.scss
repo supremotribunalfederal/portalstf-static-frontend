@@ -1,19 +1,37 @@
 @mixin card() {
   @include card-box-shadow();
+  h3 {
+    font-size: 1.286rem;
+    font-weight: 400;
+  }
+
+  h4 {
+    font-size: 0.875rem;
+  }
+  small {
+    color: $stfCinza;
+    font-size: 0.75rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
   .card-titulo {
     background: $stfAzulClaro;
     color: $stfBranco;
     padding: 16px;
     text-transform: uppercase;
-
-    h3 {
-      font-size: 1.286rem;
-      font-weight: 400;
-    }
   }
 
   .card-conteudo {
     padding: 16px;
+
+    .card-titulo {
+      padding: 8px 16px;
+      text-transform: none;
+    }
 
     .card-media-video {
       height: 0;
@@ -41,6 +59,10 @@
     }
 
     .card-caixa-texto {
+      h4 {
+        font-size: 1rem;
+      }
+      
       background: $stfAzulCinza;
       padding: 4px 8px;
 
@@ -51,23 +73,6 @@
           color: $stfBranco;
         }
       }
-
-      h4 {
-        font-size: 1rem;
-      }
-
-      ul {
-        list-style: none;
-        padding: 0;
-      }
-    }
-
-    h4 {
-      font-size: 0.875rem;
-    }
-    small {
-      color: $stfCinza;
-      font-size: 0.75rem;
     }
   }
 }
