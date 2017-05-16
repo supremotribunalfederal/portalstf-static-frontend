@@ -80,20 +80,32 @@
       
     </header>
 
-    <section id="pesquisa" class="pesquisa row m-0">
-      <h3 class="pesquisa-titulo">O que você procura?</h3>
-      <div class="pesquisa-campos">
-        <div class="hide-md campo-container">
-          <select class="pesquisa-select full-width">
-            <option value="">Selecione outra pesquisa</option>
-          </select>
-        </div>
-        <div class="form-inline">
-          <div class="campo-container">
-            <input class="campo-texto" type="text" name="pesquisa" placeholder="Parte ou número do processo...">
-            <button class="btn btn-default pull-right">
-              <i class="glyphicon glyphicon-search"></i>
-            </button>
+    <section id="pesquisa" class="pesquisa row m-0 p-t-md-48 p-t-lg-48 p-b-md-48 p-b-lg-48">
+      <div class="pesquisa-conteudo">
+        <h3 class="pesquisa-titulo">O que você procura?</h3>
+        <div class="pesquisa-campos">
+          <div class="hidden-md hidden-lg campo-container">
+            <select class="pesquisa-select full-width">
+              <option value="">Selecione outra pesquisa</option>
+            </select>
+          </div>
+          <div class="form-inline">
+            <div class="campo-container">
+              <div class="seletores-campo">
+                <input type="hidden" name="tipo-pesquisa" id="tipo-pesquisa">
+                <ul class="seletores hidden-xs hidden-sm">
+                  <li><a href="" class="ativo">Processos</a></li>
+                  <li><a href="">Jurisprudência</a></li>
+                  <li><a href="">Notícias e outros conteúdos</a></li>
+                  <li><a href="">Transparência</a></li>
+                </ul>
+              </div>
+              <input class="campo-texto" type="text" name="pesquisa" placeholder="Parte ou número do processo...">
+              <button class="btn btn-default pull-right">
+                <i class="glyphicon glyphicon-search hidden-md hidden-lg"></i>
+                <span class="hidden-xs hidden-sm">Pesquisar</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
