@@ -26,18 +26,3 @@
   font-style: italic;
   font-weight: bold;
 }
-
-html {
-  font-size: 16px;
-  @media all and (min-width: $breakpointPhones) {
-    font-size: 16px;
-  }
-  @media screen and (min-resolution: 2dppx) and (min-width: $breakpointPhones) {
-    font-size: 18px;
-  }
-}
-
-body {
-  font-family: 'Roboto', 'sans-serif';
-  font-size: 1rem;
-}
