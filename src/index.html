@@ -26,7 +26,8 @@
       </div>
       <div class="col-xs-12 col-sm-9 col-md-10 col-lg-6 p-0">
         <div class="col-xs-6 col-sm-9">
-          <div class="col-xs-4 col-sm-4 col-lg-6">
+          <div class="visible-md visible-lg col-md-7 col-lg-5"></div>
+          <div class="col-xs-4 col-sm-4 col-md-5 col-lg-7">
             <div class="dropdown menu-internacionalizacao">
               <button class="btn btn-default dropdown-toggle" type="button" id="internacionalizacao" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 <span class="hidden-xs hidden-sm">Relações internacionais</span>
@@ -39,10 +40,10 @@
               </ul>
             </div>
           </div>
-          <div class="col-xs-8 col-sm-4 col-lg-3 link-servidores">
+          <div class="col-xs-8 visible-xs visible-sm col-sm-4 col-lg-3 link-servidores">
             <a href="https://servidor.stf.jus.br" target="_blank" class="btn btn-default">Servidores</a>
           </div>
-          <div class="hidden-xs col-sm-4 col-lg-3 link-servidores">
+          <div class="visible-sm col-sm-4 col-lg-3 link-servidores">
             <a href="https://servidor.stf.jus.br" target="_blank" class="btn btn-default">Fale conosco</a>
           </div>
         </div>
@@ -51,9 +52,9 @@
       
     </section>
 
-    <header id="header" class="header navbar navbar-default p-8">
-      <div class="container-fluid">
-        <div class="navbar-header">
+    <header id="header" class="header navbar navbar-default">
+      <div class="container-fluid row m-0 p-0">
+        <div class="navbar-header col-xs-12 m-0">
           <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#menu-principal" aria-expanded="false">
             <span class="sr-only">Abrir menu principal</span>
             <span class="icon-bar"></span>
@@ -61,20 +62,35 @@
             <span class="icon-bar"></span>
           </button>
           <h1 class="hidden">Supremo Tribunal Federal</h1>
-          <a href="#" class="navbar-brand">
+          <a href="#" class="navbar-brand m-0">
             <img src="assets/img/institucional/logo-STF.png" alt="Supremo Tribunal Federal">
           </a>
+          <div id="menu-institucional" class="menu-institucional p-0 pull-right">
+            <div class="hidden-xs hidden-sm pull-left">
+              <a href="https://servidor.stf.jus.br" target="_blank" class="btn btn-default">Servidores</a>
+            </div>
+            <div class="hidden-xs hidden-sm pull-left">
+              <a href="https://servidor.stf.jus.br" target="_blank" class="btn btn-default">Fale conosco</a>
+            </div>
+            <div class="hidden-xs hidden-md hidden-lg pull-left">
+              <a href="https://servidor.stf.jus.br" target="_blank" class="btn btn-default">O STF</a>
+            </div>
+            <div class="hidden-xs pull-left">
+              <a href="https://servidor.stf.jus.br" target="_blank" class="btn btn-default-bordered">Painel do Peticionador</a>
+            </div>
+          </div>
         </div>
-        <div id="menu-principal" class="collapse navbar-collapse navbar-right">
-          <ul class="nav navbar-nav">
-            <li><a href="#">O STF</a></li>
-            <li><a href="#">Serviços</a></li>
-            <li><a href="#">Processos</a></li>
-            <li><a href="#">Jurisprudência</a></li>
-            <li><a href="#">Repercussão Geral</a></li>
-            <li><a href="#">Leis e Publicações</a></li>
-            <li><a href="#">Transparência</a></li>
-          </ul>
+        <div id="menu-principal" class="collapse navbar-collapse row col-xs-12 m-0 p-sm-0">
+          <div class="row col-xs-12 m-0 p-0">
+            <ul class="nav navbar-nav">
+              <li class="hidden-sm"><a href="#">O STF</a></li>
+              <li><a href="#">Processos</a></li>
+              <li><a href="#">Jurisprudência</a></li>
+              <li><a href="#">Repercussão Geral</a></li>
+              <li><a href="#">Leis e Publicações</a></li>
+              <li class="hidden-sm"><a href="#">Transparência</a></li>
+            </ul>
+          </div>
         </div>
       </div>
       
@@ -308,7 +324,7 @@
           <div id="acessar-portal-noticias" class="row m-0 m-b-48">
             <div class="col-md-2 p-0"></div>
             <div class="col-md-8 p-0">
-              <button class="btn btn-default-borded btn-raised btn-upper btn-fluid">Acessar o portal de notícias</button>
+              <button class="btn btn-default-bordered btn-raised btn-upper btn-fluid">Acessar o portal de notícias</button>
             </div>
             <div class="col-md-2 p-0"></div>
           </div>
@@ -325,7 +341,7 @@
                     <input type="text" name="newsletter" id="newsletter" placeholder="Digite o seu e-mail">
                   </div>
                   <div class="col-md-6 p-0 p-b-16">
-                    <button class="btn btn-upper btn-raised btn-default-borded btn-fluid" type="button">Quero me cadastrar</button>
+                    <button class="btn btn-upper btn-raised btn-default-bordered btn-fluid" type="button">Quero me cadastrar</button>
                   </div>
                 </div>
               </div>
@@ -383,7 +399,7 @@
                   <div class="card-caixa-texto __fundo-escuro p-b-16 m-b-16">
                     <h4 class="m-0 m-t-8 m-b-16">Solicitação de pesquisas</h4>
                     <p>Não encontrou uma jurisprudência?<br>Nós te ajudamos a pesquisar!</p>
-                    <button class="btn btn-default-borded btn-raised btn-fluid btn-upper" type="button" href="#">Quero Ajuda!</button>
+                    <button class="btn btn-default-bordered btn-raised btn-fluid btn-upper" type="button" href="#">Quero Ajuda!</button>
                   </div>
                 </div>
                 <div class="col-md-6 col-lg-12 p-0 p-l-md-16">
@@ -428,7 +444,7 @@
           <div id="acessar-portal-transparencia" class="row col-xs-12 m-0 m-b-48 m-t-48 p-0">
             <div class="col-md-2 hidden-xs hidden-sm p-0"></div>
             <div class="col-md-8 col-xs-12 p-0">
-              <button class="btn btn-default-borded btn-raised btn-upper btn-fluid">Acessar portal da transparência</button>
+              <button class="btn btn-default-bordered btn-raised btn-upper btn-fluid">Acessar portal da transparência</button>
             </div>
             <div class="col-md-2 hidden-xs hidden-sm p-0"></div>
           </div>
@@ -550,7 +566,7 @@
                 </div>
                 
                 <div class="row m-0">
-                  <a href="#" target="_blank" class="btn btn-raised btn-fluid btn-default-borded btn-upper">Mais vídeos da TV Justiça</a>
+                  <a href="#" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper">Mais vídeos da TV Justiça</a>
                 </div>
               </div>
             </div>

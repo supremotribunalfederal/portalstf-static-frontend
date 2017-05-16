@@ -4,18 +4,15 @@
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.12);
   margin: 0;
   
+  .menu-institucional {
+    line-height: 50px;
+  }
+
   &.navbar {
     .navbar-header {
       .navbar-brand {
-        padding-top: 8px;
-      }
-      
-      @media all and (max-width: $breakpointPhones - 1) {
-        .navbar-brand {
-          height: auto;
-          margin: 0;
-          padding: 0;
-        }
+        height: 50px;
+        padding: 10px 0;
       }
 
       .navbar-toggle {
@@ -25,7 +22,7 @@
         color: $stfBranco;
         height: 30px;
         line-height: 30px;
-        margin: 0;
+        margin: 10px 0;
         padding: 0;
         width: 32px;
         .icon-bar {
