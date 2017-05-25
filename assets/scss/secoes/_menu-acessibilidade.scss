@@ -1,19 +1,20 @@
+$height: 30px;
 .menu-acessibilidade {
   background: $stfPreto;
   color: $stfBranco;
   
   * {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
   }
 
-  height: 36px;
+  height: $height;
   text-align: center;
 
   .acessibilidade {
     > div, 
     > ul {
       display: inline-block;
-      line-height: 36px;
+      line-height: $height;
       margin: auto 8px;
     }
 
@@ -50,8 +51,8 @@
     background: transparent;
     border: 0;
     color: $stfBranco;
-    height: 36px;
-    line-height: 36px;
+    height: $height;
+    line-height: $height;
     padding: 0;
     width: 100%;
 
@@ -92,7 +93,7 @@
   }
 
   .telefone-stf {
-    line-height: 36px;
+    line-height: $height;
   }
 
   div[class*="col-"] {
