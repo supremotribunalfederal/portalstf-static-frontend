@@ -12,3 +12,10 @@ body {
   font-family: 'Roboto', 'sans-serif';
   font-size: 1rem;
 }
+
+/* Sobrescreve media query do bootstrap para valores percentuais */
+@media (min-width: $breakpointPhones) and (max-width: $breakpointLargeDevices) {
+  .container {
+    width: 100%;
+  }
+}
