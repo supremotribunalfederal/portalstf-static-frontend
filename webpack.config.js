@@ -72,7 +72,13 @@ const common = {
 
   plugins: [
     new HtmlPlugin({
-      template: path.join(PATHS.src, '/index.html')
+      template: path.join(PATHS.src, '/index.html'),
+      chunks: ['bundle', 'vendor', 'manifest']
+    }),
+    new HtmlPlugin({
+      filename: 'qlik.html',
+      template: path.join(PATHS.src, '/qlik.html'),
+      chunks: ['bundle', 'vendor', 'manifest']
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: ['vendor', 'manifest']
