@@ -49,4 +49,14 @@
       padding-left: 24px;
     }
   }
+
+  &.btn-icone {
+    background: $stfAzul;
+    color: $stfBranco;
+    font-size: 1.125rem;
+    height: 40px;
+    line-height: 40px;
+    padding: 0;
+    width: 40px;
+  }
 }

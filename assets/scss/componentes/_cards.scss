@@ -51,11 +51,19 @@
 
     .card-media-lista {
       .media-lista-item {
-        cursor: pointer;
         margin: 16px 0;
 
-        .item-texto {
-          padding:0 0 0 8px;
+        .lista-item-image {
+          height: 80px;
+          width: 80px;
+        }
+
+        .lista-item-texto {
+          color: $stfAzul;
+          a {
+            color: $stfAzul;
+            font-size: 0.75rem;
+          }
         }
       }
     }
@@ -68,6 +76,10 @@
       background: $stfAzulCinza;
       padding: 4px 8px;
     }
+  }
+
+  .card-rodape {
+    background: $stfCinzaClaro;
   }
 }
 
