@@ -4,12 +4,22 @@
 
   .sob-medida-item {
     float: left;
+    margin-right: 24px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
     
     .item-titulo {
       color: $stfCinza;
-      font-size: 1.286rem;
-      line-height: 18px;
+      font-size: 1.188rem;
+      line-height: 1;
       text-transform: uppercase;
+
+      &.item-titulo-sob-medida {
+        font-size: 1.063rem;
+        letter-spacing: 0.2px;
+      }
     }
   } 
 }
