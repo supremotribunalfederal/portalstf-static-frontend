@@ -57,7 +57,8 @@ const common = {
       },
       {
         test:/\.(woff2?|svg)$/,
-        use: 'url-loader?limit=10000&name=[name].[ext]&publicPath=/&outputPath=assets/fonts/'
+        use: 'url-loader?limit=10000&name=[name].[ext]&publicPath=/&outputPath=assets/fonts/',
+        exclude: PATHS.img
       },
       {
         test: /\.(ttf|eot)$/,
