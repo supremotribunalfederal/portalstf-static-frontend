@@ -52,7 +52,7 @@ const common = {
       },
       {
         test: /\.(jpg|jpeg|gif|png|svg|ico)$/i,
-        use: 'url-loader?limit=24000&publicPath=/&outputPath=assets/img/',
+        use: 'url-loader?limit=24000&name=[name].[ext]&publicPath=/&outputPath=assets/img/',
         include: PATHS.img
       },
       {

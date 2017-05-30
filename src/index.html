@@ -63,7 +63,8 @@
           </button>
           <h1 class="hidden">Supremo Tribunal Federal</h1>
           <a href="#" class="navbar-brand m-0">
-            <img src="assets/img/institucional/logo-STF.png" alt="Supremo Tribunal Federal">
+            <img src="<%= require('../assets/img/institucional/logo-STF.png') %>"
+                 srcset="<%= require('../assets/img/institucional/logo-STF@2x.png') %> 2x" alt="Supremo Tribunal Federal">
           </a>
           <div id="menu-principal" class="collapse navbar-collapse col-xs-12 navbar-right m-0 p-0">
             <div class="row col-xs-12 m-0 p-0">
@@ -431,7 +432,7 @@
           <div id="estatisticas-processuais" class="col-md-8 hidden-xs hidden-sm">
             <h3>Estatísticas processuais</h3>
             <div class="estatisticas-conteudo">
-              <img width="100%" src="assets/img/estatisticas/placeholder.png" alt="">
+              <img width="100%" src="http://fakeimg.pl/476x265" alt="">
             </div>
           </div>
 
@@ -567,7 +568,7 @@
           <div id="tv-justica" class="tv-justica card m-b-24">
             <div class="card-titulo">
               <h3 class="m-0">TV Justiça</h3>
-              <div class="ao-vivo"><img src="assets/img/portleticon/videocam.svg" alt="ao vivo">ao vivo</div>
+              <div class="ao-vivo"><img src="<%= require('../assets/img/portleticon/videocam.svg') %>" alt="ao vivo">ao vivo</div>
             </div>
             <div class="card-conteudo">
               <div class="card-media-video">
@@ -584,7 +585,7 @@
             <div class="card-conteudo">
               <div class="agenda-destaque">
                 <div class="destaque-foto">
-                  <img width="80" height="80" src="assets/img/conteudo/agenda/carmen.jpg">
+                  <img width="80" height="80" src="<%= require('../assets/img/conteudo/agenda/carmen.jpg') %>">
                 </div>
                 <div class="destaque-conteudo">
                   <div class="destaque-data">Segunda-feira, 13/02/2017</div>
@@ -606,7 +607,8 @@
             <div class="card-titulo">Audiências públicas</div>
             <div class="card-conteudo">
               <div class="audiencia-icone">
-                <img src="assets/img/conteudo/icone-audiencia-whatsapp.png" alt="Whatsapp">
+                <img src="<%= require('../assets/img/conteudo/icone-audiencia-whatsapp.png') %>"
+                     srcset="<%= require('../assets/img/conteudo/icone-audiencia-whatsapp@2x.png') %> 2x" alt="Whatsapp">
               </div>
               <div class="audiencia-processo m-b-24 m-l-8">
                 <div class="processo-numero">ADI 5.527</div>
@@ -797,7 +799,7 @@
       <div class="row container center-block">
         <div class="logo-STF col-xs-12 col-md-3 col-lg-2 text-center-lt-md m-b-16">
           <a href="#">
-            <img src="assets/img/institucional/logo-STF.png" alt="Supremo Tribunal Federal">
+            <img src="<%= require('../assets/img/institucional/logo-STF.png') %>" alt="Supremo Tribunal Federal">
           </a>
         </div>
         <div class="social-links col-xs-12 col-md-3 col-lg-2 text-center-lt-md m-b-16">
