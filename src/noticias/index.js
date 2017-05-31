@@ -1,0 +1,1 @@
+import style from '../../assets/scss/secoes/noticias/noticias.scss';

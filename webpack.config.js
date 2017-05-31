@@ -23,7 +23,11 @@ const common = {
       path.join(PATHS.src, '/index.js'),
       path.join(PATHS.scss, '/main.scss')
     ],
-    vendor: VENDORS
+    vendor: VENDORS,
+    noticias: [
+      path.join(PATHS.src, '/noticias/index.js'),
+      path.join(PATHS.scss, '/secoes/noticias/noticias.scss')
+    ]
   },
 
   output: {
@@ -48,7 +52,12 @@ const common = {
         use: customCss.extract({
           use: 'css-loader!sass-loader'
         }),
-        exclude: /node_modules/
+        exclude: /node_modules|noticias/
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+        include: path.join(PATHS.scss, '/secoes/noticias')
       },
       {
         test: /\.(jpg|jpeg|gif|png|svg|ico)$/i,
@@ -80,6 +89,11 @@ const common = {
       filename: 'qlik.html',
       template: path.join(PATHS.src, '/qlik.html'),
       chunks: ['bundle', 'vendor', 'manifest']
+    }),
+    new HtmlPlugin({
+      filename: 'noticias/index.html',
+      template: path.join(PATHS.src, '/noticias/index.html'),
+      chunks: ['noticias', 'bundle', 'vendor', 'manifest']
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: ['vendor', 'manifest']
