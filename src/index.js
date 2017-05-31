@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-$('li.dropdown-toggle').hover(function() {
+$('.dropdown-toggle').hover(function() {
   $(this).find('.dropdown-menu').stop(true, true).delay(0).fadeIn(100);
 }, function() {
   $(this).find('.dropdown-menu').stop(true, true).delay(0).fadeOut(100);

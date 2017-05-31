@@ -3,7 +3,9 @@ $height: 30px;
   background: $stfPreto;
   color: $stfBranco;
 
-  
+  img {
+    width: 13px;
+  }
   * {
     font-size: 0.65rem;
     font-weight: 100;

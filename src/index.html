@@ -28,16 +28,20 @@
         <div class="col-xs-12 col-sm-9 col-lg-6 p-0">
           <div class="col-xs-8 col-sm-9">
             <div class="col-xs-4 col-md-6">
-              <div class="dropdown menu-internacionalizacao">
-                <button class="btn btn-default dropdown-toggle" type="button" id="internacionalizacao" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <div class="dropdown menu-internacionalizacao dropdown-toggle">
+                <button class="btn btn-default " type="button" id="internacionalizacao" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                   <span class="hidden-xs hidden-sm">International Relations</span>
-                  <i class="glyphicon glyphicon-flag"></i>
+                  <img src="<%= require('../assets/img/internacional/usa-flag.png') %>"
+                  srcset="<%= require('../assets/img/internacional/usa-flag.png') %> 2x" alt="ao vivo">
                   <i class="caret"></i>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="internacionalizacao">
-                  <li><a href="http://www2.stf.jus.br/portalStfInternacional/cms/verPrincipal.php?idioma=en_us" target="_blank">English</a></li>
-                  <li><a href="http://www2.stf.jus.br/portalStfInternacional/cms/verPrincipal.php?idioma=es_es" target="_blank">Español</a></li>
-                  <li><a href="http://www2.stf.jus.br/portalStfInternacional/cms/verPrincipal.php?idioma=pt_br" target="_blank">Portuguese</a></li>
+                  <li><a href="http://www2.stf.jus.br/portalStfInternacional/cms/verPrincipal.php?idioma=en_us" target="_blank"><img src="<%= require('../assets/img/internacional/usa-flag.png') %>"
+                  srcset="<%= require('../assets/img/internacional/usa-flag.png') %> 2x" alt="English"> English</a></li>
+                  <li><a href="http://www2.stf.jus.br/portalStfInternacional/cms/verPrincipal.php?idioma=es_es" target="_blank"><img src="<%= require('../assets/img/internacional/spain-flag.png') %>"
+                  srcset="<%= require('../assets/img/internacional/spain-flag.png') %> 2x" alt="Español"> Español</a></li>
+                  <li><a href="http://www2.stf.jus.br/portalStfInternacional/cms/verPrincipal.php?idioma=pt_br" target="_blank"><img src="<%= require('../assets/img/internacional/brazil-flag.png') %>"
+                  srcset="<%= require('../assets/img/internacional/brazil-flag.png') %> 2x" alt="Português"> Portuguese</a></li>
                 </ul>
               </div>
             </div>
