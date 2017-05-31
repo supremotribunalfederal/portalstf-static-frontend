@@ -1,4 +1,5 @@
 @mixin card() {
+
   @include card-box-shadow();
   h3 {
     font-size: 1rem;
@@ -90,6 +91,8 @@
 @media all and (max-width: $breakpointPhones - 1) {
   .card-xs {
     @include card();
+    background-color: $stfBranco;
+    margin: 10px;
   }
 }
 

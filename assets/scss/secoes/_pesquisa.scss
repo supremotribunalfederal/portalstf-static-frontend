@@ -19,6 +19,14 @@
       color: $stfBranco;
     }
 
+    .pesquisa-titulo-expandida {
+      color: $stfBranco;
+      margin-top: -10px;
+      @media all and (max-width: $breakpointPhones) {
+        margin-top: 30px;
+      }
+    }
+
     .pesquisa-campos {
       .campo-container {
         margin: 16px 0;

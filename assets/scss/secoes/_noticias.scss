@@ -1,8 +1,14 @@
 #noticias {
+
+  @media all and (max-width: $breakpointPhones) {
+    background: $stfCinzaBackground;
+  }
+
   .noticia {
     > * {
       margin: 0;
       padding: 8px;
+
     }
 
     @media all and (min-width: $breakpointMediumDevices) {
@@ -53,6 +59,9 @@
       word-wrap: break-word;
       letter-spacing: -.3px;
       line-height: 20px;
+      @media all and (max-width: $breakpointPhones) {
+        font-size: 1rem;
+      }
     }
 
     .noticia-imagem-xs {
