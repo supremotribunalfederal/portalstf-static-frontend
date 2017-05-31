@@ -1,7 +1,7 @@
 @mixin card() {
   @include card-box-shadow();
   h3 {
-    font-size: 1.286rem;
+    font-size: 1rem;
     font-weight: 400;
   }
 

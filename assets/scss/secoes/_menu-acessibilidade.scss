@@ -2,9 +2,11 @@ $height: 30px;
 .menu-acessibilidade {
   background: $stfPreto;
   color: $stfBranco;
+
   
   * {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
+    font-weight: 100;
   }
 
   height: $height;
@@ -16,6 +18,7 @@ $height: 30px;
       display: inline-block;
       line-height: $height;
       margin: auto 8px;
+      font-weight: 600;
     }
 
     a {
@@ -31,16 +34,22 @@ $height: 30px;
     .atalhos {
       list-style: none;
       padding: 0;
+      font-size:0.6rem;
 
       li {
         display: inline-block;
         margin-right: 8px;
 
         a {
+          &:hover {
+            text-decoration: none;
+            color: $stfCinzaClaro;
+          }
           span {
             background: $stfBranco;
             color: $stfPreto;
             padding: 0 4px;
+            font-weight: 600;
           }
         }
       }
@@ -55,6 +64,7 @@ $height: 30px;
     line-height: $height;
     padding: 0;
     width: 100%;
+    font-size:0.75rem;
 
     &.btn-default {
       &:focus,
@@ -75,6 +85,14 @@ $height: 30px;
   .menu-internacionalizacao {
     border-right: 1px solid $stfBrancoAlfa40;
 
+    span {
+      font-size:0.75rem;
+    }
+
+    a {
+      font-size:0.75rem;
+    }
+
     .dropdown {
       .open {
         > .btn-default.dropdown-toggle:focus,
@@ -94,6 +112,13 @@ $height: 30px;
 
   .telefone-stf {
     line-height: $height;
+        a {
+           color: $stfBranco;
+          &:hover {
+            text-decoration: none;
+            color: $stfBranco;
+          }
+        }
   }
 
   div[class*="col-"] {

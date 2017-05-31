@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+
+/*
 @font-face {
   font-family: 'Roboto';
   src: url('../fonts/Roboto-regular.woff') format('woff'),
@@ -14,6 +17,13 @@
 
 @font-face {
   font-family: 'Roboto', 'sans-serif';
+  src: url('../fonts/Roboto-100.woff') format('woff'),
+       url('../fonts/Roboto-100.woff') format('woff2');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'Roboto', 'sans-serif';
   src: url('../fonts/Roboto-700.woff') format('woff'),
        url('../fonts/Roboto-700.woff') format('woff2');
   font-weight: bold;
@@ -26,3 +36,6 @@
   font-style: italic;
   font-weight: bold;
 }
+
+*/
+

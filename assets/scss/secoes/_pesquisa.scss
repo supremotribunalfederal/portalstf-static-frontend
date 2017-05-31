@@ -6,9 +6,14 @@
   
   padding: 0 16px;
 
+  .label-peticione {
+    font-weight:100;
+  }
+
   .pesquisa-conteudo {
     clear: both;
     max-width: 900px;
+    margin:0 auto;
 
     .pesquisa-titulo {
       color: $stfBranco;
@@ -22,17 +27,18 @@
 
         .pesquisa-select {
           border: 0;
-          height: 40px;
-          line-height: 40px;
+          height: 50px;
+          line-height: 50px;
           padding: 0 8px;
         }
 
         .campo-texto {
           border: 0;
           border-radius: 0;
-          height: 40px;
+          height: 50px;
           padding: 0 40px 0 8px;
           width: 100%;
+          font-size:1rem;
         }
 
         .btn {
@@ -40,12 +46,12 @@
           border: 0;
           border-radius: 0;
           color: $stfBranco;
-          height: 40px;
-          line-height: 40px;
+          height: 50px;
+          line-height: 50px;
           padding: 0 16px;
           position: relative;
           right: 0;
-          top: -40px;
+          top: -50px;
           min-width: 40px;
 
           &.btn-default {
@@ -84,16 +90,27 @@
               height: 30px;
               line-height: 30px;
               margin: 0;
+              margin-right:10px;
+
+
               
               a {
-                background: $stfAzulEscuroAlfa60;
+                background: $stfBrancoAlfa15;
                 color: $stfBranco;
                 display: block;
                 font-size: 0.75rem;
-                height: 25px;
-                padding: 0 8px;
+                height: 30px;
+                padding: 0 15px;
                 position: relative;
-                top: 5px;
+                top: 0px;
+
+                border-top: 1px solid $stfBrancoAlfa40;
+              
+                &:hover {
+                  background-color: $stfAzulClaro;
+                  color: $stfBranco;
+                  text-decoration: none;
+                }
               }
 
               a.ativo {
@@ -101,6 +118,7 @@
                 font-size: 0.875rem;
                 height: 30px;
                 top: 0;
+                border-top: none;
               }
             }
           }

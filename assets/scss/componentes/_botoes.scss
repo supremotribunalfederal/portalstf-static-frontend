@@ -16,6 +16,10 @@
     width: 100%;
   }
 
+  &.btn-fundo-escuro {
+    color: $stfAzul !important;
+  }
+
   &.btn-default-bordered {
     border: 1px solid $stfAzulClaro;
     color: $stfAzulClaro;

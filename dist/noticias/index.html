@@ -7,7 +7,7 @@
   <title>Supremo Tribunal Federal</title>
 <link href="/styles/vendor.css" rel="stylesheet"><link href="/styles/bundle.css" rel="stylesheet"></head>
 <body>
-  <div id="main" class="container-fluid p-0">
+  <div id="main" class="container-fluid p-0 noticias">
     <section class="menu-acessibilidade row p-0 m-0">
       <div class="container p-xs-0">
         <div class="hidden-xs col-sm-3 col-lg-6 p-0">
@@ -82,15 +82,10 @@
       </div>
     </header>
 
-    <section id="pesquisa" class="pesquisa row m-0 p-l-0 p-r-0 p-b-md-48 p-b-lg-48">
+    <section id="pesquisa" class="pesquisa row m-0 p-l-0 p-r-0">
       <div class="container center-block">
-        <div class="hidden-xs pull-right m-t-16">
-          <p class="__stf-branco">
-            <span class="m-r-16">Peticione e acompanhe processos:</span> <a href="https://servidor.stf.jus.br" target="_blank" class="btn btn-default-bordered">Painel do Peticionador</a>
-          </p>
-        </div>
         <div class="pesquisa-conteudo clearfix">
-          <h3 class="pesquisa-titulo">O que você procura?</h3>
+          <h3 class="pesquisa-titulo m-b-16">Notícia</h3>
           <div class="pesquisa-campos">
             <div class="hidden-md hidden-lg campo-container">
               <select class="pesquisa-select full-width">
@@ -98,7 +93,7 @@
               </select>
             </div>
             <div class="form-inline">
-              <div class="campo-container">
+              <div class="campo-container m-b-xs-0">
                 <div class="seletores-campo">
                   <input type="hidden" name="tipo-pesquisa" id="tipo-pesquisa">
                   <ul class="seletores hidden-xs hidden-sm">
@@ -116,103 +111,6 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="sob-medida" class="sob-medida m-b-24">
-      <div class="container center-block p-xs-0">
-        <div class="row p-0 m-0">
-          <div class="sob-medida-item p-0 m-r-8">
-            <div class="item-titulo item-titulo-sob-medida">Sob medida</div>
-            <div class="item-titulo item-titulo-para-voce __stf-azul-escuro">Para <strong>você</strong></div>
-          </div>
-          <div class="pull-right">
-            <div class="sob-medida-item p-0 pull-right visible-xs m-r-0">
-              <div class="dropdown">
-                <button class="btn btn-default btn-raised com-icone" type="button" id="sob-medida-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="icone glyphicon glyphicon-list-alt" aria-hidden="true"></span>
-                  <span class="texto">Selecione</span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="sob-medida-dropdown">
-                  <li>
-                    <a href="#">Advogados</a>
-                    <a href="#">Estudantes</a>
-                    <a href="#">Órgãos</a>
-                    <a href="#">Cidadãos</a>
-                    <a href="#">Imprensa</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="sob-medida-item p-0 pull-left hidden-xs">
-              <button class="btn btn-default btn-raised com-icone" type="button" id="sob-medida-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="icone glyphicon glyphicon-list-alt" aria-hidden="true"></span>
-                <span class="texto">Advogados</span>
-              </button>
-            </div>
-
-            <div class="sob-medida-item p-0 pull-left hidden-xs">
-              <button class="btn btn-default btn-raised com-icone" type="button" id="sob-medida-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="icone glyphicon glyphicon-list-alt" aria-hidden="true"></span>
-                <span class="texto">Estudantes</span>
-              </button>
-            </div>
-
-            <div class="sob-medida-item p-0 pull-left visible-sm m-r-0">
-              <div class="dropdown">
-                <button class="btn btn-default btn-raised com-icone" type="button" id="sob-medida-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="icone glyphicon glyphicon-list-alt" aria-hidden="true"></span>
-                  <span class="texto">Selecione</span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="sob-medida-dropdown">
-                  <li>
-                    <a href="#">Órgãos</a>
-                    <a href="#">Cidadãos</a>
-                    <a href="#">Imprensa</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="sob-medida-item p-0 pull-left hidden-xs hidden-sm">
-              <button class="btn btn-default btn-raised com-icone" type="button" id="sob-medida-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="icone glyphicon glyphicon-list-alt" aria-hidden="true"></span>
-                <span class="texto">Órgãos</span>
-              </button>
-            </div>
-
-            <div class="sob-medida-item p-0 pull-left visible-md m-r-0">
-              <div class="dropdown">
-                <button class="btn btn-default btn-raised com-icone" type="button" id="sob-medida-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="icone glyphicon glyphicon-list-alt" aria-hidden="true"></span>
-                  <span class="texto">Selecione</span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="sob-medida-dropdown">
-                  <li>
-                    <a href="#">Cidadãos</a>
-                    <a href="#">Imprensa</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="sob-medida-item p-0 pull-left hidden-xs hidden-sm hidden-md">
-              <button class="btn btn-default btn-raised com-icone" type="button" id="sob-medida-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="icone glyphicon glyphicon-list-alt" aria-hidden="true"></span>
-                <span class="texto">Cidadãos</span>
-              </button>
-            </div>
-
-            <div class="sob-medida-item p-0 pull-left hidden-xs hidden-sm hidden-md">
-              <button class="btn btn-default btn-raised com-icone" type="button" id="sob-medida-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="icone glyphicon glyphicon-list-alt" aria-hidden="true"></span>
-                <span class="texto">Imprensa</span>
-              </button>
-            </div>
-          </div>
-          
         </div>
       </div>
     </section>
@@ -568,7 +466,7 @@
           <div id="tv-justica" class="tv-justica card m-b-24">
             <div class="card-titulo">
               <h3 class="m-0">TV Justiça</h3>
-              <div class="ao-vivo"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgd2lkdGg9IjE4cHgiIGhlaWdodD0iMTJweCIgdmlld0JveD0iMCAwIDE4IDEyIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPg0KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggNDMuMSAoMzkwMTIpIC0gaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoIC0tPg0KICAgIDx0aXRsZT5wb3J0bGV0aWNvbi92aWRlb2NhbTwvdGl0bGU+DQogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+DQogICAgPGRlZnM+PC9kZWZzPg0KICAgIDxnIGlkPSJMYW5kaW5nLVBhZ2UiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPg0KICAgICAgICA8ZyBpZD0icHJpbmNpcGFsIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTEyNS4wMDAwMDAsIC0xMDYxLjAwMDAwMCkiIGZpbGw9IiMyMkUyNjMiPg0KICAgICAgICAgICAgPGcgaWQ9InBvcnRsZXRpY29uL3ZpZGVvY2FtIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMTI1LjAwMDAwMCwgMTA2MS4wMDAwMDApIj4NCiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTQsMSBDMTQsMC40IDEzLjYsMCAxMywwIEwxLDAgQzAuNCwwIDAsMC40IDAsMSBMMCwxMSBDMCwxMS42IDAuNCwxMiAxLDEyIEwxMywxMiBDMTMuNiwxMiAxNCwxMS42IDE0LDExIEwxNCw3LjUgTDE4LDExLjUgTDE4LDAuNSBMMTQsNC41IEwxNCwxIFoiIGlkPSJTaGFwZSI+PC9wYXRoPg0KICAgICAgICAgICAgPC9nPg0KICAgICAgICA8L2c+DQogICAgPC9nPg0KPC9zdmc+" alt="ao vivo">ao vivo</div>
+              <div class="ao-vivo"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMThweCIgaGVpZ2h0PSIxMnB4IiB2aWV3Qm94PSIwIDAgMTggMTIiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQzLjEgKDM5MDEyKSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5wb3J0bGV0aWNvbi92aWRlb2NhbTwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJMYW5kaW5nLVBhZ2UiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJwcmluY2lwYWwiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMTI1LjAwMDAwMCwgLTEwNjEuMDAwMDAwKSIgZmlsbD0iIzIyRTI2MyI+CiAgICAgICAgICAgIDxnIGlkPSJwb3J0bGV0aWNvbi92aWRlb2NhbSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTEyNS4wMDAwMDAsIDEwNjEuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTQsMSBDMTQsMC40IDEzLjYsMCAxMywwIEwxLDAgQzAuNCwwIDAsMC40IDAsMSBMMCwxMSBDMCwxMS42IDAuNCwxMiAxLDEyIEwxMywxMiBDMTMuNiwxMiAxNCwxMS42IDE0LDExIEwxNCw3LjUgTDE4LDExLjUgTDE4LDAuNSBMMTQsNC41IEwxNCwxIFoiIGlkPSJTaGFwZSI+PC9wYXRoPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=" alt="ao vivo">ao vivo</div>
             </div>
             <div class="card-conteudo">
               <div class="card-media-video">
@@ -831,5 +729,5 @@
       </div>
     </footer>
   </div>
-<script type="text/javascript" src="/scripts/manifest.0821447633fd6f215331.js"></script><script type="text/javascript" src="/scripts/vendor.fff6851381447b93d0d4.js"></script><script type="text/javascript" src="/scripts/noticias.c81e42404805299d7cfb.js"></script><script type="text/javascript" src="/scripts/bundle.2b83707e6daa773012e3.js"></script></body>
+<script type="text/javascript" src="/scripts/manifest.2c46f512a293efba38b3.js"></script><script type="text/javascript" src="/scripts/vendor.e0ab3264861b943a1ae5.js"></script><script type="text/javascript" src="/scripts/noticias.6e49ae5cdad21bc37071.js"></script><script type="text/javascript" src="/scripts/bundle.30dbb513da4bcfc6f3e8.js"></script></body>
 </html>
