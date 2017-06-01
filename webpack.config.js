@@ -9,12 +9,15 @@ const PATHS = {
   src: path.join(__dirname, '/src'),
   assets: path.join(__dirname, '/assets'),
   scss: path.join(__dirname, '/assets/scss'),
-  img: path.join(__dirname, '/assets/img')
+  img: path.join(__dirname, '/assets/img'),
+  ghPages: path.join(__dirname, '/showroom-build')
 };
 
 const VENDORS = ['bootstrap-loader'];
 
 const customCss = new ExtractTextPlugin("styles/[name].css");
+
+const publicPath = process.env.GH_PAGES ? process.env.GH_PAGES.trim() : '/';
 
 var config = {};
 const common = {
@@ -31,9 +34,9 @@ const common = {
   },
 
   output: {
-    path: PATHS.dist,
+    path: process.env.GH_PAGES ? PATHS.ghPages : PATHS.dist,
     filename: 'scripts/[name].[chunkhash].js',
-    publicPath: '/'
+    publicPath
   },
 
   resolve: {
