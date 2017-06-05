@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Supremo Tribunal Federal</title>
 </head>
-<body>
-  <div id="main" class="container-fluid p-0 noticias">
+<body class="pagina-interna">
+  <div id="main" class="container-fluid p-0">
     <section class="menu-acessibilidade row p-0 m-0">
       <div class="container p-xs-0">
         <div class="hidden-xs col-sm-3 col-lg-6 p-0">
@@ -135,7 +135,12 @@
     <section id="pesquisa" class="pesquisa row m-0 p-l-0 p-r-0">
       <div class="container center-block">
         <div class="pesquisa-conteudo clearfix">
-          <h3 class="pesquisa-titulo m-b-16">Notícia</h3>
+          <div class="pesquisa-titulo m-t-16 m-b-16">
+            <button class="btn btn-default btn-icone pull-right __fundo-transparente">
+              <i class="glyphicon glyphicon-search" aria-label="abrir pesquisa"></i>
+            </button>
+            <h3 class="m-0">Notícias</h3> 
+          </div> 
           <div class="pesquisa-campos">
             <div class="hidden-md hidden-lg campo-container">
               <select class="pesquisa-select full-width">

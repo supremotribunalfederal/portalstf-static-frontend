@@ -15,8 +15,16 @@
     max-width: 900px;
     margin:0 auto;
 
+    .pesquisa-btn-interna {
+      display: none;
+    }
+
     .pesquisa-titulo {
       color: $stfBranco;
+
+      h3 {
+        line-height: 40px;
+      }
     }
 
     .pesquisa-titulo-expandida {
@@ -123,14 +131,27 @@
 
               a.ativo {
                 background: $stfAzulClaro;
+                border-top: none;
                 font-size: 0.875rem;
                 height: 30px;
                 top: 0;
-                border-top: none;
               }
             }
           }
         }
+      }
+    }
+  }
+}
+
+.pagina-interna {
+  .pesquisa {
+    .pesquisa-conteudo {
+      .pesquisa-btn-interna {
+        display: block;
+      }
+      .pesquisa-campos {
+        display: none;
       }
     }
   }
