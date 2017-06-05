@@ -147,6 +147,10 @@
 .pagina-interna {
   .pesquisa {
     .pesquisa-conteudo {
+      margin-left: 0;
+      margin-right: 0;
+      max-width: 1170px;
+
       .pesquisa-btn-interna {
         display: block;
       }

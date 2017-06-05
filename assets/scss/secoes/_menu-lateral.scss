@@ -1,0 +1,21 @@
+.menu-lateral {
+    border-right: 1px solid $stfCinza;
+    height: 100%;
+
+    h4 {
+        font-weight: bold;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0; 
+
+        li {
+            margin: 8px 0;
+
+            .opcao-selecionada {
+                font-weight: bold;
+            }
+        }
+    }
+}
