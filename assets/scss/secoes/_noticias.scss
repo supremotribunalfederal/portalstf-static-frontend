@@ -1,9 +1,4 @@
 #noticias {
-
-  @media all and (max-width: $breakpointPhones) {
-    background: $stfCinzaBackground;
-  }
-
   .noticia {
     > * {
       margin: 0;
@@ -57,11 +52,8 @@
       color: $stfCinzaEscuro;
       font-size: 0.8rem;
       word-wrap: break-word;
-      letter-spacing: -.3px;
+      letter-spacing: -0.3px;
       line-height: 20px;
-      @media all and (max-width: $breakpointPhones) {
-        font-size: 1rem;
-      }
     }
 
     .noticia-imagem-xs {
@@ -121,5 +113,33 @@
     color: $stfAzulEscuro;
     font-size: 1.5rem;
     margin:16px 0;
+  }
+}
+
+.pagina-interna {
+  #noticias {
+    .noticia {
+      border-bottom: 0;
+    }
+    .noticia-titulo {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .noticia-autor {
+      font-weight: bold;
+      color: $stfCinza;
+    }
+
+    .noticia-data-xs {
+      font-size: 0.7rem;
+    }
+
+    .noticia-conteudo {
+      p{
+        font-size: 1.25rem;
+        line-height: 1.75;
+      }
+    }
   }
 }
