@@ -136,10 +136,26 @@
     }
 
     .noticia-conteudo {
-      p{
+      p {
         font-size: 1.25rem;
         line-height: 1.75;
       }
     }
+  }
+}
+.mais-noticias {
+  .noticia-imagem {
+    max-width: 330px;
+    img {
+      border-radius: 8px;
+    }
+  }
+}
+
+.mais-noticias-imagem-xs {
+  text-align: center;
+  img {
+    max-width: 330px; 
+    width: 100%;
   }
 }
