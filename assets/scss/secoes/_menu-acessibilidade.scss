@@ -108,6 +108,30 @@ $height: 30px;
     }
   }
 
+  .menu-servidores {
+    border-right: 1px solid $stfBrancoAlfa40;
+
+    span {
+      font-size:0.75rem;
+    }
+
+    a {
+      font-size:0.75rem;
+    }
+
+    .dropdown {
+      .open {
+        > .btn-default.dropdown-toggle:focus,
+        > .btn-default.dropdown-toggle.focus {
+          background: transparent;
+          border: 0;
+          color: $stfBranco;
+          outline: 0 none;
+        }
+      }
+    }
+  }
+
   .link-borda-direita {
     border-right: 1px solid $stfBrancoAlfa40;
   }
