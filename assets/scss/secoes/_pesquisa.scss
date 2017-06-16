@@ -108,7 +108,32 @@
               margin: 0;
               margin-right:10px;
 
+              span{
+                background: $stfBrancoAlfa15;
+                color: $stfBranco;
+                display: block;
+                font-size: 0.75rem;
+                height: 30px;
+                padding: 0 15px;
+                position: relative;
+                top: 0px;
 
+                border-top: 1px solid $stfBrancoAlfa40;
+
+                &:hover {
+                  background-color: $stfAzulClaro;
+                  color: $stfBranco;
+                  text-decoration: none;
+                }
+              }
+
+              span.ativo {
+                background: $stfAzulClaro;
+                border-top: none;
+                font-size: 0.875rem;
+                height: 30px;
+                top: 0;
+              }
               
               a {
                 background: $stfBrancoAlfa15;
