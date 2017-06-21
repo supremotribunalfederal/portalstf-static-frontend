@@ -98,6 +98,11 @@ const common = {
       template: path.join(PATHS.src, '/noticias/index.html'),
       chunks: ['noticias', 'bundle', 'vendor', 'manifest']
     }),
+    new HtmlPlugin({
+      filename: 'textos/index.html',
+      template: path.join(PATHS.src, '/textos/index.html'),
+      chunks: ['noticias', 'bundle', 'vendor', 'manifest']
+    }),
     new webpack.optimize.CommonsChunkPlugin({
       name: ['vendor', 'manifest']
     }),

@@ -21,6 +21,10 @@
     }
   }
   
+  &.card-sem-sombra {
+    box-shadow: none;
+  }
+
   .card-titulo {
     background: $stfAzulClaro;
     color: $stfBranco;
