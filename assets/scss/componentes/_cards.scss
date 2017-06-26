@@ -81,6 +81,16 @@
       background: $stfAzulCinza;
       padding: 4px 8px;
     }
+
+    .card-container-imagem {
+      position: relative;
+
+      .card-imagem {
+        position: absolute;
+        right: 20px;
+        top: 8px;
+      }
+    }
   }
 
   .card-rodape {

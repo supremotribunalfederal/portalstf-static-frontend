@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import './index-ga';
 
 $('.dropdown-toggle').hover(function() {
   $(this).find('.dropdown-menu').stop(true, true).delay(0).fadeIn(100);
