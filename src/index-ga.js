@@ -92,6 +92,43 @@ $('#jurisprudencia-sumulas-propostas').on('click', function(){
 $('#jurisprudencia-sumulas-aplicacao').on('click', function(){
 	ga('send', 'event', 'Pagina Home', 'Jurisprudência', 'Súmulas - Aplicação de súmulas no STF');
 });
-$('#jurisprudencia-sumulas-aplicacao').on('click', function(){
-	ga('send', 'event', 'Pagina Home', 'Jurisprudência', 'Súmulas - Aplicação de súmulas no STF');
+$('#jurisprudencia-informativos-semanal').on('click', function(){
+	ga('send', 'event', 'Pagina Home', 'Jurisprudência', 'Informativos - Informativo Semanal');
+});
+$('#jurisprudencia-informativos-temas').on('click', function(){
+	ga('send', 'event', 'Pagina Home', 'Jurisprudência', 'Informativos - Informativo por Temas');
+});
+$('#jurisprudencia-maisinfo-repositorios').on('click', function(){
+	ga('send', 'event', 'Pagina Home', 'Jurisprudência', 'Mais Informações - Repositório de jurisprudência');
+});
+$('#jurisprudencia-maisinfo-teses').on('click', function(){
+	ga('send', 'event', 'Pagina Home', 'Jurisprudência', 'Mais Informações - Teses Jurídicas');
+});
+$('#jurisprudencia-maisinfo-omissao').on('click', function(){
+	ga('send', 'event', 'Pagina Home', 'Jurisprudência', 'Mais Informações - Omissão inconstitucional');
+});
+$('#jurisprudencia-maisinfo-glossario').on('click', function(){
+	ga('send', 'event', 'Pagina Home', 'Jurisprudência', 'Mais Informações - Glossário jurídico');
+});
+
+//card da transparência
+$('#transparencia-gestao-pessoas').on('click', function(){
+	ga('send', 'event', 'Pagina Home', 'Transparência', 'Gestão de Pessoas');
+});
+$('#transparencia-licitacoes').on('click', function(){
+	ga('send', 'event', 'Pagina Home', 'Transparência', 'Licitações');
+});
+$('#transparencia-orcamento').on('click', function(){
+	ga('send', 'event', 'Pagina Home', 'Transparência', 'Orçamento e Finanças');
+});
+$('#transparencia-sobrestf').on('click', function(){
+	ga('send', 'event', 'Pagina Home', 'Transparência', 'Conheça mais sobre o STF');
+});
+$('#transparencia-vermais').on('click', function(){
+	ga('send', 'event', 'Pagina Home', 'Transparência', 'Ver o Portal da Transparência');
+});
+
+//Supremo em Números
+$('#supremo-em-numeros').on('click', function(){
+	ga('send', 'event', 'Pagina Home', 'Supremo em Números', 'Quero conhecer');
 });
