@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import './index-ga';
+import moment from 'moment';
 
 $('.dropdown-toggle').hover(function() {
   $(this).find('.dropdown-menu').stop(true, true).delay(0).fadeIn(100);
@@ -7,12 +8,10 @@ $('.dropdown-toggle').hover(function() {
   $(this).find('.dropdown-menu').stop(true, true).delay(0).fadeOut(100);
 });
 
-
 $(document).ready(function(){
     $('.botoes-pesquisa-jurisprudencia span').hide();
     $('.pesquisa-jurisprudencia-links-inferiores').hide();    
 });
-
 
 moment.locale("pt-BR");    
 $(".tmp-dec").html("H&aacute; " + moment().startOf("day").fromNow());    
@@ -59,7 +58,6 @@ $("#menuPesquisa li span").on("click", function() {
     $("#pesquisaPrincipal").focus();
 });
 
-
 $('.botoes-pesquisa-jurisprudencia span').on('click', function(){
     var search = $('#pesquisaPrincipal').val();
     search = search + ' ' + $(this).data('value') + ' ';
@@ -67,11 +65,15 @@ $('.botoes-pesquisa-jurisprudencia span').on('click', function(){
     $("#pesquisaPrincipal").focus();
 });
 
-
 function realizarPesquisa(){
     var assunto = $("#abaSelecionada").val();
     var termoPesquisa = $("#pesquisaPrincipal").val();
-    location.href = "//hstf.stf.jus.br/portal/pesquisa/listarPesquisa.asp?termo=" + termoPesquisa + "&assunto=" + assunto;
+    
+    if (assunto == "4") {
+        location.href = "//stf.jus.br/portal/jurisprudencia/listarConsolidada.asp?base=baseAcordaos&base=baseRepercussao&url=&txtPesquisaLivre=" + termoPesquisa;
+    } else {
+        location.href = "//stf.jus.br/portal/pesquisa/listarPesquisa.asp?termo=" + termoPesquisa + "&assunto=" + assunto;
+    }
 }
 
 $("#btnPesquisar").click(function(){
@@ -83,3 +85,36 @@ $("#pesquisaPrincipal").keyup(function(e){
         realizarPesquisa();
     }
 });
+
+/* Pauta de Julgamento da Home ------------------------------------------------------------------------------------ */
+
+//Usada no ato de clicar sobre um dia no calendário de pauta de julgamento.
+function selecionarDataJulgamento(data) {
+    ga('send', 'event', 'Página Geral', 'Pauta Julgamento', 'Link calendario');
+    location.href = "//stf.jus.br/portal/pauta/listarCalendario.asp?data=" + data;
+}
+
+function pesquisarProcessoConstaPauta() {
+    var inputProcesso = document.getElementById('pesquisa_pauta');
+    var regra = /(\w{2}|\w{4}) \d{3,6}/;
+
+    if (!regra.test(inputProcesso.value)) {
+        alert('O número do processo informado é inválido.');
+        return;
+    }
+
+    var processo = inputProcesso.value.split(' ');
+    var classe = processo[0].trim().toUpperCase();
+    var numero = processo[1].trim();
+
+    location.href = "//www.stf.jus.br/portal/pauta/listarProcesso.asp?classe=" + classe + "&argumento=" + numero;
+}
+
+function pesquisarProcessoPauta(event) {
+    if (event.keyCode == 13) {
+        pesquisarProcessoConstaPauta();
+        ga('send', 'event', 'Página Geral','Pauta Julgamento', 'Pesquisa via enter');
+    }
+}
+
+/* ---------------------------------------------------------------------------------------------------------------- */
