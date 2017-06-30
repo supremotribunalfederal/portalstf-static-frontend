@@ -5,3 +5,15 @@
 .card .card-conteudo .card-caixa-texto h4 {
     padding-top: 5px;
 }
+
+#mais-info.card {
+    box-shadow: none;
+}
+
+#mais-info {
+    .card-conteudo{
+        .card-caixa-texto {
+            padding-left: 40px;
+        }
+    }
+} 
