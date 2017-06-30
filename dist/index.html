@@ -18,10 +18,10 @@
             </div>
             <div class="hidden-sm hidden-md">Ir para:</div>
             <ul class="atalhos hidden-sm hidden-md">
-              <li><a accesskey="1" href="#conteudo"><span>1</span> conteúdo</a></li>
-              <li><a accesskey="2" href="#menu-principal"><span>2</span> menu</a></li>
-              <li><a accesskey="3" href="#pesquisa"><span>3</span> busca</a></li>
-              <li><a accesskey="4" href="#rodape"><span>4</span> rodapé</a></li>
+              <li><a accesskey="1" href="#conteudo" id="conteudo-acessibilidade"><span>1</span> conteúdo</a></li>
+              <li><a accesskey="2" href="#menu-principal" id="menu-acessibilidade"><span>2</span> menu</a></li>
+              <li><a accesskey="3" href="#pesquisa" id="busca-acessibilidade"><span>3</span> busca</a></li>
+              <li><a accesskey="4" href="#rodape" id="rodape-acessibilidade"><span>4</span> rodapé</a></li>
             </ul>
           </div>
         </div>
@@ -53,26 +53,24 @@
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="servidores">
                   <li class="dropdown-header">Financeiro</li>
-                  <li><a href="https://servidor.stf.jus.br/iRH/mobile" target="_blank">Contracheque simplificado</a></li>
-                  <li><a href="https://servidor.stf.jus.br/iRH/" target="_blank">Contracheque completo</a></li>
-                  <li><a href="https://www2.econsig.com.br/stf/login/login_servidor.jsp#no-back" target="_blank">Margem Consignável</a></li>
+                  <li><a id="servidor-contracheque" href="https://servidor.stf.jus.br/iRH" target="_blank">Contracheque</a></li>
+                  <li><a id="servidor-margem" href="https://www2.econsig.com.br/stf/login/login_servidor.jsp#no-back" target="_blank">Margem Consignável</a></li>
                   <li class="divider"></li>
                   <li class="dropdown-header">Saúde</li>
-                  <li><a href="http://saude.stf.jus.br/" target="_blank">Site STFMed</a></li>
-                  <li><a href="http://saude.stf.jus.br/consulta-no-carteirinhas-stf-med-e-saude-caixa/" target="_blank">Carteirinha virtual</a></li>
+                  <li><a id="servidor-plano-saude" href="http://saude.stf.jus.br/" target="_blank">Plano de Saúde</a></li>
                   <li class="divider"></li>
-                  <li><a href="https://ead.stf.jus.br/" target="_blank">Educação a distância (EaD)</a></li>
+                  <li><a id="servidor-ead" href="https://ead.stf.jus.br/" target="_blank">Educação a distância (EaD)</a></li>
                   <li class="divider"></li>
                   <li class="dropdown-header">Ferramentas de trabalho</li>
-                  <li><a href="https://gabinetevirtual.stf.jus.br/" target="_blank">Gabinete Virtual</a></li>
-                  <li><a href="https://correio.stf.jus.br/" target="_blank">Correio Eletrônico</a></li>
+                  <li><a id="servidor-gabinete" href="https://gabinetevirtual.stf.jus.br/" target="_blank">Gabinete Virtual</a></li>
+                  <li><a id="servidor-correio-eletronico" href="https://correio.stf.jus.br/" target="_blank">Correio Eletrônico</a></li>
                   <li class="divider"></li>
-                  <li><a href="https://servidor.stf.jus.br/" target="_blank">Ver todos</a></li>
+                  <li><a id="servidor-imprensa" href="http://cliente.linearclipping.com.br/stf/" target="_blank">Destaques do STF na imprensa</a></li>
                 </ul>
               </div>
             </div>
             <div class="hidden-xs col-sm-4 col-md-3 link-borda-direita">
-              <a href="//www.stf.jus.br/portal/centralDoCidadao/enviarDadoPessoal.asp" target="_blank" class="btn btn-default">Fale conosco</a>
+              <a id="contato-topo" href="//www.stf.jus.br/portal/centralDoCidadao/enviarDadoPessoal.asp" target="_blank" class="btn btn-default">Fale conosco</a>
             </div>
           </div>
           <div class="col-xs-4 col-sm-3 telefone-stf link-borda-direita"><i class="glyphicon glyphicon-earphone"></i> <a href="tel:+556132173000">(61) 3217-3000</a></div>
@@ -111,8 +109,11 @@
                       <li><a href="#">País</a></li>
                     </ul>
                 </li>
-                <li class="dropdown-toggle">
-                  <a href="#"   id="oStf" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Jurisprudência</a>
+                <li class="dropdown-toggle container-dropdown-lateral">
+                  <a href="http://www.stf.jus.br" id="oStf" >Jurisprudência</a>
+                  <button type="button" class="btn btn-default dropdown-lateral visible-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span class="caret"></span>
+                  </button>
                     <ul class="dropdown-menu" aria-labelledby="jurisprudencia">
                       <li><a href="#">País</a></li>
                       <li><a href="#">País</a></li>
@@ -993,5 +994,5 @@
       </div>
     </footer>
   </div>
-<script type="text/javascript" src="/scripts/manifest.127816840b32eff2b4aa.js"></script><script type="text/javascript" src="/scripts/vendor.09e31f30e09277fc79e6.js"></script><script type="text/javascript" src="/scripts/bundle.d0931dfc85fb484ec40c.js"></script></body>
+<script type="text/javascript" src="/scripts/manifest.b557bbc9e94b4d79194d.js"></script><script type="text/javascript" src="/scripts/vendor.09e31f30e09277fc79e6.js"></script><script type="text/javascript" src="/scripts/bundle.5e65c4a154a796f9fb78.js"></script></body>
 </html>

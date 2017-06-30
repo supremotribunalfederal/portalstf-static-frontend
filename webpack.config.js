@@ -30,6 +30,10 @@ const common = {
     noticias: [
       path.join(PATHS.src, '/noticias/index.js'),
       path.join(PATHS.scss, '/secoes/noticias/noticias.scss')
+    ],
+    repgeral: [
+      path.join(PATHS.src, '/repgeral/index.js'),
+      path.join(PATHS.scss, '/secoes/repgeral/repgeral.scss')
     ]
   },
 
@@ -102,6 +106,11 @@ const common = {
       filename: 'textos/index.html',
       template: path.join(PATHS.src, '/textos/index.html'),
       chunks: ['noticias', 'bundle', 'vendor', 'manifest']
+    }),
+    new HtmlPlugin({
+      filename: 'repgeral/index.html',
+      template: path.join(PATHS.src, '/repgeral/index.html'),
+      chunks: ['repgeral', 'bundle', 'vendor', 'manifest']
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: ['vendor', 'manifest']
