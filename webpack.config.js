@@ -59,12 +59,17 @@ const common = {
         use: customCss.extract({
           use: 'css-loader!sass-loader'
         }),
-        exclude: /node_modules|noticias/
+        exclude: /node_modules|noticias|repgeral/
       },
       {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
         include: path.join(PATHS.scss, '/secoes/noticias')
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+        include: path.join(PATHS.scss, '/secoes/repgeral')
       },
       {
         test: /\.(jpg|jpeg|gif|png|svg|ico)$/i,
