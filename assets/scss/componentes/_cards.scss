@@ -21,6 +21,10 @@
     }
   }
   
+  &.card-sem-sombra {
+    box-shadow: none;
+  }
+
   .card-titulo {
     background: $stfAzulClaro;
     color: $stfBranco;
@@ -76,6 +80,16 @@
 
       background: $stfAzulCinza;
       padding: 4px 8px;
+    }
+
+    .card-container-imagem {
+      position: relative;
+
+      .card-imagem {
+        position: absolute;
+        right: 20px;
+        top: 8px;
+      }
     }
   }
 

@@ -30,6 +30,10 @@ const common = {
     noticias: [
       path.join(PATHS.src, '/noticias/index.js'),
       path.join(PATHS.scss, '/secoes/noticias/noticias.scss')
+    ],
+    repgeral: [
+      path.join(PATHS.src, '/repgeral/index.js'),
+      path.join(PATHS.scss, '/secoes/repgeral/repgeral.scss')
     ]
   },
 
@@ -55,12 +59,17 @@ const common = {
         use: customCss.extract({
           use: 'css-loader!sass-loader?sourceMaps'
         }),
-        exclude: /node_modules|noticias/
+        exclude: /node_modules|noticias|repgeral/
       },
       {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader?url=false', 'sass-loader'],
         include: path.join(PATHS.scss, '/secoes/noticias')
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+        include: path.join(PATHS.scss, '/secoes/repgeral')
       },
       {
         test: /\.(jpg|jpeg|gif|png|svg|ico)$/i,
@@ -97,6 +106,16 @@ const common = {
       filename: 'noticias/index.html',
       template: path.join(PATHS.src, '/noticias/index.html'),
       chunks: ['noticias', 'bundle', 'vendor', 'manifest']
+    }),
+    new HtmlPlugin({
+      filename: 'textos/index.html',
+      template: path.join(PATHS.src, '/textos/index.html'),
+      chunks: ['noticias', 'bundle', 'vendor', 'manifest']
+    }),
+    new HtmlPlugin({
+      filename: 'repgeral/index.html',
+      template: path.join(PATHS.src, '/repgeral/index.html'),
+      chunks: ['repgeral', 'bundle', 'vendor', 'manifest']
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: ['vendor', 'manifest']

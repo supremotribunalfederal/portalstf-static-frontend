@@ -11,6 +11,10 @@ $height: 30px;
     font-weight: 100;
   }
 
+  span .item-servidores{
+    font-size: 0.75rem;
+  }  
+
   height: $height;
   text-align: center;
 
@@ -85,6 +89,30 @@ $height: 30px;
   }
 
   .menu-internacionalizacao {
+    border-right: 1px solid $stfBrancoAlfa40;
+
+    span {
+      font-size:0.75rem;
+    }
+
+    a {
+      font-size:0.75rem;
+    }
+
+    .dropdown {
+      .open {
+        > .btn-default.dropdown-toggle:focus,
+        > .btn-default.dropdown-toggle.focus {
+          background: transparent;
+          border: 0;
+          color: $stfBranco;
+          outline: 0 none;
+        }
+      }
+    }
+  }
+
+  .menu-servidores {
     border-right: 1px solid $stfBrancoAlfa40;
 
     span {

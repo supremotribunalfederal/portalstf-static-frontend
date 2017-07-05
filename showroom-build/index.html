@@ -46,7 +46,30 @@
               </div>
             </div>
             <div class="col-xs-8 col-sm-4 col-md-3 link-borda-direita">
-              <a href="//servidor.stf.jus.br" target="_blank" class="btn btn-default">Servidores</a>
+              <div class="dropdown menu-servidores dropdown-toggle">
+                <button class="btn btn-default " type="button" id="servidores" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  <span class="hidden-xs hidden-sm">Servidores</span>
+                  <i class="caret"></i>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="servidores">
+                  <li class="dropdown-header">Financeiro</li>
+                  <li><a href="https://servidor.stf.jus.br/iRH/mobile" target="_blank">Contracheque simplificado</a></li>
+                  <li><a href="https://servidor.stf.jus.br/iRH/" target="_blank">Contracheque completo</a></li>
+                  <li><a href="https://www2.econsig.com.br/stf/login/login_servidor.jsp#no-back" target="_blank">Margem Consignável</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Saúde</li>
+                  <li><a href="http://saude.stf.jus.br/" target="_blank">Site STFMed</a></li>
+                  <li><a href="http://saude.stf.jus.br/consulta-no-carteirinhas-stf-med-e-saude-caixa/" target="_blank">Carteirinha virtual</a></li>
+                  <li class="divider"></li>
+                  <li><a href="https://ead.stf.jus.br/" target="_blank">Educação a distância (EaD)</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Ferramentas de trabalho</li>
+                  <li><a href="https://gabinetevirtual.stf.jus.br/" target="_blank">Gabinete Virtual</a></li>
+                  <li><a href="https://correio.stf.jus.br/" target="_blank">Correio Eletrônico</a></li>
+                  <li class="divider"></li>
+                  <li><a href="https://servidor.stf.jus.br/" target="_blank">Ver todos</a></li>
+                </ul>
+              </div>
             </div>
             <div class="hidden-xs col-sm-4 col-md-3 link-borda-direita">
               <a href="//www.stf.jus.br/portal/centralDoCidadao/enviarDadoPessoal.asp" target="_blank" class="btn btn-default">Fale conosco</a>
@@ -614,7 +637,7 @@
           <div id="tv-justica" class="tv-justica card m-b-24">
             <div class="card-titulo">
               <h3 class="m-0">TV Justiça</h3>
-              <div class="ao-vivo"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgd2lkdGg9IjE4cHgiIGhlaWdodD0iMTJweCIgdmlld0JveD0iMCAwIDE4IDEyIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPg0KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggNDMuMSAoMzkwMTIpIC0gaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoIC0tPg0KICAgIDx0aXRsZT5wb3J0bGV0aWNvbi92aWRlb2NhbTwvdGl0bGU+DQogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+DQogICAgPGRlZnM+PC9kZWZzPg0KICAgIDxnIGlkPSJMYW5kaW5nLVBhZ2UiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPg0KICAgICAgICA8ZyBpZD0icHJpbmNpcGFsIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTEyNS4wMDAwMDAsIC0xMDYxLjAwMDAwMCkiIGZpbGw9IiMyMkUyNjMiPg0KICAgICAgICAgICAgPGcgaWQ9InBvcnRsZXRpY29uL3ZpZGVvY2FtIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMTI1LjAwMDAwMCwgMTA2MS4wMDAwMDApIj4NCiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTQsMSBDMTQsMC40IDEzLjYsMCAxMywwIEwxLDAgQzAuNCwwIDAsMC40IDAsMSBMMCwxMSBDMCwxMS42IDAuNCwxMiAxLDEyIEwxMywxMiBDMTMuNiwxMiAxNCwxMS42IDE0LDExIEwxNCw3LjUgTDE4LDExLjUgTDE4LDAuNSBMMTQsNC41IEwxNCwxIFoiIGlkPSJTaGFwZSI+PC9wYXRoPg0KICAgICAgICAgICAgPC9nPg0KICAgICAgICA8L2c+DQogICAgPC9nPg0KPC9zdmc+" alt="ao vivo">ao vivo</div>
+              <div class="ao-vivo"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMThweCIgaGVpZ2h0PSIxMnB4IiB2aWV3Qm94PSIwIDAgMTggMTIiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQzLjEgKDM5MDEyKSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5wb3J0bGV0aWNvbi92aWRlb2NhbTwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJMYW5kaW5nLVBhZ2UiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJwcmluY2lwYWwiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMTI1LjAwMDAwMCwgLTEwNjEuMDAwMDAwKSIgZmlsbD0iIzIyRTI2MyI+CiAgICAgICAgICAgIDxnIGlkPSJwb3J0bGV0aWNvbi92aWRlb2NhbSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTEyNS4wMDAwMDAsIDEwNjEuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTQsMSBDMTQsMC40IDEzLjYsMCAxMywwIEwxLDAgQzAuNCwwIDAsMC40IDAsMSBMMCwxMSBDMCwxMS42IDAuNCwxMiAxLDEyIEwxMywxMiBDMTMuNiwxMiAxNCwxMS42IDE0LDExIEwxNCw3LjUgTDE4LDExLjUgTDE4LDAuNSBMMTQsNC41IEwxNCwxIFoiIGlkPSJTaGFwZSI+PC9wYXRoPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=" alt="ao vivo">ao vivo</div>
             </div>
             <div class="card-conteudo">
               <div class="card-media-video">
@@ -877,5 +900,5 @@
       </div>
     </footer>
   </div>
-<script type="text/javascript" src="/portalstf-static-frontend/scripts/manifest.a685093a81dafd0f8abb.js"></script><script type="text/javascript" src="/portalstf-static-frontend/scripts/vendor.b397cae1251f53deaa0a.js"></script><script type="text/javascript" src="/portalstf-static-frontend/scripts/bundle.a2e5b6694efba19a2178.js"></script></body>
+<script type="text/javascript" src="/portalstf-static-frontend/scripts/manifest.0ac4e02b30790a5651ab.js"></script><script type="text/javascript" src="/portalstf-static-frontend/scripts/vendor.e0ab3264861b943a1ae5.js"></script><script type="text/javascript" src="/portalstf-static-frontend/scripts/bundle.a2e5b6694efba19a2178.js"></script></body>
 </html>
