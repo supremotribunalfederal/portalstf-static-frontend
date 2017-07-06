@@ -8,214 +8,218 @@
 </head>
 <body>
   <div id="main" class="container-fluid p-0">
-    <section class="menu-acessibilidade row p-0 m-0">
-      <div class="container p-xs-0">
-        <div class="hidden-xs col-sm-3 col-lg-6 p-0">
-          <div class="acessibilidade">
-            <div class="m-l-0">Acessibilidade</div>
-            <div>
-              <a href="#"><i class="glyphicon glyphicon-adjust"></i></a>
-            </div>
-            <div class="hidden-sm hidden-md">Ir para:</div>
-            <ul class="atalhos hidden-sm hidden-md">
-              <li><a accesskey="1" href="#conteudo" id="conteudo-acessibilidade"><span>1</span> conteúdo</a></li>
-              <li><a accesskey="2" href="#menu-principal" id="menu-acessibilidade"><span>2</span> menu</a></li>
-              <li><a accesskey="3" href="#pesquisa" id="busca-acessibilidade"><span>3</span> busca</a></li>
-              <li><a accesskey="4" href="#rodape" id="rodape-acessibilidade"><span>4</span> rodapé</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-9 col-lg-6 p-0">
-          <div class="col-xs-8 col-sm-9">
-            <div class="col-xs-4 col-md-6">
-              <div class="dropdown menu-internacionalizacao dropdown-toggle">
-                <button class="btn btn-default " type="button" id="internacionalizacao" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                  <span class="hidden-xs hidden-sm">International Relations</span>
-                  <img src="<%= require('../assets/img/internacional/usa-flag.png') %>"
-                  srcset="<%= require('../assets/img/internacional/usa-flag.png') %> 2x" alt="English">
-                  <i class="caret"></i>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="internacionalizacao">
-                  <li><a href="//www2.stf.jus.br/portalStfInternacional/cms/verPrincipal.php?idioma=en_us" target="_blank"><img src="<%= require('../assets/img/internacional/usa-flag.png') %>"
-                  srcset="<%= require('../assets/img/internacional/usa-flag.png') %> 2x" alt="English"> English</a></li>
-                  <li><a href="//www2.stf.jus.br/portalStfInternacional/cms/verPrincipal.php?idioma=es_es" target="_blank"><img src="<%= require('../assets/img/internacional/spain-flag.png') %>"
-                  srcset="<%= require('../assets/img/internacional/spain-flag.png') %> 2x" alt="Español"> Español</a></li>
-                  <li><a href="//www2.stf.jus.br/portalStfInternacional/cms/verPrincipal.php?idioma=pt_br" target="_blank"><img src="<%= require('../assets/img/internacional/brazil-flag.png') %>"
-                  srcset="<%= require('../assets/img/internacional/brazil-flag.png') %> 2x" alt="Português"> Portuguese</a></li>
+    <div class="nav">
+      <div class="navbar navbar-default navbar-fixed-top">
+        <section class="menu-acessibilidade row p-0 m-0">
+          <div class="container p-xs-0">
+            <div class="hidden-xs col-sm-3 col-lg-6 p-0">
+              <div class="acessibilidade">
+                <div class="m-l-0">Acessibilidade</div>
+                <div>
+                  <a href="#"><i class="glyphicon glyphicon-adjust"></i></a>
+                </div>
+                <div class="hidden-sm hidden-md">Ir para:</div>
+                <ul class="atalhos hidden-sm hidden-md">
+                  <li><a accesskey="1" href="#conteudo" id="conteudo-acessibilidade"><span>1</span> conteúdo</a></li>
+                  <li><a accesskey="2" href="#menu-principal" id="menu-acessibilidade"><span>2</span> menu</a></li>
+                  <li><a accesskey="3" href="#pesquisa" id="busca-acessibilidade"><span>3</span> busca</a></li>
+                  <li><a accesskey="4" href="#rodape" id="rodape-acessibilidade"><span>4</span> rodapé</a></li>
                 </ul>
               </div>
             </div>
-            <div class="col-xs-8 col-sm-4 col-md-3 link-borda-direita">
-              <div class="dropdown menu-servidores dropdown-toggle">
-                <button class="btn btn-default " type="button" id="servidores" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                  <span class="item-servidores hidden-xs hidden-sm">Servidores</span>
-                  <i class="caret"></i>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="servidores">
-                  <li class="dropdown-header">Financeiro</li>
-                  <li><a id="servidor-contracheque" href="https://servidor.stf.jus.br/iRH" target="_blank">Contracheque</a></li>
-                  <li><a id="servidor-margem" href="https://www2.econsig.com.br/stf/login/login_servidor.jsp#no-back" target="_blank">Margem Consignável</a></li>
-                  <li class="divider"></li>
-                  <li class="dropdown-header">Saúde</li>
-                  <li><a id="servidor-plano-saude" href="http://saude.stf.jus.br/" target="_blank">Plano de Saúde</a></li>
-                  <li class="divider"></li>
-                  <li><a id="servidor-ead" href="https://ead.stf.jus.br/" target="_blank">Educação a distância (EaD)</a></li>
-                  <li class="divider"></li>
-                  <li class="dropdown-header">Ferramentas de trabalho</li>
-                  <li><a id="servidor-gabinete" href="https://gabinetevirtual.stf.jus.br/" target="_blank">Gabinete Virtual</a></li>
-                  <li><a id="servidor-correio-eletronico" href="https://correio.stf.jus.br/" target="_blank">Correio Eletrônico</a></li>
-                  <li class="divider"></li>
-                  <li><a id="servidor-imprensa" href="http://cliente.linearclipping.com.br/stf/" target="_blank">Destaques do STF na imprensa</a></li>
-                </ul>
+            <div class="col-xs-12 col-sm-9 col-lg-6 p-0">
+              <div class="col-xs-8 col-sm-9">
+                <div class="col-xs-4 col-md-6">
+                  <div class="dropdown menu-internacionalizacao dropdown-toggle">
+                    <button class="btn btn-default " type="button" id="internacionalizacao" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      <span class="hidden-xs hidden-sm">International Relations</span>
+                      <img src="<%= require('../assets/img/internacional/usa-flag.png') %>"
+                      srcset="<%= require('../assets/img/internacional/usa-flag.png') %> 2x" alt="English">
+                      <i class="caret"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="internacionalizacao">
+                      <li><a href="//www2.stf.jus.br/portalStfInternacional/cms/verPrincipal.php?idioma=en_us" target="_blank"><img src="<%= require('../assets/img/internacional/usa-flag.png') %>"
+                      srcset="<%= require('../assets/img/internacional/usa-flag.png') %> 2x" alt="English"> English</a></li>
+                      <li><a href="//www2.stf.jus.br/portalStfInternacional/cms/verPrincipal.php?idioma=es_es" target="_blank"><img src="<%= require('../assets/img/internacional/spain-flag.png') %>"
+                      srcset="<%= require('../assets/img/internacional/spain-flag.png') %> 2x" alt="Español"> Español</a></li>
+                      <li><a href="//www2.stf.jus.br/portalStfInternacional/cms/verPrincipal.php?idioma=pt_br" target="_blank"><img src="<%= require('../assets/img/internacional/brazil-flag.png') %>"
+                      srcset="<%= require('../assets/img/internacional/brazil-flag.png') %> 2x" alt="Português"> Portuguese</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xs-8 col-sm-4 col-md-3 link-borda-direita">
+                  <div class="dropdown menu-servidores dropdown-toggle">
+                    <button class="btn btn-default " type="button" id="servidores" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      <span class="item-servidores hidden-xs hidden-sm">Servidores</span>
+                      <i class="caret"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="servidores">
+                      <li class="dropdown-header">Financeiro</li>
+                      <li><a id="servidor-contracheque" href="https://servidor.stf.jus.br/iRH" target="_blank">Contracheque</a></li>
+                      <li><a id="servidor-margem" href="https://www2.econsig.com.br/stf/login/login_servidor.jsp#no-back" target="_blank">Margem Consignável</a></li>
+                      <li class="divider"></li>
+                      <li class="dropdown-header">Saúde</li>
+                      <li><a id="servidor-plano-saude" href="http://saude.stf.jus.br/" target="_blank">Plano de Saúde</a></li>
+                      <li class="divider"></li>
+                      <li><a id="servidor-ead" href="https://ead.stf.jus.br/" target="_blank">Educação a distância (EaD)</a></li>
+                      <li class="divider"></li>
+                      <li class="dropdown-header">Ferramentas de trabalho</li>
+                      <li><a id="servidor-gabinete" href="https://gabinetevirtual.stf.jus.br/" target="_blank">Gabinete Virtual</a></li>
+                      <li><a id="servidor-correio-eletronico" href="https://correio.stf.jus.br/" target="_blank">Correio Eletrônico</a></li>
+                      <li class="divider"></li>
+                      <li><a id="servidor-imprensa" href="http://cliente.linearclipping.com.br/stf/" target="_blank">Destaques do STF na imprensa</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="hidden-xs col-sm-4 col-md-3 link-borda-direita">
+                  <a id="contato-topo" href="//www.stf.jus.br/portal/centralDoCidadao/enviarDadoPessoal.asp" target="_blank" class="btn btn-default">Fale conosco</a>
+                </div>
               </div>
-            </div>
-            <div class="hidden-xs col-sm-4 col-md-3 link-borda-direita">
-              <a id="contato-topo" href="//www.stf.jus.br/portal/centralDoCidadao/enviarDadoPessoal.asp" target="_blank" class="btn btn-default">Fale conosco</a>
+              <div class="col-xs-4 col-sm-3 telefone-stf link-borda-direita"><i class="glyphicon glyphicon-earphone"></i> <a href="tel:+556132173000">(61) 3217-3000</a></div>
             </div>
           </div>
-          <div class="col-xs-4 col-sm-3 telefone-stf link-borda-direita"><i class="glyphicon glyphicon-earphone"></i> <a href="tel:+556132173000">(61) 3217-3000</a></div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <header id="header" class="header navbar navbar-default">
-      <div class="container center-block row p-0 m-t-8 m-b-8"  >
-        <div class="navbar-header col-xs-12 row m-0">
-          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#menu-principal" aria-expanded="false">
-            <span class="sr-only">Abrir menu principal</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <h1 class="hidden">Supremo Tribunal Federal</h1>
-          <a href="/" class="navbar-brand m-0">
-            <img src="<%= require('../assets/img/institucional/logo-STF.png') %>"
-                 srcset="<%= require('../assets/img/institucional/logo-STF@2x.png') %> 2x" alt="Supremo Tribunal Federal">
-          </a>
-          <div id="menu-principal" class="collapse navbar-collapse col-xs-12 navbar-right m-0 p-0">
-            <div class="row col-xs-12 m-0 p-0">
-              <ul class="nav navbar-nav m-0 p-0">
-                <li class="dropdown-toggle">
-                  <a href="#" id="oStf" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">O STF</a>
-                    <ul class="dropdown-menu" aria-labelledby="oStf">
-                      <li><a href="#">País</a></li>
-                      <li><a href="#">País</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown-toggle">
-                  <a href="#" id="oStf" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Processos</a>
-                    <ul class="dropdown-menu" aria-labelledby="processos">
-                      <li><a href="#">País</a></li>
-                      <li><a href="#">País</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown-toggle container-dropdown-lateral">
-                  <a href="http://www.stf.jus.br" id="oStf" >Jurisprudência</a>
-                  <button type="button" class="btn btn-default dropdown-lateral visible-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    <span class="caret"></span>
-                  </button>
-                    <ul class="dropdown-menu" aria-labelledby="jurisprudencia">
-                      <li><a href="#">País</a></li>
-                      <li><a href="#">País</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown-toggle">
-                  <a href="#" id="oStf" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Repercussão Geral</a>
-                    <ul class="dropdown-menu" aria-labelledby="repercussaogeral">
-                      <li><a href="#">País</a></li>
-                      <li><a href="#">País</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown-toggle">
-                  <a href="#" id="oStf" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Leis e Publicações</a>
-                    <ul class="dropdown-menu" aria-labelledby="leispublicacoes">
-                      <li><a href="#">País</a></li>
-                      <li><a href="#">País</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown-toggle">
-                  <a href="#" id="oStf" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Transparência</a>
-                    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="transparencia">
-                      <li><a href="#">País</a></li>
-                      <li><a href="#">País</a></li>
-                    </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <section id="pesquisa" class="pesquisa row m-0 p-l-0 p-r-0">
-      <div class="container center-block">
-        <div class="hidden-xs pull-right m-t-16">
-          <p class="__stf-branco">
-            <span class="m-r-16 label-peticione">Peticione e acompanhe processos:</span> <a href="//sistemas.stf.jus.br/peticionamento/" target="_blank" class="btn ">Painel do Peticionador</a>
-          </p>
-        </div>
-        <div class="pesquisa-conteudo clearfix">
-          <div class="pesquisa-titulo m-t-16 m-b-16">
-            <button class="btn btn-default btn-icone pesquisa-btn-interna pull-right __fundo-transparente">
-              <i class="glyphicon glyphicon-search" aria-label="abrir pesquisa"></i>
-            </button>
-            <h3 class="m-0">O que você procura?</h3> 
-          </div>
-          <!--<h3 class="pesquisa-titulo-expandida m-b-24 campo-texto">O que você procura?</h3>-->
-          <div class="pesquisa-campos">
-            <div class="hidden-md hidden-lg campo-container">
-              <select class="pesquisa-select full-width">
-                <option value="">Selecione outra pesquisa</option>
-              </select>
-            </div>
-            <div class="form-inline">
-              <div class="campo-container">
-                <div class="seletores-campo">
-                  <input type="hidden" name="tipo-pesquisa" id="tipo-pesquisa">
-                  <ul class="seletores hidden-xs hidden-sm" id="menuPesquisa">
-                    <li>
-                        <span class="ativo" id="abaProcesso">Processos</span>
+        <nav id="header" class="header navbar navbar-default">
+          <div class="container center-block row p-0 m-t-8 m-b-8"  >
+            <div class="navbar-header col-xs-12 row m-0">
+              <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#menu-principal" aria-expanded="false">
+                <span class="sr-only">Abrir menu principal</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <h1 class="hidden">Supremo Tribunal Federal</h1>
+              <a href="/" class="navbar-brand m-0">
+                <img src="<%= require('../assets/img/institucional/logo-STF.png') %>"
+                    srcset="<%= require('../assets/img/institucional/logo-STF@2x.png') %> 2x" alt="Supremo Tribunal Federal">
+              </a>
+              <div id="menu-principal" class="collapse navbar-collapse col-xs-12 navbar-right m-0 p-0">
+                <div class="row col-xs-12 m-0 p-0">
+                  <ul class="nav navbar-nav m-0 p-0">
+                    <li class="dropdown-toggle">
+                      <a href="#" id="oStf" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">O STF</a>
+                        <ul class="dropdown-menu" aria-labelledby="oStf">
+                          <li><a href="#">País</a></li>
+                          <li><a href="#">País</a></li>
+                        </ul>
                     </li>
-                    <li>
-                        <span id="abaJurisprudencia">Jurisprudência</span>
+                    <li class="dropdown-toggle">
+                      <a href="#" id="oStf" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Processos</a>
+                        <ul class="dropdown-menu" aria-labelledby="processos">
+                          <li><a href="#">País</a></li>
+                          <li><a href="#">País</a></li>
+                        </ul>
                     </li>
-                    <li>
-                        <span id="abaNoticias">Notícias e Textos</span>
+                    <li class="dropdown-toggle container-dropdown-lateral">
+                      <a href="http://www.stf.jus.br" id="oStf" >Jurisprudência</a>
+                      <button type="button" class="btn btn-default dropdown-lateral visible-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <span class="caret"></span>
+                      </button>
+                        <ul class="dropdown-menu" aria-labelledby="jurisprudencia">
+                          <li><a href="#">País</a></li>
+                          <li><a href="#">País</a></li>
+                        </ul>
                     </li>
-                    <li>
-                        <span id="abaTransparencia">Transparência</span>
+                    <li class="dropdown-toggle">
+                      <a href="#" id="oStf" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Repercussão Geral</a>
+                        <ul class="dropdown-menu" aria-labelledby="repercussaogeral">
+                          <li><a href="#">País</a></li>
+                          <li><a href="#">País</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-toggle">
+                      <a href="#" id="oStf" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Leis e Publicações</a>
+                        <ul class="dropdown-menu" aria-labelledby="leispublicacoes">
+                          <li><a href="#">País</a></li>
+                          <li><a href="#">País</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-toggle">
+                      <a href="#" id="oStf" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Transparência</a>
+                        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="transparencia">
+                          <li><a href="#">País</a></li>
+                          <li><a href="#">País</a></li>
+                        </ul>
                     </li>
                   </ul>
-                  <input type="hidden" value="3" id="abaSelecionada" />
                 </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
 
-                <input class="campo-texto col-md-7" type="text" name="pesquisaPrincipal" id="pesquisaPrincipal" placeholder="Digite a classe e número do processo (ex: ADI 100), o nome da parte ou o protocolo...">
+      <section id="pesquisa" class="pesquisa row m-0 m-t-96 p-l-0 p-r-0">
+        <div class="container center-block">
+          <div class="hidden-xs pull-right m-t-16">
+            <p class="__stf-branco">
+              <span class="m-r-16 label-peticione">Peticione e acompanhe processos:</span> <a href="//sistemas.stf.jus.br/peticionamento/" target="_blank" class="btn ">Painel do Peticionador</a>
+            </p>
+          </div>
+          <div class="pesquisa-conteudo clearfix">
+            <div class="pesquisa-titulo m-t-16 m-b-16">
+              <button class="btn btn-default btn-icone pesquisa-btn-interna pull-right __fundo-transparente">
+                <i class="glyphicon glyphicon-search" aria-label="abrir pesquisa"></i>
+              </button>
+              <h3 class="m-0">O que você procura?</h3> 
+            </div>
+            <!--<h3 class="pesquisa-titulo-expandida m-b-24 campo-texto">O que você procura?</h3>-->
+            <div class="pesquisa-campos">
+              <div class="hidden-md hidden-lg campo-container">
+                <select class="pesquisa-select full-width">
+                  <option value="">Selecione outra pesquisa</option>
+                </select>
+              </div>
+              <div class="form-inline">
+                <div class="campo-container">
+                  <div class="seletores-campo">
+                    <input type="hidden" name="tipo-pesquisa" id="tipo-pesquisa">
+                    <ul class="seletores hidden-xs hidden-sm" id="menuPesquisa">
+                      <li>
+                          <span class="ativo" id="abaProcesso">Processos</span>
+                      </li>
+                      <li>
+                          <span id="abaJurisprudencia">Jurisprudência</span>
+                      </li>
+                      <li>
+                          <span id="abaNoticias">Notícias e Textos</span>
+                      </li>
+                      <li>
+                          <span id="abaTransparencia">Transparência</span>
+                      </li>
+                    </ul>
+                    <input type="hidden" value="3" id="abaSelecionada" />
+                  </div>
 
-                <div class="hidden-sm hidden-xs botoes-pesquisa-jurisprudencia col-md-4">
-                  <span data-value="e" id="jurisprudencia-e" class="pull-left">e</span>
-                  <span data-value="ou" id="jurisprudencia-ou" class="pull-left">ou</span>
-                  <span data-value="adj" class="pull-left">adj</span>
-                  <span data-value="não" class="pull-left">não</span>
-                  <span data-value="prox" class="pull-left">prox</span>
-                  <span data-value="mesmo"class="pull-left">mesmo</span>
-                  <span data-value="$" class="pull-left">$</span>
-                </div>
+                  <input class="campo-texto col-md-7" type="text" name="pesquisaPrincipal" id="pesquisaPrincipal" placeholder="Digite a classe e número do processo (ex: ADI 100), o nome da parte ou o protocolo...">
 
-                <button class="btn btn-default pull-right">
-                  <i class="glyphicon glyphicon-search hidden-md hidden-lg"></i>
-                  <span class="hidden-xs hidden-sm" id="btnPesquisar">Pesquisar</span>
-                </button>
-                <div class="pesquisa-jurisprudencia-links-inferiores">
-                  <a href="http://www.stf.jus.br/portal/jurisprudencia/pesquisarVocabularioJuridico.asp">Clique aqui para consultar o vocabulário jurídico (Tesauro)</a>
-                  <span>ou</span> 
-                  <a target="_blank" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaPesquisaGeral&pagina=ajudaPesquisaJurisprudencia&popup=S">Conheça dicas para melhorar seus resultados de pesquisa</a>
+                  <div class="hidden-sm hidden-xs botoes-pesquisa-jurisprudencia col-md-4">
+                    <span data-value="e" id="jurisprudencia-e" class="pull-left">e</span>
+                    <span data-value="ou" id="jurisprudencia-ou" class="pull-left">ou</span>
+                    <span data-value="adj" class="pull-left">adj</span>
+                    <span data-value="não" class="pull-left">não</span>
+                    <span data-value="prox" class="pull-left">prox</span>
+                    <span data-value="mesmo"class="pull-left">mesmo</span>
+                    <span data-value="$" class="pull-left">$</span>
+                  </div>
+
+                  <button class="btn btn-default pull-right">
+                    <i class="glyphicon glyphicon-search hidden-md hidden-lg"></i>
+                    <span class="hidden-xs hidden-sm" id="btnPesquisar">Pesquisar</span>
+                  </button>
+                  <div class="pesquisa-jurisprudencia-links-inferiores">
+                    <a href="http://www.stf.jus.br/portal/jurisprudencia/pesquisarVocabularioJuridico.asp">Clique aqui para consultar o vocabulário jurídico (Tesauro)</a>
+                    <span>ou</span> 
+                    <a target="_blank" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaPesquisaGeral&pagina=ajudaPesquisaJurisprudencia&popup=S">Conheça dicas para melhorar seus resultados de pesquisa</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
     <section id="sob-medida" class="sob-medida m-b-24">
       <div class="container center-block p-xs-0">
