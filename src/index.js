@@ -11,10 +11,17 @@ $('.dropdown-toggle').hover(function() {
 $(document).ready(function(){
     $('.botoes-pesquisa-jurisprudencia span').hide();
     $('.pesquisa-jurisprudencia-links-inferiores').hide();    
+    
+    $('[data-toggle="popover"]').popover({
+        container: 'body'
+    });    
 });
 
 moment.locale("pt-BR");    
 $(".tmp-dec").html("H&aacute; " + moment().startOf("day").fromNow());    
+
+//--------------------------------
+// controle dos botoes de pesquisa versao Desktop
 
 $("#menuPesquisa li span").on("click", function() {
     //Remove os estilos de todas as abas.
@@ -30,11 +37,10 @@ $("#menuPesquisa li span").on("click", function() {
     
     var placeholder = "";
     var aba = $(this).attr("id");
-    //$abaSelecionada = $("#abaSelecionada").val();
     
     switch(aba) {
         case "abaProcesso":
-            placeholder = "Digite a classe e número do processo (ex: ADI 100), o nome da parte ou o protocolo...";
+            placeholder = "Digite a classe e número do processo (ex: ADI 100)";
             $("#abaSelecionada").val("3");
             break;
         case "abaJurisprudencia":
@@ -57,6 +63,44 @@ $("#menuPesquisa li span").on("click", function() {
     $("#pesquisaPrincipal").attr("placeholder", placeholder);
     $("#pesquisaPrincipal").focus();
 });
+
+// fim do controle dos botoes de pesquisa versao Desktop
+//----------------------------------------------------
+
+
+//--------------------------------
+// controle dos botoes de pesquisa versao mobile
+
+$("#menu-pesquisa-mobile").on("change", function() {        
+    $('.pesquisa-jurisprudencia-links-inferiores').hide();  
+    var placeholder = "";
+    var aba = $( "#menu-pesquisa-mobile option:selected" ).data("aba");    
+    switch(aba) {
+        case "abaProcesso":
+            placeholder = "Digite a classe e número do processo";
+            $("#abaSelecionada").val("3");
+            break;
+        case "abaJurisprudencia":
+            placeholder = "Digite um termo para a pesquisa de jurisprudência";
+            $("#abaSelecionada").val("4");               
+            $('.pesquisa-jurisprudencia-links-inferiores').show();  
+            break;
+        case "abaNoticias":
+            placeholder = "Informe um assunto sobre uma notícia";
+            $("#abaSelecionada").val("2");
+            break;
+        default:
+            placeholder = "Informe o assunto desejado...";
+            $("#abaSelecionada").val("6");
+            break;
+    }
+    
+    $("#pesquisaPrincipal").attr("placeholder", placeholder);
+    $("#pesquisaPrincipal").focus();
+});
+
+// fim do controle dos botoes de pesquisa versao mobile
+//----------------------------------------------------
 
 $('.botoes-pesquisa-jurisprudencia span').on('click', function(){
     var search = $('#pesquisaPrincipal').val();
