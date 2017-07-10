@@ -94,27 +94,27 @@ const common = {
 
   plugins: [
     new HtmlPlugin({
-      template: path.join(PATHS.src, '/index.html'),
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/index.html')}`,
       chunks: ['bundle', 'vendor', 'manifest']
     }),
     new HtmlPlugin({
       filename: 'qlik.html',
-      template: path.join(PATHS.src, '/qlik.html'),
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/qlik.html')}`,
       chunks: ['bundle', 'vendor', 'manifest']
     }),
     new HtmlPlugin({
       filename: 'noticias/index.html',
-      template: path.join(PATHS.src, '/noticias/index.html'),
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/noticias/index.html')}`,
       chunks: ['noticias', 'bundle', 'vendor', 'manifest']
     }),
     new HtmlPlugin({
       filename: 'textos/index.html',
-      template: path.join(PATHS.src, '/textos/index.html'),
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/textos/index.html')}`,
       chunks: ['noticias', 'bundle', 'vendor', 'manifest']
     }),
     new HtmlPlugin({
       filename: 'repgeral/index.html',
-      template: path.join(PATHS.src, '/repgeral/index.html'),
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/repgeral/index.html')}`,
       chunks: ['repgeral', 'bundle', 'vendor', 'manifest']
     }),
     new webpack.optimize.CommonsChunkPlugin({
