@@ -15,7 +15,7 @@ const PATHS = {
 
 const VENDORS = ['bootstrap-loader'];
 
-const customCss = new ExtractTextPlugin("styles/[name].css");
+const customCss = new ExtractTextPlugin("assets/styles/[name].css");
 
 const publicPath = process.env.GH_PAGES ? process.env.GH_PAGES.trim() : '/';
 
@@ -57,13 +57,13 @@ const common = {
       {
         test: /\.scss$/,
         use: customCss.extract({
-          use: 'css-loader!sass-loader'
+          use: 'css-loader!sass-loader?sourceMaps'
         }),
         exclude: /node_modules|noticias|repgeral/
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: ['style-loader', 'css-loader?url=false', 'sass-loader'],
         include: path.join(PATHS.scss, '/secoes/noticias')
       },
       {
@@ -73,17 +73,17 @@ const common = {
       },
       {
         test: /\.(jpg|jpeg|gif|png|svg|ico)$/i,
-        use: 'url-loader?limit=24000&name=[name].[ext]&publicPath=/&outputPath=assets/img/',
+        use: `url-loader?limit=24000&name=[name].[ext]&publicPath=${publicPath}&outputPath=assets/img/`,
         include: PATHS.img
       },
       {
         test:/\.(woff2?|svg)$/,
-        use: 'url-loader?limit=10000&name=[name].[ext]&publicPath=/&outputPath=assets/fonts/',
+        use: `url-loader?limit=10000&name=[name].[ext]&publicPath=${publicPath}&outputPath=assets/fonts/`,
         exclude: PATHS.img
       },
       {
         test: /\.(ttf|eot)$/,
-        use: 'file-loader?name=[name].[ext]&publicPath=/&outputPath=assets/fonts/'
+        use: `file-loader?name=[name].[ext]&publicPath=${publicPath}&outputPath=assets/fonts/`
       },
       {
         test:/bootstrap-sass[\/\\]assets[\/\\]javascripts[\/\\]/,
@@ -94,27 +94,27 @@ const common = {
 
   plugins: [
     new HtmlPlugin({
-      template: path.join(PATHS.src, '/index.html'),
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/index.html')}`,
       chunks: ['bundle', 'vendor', 'manifest']
     }),
     new HtmlPlugin({
       filename: 'qlik.html',
-      template: path.join(PATHS.src, '/qlik.html'),
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/qlik.html')}`,
       chunks: ['bundle', 'vendor', 'manifest']
     }),
     new HtmlPlugin({
       filename: 'noticias/index.html',
-      template: path.join(PATHS.src, '/noticias/index.html'),
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/noticias/index.html')}`,
       chunks: ['noticias', 'bundle', 'vendor', 'manifest']
     }),
     new HtmlPlugin({
       filename: 'textos/index.html',
-      template: path.join(PATHS.src, '/textos/index.html'),
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/textos/index.html')}`,
       chunks: ['noticias', 'bundle', 'vendor', 'manifest']
     }),
     new HtmlPlugin({
       filename: 'repgeral/index.html',
-      template: path.join(PATHS.src, '/repgeral/index.html'),
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/repgeral/index.html')}`,
       chunks: ['repgeral', 'bundle', 'vendor', 'manifest']
     }),
     new webpack.optimize.CommonsChunkPlugin({

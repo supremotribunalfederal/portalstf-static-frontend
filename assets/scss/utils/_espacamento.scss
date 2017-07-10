@@ -1,4 +1,4 @@
-@for $i from 0 to 12 {
+@for $i from 0 to 13 {
   .m-#{$i * 8} {
     margin: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
   }
@@ -41,7 +41,7 @@
 }
 
 @media all and (max-width: $breakpointPhones - 1) {
-  @for $i from 0 to 12 {
+  @for $i from 0 to 13 {
     .m-xs-#{$i * 8} {
       margin: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
     }
@@ -85,7 +85,7 @@
 }
 
 @media all and (min-width: $breakpointPhones) and (max-width: $breakpointMediumDevices - 1) {
-  @for $i from 0 to 12 {
+  @for $i from 0 to 13 {
     .m-sm-#{$i * 8} {
       margin: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
     }
@@ -129,7 +129,7 @@
 }
 
 @media all and (min-width: $breakpointMediumDevices) and (max-width: $breakpointLargeDevices - 1) {
-  @for $i from 0 to 12 {
+  @for $i from 0 to 13 {
     .m-md-#{$i * 8} {
       margin: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
     }
@@ -173,7 +173,7 @@
 }
 
 @media all and (min-width: $breakpointLargeDevices) {
-  @for $i from 0 to 12 {
+  @for $i from 0 to 13 {
     .m-lg-#{$i * 8} {
       margin: if($i==0, #{$i * 8}, #{$i * 8}px) !important;
     }
