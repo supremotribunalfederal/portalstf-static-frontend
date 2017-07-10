@@ -94,7 +94,7 @@ const common = {
 
   plugins: [
     new HtmlPlugin({
-      template: path.join(PATHS.src, '/index.html'),
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/index.html')}`,
       chunks: ['bundle', 'vendor', 'manifest']
     }),
     new HtmlPlugin({
@@ -109,7 +109,7 @@ const common = {
     }),
     new HtmlPlugin({
       filename: 'textos/index.html',
-      template: path.join(PATHS.src, '/textos/index.html'),
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/textos/index.html')}`,
       chunks: ['noticias', 'bundle', 'vendor', 'manifest']
     }),
     new HtmlPlugin({
