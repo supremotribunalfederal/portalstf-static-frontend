@@ -53,8 +53,7 @@
           border-radius: 0;
           height: 50px;
           padding: 0 40px 0 8px;
-          width: 60%;
-          font-size:1rem;
+          font-size: 1rem;
         }
 
         .campo-texto:focus {
@@ -66,8 +65,7 @@
           border-radius: 0;
           height: 50px;
           padding: 0 40px 0 8px;
-          width: 40%;
-          font-size:0.8rem;
+          font-size: 0.8rem;
           background-color: white;
         }
 
@@ -75,18 +73,18 @@
           height: 30px;
           line-height: 26px;
           color: $stfAzulEscuro;
-          border: 2px solid #efefef;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
           padding-left: 4px;
           padding-right: 4px;
           cursor: pointer;
           margin-top: 10px;
+          margin-left: 5px;
         }
 
         .pesquisa-jurisprudencia-links-inferiores  {
-          display: block;
-          padding-top: 15px;
-          margin-top: 43px;          
-          margin-left: 7px;
+            line-height: 40px;
+            font-size: 0.8rem;    
+            margin-left: 7px;
         }
 
         .pesquisa-jurisprudencia-links-inferiores * {
