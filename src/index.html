@@ -320,7 +320,7 @@
                 <div class="card-container-imagem p-0 p-b-16">
                   <h3 class="m-0">SUPREMO EM NÚMEROS</h3>
                   <div class="card-imagem p-0 m-0">
-                    <img class="" src="<%= require('../assets/img/conteudo/graph.png') %>"
+                    <img class="" src="<%= require('assets/img/conteudo/graph.png') %>"
                      alt="supremoEmNumeros">
                   </div>
                   <div class="p-0 m-0 col-lg-6 col-md-6 col-sm-6 col-xs-6">
@@ -426,7 +426,7 @@
           <div id="tv-justica" class="tv-justica card m-b-24">
             <div class="card-titulo">
               <h3 class="m-0">TV Justiça</h3>
-              <div class="ao-vivo"><img src="<%= require('../assets/img/portleticon/videocam.svg') %>" alt="ao vivo">ao vivo</div>
+              <div class="ao-vivo"><img src="<%= require('assets/img/portleticon/videocam.svg') %>" alt="ao vivo">ao vivo</div>
             </div>
             <div class="card-conteudo">
               <div class="card-media-video">
@@ -443,7 +443,7 @@
             <div class="card-conteudo">
               <div class="agenda-destaque">
                 <div class="destaque-foto">
-                  <a href="//stf.jus.br/portal/agendaPresidente/pesquisarAgendaPresidente.asp"><img width="80" height="80" src="<%= require('../assets/img/conteudo/agenda/carmen.jpg') %>"></a>
+                  <a href="//stf.jus.br/portal/agendaPresidente/pesquisarAgendaPresidente.asp"><img width="80" height="80" src="<%= require('assets/img/conteudo/agenda/carmen.jpg') %>"></a>
                 </div>
                 <div class="destaque-conteudo">
                   <div class="destaque-data">Segunda-feira, 13/02/2017</div>
@@ -465,8 +465,8 @@
             <div class="card-titulo">Audiências públicas</div>
             <div class="card-conteudo">
               <div class="audiencia-icone">
-                <img src="<%= require('../assets/img/conteudo/icone-audiencia-whatsapp.png') %>"
-                     srcset="<%= require('../assets/img/conteudo/icone-audiencia-whatsapp@2x.png') %> 2x" alt="Whatsapp">
+                <img src="<%= require('assets/img/conteudo/icone-audiencia-whatsapp.png') %>"
+                     srcset="<%= require('assets/img/conteudo/icone-audiencia-whatsapp@2x.png') %> 2x" alt="Whatsapp">
               </div>
               <div class="audiencia-processo m-b-24 m-l-8">
                 <div class="processo-numero">ADI 5.527</div>
@@ -487,8 +487,8 @@
               <ul class="card-media-lista">
                 <li class="media-lista-item row p-0">
                   <div class="lista-item-image col-xs-4 p-0 m-r-16">
-                    <img src="<%= require('../assets/img/transparencia/pessoas.png') %>"
-                         srcset="<%= require('../assets/img/transparencia/pessoas@2x.png') %> 2x"  alt="">
+                    <img src="<%= require('assets/img/transparencia/pessoas.png') %>"
+                         srcset="<%= require('assets/img/transparencia/pessoas@2x.png') %> 2x"  alt="">
                   </div>
                   <div class="lista-item-texto col-xs-8 p-0">
                     <h4 class="m-0"><strong>Gestão de Pessoas</strong></h4>
@@ -498,8 +498,8 @@
 
                 <li class="media-lista-item row p-0">
                   <div class="lista-item-image col-xs-4 p-0 m-r-16">
-                    <img src="<%= require('../assets/img/transparencia/licitacoes.png') %>"
-                         srcset="<%= require('../assets/img/transparencia/licitacoes@2x.png') %> 2x"  alt="">
+                    <img src="<%= require('assets/img/transparencia/licitacoes.png') %>"
+                         srcset="<%= require('assets/img/transparencia/licitacoes@2x.png') %> 2x"  alt="">
                   </div>
                   <div class="lista-item-texto col-xs-8 p-0">
                     <h4 class="m-t-0"><strong>Licitações</strong></h4>
@@ -509,8 +509,8 @@
 
                 <li class="media-lista-item row p-0">
                   <div class="lista-item-image col-xs-4 p-0 m-r-16">
-                    <img src="<%= require('../assets/img/transparencia/orcamento.png') %>"
-                         srcset="<%= require('../assets/img/transparencia/orcamento@2x.png') %> 2x"  alt="">
+                    <img src="<%= require('assets/img/transparencia/orcamento.png') %>"
+                         srcset="<%= require('assets/img/transparencia/orcamento@2x.png') %> 2x"  alt="">
                   </div>
                   <div class="lista-item-texto col-xs-8 p-0">
                     <h4 class="m-t-0"><strong>Orçamento e Finanças</strong></h4>
@@ -520,8 +520,8 @@
                 
                 <li class="media-lista-item row m-0 p-0">
                   <div class="lista-item-image col-xs-4 p-0 m-r-16">
-                    <img src="<%= require('../assets/img/transparencia/sobre.png') %>"
-                         srcset="<%= require('../assets/img/transparencia/sobre@2x.png') %> 2x"  alt="">
+                    <img src="<%= require('assets/img/transparencia/sobre.png') %>"
+                         srcset="<%= require('assets/img/transparencia/sobre@2x.png') %> 2x"  alt="">
                   </div>
                   <div class="lista-item-texto col-xs-8 p-0">
                     <h4 class="m-t-0"><strong>Conheça mais sobre o STF</strong></h4>
@@ -536,7 +536,6 @@
       </div>
     </section>
 
-    <%- include src/includes/paginacao.html %>
     <%- include src/includes/mapa-do-site.html %>
 
     <%- include src/includes/footer.html %>
