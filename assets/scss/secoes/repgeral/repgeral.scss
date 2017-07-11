@@ -17,3 +17,25 @@
         }
     }
 } 
+
+.card-sub-titulo {
+    color: #006998;
+    font-weight: bold;
+    padding-bottom: 7px;
+    small {
+        padding-left: 7px;
+    }
+} 
+
+.card-topico-conteudo{
+    font-size: 0.8rem; 
+    color: #ababab;    
+}
+
+.card-conteudo {
+    .card-subtitulos{
+        small{
+            font-weight: 600;
+        }
+    }
+}

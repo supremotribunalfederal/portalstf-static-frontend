@@ -502,17 +502,37 @@
         </div>
 
         <!-- Cards laterais -->
-        <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 p-16 p-sm-8 p-xs-0 m-0">
+        <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 p-16 p-sm-8 p-xs-0 m-0">    
             
-            <div id="teses-repgeral" class="audiencias-publicas card m-b-24">
-                <div class="card-titulo">Teses de Repercussão Geral</div>
-                <div class="card-conteudo">
-                  <div class="card-caixa-texto tese-descricao m-b-24">
-                      Teses fixadas após julgado mérito da Repercussão Geral
+            <div class="teses-repgeral card m-b-24">
+                <div class="card-titulo">Teses de Repercussão Geral</div>                
+                <div class="card-conteudo p-0"> 
+                    <div class="card-caixa-texto tese-descricao m-b-24 p-16">
+                        Teses fixadas após julgado mérito da Repercussão Geral
+                    </div>
+                </div>                
+                <div class="card-conteudo p-t-0">                  
+                    <div class="card-subtitulos">
+                      <h4 class="card-sub-titulo m-0">Tema 948<small>Fixado em 02/06/2017</small></h4>
+                      <small>RE 883542</small> - <a href="#">Acórdão</a>
                   </div>
-                  <div class="audiencia-inscricao">
-                    Inscreva-se enviando um e-mail para <a href="mailto:adpf403@stf.jus.br">adpf403@stf.jus.br</a> até 01/02/2017.
+                  <div  class="card-topico-conteudo">
+                      A Contribuição Sindical Rural, Instituída pelo Decreto-Lei 1.661/1971, foi recepcionada pela ordem constitucional vigente e não configura hipótese de bitributação.
                   </div>
+                </div>                
+                <div class="card-conteudo p-t-0">                  
+                    <div class="card-subtitulos">
+                      <h4 class="card-sub-titulo m-0">Tema 948<small>Fixado em 02/06/2017</small></h4>
+                      <small>RE 883542</small> - <a href="#">Acórdão</a>
+                  </div>
+                  <div  class="card-topico-conteudo">
+                      A Contribuição Sindical Rural, Instituída pelo Decreto-Lei 1.661/1971, foi recepcionada pela ordem constitucional vigente e não configura hipótese de bitributação.
+                  </div>
+                </div>                
+                <div class="row m-16 p-0 p-b-16">
+                    <a href="#" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12">
+                      Ver todas as teses
+                    </a>
                 </div>
             </div>
             
@@ -625,43 +645,77 @@
             </div>
           </div>
 
-          <div id="tv-justica" class="tv-justica card m-b-24">
-            <div class="card-titulo">
-              <h3 class="m-0">TV Justiça</h3>
-              <div class="ao-vivo"><img src="<%= require('../../assets/img/portleticon/videocam.svg') %>" alt="ao vivo">ao vivo</div>
-            </div>
-            <div class="card-conteudo">
-              <div class="card-media-video">
-                <iframe width="560" height="349" src="//www.youtube.com/embed/qghxcZ2hh_A" frameborder="0" allowfullscreen></iframe>
-              </div>
-              <div class="row m-0 m-t-16">
-                <a href="#" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper">Mais vídeos da TV Justiça</a>
-              </div>
-            </div>
-          </div>
-
-          <div id="agenda-dos-ministros" class="agenda-dos-ministros card m-b-24">
-            <div class="card-titulo">Agenda dos ministros</div>
-            <div class="card-conteudo">
-              <div class="agenda-destaque">
-                <div class="destaque-foto">
-                  <a href="//stf.jus.br/portal/agendaPresidente/pesquisarAgendaPresidente.asp"><img width="80" height="80" src="<%= require('../../assets/img/conteudo/agenda/carmen.jpg') %>"></a>
+        <div id="temas-repercussao-geral" class="teses-repgeral card m-b-24">
+            <div class="card-titulo">Temas de Repercussão Geral</div>               
+            <div class="card-conteudo p-0"> 
+                <div class="card-caixa-texto tese-descricao m-b-24 p-16">
+                    Recursos Extraordinários que serão analisados de acordo com os critérios de relevância jurídica, política, social ou econômica.
+                    A decisão proveniente dessa análise será aplicada posteriormente pelas instâncias inferiores, em casos idênticos. 
+                    <a href="#">Conheça mais</a>                        
                 </div>
-                <div class="destaque-conteudo">
-                  <div class="destaque-data">Segunda-feira, 13/02/2017</div>
-                  <div class="destaque-eventos">
-                    <div class="eventos"><a href="//stf.jus.br/portal/agendaPresidente/pesquisarAgendaPresidente.asp">3 eventos</a></div>
-                    <div class="nome-ministro">Min. Cármen Lúcia</div>
-                  </div>
-                </div>
+            </div>                
+            <div class="card-conteudo p-t-0">   
+                <h4><strong>Temas com maior impacto</strong></h4><br />
+                <div class="card-subtitulos">
+                  <h4 class="card-sub-titulo m-0">Tema 234</h4>
+                  <b>Poupança</b>
               </div>
-              <div class="row m-0 m-t-16 p-0">
-                <a href="//stf.jus.br/portal/agendaMinistro/listarAgendaMinistro.asp" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12">
-                  Ver todas as agendas
+              <div  class="card-topico-conteudo">
+                  334.034 (33%) processos. Desde 23/04/2010
+              </div>
+            </div>                
+            <div class="card-conteudo p-t-0">                  
+                <div class="card-subtitulos">
+                  <h4 class="card-sub-titulo m-0">Tema 234</h4>
+                  <b>Poupança</b>
+              </div>
+              <div  class="card-topico-conteudo">
+                  334.034 (33%) processos. Desde 23/04/2010
+              </div>
+            </div>
+            <div class="row m-16 p-0 p-b-16">
+                <a href="#" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12">
+                  Ver todos os temas
                 </a>
+            </div>
+        </div>
+
+        <div class="teses-suspensao-nacional card m-b-24">
+            <div class="card-titulo">Teses de Suspensão Nacional</div>
+
+            <div class="card-conteudo p-0"> 
+                <div class="card-caixa-texto tese-descricao m-b-24 p-16">
+                    Temas em repercussão geral com determinação de suspensão nacional dos processos em tramitação que versem sobre a mesma questão,
+                    nos termos do <a href="#">art. 1035, §5° do CPC.</a>
+                </div>
+            </div>
+
+            <div class="card-conteudo p-t-0">                  
+                <div class="card-subtitulos">
+                    <h4 class="card-sub-titulo m-0">RE 566622</h4>
+                    <small>TEMA 32 - 19/10/2016</small> 
+                </div>
+                <div class="card-topico-conteudo">
+                    Reserva da lei complementar para instituir requisitos à concessão de imunidade tributária às entidades beneficentes de assistência social.
+                </div>
+            </div>
+
+            <div class="card-conteudo p-t-0">                  
+                <div class="card-subtitulos">
+                    <h4 class="card-sub-titulo m-0">RE 573872</h4>
+                    <small>TEMA 45 - 26/10/2016</small> 
+                </div>
+              <div class="card-topico-conteudo">
+                  Possibilidade de execução provisória de obrigação de fazer contra a Fazenda Pública.
               </div>
             </div>
-          </div>
+
+            <div class="row m-16 p-0 p-b-16">
+                <a href="#" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper btn-card-lateral col-xs-12">
+                  Todos com suspensão nacional
+                </a>
+            </div>
+        </div>
             
         <div id="entrar-forum-repercussao" class="card m-b-24 __fundo-escuro">
             <div class="card-conteudo p-b-0">
@@ -686,8 +740,8 @@
                 <div class="card-caixa-texto m-b-16">
                   <h4 class="m-0 m-t-8 m-b-16">Mais informações</h4>
                   <ul>
-                    <li><a id="repgeral-conheca" href="#">Boletim anual</a></li>
-                    <li><a id="repgeral-conheca" href="#">Impacto dos julgamentos</a></li>
+                    <li><a id="repgeral-boletim" href="#">Boletim anual</a></li>
+                    <li><a id="repgeral-impact" href="#">Impacto dos julgamentos</a></li>
                   </ul>
                 </div>
             </div>
