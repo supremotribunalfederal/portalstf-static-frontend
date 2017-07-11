@@ -9,3 +9,41 @@
     padding-bottom: 4px;
   }
 }
+
+
+.pagina-interna {
+  #noticias {
+    .noticia-titulo {
+      font-weight: bold;
+      font-size: 1.8rem;
+    }
+
+    .noticia-resumo {
+      color: #000000;
+      font-size: 1.1rem;
+      word-wrap: break-word;
+      letter-spacing: -0.3px;
+      line-height: 20px;
+    }
+
+    .noticia-autor {
+      color: #717171;
+      font-size: 0.9rem;
+    }
+
+    .noticia-data {
+      color: #ababab;
+    }
+
+    .noticia-compartilhar-interno {
+      background-color: #f3f3f3;
+
+      > div {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+    

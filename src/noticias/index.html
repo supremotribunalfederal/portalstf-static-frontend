@@ -198,23 +198,55 @@
         </div>
 
         <div class="col-xs-12 col-sm-9 col-lg-10 row m-0 p-xs-0 p-sm-8 ">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.9";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
 
           <div id="noticias" class="noticias __borda-l-cinza-claro m-t-24 p-l-40 p-r-40 p-l-xs-0 p-r-xs-0 ">    
             <div class="noticia m-0 row">
               <div class="col-xs-12 col-md-12 p-0">
                 <div class="card-secao col-xs-12 p-l-8 m-b-24"><a href="#">Notícias</a></div>
                 <h3 class="noticia-titulo">Plenário do STF elege ministro substituto do TSE e vota lista tríplice</h3>
-                <p class="noticia-resumo">A lista é composta pelos advogados: Tarcísio Vieira de Carvalho Neto, Sérgio Silveira Banhos e Carlos Bastide Horbach.</p>
-                <div class="noticia-compartilhar hidde-xs hidden-sm p-l-16 m-t-16">
-                  <div class="facebook">
-                    <a href="#" class="text-hide"></a>
+                <p class="noticia-resumo m-b-24">Confira os temas dos processos pautados para julgamento às 14h, no STF. Transmissão via TV Justiça, Radio Justiça e Youtube</p>
+                <div class="noticia-autor">Por Leandro Rezende</div>
+                <div class="noticia-data m-b-24">30/05/2017 11h50 - Atualizado há 30 dias</div>
+                <div class="noticia-compartilhar-interno p-8 m-b-16">
+                  <div class="facebook m-r-8">
+                    <div class="fb-share-button" data-href="http://localhost:3000/noticias" data-layout="button" data-size="large" data-mobile-iframe="false"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A3000%2Fnoticias&amp;src=sdkpreparse">Compartilhar</a></div>
                   </div>
                   <div class="twitter">
+                    <a class="twitter-share-button"
+                      href="https://twitter.com/intent/tweet?text=Hello%20world"
+                      data-size="large">
+                    Tweet</a>
+                  </div>
+                  <div class="google">
                     <a href="#" class="text-hide"></a>
                   </div>
                 </div>
-                <div class="noticia-autor p-l-16 p-r-16">Por Fulano de Tal</div>
-                <div class="noticia-data-xs visible-xs visible-sm p-l-16 p-r-16 m-b-8">Há 3 minutos</div>
+                
                 <div class="noticia-imagem-xs">
                   <img src="//fakeimg.pl/330x190/" alt="">
                 </div>
