@@ -31,6 +31,14 @@
     padding: 16px;
     text-transform: uppercase;
   }
+  
+  .card-subtitulo {
+    color: $stfAzulEscuro;
+    font-weight: bold;
+    a {
+        color: $stfAzulEscuro;
+    }
+  } 
 
   .card-conteudo {
     padding: 16px;
@@ -38,6 +46,10 @@
     .card-titulo {
       padding: 8px 16px;
       text-transform: none;
+    }
+    
+    .card-topico-conteudo { 
+        color: $stfCinza;    
     }
 
     .card-media-video {
