@@ -34,6 +34,10 @@ const common = {
     repgeral: [
       path.join(PATHS.src, '/repgeral/index.js'),
       path.join(PATHS.scss, '/secoes/repgeral/repgeral.scss')
+    ],
+    transparencia: [
+      path.join(PATHS.src, '/transparencia/index.js'),
+      path.join(PATHS.scss, '/secoes/transparencia/transparencia.scss')
     ]
   },
 
@@ -62,7 +66,7 @@ const common = {
         use: customCss.extract({
           use: 'css-loader!sass-loader?sourceMaps'
         }),
-        exclude: /node_modules|noticias|repgeral/
+        exclude: /node_modules|noticias|repgeral|transparencia/
       },
       {
         test: /\.scss$/,
@@ -73,6 +77,11 @@ const common = {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
         include: path.join(PATHS.scss, '/secoes/repgeral')
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+        include: path.join(PATHS.scss, '/secoes/transparencia')
       },
       {
         test: /\.(jpg|jpeg|gif|png|svg|ico)$/i,
@@ -120,6 +129,11 @@ const common = {
       template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/repgeral/index.html')}`,
       chunks: ['repgeral', 'bundle', 'vendor', 'manifest']
     }),
+    new HtmlPlugin({
+      filename: 'transparencia/index.html',
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/transparencia/index.html')}`,
+      chunks: ['transparencia', 'bundle', 'vendor', 'manifest']
+    }),
     // Compilação dos includes para facilitar a inserção no ASP
     new HtmlPlugin({
       filename: 'includes/footer.html',
@@ -145,6 +159,11 @@ const common = {
       filename: 'includes/pesquisa.html',
       inject: false,
       template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/includes/pesquisa.html')}`
+    }),
+    new HtmlPlugin({
+      filename: 'includes/pesquisa-transparencia.html',
+      inject: false,
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/includes/pesquisa-transparencia.html')}`
     }),
     new HtmlPlugin({
       filename: 'includes/sob-medida.html',
