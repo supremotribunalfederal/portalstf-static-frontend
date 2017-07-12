@@ -42,6 +42,16 @@
         display: inline-block;
         vertical-align: middle;
       }
+
+      .visualizacoes {
+        color: #a8aaaf;
+        font-size: 0.9rem;
+      }
+    }
+
+    .noticia-conteudo {
+      text-align: justify;
+      text-justify: inter-word;
     }
   }
 }

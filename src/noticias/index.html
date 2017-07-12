@@ -224,6 +224,11 @@
   return t;
 }(document, "script", "twitter-wjs"));</script>
 
+<!-- Posicione esta tag no cabeçalho ou imediatamente antes da tag de fechamento do corpo. -->
+<script src="https://apis.google.com/js/platform.js" async defer>
+  {lang: 'pt-BR'}
+</script>
+
           <div id="noticias" class="noticias __borda-l-cinza-claro m-t-24 p-l-40 p-r-40 p-l-xs-0 p-r-xs-0 ">    
             <div class="noticia m-0 row">
               <div class="col-xs-12 col-md-12 p-0">
@@ -232,25 +237,31 @@
                 <p class="noticia-resumo m-b-24">Confira os temas dos processos pautados para julgamento às 14h, no STF. Transmissão via TV Justiça, Radio Justiça e Youtube</p>
                 <div class="noticia-autor">Por Leandro Rezende</div>
                 <div class="noticia-data m-b-24">30/05/2017 11h50 - Atualizado há 30 dias</div>
-                <div class="noticia-compartilhar-interno p-8 m-b-16">
+                <div class="noticia-compartilhar-interno p-8 m-b-16 p-r-16">
                   <div class="facebook m-r-8">
                     <div class="fb-share-button" data-href="http://localhost:3000/noticias" data-layout="button" data-size="large" data-mobile-iframe="false"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A3000%2Fnoticias&amp;src=sdkpreparse">Compartilhar</a></div>
                   </div>
-                  <div class="twitter">
+                  <div class="twitter facebook m-r-8">
                     <a class="twitter-share-button"
                       href="https://twitter.com/intent/tweet?text=Hello%20world"
                       data-size="large">
                     Tweet</a>
                   </div>
                   <div class="google">
+                    <div class="g-plus" data-action="share" data-annotation="none" data-height="24" data-href="http://localhost:3000/noticias"></div>
+                  </div>
+                  <div class="impressao">
                     <a href="#" class="text-hide"></a>
+                  </div>
+                  <div class="visualizacoes pull-right">
+                    12.234 pessoas já viram isso
                   </div>
                 </div>
                 
                 <div class="noticia-imagem-xs">
                   <img src="//fakeimg.pl/330x190/" alt="">
                 </div>
-                <div class="noticia-conteudo p-l-16 p-r-16 m-t-16">
+                <div class="noticia-conteudo p-l-8 p-r-8 m-t-16">
                   <p>O Supremo Tribunal Federal (STF), em votação no Plenário Virtual, reafirmou jurisprudência dominante no sentido de que a atribuição do Ministério Público Federal não exclui a legitimidade dos Ministérios Públicos dos estados e do Distrito Federal para postular em causas que, sendo de sua atribuição na origem, foram encaminhadas ao Supremo e ao Superior Tribunal de Justiça (STJ). A matéria, discutida no Recurso Extraordinário (RE) 985392, teve repercussão geral reconhecida.</p>
                   <p>No caso concreto, o STJ negou a legitimidade do Ministério Público do Estado do Rio Grande do Sul (MPE-RS) para oferecer razões em habeas corpus contra ato do Tribunal de Justiça gaúcho (TJ-RS). Em seguida, negou a legitimidade do MPE-RS para interpor embargos de declaração. Com isso, as razões do Ministério Público estadual não foram ouvidas.</p>
                 </div>
@@ -258,7 +269,7 @@
             </div>
           </div>
 
-          <div id="mais-noticias" class="mais-noticias card card-sem-sombra p-t-48 p-l-40 p-l-xs-0 __borda-l-cinza-claro">
+          <div id="mais-noticias" class="mais-noticias card card-sem-sombra p-t-18 p-l-40 p-r-40 p-l-xs-0 __borda-l-cinza-claro">
             <div class="__borda-b-cinza">
               <div class="card-titulo">Mais notícias</div>
               <div class="card-conteudo m-0 m-t-16 m-b-16 p-0">
