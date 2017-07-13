@@ -1,9 +1,25 @@
+@import "../../variaveis/cores";
+
 .numero-transparencia {
-    //color: $stfAzulEscuro;
-    color: #006998;
+    color: $stfAzulEscuro;
     font-size: 3rem;
-    font-weight: 300;
+    font-weight: 100;
     text-align: center;
+}
+
+.numero-transparencia-verde {
+    color: $stfVerdeEscuro;
+    font-size: 3rem;
+}
+
+.numero-transparencia-vermelho {
+    color: $stfVermelho;
+    font-size: 2.5rem;
+    margin: 5px 0 5px 0;
+}
+
+.cifrao {
+    font-size: 1.5rem;
 }
 
 .rotulo-transparencia {
@@ -15,4 +31,12 @@
 
 .btn-transparencia {
     font-size: 0.9rem;
+}
+
+.card-conteudo-verde {
+    background: $stfVerdeClaro;
+}
+
+.card-conteudo-vermelho {
+    background: $stfVermelhoClaro;
 }
