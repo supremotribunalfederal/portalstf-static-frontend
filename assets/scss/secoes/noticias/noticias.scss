@@ -35,6 +35,12 @@
       color: #ababab;
     }
 
+    .noticia-conteudo {
+      text-align: justify;
+      text-justify: inter-word;
+    }
+  }
+}
     .noticia-compartilhar-interno {
       background-color: #f3f3f3;
 
@@ -47,13 +53,17 @@
         color: #a8aaaf;
         font-size: 0.9rem;
       }
-    }
 
-    .noticia-conteudo {
-      text-align: justify;
-      text-justify: inter-word;
-    }
-  }
-}
+      .impressao {
+        .btn {
+          border-radius: 4px;
+          height: 30px;
+          line-height: 30px;
+          padding: 0 15px;
 
-    
+          .glyphicon {
+            color: #989ba1;
+          }
+        }
+      }
+    }

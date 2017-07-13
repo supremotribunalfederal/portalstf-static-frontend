@@ -247,11 +247,13 @@
                       data-size="large">
                     Tweet</a>
                   </div>
-                  <div class="google">
+                  <div class="google m-r-8">
                     <div class="g-plus" data-action="share" data-annotation="none" data-height="24" data-href="http://localhost:3000/noticias"></div>
                   </div>
                   <div class="impressao">
-                    <a href="#" class="text-hide"></a>
+                    <button type="button" class="btn btn-default" aria-label="Imprimir">
+                      <span class="glyphicon glyphicon-print" aria-hidden="true"></span>
+                    </button>
                   </div>
                   <div class="visualizacoes pull-right">
                     12.234 pessoas já viram isso
@@ -318,11 +320,33 @@
             
           </div>
 
-          <div class="hidden-sm hidden-xs m-b-48 p-t-48 p-l-40 __borda-l-cinza-claro">
+          <div class="hidden-sm hidden-xs p-t-48 p-l-40 __borda-l-cinza-claro">
             <h4 class="pull-left">Essa informação foi útil?</h4>
             <button class="btn btn-default-bordered btn-raised m-l-8" type="button" href="#">Sim</button>
             <button class="btn btn-default-bordered btn-raised m-l-8" type="button" href="#">Não</button>
             <button class="btn btn-default-bordered btn-raised m-l-8" type="button" href="#">Sugerir correção</button>
+          </div>
+          <div class="noticia-compartilhar-interno m-l-40 p-8 m-b-16 p-r-16 __borda-l-cinza-claro">
+            <div class="facebook m-r-8">
+              <div class="fb-share-button" data-href="http://localhost:3000/noticias" data-layout="button" data-size="large" data-mobile-iframe="false"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A3000%2Fnoticias&amp;src=sdkpreparse">Compartilhar</a></div>
+            </div>
+            <div class="twitter facebook m-r-8">
+              <a class="twitter-share-button"
+                href="https://twitter.com/intent/tweet?text=Hello%20world"
+                data-size="large">
+              Tweet</a>
+            </div>
+            <div class="google m-r-8">
+              <div class="g-plus" data-action="share" data-annotation="none" data-height="24" data-href="http://localhost:3000/noticias"></div>
+            </div>
+            <div class="impressao">
+              <button type="button" class="btn btn-default" aria-label="Imprimir">
+                <span class="glyphicon glyphicon-print" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="visualizacoes pull-right">
+              12.234 pessoas já viram isso
+            </div>
           </div>
 
         </div>
