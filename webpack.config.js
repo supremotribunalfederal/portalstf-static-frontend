@@ -44,7 +44,10 @@ const common = {
   },
 
   resolve: {
-    extensions: ['.js']
+    extensions: ['.js', '.html'],
+    alias: {
+      assets: PATHS.assets
+    }
   },
 
   module: {
@@ -116,6 +119,37 @@ const common = {
       filename: 'repgeral/index.html',
       template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/repgeral/index.html')}`,
       chunks: ['repgeral', 'bundle', 'vendor', 'manifest']
+    }),
+    // Compilação dos includes para facilitar a inserção no ASP
+    new HtmlPlugin({
+      filename: 'includes/footer.html',
+      inject: false,
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/includes/footer.html')}`
+    }),    
+    new HtmlPlugin({
+      filename: 'includes/header.html',
+      inject: false,
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/includes/header.html')}`
+    }),
+    new HtmlPlugin({
+      filename: 'includes/mapa-do-site.html',
+      inject: false,
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/includes/mapa-do-site.html')}`
+    }),
+    new HtmlPlugin({
+      filename: 'includes/paginacao.html',
+      inject: false,
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/includes/paginacao.html')}`
+    }),
+    new HtmlPlugin({
+      filename: 'includes/pesquisa.html',
+      inject: false,
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/includes/pesquisa.html')}`
+    }),
+    new HtmlPlugin({
+      filename: 'includes/sob-medida.html',
+      inject: false,
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/includes/sob-medida.html')}`
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: ['vendor', 'manifest']
