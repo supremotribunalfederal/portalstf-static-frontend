@@ -38,6 +38,10 @@ const common = {
     transparencia: [
       path.join(PATHS.src, '/transparencia/index.js'),
       path.join(PATHS.scss, '/secoes/transparencia/transparencia.scss')
+    ],
+    jurisprudencia: [
+      path.join(PATHS.src, '/jurisprudencia/index.js'),
+      path.join(PATHS.scss, '/secoes/jurisprudencia/jurisprudencia.scss')
     ]
   },
 
@@ -66,7 +70,7 @@ const common = {
         use: customCss.extract({
           use: 'css-loader!sass-loader?sourceMaps'
         }),
-        exclude: /node_modules|noticias|repgeral|transparencia/
+        exclude: /node_modules|noticias|repgeral|transparencia|jurisprudencia/
       },
       {
         test: /\.scss$/,
@@ -82,6 +86,11 @@ const common = {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
         include: path.join(PATHS.scss, '/secoes/transparencia')
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+        include: path.join(PATHS.scss, '/secoes/jurisprudencia')
       },
       {
         test: /\.(jpg|jpeg|gif|png|svg|ico)$/i,
@@ -133,6 +142,11 @@ const common = {
       filename: 'transparencia/index.html',
       template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/transparencia/index.html')}`,
       chunks: ['transparencia', 'bundle', 'vendor', 'manifest']
+    }),
+    new HtmlPlugin({
+      filename: 'jurisprudencia/index.html',
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/jurisprudencia/index.html')}`,
+      chunks: ['jurisprudencia', 'bundle', 'vendor', 'manifest']
     }),
     // Compilação dos includes para facilitar a inserção no ASP
     new HtmlPlugin({
