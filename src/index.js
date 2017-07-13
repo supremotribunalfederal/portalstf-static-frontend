@@ -9,8 +9,13 @@ $('.dropdown-toggle').hover(function() {
 });
 
 $(document).ready(function(){
-    $('.botoes-pesquisa-jurisprudencia span').hide();
-    $('.pesquisa-jurisprudencia-links-inferiores').hide();    
+    var pesquisaSelecionada = $("#abaSelecionada").val();
+    
+    //se nao for a pesquisa de jurisprudencia, esconde botoes da pesquisa jurisprudencia
+    if(pesquisaSelecionada != 4){
+        $('.botoes-pesquisa-jurisprudencia span').hide();
+        $('.pesquisa-jurisprudencia-links-inferiores').hide();            
+    }
     
     $('[data-toggle="popover"]').popover({
         container: 'body'
@@ -21,7 +26,7 @@ moment.locale("pt-BR");
 $(".tmp-dec").html("H&aacute; " + moment().startOf("day").fromNow());    
 
 //--------------------------------
-// controle dos botoes de pesquisa versao Desktop
+// controle dos botoes de pesquisa da home na versao Desktop
 
 $("#menuPesquisa li span").on("click", function() {
     //Remove os estilos de todas as abas.
@@ -64,12 +69,12 @@ $("#menuPesquisa li span").on("click", function() {
     $("#pesquisaPrincipal").focus();
 });
 
-// fim do controle dos botoes de pesquisa versao Desktop
+// fim do controle dos botoes de pesquisa da home na versao Desktop
 //----------------------------------------------------
 
 
 //--------------------------------
-// controle dos botoes de pesquisa versao mobile
+// controle dos botoes de pesquisa da home na versao mobile
 
 $("#menu-pesquisa-mobile").on("change", function() {        
     $('.pesquisa-jurisprudencia-links-inferiores').hide();  
