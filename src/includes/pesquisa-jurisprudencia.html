@@ -1,49 +1,49 @@
-    <section id="pesquisa" class="pesquisa row m-0 m-t-96 m-b-32 p-l-0 p-r-0">
-      <div class="container center-block">
-        <div class="hidden-xs pull-right m-t-40">
+<section id="pesquisa" class="pesquisa row m-0 m-t-96 m-b-32 p-l-0 p-r-0">
+    <div class="container center-block">
+        <div class="hidden-xs pull-right m-t-16">
             <p class="__stf-branco">
-              <span class="m-r-16 label-peticione">Peticione e acompanhe processos:</span> <a href="//sistemas.stf.jus.br/peticionamento/" target="_blank" class="btn ">Painel do Peticionador</a>
+                <span class="m-r-16 label-peticione">Peticione e acompanhe processos:</span> <a href="//sistemas.stf.jus.br/peticionamento/" target="_blank" class="btn ">Painel do Peticionador</a>
             </p>
         </div>
         <div class="pesquisa-conteudo clearfix">
-          <div class="pesquisa-titulo m-t-40 m-b-16">
-            <button class="btn btn-default btn-icone pesquisa-btn-interna pull-right __fundo-transparente">
-              <i class="glyphicon glyphicon-search" aria-label="abrir pesquisa"></i>
-            </button>
-            <h3 class="m-0">Pesquisa de Jurisprudência</h3> 
-          </div>
-        <div class="pesquisa-campos">
-            <div class="form-inline">
-              <div class="campo-container">
-                <input type="hidden" value="4" id="abaSelecionada" />
-                <input class="campo-texto campo-texto-jurisprudencia col-md-7" type="text" name="pesquisaPrincipal" id="pesquisaPrincipal" placeholder="Digite um termo para a pesquisa de jurisprudência...">
-                <div class="hidden-sm hidden-xs botoes-pesquisa-jurisprudencia col-md-5">
-                    <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador E" data-content="Procura todas as palavras desejadas em qualquer lugar do documento. Ex: ICMS e SUBSTITUIÇÃO." data-value="e" id="jurisprudencia-e" class="pull-left">e</span>
-                    <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador OU" data-content="Procura por qualquer uma das palavras. Pode utilizar o parênteses para combinar a pesquisa com outros operadores. Ex: aposentadoria e (deputado ou parlamentar ou congressista)." data-value="ou" class="pull-left">ou</span>
-                    <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador ADJ" data-content="Busca palavras aproximadas, na mesma ordem colocada na expressão de busca. Ex: MINISTÉRIO adj2 PÚBLICO e TEMPO adj2 SERVIÇO (O número após o 'adj' indica delimitação de distância entre palavras, podendo ser escolhido livremente)." data-value="adj" class="pull-left">adj</span>
-                    <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador NÃO" data-content="Recupera documentos que contenham a primeira, mas não a segunda palavra. Ex: Parlamentar não penal" data-value="não" class="pull-left">não</span>
-                    <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador PROX" data-content="Procura palavras aproximadas em qualquer ordem. Ex: extraordinário prox5 admissibilidade. (O número após o 'PROX' indica delimitação de distância entre palavras, podendo ser escolhido livremente)." data-value="prox" class="pull-left">prox</span>
-                    <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador MESMO" data-content="Operador utilizado para pesquisar no mesmo parágrafo; sua utilização principal é para pesquisa no campo legislação. Ex: aposentadoria mesmo parlamentar (Obs.: Consulte o Ajuda para pesquisa por legislaççao na base de Súmulas)." data-value="mesmo"class="pull-left">mesmo</span>
-                    <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador $" data-content="Este operador substitui qualquer parte da palavra desejada, ou seja, prefixo, radical ou sufixo. Ex: $constitucional$ / militar$ / octavio ga$otti" data-value="$" class="pull-left">$</span>
-                </div>
-                <button class="btn btn-default pull-right">
-                  <i class="glyphicon glyphicon-search hidden-md hidden-lg"></i>
-                  <span class="hidden-xs hidden-sm" id="btnPesquisar">Pesquisar</span>
+            <div class="pesquisa-titulo m-t-40 m-b-16">
+                <button class="btn btn-default btn-icone pesquisa-btn-interna pull-right __fundo-transparente">
+                    <i class="glyphicon glyphicon-search" aria-label="abrir pesquisa"></i>
                 </button>
-                <div class="hidden-sm hidden-xs pesquisa-jurisprudencia-links-inferiores">
-                    <a href="http://www.stf.jus.br/portal/jurisprudencia/pesquisarVocabularioJuridico.asp">Clique aqui para consultar o vocabulário jurídico (Tesauro)</a>
-                    <span>ou</span> 
-                    <a target="_blank" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaPesquisaGeral&pagina=ajudaPesquisaJurisprudencia&popup=S">Conheça dicas para melhorar seus resultados de pesquisa</a>
-                  </div>
-
-                  <div class="hidden-md hidden-lg hidden-xl pesquisa-jurisprudencia-links-inferiores">
-                    <a href="http://www.stf.jus.br/portal/jurisprudencia/pesquisarVocabularioJuridico.asp">Vocabulário</a>
-                    <span>|</span> 
-                    <a target="_blank" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaPesquisaGeral&pagina=ajudaPesquisaJurisprudencia&popup=S">Dicas</a>
-                </div>
-              </div>
+                <h3 class="m-0">Pesquisa de Jurisprudência</h3> 
             </div>
-          </div>
+            <div class="pesquisa-campos">
+                <div class="form-inline">
+                    <div class="campo-container">
+                        <input type="hidden" value="4" id="abaSelecionada" />
+                        <input class="campo-texto campo-texto-jurisprudencia col-md-7" type="text" name="pesquisaPrincipal" id="pesquisaPrincipal" placeholder="Digite um termo para a pesquisa de jurisprudência...">
+                        <div class="hidden-sm hidden-xs botoes-pesquisa-jurisprudencia col-md-5">
+                            <span id="operador-e" data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador E" data-content="Procura todas as palavras desejadas em qualquer lugar do documento. Ex: ICMS e SUBSTITUIÇÃO." data-value="e" class="pull-left">e</span>
+                            <span id="operador-ou" data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador OU" data-content="Procura por qualquer uma das palavras. Pode utilizar o parênteses para combinar a pesquisa com outros operadores. Ex: aposentadoria e (deputado ou parlamentar ou congressista)." data-value="ou" class="pull-left">ou</span>
+                            <span id="operador-adj" data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador ADJ" data-content="Busca palavras aproximadas, na mesma ordem colocada na expressão de busca. Ex: MINISTÉRIO adj2 PÚBLICO e TEMPO adj2 SERVIÇO (O número após o 'adj' indica delimitação de distância entre palavras, podendo ser escolhido livremente)." data-value="adj" class="pull-left">adj</span>
+                            <span id="operador-nao" data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador NÃO" data-content="Recupera documentos que contenham a primeira, mas não a segunda palavra. Ex: Parlamentar não penal" data-value="não" class="pull-left">não</span>
+                            <span id="operador-prox" data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador PROX" data-content="Procura palavras aproximadas em qualquer ordem. Ex: extraordinário prox5 admissibilidade. (O número após o 'PROX' indica delimitação de distância entre palavras, podendo ser escolhido livremente)." data-value="prox" class="pull-left">prox</span>
+                            <span id="operador-mesmo" data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador MESMO" data-content="Operador utilizado para pesquisar no mesmo parágrafo; sua utilização principal é para pesquisa no campo legislação. Ex: aposentadoria mesmo parlamentar (Obs.: Consulte o Ajuda para pesquisa por legislaççao na base de Súmulas)." data-value="mesmo"class="pull-left">mesmo</span>
+                            <span id="operador-cifrao" data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador $" data-content="Este operador substitui qualquer parte da palavra desejada, ou seja, prefixo, radical ou sufixo. Ex: $constitucional$ / militar$ / octavio ga$otti" data-value="$" class="pull-left">$</span>
+                        </div>
+                        <button class="btn btn-default pull-right">
+                            <i class="glyphicon glyphicon-search hidden-md hidden-lg"></i>
+                            <span class="hidden-xs hidden-sm" id="btnPesquisar">Pesquisar</span>
+                        </button>
+                        <div class="hidden-sm hidden-xs pesquisa-jurisprudencia-links-inferiores">
+                            <a id="tesauro" href="http://www.stf.jus.br/portal/jurisprudencia/pesquisarVocabularioJuridico.asp">Clique aqui para consultar o vocabulário jurídico (Tesauro)</a>
+                            <span>ou</span> 
+                            <a id="pesquisa-jurisprudencia-dicas" target="_blank" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaPesquisaGeral&pagina=ajudaPesquisaJurisprudencia&popup=S">Conheça dicas para melhorar seus resultados de pesquisa</a>
+                        </div>
+
+                        <div class="hidden-md hidden-lg hidden-xl pesquisa-jurisprudencia-links-inferiores">
+                            <a id="tesauro" href="http://www.stf.jus.br/portal/jurisprudencia/pesquisarVocabularioJuridico.asp">Vocabulário</a>
+                            <span>|</span> 
+                            <a id="pesquisa-jurisprudencia-dicas" target="_blank" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaPesquisaGeral&pagina=ajudaPesquisaJurisprudencia&popup=S">Dicas</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
+    </div>
+</section>

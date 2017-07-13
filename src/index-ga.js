@@ -111,6 +111,31 @@ $('#jurisprudencia-maisinfo-glossario').on('click', function(){
 	ga('send', 'event', 'Pagina Home', 'Jurisprudência', 'Mais Informações - Glossário jurídico');
 });
 
+
+//operadores/links da pesquisa jurisprudencia
+$('#tesauro').on('click', function(){
+	ga('send', 'event', 'Pagina Geral', 'Pesquisa', 'Jurisprudencia - Tesauro');
+});
+$('#pesquisa-jurisprudencia-dicas').on('click', function(){
+	ga('send', 'event', 'Pagina Geral', 'Pesquisa', 'Jurisprudencia - Dicas');
+});
+$('#operador-adj').on('click', function(){
+	ga('send', 'event', 'Pagina Geral', 'Pesquisa', 'Jurisprudencia - Operador ADJ');
+});
+$('#operador-mesmo').on('click', function(){
+	ga('send', 'event', 'Pagina Geral', 'Pesquisa', 'Jurisprudencia - Operador MESMO');
+});
+$('#operadorcifrao').on('click', function(){
+	ga('send', 'event', 'Pagina Geral', 'Pesquisa', 'Jurisprudencia - Operador $');
+});
+$('#operadorcifrao').on('click', function(){
+	ga('send', 'event', 'Pagina Geral', 'Pesquisa', 'Jurisprudencia - Operador $');
+});
+$('#operadorcifrao').on('click', function(){
+	ga('send', 'event', 'Pagina Geral', 'Pesquisa', 'Jurisprudencia - Operador $');
+});
+
+
 //card da transparência
 $('#transparencia-gestao-pessoas').on('click', function(){
 	ga('send', 'event', 'Pagina Home', 'Transparência', 'Gestão de Pessoas');
