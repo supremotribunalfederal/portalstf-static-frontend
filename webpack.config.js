@@ -31,9 +31,9 @@ const common = {
       path.join(PATHS.src, '/noticias/index.js'),
       path.join(PATHS.scss, '/secoes/noticias/noticias.scss')
     ],
-    repgeral: [
-      path.join(PATHS.src, '/repgeral/index.js'),
-      path.join(PATHS.scss, '/secoes/repgeral/repgeral.scss')
+    repercussaogeral: [
+      path.join(PATHS.src, '/repercussaogeral/index.js'),
+      path.join(PATHS.scss, '/secoes/repercussaogeral/repercussaogeral.scss')
     ],
     transparencia: [
       path.join(PATHS.src, '/transparencia/index.js'),
@@ -70,7 +70,7 @@ const common = {
         use: customCss.extract({
           use: 'css-loader!sass-loader?sourceMaps'
         }),
-        exclude: /node_modules|noticias|repgeral|transparencia|jurisprudencia/
+        exclude: /node_modules|noticias|repercussaogeral|transparencia|jurisprudencia/
       },
       {
         test: /\.scss$/,
@@ -80,7 +80,7 @@ const common = {
       {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
-        include: path.join(PATHS.scss, '/secoes/repgeral')
+        include: path.join(PATHS.scss, '/secoes/repercussaogeral')
       },
       {
         test: /\.scss$/,
@@ -134,9 +134,9 @@ const common = {
       chunks: ['noticias', 'bundle', 'vendor', 'manifest']
     }),
     new HtmlPlugin({
-      filename: 'repgeral/index.html',
-      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/repgeral/index.html')}`,
-      chunks: ['repgeral', 'bundle', 'vendor', 'manifest']
+      filename: 'repercussaogeral/index.html',
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/repercussaogeral/index.html')}`,
+      chunks: ['repercussaogeral', 'bundle', 'vendor', 'manifest']
     }),
     new HtmlPlugin({
       filename: 'transparencia/index.html',
