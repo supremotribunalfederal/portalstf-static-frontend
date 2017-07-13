@@ -129,6 +129,13 @@ $("#btnPesquisar").click(function(){
     realizarPesquisa();
 });
 
+
+$("#btn-jurisprudencia-pesquisar").click(function(){    
+    var termoPesquisa = $("#pesquisaPrincipal").val();  
+    var urlRedirect = 'http://www.stf.jus.br/portal/jurisprudencia/listarConsolidada.asp?url=&txtPesquisaLivre='+termoPesquisa+'&numero=&ministro=&dataInicial=&dataFinal=&tema=&tese=&tipoTese=&orgaoJulgador=&ementa=&nomeLegislacao=&txtAnoLegislacao=N%C3%BAmero&tipoLegislacao1=ART&valorLegislacao1=&tipoLegislacao2=PAR&valorLegislacao2=&tipoLegislacao3=INC&valorLegislacao3=&tipoLegislacao4=LET&valorLegislacao4=&base=baseAcordaos&base=baseRepercussao&base=baseSumulasVinculantes&base=baseSumulas&base=baseMonocraticas&base=basePresidencia&base=baseInformativo&base=baseQuestoes&base=todos';    
+    location.href = urlRedirect; 
+});
+
 $("#pesquisaPrincipal").keyup(function(e){
     if(e.keyCode == 13) {
         realizarPesquisa();
