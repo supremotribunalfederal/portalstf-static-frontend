@@ -40,3 +40,37 @@
 .card-conteudo-vermelho {
     background: $stfVermelhoClaro;
 }
+
+/*section concursos*/
+
+#concursos {
+    background: $stfCinzaClaro;
+    padding: 24px 16px;
+}
+
+#concursos h3 {
+    color: $stfAzulEscuro;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.concursos-conteudo {
+    margin-top: 24px;
+}
+
+/*section conheca-mais*/
+
+#conheca-mais {
+    //background: $stfCinzaClaro;
+    padding: 24px 16px;
+}
+
+#conheca-mais h3 {
+    color: $stfAzulEscuro;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-titulo-conheca-mais {
+    font-size: 1.5rem;
+}
