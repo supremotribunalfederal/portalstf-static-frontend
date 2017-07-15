@@ -157,3 +157,20 @@ $('#transparencia-vermais').on('click', function(){
 $('#supremo-em-numeros').on('click', function(){
 	ga('send', 'event', 'Pagina Home', 'Supremo em Números', 'Quero conhecer');
 });
+
+//Notícias
+$('#noticia-informacao-util-sim').on('click', function(){
+	ga('send', 'event', 'Notícia', 'Classificação de utilidade', 'Sim');
+});
+
+$('#noticia-informacao-util-nao').on('click', function(){
+	ga('send', 'event', 'Notícia', 'Classificação de utilidade', 'Não');
+});
+
+$('#noticia-interno-imprimir-inferior').on('click', function() {
+	ga('send', 'event', 'Notícia', 'Impressão', 'Imprimir');
+});
+
+$('#noticia-interno-imprimir-superior').on('click', function() {
+	ga('send', 'event', 'Notícia', 'Impressão', 'Imprimir');
+});
