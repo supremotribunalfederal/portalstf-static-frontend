@@ -1,4 +1,7 @@
 @import "../../variaveis/cores";
+@import "../../variaveis/breakpoints";
+
+@import "../../mixins/background";
 
 .noticias {
   .pesquisa-campos {
@@ -55,6 +58,26 @@
   }
 }
 
+.noticia-compartilhar-mobile {
+  > div {
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    display: inline-block;
+    height: 20px;
+    margin-right: 4px;
+    width: 20px;
+
+    &.facebook {
+      @include set-bg-img-1x-2x("../img/social/post-facebook.png", "../img/social/post-facebook@2x.png");
+    }
+
+    &.twitter {
+      @include set-bg-img-1x-2x("../img/social/post-twitter.png", "../img/social/post-twitter@2x.png");
+    }
+  }
+}
+
 .noticia-compartilhar-interno {
   background-color: #f3f3f3;
 
@@ -77,6 +100,26 @@
 
       .glyphicon {
         color: #989ba1;
+      }
+    }
+  }
+}
+
+@media all and (max-width: $breakpointPhones - 1) {
+  #noticias-pagina-interna-wrapper {
+    background-color: #f7f7f7;
+
+    #noticias-pagina-interna {
+      background-color: $stfBranco;
+    }
+
+    #noticias {
+      > .card-conteudo {
+        > .card {
+          > .card-conteudo {
+            background-color: $stfBranco;
+          }
+        }
       }
     }
   }

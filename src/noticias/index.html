@@ -197,18 +197,19 @@
           </div>
         </div>
 
-        <div class="col-xs-12 col-sm-9 col-lg-10 row m-0 p-xs-0 m-t-24 m-b-24 p-sm-8 __borda-l-cinza-claro">
+        <div id="noticias-pagina-interna-wrapper" class="col-xs-12 col-sm-9 col-lg-10 row m-0 p-xs-0 m-t-24 p-b-24 p-sm-8 __borda-l-cinza-claro">
           <div id="noticias-pagina-interna" class="noticias p-l-40 p-r-40 p-l-xs-0 p-r-xs-0 ">
             <div class="noticia m-0 row">
-              <div class="col-xs-12 col-md-12 p-0">
-                <div class="card-secao col-xs-12 p-l-8 m-b-24"><a href="#">Notícias</a></div>
+              <div class="col-xs-12 col-md-12 p-0 p-l-xs-16 p-r-xs-16">
+                <div class="card-secao hidden-xs col-xs-12 p-l-8 m-b-24"><a href="#">Notícias</a></div>
                 <h3 class="noticia-titulo">Plenário do STF elege ministro substituto do TSE e vota lista tríplice</h3>
                 <p class="noticia-resumo m-b-24">Confira os temas dos processos pautados para julgamento às 14h, no STF. Transmissão via TV Justiça, Radio Justiça e Youtube</p>
                 <div class="noticia-autor">Por Leandro Rezende</div>
                 <div class="noticia-data m-b-24">30/05/2017 11h50 - Atualizado há 30 dias</div>
-                <div class="noticia-compartilhar-interno p-8 m-b-16 p-r-16">
+                <hr class="visible-xs" />
+                <div class="noticia-compartilhar-interno hidden-xs p-8 m-b-16 p-r-16">
                   <div class="impressao">
-                    <button type="button" class="btn btn-default" aria-label="Imprimir">
+                    <button id="noticia-interno-imprimir-superior" type="button" class="btn btn-default" aria-label="Imprimir">
                       <span class="glyphicon glyphicon-print" aria-hidden="true"></span>
                     </button>
                   </div>
@@ -228,7 +229,7 @@
             </div>
           </div>
 
-          <div id="mais-noticias" class="mais-noticias card card-sem-sombra p-t-18 p-l-40 p-r-40 p-l-xs-0">
+          <div id="mais-noticias" class="mais-noticias card card-sem-sombra p-t-18 p-l-40 p-r-40 p-l-xs-0 p-r-xs-0">
             <div id="noticias">
               <div class="card-titulo">Mais notícias</div>
               <div class="card-conteudo m-0 m-t-16 m-b-16 p-0">
@@ -250,8 +251,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="card m-16 visible-xs visible-sm row">
-                  <div class="card-conteudo col-xs-12 col-md-6 p-0">
+                <div class="card-conteudo m-8 visible-xs visible-sm row">
+                  <div class="card-lt-md card-xs noticia col-xs-12 col-md-6 p-0 m-0">
                     <div class="noticia-categoria p-l-16 p-r-16">Plenário do STF </div>
                     <h3 class="noticia-titulo p-l-16 p-r-16 m-t-8 m-t-8"><a href="//stf.jus.br/portal/cms/verNoticiaDetalhe.asp?idConteudo=345036">Plenário do STF elege ministro substituto do TSE e vota lista tríplice</a></h3>
                     <p class="noticia-resumo p-l-16 p-r-16">A lista é composta pelos advogados: Tarcísio Vieira de Carvalho Neto, Sérgio Silveira Banhos e Carlos Bastide Horbach.</p>
@@ -261,8 +262,8 @@
                     <div class="noticia-data-xs p-l-16 p-r-16 m-t-8 m-b-8">Há 3 minutos</div>
                   </div>
                 </div>
-                <div class="card m-16 visible-xs row">
-                  <div class="card-conteudo col-xs-12 col-md-6 p-0">
+                <div class="card-conteudo m-8 visible-xs row">
+                  <div class="card-lt-md card-xs noticia col-xs-12 col-md-6 p-0 m-0">
                     <div class="noticia-categoria p-l-16 p-r-16">Plenário do STF </div>
                     <h3 class="noticia-titulo p-l-16 p-r-16 m-t-8 m-t-8"><a href="//stf.jus.br/portal/cms/verNoticiaDetalhe.asp?idConteudo=345036">Plenário do STF elege ministro substituto do TSE e vota lista tríplice</a></h3>
                     <p class="noticia-resumo p-l-16 p-r-16">A lista é composta pelos advogados: Tarcísio Vieira de Carvalho Neto, Sérgio Silveira Banhos e Carlos Bastide Horbach.</p>
@@ -274,19 +275,24 @@
                 </div>
               </div>
             </div>
-            
           </div>
 
-          <div class="hidden-sm hidden-xs p-l-40">
+          <div id="ver-todas-noticias" class="row visible-xs visible-sm col-xs-12 m-0 m-b-40 m-t-16 p-0">
+            <div class="col-md-8 col-xs-12 p-0 p-l-8 p-r-8">
+              <a href="#" class="btn btn-default-bordered btn-raised btn-upper btn-fluid">veja todas</a>
+            </div>
+          </div>
+
+          <div class="hidden-xs hidden-sm p-l-40">
             <h4 class="pull-left">Essa informação foi útil?</h4>
-            <button class="btn btn-default-bordered btn-raised m-l-8" type="button" href="#">Sim</button>
-            <button class="btn btn-default-bordered btn-raised m-l-8" type="button" href="#">Não</button>
+            <button id="noticia-informacao-util-sim" class="btn btn-default-bordered btn-raised m-l-8" type="button" href="#">Sim</button>
+            <button id="noticia-informacao-util-nao" class="btn btn-default-bordered btn-raised m-l-8" type="button" href="#">Não</button>
             <button class="btn btn-default-bordered btn-raised m-l-8" type="button" href="#">Sugerir correção</button>
           </div>
-          <div class="p-l-40 p-r-40 m-t-40">
+          <div class="hidden-xs hidden-sm p-l-40 p-r-40 m-t-40">
             <div class="noticia-compartilhar-interno p-8 p-r-16">
               <div class="impressao">
-                <button type="button" class="btn btn-default" aria-label="Imprimir">
+                <button id="noticia-interno-imprimir-inferior" type="button" class="btn btn-default" aria-label="Imprimir">
                   <span class="glyphicon glyphicon-print" aria-hidden="true"></span>
                 </button>
               </div>
