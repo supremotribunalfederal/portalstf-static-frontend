@@ -31,9 +31,17 @@ const common = {
       path.join(PATHS.src, '/noticias/index.js'),
       path.join(PATHS.scss, '/secoes/noticias/noticias.scss')
     ],
-    repgeral: [
-      path.join(PATHS.src, '/repgeral/index.js'),
-      path.join(PATHS.scss, '/secoes/repgeral/repgeral.scss')
+    repercussaogeral: [
+      path.join(PATHS.src, '/repercussaogeral/index.js'),
+      path.join(PATHS.scss, '/secoes/repercussaogeral/repercussaogeral.scss')
+    ],
+    transparencia: [
+      path.join(PATHS.src, '/transparencia/index.js'),
+      path.join(PATHS.scss, '/secoes/transparencia/transparencia.scss')
+    ],
+    jurisprudencia: [
+      path.join(PATHS.src, '/jurisprudencia/index.js'),
+      path.join(PATHS.scss, '/secoes/jurisprudencia/jurisprudencia.scss')
     ]
   },
 
@@ -44,7 +52,10 @@ const common = {
   },
 
   resolve: {
-    extensions: ['.js']
+    extensions: ['.js', '.html'],
+    alias: {
+      assets: PATHS.assets
+    }
   },
 
   module: {
@@ -59,7 +70,7 @@ const common = {
         use: customCss.extract({
           use: 'css-loader!sass-loader?sourceMaps'
         }),
-        exclude: /node_modules|noticias|repgeral/
+        exclude: /node_modules|noticias|repercussaogeral|transparencia|jurisprudencia/
       },
       {
         test: /\.scss$/,
@@ -69,7 +80,17 @@ const common = {
       {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
-        include: path.join(PATHS.scss, '/secoes/repgeral')
+        include: path.join(PATHS.scss, '/secoes/repercussaogeral')
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+        include: path.join(PATHS.scss, '/secoes/transparencia')
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+        include: path.join(PATHS.scss, '/secoes/jurisprudencia')
       },
       {
         test: /\.(jpg|jpeg|gif|png|svg|ico)$/i,
@@ -94,28 +115,79 @@ const common = {
 
   plugins: [
     new HtmlPlugin({
-      template: path.join(PATHS.src, '/index.html'),
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/index.html')}`,
       chunks: ['bundle', 'vendor', 'manifest']
     }),
     new HtmlPlugin({
       filename: 'qlik.html',
-      template: path.join(PATHS.src, '/qlik.html'),
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/qlik.html')}`,
       chunks: ['bundle', 'vendor', 'manifest']
     }),
     new HtmlPlugin({
       filename: 'noticias/index.html',
-      template: path.join(PATHS.src, '/noticias/index.html'),
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/noticias/index.html')}`,
       chunks: ['noticias', 'bundle', 'vendor', 'manifest']
     }),
     new HtmlPlugin({
       filename: 'textos/index.html',
-      template: path.join(PATHS.src, '/textos/index.html'),
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/textos/index.html')}`,
       chunks: ['noticias', 'bundle', 'vendor', 'manifest']
     }),
     new HtmlPlugin({
-      filename: 'repgeral/index.html',
-      template: path.join(PATHS.src, '/repgeral/index.html'),
-      chunks: ['repgeral', 'bundle', 'vendor', 'manifest']
+      filename: 'repercussaogeral/index.html',
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/repercussaogeral/index.html')}`,
+      chunks: ['repercussaogeral', 'bundle', 'vendor', 'manifest']
+    }),
+    new HtmlPlugin({
+      filename: 'transparencia/index.html',
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/transparencia/index.html')}`,
+      chunks: ['transparencia', 'bundle', 'vendor', 'manifest']
+    }),
+    new HtmlPlugin({
+      filename: 'jurisprudencia/index.html',
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/jurisprudencia/index.html')}`,
+      chunks: ['jurisprudencia', 'bundle', 'vendor', 'manifest']
+    }),
+    // Compilação dos includes para facilitar a inserção no ASP
+    new HtmlPlugin({
+      filename: 'includes/footer.html',
+      inject: false,
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/includes/footer.html')}`
+    }),    
+    new HtmlPlugin({
+      filename: 'includes/header.html',
+      inject: false,
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/includes/header.html')}`
+    }),
+    new HtmlPlugin({
+      filename: 'includes/mapa-do-site.html',
+      inject: false,
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/includes/mapa-do-site.html')}`
+    }),
+    new HtmlPlugin({
+      filename: 'includes/paginacao.html',
+      inject: false,
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/includes/paginacao.html')}`
+    }),
+    new HtmlPlugin({
+      filename: 'includes/pesquisa.html',
+      inject: false,
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/includes/pesquisa.html')}`
+    }),
+    new HtmlPlugin({
+      filename: 'includes/pesquisa-transparencia.html',
+      inject: false,
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/includes/pesquisa-transparencia.html')}`
+    }),
+    new HtmlPlugin({
+      filename: 'includes/pesquisa-jurisprudencia.html',
+      inject: false,
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/includes/pesquisa-jurisprudencia.html')}`
+    }),
+    new HtmlPlugin({
+      filename: 'includes/sob-medida.html',
+      inject: false,
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/includes/sob-medida.html')}`
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: ['vendor', 'manifest']

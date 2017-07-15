@@ -9,8 +9,13 @@ $('.dropdown-toggle').hover(function() {
 });
 
 $(document).ready(function(){
-    $('.botoes-pesquisa-jurisprudencia span').hide();
-    $('.pesquisa-jurisprudencia-links-inferiores').hide();    
+    var pesquisaSelecionada = $("#abaSelecionada").val();
+    
+    //se nao for a pesquisa de jurisprudencia, esconde botoes da pesquisa jurisprudencia
+    if(pesquisaSelecionada != 4){
+        $('.botoes-pesquisa-jurisprudencia span').hide();
+        $('.pesquisa-jurisprudencia-links-inferiores').hide();            
+    }
     
     $('[data-toggle="popover"]').popover({
         container: 'body'
@@ -21,7 +26,7 @@ moment.locale("pt-BR");
 $(".tmp-dec").html("H&aacute; " + moment().startOf("day").fromNow());    
 
 //--------------------------------
-// controle dos botoes de pesquisa versao Desktop
+// controle dos botoes de pesquisa da home na versao Desktop
 
 $("#menuPesquisa li span").on("click", function() {
     //Remove os estilos de todas as abas.
@@ -64,12 +69,12 @@ $("#menuPesquisa li span").on("click", function() {
     $("#pesquisaPrincipal").focus();
 });
 
-// fim do controle dos botoes de pesquisa versao Desktop
+// fim do controle dos botoes de pesquisa da home na versao Desktop
 //----------------------------------------------------
 
 
 //--------------------------------
-// controle dos botoes de pesquisa versao mobile
+// controle dos botoes de pesquisa da home na versao mobile
 
 $("#menu-pesquisa-mobile").on("change", function() {        
     $('.pesquisa-jurisprudencia-links-inferiores').hide();  
@@ -122,6 +127,13 @@ function realizarPesquisa(){
 
 $("#btnPesquisar").click(function(){
     realizarPesquisa();
+});
+
+
+$("#btn-jurisprudencia-pesquisar").click(function(){    
+    var termoPesquisa = $("#pesquisaPrincipal").val();  
+    var urlRedirect = 'http://www.stf.jus.br/portal/jurisprudencia/listarConsolidada.asp?url=&txtPesquisaLivre='+termoPesquisa+'&numero=&ministro=&dataInicial=&dataFinal=&tema=&tese=&tipoTese=&orgaoJulgador=&ementa=&nomeLegislacao=&txtAnoLegislacao=N%C3%BAmero&tipoLegislacao1=ART&valorLegislacao1=&tipoLegislacao2=PAR&valorLegislacao2=&tipoLegislacao3=INC&valorLegislacao3=&tipoLegislacao4=LET&valorLegislacao4=&base=baseAcordaos&base=baseRepercussao&base=baseSumulasVinculantes&base=baseSumulas&base=baseMonocraticas&base=basePresidencia&base=baseInformativo&base=baseQuestoes&base=todos';    
+    location.href = urlRedirect; 
 });
 
 $("#pesquisaPrincipal").keyup(function(e){

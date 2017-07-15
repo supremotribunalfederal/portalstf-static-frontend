@@ -32,12 +32,34 @@
     text-transform: uppercase;
   }
 
+  .card-titulo-verde {
+    background: $stfVerdeEscuro;
+    color: $stfVerdeClaro;
+  }  
+
+  .card-titulo-vermelho {
+    background: $stfVermelho;
+    color: $stfVermelhoClaro;
+  }
+  
+  .card-subtitulo {
+    color: $stfAzulEscuro;
+    font-weight: bold;
+    a {
+        color: $stfAzulEscuro;
+    }
+  } 
+
   .card-conteudo {
     padding: 16px;
 
     .card-titulo {
       padding: 8px 16px;
       text-transform: none;
+    }
+    
+    .card-topico-conteudo { 
+        color: $stfCinza;    
     }
 
     .card-media-video {

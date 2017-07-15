@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Supremo Tribunal Federal</title>
-<link href="/styles/vendor.css" rel="stylesheet"><link href="/styles/bundle.css" rel="stylesheet"></head>
+<link href="/assets/styles/vendor.css" rel="stylesheet"><link href="/assets/styles/bundle.css" rel="stylesheet"></head>
 <body>
   <div id="main" class="container-fluid p-0">
     <section class="menu-acessibilidade row p-0 m-0">
@@ -502,24 +502,40 @@
         </div>
 
         <!-- Cards laterais -->
-        <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 p-16 p-sm-8 p-xs-0 m-0">
-          <div id="cadastro-newsletter" class="card m-b-24 __fundo-escuro">
-            <div class="card-conteudo p-b-0">
-              <div class="row m-0">
-                <div class="p-0 p-b-16">
-                  <h3 class="m-0">RECEBA NO SEU E-MAIL (PUSH)</h3>
-                  <small>NOTÍCIAS E ATUALIZAÇÕES PROCESSUAIS</small>
-                </div>
-                <div class="row m-0 p-0">
-                  <div class="col-xs-12 p-0 p-b-16">
-                    <a href="//stf.jus.br/portal/push/autenticarUsuario.asp" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12">
-                      Quero me cadastrar
-                    </a>
+        <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 p-16 p-sm-8 p-xs-0 m-0">    
+            
+            <div class="teses-repgeral card m-b-24">
+                <div class="card-titulo">Teses de Repercussão Geral</div>                
+                <div class="card-conteudo p-0"> 
+                    <div class="card-caixa-texto tese-descricao m-b-24 p-16">
+                        Teses fixadas após julgado mérito da Repercussão Geral
+                    </div>
+                </div>                
+                <div class="card-conteudo p-t-0">                  
+                    <div class="card-subtitulos">
+                      <h4 class="card-sub-titulo m-0">Tema 948<small>Fixado em 02/06/2017</small></h4>
+                      <small>RE 883542</small> - <a href="#">Acórdão</a>
                   </div>
+                  <div  class="card-topico-conteudo">
+                      A Contribuição Sindical Rural, Instituída pelo Decreto-Lei 1.661/1971, foi recepcionada pela ordem constitucional vigente e não configura hipótese de bitributação.
+                  </div>
+                </div>                
+                <div class="card-conteudo p-t-0">                  
+                    <div class="card-subtitulos">
+                      <h4 class="card-sub-titulo m-0">Tema 948<small>Fixado em 02/06/2017</small></h4>
+                      <small>RE 883542</small> - <a href="#">Acórdão</a>
+                  </div>
+                  <div  class="card-topico-conteudo">
+                      A Contribuição Sindical Rural, Instituída pelo Decreto-Lei 1.661/1971, foi recepcionada pela ordem constitucional vigente e não configura hipótese de bitributação.
+                  </div>
+                </div>                
+                <div class="row m-16 p-0 p-b-16">
+                    <a href="#" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12">
+                      Ver todas as teses
+                    </a>
                 </div>
-              </div>
             </div>
-          </div>
+            
           <div id="supremo-em-acao" class="card m-b-24 __fundo-amarelo-claro">
             <div class="card-conteudo p-b-0">
               <div class="row m-0">
@@ -629,43 +645,77 @@
             </div>
           </div>
 
-          <div id="tv-justica" class="tv-justica card m-b-24">
-            <div class="card-titulo">
-              <h3 class="m-0">TV Justiça</h3>
-              <div class="ao-vivo"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgd2lkdGg9IjE4cHgiIGhlaWdodD0iMTJweCIgdmlld0JveD0iMCAwIDE4IDEyIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPg0KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggNDMuMSAoMzkwMTIpIC0gaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoIC0tPg0KICAgIDx0aXRsZT5wb3J0bGV0aWNvbi92aWRlb2NhbTwvdGl0bGU+DQogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+DQogICAgPGRlZnM+PC9kZWZzPg0KICAgIDxnIGlkPSJMYW5kaW5nLVBhZ2UiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPg0KICAgICAgICA8ZyBpZD0icHJpbmNpcGFsIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTEyNS4wMDAwMDAsIC0xMDYxLjAwMDAwMCkiIGZpbGw9IiMyMkUyNjMiPg0KICAgICAgICAgICAgPGcgaWQ9InBvcnRsZXRpY29uL3ZpZGVvY2FtIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMTI1LjAwMDAwMCwgMTA2MS4wMDAwMDApIj4NCiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTQsMSBDMTQsMC40IDEzLjYsMCAxMywwIEwxLDAgQzAuNCwwIDAsMC40IDAsMSBMMCwxMSBDMCwxMS42IDAuNCwxMiAxLDEyIEwxMywxMiBDMTMuNiwxMiAxNCwxMS42IDE0LDExIEwxNCw3LjUgTDE4LDExLjUgTDE4LDAuNSBMMTQsNC41IEwxNCwxIFoiIGlkPSJTaGFwZSI+PC9wYXRoPg0KICAgICAgICAgICAgPC9nPg0KICAgICAgICA8L2c+DQogICAgPC9nPg0KPC9zdmc+" alt="ao vivo">ao vivo</div>
-            </div>
-            <div class="card-conteudo">
-              <div class="card-media-video">
-                <iframe width="560" height="349" src="//www.youtube.com/embed/qghxcZ2hh_A" frameborder="0" allowfullscreen></iframe>
-              </div>
-              <div class="row m-0 m-t-16">
-                <a href="#" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper">Mais vídeos da TV Justiça</a>
-              </div>
-            </div>
-          </div>
-
-          <div id="agenda-dos-ministros" class="agenda-dos-ministros card m-b-24">
-            <div class="card-titulo">Agenda dos ministros</div>
-            <div class="card-conteudo">
-              <div class="agenda-destaque">
-                <div class="destaque-foto">
-                  <a href="//stf.jus.br/portal/agendaPresidente/pesquisarAgendaPresidente.asp"><img width="80" height="80" src="data:image/jpeg;base64,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"></a>
+        <div id="temas-repercussao-geral" class="teses-repgeral card m-b-24">
+            <div class="card-titulo">Temas de Repercussão Geral</div>               
+            <div class="card-conteudo p-0"> 
+                <div class="card-caixa-texto tese-descricao m-b-24 p-16">
+                    Recursos Extraordinários que serão analisados de acordo com os critérios de relevância jurídica, política, social ou econômica.
+                    A decisão proveniente dessa análise será aplicada posteriormente pelas instâncias inferiores, em casos idênticos. 
+                    <a href="#">Conheça mais</a>                        
                 </div>
-                <div class="destaque-conteudo">
-                  <div class="destaque-data">Segunda-feira, 13/02/2017</div>
-                  <div class="destaque-eventos">
-                    <div class="eventos"><a href="//stf.jus.br/portal/agendaPresidente/pesquisarAgendaPresidente.asp">3 eventos</a></div>
-                    <div class="nome-ministro">Min. Cármen Lúcia</div>
-                  </div>
-                </div>
+            </div>                
+            <div class="card-conteudo p-t-0">   
+                <h4><strong>Temas com maior impacto</strong></h4><br />
+                <div class="card-subtitulos">
+                  <h4 class="card-sub-titulo m-0">Tema 234</h4>
+                  <b>Poupança</b>
               </div>
-              <div class="row m-0 m-t-16 p-0">
-                <a href="//stf.jus.br/portal/agendaMinistro/listarAgendaMinistro.asp" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12">
-                  Ver todas as agendas
+              <div  class="card-topico-conteudo">
+                  334.034 (33%) processos. Desde 23/04/2010
+              </div>
+            </div>                
+            <div class="card-conteudo p-t-0">                  
+                <div class="card-subtitulos">
+                  <h4 class="card-sub-titulo m-0">Tema 234</h4>
+                  <b>Poupança</b>
+              </div>
+              <div  class="card-topico-conteudo">
+                  334.034 (33%) processos. Desde 23/04/2010
+              </div>
+            </div>
+            <div class="row m-16 p-0 p-b-16">
+                <a href="#" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12">
+                  Ver todos os temas
                 </a>
+            </div>
+        </div>
+
+        <div class="teses-suspensao-nacional card m-b-24">
+            <div class="card-titulo">Teses de Suspensão Nacional</div>
+
+            <div class="card-conteudo p-0"> 
+                <div class="card-caixa-texto tese-descricao m-b-24 p-16">
+                    Temas em repercussão geral com determinação de suspensão nacional dos processos em tramitação que versem sobre a mesma questão,
+                    nos termos do <a href="#">art. 1035, §5° do CPC.</a>
+                </div>
+            </div>
+
+            <div class="card-conteudo p-t-0">                  
+                <div class="card-subtitulos">
+                    <h4 class="card-sub-titulo m-0">RE 566622</h4>
+                    <small>TEMA 32 - 19/10/2016</small> 
+                </div>
+                <div class="card-topico-conteudo">
+                    Reserva da lei complementar para instituir requisitos à concessão de imunidade tributária às entidades beneficentes de assistência social.
+                </div>
+            </div>
+
+            <div class="card-conteudo p-t-0">                  
+                <div class="card-subtitulos">
+                    <h4 class="card-sub-titulo m-0">RE 573872</h4>
+                    <small>TEMA 45 - 26/10/2016</small> 
+                </div>
+              <div class="card-topico-conteudo">
+                  Possibilidade de execução provisória de obrigação de fazer contra a Fazenda Pública.
               </div>
             </div>
-          </div>
+
+            <div class="row m-16 p-0 p-b-16">
+                <a href="#" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper btn-card-lateral col-xs-12">
+                  Todos com suspensão nacional
+                </a>
+            </div>
+        </div>
             
         <div id="entrar-forum-repercussao" class="card m-b-24 __fundo-escuro">
             <div class="card-conteudo p-b-0">
@@ -690,8 +740,8 @@
                 <div class="card-caixa-texto m-b-16">
                   <h4 class="m-0 m-t-8 m-b-16">Mais informações</h4>
                   <ul>
-                    <li><a id="repgeral-conheca" href="#">Boletim anual</a></li>
-                    <li><a id="repgeral-conheca" href="#">Impacto dos julgamentos</a></li>
+                    <li><a id="repgeral-boletim" href="#">Boletim anual</a></li>
+                    <li><a id="repgeral-impact" href="#">Impacto dos julgamentos</a></li>
                   </ul>
                 </div>
             </div>
@@ -856,5 +906,5 @@
       </div>
     </footer>
   </div>
-<script type="text/javascript" src="/scripts/manifest.7911302a4d77dac6e377.js"></script><script type="text/javascript" src="/scripts/vendor.9301595e83a44a08d2c2.js"></script><script type="text/javascript" src="/scripts/bundle.2933d8d18356a2fece3b.js"></script><script type="text/javascript" src="/scripts/repgeral.d0e3e905803d2b31b192.js"></script></body>
+<script type="text/javascript" src="/scripts/manifest.778e86213e9060081863.js"></script><script type="text/javascript" src="/scripts/vendor.db85e37eaf044a68665f.js"></script><script type="text/javascript" src="/scripts/bundle.ababdae95bc839b9e9ff.js"></script><script type="text/javascript" src="/scripts/repgeral.cc3eaa7bcf205a7cc777.js"></script></body>
 </html>
