@@ -8,133 +8,9 @@
 </head>
 <body class="pagina-interna">
   <div id="main" class="container-fluid p-0">
-    <section class="menu-acessibilidade row p-0 m-0">
-      <div class="container p-xs-0">
-        <div class="hidden-xs col-sm-3 col-lg-6 p-0">
-          <div class="acessibilidade">
-            <div class="m-l-0">Acessibilidade</div>
-            <div>
-              <a href="#"><i class="glyphicon glyphicon-adjust"></i></a>
-            </div>
-            <div class="hidden-sm hidden-md">Ir para:</div>
-            <ul class="atalhos hidden-sm hidden-md">
-              <li><a accesskey="1" href="#conteudo"><span>1</span> conteúdo</a></li>
-              <li><a accesskey="2" href="#menu-principal"><span>2</span> menu</a></li>
-              <li><a accesskey="3" href="#pesquisa"><span>3</span> busca</a></li>
-              <li><a accesskey="4" href="#rodape"><span>4</span> rodapé</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-9 col-lg-6 p-0">
-          <div class="col-xs-8 col-sm-9">
-            <div class="col-xs-4 col-md-6">
-              <div class="dropdown menu-internacionalizacao dropdown-toggle">
-                <button class="btn btn-default " type="button" id="internacionalizacao" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                  <span class="hidden-xs hidden-sm">International Relations</span>
-                  <img src="<%= require('../../assets/img/internacional/usa-flag.png') %>"
-                  srcset="<%= require('../../assets/img/internacional/usa-flag.png') %> 2x" alt="ao vivo">
-                  <i class="caret"></i>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="internacionalizacao">
-                  <li>
-                    <a href="//www2.stf.jus.br/portalStfInternacional/cms/verPrincipal.php?idioma=en_us" target="_blank">
-                    <img src="<%= require('../../assets/img/internacional/usa-flag.png') %>"
-                         srcset="<%= require('../../assets/img/internacional/usa-flag.png') %> 2x" alt="English"> English</a>
-                  </li>
-                  <li>
-                    <a href="//www2.stf.jus.br/portalStfInternacional/cms/verPrincipal.php?idioma=es_es" target="_blank">
-                    <img src="<%= require('../../assets/img/internacional/spain-flag.png') %>"
-                         srcset="<%= require('../../assets/img/internacional/spain-flag.png') %> 2x" alt="Español"> Español</a>
-                  </li>
-                  <li>
-                    <a href="//www2.stf.jus.br/portalStfInternacional/cms/verPrincipal.php?idioma=pt_br" target="_blank">
-                    <img src="<%= require('../../assets/img/internacional/brazil-flag.png') %>"
-                         srcset="<%= require('../../assets/img/internacional/brazil-flag.png') %> 2x" alt="Português"> Portuguese</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-xs-8 col-sm-4 col-md-3 link-borda-direita">
-              <a href="//servidor.stf.jus.br" target="_blank" class="btn btn-default">Servidores</a>
-            </div>
-            <div class="hidden-xs col-sm-4 col-md-3 link-borda-direita">
-              <a href="//www.stf.jus.br/portal/centralDoCidadao/enviarDadoPessoal.asp" target="_blank" class="btn btn-default">Fale conosco</a>
-            </div>
-          </div>
-          <div class="col-xs-4 col-sm-3 telefone-stf link-borda-direita"><i class="glyphicon glyphicon-earphone"></i> <a href="tel:+556132173000">(61) 3217-3000</a></div>
-        </div>
-      </div>
-    </section>
+    <%- include src/includes/header.html %>
 
-    <header id="header" class="header navbar navbar-default">
-      <div class="container center-block row p-0 m-t-8 m-b-8"  >
-        <div class="navbar-header col-xs-12 row m-0">
-          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#menu-principal" aria-expanded="false">
-            <span class="sr-only">Abrir menu principal</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <h1 class="hidden">Supremo Tribunal Federal</h1>
-          <a href="/" class="navbar-brand m-0">
-            <img src="<%= require('../../assets/img/institucional/logo-STF.png') %>"
-                 srcset="<%= require('../../assets/img/institucional/logo-STF@2x.png') %> 2x" 
-                 width="170" height="auto" 
-                 alt="Supremo Tribunal Federal">
-          </a>
-          <div id="menu-principal" class="collapse navbar-collapse col-xs-12 navbar-right m-0 p-0">
-            <div class="row col-xs-12 m-0 p-0">
-              <ul class="nav navbar-nav m-0 p-0">
-                <li class="dropdown-toggle">
-                  <a href="#" id="oStf" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">O STF</a>
-                    <ul class="dropdown-menu" aria-labelledby="oStf">
-                      <li><a href="#">País</a></li>
-                      <li><a href="#">País</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown-toggle">
-                  <a href="#" id="oStf" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Processos</a>
-                    <ul class="dropdown-menu" aria-labelledby="processos">
-                      <li><a href="#">País</a></li>
-                      <li><a href="#">País</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown-toggle">
-                  <a href="#"   id="oStf" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Jurisprudência</a>
-                    <ul class="dropdown-menu" aria-labelledby="jurisprudencia">
-                      <li><a href="#">País</a></li>
-                      <li><a href="#">País</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown-toggle">
-                  <a href="#" id="oStf" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Repercussão Geral</a>
-                    <ul class="dropdown-menu" aria-labelledby="repercussaogeral">
-                      <li><a href="#">País</a></li>
-                      <li><a href="#">País</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown-toggle">
-                  <a href="#" id="oStf" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Leis e Publicações</a>
-                    <ul class="dropdown-menu" aria-labelledby="leispublicacoes">
-                      <li><a href="#">País</a></li>
-                      <li><a href="#">País</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown-toggle">
-                  <a href="#" id="oStf" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Transparência</a>
-                    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="transparencia">
-                      <li><a href="#">País</a></li>
-                      <li><a href="#">País</a></li>
-                    </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <section id="pesquisa" class="pesquisa row m-0 p-l-0 p-r-0">
+    <section id="pesquisa" class="pesquisa row m-0 m-t-96 p-l-0 p-r-0">
       <div class="container center-block">
         <div class="pesquisa-conteudo clearfix">
           <div class="pesquisa-titulo m-t-16 m-b-16">
@@ -149,7 +25,7 @@
             <button class="btn btn-default btn-icone visible-xs pull-right __fundo-transparente">
               <i class="glyphicon glyphicon-user" aria-label="painel do peticionador"></i>
             </button>
-            <h3 class="m-0">Notícias</h3> 
+            <h3 class="m-0">O STF</h3> 
           </div> 
           <div class="pesquisa-campos">
             <div class="hidden-md hidden-lg campo-container">
@@ -185,115 +61,14 @@
         <!--Menu Lateral-->
         <div class="col-xs-12 col-sm-3 col-lg-2 p-16 p-xs-0 m-0">
           <div class="menu-lateral hidden-xs">
-            <h4><span class="__stf-verde">Imprensa</span></h4>
+            <h4><span class="__stf-verde">O STF</span></h4>
             <ul>
-              <li><a href="#"><span class="opcao-selecionada">Notícias</span></a></li>
-              <li><a href="#">Coberturas especiais</a></li>
-              <li><a href="#">TV Justiça</a></li>
-              <li><a href="#">Rádio Justiça</a></li>
-              <li><a href="#">Banco de Imagens</a></li>
-              <li><a href="#">Agenda dos Ministros</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-9 col-lg-10 row m-0 p-xs-0 p-sm-8 ">
-
-          <div id="noticias" class="noticias __borda-l-cinza-claro p-l-40 p-r-40 p-l-xs-0 p-r-xs-0 ">    
-            <div class="noticia m-0 row">
-              <div class="col-xs-12 col-md-12 p-0">
-                <h3 class="noticia-titulo p-l-16 p-r-16">Plenário do STF elege ministro substituto do TSE e vota lista tríplice</h3>
-                <p class="noticia-resumo p-l-16 p-r-16">A lista é composta pelos advogados: Tarcísio Vieira de Carvalho Neto, Sérgio Silveira Banhos e Carlos Bastide Horbach.</p>
-                <div class="noticia-compartilhar hidde-xs hidden-sm p-l-16 m-t-16">
-                  <div class="facebook">
-                    <a href="#" class="text-hide"></a>
-                  </div>
-                  <div class="twitter">
-                    <a href="#" class="text-hide"></a>
-                  </div>
-                </div>
-                <div class="noticia-autor p-l-16 p-r-16">Por Fulano de Tal</div>
-                <div class="noticia-data-xs visible-xs visible-sm p-l-16 p-r-16 m-b-8">Há 3 minutos</div>
-                <div class="noticia-imagem-xs">
-                  <img src="//fakeimg.pl/330x190/" alt="">
-                </div>
-                <div class="noticia-conteudo p-l-16 p-r-16 m-t-16">
-                  <p>O Supremo Tribunal Federal (STF), em votação no Plenário Virtual, reafirmou jurisprudência dominante no sentido de que a atribuição do Ministério Público Federal não exclui a legitimidade dos Ministérios Públicos dos estados e do Distrito Federal para postular em causas que, sendo de sua atribuição na origem, foram encaminhadas ao Supremo e ao Superior Tribunal de Justiça (STJ). A matéria, discutida no Recurso Extraordinário (RE) 985392, teve repercussão geral reconhecida.</p>
-                  <p>No caso concreto, o STJ negou a legitimidade do Ministério Público do Estado do Rio Grande do Sul (MPE-RS) para oferecer razões em habeas corpus contra ato do Tribunal de Justiça gaúcho (TJ-RS). Em seguida, negou a legitimidade do MPE-RS para interpor embargos de declaração. Com isso, as razões do Ministério Público estadual não foram ouvidas.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div id="mais-noticias" class="mais-noticias card card-sem-sombra p-t-48 p-l-40 p-l-xs-0 __borda-l-cinza-claro">
-            <div class="__borda-b-cinza">
-              <div class="card-titulo">Mais notícias</div>
-              <div class="card-conteudo m-0 m-t-16 m-b-16 p-0">
-                <div class="card-lt-md card-xs noticia m-0 m-b-24 hidden-xs hidden-sm row">
-                  <div class="noticia-imagem col-md-6 col-lg-5 p-0">
-                    <img src="//fakeimg.pl/330x190/" alt="">
-                  </div>
-                  <div class="noticia-chamada col-md-6 col-lg-7 p-0">
-                    <div class="noticia-categoria p-l-16 p-r-16">Plenário do STF <span class="noticia-data">·</span><span class="noticia-data">Há 3 minutos</span></div>
-                    <h3 class="noticia-titulo p-l-16 p-r-16 m-t-8 m-t-8"><a href="//stf.jus.br/portal/cms/verNoticiaDetalhe.asp?idConteudo=345036">Plenário do STF elege ministro substituto do TSE e vota lista tríplice</a></h3>
-                    <p class="noticia-resumo p-l-16 p-r-16">A lista é composta pelos advogados: Tarcísio Vieira de Carvalho Neto, Sérgio Silveira Banhos e Carlos Bastide Horbach.</p>
-                    <div class="noticia-compartilhar p-l-16 m-t-32">
-                      <div class="facebook">
-                        <a href="#" class="text-hide"></a>
-                      </div>
-                      <div class="twitter">
-                        <a href="#" class="text-hide"></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card m-16 visible-xs visible-sm row">
-                  <div class="card-conteudo col-xs-12 col-md-6 p-0">
-                    <div class="noticia-categoria p-l-16 p-r-16">Plenário do STF </div>
-                    <h3 class="noticia-titulo p-l-16 p-r-16 m-t-8 m-t-8"><a href="//stf.jus.br/portal/cms/verNoticiaDetalhe.asp?idConteudo=345036">Plenário do STF elege ministro substituto do TSE e vota lista tríplice</a></h3>
-                    <p class="noticia-resumo p-l-16 p-r-16">A lista é composta pelos advogados: Tarcísio Vieira de Carvalho Neto, Sérgio Silveira Banhos e Carlos Bastide Horbach.</p>
-                    <div class="mais-noticias-imagem-xs">
-                      <img src="//fakeimg.pl/330x190/" alt="">
-                    </div>
-                    <div class="noticia-data-xs p-l-16 p-r-16 m-t-8 m-b-8">Há 3 minutos</div>
-                  </div>
-                </div>
-                <div class="card m-16 visible-xs row">
-                  <div class="card-conteudo col-xs-12 col-md-6 p-0">
-                    <div class="noticia-categoria p-l-16 p-r-16">Plenário do STF </div>
-                    <h3 class="noticia-titulo p-l-16 p-r-16 m-t-8 m-t-8"><a href="//stf.jus.br/portal/cms/verNoticiaDetalhe.asp?idConteudo=345036">Plenário do STF elege ministro substituto do TSE e vota lista tríplice</a></h3>
-                    <p class="noticia-resumo p-l-16 p-r-16">A lista é composta pelos advogados: Tarcísio Vieira de Carvalho Neto, Sérgio Silveira Banhos e Carlos Bastide Horbach.</p>
-                    <div class="mais-noticias-imagem-xs">
-                      <img src="//fakeimg.pl/330x190/" alt="">
-                    </div>
-                    <div class="noticia-data-xs p-l-16 p-r-16 m-t-8 m-b-8">Há 3 minutos</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-          </div>
-
-          <div class="hidden-sm hidden-xs m-b-48 p-t-48 p-l-40 __borda-l-cinza-claro">
-            <h4 class="pull-left">Essa informação foi útil?</h4>
-            <button class="btn btn-default-bordered btn-raised m-l-8" type="button" href="#">Sim</button>
-            <button class="btn btn-default-bordered btn-raised m-l-8" type="button" href="#">Não</button>
-            <button class="btn btn-default-bordered btn-raised m-l-8" type="button" href="#">Sugerir correção</button>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <section id="mapa-do-site">
-      <div class="row container center-block">
-        <div class="col-xs-6 col-sm-4 col-md-20p p-0">
-          <div class="lista-links">
-            <h4>O STF</h4>
-            <ul>
-              <li><a href="#">Conheça o STF</a></li>
+              <li><a href="#"><span class="opcao-selecionada">Conheça o STF</span></a>
+                <ul>
+                  <li><a href="#"><span class="opcao-selecionada">Institucional</span></a></li>
+                  <li><a href="#">Visitação ao STF</a></li>
+                </ul>
+              </li>
               <li><a href="#">Ministros</a></li>
               <li><a href="#">Histórico</a></li>
               <li><a href="#">Quem é quem</a></li>
@@ -301,147 +76,78 @@
               <li><a href="#">Gestão</a></li>
             </ul>
           </div>
+        </div>
 
-          <div class="lista-links">
-            <h4>Serviços</h4>
-            <ul>
-              <li><a href="#">Pedidos de certidão</a></li>
-              <li><a href="#">Visitação pública</a></li>
-              <li><a href="#">Biblioteca</a></li>
-              <li><a href="#">Plantão judicial</a></li>
-              <li><a href="#">Audiências públicas</a></li>
-            </ul>
+        <div id="texto-pagina-interna-wrapper" class="col-xs-12 col-sm-9 col-lg-10 row m-0 p-xs-0 m-t-24 m-b-24 p-sm-8 __borda-l-cinza-claro">
+          <div id="texto-pagina-interna" class="p-l-40 p-r-40 m-b-40 p-l-xs-0 p-r-xs-0">
+            <div class="texto m-0 row">
+              <div class="col-xs-12 col-md-12 p-0 p-l-xs-16 p-r-xs-16">
+                <div class="card-secao breadcrum hidden-xs col-xs-12 p-l-8 m-b-24">
+                  <span><a href="#">O STF</a></span>
+                  <span><a href="#">Conheça o STF</a></span>
+                  <span>Institucional</span>
+                </div>
+                <h3 class="texto-titulo m-b-24">Institucional</h3>
+                <div class="texto-gestor"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Gestor: ASSESSORIA DE GESTÃO ESTRATÉGICA</div>
+                <div class="texto-data m-b-24"><span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>Última atualização: Sexta-feira, 24 de fevereiro de 2017</div>
+                <hr class="visible-xs" />
+                <div class="card-compartilhar hidden-xs p-8 m-b-16 p-r-16">
+                  <div class="impressao">
+                    <button id="texto-interno-imprimir-superior" type="button" class="btn btn-default" aria-label="Imprimir">
+                      <span class="glyphicon glyphicon-print" aria-hidden="true"></span>
+                    </button>
+                  </div>
+                  <div class="visualizacoes pull-right">
+                    12.234 pessoas já viram isso
+                  </div>
+                </div>
+                
+                <div class="texto-imagem-xs text-center">
+                  <img src="//fakeimg.pl/330x190/" alt="">
+                </div>
+                <div class="texto-conteudo p-l-8 p-r-8 m-t-16">
+                  <p>O Supremo Tribunal Federal é o órgão de cúpula do Poder Judiciário, e a ele compete, precipuamente, a guarda da Constituição, conforme definido no art. 102 da Constituição da República.</p>
+                  <p>É composto por onze Ministros, todos brasileiros natos (art. 12, § 3º, inc. IV, da CF/1988), escolhidos dentre cidadãos com mais de 35 e menos de 65 anos de idade, de notável saber jurídico e reputação ilibada (art. 101 da CF/1988), e nomeados pelo Presidente da República, após aprovação da escolha pela maioria absoluta do Senado Federal (art. 101, parágrafo único, da CF/1988).</p>
+                  <p>Entre suas principais atribuições está a de julgar a ação direta de inconstitucionalidade de lei ou ato normativo federal ou estadual, a ação declaratória de constitucionalidade de lei ou ato normativo federal, a arguição de descumprimento de preceito fundamental decorrente da própria Constituição e a extradição solicitada por Estado estrangeiro.</p>
+                  <p>Na área penal, destaca-se a competência para julgar, nas infrações penais comuns, o Presidente da República, o Vice-Presidente, os membros do Congresso Nacional, seus próprios Ministros e o Procurador-Geral da República, entre outros (art. 102, inc. I, a e b, da CF/1988).</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hidden-xs hidden-sm p-l-40 p-r-40">
+            <h4 class="pull-left">Essa informação foi útil?</h4>
+            <button id="texto-informacao-util-sim" class="btn btn-default-bordered btn-raised m-l-8" type="button" href="#">Sim</button>
+            <button id="texto-informacao-util-nao" class="btn btn-default-bordered btn-raised m-l-8" type="button" href="#">Não</button>
+            <button id="sugerir-correcao-texto" class="btn btn-default-bordered btn-raised m-l-8" type="button" href="#">Sugerir correção</button>
+            <div id="form-sugerir-correcao-texto" class="form form-correcao m-t-24" style="display: none;">
+              <div class="form-group">
+                <textarea id="correcao-texto" class="form-control" rows="10"></textarea>
+              </div>
+              <button id="enviar-correcao-texto" class="btn btn-default-bordered btn-raised m-l-8" type="button" href="#">Enviar sugestão</button>
+            </div>
+          </div>
+          <div class="hidden-xs hidden-sm p-l-40 p-r-40 m-t-40">
+            <div class="card-compartilhar p-8 p-r-16">
+              <div class="impressao">
+                <button id="texto-interno-imprimir-inferior" type="button" class="btn btn-default" aria-label="Imprimir">
+                  <span class="glyphicon glyphicon-print" aria-hidden="true"></span>
+                </button>
+              </div>
+              <div class="visualizacoes pull-right">
+                12.234 pessoas já viram isso
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4 col-md-20p p-0">
-          <div class="lista-links">
-            <h4>Processos</h4>
-            <ul>
-              <li><a href="#">Pesquisa</a></li>
-              <li><a href="#">Peticionamento</a></li>
-              <li><a href="#">Editais</a></li>
-              <li><a href="#">ADI, ADC, ADPF e ADO</a></li>
-              <li><a href="#">Pedidos de vista</a></li>
-              <li><a href="#">Estatísticas processuais</a></li>
-            </ul>
-          </div>
-          <div class="lista-links">
-            <h4>Jurisprudência</h4>
-            <ul>
-              <li><a href="#">Pesquisa</a></li>
-              <li><a href="#">Inteiro teor de acórdãos</a></li>
-              <li><a href="#">Súmulas vinculantes</a></li>
-              <li><a href="#">Súmulas</a></li>
-              <li><a href="#">Teses jurídicas</a></li>
-              <li><a href="#">Informativos</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-4 col-md-20p p-0">
-          <div class="lista-links">
-            <h4>Repercussão Geral</h4>
-            <ul>
-              <li><a href="#">Pesquisa</a></li>
-              <li><a href="#">Temas</a></li>
-              <li><a href="#">Estatísticas</a></li>
-              <li><a href="#">Fórum</a></li>
-            </ul>
-          </div>
-          <div class="lista-links">
-            <h4>Leis e publicações</h4>
-            <ul>
-              <li><a href="#">Legislação</a></li>
-              <li><a href="#">Legislação anotada</a></li>
-              <li><a href="#">Livraria</a></li>
-              <li><a href="#">DJ/DJe</a></li>
-              <li><a href="#">RTJ eletrônica</a></li>
-              <li><a href="#">Boletim Repercussão Geral</a></li>
-              <li><a href="#">Publicações temáticas</a></li>
-              <li><a href="#">Publicações institucionais</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-4 col-md-20p p-0">
-          <div class="lista-links">
-            <h4>Agenda</h4>
-            <ul>
-              <li><a href="#">Pautas de plenário</a></li>
-              <li><a href="#">Pautas das turmas</a></li>
-              <li><a href="#">Agenda do Presidente</a></li>
-              <li><a href="#">Agenda dos Ministros</a></li>
-            </ul>
-          </div>
-          <div class="lista-links">
-            <h4>Transparência</h4>
-            <ul>
-              <li><a href="#">Ações e programas</a></li>
-              <li><a href="#">Gestão orçamentária</a></li>
-              <li><a href="#">Licitações e contratos</a></li>
-              <li><a href="#">Auditoria</a></li>
-              <li><a href="#">Gestão de pessoas</a></li>
-              <li><a href="#">Gestão estratégica</a></li>
-              <li><a href="#">Remuneração</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-4 col-md-20p p-0">
-          <div class="lista-links">
-            <h4>Sob medida</h4>
-            <ul>
-              <li><a href="#">Advogado</a></li>
-              <li><a href="#">Estudante</a></li>
-              <li><a href="#">Órgãos parceiros</a></li>
-              <li><a href="#">Cidadão</a></li>
-              <li><a href="#">Imprensa</a></li>
-            </ul>
-          </div>
-          <div class="lista-links">
-            <h4>Fale conosco</h4>
-            <ul>
-              <li><a href="#">Contato</a></li>
-              <li><a href="#">Ouvidoria</a></li>
-            </ul>
-          </div>
-        </div>
+
       </div>
+
     </section>
 
-    <footer id="rodape" class="p-16">
-      <div class="row container center-block">
-        <div class="logo-STF col-xs-12 col-md-3 col-lg-2 text-center-lt-md m-b-16">
-          <a href="#">
-            <img src="<%= require('../../assets/img/institucional/logo-STF.png') %>"
-                 srcset="<%= require('../../assets/img/institucional/logo-STF@2x.png') %> 2x" alt="Supremo Tribunal Federal">
-          </a>
-        </div>
-        <div class="social-links col-xs-12 col-md-3 col-lg-2 text-center-lt-md m-b-16">
-          <div class="midias-sociais">
-            <div class="facebook">
-              <a href="#" class="text-hide">Facebook</a>
-            </div>
-            <div class="twitter">
-              <a href="#" class="text-hide">Twitter</a>
-            </div>
-            <div class="youtube">
-              <a href="#" class="text-hide">YouTube</a>
-            </div>
-          </div>
-          <div class="midias-internas m-t-8">
-            <div>
-              <a href="#" target="_blank">TV Justiça</a>
-            </div>
-            <div>
-              <a href="#" target="_blank">Rádio Justiça</a>
-            </div>
-          </div>
-        </div>
-        <div class="contatos col-xs-12 col-md-6  col-lg-8 text-center-lt-md">
-          <p><i class="glyphicon glyphicon-map-marker"></i> Praça dos Três Poderes, Brasília - DF - CEP 70175-900 <a href="#" target="_blank">Veja a localização no Google Maps</a></small></p>
-          <p><i class="glyphicon glyphicon-earphone"></i> Telefone: +55 61 3217-3000 <a href="#">Outros telefones úteis</a></small></p>
-          <p><i class="glyphicon glyphicon-time"></i> Horário de funcionamento: 12:00 às 19:00</p>
-        </div>
-      </div>
-    </footer>
+    <%- include src/includes/mapa-do-site.html %>
+
+    <%- include src/includes/footer.html %>
   </div>
 </body>
 </html>

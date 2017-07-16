@@ -174,3 +174,20 @@ $('#noticia-interno-imprimir-inferior').on('click', function() {
 $('#noticia-interno-imprimir-superior').on('click', function() {
 	ga('send', 'event', 'Notícia', 'Impressão', 'Imprimir');
 });
+
+//Textos
+$('#texto-informacao-util-sim').on('click', function(){
+	ga('send', 'event', 'Texto', 'Classificação de utilidade', 'Sim');
+});
+
+$('#texto-informacao-util-nao').on('click', function(){
+	ga('send', 'event', 'Texto', 'Classificação de utilidade', 'Não');
+});
+
+$('#texto-interno-imprimir-inferior').on('click', function() {
+	ga('send', 'event', 'Texto', 'Impressão', 'Imprimir');
+});
+
+$('#texto-interno-imprimir-superior').on('click', function() {
+	ga('send', 'event', 'Texto', 'Impressão', 'Imprimir');
+});

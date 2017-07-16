@@ -42,6 +42,10 @@ const common = {
     jurisprudencia: [
       path.join(PATHS.src, '/jurisprudencia/index.js'),
       path.join(PATHS.scss, '/secoes/jurisprudencia/jurisprudencia.scss')
+    ],
+    textos: [
+      path.join(PATHS.src, '/textos/index.js'),
+      path.join(PATHS.scss, '/secoes/textos/textos.scss')
     ]
   },
 
@@ -70,7 +74,7 @@ const common = {
         use: customCss.extract({
           use: 'css-loader!sass-loader?sourceMaps'
         }),
-        exclude: /node_modules|noticias|repercussaogeral|transparencia|jurisprudencia/
+        exclude: /node_modules|noticias|repercussaogeral|transparencia|jurisprudencia|textos/
       },
       {
         test: /\.scss$/,
@@ -91,6 +95,11 @@ const common = {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
         include: path.join(PATHS.scss, '/secoes/jurisprudencia')
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader?url=false', 'sass-loader'],
+        include: path.join(PATHS.scss, '/secoes/textos')
       },
       {
         test: /\.(jpg|jpeg|gif|png|svg|ico)$/i,
@@ -131,7 +140,7 @@ const common = {
     new HtmlPlugin({
       filename: 'textos/index.html',
       template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/textos/index.html')}`,
-      chunks: ['noticias', 'bundle', 'vendor', 'manifest']
+      chunks: ['textos', 'bundle', 'vendor', 'manifest']
     }),
     new HtmlPlugin({
       filename: 'repercussaogeral/index.html',

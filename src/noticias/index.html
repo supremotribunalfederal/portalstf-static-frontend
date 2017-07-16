@@ -73,8 +73,8 @@
           </div>
         </div>
 
-        <div id="noticias-pagina-interna-wrapper" class="col-xs-12 col-sm-9 col-lg-10 row m-0 p-xs-0 m-t-24 p-b-24 p-sm-8 __borda-l-cinza-claro">
-          <div id="noticias-pagina-interna" class="noticias p-l-40 p-r-40 p-l-xs-0 p-r-xs-0 ">
+        <div id="noticias-pagina-interna-wrapper" class="col-xs-12 col-sm-9 col-lg-10 row m-0 p-xs-0 m-t-24 m-b-24 p-sm-8 __borda-l-cinza-claro">
+          <div id="noticias-pagina-interna" class="noticias p-l-40 p-r-40 p-l-xs-0 p-r-xs-0">
             <div class="noticia m-0 row">
               <div class="col-xs-12 col-md-12 p-0 p-l-xs-16 p-r-xs-16">
                 <div class="card-secao hidden-xs col-xs-12 p-l-8 m-b-24"><a href="#">Notícias</a></div>
@@ -83,7 +83,7 @@
                 <div class="noticia-autor">Por Leandro Rezende</div>
                 <div class="noticia-data m-b-24">30/05/2017 11h50 - Atualizado há 30 dias</div>
                 <hr class="visible-xs" />
-                <div class="noticia-compartilhar-interno hidden-xs p-8 m-b-16 p-r-16">
+                <div class="card-compartilhar hidden-xs p-8 m-b-16 p-r-16">
                   <div class="impressao">
                     <button id="noticia-interno-imprimir-superior" type="button" class="btn btn-default" aria-label="Imprimir">
                       <span class="glyphicon glyphicon-print" aria-hidden="true"></span>
@@ -163,10 +163,16 @@
             <h4 class="pull-left">Essa informação foi útil?</h4>
             <button id="noticia-informacao-util-sim" class="btn btn-default-bordered btn-raised m-l-8" type="button" href="#">Sim</button>
             <button id="noticia-informacao-util-nao" class="btn btn-default-bordered btn-raised m-l-8" type="button" href="#">Não</button>
-            <button class="btn btn-default-bordered btn-raised m-l-8" type="button" href="#">Sugerir correção</button>
+            <button id="sugerir-correcao-noticia" class="btn btn-default-bordered btn-raised m-l-8" type="button" href="#">Sugerir correção</button>
+            <div id="form-sugerir-correcao-noticia" class="form form-correcao m-t-24" style="display: none;">
+              <div class="form-group">
+                <textarea id="correcao-noticia" class="form-control" rows="10"></textarea>
+              </div>
+              <button id="enviar-correcao-noticia" class="btn btn-default-bordered btn-raised m-l-8" type="button" href="#">Enviar sugestão</button>
+            </div>
           </div>
           <div class="hidden-xs hidden-sm p-l-40 p-r-40 m-t-40">
-            <div class="noticia-compartilhar-interno p-8 p-r-16">
+            <div class="card-compartilhar p-8 p-r-16">
               <div class="impressao">
                 <button id="noticia-interno-imprimir-inferior" type="button" class="btn btn-default" aria-label="Imprimir">
                   <span class="glyphicon glyphicon-print" aria-hidden="true"></span>
