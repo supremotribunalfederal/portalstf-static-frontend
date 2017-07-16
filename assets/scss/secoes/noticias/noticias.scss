@@ -7,12 +7,6 @@
   .pesquisa-campos {
     display: none;
   }
-
-  .card-secao {
-    background-color: #ECF4F9;
-    padding-top: 4px;
-    padding-bottom: 4px;
-  }
 }
 
 .pagina-interna {
@@ -74,33 +68,6 @@
 
     &.twitter {
       @include set-bg-img-1x-2x("../img/social/post-twitter.png", "../img/social/post-twitter@2x.png");
-    }
-  }
-}
-
-.noticia-compartilhar-interno {
-  background-color: #f3f3f3;
-
-  > div {
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  .visualizacoes {
-    color: #a8aaaf;
-    font-size: 0.9rem;
-  }
-
-  .impressao {
-    .btn {
-      border-radius: 4px;
-      height: 30px;
-      line-height: 30px;
-      padding: 0 15px;
-
-      .glyphicon {
-        color: #989ba1;
-      }
     }
   }
 }
