@@ -151,157 +151,93 @@
   </div>
 </div>
 
-        <section id="pesquisa" class="pesquisa row m-0 m-t-96 m-b-16 p-l-0 p-r-0">
-      <div class="container center-block">
-        <div class="pesquisa-conteudo clearfix">
-          <div class="pesquisa-titulo m-t-64 m-b-16">
-            <button class="btn btn-default btn-icone pesquisa-btn-interna pull-right __fundo-transparente">
-              <i class="glyphicon glyphicon-search" aria-label="abrir pesquisa"></i>
-            </button>
-            <h3 class="m-0">Pesquisa da Transparência</h3> 
-          </div>
-        <div class="pesquisa-campos">
-            <div class="hidden-md hidden-lg campo-container">
-              <select class="pesquisa-select full-width">
-                <option value="">Selecione outra pesquisa</option>
-              </select>
-            </div>
-            <div class="form-inline">
-              <div class="campo-container">
-                <input class="campo-texto campo-texto-repgeral" type="text" name="pesquisaPrincipal" id="pesquisaPrincipal" placeholder="Pesquise compras, licitações, objetos contratados, fornecedores...">
-                <button class="btn btn-default pull-right">
-                  <i class="glyphicon glyphicon-search hidden-md hidden-lg"></i>
-                  <span class="hidden-xs hidden-sm" id="btnPesquisar">Pesquisar</span>
-                </button>
-              </div>
-            </div>
-          </div>
+    <section id="pesquisa" class="pesquisa row m-0 m-t-96 m-b-32 p-l-0 p-r-0">
+    <div class="container center-block">
+        <div class="hidden-xs pull-right m-t-16">
+            <p class="__stf-branco">
+                <span class="m-r-16 label-peticione">Peticione e acompanhe processos:</span> <a href="//sistemas.stf.jus.br/peticionamento/" target="_blank" class="btn ">Painel do Peticionador</a>
+            </p>
         </div>
-      </div>
-    </section>
+        <div class="pesquisa-conteudo clearfix">
+            <div class="pesquisa-titulo m-t-40 m-b-16">
+                <button class="btn btn-default btn-icone pesquisa-btn-interna pull-right __fundo-transparente">
+                    <i class="glyphicon glyphicon-search" aria-label="abrir pesquisa"></i>
+                </button>
+                <h3 class="m-0">Pesquisa de Jurisprudência</h3> 
+            </div>
+            <div class="pesquisa-campos">
+                <div class="form-inline">
+                    <div class="campo-container">
+                        <input type="hidden" value="4" id="abaSelecionada" />
+                        <input class="campo-texto campo-texto-jurisprudencia col-md-7" type="text" name="pesquisaPrincipal" id="pesquisaPrincipal" placeholder="Digite um termo para a pesquisa de jurisprudência...">
+                        <div class="hidden-sm hidden-xs botoes-pesquisa-jurisprudencia col-md-5">
+                            <span id="operador-e" data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador E" data-content="Procura todas as palavras desejadas em qualquer lugar do documento. Ex: ICMS e SUBSTITUIÇÃO." data-value="e" class="pull-left">e</span>
+                            <span id="operador-ou" data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador OU" data-content="Procura por qualquer uma das palavras. Pode utilizar o parênteses para combinar a pesquisa com outros operadores. Ex: aposentadoria e (deputado ou parlamentar ou congressista)." data-value="ou" class="pull-left">ou</span>
+                            <span id="operador-adj" data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador ADJ" data-content="Busca palavras aproximadas, na mesma ordem colocada na expressão de busca. Ex: MINISTÉRIO adj2 PÚBLICO e TEMPO adj2 SERVIÇO (O número após o 'adj' indica delimitação de distância entre palavras, podendo ser escolhido livremente)." data-value="adj" class="pull-left">adj</span>
+                            <span id="operador-nao" data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador NÃO" data-content="Recupera documentos que contenham a primeira, mas não a segunda palavra. Ex: Parlamentar não penal" data-value="não" class="pull-left">não</span>
+                            <span id="operador-prox" data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador PROX" data-content="Procura palavras aproximadas em qualquer ordem. Ex: extraordinário prox5 admissibilidade. (O número após o 'PROX' indica delimitação de distância entre palavras, podendo ser escolhido livremente)." data-value="prox" class="pull-left">prox</span>
+                            <span id="operador-mesmo" data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador MESMO" data-content="Operador utilizado para pesquisar no mesmo parágrafo; sua utilização principal é para pesquisa no campo legislação. Ex: aposentadoria mesmo parlamentar (Obs.: Consulte o Ajuda para pesquisa por legislaççao na base de Súmulas)." data-value="mesmo"class="pull-left">mesmo</span>
+                            <span id="operador-cifrao" data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador $" data-content="Este operador substitui qualquer parte da palavra desejada, ou seja, prefixo, radical ou sufixo. Ex: $constitucional$ / militar$ / octavio ga$otti" data-value="$" class="pull-left">$</span>
+                        </div>
+                        <button class="btn btn-default pull-right">
+                            <i class="glyphicon glyphicon-search hidden-md hidden-lg"></i>
+                            <span class="hidden-xs hidden-sm" id="btn-jurisprudencia-pesquisar">Pesquisar</span>
+                        </button>
+                        <div class="hidden-sm hidden-xs pesquisa-jurisprudencia-links-inferiores">
+                            <a id="tesauro" href="http://www.stf.jus.br/portal/jurisprudencia/pesquisarVocabularioJuridico.asp">Clique aqui para consultar o vocabulário jurídico (Tesauro)</a>
+                            <span>ou</span> 
+                            <a id="pesquisa-jurisprudencia-dicas" target="_blank" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaPesquisaGeral&pagina=ajudaPesquisaJurisprudencia&popup=S">Conheça dicas para melhorar seus resultados de pesquisa</a>
+                        </div>
+
+                        <div class="hidden-md hidden-lg hidden-xl pesquisa-jurisprudencia-links-inferiores">
+                            <a id="tesauro" href="http://www.stf.jus.br/portal/jurisprudencia/pesquisarVocabularioJuridico.asp">Vocabulário</a>
+                            <span>|</span> 
+                            <a id="pesquisa-jurisprudencia-dicas" target="_blank" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaPesquisaGeral&pagina=ajudaPesquisaJurisprudencia&popup=S">Dicas</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <section id="conteudo" class="container-fluid m-0 p-0" >
       <div class="row container center-block p-0">
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 row m-0 p-xs-0 p-sm-8 p-b-8 ">
-          <div id="estatisticas-transparencia" class="estatisticas-transparencia card m-b-24">
-            <div class="card-titulo card-titulo-verde">Estatísticas Processuais</div>
-            <div class="card-conteudo card-conteudo-verde">
-              <div class="numero-transparencia numero-transparencia-verde">
-                49.848
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row m-0 p-xs-0 p-sm-8 p-b-16 ">
+          <div id="banner-rep-geral" class="card mb-48">
+            <div class="card-titulo">Repercussão Geral</div>
+            <div class="card-conteudo row m-0 m-t-16 b-b-16 p-0">
+              <div class="col-md-6 col-lg-3">
+                <div class="m-b-16">
+                  <iframe width="100%" height="100%" src="//www.youtube.com/embed/qghxcZ2hh_A" frameborder="0" allowfullscreen></iframe>
+                </div>
               </div>
-              <div class="rotulo-transparencia m-b-16">
-                Decisões em 2017
-              </div> 
-              <div id="acessar-portal-noticias" class="row m-0 m-t-8 m-r-8 m-l-8 m-b-16">
-                <div class="col-md-2 p-0"></div>
-                  <div class="col-md-12 p-0">
-                    <button class="btn btn-default-bordered btn-raised btn-upper btn-fluid btn-transparencia">Ver mais estatísticas</button>
-                  </div>
-                <div class="col-md-2 p-0"></div>
-          </div> 
+              <div class="col-md-6 col-lg-3">
+                <div class="m-b-16">
+                  <iframe width="100%" src="//www.youtube.com/embed/qghxcZ2hh_A" frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <div class="card-caixa-texto m-b-16">
+                  <h4 class="m-0 m-t-8 m-b-16">Teses</h4>
+                  <ul>
+                    <li><a href="//www.stf.jus.br/portal/jurisprudenciaRepercussao/listarProcesso.asp?PesquisaEm=tema&situacaoRG=TODAS&situacaoAtual=S&txtTituloTema=&numeroTemaInicial=&numeroTemaFinal=&acao=pesquisarProcesso&classeProcesso=&numeroProcesso=&ministro=&ordenacao=asc&botao=">Temas de repercussão geral</a></li>
+                    <li><a href="//www.stf.jus.br/portal/jurisprudenciaRepercussao/listarRepercussaoGeral.asp">Temas de suspensão nacional</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <div class="card-caixa-texto m-b-16">
+                  <h4 class="m-0 m-t-8 m-b-16">Números</h4>
+                  <ul>
+                    <li><a href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaRepercussaoGeral&pagina=numeroRepercussao">Repercussão Geral</a></li>
+                    <li><a href="//www.stf.jus.br/portal/jurisprudenciaRepercussao/listarJulgado.asp">Últimos Julgados</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 row m-0 p-xs-0 p-sm-8 p-b-8 ">
-          <div id="pessoas-transparencia" class="pessoas-transparencia card m-b-24">
-            <div class="card-titulo">Pessoas</div>
-            <div class="card-conteudo">
-              <div class="numero-transparencia">
-                2.234
-              </div>
-              <div class="rotulo-transparencia m-b-16">
-                Servidores, Ministros e Juízes
-              </div> 
-              <div id="acessar-portal-noticias" class="row m-0 m-t-8 m-r-8 m-l-8 m-b-16">
-                <div class="col-md-2 p-0"></div>
-                  <div class="col-md-12 p-0">
-                    <button class="btn btn-default-bordered btn-raised btn-upper btn-fluid btn-transparencia">Consulte as remunerações</button>
-                  </div>
-                <div class="col-md-2 p-0"></div>
-          </div> 
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 row m-0 p-xs-0 p-sm-8 p-b-8 ">
-          <div id="licitacoes-transparencia" class="licitacoes-transparencia card m-b-24">
-            <div class="card-titulo">Licitações</div>
-            <div class="card-conteudo">
-              <div class="numero-transparencia">
-                87
-              </div>
-              <div class="rotulo-transparencia m-b-16">
-                Licitações em andamento
-              </div> 
-              <div id="acessar-portal-noticias" class="row m-0 m-t-8 m-r-8 m-l-8 m-b-16">
-                <div class="col-md-2 p-0"></div>
-                  <div class="col-md-12 p-0">
-                    <button class="btn btn-default-bordered btn-raised btn-upper btn-fluid btn-transparencia">Baixe editais e acompanhe</button>
-                  </div>
-                <div class="col-md-2 p-0"></div>
-          </div> 
-            </div>
-          </div>
-        </div>                
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 row m-0 p-xs-0 p-sm-8 p-b-8 ">
-          <div id="compras-transparencia" class="compras-transparencia card m-b-24">
-            <div class="card-titulo card-titulo-vermelho">Compras</div>
-            <div class="card-conteudo card-conteudo-vermelho">
-              <div class="numero-transparencia numero-transparencia-vermelho">
-                <span class="cifrao"> R$ </span> 322 milhões
-              </div>
-              <div class="rotulo-transparencia m-b-16">
-                Total de compras em 2017
-              </div> 
-              <div id="acessar-portal-noticias" class="row m-0 m-t-8 m-r-8 m-l-8 m-b-16">
-                <div class="col-md-2 p-0"></div>
-                  <div class="col-md-12 p-0">
-                    <button class="btn btn-default-bordered btn-raised btn-upper btn-fluid btn-transparencia">Pesquise as compras</button>
-                  </div>
-                <div class="col-md-2 p-0"></div>
-          </div> 
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 row m-0 p-xs-0 p-sm-8 p-b-8 ">
-          <div id="despesas-transparencia" class="despesas-transparencia card m-b-24">
-            <div class="card-titulo card-titulo-vermelho">Despesas</div>
-            <div class="card-conteudo card-conteudo-vermelho">
-              <div class="numero-transparencia numero-transparencia-vermelho">
-                <span class="cifrao"> R$ </span> 1,3 bilhões
-              </div>
-              <div class="rotulo-transparencia m-b-16">
-                Total de despesas em 2017
-              </div> 
-              <div id="acessar-portal-noticias" class="row m-0 m-t-8 m-r-8 m-l-8 m-b-16">
-                <div class="col-md-2 p-0"></div>
-                  <div class="col-md-12 p-0">
-                    <button class="btn btn-default-bordered btn-raised btn-upper btn-fluid btn-transparencia">Pesquise as despesas</button>
-                  </div>
-                <div class="col-md-2 p-0"></div>
-          </div> 
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 row m-0 p-xs-0 p-sm-8 p-b-8 ">
-          <div id="contratos-transparencia" class="contratos-transparencia card m-b-24">
-            <div class="card-titulo">Contratos</div>
-            <div class="card-conteudo">
-              <div class="numero-transparencia">
-                34
-              </div>
-              <div class="rotulo-transparencia m-b-16">
-                Contratos vigentes
-              </div> 
-              <div id="acessar-portal-noticias" class="row m-0 m-t-8 m-r-8 m-l-8 m-b-16">
-                <div class="col-md-2 p-0"></div>
-                  <div class="col-md-12 p-0">
-                    <button class="btn btn-default-bordered btn-raised btn-upper btn-fluid btn-transparencia">Veja os contratos</button>
-                  </div>
-                <div class="col-md-2 p-0"></div>
-          </div> 
-            </div>
-          </div>
-        </div>          
 
         <div class="col-xs-12 col-sm-6 col-md-7 col-lg-8 row m-0 p-xs-0 p-sm-8 ">
           <div id="noticias" class="noticias m-b-48">
@@ -962,5 +898,5 @@
   </div>
 </footer>
   </div>
-<script type="text/javascript" src="/scripts/manifest.js"></script><script type="text/javascript" src="/scripts/vendor.js"></script><script type="text/javascript" src="/scripts/bundle.js"></script><script type="text/javascript" src="/scripts/transparencia.js"></script></body>
+<script type="text/javascript" src="/scripts/manifest.js"></script><script type="text/javascript" src="/scripts/vendor.js"></script><script type="text/javascript" src="/scripts/bundle.js"></script><script type="text/javascript" src="/scripts/jurisprudencia.js"></script></body>
 </html>
