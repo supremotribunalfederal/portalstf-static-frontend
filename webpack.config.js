@@ -51,7 +51,7 @@ const common = {
 
   output: {
     path: process.env.GH_PAGES ? PATHS.ghPages : PATHS.dist,
-    filename: 'scripts/[name].[chunkhash].js',
+    filename: 'scripts/[name].js',
     publicPath
   },
 
