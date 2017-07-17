@@ -1,4 +1,5 @@
-/*@import "../../utils/cores";*/
+@import "../../variaveis/cores";
+@import "../transparencia/transparencia";
 
 .campo-texto-repgeral {
     width: 100% !important;
@@ -25,5 +26,14 @@ hr {
     border: 0;
     border-top: 2px solid rgba(0, 0, 0, 0.1);    
 }
-    
 
+.titulos-repgeral {
+    color: #006998;
+    font-size: 1.5rem;
+    margin: 16px 0;    
+}
+
+.card-conteudo-cinza {
+    background-color: $stfCinzaClaro;
+    height: 135px;
+}
