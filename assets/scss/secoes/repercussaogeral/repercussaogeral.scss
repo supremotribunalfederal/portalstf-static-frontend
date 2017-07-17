@@ -1,5 +1,4 @@
 @import "../../variaveis/cores";
-@import "../transparencia/transparencia";
 
 .campo-texto-repgeral {
     width: 100% !important;
@@ -30,10 +29,30 @@ hr {
 .titulos-repgeral {
     color: #006998;
     font-size: 1.5rem;
-    margin: 16px 0;    
+    margin: 16px 0; 
+    font-weight: bold;
 }
 
 .card-conteudo-cinza {
     background-color: $stfCinzaClaro;
     height: 135px;
+}
+
+.numero-repgeral {
+    color: $stfAzulEscuro;
+    font-size: 3rem;
+    font-weight: 100;
+    text-align: center;
+}
+
+.numero-repgeral-verde {
+    color: $stfVerdeEscuro;
+    font-size: 3rem;
+}
+
+.rotulo-repgeral {
+    font-size: 1rem;
+    margin: 0 8px;
+    font-weight: bold;
+    text-align: center;
 }
