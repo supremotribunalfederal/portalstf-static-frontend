@@ -116,33 +116,6 @@
   }
 }
 
-.pagina-interna {
-  #noticias {
-    .noticia {
-      border-bottom: 0;
-    }
-    .noticia-titulo {
-      font-weight: bold;
-      font-size: 1.5rem;
-    }
-
-    .noticia-autor {
-      font-weight: bold;
-      color: $stfCinza;
-    }
-
-    .noticia-data-xs {
-      font-size: 0.7rem;
-    }
-
-    .noticia-conteudo {
-      p {
-        font-size: 1.25rem;
-        line-height: 1.75;
-      }
-    }
-  }
-}
 .mais-noticias {
   .noticia-imagem {
     max-width: 330px;

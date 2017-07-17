@@ -31,15 +31,27 @@ const common = {
       path.join(PATHS.src, '/noticias/index.js'),
       path.join(PATHS.scss, '/secoes/noticias/noticias.scss')
     ],
-    repgeral: [
-      path.join(PATHS.src, '/repgeral/index.js'),
-      path.join(PATHS.scss, '/secoes/repgeral/repgeral.scss')
+    repercussaogeral: [
+      path.join(PATHS.src, '/repercussaogeral/index.js'),
+      path.join(PATHS.scss, '/secoes/repercussaogeral/repercussaogeral.scss')
+    ],
+    transparencia: [
+      path.join(PATHS.src, '/transparencia/index.js'),
+      path.join(PATHS.scss, '/secoes/transparencia/transparencia.scss')
+    ],
+    jurisprudencia: [
+      path.join(PATHS.src, '/jurisprudencia/index.js'),
+      path.join(PATHS.scss, '/secoes/jurisprudencia/jurisprudencia.scss')
+    ],
+    textos: [
+      path.join(PATHS.src, '/textos/index.js'),
+      path.join(PATHS.scss, '/secoes/textos/textos.scss')
     ]
   },
 
   output: {
     path: process.env.GH_PAGES ? PATHS.ghPages : PATHS.dist,
-    filename: 'scripts/[name].[chunkhash].js',
+    filename: 'scripts/[name].js',
     publicPath
   },
 
@@ -62,7 +74,7 @@ const common = {
         use: customCss.extract({
           use: 'css-loader!sass-loader?sourceMaps'
         }),
-        exclude: /node_modules|noticias|repgeral/
+        exclude: /node_modules|noticias|repercussaogeral|transparencia|jurisprudencia|textos/
       },
       {
         test: /\.scss$/,
@@ -72,7 +84,22 @@ const common = {
       {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
-        include: path.join(PATHS.scss, '/secoes/repgeral')
+        include: path.join(PATHS.scss, '/secoes/repercussaogeral')
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+        include: path.join(PATHS.scss, '/secoes/transparencia')
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+        include: path.join(PATHS.scss, '/secoes/jurisprudencia')
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader?url=false', 'sass-loader'],
+        include: path.join(PATHS.scss, '/secoes/textos')
       },
       {
         test: /\.(jpg|jpeg|gif|png|svg|ico)$/i,
@@ -113,12 +140,22 @@ const common = {
     new HtmlPlugin({
       filename: 'textos/index.html',
       template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/textos/index.html')}`,
-      chunks: ['noticias', 'bundle', 'vendor', 'manifest']
+      chunks: ['textos', 'bundle', 'vendor', 'manifest']
     }),
     new HtmlPlugin({
-      filename: 'repgeral/index.html',
-      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/repgeral/index.html')}`,
-      chunks: ['repgeral', 'bundle', 'vendor', 'manifest']
+      filename: 'repercussaogeral/index.html',
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/repercussaogeral/index.html')}`,
+      chunks: ['repercussaogeral', 'bundle', 'vendor', 'manifest']
+    }),
+    new HtmlPlugin({
+      filename: 'transparencia/index.html',
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/transparencia/index.html')}`,
+      chunks: ['transparencia', 'bundle', 'vendor', 'manifest']
+    }),
+    new HtmlPlugin({
+      filename: 'jurisprudencia/index.html',
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/jurisprudencia/index.html')}`,
+      chunks: ['jurisprudencia', 'bundle', 'vendor', 'manifest']
     }),
     // Compilação dos includes para facilitar a inserção no ASP
     new HtmlPlugin({
@@ -145,6 +182,16 @@ const common = {
       filename: 'includes/pesquisa.html',
       inject: false,
       template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/includes/pesquisa.html')}`
+    }),
+    new HtmlPlugin({
+      filename: 'includes/pesquisa-transparencia.html',
+      inject: false,
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/includes/pesquisa-transparencia.html')}`
+    }),
+    new HtmlPlugin({
+      filename: 'includes/pesquisa-jurisprudencia.html',
+      inject: false,
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/includes/pesquisa-jurisprudencia.html')}`
     }),
     new HtmlPlugin({
       filename: 'includes/sob-medida.html',

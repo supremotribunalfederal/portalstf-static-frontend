@@ -1,0 +1,1 @@
+import style from '../../assets/scss/secoes/jurisprudencia/jurisprudencia.scss';
