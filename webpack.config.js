@@ -194,6 +194,11 @@ const common = {
       template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/includes/pesquisa-jurisprudencia.html')}`
     }),
     new HtmlPlugin({
+      filename: 'includes/pesquisa-reogeral.html',
+      inject: false,
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/includes/pesquisa-repgeral.html')}`
+    }),
+    new HtmlPlugin({
       filename: 'includes/sob-medida.html',
       inject: false,
       template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/includes/sob-medida.html')}`
