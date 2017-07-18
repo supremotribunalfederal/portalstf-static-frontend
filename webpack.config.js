@@ -199,7 +199,8 @@ const common = {
       template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/includes/sob-medida.html')}`
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      name: ['vendor', 'manifest']
+      name: ['noticias', 'repercussaogeral', 'transparencia', 'jurisprudencia', 'textos', 'bundle', 'vendor', 'manifest'],
+      minChunks: 2
     }),
     customCss
   ]
