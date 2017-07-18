@@ -111,6 +111,31 @@ $('#jurisprudencia-maisinfo-glossario').on('click', function(){
 	ga('send', 'event', 'Pagina Home', 'Jurisprudência', 'Mais Informações - Glossário jurídico');
 });
 
+
+//operadores/links da pesquisa jurisprudencia
+$('#tesauro').on('click', function(){
+	ga('send', 'event', 'Pagina Geral', 'Pesquisa', 'Jurisprudencia - Tesauro');
+});
+$('#pesquisa-jurisprudencia-dicas').on('click', function(){
+	ga('send', 'event', 'Pagina Geral', 'Pesquisa', 'Jurisprudencia - Dicas');
+});
+$('#operador-adj').on('click', function(){
+	ga('send', 'event', 'Pagina Geral', 'Pesquisa', 'Jurisprudencia - Operador ADJ');
+});
+$('#operador-mesmo').on('click', function(){
+	ga('send', 'event', 'Pagina Geral', 'Pesquisa', 'Jurisprudencia - Operador MESMO');
+});
+$('#operadorcifrao').on('click', function(){
+	ga('send', 'event', 'Pagina Geral', 'Pesquisa', 'Jurisprudencia - Operador $');
+});
+$('#operadorcifrao').on('click', function(){
+	ga('send', 'event', 'Pagina Geral', 'Pesquisa', 'Jurisprudencia - Operador $');
+});
+$('#operadorcifrao').on('click', function(){
+	ga('send', 'event', 'Pagina Geral', 'Pesquisa', 'Jurisprudencia - Operador $');
+});
+
+
 //card da transparência
 $('#transparencia-gestao-pessoas').on('click', function(){
 	ga('send', 'event', 'Pagina Home', 'Transparência', 'Gestão de Pessoas');
@@ -131,4 +156,38 @@ $('#transparencia-vermais').on('click', function(){
 //Supremo em Números
 $('#supremo-em-numeros').on('click', function(){
 	ga('send', 'event', 'Pagina Home', 'Supremo em Números', 'Quero conhecer');
+});
+
+//Notícias
+$('#noticia-informacao-util-sim').on('click', function(){
+	ga('send', 'event', 'Notícia', 'Classificação de utilidade', 'Sim');
+});
+
+$('#noticia-informacao-util-nao').on('click', function(){
+	ga('send', 'event', 'Notícia', 'Classificação de utilidade', 'Não');
+});
+
+$('#noticia-interno-imprimir-inferior').on('click', function() {
+	ga('send', 'event', 'Notícia', 'Impressão', 'Imprimir');
+});
+
+$('#noticia-interno-imprimir-superior').on('click', function() {
+	ga('send', 'event', 'Notícia', 'Impressão', 'Imprimir');
+});
+
+//Textos
+$('#texto-informacao-util-sim').on('click', function(){
+	ga('send', 'event', 'Texto', 'Classificação de utilidade', 'Sim');
+});
+
+$('#texto-informacao-util-nao').on('click', function(){
+	ga('send', 'event', 'Texto', 'Classificação de utilidade', 'Não');
+});
+
+$('#texto-interno-imprimir-inferior').on('click', function() {
+	ga('send', 'event', 'Texto', 'Impressão', 'Imprimir');
+});
+
+$('#texto-interno-imprimir-superior').on('click', function() {
+	ga('send', 'event', 'Texto', 'Impressão', 'Imprimir');
 });

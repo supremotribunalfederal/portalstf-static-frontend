@@ -1,0 +1,58 @@
+@import "../../variaveis/cores";
+
+.campo-texto-repgeral {
+    width: 100% !important;
+}
+
+.acompanhe-votacoes-imagem {
+    width: 80px;     
+    height: 77px;     
+}
+
+.lista-item-texto small, .lista-item-texto strong {
+    color: black !important;
+} 
+.card-subtitulo a {
+    font-size: 0.875rem !important;
+} 
+
+.btn-small {
+    padding: 0 14px;
+    font-size: 0.7rem;
+}
+
+hr {
+    border: 0;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);    
+}
+
+.titulos-secoes {
+    color: #006998;
+    font-size: 1.5rem;
+    margin: 16px 0; 
+    font-weight: bold;
+}
+
+.card-conteudo-cinza {
+    background-color: $stfCinzaClaro;
+    height: 135px;
+}
+
+.numero-repgeral {
+    color: $stfAzulEscuro;
+    font-size: 3rem;
+    font-weight: 100;
+    text-align: center;
+}
+
+.numero-repgeral-verde {
+    color: $stfVerdeEscuro;
+    font-size: 3rem;
+}
+
+.rotulo-repgeral {
+    font-size: 1rem;
+    margin: 0 8px;
+    font-weight: bold;
+    text-align: center;
+}
