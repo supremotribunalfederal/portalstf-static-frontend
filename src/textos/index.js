@@ -1,7 +1,7 @@
 import style from '../../assets/scss/secoes/textos/textos.scss';
-
 import $ from 'jquery';
 
+moment().format();
 $("#sugerir-correcao-texto").click(function() {
     $("#form-sugerir-correcao-texto").show();
 });

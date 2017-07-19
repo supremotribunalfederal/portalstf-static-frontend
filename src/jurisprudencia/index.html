@@ -238,248 +238,189 @@
 
         <!-- Cards laterais -->
         <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 p-16 p-sm-8 p-xs-0 m-0">
-          <div id="cadastro-newsletter" class="card m-b-24 __fundo-escuro">
-            <div class="card-conteudo p-b-0">
-              <div class="row m-0">
-                <div class="p-0 p-b-16">
-                  <h3 class="m-0">RECEBA NO SEU E-MAIL (PUSH)</h3>
-                  <small>NOTÍCIAS E ATUALIZAÇÕES PROCESSUAIS</small>
+
+            <div id="jurisprudencia-informativo-stf" class="card m-b-24">
+                <div class="card-titulo">Informativo do STF</div>
+                <div class="card-conteudo p-0"> 
+                    <div class="card-caixa-texto tese-descricao p-16">
+                        O informativo do STF é um "jornal jurídico" que veicula resumos periódicos dos acontecimentos e fundamentos resultantes das sessões de julgamento
+                    </div>
                 </div>
-                <div class="row m-0 p-0">
-                  <div class="col-xs-12 p-0 p-b-16">
-                    <a href="//stf.jus.br/portal/push/autenticarUsuario.asp" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12">
-                      Quero me cadastrar
+
+                <div class="row m-16 p-0">
+                    <a href="//www.stf.jus.br/portal/informativo/pesquisarInformativo.asp" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12 m-t-8">
+                      ver Último informativo semanal
                     </a>
-                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div id="supremo-em-acao" class="card m-b-24 __fundo-amarelo-claro">
-            <div class="card-conteudo p-b-0">
-              <div class="row m-0">
-                <div class="card-container-imagem p-0 p-b-16">
-                  <h3 class="m-0">SUPREMO EM NÚMEROS</h3>
-                  <div class="card-imagem p-0 m-0">
-                    <img class="" src="<%= require('assets/img/conteudo/graph.png') %>"
-                     alt="supremoEmNumeros">
-                  </div>
-                  <div class="p-0 m-0 col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <small>Raio-x da produção e utilização de recursos</small>
-                  </div> 
-                </div>
-                <div class="row m-0 p-0">
-                  <div class="col-xs-12 m-t-16 p-0 p-b-16">
-                    <a id="supremo-em-numeros" href="//stf.jus.br/portal/push/autenticarUsuario.asp" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12">
-                      Quero conhecer
+                <div class="row m-16 p-0 p-b-16">
+                    <a href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=publicacaoInformativoTema" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12 m-t-8">
+                      ver informativos por temas
                     </a>
-                  </div>
+                </div>                
+                <div class="card-conteudo p-0"> 
+                    <div class="card-caixa-texto tese-descricao p-16 pesquisa-informativo">
+                        <strong>Pesquise o termo desejado para saber se há alguma súmula relacionada</strong>
+                        <div  class="campo-container m-t-16">
+                            <input class="col-md-9 col-xs-9" placeholder="Digite o que procura..." type="text" /> 
+                            <button class="btn btn-default btn-icone col-md-3 col-xs-3">
+                                <i class="glyphicon glyphicon-search" aria-label="abrir pesquisa"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="inteiro-teor-acordaos" class="card m-b-24">
+                <div class="card-titulo">Inteiro teor de acórdãos</div>              
+                <div class="card-conteudo p-0"> 
+                    <div style="height: 105px;" class="card-caixa-texto tese-descricao p-16 pesquisa-informativo">
+                        <strong>Pesquisa por processos</strong>
+                        <div style="height: auto;" class="campo-container m-t-16">
+                            <input class="col-md-9 col-xs-9" placeholder="Digite o processo que deseja..." type="text" /> 
+                            <button class="btn btn-default btn-icone col-md-3 col-xs-3">
+                                <i class="glyphicon glyphicon-search" aria-label="abrir pesquisa"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="jurisprudencia-informativo-stf" class="card m-b-24">
+                <div class="card-titulo">Teses Jurídicas</div>
+                <div class="row m-16 p-0">
+                    <a href="//www.stf.jus.br/portal/jurisprudencia/menuTese.asp?tese=TRG" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12 m-t-8">
+                      Teses de repercussão geral
+                    </a>
+                </div>
+                <div class="row m-16 p-0">
+                    <a href="//www.stf.jus.br/portal/jurisprudencia/menuTese.asp?tese=TCC" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12 m-t-8">
+                      Teses de controle concentrado
+                    </a>
+                </div>  
+                <div class="row m-16 p-0 p-b-16">
+                    <a href="//www.stf.jus.br/portal/jurisprudencia/menuTese.asp?tese=TOP" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12 m-t-8">
+                      Teses em outros processos
+                    </a>
+                </div>  
+            </div>
+            
+            <div id="inteiro-teor-acordaos" class="card m-b-24">
+                <div class="card-titulo">Pesquisas prontas</div>              
+                <div class="card-conteudo p-0"> 
+                    <div class="pull-left full-width card-caixa-texto tese-descricao p-16 pesquisa-informativo m-b-24">
+                        <strong>Encontre pesquisas prontas</strong>
+                        <div class="campo-container m-t-16">
+                            <input class="col-md-9 col-xs-9" placeholder="Digite o termo para pesquisar..." type="text" /> 
+                            <button class="btn btn-default btn-icone col-md-3 col-xs-3">
+                                <i class="glyphicon glyphicon-search" aria-label="abrir pesquisa"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-conteudo"> 
+                    <strong>Ramos do direito:</strong>
+                    <p class="m-t-16 m-b-16"><strong><a href="//www.stf.jus.br/portal/jurisprudencia/listarResultadoPesquisaJurisprudenciaFavoritaRamos.asp?publicacao=223587&assunto=Direito%20Administrativo">Direito Administrativo</a></strong></p>
+                    <p class="m-b-16"><strong><a href="//www.stf.jus.br/portal/jurisprudencia/listarResultadoPesquisaJurisprudenciaFavoritaRamos.asp?publicacao=223598&assunto=Direito%20Civil">Direito Civil</a></strong></p>
+                    <p class="m-b-16"><strong><a href="//www.stf.jus.br/portal/jurisprudencia/listarResultadoPesquisaJurisprudenciaFavoritaRamos.asp?publicacao=222943&assunto=Direito%20Constitucional">Direito Constitucional</a></strong></p>
+                    <p class="m-b-16"><strong><a href="//www.stf.jus.br/portal/jurisprudencia/listarResultadoPesquisaJurisprudenciaFavoritaRamos.asp?publicacao=222947&assunto=Direito%20Eleitoral">Direito Eleitoral</a></strong></p>
+                    <p class="m-b-16"><strong><a href="//www.stf.jus.br/portal/jurisprudencia/listarResultadoPesquisaJurisprudenciaFavoritaRamos.asp?publicacao=223602&assunto=Direito%20Penal">Direito Penal</a></strong></p>
+                    <p class="m-b-16"><strong><a href="//www.stf.jus.br/portal/jurisprudencia/listarResultadoPesquisaJurisprudenciaFavoritaRamos.asp?publicacao=223605&assunto=Direito%20Previdenci%E1rio">Direito Previdenciário</a></strong></p>
+                    <p class="m-b-16"><strong><a href="//www.stf.jus.br/portal/jurisprudencia/listarResultadoPesquisaJurisprudenciaFavoritaRamos.asp?publicacao=223607&assunto=Direito%20Processual%20Civil">Direito Processual Civil</a></strong></p>
+                    <p class="m-b-16"><strong><a href="//www.stf.jus.br/portal/jurisprudencia/listarResultadoPesquisaJurisprudenciaFavoritaRamos.asp?publicacao=223656&assunto=Direito%20Processual%20Penal">Direito Processual Penal</a></strong></p>
+                    <p class="m-b-24 p-b-8"><strong><a href="//www.stf.jus.br/portal/jurisprudencia/listarResultadoPesquisaJurisprudenciaFavoritaRamos.asp?publicacao=223663&assunto=Direito%20Tribut%E1rio">Direito Tributário</a></strong></p>                    
+                    <hr />                    
+                    <strong>Últimos casos notórios:</strong>
+                    <p class="m-t-16 m-b-16"><strong><a href="#">Processo de impeachment (2016)</a></strong> 
+                        <br /><small>há 6 meses</small></p>                    
+                    <p class="m-b-16"><strong><a href="#">Financiamento Público de Campanhas Eleitorais</a></strong> 
+                        <br /><small>há 6 meses</small></p>
+                    <p class="m-b-16"><strong><a href="#">Sistema Carcerário e Estado de Coisas Inconstitucional</a></strong></p>
+                    <p><strong><a href="#">Inexistência de reserva legal para instituição de audiência de custódia</a></strong></p>
+                </div>                
+                <div class="row m-b-16 m-l-16 m-r-16 p-0 p-b-16">
+                    <a href="//www.stf.jus.br/portal/jurisprudencia/listarResultadoPesquisaJurisprudenciaFavoritaCasoNotorio.asp" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12 m-t-8">
+                        Ver mais casos notórios
+                    </a>
+                </div> 
+            </div>            
+            
+            <div id="jurisprudencia-legislacao-anotada" class="card m-b-24">
+                <div class="card-titulo">Legislação anotada</div> 
+                <div class="card-conteudo"> 
+                    <p class="m-t-8 m-b-16"><strong><a href="#">A constituição e o Supremo</a></strong></p>
+                    <p class="m-b-8"><strong><a href="#">Leis infraconstitucionais</a></strong></p>
+                </div>
+            </div>
+            
+            <div id="jurisprudencia-bibliografias-tematicas" class="card m-b-24">
+                <div class="card-titulo">Bibliografias Temáticas</div> 
+                <div class="card-conteudo pull-left m-t-16"> 
+                    <div class="col-xs-6"><a href="#"><img class="full-width" src="//fakeimg.pl/150x220/" alt=""></a></div>
+                    <div class="col-xs-6"><a href="#"><img class="full-width" src="//fakeimg.pl/150x220/" alt=""></a></div>                    
+                </div>  
+                <div class="row m-16 p-b-16 p-t-16">
+                    <a href="//www.stf.jus.br/portal/jurisprudencia/menuTese.asp?tese=TOP" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12 m-t-8">
+                        Ver todas as bibliografias
+                    </a>
+                </div>  
+            </div>
+            
+            <div id="jurisprudencia-internacional" class="card m-b-24">
+                <div class="card-titulo">Jurisprudência Internacional</div>
+                <div class="card-conteudo">
+                  <ul class="card-media-lista">
+                    <li class="media-lista-item row p-0">
+                      <div class="lista-item-image col-xs-4 p-0 m-r-16">
+                        <img src="<%= require('assets/img/transparencia/pessoas.png') %>"
+                             srcset="<%= require('assets/img/transparencia/pessoas@2x.png') %> 2x"  alt="">
+                      </div>
+                      <div class="lista-item-texto col-xs-8 p-0">
+                        <h4 class="m-0"><strong>CJCPLP</strong></h4>
+                        <a id="transparencia-gestao-pessoas" target="_blank" href="//cjcplp.org/juris/">Jurisprudência da Conferência das Jurisdições Constitucionais dos Países de Língua Portuguesa.</a>
+                      </div>
+                    </li>
+
+                    <li class="media-lista-item row p-0">
+                      <div class="lista-item-image col-xs-4 p-0 m-r-16">
+                        <img src="<%= require('assets/img/transparencia/licitacoes.png') %>"
+                             srcset="<%= require('assets/img/transparencia/licitacoes@2x.png') %> 2x"  alt="">
+                      </div>
+                      <div class="lista-item-texto col-xs-8 p-0">
+                        <h4 class="m-t-0"><strong>CODICES</strong></h4>
+                        <a id="transparencia-licitacoes" href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaPesquisaCODICES">Informações transconstitucionais em 24 línguas para intercâmbio de informações entre cortes.</a>
+                      </div>
+                    </li>
+
+                    <li class="media-lista-item row p-0">
+                      <div class="lista-item-image col-xs-4 p-0 m-r-16">
+                        <img src="<%= require('assets/img/transparencia/orcamento.png') %>"
+                             srcset="<%= require('assets/img/transparencia/orcamento@2x.png') %> 2x"  alt="">
+                      </div>
+                      <div class="lista-item-texto col-xs-8 p-0">
+                        <h4 class="m-t-0"><strong>GLIN</strong></h4>
+                        <a id="transparencia-orcamento" href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaPesquisaGLIN">Global Legal Information Network, contém leis, decisões judiciais, legislações e literatura jurídica.</a>
+                      </div>
+                    </li>
+
+                    <li class="media-lista-item row m-0 p-0">
+                      <div class="lista-item-image col-xs-4 p-0 m-r-16">
+                        <img src="<%= require('assets/img/transparencia/sobre.png') %>"
+                             srcset="<%= require('assets/img/transparencia/sobre@2x.png') %> 2x"  alt="">
+                      </div>
+                      <div class="lista-item-texto col-xs-8 p-0">
+                        <h4 class="m-t-0"><strong>MERCOSUL</strong></h4>
+                        <a id="transparencia-sobrestf" href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaConstitucionalMercosul">Jurisprudência de direito constitucional das Cortes Supremas dos países do Mercosul.</a>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
-            </div>
-          </div>
-          <div id="pautas-julgamento" class="pautas-julgamento card m-b-24">
-            <div class="card-titulo">
-              <h3 class="m-0">Pautas de julgamento</h3>
-            </div>
-            <div class="card-conteudo">
-              <div class="calendario">
-                <div class="header">
-                  <div class="mes">Janeiro/17</div>
-                </div>
-                <table>
-                  <thead>
-                    <tr>
-                      <th>D</th>
-                      <th>S</th>
-                      <th>T</th>
-                      <th>Q</th>
-                      <th>Q</th>
-                      <th>S</th>
-                      <th>S</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td></td>
-                      <td>1</td>
-                      <td>2</td>
-                      <td class="ativa"><a href="//stf.jus.br/portal/pauta/listarCalendario.asp?data=10/05/2017">3</a></td>
-                      <td class="ativa"><a href="//stf.jus.br/portal/pauta/listarCalendario.asp?data=10/05/2017">4</a></td>
-                      <td>5</td>
-                      <td>6</td>
-                    </tr>
-                    <tr>
-                      <td>7</td>
-                      <td>8</td>
-                      <td>9</td>
-                      <td class="ativa"><a href="//stf.jus.br/portal/pauta/listarCalendario.asp?data=10/05/2017">10</a></td>
-                      <td class="ativa"><a href="//stf.jus.br/portal/pauta/listarCalendario.asp?data=10/05/2017">11</a></td>
-                      <td>12</td>
-                      <td>13</td>
-                    </tr>
-                    <tr>
-                      <td>14</td>
-                      <td>15</td>
-                      <td>6</td>
-                      <td class="ativa"><a href="//stf.jus.br/portal/pauta/listarCalendario.asp?data=10/05/2017">17</a></td>
-                      <td class="ativa"><a href="//stf.jus.br/portal/pauta/listarCalendario.asp?data=10/05/2017">18</a></td>
-                      <td>19</td>
-                      <td>20</td>
-                    </tr>
-                    <tr>
-                      <td>21</td>
-                      <td>22</td>
-                      <td>23</td>
-                      <td class="ativa"><a href="//stf.jus.br/portal/pauta/listarCalendario.asp?data=10/05/2017">24</a></td>
-                      <td class="ativa"><a href="//stf.jus.br/portal/pauta/listarCalendario.asp?data=10/05/2017">25</a></td>
-                      <td>26</td>
-                      <td>27</td>
-                    </tr>
-                    <tr>
-                      <td>28</td>
-                      <td>29</td>
-                      <td>30</td>
-                      <td class="ativa"><a href="//stf.jus.br/portal/pauta/listarCalendario.asp?data=10/05/2017">31</a></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <div class="card-rodape p-16">
-              <label for="pesquisa_pauta">Pesquise se seu processo está pautado</label>
-              <div class="row m-0 p-0">
-                <div class="col-xs-10 p-0">
-                  <input type="text" name="pesquisa_pauta" id="pesquisa_pauta" placeholder="Digite a classe e o número">
-                </div>
-                <div class="col-xs-2 p-0">
-                  <button class="btn btn-icone">
-                    <i class="icone glyphicon glyphicon-search"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div id="tv-justica" class="tv-justica card m-b-24">
-            <div class="card-titulo">
-              <h3 class="m-0">TV Justiça</h3>
-              <div class="ao-vivo"><img src="<%= require('assets/img/portleticon/videocam.svg') %>" alt="ao vivo">ao vivo</div>
-            </div>
-            <div class="card-conteudo">
-              <div class="card-media-video">
-                <iframe width="560" height="349" src="//www.youtube.com/embed/qghxcZ2hh_A" frameborder="0" allowfullscreen></iframe>
-              </div>
-              <div class="row m-0 m-t-16">
-                <a href="#" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper">Mais vídeos da TV Justiça</a>
-              </div>
-            </div>
-          </div>
-
-          <div id="agenda-dos-ministros" class="agenda-dos-ministros card m-b-24">
-            <div class="card-titulo">Agenda dos ministros</div>
-            <div class="card-conteudo">
-              <div class="agenda-destaque">
-                <div class="destaque-foto">
-                  <a href="//stf.jus.br/portal/agendaPresidente/pesquisarAgendaPresidente.asp"><img width="80" height="80" src="<%= require('assets/img/conteudo/agenda/carmen.jpg') %>"></a>
-                </div>
-                <div class="destaque-conteudo">
-                  <div class="destaque-data">Segunda-feira, 13/02/2017</div>
-                  <div class="destaque-eventos">
-                    <div class="eventos"><a href="//stf.jus.br/portal/agendaPresidente/pesquisarAgendaPresidente.asp">3 eventos</a></div>
-                    <div class="nome-ministro">Min. Cármen Lúcia</div>
-                  </div>
-                </div>
-              </div>
-              <div class="row m-0 m-t-16 p-0">
-                <a href="//stf.jus.br/portal/agendaMinistro/listarAgendaMinistro.asp" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12">
-                  Ver todas as agendas
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div id="audiencias-publicas" class="audiencias-publicas card m-b-24">
-            <div class="card-titulo">Audiências públicas</div>
-            <div class="card-conteudo">
-              <div class="audiencia-icone">
-                <img src="<%= require('assets/img/conteudo/icone-audiencia-whatsapp.png') %>"
-                     srcset="<%= require('assets/img/conteudo/icone-audiencia-whatsapp@2x.png') %> 2x" alt="Whatsapp">
-              </div>
-              <div class="audiencia-processo m-b-24 m-l-8">
-                <div class="processo-numero">ADI 5.527</div>
-                <div class="processo-relator">Min. Fachin</div>
-              </div>
-              <div class="card-caixa-texto audiencia-descricao m-b-24">
-                Marco civil da internet e a suspensão do Whatsapp por decisões judiciais no Brasil.
-              </div>
-              <div class="audiencia-inscricao">
-                Inscreva-se enviando um e-mail para <a href="mailto:adpf403@stf.jus.br">adpf403@stf.jus.br</a> até 01/02/2017.
-              </div>
-            </div>
-          </div>
-
-          <div id="transparencia" class="transparencia card m-b-24">
-            <div class="card-titulo">Transparência</div>
-            <div class="card-conteudo">
-              <ul class="card-media-lista">
-                <li class="media-lista-item row p-0">
-                  <div class="lista-item-image col-xs-4 p-0 m-r-16">
-                    <img src="<%= require('assets/img/transparencia/pessoas.png') %>"
-                         srcset="<%= require('assets/img/transparencia/pessoas@2x.png') %> 2x"  alt="">
-                  </div>
-                  <div class="lista-item-texto col-xs-8 p-0">
-                    <h4 class="m-0"><strong>Gestão de Pessoas</strong></h4>
-                    <a id="transparencia-gestao-pessoas" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=transparenciaRelatorioAtividades">Remuneração, Servidores, Membros do Tribunal, Magistrados Convocados, Indenizações, etc.</a>
-                  </div>
-                </li>
-
-                <li class="media-lista-item row p-0">
-                  <div class="lista-item-image col-xs-4 p-0 m-r-16">
-                    <img src="<%= require('assets/img/transparencia/licitacoes.png') %>"
-                         srcset="<%= require('assets/img/transparencia/licitacoes@2x.png') %> 2x"  alt="">
-                  </div>
-                  <div class="lista-item-texto col-xs-8 p-0">
-                    <h4 class="m-t-0"><strong>Licitações</strong></h4>
-                    <a id="transparencia-licitacoes" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=centralDoCidadaoAcessoInformacaoLicitacaoContrato">Concursos, Concorrência, Convites, Credenciamento, Leilão, Pregão, Tomada de preços.</a>
-                  </div>
-                </li>
-
-                <li class="media-lista-item row p-0">
-                  <div class="lista-item-image col-xs-4 p-0 m-r-16">
-                    <img src="<%= require('assets/img/transparencia/orcamento.png') %>"
-                         srcset="<%= require('assets/img/transparencia/orcamento@2x.png') %> 2x"  alt="">
-                  </div>
-                  <div class="lista-item-texto col-xs-8 p-0">
-                    <h4 class="m-t-0"><strong>Orçamento e Finanças</strong></h4>
-                    <a id="transparencia-orcamento" href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=centralDoCidadaoAcessoInformacaoGestaoOrcamentaria">Compras, Despesas, Consumo, Contratos, Execução orçamentária, Dados diários de despesas.</a>
-                  </div>
-                </li>
-                
-                <li class="media-lista-item row m-0 p-0">
-                  <div class="lista-item-image col-xs-4 p-0 m-r-16">
-                    <img src="<%= require('assets/img/transparencia/sobre.png') %>"
-                         srcset="<%= require('assets/img/transparencia/sobre@2x.png') %> 2x"  alt="">
-                  </div>
-                  <div class="lista-item-texto col-xs-8 p-0">
-                    <h4 class="m-t-0"><strong>Conheça mais sobre o STF</strong></h4>
-                    <a id="transparencia-sobrestf" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=centralDoCidadaoAcessoInformacaoGestaoPessoa">Composição do STF, Estatísticas Processuais, Serviços ao Cidadão, Estratégia Institucional e História.</a>
-                  </div>
-                </li>
-              </ul>
-              <a id="transparencia-vermais" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=centralDoCidadaoAcessoInformacao" class="btn btn-fluid btn-upper btn-default-bordered btn-raised p-l-xs-8 p-r-xs-8">Ver o portal da transparência</a>
-            </div>
-          </div>
+            
         </div>
       </div>
     </section>
 
-    <%- include src/includes/paginacao.html %>
     <%- include src/includes/mapa-do-site.html %>
-
     <%- include src/includes/footer.html %>
   </div>
 </body>
