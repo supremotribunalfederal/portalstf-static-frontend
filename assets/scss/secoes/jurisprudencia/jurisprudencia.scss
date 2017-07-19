@@ -1,3 +1,5 @@
+@import "../../variaveis/cores";
+
 .titulos-secoes {
     color: #006998;
     font-size: 1.5rem;
@@ -22,4 +24,16 @@
     height: 40px;
     line-height: 40px;
     padding: 0 8px;
+}
+
+.pesquisa-informativo {
+    height: 120px;
+}
+
+hr {
+    border-top: 2px solid rgba(0, 0, 0, 0.2);    
+}
+
+.card-conteudo p a {
+    color: $stfAzulEscuro;
 }
