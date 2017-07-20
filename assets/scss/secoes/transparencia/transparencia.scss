@@ -31,6 +31,12 @@
 
 .btn-transparencia {
     font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.btn-duplo-transparencia {
+    height: 80px;
+    line-height: 140%;
 }
 
 .card-conteudo-verde {
@@ -39,4 +45,81 @@
 
 .card-conteudo-vermelho {
     background: $stfVermelhoClaro;
+}
+
+/*section concursos*/
+
+#concursos {
+    background: $stfCinzaClaro;
+    padding: 24px 16px;
+}
+
+#concursos h3 {
+    color: $stfAzulEscuro;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.concursos-conteudo {
+    margin-top: 24px;
+    padding: 8px;
+}
+
+/*section conheca-mais*/
+
+#conheca-mais h3 {
+    color: $stfAzulEscuro;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#conheca-mais-conteudo {
+    margin-top: 24px;
+    padding: 15px;
+}
+
+.card-titulo-conheca-mais {
+    font-size: 1.5rem;
+}
+
+.card-caixa-texto-conheca-mais {
+
+      h4 {
+        font-size: 0.9rem;
+        line-height: 120%;
+      }
+
+}
+
+.card-azul-transparencia {
+    min-height: 215px;
+}
+
+/*section gestao-transparencia*/
+
+.card-titulo-gestao-pessoas {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.card-caixa-texto-nao-encontrou {
+    background: $stfCinzaClaro;
+    padding: 16px;
+    ul {
+    list-style: none;
+    padding: 0;
+    li {
+      margin: 8px 0;
+    }
+  }
+}
+
+.card-caixa-texto-gestao-transparencia {
+    min-height: 150px;
+}
+
+#gestao-transparencia h3 {
+    color: $stfAzulEscuro;
+    font-size: 1.3rem;
+    font-weight: bold;
 }
