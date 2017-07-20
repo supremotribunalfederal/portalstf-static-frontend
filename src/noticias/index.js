@@ -1,5 +1,4 @@
 import style from '../../assets/scss/secoes/noticias/noticias.scss';
-
 import $ from 'jquery';
 
 $("#sugerir-correcao-noticia").click(function() {

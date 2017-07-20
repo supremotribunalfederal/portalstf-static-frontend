@@ -8,318 +8,16 @@
 </head>
 <body>
   <div id="main" class="container-fluid p-0">
-    <section class="menu-acessibilidade row p-0 m-0">
-      <div class="container p-xs-0">
-        <div class="hidden-xs col-sm-3 col-lg-6 p-0">
-          <div class="acessibilidade">
-            <div class="m-l-0">Acessibilidade</div>
-            <div>
-              <a href="#"><i class="glyphicon glyphicon-adjust"></i></a>
-            </div>
-            <div class="hidden-sm hidden-md">Ir para:</div>
-            <ul class="atalhos hidden-sm hidden-md">
-              <li><a accesskey="1" href="#conteudo" id="conteudo-acessibilidade"><span>1</span> conteúdo</a></li>
-              <li><a accesskey="2" href="#menu-principal" id="menu-acessibilidade"><span>2</span> menu</a></li>
-              <li><a accesskey="3" href="#pesquisa" id="busca-acessibilidade"><span>3</span> busca</a></li>
-              <li><a accesskey="4" href="#rodape" id="rodape-acessibilidade"><span>4</span> rodapé</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-9 col-lg-6 p-0">
-          <div class="col-xs-8 col-sm-9">
-            <div class="col-xs-4 col-md-6">
-              <div class="dropdown menu-internacionalizacao dropdown-toggle">
-                <button class="btn btn-default " type="button" id="internacionalizacao" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                  <span class="hidden-xs hidden-sm">International Relations</span>
-                  <img src="<%= require('../../assets/img/internacional/usa-flag.png') %>"
-                  srcset="<%= require('../../assets/img/internacional/usa-flag.png') %> 2x" alt="English">
-                  <i class="caret"></i>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="internacionalizacao">
-                  <li><a href="//www2.stf.jus.br/portalStfInternacional/cms/verPrincipal.php?idioma=en_us" target="_blank"><img src="<%= require('../../assets/img/internacional/usa-flag.png') %>"
-                  srcset="<%= require('../../assets/img/internacional/usa-flag.png') %> 2x" alt="English"> English</a></li>
-                  <li><a href="//www2.stf.jus.br/portalStfInternacional/cms/verPrincipal.php?idioma=es_es" target="_blank"><img src="<%= require('../../assets/img/internacional/spain-flag.png') %>"
-                  srcset="<%= require('../../assets/img/internacional/spain-flag.png') %> 2x" alt="Español"> Español</a></li>
-                  <li><a href="//www2.stf.jus.br/portalStfInternacional/cms/verPrincipal.php?idioma=pt_br" target="_blank"><img src="<%= require('../../assets/img/internacional/brazil-flag.png') %>"
-                  srcset="<%= require('../../assets/img/internacional/brazil-flag.png') %> 2x" alt="Português"> Portuguese</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-xs-8 col-sm-4 col-md-3 link-borda-direita">
-              <div class="dropdown menu-servidores dropdown-toggle">
-                <button class="btn btn-default " type="button" id="servidores" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                  <span class="item-servidores hidden-xs hidden-sm">Servidores</span>
-                  <i class="caret"></i>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="servidores">
-                  <li class="dropdown-header">Financeiro</li>
-                  <li><a id="servidor-contracheque" href="https://servidor.stf.jus.br/iRH" target="_blank">Contracheque</a></li>
-                  <li><a id="servidor-margem" href="https://www2.econsig.com.br/stf/login/login_servidor.jsp#no-back" target="_blank">Margem Consignável</a></li>
-                  <li class="divider"></li>
-                  <li class="dropdown-header">Saúde</li>
-                  <li><a id="servidor-plano-saude" href="http://saude.stf.jus.br/" target="_blank">Plano de Saúde</a></li>
-                  <li class="divider"></li>
-                  <li><a id="servidor-ead" href="https://ead.stf.jus.br/" target="_blank">Educação a distância (EaD)</a></li>
-                  <li class="divider"></li>
-                  <li class="dropdown-header">Ferramentas de trabalho</li>
-                  <li><a id="servidor-gabinete" href="https://gabinetevirtual.stf.jus.br/" target="_blank">Gabinete Virtual</a></li>
-                  <li><a id="servidor-correio-eletronico" href="https://correio.stf.jus.br/" target="_blank">Correio Eletrônico</a></li>
-                  <li class="divider"></li>
-                  <li><a id="servidor-imprensa" href="http://cliente.linearclipping.com.br/stf/" target="_blank">Destaques do STF na imprensa</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="hidden-xs col-sm-4 col-md-3 link-borda-direita">
-              <a id="contato-topo" href="//www.stf.jus.br/portal/centralDoCidadao/enviarDadoPessoal.asp" target="_blank" class="btn btn-default">Fale conosco</a>
-            </div>
-          </div>
-          <div class="col-xs-4 col-sm-3 telefone-stf link-borda-direita"><i class="glyphicon glyphicon-earphone"></i> <a href="tel:+556132173000">(61) 3217-3000</a></div>
-        </div>
-      </div>
-    </section>
-
-    <header id="header" class="header navbar navbar-default">
-      <div class="container center-block row p-0 m-t-8 m-b-8"  >
-        <div class="navbar-header col-xs-12 row m-0">
-          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#menu-principal" aria-expanded="false">
-            <span class="sr-only">Abrir menu principal</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <h1 class="hidden">Supremo Tribunal Federal</h1>
-          <a href="/" class="navbar-brand m-0">
-            <img src="<%= require('../../assets/img/institucional/logo-STF.png') %>"
-                 srcset="<%= require('../../assets/img/institucional/logo-STF@2x.png') %> 2x" alt="Supremo Tribunal Federal">
-          </a>
-          <div id="menu-principal" class="collapse navbar-collapse col-xs-12 navbar-right m-0 p-0">
-            <div class="row col-xs-12 m-0 p-0">
-              <ul class="nav navbar-nav m-0 p-0">
-                <li class="dropdown-toggle">
-                  <a href="#" id="oStf" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">O STF</a>
-                    <ul class="dropdown-menu" aria-labelledby="oStf">
-                      <li><a href="#">País</a></li>
-                      <li><a href="#">País</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown-toggle">
-                  <a href="#" id="oStf" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Processos</a>
-                    <ul class="dropdown-menu" aria-labelledby="processos">
-                      <li><a href="#">País</a></li>
-                      <li><a href="#">País</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown-toggle container-dropdown-lateral">
-                  <a href="http://www.stf.jus.br" id="oStf" >Jurisprudência</a>
-                  <button type="button" class="btn btn-default dropdown-lateral visible-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    <span class="caret"></span>
-                  </button>
-                    <ul class="dropdown-menu" aria-labelledby="jurisprudencia">
-                      <li><a href="#">País</a></li>
-                      <li><a href="#">País</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown-toggle">
-                  <a href="#" id="oStf" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Repercussão Geral</a>
-                    <ul class="dropdown-menu" aria-labelledby="repercussaogeral">
-                      <li><a href="#">País</a></li>
-                      <li><a href="#">País</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown-toggle">
-                  <a href="#" id="oStf" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Leis e Publicações</a>
-                    <ul class="dropdown-menu" aria-labelledby="leispublicacoes">
-                      <li><a href="#">País</a></li>
-                      <li><a href="#">País</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown-toggle">
-                  <a href="#" id="oStf" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Transparência</a>
-                    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="transparencia">
-                      <li><a href="#">País</a></li>
-                      <li><a href="#">País</a></li>
-                    </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <section id="pesquisa" class="pesquisa row m-0 p-l-0 p-r-0">
-      <div class="container center-block">
-        <div class="hidden-xs pull-right m-t-16">
-          <p class="__stf-branco">
-            <span class="m-r-16 label-peticione">Peticione e acompanhe processos:</span> <a href="//sistemas.stf.jus.br/peticionamento/" target="_blank" class="btn ">Painel do Peticionador</a>
-          </p>
-        </div>
-        <div class="pesquisa-conteudo clearfix">
-          <div class="pesquisa-titulo m-t-16 m-b-16">
-            <button class="btn btn-default btn-icone pesquisa-btn-interna pull-right __fundo-transparente">
-              <i class="glyphicon glyphicon-search" aria-label="abrir pesquisa"></i>
-            </button>
-            <h3 class="m-0">Pesquisa de Repercussão Geral</h3> 
-          </div>
-          <div class="pesquisa-campos">
-            <div class="hidden-md hidden-lg campo-container">
-              <select class="pesquisa-select full-width">
-                <option value="">Selecione outra pesquisa</option>
-              </select>
-            </div>
-            <div class="form-inline">
-              <div class="campo-container">
-                <input class="campo-texto campo-texto-repgeral" type="text" name="pesquisaPrincipal" id="pesquisaPrincipal" placeholder="Digite um tema para pesquisar">
-                <button class="btn btn-default pull-right">
-                  <i class="glyphicon glyphicon-search hidden-md hidden-lg"></i>
-                  <span class="hidden-xs hidden-sm" id="btnPesquisar">Pesquisar</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="sob-medida" class="sob-medida m-b-24">
-      <div class="container center-block p-xs-0">
-        <div class="row p-0 m-0">
-          <div class="sob-medida-item p-0 m-r-8">
-            <div class="item-titulo item-titulo-sob-medida">Sob medida</div>
-            <div class="item-titulo item-titulo-para-voce __stf-azul-escuro">Para <strong>você</strong></div>
-          </div>
-          <div class="pull-right">
-            <div class="sob-medida-item p-0 pull-right visible-xs m-r-0">
-              <div class="dropdown">
-                <button class="btn btn-default btn-raised com-icone" type="button" id="sob-medida-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="icone glyphicon glyphicon-list-alt" aria-hidden="true"></span>
-                  <span class="texto">Selecione</span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="sob-medida-dropdown">
-                  <li>
-                    <a href="#">Advogados</a>
-                    <a href="#">Estudantes</a>
-                    <a href="#">Órgãos</a>
-                    <a href="#">Cidadãos</a>
-                    <a href="#">Imprensa</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="sob-medida-item p-0 pull-left hidden-xs">
-              <button class="btn btn-default btn-raised com-icone" type="button" id="sob-medida-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="icone glyphicon glyphicon-briefcase" aria-hidden="true"></span>
-                <span class="texto">Advogados</span>
-              </button>
-            </div>
-
-            <div class="sob-medida-item p-0 pull-left hidden-xs">
-              <button class="btn btn-default btn-raised com-icone" type="button" id="sob-medida-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="icone glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                <span class="texto">Estudantes</span>
-              </button>
-            </div>
-
-            <div class="sob-medida-item p-0 pull-left visible-sm m-r-0">
-              <div class="dropdown">
-                <button class="btn btn-default btn-raised com-icone" type="button" id="sob-medida-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="icone glyphicon glyphicon-list-alt" aria-hidden="true"></span>
-                  <span class="texto">Selecione</span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="sob-medida-dropdown">
-                  <li>
-                    <a href="#">Órgãos</a>
-                    <a href="#">Cidadãos</a>
-                    <a href="#">Imprensa</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="sob-medida-item p-0 pull-left hidden-xs hidden-sm">
-              <button class="btn btn-default btn-raised com-icone" type="button" id="sob-medida-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="icone glyphicon glyphicon-globe" aria-hidden="true"></span>
-                <span class="texto">Órgãos</span>
-              </button>
-            </div>
-
-            <div class="sob-medida-item p-0 pull-left visible-md m-r-0">
-              <div class="dropdown">
-                <button class="btn btn-default btn-raised com-icone" type="button" id="sob-medida-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="icone glyphicon glyphicon-list-alt" aria-hidden="true"></span>
-                  <span class="texto">Selecione</span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="sob-medida-dropdown">
-                  <li>
-                    <a href="#">Cidadãos</a>
-                    <a href="#">Imprensa</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="sob-medida-item p-0 pull-left hidden-xs hidden-sm hidden-md">
-              <button class="btn btn-default btn-raised com-icone" type="button" id="sob-medida-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="icone glyphicon glyphicon-user" aria-hidden="true"></span>
-                <span class="texto">Cidadãos</span>
-              </button>
-            </div>
-
-            <div class="sob-medida-item p-0 pull-left hidden-xs hidden-sm hidden-md">
-              <button class="btn btn-default btn-raised com-icone" type="button" id="sob-medida-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="icone glyphicon glyphicon-bullhorn" aria-hidden="true"></span>
-                <span class="texto">Imprensa</span>
-              </button>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </section>
+    <%- include src/includes/header.html %>
+    <%- include src/includes/pesquisa-repgeral.html %>
 
     <section id="conteudo" class="container-fluid m-0 p-0" >
       <div class="row container center-block p-0">
-   
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row m-0 p-xs-0 p-sm-8 p-b-16 ">
-          <div id="banner-rep-geral" class="card mb-48">
-            <div class="card-titulo">Repercussão Geral</div>
-            <div class="card-conteudo row m-0 m-t-16 b-b-16 p-0">
-              <div class="col-md-6 col-lg-3">
-                <div class="m-b-16">
-                  <iframe width="100%" height="100%" src="//www.youtube.com/embed/qghxcZ2hh_A" frameborder="0" allowfullscreen></iframe>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-3">
-                <div class="m-b-16">
-                  <iframe width="100%" src="//www.youtube.com/embed/qghxcZ2hh_A" frameborder="0" allowfullscreen></iframe>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-3">
-                <div class="card-caixa-texto m-b-16">
-                  <h4 class="m-0 m-t-8 m-b-16">Teses</h4>
-                  <ul>
-                    <li><a href="//www.stf.jus.br/portal/jurisprudenciaRepercussao/listarProcesso.asp?PesquisaEm=tema&situacaoRG=TODAS&situacaoAtual=S&txtTituloTema=&numeroTemaInicial=&numeroTemaFinal=&acao=pesquisarProcesso&classeProcesso=&numeroProcesso=&ministro=&ordenacao=asc&botao=">Temas de repercussão geral</a></li>
-                    <li><a href="//www.stf.jus.br/portal/jurisprudenciaRepercussao/listarRepercussaoGeral.asp">Temas de suspensão nacional</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-3">
-                <div class="card-caixa-texto m-b-16">
-                  <h4 class="m-0 m-t-8 m-b-16">Números</h4>
-                  <ul>
-                    <li><a href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaRepercussaoGeral&pagina=numeroRepercussao">Repercussão Geral</a></li>
-                    <li><a href="//www.stf.jus.br/portal/jurisprudenciaRepercussao/listarJulgado.asp">Últimos Julgados</a></li>
-                  </ul>
-                </div>
-              </div>
+        <div class="col-xs-12 col-sm-6 col-md-7 col-lg-8 row m-0 p-xs-0 p-sm-8 ">            
+          <div id="noticias" class="noticias m-b-48">            
+            <div class="titulos-secoes m-l-16 p-b-24">
+              Últimos destaques de Repercussão Geral do STF
             </div>
-          </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-6 col-md-7 col-lg-8 row m-0 p-xs-0 p-sm-8 ">
-          <div id="noticias" class="noticias m-b-48">
-            
             <div class="card-lt-md card-xs noticia m-0 m-b-24 row">
               <div class="col-md-6 hidden-xs hidden-sm p-0">
                 <div class="noticia-imagem hidden-xs">
@@ -386,77 +84,68 @@
                 <div class="noticia-data-xs visible-xs visible-sm p-l-16 p-r-16 m-t-8 m-b-8">Há 3 minutos</div>
               </div>
             </div>
-            
-            <div class="noticias-titulo-area m-l-8">
-              Processos em destaque
-            </div>
-
-            <div class="card-lt-md card-xs  noticia m-b-24 row m-0">
-              <div class="col-md-6 hidden-xs hidden-sm p-0">
-                <div class="noticia-imagem hidden-xs">
-                  <img src="//fakeimg.pl/330x190/" alt="">
-                </div>
-              </div>
-              <div class="col-xs-12 col-md-6 p-0">
-                <div class="noticia-categoria p-l-16 p-r-16">Plenário do STF <span class="hidden-xs hidden-sm noticia-data">·</span><span class="hidden-xs hidden-sm noticia-data">Há 3 minutos</span></div>
-                <h3 class="noticia-titulo p-l-16 p-r-16 m-t-8"><a href="//stf.jus.br/portal/cms/verNoticiaDetalhe.asp?idConteudo=345036">Plenário do STF elege ministro substituto do TSE e vota lista tríplice</a></h3>
-                <p class="noticia-resumo p-l-16 p-r-16">A lista é composta pelos advogados: Tarcísio Vieira de Carvalho Neto, Sérgio Silveira Banhos e Carlos Bastide Horbach.</p>
-                <div class="noticia-compartilhar hidde-xs hidden-sm p-l-16 m-t-32">
-                  <div class="facebook">
-                    <a href="#" class="text-hide"></a>
-                  </div>
-                  <div class="twitter">
-                    <a href="#" class="text-hide"></a>
-                  </div>
-                </div>
-                <div class="noticia-imagem-xs visible-xs visible-sm">
-                  <img src="//fakeimg.pl/330x190/" alt="">
-                </div>
-                <div class="noticia-data-xs visible-xs visible-sm p-l-16 p-r-16 m-t-8 m-b-8">Há 3 minutos</div>
-              </div>
-            </div>
           </div>
 
-          <div id="acessar-portal-noticias" class="row m-0 m-r-8 m-l-8 m-b-48">
-            <div class="col-md-2 p-0"></div>
-            <div class="col-md-8 p-0">
-              <button class="btn btn-default-bordered btn-raised btn-upper btn-fluid">Acessar o portal de notícias</button>
+            <div id="acessar-portal-noticias" class="row m-0 m-r-8 m-l-8 m-b-48">
+                <div class="col-md-2 p-0"></div>
+                    <div class="col-md-8 p-0">
+                      <button class="btn btn-default-bordered btn-raised btn-upper btn-fluid">Ver notícias de repercussão geral</button>
+                    </div>
+                <div class="col-md-2 p-0"></div>
             </div>
-            <div class="col-md-2 p-0"></div>
-          </div>
 
-          <div id="repercussao-geral" class="card m-b-48">
-            <div class="card-titulo">Temas de Repercussão geral</div>
-            <div class="card-conteudo row m-0 m-t-16 b-b-16 p-0">
-              <div class="col-md-6 col-lg-4">
-                <div class="card-caixa-texto m-b-16">
-                  <h4 class="m-0 m-t-8 m-b-16">Teses</h4>
-                  <ul>
-                    <li><a href="#">Temas de repercussão geral</a></li>
-                    <li><a href="#">Temas de suspensão nacional</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="card-caixa-texto m-b-16">
-                  <h4 class="m-0 m-t-8 m-b-16">Números</h4>
-                  <ul>
-                    <li><a href="#">Repercussão Geral</a></li>
-                    <li><a href="#">Últimos julgados</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-md-12 col-lg-4 row m-0 m-b-16">
-                <div class="col-md-6 col-lg-12 p-0 p-l-md-16">
-                  <div class="card-caixa-texto __fundo-escuro p-b-16 m-b-16">
-                    <h4 class="m-0 m-t-8 m-b-16">Fórum</h4>
-                    <p>Somente para órgãos credenciados</p>
-                    <button class="btn btn-default-bordered btn-raised btn-fluid btn-upper" type="button" href="#">Entrar</button>
-                  </div>
-                </div>
-              </div>
+            <div class="titulos-secoes m-l-16 p-b-24 p-t-16">
+                Números da Repercussão Geral
             </div>
-          </div>
+
+            <div id="conheca-mais-repercussao" class="card m-b-48">
+                <div class="card-titulo">Temas de Repercussão Geral</div>
+                <div class="card-conteudo row m-0 p-0">
+                    <div class="card-conteudo-cinza col-md-5 text-center p-t-16">
+                        <div class="numero-repgeral">
+                          946
+                        </div>
+                        <div class="rotulo-repgeral">
+                          Quantidade de temas
+                        </div>
+                    </div>
+                    <div class="col-md-7 text-center">
+                        <div class="numero-repgeral numero-repgeral-verde p-t-16">
+                          1.205.761
+                        </div>
+                        <div class="rotulo-repgeral">
+                            Qtd. de processos sobrestados <br />
+                            <span class="card-topico-conteudo">Fonte: CNJ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="acessar-portal-noticias" class="row m-0 m-r-8 m-l-8 m-b-48">
+                <div class="col-md-2 p-0"></div>
+                    <div class="col-md-8 p-0">
+                      <button class="btn btn-default-bordered btn-raised btn-upper btn-fluid">Clique para filtrar com detalhes</button>
+                    </div>
+                <div class="col-md-2 p-0"></div>
+            </div>
+
+            <div id="conheca-mais-repercussao" class="card m-b-48 ">
+                <div class="card-titulo">Quantidade de temas ou sobrestados por categoria</div>
+                <div class="card-conteudo row m-0 b-b-16 p-0">
+                    <div class="p-0 m-0">
+                        <img class="full-width" src="<%= require('assets/img/repgeral/temas-repgeral.png') %>" alt="temas De Repercussao Geral">
+                    </div>
+                </div>
+            </div>
+
+            <div id="conheca-mais-repercussao" class="card m-b-48 ">
+                <div class="card-titulo">Quantidade de temas ou de processos sobrestados por data</div>
+                <div class="card-conteudo row m-0 b-b-16 p-0">
+                    <div class="p-0 m-0">
+                        <img class="full-width" src="<%= require('assets/img/repgeral/qtd-temas.png') %>" alt="quantidade De Temas">
+                    </div>
+                </div>
+            </div>
 
           <div id="conheca-mais-repercussao" class="card m-b-48 ">
             <div class="card-titulo">Conheça mais o instituto de repercussão geral</div>
@@ -507,11 +196,11 @@
             <div class="teses-repgeral card m-b-24">
                 <div class="card-titulo">Teses de Repercussão Geral</div>                
                 <div class="card-conteudo p-0"> 
-                    <div class="card-caixa-texto tese-descricao m-b-8 p-16">
+                    <div class="card-caixa-texto tese-descricao p-16">
                         Teses fixadas após julgado mérito da Repercussão Geral
                     </div>
                 </div>                
-                <div class="card-conteudo">                  
+                <div class="card-conteudo p-b-8">                  
                     <div class="p-b-8 card-subtitulos">
                         <h4 class="card-subtitulo m-0 p-b-8"><a href="#">Tema 948</a><small class="p-l-8">Fixado em 02/06/2017</small></h4>
                         <strong>RE 883542</strong> - <a href="#">Acórdão</a>
@@ -536,376 +225,236 @@
                 </div>
             </div>
             
-          <div id="supremo-em-acao" class="card m-b-24 __fundo-amarelo-claro">
-            <div class="card-conteudo p-b-0">
-              <div class="row m-0">
-                <div class="card-container-imagem p-0 p-b-16">
-                  <h3 class="m-0">SUPREMO EM NÚMEROS</h3>
-                  <div class="card-imagem p-0 m-0">
-                    <img class="" src="<%= require('../../assets/img/conteudo/graph.png') %>"
-                     alt="supremoEmNumeros">
-                  </div>
-                  <div class="p-0 m-0 col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <small>Raio-x da produção e utilização de recursos</small>
-                  </div> 
+            <div id="acompanhe-votacoes" class="card m-b-24">
+                <div class="card-titulo">Acompanhe as votações</div>                
+                <div class="card-conteudo p-0"> 
+                    <div class="card-caixa-texto tese-descricao p-16">
+                        Teses de  Repercussão Geral em julgamento
+                    </div>
                 </div>
-                <div class="row m-0 p-0">
-                  <div class="col-xs-12 m-t-16 p-0 p-b-16">
-                    <a id="supremo-em-numeros" href="//stf.jus.br/portal/push/autenticarUsuario.asp" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12">
-                      Quero conhecer
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="pautas-julgamento" class="pautas-julgamento card m-b-24">
-            <div class="card-titulo">
-              <h3 class="m-0">Pautas de julgamento</h3>
-            </div>
-            <div class="card-conteudo">
-              <div class="calendario">
-                <div class="header">
-                  <div class="mes">Janeiro/17</div>
-                </div>
-                <table>
-                  <thead>
-                    <tr>
-                      <th>D</th>
-                      <th>S</th>
-                      <th>T</th>
-                      <th>Q</th>
-                      <th>Q</th>
-                      <th>S</th>
-                      <th>S</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td></td>
-                      <td>1</td>
-                      <td>2</td>
-                      <td class="ativa"><a href="//stf.jus.br/portal/pauta/listarCalendario.asp?data=10/05/2017">3</a></td>
-                      <td class="ativa"><a href="//stf.jus.br/portal/pauta/listarCalendario.asp?data=10/05/2017">4</a></td>
-                      <td>5</td>
-                      <td>6</td>
-                    </tr>
-                    <tr>
-                      <td>7</td>
-                      <td>8</td>
-                      <td>9</td>
-                      <td class="ativa"><a href="//stf.jus.br/portal/pauta/listarCalendario.asp?data=10/05/2017">10</a></td>
-                      <td class="ativa"><a href="//stf.jus.br/portal/pauta/listarCalendario.asp?data=10/05/2017">11</a></td>
-                      <td>12</td>
-                      <td>13</td>
-                    </tr>
-                    <tr>
-                      <td>14</td>
-                      <td>15</td>
-                      <td>6</td>
-                      <td class="ativa"><a href="//stf.jus.br/portal/pauta/listarCalendario.asp?data=10/05/2017">17</a></td>
-                      <td class="ativa"><a href="//stf.jus.br/portal/pauta/listarCalendario.asp?data=10/05/2017">18</a></td>
-                      <td>19</td>
-                      <td>20</td>
-                    </tr>
-                    <tr>
-                      <td>21</td>
-                      <td>22</td>
-                      <td>23</td>
-                      <td class="ativa"><a href="//stf.jus.br/portal/pauta/listarCalendario.asp?data=10/05/2017">24</a></td>
-                      <td class="ativa"><a href="//stf.jus.br/portal/pauta/listarCalendario.asp?data=10/05/2017">25</a></td>
-                      <td>26</td>
-                      <td>27</td>
-                    </tr>
-                    <tr>
-                      <td>28</td>
-                      <td>29</td>
-                      <td>30</td>
-                      <td class="ativa"><a href="//stf.jus.br/portal/pauta/listarCalendario.asp?data=10/05/2017">31</a></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <div class="card-rodape p-16">
-              <label for="pesquisa_pauta">Pesquise se seu processo está pautado</label>
-              <div class="row m-0 p-0">
-                <div class="col-xs-10 p-0">
-                  <input type="text" name="pesquisa_pauta" id="pesquisa_pauta" placeholder="Digite a classe e o número">
-                </div>
-                <div class="col-xs-2 p-0">
-                  <button class="btn btn-icone">
-                    <i class="icone glyphicon glyphicon-search"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+                <div class="card-conteudo p-t-8">
+                    <ul class="card-media-lista">
+                        <li class="media-lista-item row p-0">
+                          <div class="lista-item-image col-xs-4 p-0 m-r-16 hidden-xs">
+                              <div class="acompanhe-votacoes-imagem">
+                                  <a href="#"><img src="//fakeimg.pl/80x77/" alt=""></a>
+                              </div>
+                          </div>
+                          <div class="lista-item-texto col-xs-8 p-0">
+                            <h4 class="card-subtitulo m-0 p-b-8"><a href="#">Tema 942</a><small class="p-l-8">Encerra em 20/04/2017</small></h4>
+                            <strong>Previdência social</strong><br />
+                            <small>Relator Min. Luiz Fux</small><br />
+                            <small>Leading case <a href="#">RE 1014286</a></small>
+                          </div>
+                        </li>
+                    </ul> 
+                    <div class="card-topico-conteudo">
+                        Possibilidade de aplicação das regras do regime geral de previdência social para a averbação do tempo de serviço prestado em ... <a href="#">Leia mais</a>
+                    </div>
+                    <div class="m-t-8">
+                        <strong>Questão constitucional (8 votos)</strong>
+                        <div class="progress m-t-8">
+                            <div class="progress-bar progress-bar-success" role="progressbar" style="width:50%"></div>
+                            <div class="progress-bar progress-bar-danger" role="progressbar" style="width:20%">1</div>
+                            <div class="text-center">3</div>
+                        </div>
+                    </div>
+                    <div class="m-t-0">
+                        <strong>Repercussão Geral (8 votos)</strong>
+                        <div class="progress m-t-8">
+                            <div class="progress-bar progress-bar-success" role="progressbar" style="width:50%"></div>
+                            <div class="progress-bar progress-bar-danger" role="progressbar" style="width:20%">1</div>
+                            <div class="text-center">11</div>
+                        </div>
+                    </div>
+                    <div class="m-t-0">
+                        <strong>Reafirmação de jurisprudência (0 votos)</strong>
+                        <div class="progress m-t-8">
+                            <div class="progress-bar progress-bar-success" role="progressbar" style="width:0%"></div>
+                            <div class="progress-bar progress-bar-danger" role="progressbar" style="width:0%">1</div>
+                            <div class="text-center">11</div>
+                        </div>
+                    </div>
 
-        <div id="temas-repercussao-geral" class="teses-repgeral card m-b-24">
-            <div class="card-titulo">Temas de Repercussão Geral</div>               
-            <div class="card-conteudo p-0"> 
-                <div class="card-caixa-texto tese-descricao m-b-24 p-16">
-                    Recursos Extraordinários que serão analisados de acordo com os critérios de relevância jurídica, política, social ou econômica.
-                    A decisão proveniente dessa análise será aplicada posteriormente pelas instâncias inferiores, em casos idênticos. 
-                    <a href="#">Conheça mais</a>                        
-                </div>
-            </div>                
-            <div class="card-conteudo p-t-0">   
-                <h4 class="p-b-16"><strong>Temas com maior impacto</strong></h4>
+                    <div class="row m-8 p-0 p-b-16">
+                        <a href="#" target="_blank" class="btn btn-raised btn-default-bordered btn-upper col-xs-5 col-md-5 btn-small pull-left">
+                          Ver manifestação
+                        </a>
+                        <a href="#" target="_blank" class="btn btn-raised btn-default-bordered btn-upper col-xs-5 col-md-6 btn-small pull-right">
+                          Ver quadro de votos
+                        </a>
+                    </div>                      
+                    
+                    <hr />
+                    
+                    <ul class="card-media-lista">
+                        <li class="media-lista-item row p-0">
+                          <div class="lista-item-image col-xs-4 p-0 m-r-16 hidden-xs">
+                              <div class="acompanhe-votacoes-imagem">
+                                  <a href="#"><img src="//fakeimg.pl/80x77/" alt=""></a>
+                              </div>
+                          </div>
+                          <div class="lista-item-texto col-xs-8 p-0">
+                            <h4 class="card-subtitulo m-0 p-b-8"><a href="#">Tema 942</a><small class="p-l-8">Encerra em 20/04/2017</small></h4>
+                            <strong>Previdência social</strong><br />
+                            <small>Relator Min. Luiz Fux</small><br />
+                            <small>Leading case <a href="#">RE 1014286</a></small>
+                          </div>
+                        </li>
+                    </ul> 
+                    <div class="card-topico-conteudo">
+                        Possibilidade de aplicação das regras do regime geral de previdência social para a averbação do tempo de serviço prestado em ... <a href="#">Leia mais</a>
+                    </div>
+                    <div class="m-t-16">
+                        <strong>Questão constitucional (8 votos)</strong>
+                        <div class="progress m-t-8">
+                            <div class="progress-bar progress-bar-success" role="progressbar" style="width:50%"></div>
+                            <div class="progress-bar progress-bar-danger" role="progressbar" style="width:20%">1</div>
+                            <div class="text-center">3</div>
+                        </div>
+                    </div>
+                    <div class="m-t-0">
+                        <strong>Repercussão Geral (8 votos)</strong>
+                        <div class="progress m-t-8">
+                            <div class="progress-bar progress-bar-success" role="progressbar" style="width:50%"></div>
+                            <div class="progress-bar progress-bar-danger" role="progressbar" style="width:20%">1</div>
+                            <div class="text-center">11</div>
+                        </div>
+                    </div>
+                    <div class="m-t-0">
+                        <strong>Reafirmação de jurisprudência (0 votos)</strong>
+                        <div class="progress m-t-8">
+                            <div class="progress-bar progress-bar-success" role="progressbar" style="width:0%"></div>
+                            <div class="progress-bar progress-bar-danger" role="progressbar" style="width:0%">1</div>
+                            <div class="text-center">11</div>
+                        </div>
+                    </div>
+
+                    <div class="row m-8 p-0 p-b-16 text-center">
+                        <a href="#" target="_blank" class="btn btn-raised btn-default-bordered btn-upper col-xs-5 col-md-5 m-r-8 btn-small pull-left">
+                          Ver manifestação
+                        </a>
+                        <a href="#" target="_blank" class="btn btn-raised btn-default-bordered btn-upper col-xs-6 col-md-6 btn-small pull-right">
+                          Ver quadro de votos
+                        </a>
+                    </div>   
                 
-                <div class="card-subtitulos">
-                    <h4 class="card-subtitulo m-0"><a href="#">Tema 234</a></h4>
-                    <span>Poupança</span>
+                    <div class="row m-8 p-0">
+                        <a href="#" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12">
+                          Acompanhe todas as votações
+                        </a>
+                    </div>
                 </div>
-                <div class="card-topico-conteudo">
-                    334.034 (33%) processos. Desde 23/04/2010
-                </div>
-            </div>                
-            <div class="card-conteudo p-t-0">                  
-                <div class="card-subtitulos">
-                    <h4 class="card-subtitulo m-0"><a href="#">Tema 234</a></h4>
-                    <span>Poupança</span>
-              </div>
-              <div  class="card-topico-conteudo">
-                  334.034 (33%) processos. Desde 23/04/2010
-              </div>
-            </div>
-            <div class="row m-16 p-0 p-b-16">
-                <a href="#" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12">
-                  Ver todos os temas
-                </a>
-            </div>
-        </div>
-
-        <div class="teses-suspensao-nacional card m-b-24">
-            <div class="card-titulo">Teses de Suspensão Nacional</div>
-
-            <div class="card-conteudo p-0"> 
-                <div class="card-caixa-texto tese-descricao m-b-8 p-16">
-                    Temas em repercussão geral com determinação de suspensão nacional dos processos em tramitação que versem sobre a mesma questão,
-                    nos termos do <a href="#">art. 1035, §5° do CPC.</a>
-                </div>
-            </div>
-
-            <div class="card-conteudo p-t-16">                  
-                <div class="card-subtitulos p-b-8">
-                    <h4 class="card-subtitulo m-0"><a href="#">RE 566622</a></h4>
-                    <small>TEMA 32 - 19/10/2016</small> 
-                </div>
-                <div class="card-topico-conteudo">
-                    Reserva da lei complementar para instituir requisitos à concessão de imunidade tributária às entidades beneficentes de assistência social.
-                </div>
-            </div>
-
-            <div class="card-conteudo p-t-16">                  
-                <div class="card-subtitulos p-b-8">
-                    <h4 class="card-subtitulo m-0"><a href="#">RE 573872</a></h4>
-                    <small>TEMA 45 - 26/10/2016</small> 
-                </div>
-                <div class="card-topico-conteudo">
-                    Possibilidade de execução provisória de obrigação de fazer contra a Fazenda Pública.
-                </div>
-            </div>
-
-            <div class="row m-16 p-0 p-b-16">
-                <a href="#" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper btn-card-lateral col-xs-12">
-                  Todos com suspensão nacional
-                </a>
-            </div>
-        </div>
+            </div>      
             
-        <div id="entrar-forum-repercussao" class="card m-b-24 __fundo-escuro">
-            <div class="card-conteudo p-b-0">
-              <div class="row m-0">
-                <div class="p-0 p-b-16">
-                  <h3 class="m-0">Fórum de Repercussão</h3>
-                  <small>Somente para órgãos credenciados</small>
-                </div>
-                <div class="row m-0 p-0">
-                  <div class="col-xs-12 p-0 p-b-16">
-                    <a href="/#" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12">
-                      Entrar
-                    </a>
+            <div id="temas-repercussao-geral" class="teses-repgeral card m-b-24">
+                <div class="card-titulo">Temas de Repercussão Geral</div>               
+                <div class="card-conteudo p-0"> 
+                    <div class="card-caixa-texto tese-descricao m-b-24 p-16">
+                        Recursos Extraordinários que serão analisados de acordo com os critérios de relevância jurídica, política, social ou econômica.
+                        A decisão proveniente dessa análise será aplicada posteriormente pelas instâncias inferiores, em casos idênticos. 
+                        <a href="#">Conheça mais</a>                        
+                    </div>
+                </div>                
+                <div class="card-conteudo p-t-0">   
+                    <h4 class="p-b-16"><strong>Temas com maior impacto</strong></h4>
+
+                    <div class="card-subtitulos">
+                        <h4 class="card-subtitulo m-0"><a href="#">Tema 234</a></h4>
+                        <span>Poupança</span>
+                    </div>
+                    <div class="card-topico-conteudo">
+                        334.034 (33%) processos. Desde 23/04/2010
+                    </div>
+                </div>                
+                <div class="card-conteudo p-t-0">                  
+                    <div class="card-subtitulos">
+                        <h4 class="card-subtitulo m-0"><a href="#">Tema 234</a></h4>
+                        <span>Poupança</span>
+                  </div>
+                  <div  class="card-topico-conteudo">
+                      334.034 (33%) processos. Desde 23/04/2010
                   </div>
                 </div>
-              </div>
+                <div class="row m-16 p-0 p-b-16">
+                    <a href="#" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12">
+                      Ver todos os temas
+                    </a>
+                </div>
             </div>
-        </div>
+
+            <div class="teses-suspensao-nacional card m-b-24">
+                <div class="card-titulo">Teses de Suspensão Nacional</div>
+
+                <div class="card-conteudo p-0"> 
+                    <div class="card-caixa-texto tese-descricao m-b-8 p-16">
+                        Temas em repercussão geral com determinação de suspensão nacional dos processos em tramitação que versem sobre a mesma questão,
+                        nos termos do <a href="#">art. 1035, §5° do CPC.</a>
+                    </div>
+                </div>
+
+                <div class="card-conteudo p-t-16">                  
+                    <div class="card-subtitulos p-b-8">
+                        <h4 class="card-subtitulo m-0"><a href="#">RE 566622</a></h4>
+                        <small>TEMA 32 - 19/10/2016</small> 
+                    </div>
+                    <div class="card-topico-conteudo">
+                        Reserva da lei complementar para instituir requisitos à concessão de imunidade tributária às entidades beneficentes de assistência social.
+                    </div>
+                </div>
+
+                <div class="card-conteudo p-t-16">                  
+                    <div class="card-subtitulos p-b-8">
+                        <h4 class="card-subtitulo m-0"><a href="#">RE 573872</a></h4>
+                        <small>TEMA 45 - 26/10/2016</small> 
+                    </div>
+                    <div class="card-topico-conteudo">
+                        Possibilidade de execução provisória de obrigação de fazer contra a Fazenda Pública.
+                    </div>
+                </div>
+
+                <div class="row m-16 p-0 p-b-16">
+                    <a href="#" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper btn-card-lateral col-xs-12">
+                      Todos com suspensão nacional
+                    </a>
+                </div>
+            </div>
             
-        <div id="mais-info" class="card m-b-48 card-sem-sombra">
-            <div class="card-conteudo row m-0 m-t-16 b-b-16 p-0">
-                <div class="card-caixa-texto m-b-16 p-l-40">
-                  <h4 class="m-0 m-t-8 m-b-16">Mais informações</h4>
-                  <ul>
-                    <li><a id="repgeral-boletim" href="#">Boletim anual</a></li>
-                    <li><a id="repgeral-impact" href="#">Impacto dos julgamentos</a></li>
-                  </ul>
+            <div id="entrar-forum-repercussao" class="card m-b-24 __fundo-escuro">
+                <div class="card-conteudo p-b-0">
+                  <div class="row m-0">
+                    <div class="p-0 p-b-16">
+                      <h3 class="m-0">Fórum de Repercussão</h3>
+                      <small>Somente para órgãos credenciados</small>
+                    </div>
+                    <div class="row m-0 p-0">
+                      <div class="col-xs-12 p-0 p-b-16">
+                        <a href="/#" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12">
+                          Entrar
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            
+            <div id="mais-info" class="card m-b-48 card-sem-sombra">
+                <div class="card-conteudo row m-0 m-t-16 b-b-16 p-0">
+                    <div class="card-caixa-texto m-b-16 p-l-40">
+                      <h4 class="m-0 m-t-8 m-b-16">Mais informações</h4>
+                      <ul>
+                        <li><a id="repgeral-boletim" href="#">Boletim anual</a></li>
+                        <li><a id="repgeral-impact" href="#">Impacto dos julgamentos</a></li>
+                      </ul>
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
-      </div>
-
-    </section>
-
-    <section id="mapa-do-site">
-      <div class="row container center-block">
-        <div class="col-xs-6 col-sm-4 col-md-20p p-0">
-          <div class="lista-links">
-            <h4>O STF</h4>
-            <ul>
-              <li><a href="#">Conheça o STF</a></li>
-              <li><a href="#">Ministros</a></li>
-              <li><a href="#">Histórico</a></li>
-              <li><a href="#">Quem é quem</a></li>
-              <li><a href="#">Programas e ações</a></li>
-              <li><a href="#">Gestão</a></li>
-            </ul>
-          </div>
-
-          <div class="lista-links">
-            <h4>Serviços</h4>
-            <ul>
-              <li><a href="#">Pedidos de certidão</a></li>
-              <li><a href="#">Visitação pública</a></li>
-              <li><a href="#">Biblioteca</a></li>
-              <li><a href="#">Plantão judicial</a></li>
-              <li><a href="#">Audiências públicas</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-4 col-md-20p p-0">
-          <div class="lista-links">
-            <h4>Processos</h4>
-            <ul>
-              <li><a href="#">Pesquisa</a></li>
-              <li><a href="#">Peticionamento</a></li>
-              <li><a href="#">Editais</a></li>
-              <li><a href="#">ADI, ADC, ADPF e ADO</a></li>
-              <li><a href="#">Pedidos de vista</a></li>
-              <li><a href="#">Estatísticas processuais</a></li>
-            </ul>
-          </div>
-          <div class="lista-links">
-            <h4>Jurisprudência</h4>
-            <ul>
-              <li><a href="#">Pesquisa</a></li>
-              <li><a href="#">Inteiro teor de acórdãos</a></li>
-              <li><a href="#">Súmulas vinculantes</a></li>
-              <li><a href="#">Súmulas</a></li>
-              <li><a href="#">Teses jurídicas</a></li>
-              <li><a href="#">Informativos</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-4 col-md-20p p-0">
-          <div class="lista-links">
-            <h4>Repercussão Geral</h4>
-            <ul>
-              <li><a href="#">Pesquisa</a></li>
-              <li><a href="#">Temas</a></li>
-              <li><a href="#">Estatísticas</a></li>
-              <li><a href="#">Fórum</a></li>
-            </ul>
-          </div>
-          <div class="lista-links">
-            <h4>Leis e publicações</h4>
-            <ul>
-              <li><a href="#">Legislação</a></li>
-              <li><a href="#">Legislação anotada</a></li>
-              <li><a href="#">Livraria</a></li>
-              <li><a href="#">DJ/DJe</a></li>
-              <li><a href="#">RTJ eletrônica</a></li>
-              <li><a href="#">Boletim Repercussão Geral</a></li>
-              <li><a href="#">Publicações temáticas</a></li>
-              <li><a href="#">Publicações institucionais</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-4 col-md-20p p-0">
-          <div class="lista-links">
-            <h4>Agenda</h4>
-            <ul>
-              <li><a href="#">Pautas de plenário</a></li>
-              <li><a href="#">Pautas das turmas</a></li>
-              <li><a href="#">Agenda do Presidente</a></li>
-              <li><a href="#">Agenda dos Ministros</a></li>
-            </ul>
-          </div>
-          <div class="lista-links">
-            <h4>Transparência</h4>
-            <ul>
-              <li><a href="#">Ações e programas</a></li>
-              <li><a href="#">Gestão orçamentária</a></li>
-              <li><a href="#">Licitações e contratos</a></li>
-              <li><a href="#">Auditoria</a></li>
-              <li><a href="#">Gestão de pessoas</a></li>
-              <li><a href="#">Gestão estratégica</a></li>
-              <li><a href="#">Remuneração</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-4 col-md-20p p-0">
-          <div class="lista-links">
-            <h4>Sob medida</h4>
-            <ul>
-              <li><a href="#">Advogado</a></li>
-              <li><a href="#">Estudante</a></li>
-              <li><a href="#">Órgãos parceiros</a></li>
-              <li><a href="#">Cidadão</a></li>
-              <li><a href="#">Imprensa</a></li>
-            </ul>
-          </div>
-          <div class="lista-links">
-            <h4>Fale conosco</h4>
-            <ul>
-              <li><a href="#">Contato</a></li>
-              <li><a href="#">Ouvidoria</a></li>
-            </ul>
-          </div>
-        </div>
       </div>
     </section>
-
-    <footer id="rodape" class="p-16">
-      <div class="row container center-block">
-        <div class="logo-STF col-xs-12 col-md-3 col-lg-2 text-center-lt-md m-b-16">
-          <a href="#">
-            <img src="<%= require('../../assets/img/institucional/logo-STF.png') %>" alt="Supremo Tribunal Federal">
-          </a>
-        </div>
-        <div class="social-links col-xs-12 col-md-3 col-lg-2 text-center-lt-md m-b-16">
-          <div class="midias-sociais">
-            <div class="facebook">
-              <a href="#" class="text-hide">Facebook</a>
-            </div>
-            <div class="twitter">
-              <a href="#" class="text-hide">Twitter</a>
-            </div>
-            <div class="youtube">
-              <a href="#" class="text-hide">YouTube</a>
-            </div>
-          </div>
-          <div class="midias-internas m-t-8">
-            <div>
-              <a href="#" target="_blank">TV Justiça</a>
-            </div>
-            <div>
-              <a href="#" target="_blank">Rádio Justiça</a>
-            </div>
-          </div>
-        </div>
-        <div class="contatos col-xs-12 col-md-6  col-lg-8 text-center-lt-md">
-          <p><i class="glyphicon glyphicon-map-marker"></i> Praça dos Três Poderes, Brasília - DF - CEP 70175-900 <a href="#" target="_blank">Veja a localização no Google Maps</a></small></p>
-          <p><i class="glyphicon glyphicon-earphone"></i> Telefone: +55 61 3217-3000 <a href="#">Outros telefones úteis</a></small></p>
-          <p><i class="glyphicon glyphicon-time"></i> Horário de funcionamento: 12:00 às 19:00</p>
-        </div>
-      </div>
-    </footer>
+    
+    <%- include src/includes/mapa-do-site.html %>
+    <%- include src/includes/footer.html %>
   </div>
 </body>
 </html>

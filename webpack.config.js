@@ -3,6 +3,7 @@ const path = require('path');
 const merge = require('merge');
 const HtmlPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const PATHS = {
   dist: path.join(__dirname, '/dist'),
@@ -13,11 +14,22 @@ const PATHS = {
   ghPages: path.join(__dirname, '/showroom-build')
 };
 
-const VENDORS = ['bootstrap-loader'];
+const VENDORS = ['bootstrap-loader', 'moment'];
 
 const customCss = new ExtractTextPlugin("assets/styles/[name].css");
+const noticiasCss = new ExtractTextPlugin("assets/styles/noticias/noticias.css");
+const repercussaogeralCss = new ExtractTextPlugin("assets/styles/repercussaogeral/repercussaogeral.css");
+const transparenciaCss = new ExtractTextPlugin("assets/styles/transparencia/transparencia.css");
+const jurisprudenciaCss = new ExtractTextPlugin("assets/styles/jurisprudencia/jurisprudencia.css");
+const textosCss = new ExtractTextPlugin("assets/styles/textos/textos.css");
 
 const publicPath = process.env.GH_PAGES ? process.env.GH_PAGES.trim() : '/';
+
+const chunksOrder = (order) => {
+  return (a, b) => {
+    return order.indexOf(a.names[0]) - order.indexOf(b.names[0]);
+  }
+}
 
 var config = {};
 const common = {
@@ -78,27 +90,42 @@ const common = {
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader?url=false', 'sass-loader'],
+        use: noticiasCss.extract({
+          use: 'css-loader?url=false!sass-loader?sourceMaps',
+          fallback: 'style-loader'
+        }),
         include: path.join(PATHS.scss, '/secoes/noticias')
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: repercussaogeralCss.extract({
+          use: 'css-loader?url=false!sass-loader?sourceMaps',
+          fallback: 'style-loader'
+        }),
         include: path.join(PATHS.scss, '/secoes/repercussaogeral')
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: transparenciaCss.extract({
+          use: 'css-loader?url=false!sass-loader?sourceMaps',
+          fallback: 'style-loader'
+        }),
         include: path.join(PATHS.scss, '/secoes/transparencia')
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: jurisprudenciaCss.extract({
+          use: 'css-loader?url=false!sass-loader?sourceMaps',
+          fallback: 'style-loader'
+        }),
         include: path.join(PATHS.scss, '/secoes/jurisprudencia')
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader?url=false', 'sass-loader'],
+        use: textosCss.extract({
+          use: 'css-loader?url=false!sass-loader?sourceMaps',
+          fallback: 'style-loader'
+        }),
         include: path.join(PATHS.scss, '/secoes/textos')
       },
       {
@@ -125,37 +152,44 @@ const common = {
   plugins: [
     new HtmlPlugin({
       template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/index.html')}`,
-      chunks: ['bundle', 'vendor', 'manifest']
+      chunks: ['vendor', 'bundle'],
+      chunksSortMode: chunksOrder(['vendor', 'bundle']),
+      excludeChunks: ['jurisprudencia']
     }),
     new HtmlPlugin({
       filename: 'qlik.html',
       template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/qlik.html')}`,
-      chunks: ['bundle', 'vendor', 'manifest']
+      chunks: ['vendor', 'bundle'],
+      chunksSortMode: chunksOrder(['vendor', 'bundle'])
     }),
     new HtmlPlugin({
       filename: 'noticias/index.html',
       template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/noticias/index.html')}`,
-      chunks: ['noticias', 'bundle', 'vendor', 'manifest']
+      chunks: ['vendor', 'bundle', 'noticias'],
+      chunksSortMode: chunksOrder(['vendor', 'bundle', 'noticias'])
     }),
     new HtmlPlugin({
       filename: 'textos/index.html',
       template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/textos/index.html')}`,
-      chunks: ['textos', 'bundle', 'vendor', 'manifest']
+      chunks: ['vendor', 'bundle', 'textos'],
+      chunksSortMode: chunksOrder(['vendor', 'bundle', 'textos'])
     }),
     new HtmlPlugin({
       filename: 'repercussaogeral/index.html',
       template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/repercussaogeral/index.html')}`,
-      chunks: ['repercussaogeral', 'bundle', 'vendor', 'manifest']
+      chunks: ['vendor', 'bundle', 'repercussaogeral'],
+      chunksSortMode: chunksOrder(['vendor', 'bundle', 'repercussaogeral'])
     }),
     new HtmlPlugin({
       filename: 'transparencia/index.html',
-      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/transparencia/index.html')}`,
-      chunks: ['transparencia', 'bundle', 'vendor', 'manifest']
+      chunks: ['vendor', 'bundle', 'transparencia'],
+      chunksSortMode: chunksOrder(['vendor', 'bundle', 'transparencia'])
     }),
     new HtmlPlugin({
       filename: 'jurisprudencia/index.html',
       template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/jurisprudencia/index.html')}`,
-      chunks: ['jurisprudencia', 'bundle', 'vendor', 'manifest']
+      chunks: ['vendor', 'bundle', 'jurisprudencia'],
+      chunksSortMode: chunksOrder(['vendor', 'bundle', 'jurisprudencia'])
     }),
     // Compilação dos includes para facilitar a inserção no ASP
     new HtmlPlugin({
@@ -194,14 +228,25 @@ const common = {
       template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/includes/pesquisa-jurisprudencia.html')}`
     }),
     new HtmlPlugin({
+      filename: 'includes/pesquisa-reogeral.html',
+      inject: false,
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/includes/pesquisa-repgeral.html')}`
+    }),
+    new HtmlPlugin({
       filename: 'includes/sob-medida.html',
       inject: false,
       template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/includes/sob-medida.html')}`
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      name: ['vendor', 'manifest']
+      names: ['vendor'],
+      minChunks: 2
     }),
-    customCss
+    customCss,
+    noticiasCss,
+    repercussaogeralCss,
+    transparenciaCss,
+    jurisprudenciaCss,
+    textosCss
   ]
 };
 
