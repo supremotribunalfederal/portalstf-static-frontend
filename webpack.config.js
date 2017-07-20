@@ -17,6 +17,11 @@ const PATHS = {
 const VENDORS = ['bootstrap-loader', 'moment'];
 
 const customCss = new ExtractTextPlugin("assets/styles/[name].css");
+const noticiasCss = new ExtractTextPlugin("assets/styles/noticias/noticias.css");
+const repercussaogeralCss = new ExtractTextPlugin("assets/styles/repercussaogeral/repercussaogeral.css");
+const transparenciaCss = new ExtractTextPlugin("assets/styles/transparencia/transparencia.css");
+const jurisprudenciaCss = new ExtractTextPlugin("assets/styles/jurisprudencia/jurisprudencia.css");
+const textosCss = new ExtractTextPlugin("assets/styles/textos/textos.css");
 
 const publicPath = process.env.GH_PAGES ? process.env.GH_PAGES.trim() : '/';
 
@@ -85,27 +90,42 @@ const common = {
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader?url=false', 'sass-loader'],
+        use: noticiasCss.extract({
+          use: 'css-loader?url=false!sass-loader?sourceMaps',
+          fallback: 'style-loader'
+        }),
         include: path.join(PATHS.scss, '/secoes/noticias')
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: repercussaogeralCss.extract({
+          use: 'css-loader?url=false!sass-loader?sourceMaps',
+          fallback: 'style-loader'
+        }),
         include: path.join(PATHS.scss, '/secoes/repercussaogeral')
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: transparenciaCss.extract({
+          use: 'css-loader?url=false!sass-loader?sourceMaps',
+          fallback: 'style-loader'
+        }),
         include: path.join(PATHS.scss, '/secoes/transparencia')
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: jurisprudenciaCss.extract({
+          use: 'css-loader?url=false!sass-loader?sourceMaps',
+          fallback: 'style-loader'
+        }),
         include: path.join(PATHS.scss, '/secoes/jurisprudencia')
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader?url=false', 'sass-loader'],
+        use: textosCss.extract({
+          use: 'css-loader?url=false!sass-loader?sourceMaps',
+          fallback: 'style-loader'
+        }),
         include: path.join(PATHS.scss, '/secoes/textos')
       },
       {
@@ -133,7 +153,8 @@ const common = {
     new HtmlPlugin({
       template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/index.html')}`,
       chunks: ['vendor', 'bundle'],
-      chunksSortMode: chunksOrder(['vendor', 'bundle'])
+      chunksSortMode: chunksOrder(['vendor', 'bundle']),
+      excludeChunks: ['jurisprudencia']
     }),
     new HtmlPlugin({
       filename: 'qlik.html',
@@ -217,10 +238,15 @@ const common = {
       template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/includes/sob-medida.html')}`
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      names: ['noticias', 'repercussaogeral', 'transparencisa', 'jurisprudencia', 'textos', 'bundle', 'vendor'],
+      names: ['vendor'],
       minChunks: 2
     }),
-    customCss
+    customCss,
+    noticiasCss,
+    repercussaogeralCss,
+    transparenciaCss,
+    jurisprudenciaCss,
+    textosCss
   ]
 };
 
