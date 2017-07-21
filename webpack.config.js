@@ -182,6 +182,7 @@ const common = {
     }),
     new HtmlPlugin({
       filename: 'transparencia/index.html',
+      template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/transparencia/index.html')}`,
       chunks: ['vendor', 'bundle', 'transparencia'],
       chunksSortMode: chunksOrder(['vendor', 'bundle', 'transparencia'])
     }),
