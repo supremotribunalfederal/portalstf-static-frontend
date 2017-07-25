@@ -1,10 +1,10 @@
-const webpack = require('webpack');
-const path = require('path');
 const merge = require('merge');
-const HtmlPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const common = require('./webpack/common');
+const compileSecoes = require('./webpack/secoes');
+const includes = require('./webpack/includes');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
+<<<<<<< HEAD
 const PATHS = {
   dist: path.join(__dirname, '/dist'),
   src: path.join(__dirname, '/src'),
@@ -250,13 +250,17 @@ const common = {
     textosCss
   ]
 };
+=======
+const compiled = compileSecoes(common);
+>>>>>>> fabricio
 
+let config = {};
 if (process.env.NODE_ENV === 'production') {
-  config = merge(common, {
-
+  config = merge(compiled, {
+    plugins: compiled.plugins.concat(includes)
   });
 } else {
-  config = merge(common, {
+  config = merge(compiled, {
       devServer: {
         port: 3000,
         publicPath: '/'
