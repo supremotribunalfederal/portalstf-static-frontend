@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "export NODE_ENV=development || SET NODE_ENV=development && webpack-dev-server",
-    "build": "rimraf dist && webpack -p",
-    "gh-pages": "rimraf showroom-build && export GH_PAGES=/portalstf-static-frontend/ || set GH_PAGES=/portalstf-static-frontend/ && webpack -p",
+    "build": "export NODE_ENV=production || SET NODE_ENV=production && rimraf dist && webpack -p",
+    "gh-pages": "export GH_PAGES=/portalstf-static-frontend/ || set GH_PAGES=/portalstf-static-frontend/ && rimraf showroom-build && webpack -p",
     "serve:dist": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
