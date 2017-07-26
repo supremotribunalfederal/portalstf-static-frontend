@@ -1,6 +1,7 @@
 import style from '../../assets/scss/secoes/jurisprudencia/jurisprudencia.scss';
 
 
+//GOOGLE ANALYTICS
 
 //jurisprudencia internacional
 $('#internacional-cjcplp').on('click', function(){
@@ -15,3 +16,15 @@ $('#internacional-glin').on('click', function(){
 $('#internacional-mercosul').on('click', function(){
 	ga('send', 'event', 'Jurisprudencia', 'Internacional', 'Mercosul');
 })
+
+
+//informativo STF
+$('#informativo-semanal').on('click', function(){
+	ga('send', 'event', 'Jurisprudencia', 'Informativo STF', 'Informativo semanal');
+});
+$('#informativo-temas').on('click', function(){
+	ga('send', 'event', 'Jurisprudencia', 'Informativo STF', 'Informativo por temas');
+});
+$('#informativo-pesquisa').on('click', function(){
+	ga('send', 'event', 'Jurisprudencia', 'Informativo STF', 'Pesquisa de Informativo');
+});
