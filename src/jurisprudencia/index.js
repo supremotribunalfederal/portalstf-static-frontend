@@ -28,3 +28,11 @@ $('#informativo-temas').on('click', function(){
 $('#informativo-pesquisa').on('click', function(){
 	ga('send', 'event', 'Jurisprudencia', 'Informativo STF', 'Pesquisa de Informativo');
 });
+
+//legislacao anotada
+$('#leg-anotada-constituicao').on('click', function(){
+	ga('send', 'event', 'Jurisprudencia', 'Legislação Anotada', 'A constituicao e o Supremo');
+});
+$('#leg-anotada-infraconst').on('click', function(){
+	ga('send', 'event', 'Jurisprudencia', 'Legislação Anotada', 'Leis infraconstitucionais');
+});
