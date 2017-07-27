@@ -6,8 +6,8 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 
 const compiled = compileSecoes(common);
 
-let config = {};
-if (process.env.NODE_ENV === 'production') {
+var config = {};
+if (process.env.NODE_ENV == 'production') {
   config = merge(compiled, {
     plugins: compiled.plugins.concat(includes)
   });
