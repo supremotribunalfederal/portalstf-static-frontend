@@ -1,11 +1,3 @@
-  .breadcrum {
-    > span:not(:last-child) {
-      &::after {
-        content: " > ";
-      }
-    }
-  }
-
 .pagina-interna {
   #texto-pagina-interna {
     .texto {

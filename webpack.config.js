@@ -250,6 +250,8 @@ const common = {
   ]
 };
 
+var config = {};
+
 if (process.env.NODE_ENV === 'production') {
   config = merge(common, {
 
