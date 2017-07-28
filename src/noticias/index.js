@@ -1,5 +1,6 @@
 import style from '../../assets/scss/secoes/noticias/noticias.scss';
 import $ from 'jquery';
+import moment from 'moment';
 
 $("#sugerir-correcao-noticia").click(function() {
     $("#form-sugerir-correcao-noticia").show();
@@ -15,3 +16,6 @@ $("#enviar-correcao-noticia").click(function() {
 
     $("#correcao-noticia").val("");
 });
+
+var horaAtualizacao = $(".hora-atualizacao").text();
+$(".intervalo-atualizacao").text(moment(horaAtualizacao, "DD/MM/YYYY hh:mm").fromNow());

@@ -6,6 +6,14 @@
   }
 }
 
+.__fundo-azul {
+  background: $stfAzulClaro !important;
+  color: $stfBranco !important;
+  a {
+    color: $stfBranco;
+  }
+}
+
 .__fundo-transparente {
   background: transparent !important;
 }

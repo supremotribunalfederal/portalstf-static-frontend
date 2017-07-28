@@ -151,26 +151,35 @@ function selecionarDataJulgamento(data) {
 }
 
 function pesquisarProcessoConstaPauta() {
-    var inputProcesso = document.getElementById('pesquisa_pauta');
-    var regra = /(\w{2}|\w{4}) \d{3,6}/;
+	var inputProcesso = document.getElementById('pesquisa_pauta');
+    var regra = /(\w{2}|\w{4}) \d{2,6}/;
 
     if (!regra.test(inputProcesso.value)) {
         alert('O número do processo informado é inválido.');
-        return;
-    }
+    } else {
+		var processo = inputProcesso.value.split(' ');
+		var classe = processo[0].trim().toUpperCase();
+		var numero = processo[1].trim();
 
-    var processo = inputProcesso.value.split(' ');
-    var classe = processo[0].trim().toUpperCase();
-    var numero = processo[1].trim();
-
-    location.href = "//www.stf.jus.br/portal/pauta/listarProcesso.asp?classe=" + classe + "&argumento=" + numero;
+		location.href = "//www.stf.jus.br/portal/pauta/listarProcesso.asp?classe=" + classe + "&argumento=" + numero;
+	}
 }
 
 function pesquisarProcessoPauta(event) {
     if (event.keyCode == 13) {
         pesquisarProcessoConstaPauta();
-        ga('send', 'event', 'Página Geral','Pauta Julgamento', 'Pesquisa via enter');
     }
 }
+
+$("#btnPesquisarProcessoPauta").click(function(){
+	pesquisarProcessoConstaPauta();
+});
+
+$("#pesquisa_pauta").keyup(function(e){
+    if(e.keyCode == 13) {
+        pesquisarProcessoConstaPauta();
+    }
+});
+
 
 /* ---------------------------------------------------------------------------------------------------------------- */
