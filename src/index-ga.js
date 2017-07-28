@@ -191,3 +191,19 @@ $('#texto-interno-imprimir-inferior').on('click', function() {
 $('#texto-interno-imprimir-superior').on('click', function() {
 	ga('send', 'event', 'Texto', 'Impressão', 'Imprimir');
 });
+
+//Home ----------------------------------------------------------
+//Pauta de julgamento
+
+$('#pesquisa_pauta').on('click', function() {
+	ga('send', 'event', 'Página Geral','Pauta Julgamento', 'Pesquisa via click');
+});
+
+//Landing Notícias
+window.coletarMetricaCliqueLinkNoticia = function(){
+	ga('send', 'event', 'Página Home','Notícias', 'Link Título da Notícia');
+};
+
+$('.noticia-titulo').on('', function(){
+	ga('send', 'event', 'Página Home','Notícias', 'Link Título da Notícia');
+});
