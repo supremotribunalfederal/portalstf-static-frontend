@@ -41,7 +41,7 @@
   .nav {
     > li {
       > a {
-        color: $stfPreto;
+        color: $stfAzulMenu;
         padding: 15px 8px;
         @media (min-width: $breakpointPhones) and (max-width: $breakpointMediumDevices - 1) {
           font-size: 0.75rem;
