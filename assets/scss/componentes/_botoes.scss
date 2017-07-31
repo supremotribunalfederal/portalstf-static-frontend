@@ -3,10 +3,10 @@
   border: 0;
   border-radius: 0;
   color: $stfPreto;
-  font-size: 1rem;
+  font-size: 0.67rem;
   height: 40px;
   line-height: 40px;
-  padding: 0 24px;
+  padding: 0 6px;
 
   &.btn-raised {
     @include card-box-shadow();
