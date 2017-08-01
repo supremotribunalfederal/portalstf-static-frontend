@@ -36,3 +36,8 @@ $('#leg-anotada-constituicao').on('click', function(){
 $('#leg-anotada-infraconst').on('click', function(){
 	ga('send', 'event', 'Jurisprudencia', 'Legislação Anotada', 'Leis infraconstitucionais');
 });
+
+//ultimas alteracoes sumulas
+$('#juris-ver-todas-sumulas').on('click', function(){
+	ga('send', 'event', 'Jurisprudencia', 'Ultimas alterações Súmulas', 'Ver todas as Súmulas');
+});
