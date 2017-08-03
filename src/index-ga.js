@@ -22,6 +22,15 @@ $('#rodape-acessibilidade').on('click', function(){
 });
 
 
+//supremo em acao
+$('#acao-google-play').on('click', function(){
+	ga('send', 'event', 'Pagina Home', 'Supremo em Ação', 'Google Play');
+});
+$('#menu-acessibilidade').on('click', function(){
+	ga('send', 'event', 'Pagina Home', 'Supremo em Ação', 'Download PDF');
+});
+
+
 //link para sistemas
 $('#sistemas-peticionamento').on('click', function(){
 	ga('send', 'event', 'Pagina Geral', 'Link para Sistemas', 'Painel do Peticionador');
@@ -190,4 +199,43 @@ $('#texto-interno-imprimir-inferior').on('click', function() {
 
 $('#texto-interno-imprimir-superior').on('click', function() {
 	ga('send', 'event', 'Texto', 'Impressão', 'Imprimir');
+});
+
+//Home ----------------------------------------------------------
+//Pauta de julgamento
+
+$('#pesquisa_pauta').on('click', function() {
+	ga('send', 'event', 'Página Geral','Pauta Julgamento', 'Pesquisa via click');
+});
+
+//Landing Notícias
+window.coletarMetricaCliqueLinkNoticia = function(){
+	ga('send', 'event', 'Página Home','Notícias', 'Link Título da Notícia');
+};
+
+$('.noticia-titulo').on('click', function(){
+	ga('send', 'event', 'Página Home','Notícias', 'Link Título da Notícia');
+});
+
+//landing repercussão geral.
+$('.card-subtitulo a').on('click', function(){
+	ga('send', 'event', 'Página Repercussão Geral','Tema', 'Link Numero Tema Acompanhamento Votações');
+});
+
+$('#botao-acompanhe-todas-votacoes').on('click', function() {
+	ga('send', 'event', 'Página Repercussão Geral','Tema', 'Botão Acompanhe Todas as Votações');
+});
+
+$('.btn-small').on('click', function() {
+	var txt = $(this).text();
+	
+	if (txt.toUpperCase() === ' VER MANIFESTAÇÃO') {
+		ga('send', 'event', 'Página Repercussão Geral','Tema', 'Botão Ver Manifestação');
+	} else {
+		ga('send', 'event', 'Página Repercussão Geral','Tema', 'Botão Ver Quadro de Votos');
+	}
+});
+
+$('.leading-case').on('click', function() {
+	ga('send', 'event', 'Página Repercussão Geral','Tema', 'Link Leading Case');
 });

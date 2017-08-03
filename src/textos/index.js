@@ -1,7 +1,8 @@
 import style from '../../assets/scss/secoes/textos/textos.scss';
 import $ from 'jquery';
 
-moment().format();
+import moment from 'moment';
+
 $("#sugerir-correcao-texto").click(function() {
     $("#form-sugerir-correcao-texto").show();
 });
@@ -16,3 +17,7 @@ $("#enviar-correcao-texto").click(function() {
 
     $("#correcao-texto").val("");
 });
+
+var dataAtualizacao = $(".data-atualizacao").text();
+var dataMoment = moment(dataAtualizacao);
+$(".data-atualizacao").text(dataMoment.format("dddd, DD") + " de " + dataMoment.format("MMMM").toLowerCase() + " de " + dataMoment.format("YYYY"));
