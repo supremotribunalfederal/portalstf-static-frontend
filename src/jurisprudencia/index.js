@@ -67,6 +67,6 @@ $('#btnPesquisaInteiroTeor').click(function(){
 $('#txtNumeroProcesso').keyup(function(e){
 	if (e.keyCode == 13){
 		pesquisarInteiroTeorProcesso();
-		ga('send', 'event', 'Jurisprudencia', 'Pesquisa Inteiro Teor', 'Enter pressionado');
+		//ga('send', 'event', 'Jurisprudencia', 'Pesquisa Inteiro Teor', 'Enter pressionado');
 	}
 });
