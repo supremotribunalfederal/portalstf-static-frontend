@@ -3,12 +3,12 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#dc004977', endColorstr='#00ffffff', GradientType=1)";
   &:before {
     background: -moz-linear-gradient(-45deg, rgba(0, 73, 119, 0.86), rgba(255, 255, 255, 0) 100%);
     background: -webkit-linear-gradient(-45deg, rgba(0, 73, 119, 0.86), rgba(255, 255, 255, 0) 100%);
     background: linear-gradient(135deg, rgba(0, 73, 119, 0.76), rgba(255, 255, 255, 0) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dc004977', endColorstr='#00ffffff', GradientType=1);
-    content: '';
+    content: ' ';
     display: block;
     height: 100%;
     position: absolute;
