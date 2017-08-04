@@ -19,7 +19,11 @@ $(document).ready(function(){
     
     $('[data-toggle="popover"]').popover({
         container: 'body'
-    });    
+    });
+
+    $('#alto-contraste').click(function() {
+        $('body').toggleClass('alto-contraste');
+    });
 });
 
 moment.locale("pt-BR");    
