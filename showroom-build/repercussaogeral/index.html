@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Supremo Tribunal Federal</title>
-<link href="/portalstf-static-frontend/assets/styles/vendor.css" rel="stylesheet"><link href="/portalstf-static-frontend/assets/styles/bundle.css" rel="stylesheet"><link href="/portalstf-static-frontend/assets/styles/noticias/noticias.css" rel="stylesheet"></head>
-<body class="pagina-interna">
+<link href="/portalstf-static-frontend/assets/styles/vendor.css" rel="stylesheet"><link href="/portalstf-static-frontend/assets/styles/bundle.css" rel="stylesheet"><link href="/portalstf-static-frontend/assets/styles/repercussaogeral/repercussaogeral.css" rel="stylesheet"></head>
+<body>
   <div id="main" class="container-fluid p-0">
     <div class="nav">
   <div class="navbar navbar-default navbar-fixed-top">
@@ -150,161 +150,482 @@
     </nav>
   </div>
 </div>
-
-    <section id="pesquisa" class="pesquisa row m-0 m-t-96 p-l-0 p-r-0">
-      <div class="container center-block">
+    <section id="pesquisa" class="pesquisa pesquisa-pequena row m-0 p-l-0 p-r-0 m-b-32 m-t-96 m-b-xs-8">
+    <div class="container center-block">
+        <div class="hidden-xs pull-right m-t-16">
+            <p class="__stf-branco">
+                <span class="m-r-16 label-peticione">Peticione e acompanhe processos:</span> <a href="//sistemas.stf.jus.br/peticionamento/" target="_blank" class="btn ">Painel do Peticionador</a>
+            </p>
+        </div>
         <div class="pesquisa-conteudo clearfix">
-          <div class="pesquisa-titulo m-t-16 m-b-16">
-            <div class="hidden-xs pull-right">
-              <p class="__stf-branco">
-                <a href="//sistemas.stf.jus.br/peticionamento/" target="_blank" class="btn ">Painel do Peticionador</a>
-              </p>
+            <div class="pesquisa-titulo m-t-16 m-b-16">
+                <button class="btn btn-default btn-icone pesquisa-btn-interna pull-right __fundo-transparente">
+                    <i class="glyphicon glyphicon-search" aria-label="abrir pesquisa"></i>
+                </button>
+                <h3 class="m-0">Pesquisa de Repercussão Geral</h3> 
             </div>
-            <button class="btn btn-default btn-icone pull-right __fundo-transparente">
-              <i class="glyphicon glyphicon-search" aria-label="abrir pesquisa"></i>
-            </button>
-            <button class="btn btn-default btn-icone visible-xs pull-right __fundo-transparente">
-              <i class="glyphicon glyphicon-user" aria-label="painel do peticionador"></i>
-            </button>
-            <h3 class="m-0">Notícias</h3> 
-          </div> 
-        </div>
-      </div>
-    </section>
-
-    <section id="conteudo" class="container-fluid m-0 p-0">
-      <div class="row container center-block p-0">
-        <!--Menu Lateral-->
-        <div class="col-xs-12 col-sm-3 col-lg-2 p-16 p-xs-0 m-0">
-          <div class="menu-lateral hidden-xs">
-            <h4><span class="__stf-verde">Imprensa</span></h4>
-            <ul>
-              <li><a href="#"><span class="opcao-selecionada">Notícias</span></a></li>
-              <li><a href="#">Coberturas especiais</a></li>
-              <li><a href="#">TV Justiça</a></li>
-              <li><a href="#">Rádio Justiça</a></li>
-              <li><a href="#">Banco de Imagens</a></li>
-              <li><a href="#">Agenda dos Ministros</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div id="noticias-pagina-interna-wrapper" class="col-xs-12 col-sm-9 col-lg-10 row m-0 p-xs-0 m-t-24 m-b-24 p-sm-8 __borda-l-cinza-claro">
-          <div id="noticias-pagina-interna" class="noticias p-l-40 p-r-40 p-l-xs-0 p-r-xs-0">
-            <div class="noticia m-0 row">
-              <div class="col-xs-12 col-md-12 p-0 p-l-xs-16 p-r-xs-16">
-                <div class="card-secao hidden-xs col-xs-12 p-l-8 m-b-24"><a href="#">Notícias</a></div>
-                <h3 class="noticia-titulo">Plenário do STF elege ministro substituto do TSE e vota lista tríplice</h3>
-                <p class="noticia-resumo m-b-24">Confira os temas dos processos pautados para julgamento às 14h, no STF. Transmissão via TV Justiça, Radio Justiça e Youtube</p>
-                <div class="noticia-autor">Por Leandro Rezende</div>
-                <div class="noticia-data m-b-24"><span class="hora-atualizacao">30/05/2017 11h50</span> - Atualizado <span class="intervalo-atualizacao"></span></div>
-                <hr class="visible-xs" />
-                <div class="card-compartilhar hidden-xs p-8 m-b-16 p-r-16">
-                  <div class="impressao">
-                    <button id="noticia-interno-imprimir-superior" type="button" class="btn btn-default" onclick="print()" aria-label="Imprimir">
-                      <span class="glyphicon glyphicon-print" aria-hidden="true"></span>
-                    </button>
-                  </div>
-                  <div class="visualizacoes pull-right">
-                    12.234 pessoas já viram isso
-                  </div>
+            <div class="pesquisa-campos">
+                <div class="form-inline">
+                    <div class="campo-container">
+                        <input class="campo-texto campo-texto-repgeral" type="text" name="pesquisaPrincipal" id="pesquisaPrincipal" placeholder="Digite um tema para pesquisar">
+                        <button class="btn btn-default pull-right">
+                            <i class="glyphicon glyphicon-search hidden-md hidden-lg"></i>
+                            <span class="hidden-xs hidden-sm" id="btnPesquisar">Pesquisar</span>
+                        </button>
+                    </div>
                 </div>
-                
-                <div class="noticia-imagem-xs text-center">
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="conteudo" class="container-fluid m-0 p-0" >
+      <div class="row container center-block p-0">
+        <div class="col-xs-12 col-sm-6 col-md-7 col-lg-8 row m-0 p-xs-0 p-sm-8 ">            
+          <div id="noticias" class="noticias m-b-48">            
+            <div class="titulos-secoes m-l-16 p-b-24">
+              Últimos destaques de Repercussão Geral do STF
+            </div>
+            <div class="card-lt-md card-xs noticia m-0 m-b-24 row">
+              <div class="col-md-6 hidden-xs hidden-sm p-0">
+                <div class="noticia-imagem hidden-xs">
                   <img src="//fakeimg.pl/330x190/" alt="">
                 </div>
-                <div class="noticia-conteudo p-l-8 p-r-8 m-t-16">
-                  <p>O Supremo Tribunal Federal (STF), em votação no Plenário Virtual, reafirmou jurisprudência dominante no sentido de que a atribuição do Ministério Público Federal não exclui a legitimidade dos Ministérios Públicos dos estados e do Distrito Federal para postular em causas que, sendo de sua atribuição na origem, foram encaminhadas ao Supremo e ao Superior Tribunal de Justiça (STJ). A matéria, discutida no Recurso Extraordinário (RE) 985392, teve repercussão geral reconhecida.</p>
-                  <p>No caso concreto, o STJ negou a legitimidade do Ministério Público do Estado do Rio Grande do Sul (MPE-RS) para oferecer razões em habeas corpus contra ato do Tribunal de Justiça gaúcho (TJ-RS). Em seguida, negou a legitimidade do MPE-RS para interpor embargos de declaração. Com isso, as razões do Ministério Público estadual não foram ouvidas.</p>
+              </div>
+              <div class="col-xs-12 col-md-6 p-0">
+                <div class="noticia-categoria p-l-16 p-r-16">Plenário do STF <span class="hidden-xs hidden-sm noticia-data">·</span><span class="hidden-xs hidden-sm noticia-data">Há 3 minutos</span></div>
+                <h3 class="noticia-titulo p-l-16 p-r-16 m-t-8 m-t-8"><a href="//stf.jus.br/portal/cms/verNoticiaDetalhe.asp?idConteudo=345036">Plenário do STF elege ministro substituto do TSE e vota lista tríplice</a></h3>
+                <p class="noticia-resumo p-l-16 p-r-16">A lista é composta pelos advogados: Tarcísio Vieira de Carvalho Neto, Sérgio Silveira Banhos e Carlos Bastide Horbach.</p>
+                <div class="noticia-compartilhar hidde-xs hidden-sm p-l-16 m-t-32">
+                  <div class="facebook">
+                    <a href="#" class="text-hide"></a>
+                  </div>
+                  <div class="twitter">
+                    <a href="#" class="text-hide"></a>
+                  </div>
+                </div>
+                <div class="noticia-imagem-xs visible-xs visible-sm">
+                  <img src="//fakeimg.pl/330x190/" alt="">
+                </div>
+                <div class="noticia-data-xs visible-xs visible-sm p-l-16 p-r-16 m-t-8 m-b-8">Há 3 minutos</div>
+              </div>
+            </div>
+
+            <div class="card-lt-md card-xs  noticia m-b-24 row m-0">
+              <div class="col-md-6 hidden-xs hidden-sm p-0">
+                <div class="noticia-imagem hidden-xs">
+                  <img src="//fakeimg.pl/330x190/" alt="">
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-6 p-0">
+                <div class="noticia-categoria p-l-16 p-r-16">Plenário do STF <span class="hidden-xs hidden-sm noticia-data">·</span><span class="hidden-xs hidden-sm noticia-data">Há 3 minutos</span></div>
+                <h3 class="noticia-titulo p-l-16 p-r-16 m-t-8"><a href="//stf.jus.br/portal/cms/verNoticiaDetalhe.asp?idConteudo=345036">Plenário do STF elege ministro substituto do TSE e vota lista tríplice</a></h3>
+                <p class="noticia-resumo p-l-16 p-r-16">A lista é composta pelos advogados: Tarcísio Vieira de Carvalho Neto, Sérgio Silveira Banhos e Carlos Bastide Horbach.</p>
+                <div class="noticia-compartilhar hidde-xs hidden-sm p-l-16 m-t-32">
+                  <div class="facebook">
+                    <a href="#" class="text-hide"></a>
+                  </div>
+                  <div class="twitter">
+                    <a href="#" class="text-hide"></a>
+                  </div>
+                </div>
+                <div class="noticia-imagem-xs visible-xs visible-sm">
+                  <img src="//fakeimg.pl/330x190/" alt="">
+                </div>
+                <div class="noticia-data-xs visible-xs visible-sm p-l-16 p-r-16 m-t-8 m-b-8">Há 3 minutos</div>
+              </div>
+            </div>
+
+            <div class="card-lt-md card-xs  noticia m-b-24 row m-0">
+              <div class="col-xs-12 p-0">
+                <div class="noticia-categoria p-l-16 p-r-16">Plenário do STF <span class="hidden-xs hidden-sm noticia-data">·</span><span class="hidden-xs hidden-sm noticia-data">Há 3 minutos</span></div>
+                <h3 class="noticia-titulo p-l-16 p-r-16 m-t-8"><a href="//stf.jus.br/portal/cms/verNoticiaDetalhe.asp?idConteudo=345036">Plenário do STF elege ministro substituto do TSE e vota lista tríplice</a></h3>
+                <p class="noticia-resumo p-l-16 p-r-16">A lista é composta pelos advogados: Tarcísio Vieira de Carvalho Neto, Sérgio Silveira Banhos e Carlos Bastide Horbach.</p>
+                <div class="noticia-compartilhar hidde-xs hidden-sm p-l-16 m-t-32">
+                  <div class="facebook">
+                    <a href="#" class="text-hide"></a>
+                  </div>
+                  <div class="twitter">
+                    <a href="#" class="text-hide"></a>
+                  </div>
+                </div>
+                <div class="noticia-data-xs visible-xs visible-sm p-l-16 p-r-16 m-t-8 m-b-8">Há 3 minutos</div>
+              </div>
+            </div>
+          </div>
+
+<!--            <div id="acessar-portal-noticias-jurisprudencia" class="row m-16 p-b-16">
+                <div class="col-md-2 p-0"></div>
+                <div class="col-md-8 p-0">
+                  <button class="btn btn-default-bordered btn-raised btn-upper btn-fluid btn-small p-0">Ver notícias de repercussão geral</button>
+                </div>
+                <div class="col-md-2 p-0"></div>
+            </div>-->
+            
+            <div class="titulos-secoes m-l-16 p-b-24 p-t-16">
+                Números da Repercussão Geral
+            </div>
+
+            <div id="conheca-mais-repercussao" class="card m-b-48">
+                <div class="card-titulo">Temas de Repercussão Geral</div>
+                <div class="card-conteudo row m-0 p-0">
+                    <div class="card-conteudo-cinza col-md-5 text-center p-t-16">
+                        <div class="numero-repgeral">
+                          946
+                        </div>
+                        <div class="rotulo-repgeral">
+                          Quantidade de temas
+                        </div>
+                    </div>
+                    <div class="col-md-7 text-center">
+                        <div class="numero-repgeral numero-repgeral-verde p-t-16">
+                          1.205.761
+                        </div>
+                        <div class="rotulo-repgeral">
+                            Qtd. de processos sobrestados <br />
+                            <span class="card-topico-conteudo">Fonte: CNJ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="acessar-portal-noticias" class="row m-0 m-r-8 m-l-8 m-b-48">
+                <div class="col-md-2 p-0"></div>
+                    <div class="col-md-8 p-0">
+                        <a class="btn btn-default-bordered btn-raised btn-upper btn-fluid" target="_blank" href="http://analitico.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&sheet=9a8c5198-e42f-4dcb-87ab-c35132218fd6&opt=currsel&select=clearall">Clique para filtrar com detalhes</a>
+                    </div>
+                <div class="col-md-2 p-0"></div>
+            </div>
+
+            <div id="conheca-mais-repercussao" class="card m-b-48 ">
+                <div class="card-titulo">Quantidade de temas ou sobrestados por categoria</div>
+                <div class="card-conteudo card-com-input row m-0 b-b-16 p-0">
+                    <div class="p-0 m-0">
+                        <!--<img class="full-width" src="/portalstf-static-frontend/assets/img/temas-repgeral.png" alt="temas De Repercussao Geral">-->
+                        <iframe id="repgeral-quantidade-temas-categoria" class="full-width" src='http://viana3/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=42267d4e-5e84-43fa-a444-29bd84294ae1&select=clearall' style='border:none;'></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div id="conheca-mais-repercussao" class="card m-b-48 ">
+                <div class="card-titulo">Quantidade de temas ou de processos sobrestados por data</div>
+                <div class="card-conteudo row m-0 b-b-16 p-0">
+                    <div class="p-0 m-0">
+                        <!--<img class="full-width" src="/portalstf-static-frontend/assets/img/qtd-temas.png" alt="quantidade De Temas">-->
+                        <iframe id="repgeral-quantidade-sobrestados-data" class="full-width" src='http://viana3/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=380b7320-4494-4d98-9f0f-37389bdceb46&select=clearall' style='border:none;'></iframe>
+                    </div>
+                </div>
+            </div>
+
+          <div id="conheca-mais-repercussao" class="card m-b-48 m-b-xs-0">
+            <div class="card-titulo">Conheça mais o instituto de repercussão geral</div>
+            <div class="card-conteudo row m-0 m-t-16 b-b-16 p-0">
+              <div class="col-md-7 col-lg-7">
+                <div class="card-caixa-texto m-b-16">
+                  <h4 class="m-0 m-t-8 m-b-16">Conheça o instituto de Repercussão Geral</h4>
+                  <ul>
+                    <li><a id="repgeral-conheca" href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaRepercussaoGeral&pagina=apresentacao">Conheça os fundamentos legais, finalidades, natureza e competência para o exame do instituto</a></li>
+                  </ul>
+                  <h4 class="m-0 m-t-8 m-b-16 p-t-8">Vigência</h4>
+                  <ul>
+                    <li><a id="repgeral-vigencia" href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaRepercussaoGeral&pagina=vigencia">Entenda quando o instituto entrou em vigor</a></li>
+                  </ul>
+                  <h4 class="m-0 m-t-8 m-b-16 p-t-8">Regulamentação</h4>
+                  <ul>
+                    <li><a id="repgeral-regulamentacao" href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaRepercussaoGeral&pagina=regulamentacao">Veja a legislação aplicável ao regima da Repercussão Geral</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-5 col-lg-5">
+                <div class="card-caixa-texto m-b-16">
+                  <h4 class="m-0 m-t-8 m-b-16">Questões práticas</h4>
+                  <ul>
+                    <li><a id="repgeral-questao-pratica" href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaRepercussaoGeral&pagina=processamentoMultiplo">Procedimentos adotados e decisões administrativas e judiciais sobre o Instituto no STF</a></li>
+                  </ul>
+                  <h4 class="m-0 m-t-8 m-b-16 p-t-8">Questões de ordem</h4>
+                  <ul>
+                    <li><a id="repgeral-questao-ordem" href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaRepercussaoInformacaoGeral&pagina=questoesdeordem">Conheça os temas pertinentes a todo processo submetido à sistemática de Repercussão Geral</a></li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
 
-          <div id="mais-noticias" class="mais-noticias card card-sem-sombra p-t-18 p-l-40 p-r-40 p-l-xs-0 p-r-xs-0">
-            <div id="noticias">
-              <div class="card-titulo">Mais notícias</div>
-              <div class="card-conteudo m-0 m-t-16 m-b-16 p-0">
-                <div class="card-lt-md card-xs noticia m-0 m-b-24 hidden-xs hidden-sm row">
-                  <div class="noticia-imagem col-md-6 col-lg-5 p-0">
-                    <img src="//fakeimg.pl/330x190/" alt="">
-                  </div>
-                  <div class="noticia-chamada col-md-6 col-lg-7 p-0">
-                    <div class="noticia-categoria p-l-16 p-r-16">Plenário do STF <span class="noticia-data">·</span><span class="noticia-data">Há 3 minutos</span></div>
-                    <h3 class="noticia-titulo p-l-16 p-r-16 m-t-8 m-t-8"><a href="//stf.jus.br/portal/cms/verNoticiaDetalhe.asp?idConteudo=345036">Plenário do STF elege ministro substituto do TSE e vota lista tríplice</a></h3>
-                    <p class="noticia-resumo p-l-16 p-r-16">A lista é composta pelos advogados: Tarcísio Vieira de Carvalho Neto, Sérgio Silveira Banhos e Carlos Bastide Horbach.</p>
-                    <div class="noticia-compartilhar p-l-16 m-t-32">
-                      <div class="facebook">
-                        <a href="#" class="text-hide"></a>
-                      </div>
-                      <div class="twitter">
-                        <a href="#" class="text-hide"></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-conteudo m-8 visible-xs visible-sm row">
-                  <div class="card-lt-md card-xs noticia col-xs-12 col-md-6 p-0 m-0">
-                    <div class="noticia-categoria p-l-16 p-r-16">Plenário do STF </div>
-                    <h3 class="noticia-titulo p-l-16 p-r-16 m-t-8 m-t-8"><a href="//stf.jus.br/portal/cms/verNoticiaDetalhe.asp?idConteudo=345036">Plenário do STF elege ministro substituto do TSE e vota lista tríplice</a></h3>
-                    <p class="noticia-resumo p-l-16 p-r-16">A lista é composta pelos advogados: Tarcísio Vieira de Carvalho Neto, Sérgio Silveira Banhos e Carlos Bastide Horbach.</p>
-                    <div class="mais-noticias-imagem-xs">
-                      <img src="//fakeimg.pl/330x190/" alt="">
-                    </div>
-                    <div class="noticia-data-xs p-l-16 p-r-16 m-t-8 m-b-8">Há 3 minutos</div>
-                  </div>
-                </div>
-                <div class="card-conteudo m-8 visible-xs row">
-                  <div class="card-lt-md card-xs noticia col-xs-12 col-md-6 p-0 m-0">
-                    <div class="noticia-categoria p-l-16 p-r-16">Plenário do STF </div>
-                    <h3 class="noticia-titulo p-l-16 p-r-16 m-t-8 m-t-8"><a href="//stf.jus.br/portal/cms/verNoticiaDetalhe.asp?idConteudo=345036">Plenário do STF elege ministro substituto do TSE e vota lista tríplice</a></h3>
-                    <p class="noticia-resumo p-l-16 p-r-16">A lista é composta pelos advogados: Tarcísio Vieira de Carvalho Neto, Sérgio Silveira Banhos e Carlos Bastide Horbach.</p>
-                    <div class="mais-noticias-imagem-xs">
-                      <img src="//fakeimg.pl/330x190/" alt="">
-                    </div>
-                    <div class="noticia-data-xs p-l-16 p-r-16 m-t-8 m-b-8">Há 3 minutos</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div id="ver-todas-noticias" class="row visible-xs visible-sm col-xs-12 m-0 m-b-40 m-t-16 p-0">
+<!--          <div id="acessar-portal-transparencia" class="row col-xs-12 m-0 m-b-48 m-t-48 p-0">
+            <div class="col-md-2 hidden-xs hidden-sm p-0"></div>
             <div class="col-md-8 col-xs-12 p-0 p-l-8 p-r-8">
-              <a href="#" class="btn btn-default-bordered btn-raised btn-upper btn-fluid">veja todas</a>
+              <a href="#" class="btn btn-default-bordered btn-raised btn-upper btn-fluid">Conheça mais estatísticas</a>
             </div>
-          </div>
-
-          <div class="hidden-xs hidden-sm p-l-40">
-            <h4 class="pull-left">Essa informação foi útil?</h4>
-            <button id="noticia-informacao-util-sim" class="btn btn-default-bordered btn-raised m-l-8" type="button" href="#">Sim</button>
-            <button id="noticia-informacao-util-nao" class="btn btn-default-bordered btn-raised m-l-8" type="button" href="#">Não</button>
-            <button id="sugerir-correcao-noticia" class="btn btn-default-bordered btn-raised m-l-8" type="button" href="#">Sugerir correção</button>
-            <div id="form-sugerir-correcao-noticia" class="form form-correcao m-t-24" style="display: none;">
-              <div class="form-group">
-                <textarea id="correcao-noticia" class="form-control" rows="10"></textarea>
-              </div>
-              <button id="enviar-correcao-noticia" class="btn btn-default-bordered btn-raised m-l-8" type="button" href="#">Enviar sugestão</button>
-            </div>
-          </div>
-          <div class="hidden-xs hidden-sm p-l-40 p-r-40 m-t-40">
-            <div class="card-compartilhar p-8 p-r-16">
-              <div class="impressao">
-                <button id="noticia-interno-imprimir-inferior" type="button" onclick="print()" class="btn btn-default" aria-label="Imprimir">
-                  <span class="glyphicon glyphicon-print" aria-hidden="true"></span>
-                </button>
-              </div>
-              <div class="visualizacoes pull-right">
-                12.234 pessoas já viram isso
-              </div>
-            </div>
-          </div>
+            <div class="col-md-2 hidden-xs hidden-sm p-0"></div>
+          </div>-->
         </div>
 
+        <!-- Cards laterais -->
+        <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 p-16 p-sm-8 p-xs-0 m-0">    
+            
+            <div class="teses-repgeral card m-b-24">
+                <div class="card-titulo">Teses de Repercussão Geral</div>                
+                <div class="card-conteudo p-0"> 
+                    <div class="card-caixa-texto tese-descricao p-16">
+                        Teses fixadas após julgado mérito da Repercussão Geral
+                    </div>
+                </div>                
+                <div class="card-conteudo p-b-8">                  
+                    <div class="p-b-8 card-subtitulos">
+                        <h4 class="card-subtitulo m-0 p-b-8"><a href="#">Tema 948</a><small class="p-l-8">Fixado em 02/06/2017</small></h4>
+                        <strong>RE 883542</strong> - <a href="#">Acórdão</a>
+                  </div>
+                  <div  class="card-topico-conteudo">
+                        A Contribuição Sindical Rural, Instituída pelo Decreto-Lei 1.661/1971, foi recepcionada pela ordem constitucional vigente e não configura hipótese de bitributação.
+                  </div>
+                </div>                
+                <div class="card-conteudo">                  
+                    <div class="p-b-8 card-subtitulos">
+                        <h4 class="card-subtitulo m-0 p-b-8"><a href="#">Tema 948</a><small class="p-l-8">Fixado em 02/06/2017</small></h4>
+                        <strong>RE 883542</strong> - <a href="#">Acórdão</a>
+                  </div>
+                  <div  class="card-topico-conteudo">
+                      A Contribuição Sindical Rural, Instituída pelo Decreto-Lei 1.661/1971, foi recepcionada pela ordem constitucional vigente e não configura hipótese de bitributação.
+                  </div>
+                </div>                
+                <div class="row m-16 p-0 p-b-16">
+                    <a href="#" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12">
+                      Ver todas as teses
+                    </a>
+                </div>
+            </div>
+            
+            <div id="acompanhe-votacoes" class="card m-b-24">
+                <div class="card-titulo">Acompanhe as votações</div>                
+                <div class="card-conteudo p-0"> 
+                    <div class="card-caixa-texto tese-descricao p-16">
+                        Teses de  Repercussão Geral em julgamento
+                    </div>
+                </div>
+                <div class="card-conteudo p-t-8">
+                    <ul class="card-media-lista">
+                        <li class="media-lista-item row p-0">
+                          <div class="lista-item-texto col-xs-8 p-0">
+                            <h4 class="card-subtitulo m-0 p-b-8">
+								<a href="http://www.stf.jus.br/portal/jurisprudenciaRepercussao/verAndamentoProcesso.asp?incidente=5022094&numeroProcesso=985392&classeProcesso=RE&numeroTema=946" target="_blank">Tema 942</a>
+								<small class="p-l-8">Encerra em 20/04/2017</small>
+							</h4>
+                            <strong>Previdência social</strong><br />
+                            <small>Relator Min. Luiz Fux</small><br />
+                            <small>Leading case <a href="http://www.stf.jus.br/portal/processo/verProcessoAndamento.asp?incidente=4262142" target="_blank">RE 695911</a></small>
+                          </div>
+                        </li>
+                    </ul> 
+                    <div class="card-topico-conteudo">
+                        <span class="more">
+                            Possibilidade de aplicação das regras do regime geral de previdência social para a averbação do tempo de serviço prestado em 
+                            Possibilidade de aplicação das regras do regime geral de previdência social para a averbação do tempo de serviço prestado em
+                        </span> 
+                    </div>
+                    <div class="m-t-8">
+                        <strong>Questão constitucional (8 votos)</strong>
+                        <div class="progress m-t-8">
+                            <div class="progress-bar progress-bar-success" role="progressbar" style="width:50%"></div>
+                            <div class="progress-bar progress-bar-danger" role="progressbar" style="width:20%">1</div>
+                            <div class="text-center">3</div>
+                        </div>
+                    </div>
+                    <div class="m-t-0">
+                        <strong>Repercussão Geral (8 votos)</strong>
+                        <div class="progress m-t-8">
+                            <div class="progress-bar progress-bar-success" role="progressbar" style="width:50%"></div>
+                            <div class="progress-bar progress-bar-danger" role="progressbar" style="width:20%">1</div>
+                            <div class="text-center">11</div>
+                        </div>
+                    </div>
+                    <div class="m-t-0">
+                        <strong>Reafirmação de jurisprudência (0 votos)</strong>
+                        <div class="progress m-t-8">
+                            <div class="progress-bar progress-bar-success" role="progressbar" style="width:0%"></div>
+                            <div class="progress-bar progress-bar-danger" role="progressbar" style="width:0%">1</div>
+                            <div class="text-center">11</div>
+                        </div>
+                    </div>
+
+                    <div class="row m-8 p-0 p-b-16">
+                        <a href="http://www.stf.jus.br/portal/jurisprudenciaRepercussao/verPronunciamento.asp?pronunciamento=6739100" target="_blank" class="btn btn-raised btn-default-bordered btn-upper col-xs-5 col-md-5 btn-small pull-left">
+                          Ver manifestação
+                        </a>
+                        <a href="http://www.stf.jus.br/portal/jurisprudenciaRepercussao/detalharProcesso.asp?numeroTema=492" target="_blank" class="btn btn-raised btn-default-bordered btn-upper col-xs-6 col-md-6 btn-small pull-right">
+                          Ver quadro de votos
+                        </a>
+                    </div>                      
+                    
+                    <hr />
+                    
+                    <ul class="card-media-lista">
+                        <li class="media-lista-item row p-0">
+                          <div class="lista-item-texto col-xs-8 p-0">
+                            <h4 class="card-subtitulo m-0 p-b-8">
+								<a href="http://www.stf.jus.br/portal/jurisprudenciaRepercussao/verAndamentoProcesso.asp?incidente=5022094&numeroProcesso=985392&classeProcesso=RE&numeroTema=946" target="_blank">Tema 942</a>
+								<small class="p-l-8">Encerra em 20/04/2017</small>
+							</h4>
+                            <small>Relator Min. Luiz Fux</small><br />
+                            <small>Leading case <a href="http://www.stf.jus.br/portal/processo/verProcessoAndamento.asp?incidente=4262142" target="_blank" class="leading-case">RE 695911</a></small>
+                          </div>
+                        </li>
+                    </ul> 
+                    <div class="card-topico-conteudo">
+                        <span class="more">                            
+                            Possibilidade de aplicação das regras do regime geral de previdência social para a averbação do tempo de serviço prestado em
+                            Possibilidade de aplicação das regras do regime geral de previdência social para a averbação do tempo de serviço prestado em
+                            Possibilidade de aplicação das regras do regime geral de previdência social para a averbação do tempo de serviço prestado em
+                        </span>
+                    </div>
+                    <div class="m-t-16">
+                        <strong>Questão constitucional (8 votos)</strong>
+                        <div class="progress m-t-8">
+                            <div class="progress-bar progress-bar-success" role="progressbar" style="width:50%"></div>
+                            <div class="progress-bar progress-bar-danger" role="progressbar" style="width:20%">1</div>
+                            <div class="text-center">3</div>
+                        </div>
+                    </div>
+                    <div class="m-t-0">
+                        <strong>Repercussão Geral (8 votos)</strong>
+                        <div class="progress m-t-8">
+                            <div class="progress-bar progress-bar-success" role="progressbar" style="width:50%"></div>
+                            <div class="progress-bar progress-bar-danger" role="progressbar" style="width:20%">1</div>
+                            <div class="text-center">11</div>
+                        </div>
+                    </div>
+                    <div class="m-t-0">
+                        <strong>Reafirmação de jurisprudência (0 votos)</strong>
+                        <div class="progress m-t-8">
+                            <div class="progress-bar progress-bar-success" role="progressbar" style="width:0%"></div>
+                            <div class="progress-bar progress-bar-danger" role="progressbar" style="width:0%">1</div>
+                            <div class="text-center">11</div>
+                        </div>
+                    </div>
+
+                    <div class="row m-8 p-0 p-b-16">
+                        <a href="http://www.stf.jus.br/portal/jurisprudenciaRepercussao/verPronunciamento.asp?pronunciamento=6739100" target="_blank" class="btn btn-raised btn-default-bordered btn-upper col-xs-5 col-md-5 btn-small pull-left">
+                          Ver manifestação
+                        </a>
+                        <a href="http://www.stf.jus.br/portal/jurisprudenciaRepercussao/detalharProcesso.asp?numeroTema=492" target="_blank" class="btn btn-raised btn-default-bordered btn-upper col-xs-6 col-md-6 btn-small pull-right">
+                          Ver quadro de votos
+                        </a>
+                    </div>   
+                
+                    <div class="row m-8 p-0">
+                        <a id="botao-acompanhe-todas-votacoes" href="http://www.stf.jus.br/portal/jurisprudenciaRepercussao/listarProcesso.asp?PesquisaEm=tema&PesquisaEm=controversia&PesquisaEm=ambos&situacaoRG=TODAS&situacaoAtual=S&txtTituloTema=&numeroTemaInicial=&numeroTemaFinal=&acao=pesquisarProcesso&dataInicialJulgPV=&dataFinalJulgPV=&classeProcesso=&numeroProcesso=&ministro=&ordenacao=asc&botao=" 
+							target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper btn-medium col-xs-12">
+                          Acompanhe todas as votações
+                        </a>
+                    </div>
+                </div>
+            </div>      
+            
+            <div id="temas-repercussao-geral" class="teses-repgeral card m-b-24">
+                <div class="card-titulo">Temas de Repercussão Geral</div>               
+                <div class="card-conteudo p-0"> 
+                    <div class="card-caixa-texto tese-descricao m-b-24 p-16">
+                        Recursos Extraordinários que serão analisados de acordo com os critérios de relevância jurídica, política, social ou econômica.
+                        A decisão proveniente dessa análise será aplicada posteriormente pelas instâncias inferiores, em casos idênticos. 
+                        <a href="#">Conheça mais</a>                        
+                    </div>
+                </div>                
+                <div class="card-conteudo p-t-0">   
+                    <h4 class="p-b-16"><strong>Temas com maior impacto</strong></h4>
+
+                    <div class="card-subtitulos">
+                        <h4 class="card-subtitulo m-0"><a href="#">Tema 234</a></h4>
+                        <span>Poupança</span>
+                    </div>
+                    <div class="card-topico-conteudo">
+                        334.034 (33%) processos. Desde 23/04/2010
+                    </div>
+                </div>                
+                <div class="card-conteudo p-t-0">                  
+                    <div class="card-subtitulos">
+                        <h4 class="card-subtitulo m-0"><a href="#">Tema 234</a></h4>
+                        <span>Poupança</span>
+                  </div>
+                  <div  class="card-topico-conteudo">
+                      334.034 (33%) processos. Desde 23/04/2010
+                  </div>
+                </div>
+                <div class="row m-16 p-0 p-b-16">
+                    <a href="#" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12">
+                      Ver todos os temas
+                    </a>
+                </div>
+            </div>
+
+            <div class="teses-suspensao-nacional card m-b-24">
+                <div class="card-titulo">Teses de Suspensão Nacional</div>
+
+                <div class="card-conteudo p-0"> 
+                    <div class="card-caixa-texto tese-descricao m-b-8 p-16">
+                        Temas em repercussão geral com determinação de suspensão nacional dos processos em tramitação que versem sobre a mesma questão,
+                        nos termos do <a href="#">art. 1035, §5° do CPC.</a>
+                    </div>
+                </div>
+
+                <div class="card-conteudo p-t-16">                  
+                    <div class="card-subtitulos p-b-8">
+                        <h4 class="card-subtitulo m-0"><a href="#">RE 566622</a></h4>
+                        <small>TEMA 32 - 19/10/2016</small> 
+                    </div>
+                    <div class="card-topico-conteudo">
+                        Reserva da lei complementar para instituir requisitos à concessão de imunidade tributária às entidades beneficentes de assistência social.
+                    </div>
+                </div>
+
+                <div class="card-conteudo p-t-16">                  
+                    <div class="card-subtitulos p-b-8">
+                        <h4 class="card-subtitulo m-0"><a href="#">RE 573872</a></h4>
+                        <small>TEMA 45 - 26/10/2016</small> 
+                    </div>
+                    <div class="card-topico-conteudo">
+                        Possibilidade de execução provisória de obrigação de fazer contra a Fazenda Pública.
+                    </div>
+                </div>
+
+                <div class="row m-16 p-0 p-b-16">
+                    <a href="#" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper btn-card-lateral col-xs-12">
+                      Todos com suspensão nacional
+                    </a>
+                </div>
+            </div>
+            
+            <div id="entrar-forum-repercussao" class="card m-b-24 __fundo-escuro">
+                <div class="card-conteudo p-b-0">
+                  <div class="row m-0">
+                    <div class="p-0 p-b-16">
+                      <h3 class="m-0">Fórum de Repercussão</h3>
+                      <small>Somente para órgãos credenciados</small>
+                    </div>
+                    <div class="row m-0 p-0">
+                      <div class="col-xs-12 p-0 p-b-16">
+                        <a href="/#" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12">
+                          Entrar
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            
+            <div id="mais-info" class="card m-b-48 m-b-xs-0 card-sem-sombra">
+                <div class="card-conteudo row m-0 m-t-16 b-b-16 p-0">
+                    <div class="card-caixa-texto m-b-16 p-l-40">
+                      <h4 class="m-0 m-t-8 m-b-16">Mais informações</h4>
+                      <ul>
+                        <li><a id="repgeral-boletim" href="#">Boletim anual</a></li>
+                        <li><a id="repgeral-impact" href="#">Impacto dos julgamentos</a></li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
       </div>
-
     </section>
-
+    
     <section id="mapa-do-site">
   <div class="row container center-block">
     <div class="col-xs-6 col-sm-4 col-md-20p p-0">
@@ -423,7 +744,6 @@
     </div>
   </div>
 </section>
-
     <footer id="rodape" class="p-16">
   <div class="row container center-block">
     <div class="logo-STF col-xs-12 col-md-3 col-lg-2 text-center-lt-md m-b-16">
@@ -460,5 +780,5 @@
   </div>
 </footer>
   </div>
-<script type="text/javascript" src="/portalstf-static-frontend/scripts/vendor.js"></script><script type="text/javascript" src="/portalstf-static-frontend/scripts/bundle.js"></script><script type="text/javascript" src="/portalstf-static-frontend/scripts/noticias.js"></script></body>
+<script type="text/javascript" src="/portalstf-static-frontend/scripts/vendor.js"></script><script type="text/javascript" src="/portalstf-static-frontend/scripts/bundle.js"></script><script type="text/javascript" src="/portalstf-static-frontend/scripts/repercussaogeral.js"></script></body>
 </html>
