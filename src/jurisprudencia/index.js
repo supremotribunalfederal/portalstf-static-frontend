@@ -21,7 +21,7 @@ $('#internacional-mercosul').on('click', function(){
 });
 
 $('#btnPesquisaInteiroTeor').on('click', function(){
-	ga('send', 'event', 'Jurisprudencia', 'Pesquisa Inteiro Teor', 'Clique no botão');
+	//ga('send', 'event', 'Jurisprudencia', 'Pesquisa Inteiro Teor', 'Clique no botão');
 });
 
 //informativo STF
