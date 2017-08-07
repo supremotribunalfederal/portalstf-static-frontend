@@ -22,6 +22,15 @@ $('#rodape-acessibilidade').on('click', function(){
 });
 
 
+//supremo em acao
+$('#acao-google-play').on('click', function(){
+	ga('send', 'event', 'Pagina Home', 'Supremo em Ação', 'Google Play');
+});
+$('#menu-acessibilidade').on('click', function(){
+	ga('send', 'event', 'Pagina Home', 'Supremo em Ação', 'Download PDF');
+});
+
+
 //link para sistemas
 $('#sistemas-peticionamento').on('click', function(){
 	ga('send', 'event', 'Pagina Geral', 'Link para Sistemas', 'Painel do Peticionador');
