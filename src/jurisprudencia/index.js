@@ -55,7 +55,7 @@ function pesquisarInteiroTeorProcesso(){
     if (!regra.test(txtNumeroProcesso.value)) {
         alert('Informe apenas o número do processo.');
     } else {
-		window.open('//hstf.stf.jus.br/portal/inteiroTeor/pesquisarInteiroTeor.asp?tipoPesquisa=pesquisarNumero&argumento=' + txtNumeroProcesso.value, '_blank');
+		window.open('//stf.jus.br/portal/inteiroTeor/pesquisarInteiroTeor.asp?tipoPesquisa=pesquisarNumero&argumento=' + txtNumeroProcesso.value, '_blank');
 	}
 }
 
