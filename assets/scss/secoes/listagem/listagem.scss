@@ -1,0 +1,22 @@
+@import "../../variaveis/cores";
+
+.filtros {
+
+    .filtros-data {
+        font-weight: bold;
+    }
+
+    .form-control {
+        border-radius: 0;
+    }
+
+    .input-group-addon {
+        border-radius: 0;
+        background-color: $stfBranco;
+    }
+
+    .add {
+        background-color: $stfCinza;
+        color: $stfBranco;
+    }
+}
