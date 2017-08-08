@@ -20,3 +20,13 @@
         color: $stfBranco;
     }
 }
+
+#noticias-pagina-interna-wrapper {
+    .label-filtro-selecionado {
+        font-weight: bold;
+    }
+
+    #filtro-selecionado {
+        font-size: 0.9rem;
+    }
+}
