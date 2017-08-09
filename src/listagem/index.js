@@ -1,7 +1,10 @@
 import style from '../../assets/scss/secoes/listagem/listagem.scss';
 
 import $ from 'jquery';
-//import 'jquery-ui/themes/base/core.css';
+import '!!style-loader!css-loader!jquery-ui/themes/base/core.css';
+//import '!!style-loader!css-loader!jquery-ui/themes/base/base.css';
+//import '!!style-loader!css-loader!jquery-ui/themes/base/theme.css';
+//import '!!style-loader!css-loader!jquery-ui/themes/base/all.css';
 import 'jquery-ui/ui/widgets/datepicker';
 
 $('#data-inicial').datepicker({
