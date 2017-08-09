@@ -41,6 +41,7 @@
   "dependencies": {
     "jquery": "^3.2.1",
     "moment": "^2.18.1",
-    "jquery-ui": "^1.12.1"
+    "jquery-ui": "^1.12.1",
+    "urijs": "^1.18.11"
   }
 }

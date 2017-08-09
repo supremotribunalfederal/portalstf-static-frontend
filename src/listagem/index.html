@@ -58,7 +58,7 @@
                     <span class="glyphicon glyphicon-calendar"></span>
                   </span>
                   <input type="text" id="data-inicial" class="form-control" placeholder="De" />
-                  <span class="input-group-addon add" id="btn" style="cursor:pointer;">
+                  <span class="input-group-addon add" id="btn-add-inicial" style="cursor:pointer;">
                     <span class="glyphicon glyphicon-plus"></span>
                   </span>
                 </div>
@@ -67,7 +67,7 @@
                     <span class="glyphicon glyphicon-calendar"></span>
                   </span>
                   <input type="text" id="data-final" class="form-control" placeholder="Até" />
-                  <span class="input-group-addon add" id="btn" style="cursor:pointer;">
+                  <span class="input-group-addon add" id="btn-add-final" style="cursor:pointer;">
                     <span class="glyphicon glyphicon-plus"></span>
                   </span>
                 </div>
@@ -179,17 +179,17 @@
             <nav aria-label="Paginação" class="text-center">
               <ul class="pagination">
                 <li>
-                  <a href="#" aria-label="Anterior">
+                  <a href="javascript:void(0)" id="paginacao-pagina-anterior" aria-label="Anterior">
                     <span aria-hidden="true">Anterior</span>
                   </a>
                 </li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
+                <li><a href="javascript:void(0)" data-pagina="1" class="paginacao-ir-para-pagina">1</a></li>
+                <li><a href="javascript:void(0)" data-pagina="2" class="paginacao-ir-para-pagina">2</a></li>
+                <li><a href="javascript:void(0)" data-pagina="3" class="paginacao-ir-para-pagina">3</a></li>
+                <li><a href="javascript:void(0)" data-pagina="4" class="paginacao-ir-para-pagina">4</a></li>
+                <li><a href="javascript:void(0)" data-pagina="5" class="paginacao-ir-para-pagina">5</a></li>
                 <li>
-                  <a href="#" aria-label="Próximo">
+                  <a href="javascript:void(0)" id="paginacao-proxima-pagina" aria-label="Próximo">
                     <span aria-hidden="true">Próximo</span>
                   </a>
                 </li>
