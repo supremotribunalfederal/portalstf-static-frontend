@@ -10,7 +10,7 @@ const chunksOrder = require('./chunks-order');
 
 
 const publicPath = process.env.GH_PAGES ? process.env.GH_PAGES.trim() : '/';
-const VENDORS = ['bootstrap-loader', 'moment'];
+const VENDORS = ['bootstrap-loader', 'moment', 'urijs', 'jquery-ui/ui/widgets/datepicker'];
 
 const homeHtml = new HtmlPlugin({
   template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/index.html')}`,
@@ -19,6 +19,7 @@ const homeHtml = new HtmlPlugin({
   excludeChunks: secoes
 });
 const homeCss = new ExtractTextPlugin("assets/styles/[name].css");
+const datepickerCss = new ExtractTextPlugin("assets/styles/datepicker.css");
 
 module.exports = {
   entry: {
@@ -54,6 +55,18 @@ module.exports = {
         exclude: new RegExp(`node_modules|${secoes.join('|')}`)
       },
       {
+        test: /\.css$/,
+        use: datepickerCss.extract({
+          use: 'css-loader'
+        }),
+        include: path.join(__dirname, '../node_modules/jquery-ui/themes/base')
+      },
+      {
+        test: /\.(jpg|jpeg|gif|png|svg|ico)$/i,
+        use: `url-loader?limit=10000&name=[name].[ext]&publicPath=${publicPath}&outputPath=assets/img/`,
+        include: path.join(__dirname, '../node_modules/jquery-ui/themes/base')
+      },
+      {
         test: /\.(jpg|jpeg|gif|png|svg|ico)$/i,
         use: `url-loader?limit=24000&name=[name].[ext]&publicPath=${publicPath}&outputPath=assets/img/`,
         include: PATHS.img
@@ -80,6 +93,7 @@ module.exports = {
       names: ['vendor'],
       minChunks: 2
     }),
+    datepickerCss,
     new CleanExcludedChunksCss()
   ]
 };

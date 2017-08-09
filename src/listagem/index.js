@@ -3,11 +3,10 @@ import style from '../../assets/scss/secoes/listagem/listagem.scss';
 import $ from 'jquery';
 import moment from 'moment';
 import URI from 'urijs';
-//import '!!style-loader!css-loader!jquery-ui/themes/base/core.css';
-import '!!style-loader!css-loader!jquery-ui/themes/base/base.css';
-//import '!!style-loader!css-loader!jquery-ui/themes/base/theme.css';
-//import '!!style-loader!css-loader!jquery-ui/themes/base/all.css';
-import 'jquery-ui/ui/widgets/datepicker';
+
+import 'jquery-ui/themes/base/core.css';
+import 'jquery-ui/themes/base/theme.css';
+import 'jquery-ui/themes/base/datepicker.css';
 
 $('#data-inicial').datepicker({
     dateFormat: "dd/mm/yy"
