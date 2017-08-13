@@ -4,9 +4,9 @@ import $ from 'jquery';
 import moment from 'moment';
 import URI from 'urijs';
 
-import 'jquery-ui/themes/base/core.css';
-import 'jquery-ui/themes/base/theme.css';
-import 'jquery-ui/themes/base/datepicker.css';
+//import 'jquery-ui/themes/base/core.css';
+//import 'jquery-ui/themes/base/theme.css';
+//import 'jquery-ui/themes/base/datepicker.css';
 
 $('#data-inicial').datepicker({
     dateFormat: "dd/mm/yy"
@@ -32,6 +32,7 @@ $('#btn-add-inicial').click(function() {
         var url = new URI(window.location.href);
         url.removeQuery("dataDe");
         url.addQuery("dataDe", dataInicialFormatada);
+        url.removeQuery("paginaAtual");
         window.location.href = url.toString();
     }
 });
@@ -44,6 +45,7 @@ $('#btn-add-final').click(function() {
         var url = new URI(window.location.href);
         url.removeQuery("dataA");
         url.addQuery("dataA", dataFinalFormatada);
+        url.removeQuery("paginaAtual");
         window.location.href = url.toString();
     }
 });
@@ -68,10 +70,13 @@ $('#paginacao-pagina-anterior').click(function() {
 });
 
 $('#paginacao-proxima-pagina').click(function() {
-    var url = new URI(window.location.href);
-    var paginaAtual = url.query(true).paginaAtual;
-    paginaAtual++;
-    url.removeQuery("paginaAtual");
-    url.addQuery("paginaAtual", paginaAtual);
-    window.location.href = url.toString();
+    if (!$(this).closest('li').hasClass("disabled")) {
+        var url = new URI(window.location.href);
+        var paginaAtual = url.query(true).paginaAtual;
+        if (!paginaAtual) paginaAtual = 1;
+        paginaAtual++;
+        url.removeQuery("paginaAtual");
+        url.addQuery("paginaAtual", paginaAtual);
+        window.location.href = url.toString();
+    }
 });
