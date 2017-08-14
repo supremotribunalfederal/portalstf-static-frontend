@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Supremo Tribunal Federal</title>
+  <script
+  src="http://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  crossorigin="anonymous"></script>
 </head>
 <body>
   <div id="main" class="container-fluid p-0">
@@ -14,21 +18,21 @@
 
     <section id="conteudo" class="container-fluid m-0 p-0" >
       <div class="row container center-block p-0">
-        <div id="estatisticas-transparencia" class="row">
+        <div id="estatisticas-processuais" class="row">
           <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 row m-0 p-xs-0 p-sm-8 p-b-8 ">
-            <div id="estatisticas-transparencia" class="estatisticas-transparencia card m-b-24">
-              <div class="card-titulo card-titulo-verde">Estatísticas Processuais</div>
-              <div class="card-conteudo card-conteudo-verde">
-                <div class="numero-transparencia numero-transparencia-verde">
-                  49.848
+            <div class="estatisticas-transparencia card m-b-24">
+              <div class="card-titulo">Estatísticas Processuais</div>
+              <div class="card-conteudo">
+                <div class="qlik-numero">
+                  <iframe class="iframe-qlik-numero" name="iframeTeste" id="iframeTeste" src='https://viana1/single/?appid=eb107ac5-376b-42c4-953b-2631c1806ed2&obj=UMpQXR&opt=nointeraction&select=clearall' style='border:none;'></iframe>
                 </div>
                 <div class="rotulo-transparencia m-b-16">
                   Decisões em 2017
                 </div> 
-                <div id="acessar-portal-noticias" class="row m-0 m-t-8 m-r-8 m-l-8 m-b-16">
+                <div class="row m-0 m-t-8 m-r-8 m-l-8 m-b-16">
                   <div class="col-md-2 p-0"></div>
                     <div class="col-md-12 p-0">
-                      <a class="btn btn-default-bordered btn-raised btn-upper btn-fluid btn-transparencia" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=estatistica&pagina=decisoesinicio" target="_blank">Ver mais estatísticas</a>
+                      <a id="estatisticasTransparencia" class="btn btn-default-bordered btn-raised btn-upper btn-fluid btn-transparencia" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=estatistica&pagina=decisoesinicio" target="_blank">Ver mais estatísticas</a>
                     </div>
                   <div class="col-md-2 p-0"></div>
             </div> 
@@ -39,16 +43,16 @@
             <div id="pessoas-transparencia" class="pessoas-transparencia card m-b-24">
               <div class="card-titulo">Pessoas</div>
               <div class="card-conteudo">
-                <div class="numero-transparencia">
-                  2.234
+                <div class="qlik-numero">
+                  <iframe class="iframe-qlik-numero" name="iframeTeste" id="iframeTeste" src='https://viana1/single/?appid=eb107ac5-376b-42c4-953b-2631c1806ed2&obj=UMpQXR&opt=nointeraction&select=clearall' style='border:none;'></iframe>
                 </div>
                 <div class="rotulo-transparencia m-b-16">
                   Servidores, Ministros e Juízes
                 </div> 
-                <div id="acessar-portal-noticias" class="row m-0 m-t-8 m-r-8 m-l-8 m-b-16">
+                <div class="row m-0 m-t-8 m-r-8 m-l-8 m-b-16">
                   <div class="col-md-2 p-0"></div>
                     <div class="col-md-12 p-0">
-                      <a class="btn btn-default-bordered btn-raised btn-upper btn-fluid btn-transparencia" href="http://www.stf.jus.br/portal/remuneracao/pesquisarRemuneracao.asp" target="_blank">Consulte as remunerações</a>
+                      <a id="consulteRemuneracoes" class="btn btn-default-bordered btn-raised btn-upper btn-fluid btn-transparencia" href="http://www.stf.jus.br/portal/remuneracao/pesquisarRemuneracao.asp" target="_blank">Consulte as remunerações</a>
                     </div>
                   <div class="col-md-2 p-0"></div>
             </div> 
@@ -59,16 +63,16 @@
             <div id="licitacoes-transparencia" class="licitacoes-transparencia card m-b-24">
               <div class="card-titulo">Licitações</div>
               <div class="card-conteudo">
-                <div class="numero-transparencia">
-                  87
+                <div class="qlik-numero">
+                  <iframe class="iframe-qlik-numero" name="iframeTeste" id="iframeTeste" src='https://viana1/single/?appid=eb107ac5-376b-42c4-953b-2631c1806ed2&obj=UMpQXR&opt=nointeraction&select=clearall' style='border:none;'></iframe>
                 </div>
                 <div class="rotulo-transparencia m-b-16">
                   Licitações em andamento
                 </div> 
-                <div id="acessar-portal-noticias" class="row m-0 m-t-8 m-r-8 m-l-8 m-b-16">
+                <div class="row m-0 m-t-8 m-r-8 m-l-8 m-b-16">
                   <div class="col-md-2 p-0"></div>
                     <div class="col-md-12 p-0">
-                      <a class="btn btn-default-bordered btn-raised btn-upper btn-fluid btn-transparencia" href="http://www.stf.jus.br/portal/edital/listarEdital.asp" target="_blank">Baixe editais e acompanhe</a>
+                      <a id="baixeEditais" class="btn btn-default-bordered btn-raised btn-upper btn-fluid btn-transparencia" href="http://www.stf.jus.br/portal/edital/listarEdital.asp" target="_blank">Baixe editais e acompanhe</a>
                     </div>
                   <div class="col-md-2 p-0"></div>
             </div> 
@@ -77,18 +81,18 @@
           </div>                
           <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 row m-0 p-xs-0 p-sm-8 p-b-8 ">
             <div id="compras-transparencia" class="compras-transparencia card m-b-24">
-              <div class="card-titulo card-titulo-vermelho">Compras</div>
-              <div class="card-conteudo card-conteudo-vermelho">
-                <div class="numero-transparencia numero-transparencia-vermelho">
-                  <span class="cifrao"> R$ </span> 322 milhões
+              <div class="card-titulo">Compras</div>
+              <div class="card-conteudo">
+                <div class="qlik-numero">
+                  <iframe class="iframe-qlik-numero" src='https://viana1/single/?appid=eb107ac5-376b-42c4-953b-2631c1806ed2&obj=08d3586b-0211-4447-87d6-33d33fb33be6&opt=nointeraction&select=clearall' style='border:none;'></iframe>
                 </div>
                 <div class="rotulo-transparencia m-b-16">
                   Total de compras em 2017
                 </div> 
-                <div id="acessar-portal-noticias" class="row m-0 m-t-8 m-r-8 m-l-8 m-b-16">
+                <div class="row m-0 m-t-8 m-r-8 m-l-8 m-b-16">
                   <div class="col-md-2 p-0"></div>
                     <div class="col-md-12 p-0">
-                      <a class="btn btn-default-bordered btn-raised btn-upper btn-fluid btn-transparencia" href="http://www.stf.jus.br/portal/contaPublicaCompra/pesquisarCompra.asp" target="_blank">Pesquise as compras</a>
+                      <a id="pesquiseCompras" class="btn btn-default-bordered btn-raised btn-upper btn-fluid btn-transparencia" href="http://www.stf.jus.br/portal/contaPublicaCompra/pesquisarCompra.asp" target="_blank">Pesquise as compras</a>
                     </div>
                   <div class="col-md-2 p-0"></div>
             </div> 
@@ -97,18 +101,18 @@
           </div>
           <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 row m-0 p-xs-0 p-sm-8 p-b-8 ">
             <div id="despesas-transparencia" class="despesas-transparencia card m-b-24">
-              <div class="card-titulo card-titulo-vermelho">Despesas</div>
-              <div class="card-conteudo card-conteudo-vermelho">
-                <div class="numero-transparencia numero-transparencia-vermelho">
-                  <span class="cifrao"> R$ </span> 1,3 bilhões
+              <div class="card-titulo">Despesas</div>
+              <div class="card-conteudo">
+                <div class="qlik-numero">
+                  <iframe class="iframe-qlik-numero" src='https://viana1/single/?appid=eb107ac5-376b-42c4-953b-2631c1806ed2&obj=08d3586b-0211-4447-87d6-33d33fb33be6&opt=nointeraction&select=clearall' style='border:none;'></iframe>
                 </div>
                 <div class="rotulo-transparencia m-b-16">
                   Total de despesas em 2017
                 </div> 
-                <div id="acessar-portal-noticias" class="row m-0 m-t-8 m-r-8 m-l-8 m-b-16">
+                <div class="row m-0 m-t-8 m-r-8 m-l-8 m-b-16">
                   <div class="col-md-2 p-0"></div>
                     <div class="col-md-12 p-0">
-                      <a class="btn btn-default-bordered btn-raised btn-upper btn-fluid btn-transparencia" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=transparenciaExecucaoDespesa" target="_blank">Pesquise as despesas</a>
+                      <a id="pesquiseDespesas" class="btn btn-default-bordered btn-raised btn-upper btn-fluid btn-transparencia" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=transparenciaExecucaoDespesa" target="_blank">Pesquise as despesas</a>
                     </div>
                   <div class="col-md-2 p-0"></div>
             </div> 
@@ -119,16 +123,16 @@
             <div id="contratos-transparencia" class="contratos-transparencia card m-b-24">
               <div class="card-titulo">Contratos</div>
               <div class="card-conteudo">
-                <div class="numero-transparencia">
-                  34
+                <div class="qlik-numero">
+                  <iframe class="iframe-qlik-numero" name="iframeTeste" id="iframeTeste" src='https://viana1/single/?appid=eb107ac5-376b-42c4-953b-2631c1806ed2&obj=UMpQXR&opt=nointeraction&select=clearall' style='border:none;'></iframe>
                 </div>
                 <div class="rotulo-transparencia m-b-16">
                   Contratos vigentes
                 </div> 
-                <div id="acessar-portal-noticias" class="row m-0 m-t-8 m-r-8 m-l-8 m-b-16">
+                <div class="row m-0 m-t-8 m-r-8 m-l-8 m-b-16">
                   <div class="col-md-2 p-0"></div>
                     <div class="col-md-12 p-0">
-                      <a class="btn btn-default-bordered btn-raised btn-upper btn-fluid btn-transparencia" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=transparenciaRelatorioContratos&pagina=principal" target="_blank">Veja os contratos</a>
+                      <a id="vejaContratos" class="btn btn-default-bordered btn-raised btn-upper btn-fluid btn-transparencia" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=transparenciaRelatorioContratos&pagina=principal" target="_blank">Veja os contratos</a>
                     </div>
                   <div class="col-md-2 p-0"></div>
                 </div> 
@@ -336,7 +340,7 @@
             </div>
           </div>
           <div id="controle-interno" class="controle-interno card m-b-24">
-            <div class="card-titulo">Despesas diversas</div>
+            <div class="card-titulo">Controle Interno e Externo</div>
             <div class="card-conteudo">
               <ul>
                 <li><a href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=centralDoCidadaoAcessoInformacaoAuditoria" target="_blank">Auditoria</a></li>
