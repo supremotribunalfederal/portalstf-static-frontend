@@ -15,7 +15,9 @@ const secoes = [
   'repercussaogeral',
   'jurisprudencia',
   'transparencia',
-  "listagem"
+  'listagem',
+  'ostf',
+  'quemequem'
 ];
 
 const includes = [
