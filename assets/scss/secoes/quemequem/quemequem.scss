@@ -1,37 +1,23 @@
-.pagina-interna {
-  #texto-pagina-interna {
-    .texto {
-      border-bottom: 0;
-    }
+.card-gabinete .glyphicon {
+    font-size: 1.2rem;
+}
 
-    .texto-titulo {
-      font-weight: bold;
-      font-size: 1.8rem;
-    }
+.card-gabinete h4 {
+    font-size: 1rem;
+}
 
-    .texto-gestor {
-      color: #ababab;
+.card-contatos {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+}
 
-      .glyphicon {
-        margin-right: 8px;
-      }
-    }
-
-    .texto-data {
-      color: #ababab;
-
-      .glyphicon {
-        margin-right: 8px;
-      }
-    }
-
-    .texto-conteudo {
-      text-align: justify;
-      text-justify: inter-word;
-      p {
-        font-size: 1.25rem;
-        line-height: 1.75;
-      }
-    }
-  }
+.btn {
+   padding: 4px 20px;
+   line-height: 20px;
+   height: 25px;
 }
