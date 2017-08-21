@@ -7,6 +7,7 @@
 }
 
 .card-contatos {
+    word-wrap: break-word;
     -webkit-touch-callout: none; /* iOS Safari */
       -webkit-user-select: none; /* Safari */
        -khtml-user-select: none; /* Konqueror HTML */
@@ -16,7 +17,7 @@
                                     supported by Chrome and Opera */
 }
 
-.btn {
+.btn-mais-detalhes {
    padding: 4px 20px;
    line-height: 20px;
    height: 25px;
