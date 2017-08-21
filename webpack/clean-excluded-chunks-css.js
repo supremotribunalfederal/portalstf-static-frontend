@@ -8,18 +8,20 @@ CleanExcludedChunksCss.prototype.apply = function(compiler) {
   compiler.plugin('compilation', (compilation) => {
     compilation.plugin('html-webpack-plugin-before-html-processing', (htmlPluginData, callback) => {
       const excluded = htmlPluginData.plugin.options.excludeChunks;
-      const ordered = Object.keys(htmlPluginData.assets.chunks);
+      let ordered = Object.keys(htmlPluginData.assets.chunks);
+      if (htmlPluginData.plugin.options.extraCss) {
+        ordered = [...ordered, ...htmlPluginData.plugin.options.extraCss];
+      }
 
       htmlPluginData.assets.css = htmlPluginData.assets.css
-        .filter((css) => {
+        .filter((css) => {          
           return excluded.indexOf(getChunkNameFromCss(css)) === -1;
         })
         .reduce((prev, css, index, arr) => {
           const chunk = getChunkNameFromCss(css);
           prev[index] = arr[ordered.indexOf(chunk)];
           return prev;
-        }, new Array(excluded.length));
-
+        }, []);
       callback(null, htmlPluginData);
     });
   });
