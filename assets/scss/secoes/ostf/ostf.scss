@@ -40,3 +40,31 @@ hr {
 .card-com-input {
     overflow: hidden;
 }
+
+.card-conheca-palacio {
+    
+    height: auto;
+    overflow: hidden;
+    background: url("../../img/interface/top-bg.jpg") no-repeat center center / cover;   
+    min-height: 340px;
+    
+    /*@include set-bg-img-1x-2x("../img/interface/top-bg.jpg", "../img/interface/top-bg@2x.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#dc004977', endColorstr='#00ffffff', GradientType=1)";
+    &:before {
+      background: -moz-linear-gradient(-45deg, rgba(0, 73, 119, 0.86), rgba(255, 255, 255, 0) 100%);
+      background: -webkit-linear-gradient(-45deg, rgba(0, 73, 119, 0.86), rgba(255, 255, 255, 0) 100%);
+      background: linear-gradient(135deg, rgba(0, 73, 119, 0.76), rgba(255, 255, 255, 0) 100%);
+      content: ' ';
+      display: block;
+      height: 100%;
+      position: absolute;
+      width: 100%;
+      z-index: 0;
+    }
+    
+    padding: 0 16px;
+    position: relative;*/
+}

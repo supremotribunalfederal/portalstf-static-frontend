@@ -19,3 +19,12 @@ $('#ostf-sobrestf').on('click', function(){
 $('#ostf-vermais-transparencia').on('click', function(){
 	ga('send', 'event', 'Página Sobre o STF', 'Transparência', 'Acessar portal transparência');
 });
+
+
+//gestao
+$('#ostf-gestao-equipe').on('click', function(){
+	ga('send', 'event', 'Página Sobre o STF', 'Neby Lateral', 'Quem é Quem');
+});
+$('#ostf-gestao-organograma').on('click', function(){
+	ga('send', 'event', 'Página Sobre o STF', 'Neby Lateral', 'Organograma');
+});
