@@ -18,9 +18,105 @@
         </div>
 
         <!-- Cards laterais -->
-        <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 p-16 p-sm-8 p-xs-0 m-0">           
+        <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 p-16 p-sm-8 p-xs-0 m-0">   
             
+            <div class="card m-b-24">
+                <div class="card-titulo">Gestão</div>
+                <div class="card-conteudo">
+                    <div class="m-b-24">
+                        <div class="col-xs-3 destaque-foto p-0">
+                          <a href="#"><img width="80" height="80" src="<%= require('assets/img/conteudo/agenda/carmen.jpg') %>"></a>
+                        </div>
+                        <div class="col-xs-9 pull-left">
+                            <h3 class="card-subtitulo m-0 m-b-8"><a href="#">Min. Carmen Lúcia</a></h3>
+                            <p>PRESIDENTE</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="m-b-24">
+                        <div class="col-xs-3 destaque-foto p-0">
+                          <a href="#"><img width="80" height="80" src="//fakeimg.pl/80x80/"></a>
+                        </div>
+                        <div class="col-xs-9 pull-left">
+                            <h3 class="card-subtitulo m-0 m-b-8"><a href="#">Min. Dias Toffoli</a></h3>
+                            <p>VICE-PRESIDENTE</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="row m-0 m-t-16 p-0">
+                      <a id="ostf-gestao-equipe" href="quemequem" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12 m-b-16">
+                        Veja a equipe completa
+                      </a>
+                      <a id="ostf-gestao-organograma" href="//stf.jus.br/portal/cms/verTexto.asp?servico=sobreStfOrganograma" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12">
+                        Conheça o Organograma
+                      </a>
+                    </div>
+                </div>
+            </div>
             
+           <div class="card-conheca-palacio card m-b-24">
+                <div class="legenda full-width">
+                    <div class="card-conteudo m-l-16 m-r-16">
+                        <h3 class="m-0">CONHEÇA O</h3>
+                        <h2 class="m-t-16 m-b-16">PALÁCIO DO STF</h2>  
+                        <a id="ostf-conhecer-palacio" href="//stf.jus.br/portal/cms/verTexto.asp?servico=sobreStfVisitacaoPublica" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12">
+                            Quero visitar pessoalmente
+                        </a>
+                    </div>
+                </div>                
+            </div>
+            
+            <div id="transparencia-ostf" class="transparencia card m-b-24">
+                <div class="card-titulo">Transparência</div>
+                <div class="card-conteudo">
+                  <ul class="card-media-lista">
+                    <li class="media-lista-item row p-0">
+                      <div class="lista-item-image col-xs-4 p-0 m-r-16">
+                        <img src="<%= require('assets/img/transparencia/pessoas.png') %>"
+                             srcset="<%= require('assets/img/transparencia/pessoas@2x.png') %> 2x"  alt="">
+                      </div>
+                      <div class="lista-item-texto col-xs-8 p-0">
+                        <h4 class="m-0"><strong>Gestão de Pessoas</strong></h4>
+                        <a id="ostf-gestao-pessoas" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=transparenciaRelatorioAtividades">Remuneração, Servidores, Membros do Tribunal, Magistrados Convocados, Indenizações, etc.</a>
+                      </div>
+                    </li>
+
+                    <li class="media-lista-item row p-0">
+                      <div class="lista-item-image col-xs-4 p-0 m-r-16">
+                        <img src="<%= require('assets/img/transparencia/licitacoes.png') %>"
+                             srcset="<%= require('assets/img/transparencia/licitacoes@2x.png') %> 2x"  alt="">
+                      </div>
+                      <div class="lista-item-texto col-xs-8 p-0">
+                        <h4 class="m-0"><strong>Licitações</strong></h4>
+                        <a id="ostf-licitacoes" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=centralDoCidadaoAcessoInformacaoLicitacaoContrato">Concursos, Concorrência, Convites, Credenciamento, Leilão, Pregão, Tomada de preços.</a>
+                      </div>
+                    </li>
+
+                    <li class="media-lista-item row p-0">
+                      <div class="lista-item-image col-xs-4 p-0 m-r-16">
+                        <img src="<%= require('assets/img/transparencia/orcamento.png') %>"
+                             srcset="<%= require('assets/img/transparencia/orcamento@2x.png') %> 2x"  alt="">
+                      </div>
+                      <div class="lista-item-texto col-xs-8 p-0">
+                        <h4 class="m-0"><strong>Orçamento e Finanças</strong></h4>
+                        <a id="ostf-orcamento" href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=centralDoCidadaoAcessoInformacaoGestaoOrcamentaria">Compras, Despesas, Consumo, Contratos, Execução orçamentária, Dados diários de despesas.</a>
+                      </div>
+                    </li>
+
+                    <li class="media-lista-item row m-0 p-0">
+                      <div class="lista-item-image col-xs-4 p-0 m-r-16">
+                        <img src="<%= require('assets/img/transparencia/sobre.png') %>"
+                             srcset="<%= require('assets/img/transparencia/sobre@2x.png') %> 2x"  alt="">
+                      </div>
+                      <div class="lista-item-texto col-xs-8 p-0">
+                        <h4 class="m-0"><strong>Conheça mais sobre o STF</strong></h4>
+                        <a id="ostf-sobrestf" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=centralDoCidadaoAcessoInformacaoGestaoPessoa">Composição do STF, Estatísticas Processuais, Serviços ao Cidadão, Estratégia Institucional e História.</a>
+                      </div>
+                    </li>
+                  </ul>
+                  <a target="_blank" id="ostf-vermais-transparencia" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=centralDoCidadaoAcessoInformacao" class="btn btn-fluid btn-upper btn-default-bordered btn-raised p-l-xs-8 p-r-xs-8 m-t-16">Ver o portal da transparência</a>
+                </div>
+              </div>            
         </div>
       </div>
     </section>

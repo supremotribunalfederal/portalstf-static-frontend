@@ -40,3 +40,25 @@ hr {
 .card-com-input {
     overflow: hidden;
 }
+
+.card-conheca-palacio {
+    position: relative;
+    overflow: hidden;
+    background: url("../../img/interface/top-bg.jpg") no-repeat center -100px / cover;   
+    height: 420px;
+    .legenda {
+        position: absolute;
+        bottom: 0;
+        height: 160px;
+        background: linear-gradient(135deg, rgba(105, 100, 94, 100), rgba(105, 100, 94, 0) 100%);
+        h3 {
+            font-size: 1.2rem;
+            color: white;
+            font-weight: bold;
+        }
+        h2 {
+            color: white;
+            font-weight: bold;
+        }
+    }
+}
