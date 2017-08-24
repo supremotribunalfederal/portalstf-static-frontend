@@ -10,7 +10,7 @@ $('.dropdown-toggle').hover(function() {
 
 $(document).ready(function(){
     var pesquisaSelecionada = $("#abaSelecionada").val();
-    
+    $('#erro-pesquisa').hide();
     //se nao for a pesquisa de jurisprudencia, esconde botoes da pesquisa jurisprudencia
     if(pesquisaSelecionada != 4){
         $('.botoes-pesquisa-jurisprudencia span').hide();
@@ -40,6 +40,7 @@ $("#menuPesquisa li span").on("click", function() {
 
     $('.botoes-pesquisa-jurisprudencia span').hide();
     $('.pesquisa-jurisprudencia-links-inferiores').hide();   
+    $('#erro-pesquisa').hide();
     
     //Ativa a aba clicada.
     $(this).addClass("ativo");
@@ -80,7 +81,8 @@ $("#menuPesquisa li span").on("click", function() {
 //--------------------------------
 // controle dos botoes de pesquisa da home na versao mobile
 
-$("#menu-pesquisa-mobile").on("change", function() {        
+$("#menu-pesquisa-mobile").on("change", function() { 
+    $('#erro-pesquisa').hide();
     $('.pesquisa-jurisprudencia-links-inferiores').hide();  
     var placeholder = "";
     var aba = $( "#menu-pesquisa-mobile option:selected" ).data("aba");    
@@ -122,10 +124,14 @@ function realizarPesquisa(){
     var assunto = $("#abaSelecionada").val();
     var termoPesquisa = $("#pesquisaPrincipal").val();
     
-    if (assunto == "4") {
-        location.href = "//stf.jus.br/portal/jurisprudencia/listarConsolidada.asp?base=baseAcordaos&base=baseRepercussao&url=&txtPesquisaLivre=" + termoPesquisa;
-    } else {
-        location.href = "//stf.jus.br/portal/pesquisa/listarPesquisa.asp?termo=" + termoPesquisa + "&assunto=" + assunto;
+    if(!($.trim(termoPesquisa))){
+        $( "#erro-pesquisa" ).show('slow');
+    } else {        
+        if (assunto == "4") {
+            location.href = "//stf.jus.br/portal/jurisprudencia/listarConsolidada.asp?base=baseAcordaos&base=baseRepercussao&url=&txtPesquisaLivre=" + termoPesquisa;
+        } else {
+            location.href = "//stf.jus.br/portal/pesquisa/listarPesquisa.asp?termo=" + termoPesquisa + "&assunto=" + assunto;
+        }
     }
 }
 
