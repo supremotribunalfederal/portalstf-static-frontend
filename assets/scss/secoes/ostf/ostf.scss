@@ -63,3 +63,22 @@ hr {
         }
     }
 }
+
+.destaques {
+    .circle{
+        width: 100px;
+        height: 100px;
+        background: $stfCinzaClaro;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+        text-align: center;
+        vertical-align: middle;
+        display: inline-block;
+        
+        .glyphicon{
+            padding-top: 35%;
+            font-size: 1.4rem;
+        }
+    }
+}
