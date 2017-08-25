@@ -96,3 +96,16 @@ hr {
         color: white;
     }
 }
+
+.plenario-stf h2, .plenario-stf p {
+    font-style: italic;
+    color: $stfCinza;
+}
+
+.plenario-stf img {
+    -webkit-filter: grayscale(100%);
+       -moz-filter: grayscale(100%);
+         -o-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+            filter: grayscale(100%); 
+}
