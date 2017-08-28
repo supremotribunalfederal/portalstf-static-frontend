@@ -1,0 +1,65 @@
+@import "../../variaveis/cores";
+
+.campo-texto, .campo-texto:focus {
+    outline: 0;
+}
+
+.titulos-secoes {
+    color: #006998;
+    font-size: 1.5rem;
+    margin: 16px 0; 
+    font-weight: bold;
+}
+
+.card-conteudo-botoes {
+    height: 140px;
+}
+
+.pesquisa-sumula {
+    height: 130px;
+}
+
+#menu-pesquisa-sumula-jurisprudencia {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 8px;
+}
+
+.pesquisa-informativo {
+    height: 120px;
+}
+
+hr {
+    border-top: 2px solid rgba(0, 0, 0, 0.2);    
+}
+
+.card-conteudo p a {
+    color: $stfAzulEscuro;
+}
+
+.card-com-input {
+    overflow: hidden;
+}
+
+.card-conheca-palacio {
+    position: relative;
+    overflow: hidden;
+    background: url("../../img/interface/top-bg.jpg") no-repeat center -100px / cover;   
+    height: 420px;
+    .legenda {
+        position: absolute;
+        bottom: 0;
+        height: 160px;
+        background: linear-gradient(135deg, rgba(105, 100, 94, 100), rgba(105, 100, 94, 0) 172%);
+        /*background: linear-gradient(135deg, rgb(160,160,160, 100), rgb(160,160,160, 0) 100%);*/
+        h3 {
+            font-size: 1.2rem;
+            color: white;
+            font-weight: bold;
+        }
+        h2 {
+            color: white;
+            font-weight: bold;
+        }
+    }
+}
