@@ -16,7 +16,7 @@ const homeHtml = new HtmlPlugin({
   template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/index.html')}`,
   chunks: ['vendor', 'bundle'],
   chunksSortMode: chunksOrder(['vendor', 'bundle']),
-  excludeChunks: secoes
+  excludeChunks: [...secoes, 'datepicker']
 });
 const homeCss = new ExtractTextPlugin("assets/styles/[name].css");
 const datepickerCss = new ExtractTextPlugin("assets/styles/datepicker.css");
@@ -55,6 +55,18 @@ module.exports = {
         exclude: new RegExp(`node_modules|${secoes.join('|')}`)
       },
       {
+        test: /\.css$/,
+        use: datepickerCss.extract({
+          use: 'css-loader'
+        }),
+        include: path.join(PATHS.node, '/jquery-ui/themes/base')
+      },
+      {
+        test: /\.(jpg|jpeg|gif|png|svg|ico)$/i,
+        use: `url-loader?limit=24000&name=[name].[ext]&publicPath=${publicPath}&outputPath=assets/img/`,
+        include: path.join(PATHS.node, '/jquery-ui/themes/base')
+      },
+      {
         test: /\.(jpg|jpeg|gif|png|svg|ico)$/i,
         use: `url-loader?limit=24000&name=[name].[ext]&publicPath=${publicPath}&outputPath=assets/img/`,
         include: PATHS.img
@@ -77,6 +89,7 @@ module.exports = {
   plugins: [
     homeHtml,
     homeCss,
+    datepickerCss,
     new webpack.optimize.CommonsChunkPlugin({
       names: ['vendor'],
       minChunks: 2

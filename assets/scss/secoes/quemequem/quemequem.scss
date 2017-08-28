@@ -1,0 +1,24 @@
+.card-gabinete .glyphicon {
+    font-size: 1.2rem;
+}
+
+.card-gabinete h4 {
+    font-size: 1rem;
+}
+
+.card-contatos {
+    word-wrap: break-word;
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+}
+
+.btn-mais-detalhes {
+   padding: 4px 20px;
+   line-height: 20px;
+   height: 25px;
+}
