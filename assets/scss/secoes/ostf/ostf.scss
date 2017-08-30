@@ -97,6 +97,13 @@ hr {
     }
 }
 
+.constituicao-federal {
+    background: url("../../img/interface/fundo-constituicao.jpg") no-repeat center center / cover;   
+    h3, h4 {
+        color: white;
+    }
+}
+
 .plenario-stf h2, .plenario-stf p {
     font-style: italic;
     color: $stfCinza;
