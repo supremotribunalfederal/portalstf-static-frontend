@@ -6,7 +6,7 @@
             </p>
         </div>
         <div class="pesquisa-conteudo clearfix">
-            <div class="pesquisa-titulo m-t-16 m-b-16">
+            <div class="pesquisa-titulo m-t-xs-48 m-b-16">
                 <button class="btn btn-default btn-icone pesquisa-btn-interna pull-right __fundo-transparente">
                     <i class="glyphicon glyphicon-search" aria-label="abrir pesquisa"></i>
                 </button>
@@ -15,11 +15,14 @@
             <div class="pesquisa-campos">
                 <div class="form-inline">
                     <div class="campo-container">
-                        <input class="campo-texto campo-texto-repgeral" type="text" name="pesquisaPrincipal" id="pesquisaPrincipal" placeholder="Digite um tema para pesquisar">
-                        <button class="btn btn-default pull-right">
-                            <i class="glyphicon glyphicon-search hidden-md hidden-lg"></i>
-                            <span class="hidden-xs hidden-sm" id="btnPesquisar">Pesquisar</span>
-                        </button>
+                        <form id="pesquisa-principal" action="javascript:void(0);">
+                            <input class="campo-texto campo-texto-repgeral" type="text" name="pesquisaPrincipal" id="pesquisaPrincipal" placeholder="Digite um tema para pesquisar">
+                            <button form="pesquisa-principal" id="btnPesquisar" class="btn btn-default pull-right">
+                                <i class="glyphicon glyphicon-search hidden-md hidden-lg"></i>
+                                <span class="hidden-xs hidden-sm" id="btnPesquisar">Pesquisar</span>
+                            </button>
+                            <div class="hidden pesquisa-jurisprudencia-links-inferiores"></div>
+                        </form>
                     </div>
                 </div>
             </div>
