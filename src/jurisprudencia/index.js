@@ -84,3 +84,33 @@ $('#pesquisa-processo').submit(function(e){
         pesquisarInteiroTeorProcesso();        
     }
 });
+
+//Pesquisa de informativo semanal
+$('#pesquisa-informativo-semanal').submit(function(e){
+    var form = $('#pesquisa-informativo-semanal');
+    form.validate({
+        errorPlacement: function(label, element) {
+            label.addClass('alert alert-danger col-md-10 m-t-8 m-b-0');
+            label.insertAfter('#btn-pesquisa-informativo');
+        },        
+        rules: {
+            pesquisa: {
+                required: true,
+            }
+        },
+        messages: {
+            pesquisa: {
+                required: "Informe o termo para a busca",
+            }
+        }
+    });
+    
+    if(form.valid()){
+       pesquisarTermoInformativoSTF($("#txt-pesquisa-informativo").val());    
+    }
+});
+
+function pesquisarTermoInformativoSTF(termo) {
+    var url = "http://www.stf.jus.br/portal/informativo/pesquisarInformativo.asp?s1=" + termo;
+    window.open(url, "_blank");
+}

@@ -167,35 +167,53 @@ function selecionarDataJulgamento(data) {
     location.href = "//stf.jus.br/portal/pauta/listarCalendario.asp?data=" + data;
 }
 
+
+//criando o método de regex para o validador do processo pautado
+$.validator.addMethod('regex',
+        function(value) {
+            var regra = /(\w{2}|\w{4}) \d{2,6}/;
+            return regra.test(value);
+        },
+        "O código de processo informado não é válido"
+);
+
+//Pesquisa processo pautado - calendario
+$('#pesquisa-processo-pautado').submit(function(e){
+    var form = $('#pesquisa-processo-pautado');
+    //JQUERY validation
+    form.validate({
+        //escolher onde posicionar a mensagem de erro
+        errorPlacement: function(label, element) {
+            label.addClass('alert alert-danger col-xs-10 m-t-8 m-b-0');
+            label.insertAfter('#botao-pesquisa-pauta');
+        },
+        
+        wrapper: 'span',
+        
+        rules: {
+            pesquisa_pauta: {
+                required: true,
+                regex: true
+            }
+        },
+        messages: {
+            pesquisa_pauta: {
+                required: "Informe o termo para a pesquisa",
+            }
+        }
+    });
+    
+    if( form.valid()){
+        pesquisarProcessoConstaPauta();        
+    }
+});
+
 function pesquisarProcessoConstaPauta() {
     var inputProcesso = document.getElementById('pesquisa_pauta');
-    var regra = /(\w{2}|\w{4}) \d{2,6}/;
-
-    if (!regra.test(inputProcesso.value)) {
-        alert('O número do processo informado é inválido.');
-    } else {
         var processo = inputProcesso.value.split(' ');
         var classe = processo[0].trim().toUpperCase();
         var numero = processo[1].trim();
-
-        location.href = "//www.stf.jus.br/portal/pauta/listarProcesso.asp?classe=" + classe + "&argumento=" + numero;
-    }
+        window.open("//www.stf.jus.br/portal/pauta/listarProcesso.asp?classe=" + classe + "&argumento=" + numero, '_blank');
 }
-
-function pesquisarProcessoPauta(event) {
-    if (event.keyCode == 13) {
-        pesquisarProcessoConstaPauta();
-    }
-}
-
-$("#btnPesquisarProcessoPauta").click(function(){
-	pesquisarProcessoConstaPauta();
-});
-
-$("#pesquisa_pauta").keyup(function(e){
-    if(e.keyCode == 13) {
-        pesquisarProcessoConstaPauta();
-    }
-});
 
 /* ---------------------------------------------------------------------------------------------------------------- */
