@@ -98,7 +98,7 @@
                 Números da Repercussão Geral
             </div>
 
-            <div id="conheca-mais-repercussao" class="card m-b-48">
+            <div id="temas-repercussao" class="card m-b-48">
                 <div class="card-titulo">Temas de Repercussão Geral</div>
                 <div class="card-conteudo row m-0 p-0">
                     <div class="col-md-5 text-center p-t-16">
@@ -106,7 +106,7 @@
                           <iframe class="iframe-qlik-numero" name="iframeTemas" id="iframeTemas" src="http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=UMpQXR&opt=nointeraction&select=clearall" style="border:none;"></iframe>
                         </div>
                         
-                        <div class="rotulo-repgeral">
+                        <div class="rotulo-qlik-numero">
                           Quantidade de temas
                         </div>
                     </div>
@@ -114,7 +114,7 @@
                         <div class="qlik-numero">
                             <iframe class="iframe-qlik-numero" name="iframeSobrestados" id="iframeSobrestados" src="http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=08d3586b-0211-4447-87d6-33d33fb33be6&opt=nointeraction&select=clearall" style="border:none;"></iframe>
                         </div>
-                        <div class="rotulo-repgeral">
+                        <div class="rotulo-qlik-numero">
                             Qtd. de processos sobrestados <br />
                             <span class="card-topico-conteudo">Fonte: CNJ</span>
                         </div>
@@ -134,8 +134,7 @@
                 <div class="card-titulo">Quantidade de temas por categoria</div>
                 <div class="card-conteudo card-com-input row m-0 b-b-16 p-0">
                     <div class="p-0 m-0">
-                        <!--<img class="full-width" src="<%= require('assets/img/repgeral/temas-repgeral.png') %>" alt="temas De Repercussao Geral">-->
-                        <iframe id="repgeral-qtd-temas-categoria" class="full-width" src='//viana3/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=42267d4e-5e84-43fa-a444-29bd84294ae1&select=clearall' style='border:none;'></iframe>
+                        <iframe id="repgeral-qtd-temas-categoria" class="full-width" src="http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=42267d4e-5e84-43fa-a444-29bd84294ae1&opt=nointeraction%2Cnoselections&select=clearall" style="border:none;"></iframe>
                     </div>
                 </div>
             </div>
@@ -144,8 +143,7 @@
                 <div class="card-titulo">Quantidade de processos sobrestados por categoria</div>
                 <div class="card-conteudo card-com-input row m-0 b-b-16 p-0">
                     <div class="p-0 m-0">
-                        <!--<iframe id="repgeral-qtd-sobrestados-categoria" class="full-width" src='//analitico.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=9b9149cd-d382-4e97-acd3-111e3fdf782a&select=clearall' style='border:none;'></iframe>-->
-                        <iframe id="repgeral-qtd-sobrestados-categoria" class="full-width" src='//viana3/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=9b9149cd-d382-4e97-acd3-111e3fdf782a&select=clearall' style='border:none;'></iframe>
+                        <iframe id="repgeral-qtd-sobrestados-categoria" class="full-width" src="http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=9b9149cd-d382-4e97-acd3-111e3fdf782a&opt=nointeraction%2Cnoselections&select=clearall" style="border:none;"></iframe>
                     </div>
                 </div>
             </div>
@@ -156,8 +154,7 @@
                 <div class="card-titulo">Quantidade de temas por data</div>
                 <div class="card-conteudo row m-0 b-b-16 p-0">
                     <div class="p-0 m-0">
-                        <!--<iframe id="repgeral-qtd-temas-data" class="full-width" src='//analitico.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=CFUqHJw&select=clearall' style='border:none;'></iframe>--> 
-                        <iframe id="repgeral-qtd-temas-data" class="full-width" src='//viana3/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=CFUqHJw&select=clearall' style='border:none;'></iframe> 
+                        <iframe id="repgeral-qtd-temas-data" class="full-width" src="http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=CFUqHJw&opt=nointeraction%2Cnoselections&select=clearall" style="border:none;"></iframe> 
                     </div>
                 </div>
             </div>
@@ -166,8 +163,7 @@
                 <div class="card-titulo">Quantidade de processos sobrestados por data</div>
                 <div class="card-conteudo row m-0 b-b-16 p-0">
                     <div class="p-0 m-0">
-                        <!--<img class="full-width" src="<%= require('assets/img/repgeral/qtd-temas.png') %>" alt="quantidade De Temas">-->
-                        <iframe id="repgeral-qtd-sobrestados-data" class="full-width" src='//viana3/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=380b7320-4494-4d98-9f0f-37389bdceb46&select=clearall' style='border:none;'></iframe>
+                        <iframe id="repgeral-qtd-sobrestados-data" class="full-width" src="http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=380b7320-4494-4d98-9f0f-37389bdceb46&opt=nointeraction%2Cnoselections&select=clearall" style="border:none;"></iframe>
                     </div>
                 </div>
             </div>

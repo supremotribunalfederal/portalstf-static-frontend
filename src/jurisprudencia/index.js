@@ -1,5 +1,6 @@
 import style from '../../assets/scss/secoes/jurisprudencia/jurisprudencia.scss';
 import $ from 'jquery';
+import validation from 'jquery-validation';
 
 //GOOGLE ANALYTICS
 
@@ -49,24 +50,67 @@ $('#juris-ver-todas-sumulas').on('click', function(){
 });
 
 function pesquisarInteiroTeorProcesso(){
-	var txtNumeroProcesso = document.getElementById('txtNumeroProcesso');
-    var regra = /\d{1,6}/;
-
-    if (!regra.test(txtNumeroProcesso.value)) {
-        alert('Informe apenas o número do processo.');
-    } else {
-		window.open('//stf.jus.br/portal/inteiroTeor/pesquisarInteiroTeor.asp?tipoPesquisa=pesquisarNumero&argumento=' + txtNumeroProcesso.value, '_blank');
-	}
+    window.open('//stf.jus.br/portal/inteiroTeor/pesquisarInteiroTeor.asp?tipoPesquisa=pesquisarNumero&argumento=' + txtNumeroProcesso.value, '_blank');
 }
 
 //Pesquisa de inteiro teor de acordão.
-$('#btnPesquisaInteiroTeor').click(function(){
-	pesquisarInteiroTeorProcesso();
+$('#pesquisa-processo').submit(function(e){
+    
+    //JQUERY validation
+    $('#pesquisa-processo').validate({
+        //escolher onde posicionar a mensagem de erro
+        errorPlacement: function(label, element) {
+            label.addClass('alert alert-danger col-md-12 m-t-8 m-b-0');
+            label.insertAfter('#btnPesquisaInteiroTeor');
+        },
+        
+        wrapper: 'span',
+        
+        rules: {
+            pesquisa: {
+                required: true,
+                digits: true,
+            }
+        },
+        messages: {
+            pesquisa: {
+                required: "Informe o número do processo",
+                digits: "Utilize apenas números na busca"
+            }
+        }
+    });
+    
+    if( $('#pesquisa-processo').valid()){
+        pesquisarInteiroTeorProcesso();        
+    }
 });
 
-$('#txtNumeroProcesso').keyup(function(e){
-	if (e.keyCode == 13){
-		pesquisarInteiroTeorProcesso();
-		//ga('send', 'event', 'Jurisprudencia', 'Pesquisa Inteiro Teor', 'Enter pressionado');
-	}
+//Pesquisa de informativo semanal
+$('#pesquisa-informativo-semanal').submit(function(e){
+    var form = $('#pesquisa-informativo-semanal');
+    form.validate({
+        errorPlacement: function(label, element) {
+            label.addClass('alert alert-danger col-md-10 m-t-8 m-b-0');
+            label.insertAfter('#btn-pesquisa-informativo');
+        },        
+        rules: {
+            pesquisa: {
+                required: true,
+            }
+        },
+        messages: {
+            pesquisa: {
+                required: "Informe o termo para a busca",
+            }
+        }
+    });
+    
+    if(form.valid()){
+       pesquisarTermoInformativoSTF($("#txt-pesquisa-informativo").val());    
+    }
 });
+
+function pesquisarTermoInformativoSTF(termo) {
+    var url = "http://www.stf.jus.br/portal/informativo/pesquisarInformativo.asp?s1=" + termo;
+    window.open(url, "_blank");
+}

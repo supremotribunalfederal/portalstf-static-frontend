@@ -4,7 +4,8 @@ import $ from 'jquery';
 //event tracker do Google Analytics
 
 //include de pesquisa
-$('#btnPesquisarTransparencia').on('click', function(){
+$('#btnPesquisarDadosTransparencia').on('click', function(){
+	console.log('ok');
 	ga('send', 'event', 'Pagina Transparencia', 'Pesquisa', 'Pesquisa topo');
 });
 

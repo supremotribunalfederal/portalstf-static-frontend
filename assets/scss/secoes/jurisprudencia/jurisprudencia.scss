@@ -1,15 +1,14 @@
 @import "../../variaveis/cores";
 
+.campo-texto, .campo-texto:focus {
+    outline: 0;
+}
+
 .titulos-secoes {
     color: #006998;
     font-size: 1.5rem;
     margin: 16px 0; 
     font-weight: bold;
-}
-
-.btn-small {
-    padding: 0 14px;
-    font-size: 0.75rem;
 }
 
 .card-conteudo-botoes {
@@ -36,4 +35,13 @@ hr {
 
 .card-conteudo p a {
     color: $stfAzulEscuro;
+}
+
+.card-com-input {
+    overflow: hidden;
+}
+
+
+#txtNumeroProcesso-error {
+    /*position: relative;*/
 }

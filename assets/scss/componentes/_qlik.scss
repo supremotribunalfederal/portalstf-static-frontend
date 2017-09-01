@@ -1,5 +1,5 @@
 .qlik-numero {
-    color: $stfAzulEscuro;
+    color: $stfAzulQlik;
     font-size: 3rem;
     font-weight: 100;
     text-align: center;
@@ -15,4 +15,15 @@
     transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
     z-index: -1;  
+}
+
+.rotulo-qlik-numero {
+    font-size: 0.95rem;
+    margin: 0 8px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.estatisticas-grafico {
+    height: 350px;
 }

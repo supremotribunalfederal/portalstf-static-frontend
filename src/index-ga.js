@@ -1,4 +1,5 @@
 import $ from 'jquery';
+
 //event tracker do Google Analytics
 
 
@@ -168,6 +169,8 @@ $('#supremo-em-numeros').on('click', function(){
 });
 
 //Notícias
+
+/* colocados dentro do js de notícias
 $('#noticia-informacao-util-sim').on('click', function(){
 	ga('send', 'event', 'Notícia', 'Classificação de utilidade', 'Sim');
 });
@@ -182,7 +185,7 @@ $('#noticia-interno-imprimir-inferior').on('click', function() {
 
 $('#noticia-interno-imprimir-superior').on('click', function() {
 	ga('send', 'event', 'Notícia', 'Impressão', 'Imprimir');
-});
+});*/
 
 //acessar portal de noticias
 $('#acessarNoticias').on('click', function(){
