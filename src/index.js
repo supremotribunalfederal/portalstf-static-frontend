@@ -216,4 +216,17 @@ function pesquisarProcessoConstaPauta() {
     window.open("//www.stf.jus.br/portal/pauta/listarProcesso.asp?classe=" + classe + "&argumento=" + numero, '_blank');
 }
 
+//Botão ACESSAR O PORTAL DE NOTÍCIAS
+$('#btnAcessarPortalNocicitas').on('click', function() {
+    ga('send', 'event', 'Página Geral', 'Notícias', 'Botão ACESSAR O PORTAL DE NOTÍCIAS');
+    
+    var pagina = 'listarNoticias.asp';
+    
+    if (window.location.port == '3000'){
+        pagina = 'index.html';
+    }
+
+    location.href = window.location.origin + window.location.pathname + 'listagem/' + pagina;
+});
+
 /* ---------------------------------------------------------------------------------------------------------------- */
