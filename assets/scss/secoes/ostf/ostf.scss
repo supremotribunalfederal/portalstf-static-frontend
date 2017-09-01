@@ -63,3 +63,56 @@ hr {
         }
     }
 }
+
+.destaques {
+    .circle{
+        width: 100px;
+        height: 100px;
+        background: $stfCinzaClaro;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+        text-align: center;
+        vertical-align: middle;
+        display: inline-block;
+        
+        .glyphicon{
+            padding-top: 35%;
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.constituicao {
+    background-color: rgb(0, 142, 92);
+    h3, h4 {
+        color: white;
+    }
+}
+
+.regimento-interno {
+    background: url("../../img/interface/fundo-regimento-interno.png") no-repeat center center / cover;   
+    h3, h4 {
+        color: white;
+    }
+}
+
+.constituicao-federal {
+    background: url("../../img/interface/fundo-constituicao.jpg") no-repeat center center / cover;   
+    h3, h4 {
+        color: white;
+    }
+}
+
+.plenario-stf h2, .plenario-stf p {
+    font-style: italic;
+    color: $stfCinza;
+}
+
+.plenario-stf img {
+    -webkit-filter: grayscale(100%);
+       -moz-filter: grayscale(100%);
+         -o-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+            filter: grayscale(100%); 
+}

@@ -10,11 +10,15 @@
         <div class="pesquisa-campos">
             <div class="form-inline">
               <div class="campo-container">
-                <input class="campo-texto campo-texto-repgeral" type="text" name="pesquisaTransparencia" id="pesquisaTransparencia" placeholder="Pesquise compras, licitações, objetos contratados, fornecedores...">
-                <button class="btn btn-default pull-right">
-                  <i class="glyphicon glyphicon-search hidden-md hidden-lg"></i>
-                  <span class="hidden-xs hidden-sm" id="btnPesquisarTransparencia">Pesquisar</span>
-                </button>
+                <form id="pesquisa-principal" action="javascript:void(0);">
+                    <input class="campo-texto campo-texto-repgeral" type="text" name="pesquisaPrincipal" id="pesquisaPrincipal" placeholder="Pesquise compras, licitações, objetos contratados, fornecedores...">
+                    <input type="hidden" id="abaSelecionada" value="6" />
+                    <button form="pesquisa-principal" id="btnPesquisarDadosTransparencia" class="btn btn-default pull-right">
+                      <i class="glyphicon glyphicon-search hidden-md hidden-lg"></i>
+                      <span class="hidden-xs hidden-sm" id="btnPesquisarTransparencia">Pesquisar</span>
+                    </button>
+                    <div class="hidden pesquisa-jurisprudencia-links-inferiores"></div>
+                </form>
               </div>
             </div>
           </div>
