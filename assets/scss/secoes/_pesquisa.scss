@@ -1,10 +1,32 @@
 .pesquisa {
-  @include set-bg-img-1x-2x("../img/interface/top-bg-blue.jpg", "../img/interface/top-bg-blue@2x.jpg");
+  @include set-bg-img-1x-2x("../img/interface/top-bg.jpg", "../img/interface/top-bg@2x.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#dc004977', endColorstr='#00ffffff', GradientType=1)";
+  &:before {
+    background: -moz-linear-gradient(-45deg, rgba(0, 73, 119, 0.86), rgba(255, 255, 255, 0) 100%);
+    background: -webkit-linear-gradient(-45deg, rgba(0, 73, 119, 0.86), rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(135deg, rgba(0, 73, 119, 0.76), rgba(255, 255, 255, 0) 100%);
+    content: ' ';
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+  }
+  min-height: 340px;
   padding: 0 16px;
+  position: relative;
+
+  &.pesquisa-pequena {
+    min-height: 260px;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
 
   .label-peticione {
     font-weight:100;
@@ -209,6 +231,7 @@
 
 .pagina-interna {
   .pesquisa {
+    min-height: 0;
     .pesquisa-conteudo {
       margin-left: 0;
       margin-right: 0;
@@ -216,9 +239,6 @@
 
       .pesquisa-btn-interna {
         display: block;
-      }
-      .pesquisa-campos {
-        display: none;
       }
     }
   }

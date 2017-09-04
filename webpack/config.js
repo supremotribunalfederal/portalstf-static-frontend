@@ -1,6 +1,7 @@
 const path = require('path');
 
 const PATHS = {
+  node: path.join(__dirname, '../node_modules'),
   dist: path.join(__dirname, '../dist'),
   src: path.join(__dirname, '../src'),
   assets: path.join(__dirname, '../assets'),
@@ -9,14 +10,31 @@ const PATHS = {
   ghPages: path.join(__dirname, '../showroom-build')
 };
 
+const mainChunks = ['vendor', 'bundle'];
+const externals =['datepicker'];
+
+
 const secoes = [
   'noticias',
   'textos',
   'repercussaogeral',
   'jurisprudencia',
   'transparencia',
-  "listagem"
+  'listagem',
+  'ostf',
+  'quemequem'
 ];
+
+const secoesChunks = secoes.reduce((prev, cur) => {
+  prev[cur] = {
+    include: [...mainChunks, cur],
+    exclude: [...secoes.filter((i) => i !== cur), ...externals],
+    extraCss: []
+  };
+  return prev;
+}, {});
+secoesChunks.listagem.include.push('datepicker');
+secoesChunks.listagem.extraCss.push('datepicker');
 
 const includes = [
   'header',
@@ -33,5 +51,7 @@ const includes = [
 module.exports = {
   PATHS,
   secoes,
+  mainChunks,
+  secoesChunks,
   includes
 };

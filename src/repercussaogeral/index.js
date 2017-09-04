@@ -38,9 +38,16 @@ $(document).ready(function() {
 
 
 //GOOGLE ANALYTICS
-$('#repgeral-quantidade-temas-categoria').on('click', function(){
+$('#repgeral-qtd-temas-categoria').on('click', function(){
 	ga('send', 'event', 'Repercussão Geral', 'Quantidade de Temas', 'Por Categoria');
 });
-$('#repgeral-quantidade-sobrestados-data').on('click', function(){
+$('#repgeral-qtd-sobrestados-categoria').on('click', function(){
+	ga('send', 'event', 'Repercussão Geral', 'Quantidade de Sobrestados', 'Por Categoria');
+});
+$('#repgeral-qtd-sobrestados-data').on('click', function(){
 	ga('send', 'event', 'Repercussão Geral', 'Quantidade de Sobrestados', 'Por Data');
 });
+$('#repgeral-qtd-temas-data').on('click', function(){
+	ga('send', 'event', 'Repercussão Geral', 'Quantidade de Temas', 'Por Data');
+});
+

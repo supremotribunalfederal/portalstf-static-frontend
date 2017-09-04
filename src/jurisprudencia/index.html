@@ -230,12 +230,14 @@
                 </div>                
                 <div class="card-conteudo p-0"> 
                     <div class="card-caixa-texto card-com-input tese-descricao p-16">
-                        <strong>Pesquise o termo desejado para saber se há alguma súmula relacionada</strong>
+                        <strong>Pesquise nos Informativos Semanais</strong>
                         <div  class="campo-container m-t-16">
-                            <input class="col-md-9 col-xs-9" placeholder="Digite o que procura..." type="text" /> 
-                            <button id="informativo-pesquisa" class="btn btn-default btn-icone col-md-3 col-xs-3">
-                                <i class="glyphicon glyphicon-search" aria-label="abrir pesquisa"></i>
-                            </button>
+                             <form id="pesquisa-informativo-semanal" action="javascript:void(0);">
+                                <input class="col-md-9 col-xs-9" name="pesquisa" id="txt-pesquisa-informativo"  placeholder="Digite o que procura..." type="text" /> 
+                                <button form="pesquisa-informativo-semanal" id="btn-pesquisa-informativo" class="btn btn-default btn-icone col-md-3 col-xs-3">
+                                    <i class="glyphicon glyphicon-search" aria-label="abrir pesquisa"></i>
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -247,10 +249,12 @@
                     <div class="card-caixa-texto card-com-input tese-descricao p-16">
                         <strong>Pesquisa por processos</strong>
                         <div class="campo-container m-t-16">
-                            <p><input class="col-md-9 col-xs-9" placeholder="Digite o processo que deseja..." type="text" /> 
-                            <button class="btn btn-default btn-icone col-md-3 col-xs-3">
-                                <i class="glyphicon glyphicon-search" aria-label="abrir pesquisa"></i>
-                            </button></p>
+                            <form id="pesquisa-processo" action="javascript:void(0);">                                
+                                <p><input name="pesquisa" class="col-md-9 col-xs-9" placeholder="Digite o processo que deseja..." type="text" id="txtNumeroProcesso" /> 
+                                <button form="pesquisa-processo" class="btn btn-default btn-icone col-md-3 col-xs-3" id="btnPesquisaInteiroTeor">
+                                    <i class="glyphicon glyphicon-search" aria-label="abrir pesquisa"></i>
+                                </button></p>
+                            </form>
                         </div>
                     </div>
                 </div>

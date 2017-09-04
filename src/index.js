@@ -1,16 +1,16 @@
 import $ from 'jquery';
 import './index-ga';
 import moment from 'moment';
+import validation from 'jquery-validation';
 
 $('.dropdown-toggle').hover(function() {
-  $(this).find('.dropdown-menu').stop(true, true).delay(0).fadeIn(100);
+    $(this).find('.dropdown-menu').stop(true, true).delay(0).fadeIn(100);
 }, function() {
-  $(this).find('.dropdown-menu').stop(true, true).delay(0).fadeOut(100);
+    $(this).find('.dropdown-menu').stop(true, true).delay(0).fadeOut(100);
 });
 
 $(document).ready(function(){
     var pesquisaSelecionada = $("#abaSelecionada").val();
-    
     //se nao for a pesquisa de jurisprudencia, esconde botoes da pesquisa jurisprudencia
     if(pesquisaSelecionada != 4){
         $('.botoes-pesquisa-jurisprudencia span').hide();
@@ -19,7 +19,11 @@ $(document).ready(function(){
     
     $('[data-toggle="popover"]').popover({
         container: 'body'
-    });    
+    });
+
+    $('#alto-contraste').click(function() {
+        $('body').toggleClass('alto-contraste');
+    });
 });
 
 moment.locale("pt-BR");    
@@ -76,7 +80,7 @@ $("#menuPesquisa li span").on("click", function() {
 //--------------------------------
 // controle dos botoes de pesquisa da home na versao mobile
 
-$("#menu-pesquisa-mobile").on("change", function() {        
+$("#menu-pesquisa-mobile").on("change", function() { 
     $('.pesquisa-jurisprudencia-links-inferiores').hide();  
     var placeholder = "";
     var aba = $( "#menu-pesquisa-mobile option:selected" ).data("aba");    
@@ -117,28 +121,41 @@ $('.botoes-pesquisa-jurisprudencia span').on('click', function(){
 function realizarPesquisa(){
     var assunto = $("#abaSelecionada").val();
     var termoPesquisa = $("#pesquisaPrincipal").val();
-    
+
     if (assunto == "4") {
-        location.href = "//stf.jus.br/portal/jurisprudencia/listarConsolidada.asp?base=baseAcordaos&base=baseRepercussao&url=&txtPesquisaLivre=" + termoPesquisa;
+        window.open("//stf.jus.br/portal/jurisprudencia/listarConsolidada.asp?base=baseAcordaos&base=baseRepercussao&url=&txtPesquisaLivre=" + termoPesquisa, '_blank');
     } else {
-        location.href = "//stf.jus.br/portal/pesquisa/listarPesquisa.asp?termo=" + termoPesquisa + "&assunto=" + assunto;
+        window.open("//stf.jus.br/portal/pesquisa/listarPesquisa.asp?termo=" + termoPesquisa + "&assunto=" + assunto, '_blank');
     }
 }
 
-$("#btnPesquisar").click(function(){
-    realizarPesquisa();
-});
-
-
-$("#btn-jurisprudencia-pesquisar").click(function(){    
-    var termoPesquisa = $("#pesquisaPrincipal").val();  
-    var urlRedirect = 'http://www.stf.jus.br/portal/jurisprudencia/listarConsolidada.asp?url=&txtPesquisaLivre='+termoPesquisa+'&numero=&ministro=&dataInicial=&dataFinal=&tema=&tese=&tipoTese=&orgaoJulgador=&ementa=&nomeLegislacao=&txtAnoLegislacao=N%C3%BAmero&tipoLegislacao1=ART&valorLegislacao1=&tipoLegislacao2=PAR&valorLegislacao2=&tipoLegislacao3=INC&valorLegislacao3=&tipoLegislacao4=LET&valorLegislacao4=&base=baseAcordaos&base=baseRepercussao&base=baseSumulasVinculantes&base=baseSumulas&base=baseMonocraticas&base=basePresidencia&base=baseInformativo&base=baseQuestoes&base=todos';    
-    location.href = urlRedirect; 
-});
-
-$("#pesquisaPrincipal").keyup(function(e){
-    if(e.keyCode == 13) {
-        realizarPesquisa();
+//Pesquisa principal do topo da página
+$('#pesquisa-principal').submit(function(e){
+    
+    //JQUERY validation
+    $('#pesquisa-principal').validate({
+        //escolher onde posicionar a mensagem de erro
+        errorPlacement: function(label, element) {
+            label.addClass('alert alert-danger col-xs-10 m-t-8 m-b-0');
+            label.insertAfter('.pesquisa-jurisprudencia-links-inferiores:last');
+        },
+        
+        wrapper: 'span',
+        
+        rules: {
+            pesquisaPrincipal: {
+                required: true,
+            }
+        },
+        messages: {
+            pesquisaPrincipal: {
+                required: "Informe o termo para a pesquisa"
+            }
+        }
+    });
+    
+    if( $('#pesquisa-principal').valid()){
+        realizarPesquisa();        
     }
 });
 
@@ -150,36 +167,66 @@ function selecionarDataJulgamento(data) {
     location.href = "//stf.jus.br/portal/pauta/listarCalendario.asp?data=" + data;
 }
 
+
+//criando o método de regex para o validador do processo pautado
+$.validator.addMethod('regex',
+        function(value) {
+            var regra = /(\w{2}|\w{4}) \d{2,6}/;
+            return regra.test(value);
+        },
+        "O código de processo informado não é válido"
+);
+
+//Pesquisa processo pautado - calendario
+$('#pesquisa-processo-pautado').submit(function(e){
+    var form = $('#pesquisa-processo-pautado');
+    //JQUERY validation
+    form.validate({
+        //escolher onde posicionar a mensagem de erro
+        errorPlacement: function(label, element) {
+            label.addClass('alert alert-danger col-xs-10 m-t-8 m-b-0');
+            label.insertAfter('#botao-pesquisa-pauta');
+        },
+        
+        wrapper: 'span',
+        
+        rules: {
+            pesquisa_pauta: {
+                required: true,
+                regex: true
+            }
+        },
+        messages: {
+            pesquisa_pauta: {
+                required: "Informe o termo para a pesquisa",
+            }
+        }
+    });
+    
+    if( form.valid()){
+        pesquisarProcessoConstaPauta();        
+    }
+});
+
 function pesquisarProcessoConstaPauta() {
-	var inputProcesso = document.getElementById('pesquisa_pauta');
-    var regra = /(\w{2}|\w{4}) \d{2,6}/;
-
-    if (!regra.test(inputProcesso.value)) {
-        alert('O número do processo informado é inválido.');
-    } else {
-		var processo = inputProcesso.value.split(' ');
-		var classe = processo[0].trim().toUpperCase();
-		var numero = processo[1].trim();
-
-		location.href = "//www.stf.jus.br/portal/pauta/listarProcesso.asp?classe=" + classe + "&argumento=" + numero;
-	}
+    var inputProcesso = document.getElementById('pesquisa_pauta');
+    var processo = inputProcesso.value.split(' ');
+    var classe = processo[0].trim().toUpperCase();
+    var numero = processo[1].trim();
+    window.open("//www.stf.jus.br/portal/pauta/listarProcesso.asp?classe=" + classe + "&argumento=" + numero, '_blank');
 }
 
-function pesquisarProcessoPauta(event) {
-    if (event.keyCode == 13) {
-        pesquisarProcessoConstaPauta();
+//Botão ACESSAR O PORTAL DE NOTÍCIAS
+$('#btnAcessarPortalNocicitas').on('click', function() {
+    ga('send', 'event', 'Página Geral', 'Notícias', 'Botão ACESSAR O PORTAL DE NOTÍCIAS');
+    
+    var pagina = 'listarNoticias.asp';
+    
+    if (window.location.port == '3000'){
+        pagina = 'index.html';
     }
-}
 
-$("#btnPesquisarProcessoPauta").click(function(){
-	pesquisarProcessoConstaPauta();
+    location.href = window.location.origin + window.location.pathname + 'listagem/' + pagina;
 });
-
-$("#pesquisa_pauta").keyup(function(e){
-    if(e.keyCode == 13) {
-        pesquisarProcessoConstaPauta();
-    }
-});
-
 
 /* ---------------------------------------------------------------------------------------------------------------- */

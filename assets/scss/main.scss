@@ -18,6 +18,7 @@
 @import "./componentes/links";
 @import "./componentes/nav";
 @import "./componentes/breadcrumb";
+@import "./componentes/qlik";
 
 // Seções
 @import "./secoes/agenda-dos-ministros";
@@ -43,3 +44,6 @@
 @import "./utils/espacamento";
 @import "./utils/dimensoes";
 @import "./utils/tipografia";
+
+// Alto contraste
+@import "./utils/alto-contraste";

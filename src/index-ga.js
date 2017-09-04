@@ -1,4 +1,5 @@
 import $ from 'jquery';
+
 //event tracker do Google Analytics
 
 
@@ -121,6 +122,7 @@ $('#jurisprudencia-maisinfo-glossario').on('click', function(){
 });
 
 
+
 //operadores/links da pesquisa jurisprudencia
 $('#tesauro').on('click', function(){
 	ga('send', 'event', 'Pagina Geral', 'Pesquisa', 'Jurisprudencia - Tesauro');
@@ -143,7 +145,6 @@ $('#operadorcifrao').on('click', function(){
 $('#operadorcifrao').on('click', function(){
 	ga('send', 'event', 'Pagina Geral', 'Pesquisa', 'Jurisprudencia - Operador $');
 });
-
 
 //card da transparência
 $('#transparencia-gestao-pessoas').on('click', function(){
@@ -168,6 +169,8 @@ $('#supremo-em-numeros').on('click', function(){
 });
 
 //Notícias
+
+/* colocados dentro do js de notícias
 $('#noticia-informacao-util-sim').on('click', function(){
 	ga('send', 'event', 'Notícia', 'Classificação de utilidade', 'Sim');
 });
@@ -182,6 +185,11 @@ $('#noticia-interno-imprimir-inferior').on('click', function() {
 
 $('#noticia-interno-imprimir-superior').on('click', function() {
 	ga('send', 'event', 'Notícia', 'Impressão', 'Imprimir');
+});*/
+
+//acessar portal de noticias
+$('#acessarNoticias').on('click', function(){
+	ga('send', 'event', 'Pagina Geral', 'Notícias', 'Acessar o Portal de Notícias');
 });
 
 //Textos
@@ -238,4 +246,9 @@ $('.btn-small').on('click', function() {
 
 $('.leading-case').on('click', function() {
 	ga('send', 'event', 'Página Repercussão Geral','Tema', 'Link Leading Case');
+});
+
+// Fórum nos Temas de Repercussão Geral
+$('#entrarForum').on('click', function() {
+	ga('send', 'event', 'Página Geral', 'Botão Entrar');
 });

@@ -1,0 +1,118 @@
+@import "../../variaveis/cores";
+
+.campo-texto, .campo-texto:focus {
+    outline: 0;
+}
+
+.titulos-secoes {
+    color: #006998;
+    font-size: 1.5rem;
+    margin: 16px 0; 
+    font-weight: bold;
+}
+
+.card-conteudo-botoes {
+    height: 140px;
+}
+
+.pesquisa-sumula {
+    height: 130px;
+}
+
+#menu-pesquisa-sumula-jurisprudencia {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 8px;
+}
+
+.pesquisa-informativo {
+    height: 120px;
+}
+
+hr {
+    border-top: 2px solid rgba(0, 0, 0, 0.2);    
+}
+
+.card-conteudo p a {
+    color: $stfAzulEscuro;
+}
+
+.card-com-input {
+    overflow: hidden;
+}
+
+.card-conheca-palacio {
+    position: relative;
+    overflow: hidden;
+    background: url("../../img/interface/top-bg.jpg") no-repeat center -100px / cover;   
+    height: 420px;
+    .legenda {
+        position: absolute;
+        bottom: 0;
+        height: 160px;
+        background: linear-gradient(135deg, rgba(105, 100, 94, 100), rgba(105, 100, 94, 0) 172%);
+        /*background: linear-gradient(135deg, rgb(160,160,160, 100), rgb(160,160,160, 0) 100%);*/
+        h3 {
+            font-size: 1.2rem;
+            color: white;
+            font-weight: bold;
+        }
+        h2 {
+            color: white;
+            font-weight: bold;
+        }
+    }
+}
+
+.destaques {
+    .circle{
+        width: 100px;
+        height: 100px;
+        background: $stfCinzaClaro;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+        text-align: center;
+        vertical-align: middle;
+        display: inline-block;
+        
+        .glyphicon{
+            padding-top: 35%;
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.constituicao {
+    background-color: rgb(0, 142, 92);
+    h3, h4 {
+        color: white;
+    }
+}
+
+.regimento-interno {
+    background: url("../../img/interface/fundo-regimento-interno.png") no-repeat center center / cover;   
+    h3, h4 {
+        color: white;
+    }
+}
+
+.constituicao-federal {
+    background: url("../../img/interface/fundo-constituicao.jpg") no-repeat center center / cover;   
+    h3, h4 {
+        color: white;
+    }
+}
+
+.plenario-stf h2, .plenario-stf p {
+    font-style: italic;
+    color: $stfCinza;
+}
+
+.plenario-stf img {
+    -webkit-filter: grayscale(100%);
+       -moz-filter: grayscale(100%);
+         -o-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+            filter: grayscale(100%); 
+}

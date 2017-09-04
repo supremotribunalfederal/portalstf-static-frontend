@@ -1,5 +1,6 @@
 import style from '../../assets/scss/secoes/jurisprudencia/jurisprudencia.scss';
-
+import $ from 'jquery';
+import validation from 'jquery-validation';
 
 //GOOGLE ANALYTICS
 
@@ -7,16 +8,22 @@ import style from '../../assets/scss/secoes/jurisprudencia/jurisprudencia.scss';
 $('#internacional-cjcplp').on('click', function(){
 	ga('send', 'event', 'Jurisprudencia', 'Internacional', 'CJCPLP');
 });
+
 $('#internacional-codices').on('click', function(){
 	ga('send', 'event', 'Jurisprudencia', 'Internacional', 'Codices');
 });
+
 $('#internacional-glin').on('click', function(){
 	ga('send', 'event', 'Jurisprudencia', 'Internacional', 'Glin');
 });
+
 $('#internacional-mercosul').on('click', function(){
 	ga('send', 'event', 'Jurisprudencia', 'Internacional', 'Mercosul');
-})
+});
 
+$('#btnPesquisaInteiroTeor').on('click', function(){
+	//ga('send', 'event', 'Jurisprudencia', 'Pesquisa Inteiro Teor', 'Clique no botão');
+});
 
 //informativo STF
 $('#informativo-semanal').on('click', function(){
@@ -41,3 +48,69 @@ $('#leg-anotada-infraconst').on('click', function(){
 $('#juris-ver-todas-sumulas').on('click', function(){
 	ga('send', 'event', 'Jurisprudencia', 'Ultimas alterações Súmulas', 'Ver todas as Súmulas');
 });
+
+function pesquisarInteiroTeorProcesso(){
+    window.open('//stf.jus.br/portal/inteiroTeor/pesquisarInteiroTeor.asp?tipoPesquisa=pesquisarNumero&argumento=' + txtNumeroProcesso.value, '_blank');
+}
+
+//Pesquisa de inteiro teor de acordão.
+$('#pesquisa-processo').submit(function(e){
+    
+    //JQUERY validation
+    $('#pesquisa-processo').validate({
+        //escolher onde posicionar a mensagem de erro
+        errorPlacement: function(label, element) {
+            label.addClass('alert alert-danger col-md-12 m-t-8 m-b-0');
+            label.insertAfter('#btnPesquisaInteiroTeor');
+        },
+        
+        wrapper: 'span',
+        
+        rules: {
+            pesquisa: {
+                required: true,
+                digits: true,
+            }
+        },
+        messages: {
+            pesquisa: {
+                required: "Informe o número do processo",
+                digits: "Utilize apenas números na busca"
+            }
+        }
+    });
+    
+    if( $('#pesquisa-processo').valid()){
+        pesquisarInteiroTeorProcesso();        
+    }
+});
+
+//Pesquisa de informativo semanal
+$('#pesquisa-informativo-semanal').submit(function(e){
+    var form = $('#pesquisa-informativo-semanal');
+    form.validate({
+        errorPlacement: function(label, element) {
+            label.addClass('alert alert-danger col-md-10 m-t-8 m-b-0');
+            label.insertAfter('#btn-pesquisa-informativo');
+        },        
+        rules: {
+            pesquisa: {
+                required: true,
+            }
+        },
+        messages: {
+            pesquisa: {
+                required: "Informe o termo para a busca",
+            }
+        }
+    });
+    
+    if(form.valid()){
+       pesquisarTermoInformativoSTF($("#txt-pesquisa-informativo").val());    
+    }
+});
+
+function pesquisarTermoInformativoSTF(termo) {
+    var url = "http://www.stf.jus.br/portal/informativo/pesquisarInformativo.asp?s1=" + termo;
+    window.open(url, "_blank");
+}
