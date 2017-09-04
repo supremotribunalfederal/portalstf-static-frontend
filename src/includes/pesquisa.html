@@ -45,9 +45,28 @@
                   <input type="hidden" value="3" id="abaSelecionada" />
                 </div>
 
-                <input class="campo-texto col-md-7 col-xs-12 col-sm-12" type="text" name="pesquisaPrincipal" id="pesquisaPrincipal" placeholder="Digite a classe e número do processo (ex: ADI 100)">
+                
+                <div class="col-md-12 col-xs-12 col-sm-12 pesquisa-processo aba-pesquisa">
+                  <select class="campo-texto tipo-pesquisa-processo">
+                    <option value="CLASSE_E_NUMERO">Por Classe e Número</option>
+                    <option value="NUMERO_UNICO">Por Número Único</option>
+                    <option value="PARTE_OU_ADVOGADO">Por Parte ou Advogado</option>
+                  </select>
+                  <div class="campo-pesquisa-processo">
+                    <select class="campo-texto processo-classe">
+                      <option value="ADI">ADI</option>
+                      <option value="HC">HC</option>
+                      <option value="ADPF">ADPF</option>
+                    </select>
+                    <input type="text" name="pesquisaPrincipal" id="pesquisaPrincipal" class="campo-texto" placeholder="Digite a classe e número do processo (ex: ADI 100)">
+                  </div>
+                </div>
 
-                <div class="hidden-sm hidden-xs botoes-pesquisa-jurisprudencia col-md-5">
+                <div class="col-md-7 col-xs-12 col-sm-12 pesquisa-jurisprudencia aba-pesquisa" style="display: none;">
+                  <input type="text" name="pesquisaJurisproduencia" id="pesquisaJurisprudencia" class="campo-texto" placeholder="Digite um termo para a pesquisa de jurisprudência...">
+                </div>
+
+                <div class="hidden-sm hidden-xs botoes-pesquisa-jurisprudencia col-md-5" style="display: none;">
                   <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador E" data-content="Procura todas as palavras desejadas em qualquer lugar do documento. Ex: ICMS e SUBSTITUIÇÃO." data-value="e" id="jurisprudencia-e" class="pull-left">e</span>
                   <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador OU" data-content="Procura por qualquer uma das palavras. Pode utilizar o parênteses para combinar a pesquisa com outros operadores. Ex: aposentadoria e (deputado ou parlamentar ou congressista)." data-value="ou" class="pull-left">ou</span>
                   <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador ADJ" data-content="Busca palavras aproximadas, na mesma ordem colocada na expressão de busca. Ex: MINISTÉRIO adj2 PÚBLICO e TEMPO adj2 SERVIÇO (O número após o 'adj' indica delimitação de distância entre palavras, podendo ser escolhido livremente)." data-value="adj" class="pull-left">adj</span>

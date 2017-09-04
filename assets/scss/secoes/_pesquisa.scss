@@ -243,3 +243,24 @@
     }
   }
 }
+
+.tipo-pesquisa-processo {
+  height: 50px;
+  background-color: #eeebeb;
+}
+
+.campo-pesquisa-processo {
+  display: inline-block;
+  input {
+    width: 100%;
+    float: left;
+  }
+}
+
+.aba-pesquisa {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  select {
+    float: left;
+  }
+}
