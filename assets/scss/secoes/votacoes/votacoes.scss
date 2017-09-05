@@ -1,4 +1,4 @@
-.pagina-interna {
+/*.pagina-interna {
   #texto-pagina-interna {
     .texto {
       border-bottom: 0;
@@ -34,4 +34,17 @@
       }
     }
   }
+}*/
+
+iframe {
+    border: none;
+}
+.iframe-pequeno {
+    height: 170px;
+}
+.iframe-medio {
+    height: 300px;
+}
+.iframe-grande {
+    height: 500px;
 }
