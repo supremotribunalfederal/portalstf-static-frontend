@@ -111,6 +111,26 @@ $("#menu-pesquisa-mobile").on("change", function() {
 // fim do controle dos botoes de pesquisa versao mobile
 //----------------------------------------------------
 
+//----------------------------------------------------
+// controle do include de pesquisa para listas de notícias
+
+$("#abrir-pesquisa").click(function() {
+    $("#pesquisa-completa").show();
+    $("#fechar-pesquisa").show();
+    $("#abrir-pesquisa").hide();
+    $("#rotulo-pagina").hide();
+});
+
+$("#fechar-pesquisa").click(function() {
+    $("#pesquisa-completa").hide();
+    $("#fechar-pesquisa").hide();
+    $("#abrir-pesquisa").show();
+    $("#rotulo-pagina").show();
+});
+
+//---------------------------------------------------------
+// fim do controle do include de pesquisa para listas de notícias
+
 $('.botoes-pesquisa-jurisprudencia span').on('click', function(){
     var search = $('#pesquisaPrincipal').val();
     search = search + ' ' + $(this).data('value') + ' ';
