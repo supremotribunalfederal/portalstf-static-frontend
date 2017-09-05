@@ -52,13 +52,20 @@
                     <option value="NUMERO_UNICO">Por Número Único</option>
                     <option value="PARTE_OU_ADVOGADO">Por Parte ou Advogado</option>
                   </select>
-                  <div class="campo-pesquisa-processo">
+                  <div class="campo-pesquisa-processo pesquisa-processo-classe">
                     <select class="campo-texto processo-classe">
+                      <option value="">Classe</option>
                       <option value="ADI">ADI</option>
                       <option value="HC">HC</option>
                       <option value="ADPF">ADPF</option>
                     </select>
                     <input type="text" name="pesquisaPrincipal" id="pesquisaPrincipal" class="campo-texto" placeholder="Digite a classe e número do processo (ex: ADI 100)">
+                  </div>
+                  <div class="campo-pesquisa-processo pesquisa-numero-unico" style="display: none;">
+                    <input type="text" name="pesquisaPrincipalNumeroUnico" id="pesquisaPrincipalNumeroUnico" class="campo-texto" placeholder="Digite o número único">
+                  </div>
+                  <div class="campo-pesquisa-processo pesquisa-parte-advogado" style="display: none;">
+                    <input type="text" name="pesquisaPrincipalParteAdvogado" id="pesquisaPrincipalParteAdvogado" class="campo-texto" placeholder="Digite o nome da parte ou advogado">
                   </div>
                 </div>
 

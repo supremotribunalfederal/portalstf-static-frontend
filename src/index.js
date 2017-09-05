@@ -112,6 +112,25 @@ $("#menu-pesquisa-mobile").on("change", function() {
 //----------------------------------------------------
 
 //----------------------------------------------------
+// controle do tipo de pesquisa de processo
+$(".tipo-pesquisa-processo").change(function(event) {
+    switch($(this).val()) {
+        case "CLASSE_E_NUMERO":
+            $('.campo-pesquisa-processo').hide();
+            $('.pesquisa-processo-classe').show();
+            break;
+        case "PARTE_OU_ADVOGADO":
+            $('.campo-pesquisa-processo').hide();
+            $('.pesquisa-parte-advogado').show();
+            break;
+        case "NUMERO_UNICO":
+            $('.campo-pesquisa-processo').hide();
+            $('.pesquisa-numero-unico').show();
+            break;
+    }
+});
+
+//----------------------------------------------------
 // controle do include de pesquisa para listas de notícias
 
 $("#abrir-pesquisa").click(function() {
