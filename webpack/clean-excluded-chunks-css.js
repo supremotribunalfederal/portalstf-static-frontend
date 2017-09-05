@@ -8,7 +8,7 @@ CleanExcludedChunksCss.prototype.apply = function(compiler) {
   compiler.plugin('compilation', (compilation) => {
     compilation.plugin('html-webpack-plugin-before-html-processing', (htmlPluginData, callback) => {
       const excluded = htmlPluginData.plugin.options.excludeChunks;
-      let ordered = Object.keys(htmlPluginData.assets.chunks);
+      var ordered = Object.keys(htmlPluginData.assets.chunks);
       if (htmlPluginData.plugin.options.extraCss) {
         ordered = [...ordered, ...htmlPluginData.plugin.options.extraCss];
       }
