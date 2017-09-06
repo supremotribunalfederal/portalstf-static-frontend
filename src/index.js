@@ -131,6 +131,9 @@ $(".tipo-pesquisa-processo").change(function(event) {
 });
 
 //----------------------------------------------------
+// fim do controle do tipo de pesquisa de processo
+
+//----------------------------------------------------
 // controle do include de pesquisa para listas de notícias
 
 $("#abrir-pesquisa").click(function() {
@@ -163,9 +166,41 @@ function realizarPesquisa(){
 
     if (assunto == "4") {
         window.open("//stf.jus.br/portal/jurisprudencia/listarConsolidada.asp?base=baseAcordaos&base=baseRepercussao&url=&txtPesquisaLivre=" + termoPesquisa, '_blank');
+    } else if (assunto == "3") { // Processo
+        pesquisarProcesso();
     } else {
         window.open("//stf.jus.br/portal/pesquisa/listarPesquisa.asp?termo=" + termoPesquisa + "&assunto=" + assunto, '_blank');
     }
+}
+
+function pesquisarProcesso() {
+    switch($('.tipo-pesquisa-processo').val()) {
+        case "CLASSE_E_NUMERO":
+            pesquisarProcessoPorNumeroApenas();
+            break;
+        case "PARTE_OU_ADVOGADO":
+            pesquisarProcessoPorNomeDaParteOuAdvogado();
+            break;
+        case "NUMERO_UNICO":
+            
+            break;
+    }
+}
+
+function pesquisarProcessoPorNumeroApenas() {
+    fazerPostListarProcesso('//stf.jus.br/portal/processo/listarProcesso.asp', 1, $('#pesquisaPrincipalClasseNumero').val());
+}
+
+function fazerPostListarProcesso(action, dropmsgoption, value) {
+    $('<form action="' + action + '" method="POST">' +
+    '<input type="hidden" name="dropmsgoption" value="' + dropmsgoption + '">' +
+    '<input type="hidden" name="partesAdvogadosRadio" value="1">' +
+    '<input type="hidden" name="numero" value="' + value + '">' +
+    '</form>').appendTo('body').submit();
+}
+
+function pesquisarProcessoPorNomeDaParteOuAdvogado() {
+    fazerPostListarProcesso('//stf.jus.br/portal/processo/listarProcessoParte.asp', 4, $('#pesquisaPrincipalParteAdvogado').val());
 }
 
 //Pesquisa principal do topo da página
