@@ -23,7 +23,8 @@ const secoes = [
   'listagem',
   'ostf',
   'quemequem',
-  'votacoes'
+  'votacoes',
+  'pesquisaavancada'
 ];
 
 const secoesChunks = secoes.reduce((prev, cur) => {
