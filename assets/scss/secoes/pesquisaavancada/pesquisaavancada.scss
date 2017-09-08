@@ -1,0 +1,58 @@
+/*.pagina-interna {
+  #texto-pagina-interna {
+    .texto {
+      border-bottom: 0;
+    }
+
+    .texto-titulo {
+      font-weight: bold;
+      font-size: 1.8rem;
+    }
+
+    .texto-gestor {
+      color: #ababab;
+
+      .glyphicon {
+        margin-right: 8px;
+      }
+    }
+
+    .texto-data {
+      color: #ababab;
+
+      .glyphicon {
+        margin-right: 8px;
+      }
+    }
+
+    .texto-conteudo {
+      text-align: justify;
+      text-justify: inter-word;
+      p {
+        font-size: 1.25rem;
+        line-height: 1.75;
+      }
+    }
+  }
+}*/
+
+iframe {
+    border: none;
+}
+.iframe-pequeno {
+    height: 170px;
+}
+.iframe-medio {
+    height: 300px;
+}
+.iframe-grande {
+    height: 500px;
+}
+
+
+/*<!--Static height to show qlik object, this can be modified.-->
+                <style>
+                    .qlik-embed {
+                        height: 500px;
+                    }
+                </style>  */
