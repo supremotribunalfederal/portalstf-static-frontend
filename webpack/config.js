@@ -47,7 +47,7 @@ const includes = [
   'pesquisa',
   'pesquisa-transparencia',
   'pesquisa-jurisprudencia',
-  'pesquisa-repgeral'
+  'pesquisa-repercussaogeral'
 ]
 
 module.exports = {
