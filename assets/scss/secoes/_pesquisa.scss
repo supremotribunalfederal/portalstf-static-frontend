@@ -250,10 +250,13 @@
 }
 
 .campo-pesquisa-processo {
-  display: inline-block;
+  overflow: hidden;
   input {
-    // width: 100%;
+    width: 100%;
     float: left;
+  }
+  .campo-pesquisa-numero {
+    overflow: hidden;
   }
 }
 
@@ -262,5 +265,19 @@
   padding-right: 0 !important;
   select {
     float: left;
+  }
+  .no-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+@media all and (max-width: $breakpointPhones - 1) {
+  .campo-pesquisa-processo {
+    clear: both;
+  }
+  .tipo-pesquisa-processo {
+    width: 100%;
+    margin-bottom: 15px;
   }
 }
