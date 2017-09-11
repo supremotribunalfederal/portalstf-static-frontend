@@ -37,7 +37,8 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.html'],
     alias: {
-      assets: PATHS.assets
+      assets: PATHS.assets,
+      'jquery.maskedinput': path.join(PATHS.node, 'jquery.maskedinput/src/jquery.maskedinput.js')
     }
   },
   module: {
