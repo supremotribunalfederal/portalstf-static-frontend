@@ -89,23 +89,42 @@
                     Todas aplicações em súmulas vinculantes
                 </a>
             </div>
-            <div class=" card-conteudo p-0"> 
-                <div class="card-caixa-texto card-com-input p-16">
-                    <strong>Pesquise o termo desejado para saber se há alguma súmula relacionada</strong>
-                    <div class="campo-container m-t-16">
-                        <input class="col-md-4 col-xs-5 m-r-8" placeholder="Digite o termo para pesquisar..." type="text" /> 
-                        <select id="menu-pesquisa-sumula-jurisprudencia" class="pesquisa-select col-xs-4">
-                            <option value="">Selecione o tipo de pesquisa</option>
-                            <option data-aba="abaProcesso" value="">Processos</option>
-                            <option data-aba="abaJurisprudencia" value="">Jurisprudência</option>
-                            <option data-aba="abaNoticias" value="">Notícias e Textos</option>
-                            <option data-aba="abaTransparencia" value="">Transparência</option>
-                        </select>
-                        <button class="btn btn-default btn-icone col-xs-1 m-l-8">
-                            <i class="glyphicon glyphicon-search" aria-label="abrir pesquisa"></i>
-                        </button>
-                    </div>
-                </div>
+            <div class="card-conteudo p-0">
+			  <div class="card-caixa-texto row p-16">
+				<strong>Pesquise o termo desejado para saber se há alguma súmula relacionada</strong>
+				<form name="frmPesquisa" id ="frmPesquisa" method="POST" action="http://stf.jus.br/portal/jurisprudencia/listarConsolidadaSumulas.asp">
+				  <div class="campo-container m-t-16">
+					<div>
+					  <input class="col-md-4 m-b-8" type="text" name="txtPesquisaLivre" id="txtPesquisaLivre" placeholder="Digite o termo para pesquisar..." />
+					</div>
+					<div class="col-md-1 p-t-8" style="height: 40px; text-align:center; ">
+					  <strong>ou</strong>
+					</div>
+					<div>
+					  <input class="col-md-4 m-b-8" placeholder="Digite o número da súmula..." type="text" name="txtNumero" id="txtNumero" />
+					</div>
+					<select id="menu-pesquisa-sumula-jurisprudencia" class="pesquisa-select col-md-4 col-xs-5" name="txtRamoDireito">
+                        <option value="">Ramo Direito</option><option value="1">Administrativo</option>
+                        <option value="2">Civil</option>
+                        <option value="3">Constitucional</option>
+                        <option value="4">Empresarial</option>
+                        <option value="5">Internacional</option>
+                        <option value="6">Militar</option>
+                        <option value="7">Penal</option>
+                        <option value="8">Previdenciário</option>
+                        <option value="9">Processual Civil</option>
+                        <option value="10">Processual do Trabalho</option>
+                        <option value="11">Processual Penal</option>
+                        <option value="12">Trabalhista</option>
+                        <option value="13">Tributário</option>
+                    </select>    
+					<div class="col-md-1" style="height: 40px; vertical-align: bottom;"><strong></strong></div>
+					<button class="btn btn-default btn-icone col-md-2" id="btnPesquisarSumula">
+					  <i class="glyphicon glyphicon-search" aria-label="abrir pesquisa"></i>
+					</button>						
+				  </div>
+				</form>
+			  </div>
             </div> 
           </div>
             
