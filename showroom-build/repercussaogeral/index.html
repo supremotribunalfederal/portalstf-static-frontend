@@ -150,6 +150,7 @@
     </nav>
   </div>
 </div>
+
     <section id="pesquisa" class="pesquisa pesquisa-pequena row m-0 p-l-0 p-r-0 m-b-32 m-t-96 m-b-xs-8">
     <div class="container center-block">
         <div class="hidden-xs pull-right m-t-16">
@@ -158,7 +159,7 @@
             </p>
         </div>
         <div class="pesquisa-conteudo clearfix">
-            <div class="pesquisa-titulo m-t-16 m-b-16">
+            <div class="pesquisa-titulo m-t-xs-48 m-b-16">
                 <button class="btn btn-default btn-icone pesquisa-btn-interna pull-right __fundo-transparente">
                     <i class="glyphicon glyphicon-search" aria-label="abrir pesquisa"></i>
                 </button>
@@ -167,11 +168,14 @@
             <div class="pesquisa-campos">
                 <div class="form-inline">
                     <div class="campo-container">
-                        <input class="campo-texto campo-texto-repgeral" type="text" name="pesquisaPrincipal" id="pesquisaPrincipal" placeholder="Digite um tema para pesquisar">
-                        <button class="btn btn-default pull-right">
-                            <i class="glyphicon glyphicon-search hidden-md hidden-lg"></i>
-                            <span class="hidden-xs hidden-sm" id="btnPesquisar">Pesquisar</span>
-                        </button>
+                        <form id="pesquisa-principal" action="javascript:void(0);">
+                            <input class="campo-texto campo-texto-repgeral" type="text" name="pesquisaPrincipal" id="pesquisaPrincipal" placeholder="Digite um tema para pesquisar">
+                            <button form="pesquisa-principal" id="btnPesquisar" class="btn btn-default pull-right">
+                                <i class="glyphicon glyphicon-search hidden-md hidden-lg"></i>
+                                <span class="hidden-xs hidden-sm" id="btnPesquisar">Pesquisar</span>
+                            </button>
+                            <div class="hidden pesquisa-jurisprudencia-links-inferiores"></div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -266,22 +270,23 @@
                 Números da Repercussão Geral
             </div>
 
-            <div id="conheca-mais-repercussao" class="card m-b-48">
+            <div id="temas-repercussao" class="card m-b-48">
                 <div class="card-titulo">Temas de Repercussão Geral</div>
                 <div class="card-conteudo row m-0 p-0">
-                    <div class="card-conteudo-cinza col-md-5 text-center p-t-16">
-                        <div class="numero-repgeral">
-                          946
+                    <div class="col-md-5 text-center p-t-16">
+                        <div class="qlik-numero">
+                          <iframe class="iframe-qlik-numero" name="iframeTemas" id="iframeTemas" src="http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=UMpQXR&opt=nointeraction&select=clearall" style="border:none;"></iframe>
                         </div>
-                        <div class="rotulo-repgeral">
+                        
+                        <div class="rotulo-qlik-numero">
                           Quantidade de temas
                         </div>
                     </div>
-                    <div class="col-md-7 text-center">
-                        <div class="numero-repgeral numero-repgeral-verde p-t-16">
-                          1.205.761
+                    <div class="col-md-7 text-center p-b-24">
+                        <div class="qlik-numero">
+                            <iframe class="iframe-qlik-numero" name="iframeSobrestados" id="iframeSobrestados" src="http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=08d3586b-0211-4447-87d6-33d33fb33be6&opt=nointeraction&select=clearall" style="border:none;"></iframe>
                         </div>
-                        <div class="rotulo-repgeral">
+                        <div class="rotulo-qlik-numero">
                             Qtd. de processos sobrestados <br />
                             <span class="card-topico-conteudo">Fonte: CNJ</span>
                         </div>
@@ -297,22 +302,40 @@
                 <div class="col-md-2 p-0"></div>
             </div>
 
-            <div id="conheca-mais-repercussao" class="card m-b-48 ">
-                <div class="card-titulo">Quantidade de temas ou sobrestados por categoria</div>
+            <div class="card m-b-48 ">
+                <div class="card-titulo">Quantidade de temas por categoria</div>
                 <div class="card-conteudo card-com-input row m-0 b-b-16 p-0">
                     <div class="p-0 m-0">
-                        <!--<img class="full-width" src="/portalstf-static-frontend/assets/img/temas-repgeral.png" alt="temas De Repercussao Geral">-->
-                        <iframe id="repgeral-quantidade-temas-categoria" class="full-width" src='http://viana3/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=42267d4e-5e84-43fa-a444-29bd84294ae1&select=clearall' style='border:none;'></iframe>
+                        <iframe id="repgeral-qtd-temas-categoria" class="full-width" src="http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=42267d4e-5e84-43fa-a444-29bd84294ae1&opt=nointeraction%2Cnoselections&select=clearall" style="border:none;"></iframe>
                     </div>
                 </div>
             </div>
 
-            <div id="conheca-mais-repercussao" class="card m-b-48 ">
-                <div class="card-titulo">Quantidade de temas ou de processos sobrestados por data</div>
+            <div class="card m-b-48 ">
+                <div class="card-titulo">Quantidade de processos sobrestados por categoria</div>
+                <div class="card-conteudo card-com-input row m-0 b-b-16 p-0">
+                    <div class="p-0 m-0">
+                        <iframe id="repgeral-qtd-sobrestados-categoria" class="full-width" src="http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=9b9149cd-d382-4e97-acd3-111e3fdf782a&opt=nointeraction%2Cnoselections&select=clearall" style="border:none;"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div class="card m-b-48 ">
+                <div class="card-titulo">Quantidade de temas por data</div>
                 <div class="card-conteudo row m-0 b-b-16 p-0">
                     <div class="p-0 m-0">
-                        <!--<img class="full-width" src="/portalstf-static-frontend/assets/img/qtd-temas.png" alt="quantidade De Temas">-->
-                        <iframe id="repgeral-quantidade-sobrestados-data" class="full-width" src='http://viana3/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=380b7320-4494-4d98-9f0f-37389bdceb46&select=clearall' style='border:none;'></iframe>
+                        <iframe id="repgeral-qtd-temas-data" class="full-width" src="http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=CFUqHJw&opt=nointeraction%2Cnoselections&select=clearall" style="border:none;"></iframe> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="card m-b-48 ">
+                <div class="card-titulo">Quantidade de processos sobrestados por data</div>
+                <div class="card-conteudo row m-0 b-b-16 p-0">
+                    <div class="p-0 m-0">
+                        <iframe id="repgeral-qtd-sobrestados-data" class="full-width" src="http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=380b7320-4494-4d98-9f0f-37389bdceb46&opt=nointeraction%2Cnoselections&select=clearall" style="border:none;"></iframe>
                     </div>
                 </div>
             </div>
@@ -324,15 +347,15 @@
                 <div class="card-caixa-texto m-b-16">
                   <h4 class="m-0 m-t-8 m-b-16">Conheça o instituto de Repercussão Geral</h4>
                   <ul>
-                    <li><a id="repgeral-conheca" href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaRepercussaoGeral&pagina=apresentacao">Conheça os fundamentos legais, finalidades, natureza e competência para o exame do instituto</a></li>
+                    <li><a id="repgeral-conheca" href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaRepercussaoGeral&pagina=apresentacao" target="_blank">Conheça os fundamentos legais, finalidades, natureza e competência para o exame do instituto</a></li>
                   </ul>
                   <h4 class="m-0 m-t-8 m-b-16 p-t-8">Vigência</h4>
                   <ul>
-                    <li><a id="repgeral-vigencia" href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaRepercussaoGeral&pagina=vigencia">Entenda quando o instituto entrou em vigor</a></li>
+                    <li><a id="repgeral-vigencia" href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaRepercussaoGeral&pagina=vigencia" target="_blank">Entenda quando o instituto entrou em vigor</a></li>
                   </ul>
                   <h4 class="m-0 m-t-8 m-b-16 p-t-8">Regulamentação</h4>
                   <ul>
-                    <li><a id="repgeral-regulamentacao" href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaRepercussaoGeral&pagina=regulamentacao">Veja a legislação aplicável ao regima da Repercussão Geral</a></li>
+                    <li><a id="repgeral-regulamentacao" href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaRepercussaoGeral&pagina=regulamentacao" target="_blank">Veja a legislação aplicável ao regima da Repercussão Geral</a></li>
                   </ul>
                 </div>
               </div>
@@ -340,11 +363,11 @@
                 <div class="card-caixa-texto m-b-16">
                   <h4 class="m-0 m-t-8 m-b-16">Questões práticas</h4>
                   <ul>
-                    <li><a id="repgeral-questao-pratica" href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaRepercussaoGeral&pagina=processamentoMultiplo">Procedimentos adotados e decisões administrativas e judiciais sobre o Instituto no STF</a></li>
+                    <li><a id="repgeral-questao-pratica" href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaRepercussaoGeral&pagina=processamentoMultiplo" target="_blank">Procedimentos adotados e decisões administrativas e judiciais sobre o Instituto no STF</a></li>
                   </ul>
                   <h4 class="m-0 m-t-8 m-b-16 p-t-8">Questões de ordem</h4>
                   <ul>
-                    <li><a id="repgeral-questao-ordem" href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaRepercussaoInformacaoGeral&pagina=questoesdeordem">Conheça os temas pertinentes a todo processo submetido à sistemática de Repercussão Geral</a></li>
+                    <li><a id="repgeral-questao-ordem" href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaRepercussaoInformacaoGeral&pagina=questoesdeordem" target="_blank">Conheça os temas pertinentes a todo processo submetido à sistemática de Repercussão Geral</a></li>
                   </ul>
                 </div>
               </div>
@@ -778,6 +801,16 @@
       <p><i class="glyphicon glyphicon-time"></i> Horário de funcionamento: 12:00 às 19:00</p>
     </div>
   </div>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-9066701-4', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </footer>
   </div>
 <script type="text/javascript" src="/portalstf-static-frontend/scripts/vendor.js"></script><script type="text/javascript" src="/portalstf-static-frontend/scripts/bundle.js"></script><script type="text/javascript" src="/portalstf-static-frontend/scripts/repercussaogeral.js"></script></body>

@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Supremo Tribunal Federal</title>
-<link href="/portalstf-static-frontend/assets/styles/vendor.css" rel="stylesheet"><link href="/portalstf-static-frontend/assets/styles/bundle.css" rel="stylesheet"><link href="/portalstf-static-frontend/assets/styles/transparencia/transparencia.css" rel="stylesheet"></head>
-<body>
+<link href="/portalstf-static-frontend/assets/styles/vendor.css" rel="stylesheet"><link href="/portalstf-static-frontend/assets/styles/bundle.css" rel="stylesheet"><link href="/portalstf-static-frontend/assets/styles/votacoes/votacoes.css" rel="stylesheet"></head>
+<body class="pagina-interna">
   <div id="main" class="container-fluid p-0">
     <div class="nav">
   <div class="navbar navbar-default navbar-fixed-top">
@@ -150,360 +150,201 @@
     </nav>
   </div>
 </div>
-
-        <section id="pesquisa" class="pesquisa pesquisa-pequena row m-0 m-t-96 m-b-16 p-l-0 p-r-0">
-      <div class="container center-block">
-        <div class="pesquisa-conteudo clearfix">
-          <div class="pesquisa-titulo m-t-64 m-b-16">
-            <button class="btn btn-default btn-icone pesquisa-btn-interna pull-right __fundo-transparente">
-              <i class="glyphicon glyphicon-search" aria-label="abrir pesquisa"></i>
-            </button>
-            <h3 class="m-0">Pesquisa da Transparência</h3> 
-          </div>
+    <section id="pesquisa" class="pesquisa row m-0 m-t-96 p-l-0 p-r-0">
+  <div class="container center-block">
+    <div class="pesquisa-conteudo clearfix">
+      <div class="pesquisa-titulo m-t-16 m-b-16">
+        <button id="abrir-pesquisa" class="btn btn-default btn-icone pull-right __fundo-transparente m-b-16" type="button" data-toggle="collapse" data-target="#pesquisa-completa" aria-expanded="false" aria-controls="pesquisa-completa">
+          <i class="glyphicon glyphicon-search" aria-label="abrir pesquisa"></i>
+        </button>
+        <h3 id="rotulo-pagina" class="m-0">&nbsp;</h3> 
+      </div> 
+      <div id="pesquisa-completa" class="collapse">
+        <h3 class="pesquisa-titulo m-0 m-b-32 m-t-48">O que você procura?</h3>
         <div class="pesquisa-campos">
-            <div class="form-inline">
-              <div class="campo-container">
-                <form id="pesquisa-principal" action="javascript:void(0);">
-                    <input class="campo-texto campo-texto-repgeral" type="text" name="pesquisaPrincipal" id="pesquisaPrincipal" placeholder="Pesquise compras, licitações, objetos contratados, fornecedores...">
-                    <input type="hidden" id="abaSelecionada" value="6" />
-                    <button form="pesquisa-principal" id="btnPesquisarDadosTransparencia" class="btn btn-default pull-right">
-                      <i class="glyphicon glyphicon-search hidden-md hidden-lg"></i>
-                      <span class="hidden-xs hidden-sm" id="btnPesquisarTransparencia">Pesquisar</span>
-                    </button>
-                    <div class="hidden pesquisa-jurisprudencia-links-inferiores"></div>
-                </form>
-              </div>
+          <div class="hidden-md hidden-lg hidden-xl campo-container">
+            <select id="menu-pesquisa-mobile" class="pesquisa-select full-width">
+              <option value="">Selecione o tipo de pesquisa</option>
+              <option data-aba="abaProcesso" value="">Processos</option>
+              <option data-aba="abaJurisprudencia" value="">Jurisprudência</option>
+              <option data-aba="abaNoticias" value="">Notícias e Textos</option>
+              <option data-aba="abaTransparencia" value="">Transparência</option>
+            </select>
+          </div>
+          <div class="form-inline">
+            <div class="campo-container">
+              <form id="pesquisa-principal" action="javascript:void(0);">
+                <div class="seletores-campo">
+                  <input type="hidden" name="tipo-pesquisa" id="tipo-pesquisa">
+                  <ul class="seletores hidden-xs hidden-sm" id="menuPesquisa">
+                    <li>
+                        <span class="ativo" id="abaProcesso">Processos</span>
+                    </li>
+                    <li>
+                        <span id="abaJurisprudencia">Jurisprudência</span>
+                    </li>
+                    <li>
+                        <span id="abaNoticias">Notícias e Textos</span>
+                    </li>
+                    <li>
+                        <span id="abaTransparencia">Transparência</span>
+                    </li>
+                  </ul>
+                  <input type="hidden" value="3" id="abaSelecionada" />
+                </div>
+
+                <input class="campo-texto col-md-7 col-xs-12 col-sm-12" type="text" name="pesquisaPrincipal" id="pesquisaPrincipal" placeholder="Digite a classe e número do processo (ex: ADI 100)">
+
+                <div class="hidden-sm hidden-xs botoes-pesquisa-jurisprudencia col-md-5">
+                  <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador E" data-content="Procura todas as palavras desejadas em qualquer lugar do documento. Ex: ICMS e SUBSTITUIÇÃO." data-value="e" id="jurisprudencia-e" class="pull-left">e</span>
+                  <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador OU" data-content="Procura por qualquer uma das palavras. Pode utilizar o parênteses para combinar a pesquisa com outros operadores. Ex: aposentadoria e (deputado ou parlamentar ou congressista)." data-value="ou" class="pull-left">ou</span>
+                  <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador ADJ" data-content="Busca palavras aproximadas, na mesma ordem colocada na expressão de busca. Ex: MINISTÉRIO adj2 PÚBLICO e TEMPO adj2 SERVIÇO (O número após o 'adj' indica delimitação de distância entre palavras, podendo ser escolhido livremente)." data-value="adj" class="pull-left">adj</span>
+                  <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador NÃO" data-content="Recupera documentos que contenham a primeira, mas não a segunda palavra. Ex: Parlamentar não penal" data-value="não" class="pull-left">não</span>
+                  <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador PROX" data-content="Procura palavras aproximadas em qualquer ordem. Ex: extraordinário prox5 admissibilidade. (O número após o 'PROX' indica delimitação de distância entre palavras, podendo ser escolhido livremente)." data-value="prox" class="pull-left">prox</span>
+                  <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador MESMO" data-content="Operador utilizado para pesquisar no mesmo parágrafo; sua utilização principal é para pesquisa no campo legislação. Ex: aposentadoria mesmo parlamentar (Obs.: Consulte o Ajuda para pesquisa por legislaççao na base de Súmulas)." data-value="mesmo"class="pull-left">mesmo</span>
+                  <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador $" data-content="Este operador substitui qualquer parte da palavra desejada, ou seja, prefixo, radical ou sufixo. Ex: $constitucional$ / militar$ / octavio ga$otti" data-value="$" class="pull-left">$</span>
+                </div>
+                <button id="btnPesquisar" class="btn btn-default pull-right">
+                  <i class="glyphicon glyphicon-search hidden-md hidden-lg"></i>
+                  <span class="hidden-xs hidden-sm">Pesquisar</span>
+                </button>
+                <div class="hidden-sm hidden-xs pesquisa-jurisprudencia-links-inferiores">
+                  <a href="http://www.stf.jus.br/portal/jurisprudencia/pesquisarVocabularioJuridico.asp">Clique aqui para consultar o vocabulário jurídico (Tesauro)</a>
+                  <span>ou</span> 
+                  <a target="_blank" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaPesquisaGeral&pagina=ajudaPesquisaJurisprudencia&popup=S">Conheça dicas para melhorar seus resultados de pesquisa</a>
+                </div>
+                <div class="hidden-md hidden-lg hidden-xl pesquisa-jurisprudencia-links-inferiores">
+                  <a href="http://www.stf.jus.br/portal/jurisprudencia/pesquisarVocabularioJuridico.asp">Vocabulário</a>
+                  <span>|</span> 
+                  <a target="_blank" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaPesquisaGeral&pagina=ajudaPesquisaJurisprudencia&popup=S">Dicas</a>
+                </div>
+              </form>  
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section id="conteudo" class="container-fluid m-0 p-0" >
-      <div class="row container center-block p-0">
-        <div id="estatisticas-transparencia">
-          <div class="col-xs-12 col-sm-4 col-md-4 m-0 p-xs-0 p-sm-8 p-b-8 ">
-            <div class="estatisticas-transparencia card m-b-24">
-              <div class="card-titulo">Estatísticas Processuais</div>
-              <div class="card-conteudo">
-                <div class="qlik-numero">
-                  <iframe class="iframe-qlik-numero" name="iframeEstatisticas" id="iframeEstatisticas" src="http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=UMpQXR&opt=nointeraction&select=clearall" style="border:none;"></iframe>
-                </div>
-                <div class="rotulo-transparencia m-b-16">
-                  Decisões em 2017
-                </div> 
-                <div class="row m-0 m-t-8 m-r-8 m-l-8 m-b-16">
-                  <div class="col-md-12 p-0">
-                    <a id="estatisticasTransparencia" class="btn btn-default-bordered btn-raised btn-upper btn-fluid btn-transparencia" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=estatistica&pagina=decisoesinicio" target="_blank">Ver mais estatísticas</a>
-                  </div>
-                </div> 
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-4 col-md-4 m-0 p-xs-0 p-sm-8 p-b-8 ">
-            <div id="pessoas-transparencia" class="pessoas-transparencia card m-b-24">
-              <div class="card-titulo">Pessoas</div>
-              <div class="card-conteudo">
-                <div class="qlik-numero">
-                  <iframe class="iframe-qlik-numero" name="iframePessoal" id="iframePessoal" src="https://viana1/single/?appid=eb107ac5-376b-42c4-953b-2631c1806ed2&obj=UMpQXR&opt=nointeraction&select=clearall" style="border:none;"></iframe>
-                </div>
-                <div class="rotulo-transparencia m-b-16">
-                  Servidores, Ministros e Juízes
-                </div> 
-                <div class="row m-0 m-t-8 m-r-8 m-l-8 m-b-16">
-                  <div class="col-md-12 p-0">
-                    <a id="consulteRemuneracoes" class="btn btn-default-bordered btn-raised btn-upper btn-fluid btn-transparencia" href="http://www.stf.jus.br/portal/remuneracao/pesquisarRemuneracao.asp" target="_blank">Consulte as remunerações</a>
-                  </div>
-                </div> 
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-4 col-md-4 m-0 p-xs-0 p-sm-8 p-b-8 ">
-            <div id="licitacoes-transparencia" class="licitacoes-transparencia card m-b-24">
-              <div class="card-titulo">Licitações</div>
-              <div class="card-conteudo">
-                <div class="qlik-numero">
-                  156
-                </div>
-                <div class="rotulo-transparencia m-b-16">
-                  Licitações em andamento
-                </div> 
-                <div class="row m-0 m-t-8 m-r-8 m-l-8 m-b-16">
-                  <div class="col-md-12 p-0">
-                    <a id="baixeEditais" class="btn btn-default-bordered btn-raised btn-upper btn-fluid btn-transparencia" href="http://www.stf.jus.br/portal/edital/listarEdital.asp" target="_blank">Baixe editais e acompanhe</a>
-                  </div>
-                </div> 
-              </div>
-            </div>
-          </div>                
-          <div class="col-xs-12 col-sm-4 col-md-4 m-0 p-xs-0 p-sm-8 p-b-8 ">
-            <div id="compras-transparencia" class="compras-transparencia card m-b-24">
-              <div class="card-titulo">Compras</div>
-              <div class="card-conteudo">
-                <div class="qlik-numero">
-                  <iframe class="iframe-qlik-numero" name="iframeCompras" id="iframeCompras" src="http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=08d3586b-0211-4447-87d6-33d33fb33be6&opt=nointeraction&select=clearall" style="border:none;"></iframe>
-                </div>
-                <div class="rotulo-transparencia m-b-16">
-                  Total de compras em 2017
-                </div> 
-                <div class="row m-0 m-t-8 m-r-8 m-l-8 m-b-16">
-                  <div class="col-md-12 p-0">
-                    <a id="pesquiseCompras" class="btn btn-default-bordered btn-raised btn-upper btn-fluid btn-transparencia" href="http://www.stf.jus.br/portal/contaPublicaCompra/pesquisarCompra.asp" target="_blank">Pesquise as compras</a>
-                  </div>
-                </div> 
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-4 col-md-4 m-0 p-xs-0 p-sm-8 p-b-8 ">
-            <div id="despesas-transparencia" class="despesas-transparencia card m-b-24">
-              <div class="card-titulo">Despesas diárias</div>
-              <div class="card-conteudo">
-                <div class="qlik-numero">
-                  <iframe class="iframe-qlik-numero" name="iframeDespesas" id="iframeDespesas" src="https://viana1/single/?appid=eb107ac5-376b-42c4-953b-2631c1806ed2&obj=08d3586b-0211-4447-87d6-33d33fb33be6&opt=nointeraction&select=clearall" style="border:none;"></iframe>
-                </div>
-                <div class="rotulo-transparencia m-b-16">
-                  Total de despesas em 2017
-                </div> 
-                <div class="row m-0 m-t-8 m-r-8 m-l-8 m-b-16">
-                  <div class="col-md-12 p-0">
-                    <a id="pesquiseDespesas" class="btn btn-default-bordered btn-raised btn-upper btn-fluid btn-transparencia" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=transparenciaExecucaoDespesa" target="_blank">Pesquise as despesas</a>
-                  </div>
-                </div> 
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-4 col-md-4 m-0 p-xs-0 p-sm-8 p-b-8 ">
-            <div id="contratos-transparencia" class="contratos-transparencia card m-b-24">
-              <div class="card-titulo">Contratos</div>
-              <div class="card-conteudo">
-                <div class="qlik-numero">
-                  187
-                </div>
-                <div class="rotulo-transparencia m-b-16">
-                  Contratos vigentes
-                </div> 
-                <div class="row m-0 m-t-8 m-r-8 m-l-8 m-b-16">
-                  <div class="col-md-12 p-0">
-                    <a id="vejaContratos" class="btn btn-default-bordered btn-raised btn-upper btn-fluid btn-transparencia" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=transparenciaRelatorioContratos&pagina=principal" target="_blank">Veja os contratos</a>
-                  </div>
-                </div> 
-              </div>
-            </div>
-          </div>          
-        </div>  
-        
-
-
-
-      </div>
-    </section>
-    <section id="concursos" class="concursos m-b-24">
-      <div class="container center-block p-0">
-        <div>
-          <h3>Concursos e Cargos Públicos</h3>
-          <div class="concursos-conteudo">
-            <div class="col-md-4">
-                <a id="concursos1999" class="btn btn-default-bordered btn-raised btn-upper btn-fluid btn-transparencia" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=sobreStfConcursoPublico" target="_blank">Concursos a partir de 1999</a>
-            </div>
-            <div class="col-md-3">
-                <a id="cargosVagosOcupados" class="btn btn-default-bordered btn-raised btn-upper btn-fluid btn-transparencia" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=transparenciaQuantitativoPessoal" target="_blank">Cargos vagos e ocupados</a>
-            </div>
-            <div class="col-md-2">
-                <a id="concursosLegislacao" class="btn btn-default-bordered btn-raised btn-upper btn-fluid btn-transparencia" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=legislacaoPlanaltoSenado" target="_blank">Legislação</a>
-            </div>    
-          </div>
-        </div>
-      </div>    
-    </section>
-
-    <section id="conheca-mais" class="container-fluid m-0 p-0 m-b-24">
-      <div class="row container center-block p-0">
-        <div>
-          <h3>Conheça mais Sobre o STF</h3>
-          <div id="conheca-mais-conteudo" class="row">
-            <div class="col-xs-12 col-sm-4 col-md-4 p-l-0 p-r-16 p-xs-0">
-              <div class="card-azul-transparencia m-0 p-r-16 p-l-16 __fundo-azul">
-                <div id="servicos-conheca-mais" class="m-0">
-                  <div class="card-conteudo p-b-0">
-                    <div class="row m-0">
-                      <div class="p-0">
-                        <div class="card-titulo-conheca-mais m-0 m-b-8 m-t-8">Serviços ao Cidadão</div>
-                        <div class="card-caixa-texto-conheca-mais"><h4>Coletânea dos principais serviços prestados ao cidadão, sejam eles judiciais ou administrativos.</h4></div>
-                      </div>
-                      <div class="row m-0 p-0">
-                        <div class="col-md-12 p-0">
-                          <a id="listaServicosCidadao" class="btn btn-default-bordered btn-raised btn-upper btn-fluid btn-transparencia" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=centralDoCidadaoAcessoInformacao&pagina=sobreCentralCidadao" target="_blank">Quero ver a lista de serviços</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>  
-            <div class="col-xs-12 col-sm-4 col-md-4 p-l-16 p-r-16 p-xs-0">
-              <div class="card-azul-transparencia m-0 p-r-16 p-l-16 __fundo-azul">  
-                <div id="institucional-conheca-mais" class="m-0">
-                  <div class="card-conteudo p-b-0">
-                    <div class="row m-0">
-                      <div class="p-0">
-                        <div class="card-titulo-conheca-mais m-0 m-b-8 m-t-8">Institucional</div>
-                        <div class="card-caixa-texto-conheca-mais"><h4>Informações relacionadas `história do STF, competência, estrutura funcional, composição e demais aspectosinstitucionais.</h4></div>
-                      </div>
-                      <div class="row m-0 p-0">
-                        <div class="col-md-12 p-0">
-                          <a id="conhecerOSTF" class="btn btn-default-bordered btn-raised btn-upper btn-fluid btn-transparencia" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=sobreStfConhecaStfInstitucional" target="_blank">Quero conhecer o STF</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>  
-            <div class="col-xs-12 col-sm-4 col-md-4 p-l-16 p-r-0 p-xs-0">
-              <div class="card-azul-transparencia m-0 p-r-16 p-l-16 p-b-8 __fundo-azul">  
-                <div id="estrategia-conheca-mais" class="m-0">
-                  <div class="card-conteudo p-b-0">
-                    <div class="row m-0">
-                      <div class="p-0">
-                        <div class="card-titulo-conheca-mais m-0 m-b-8 m-t-8">Estratégia do STF</div>
-                      </div>
-                      <div class="row m-0 p-0">
-                        <div class="col-md-12 p-0">
-                          <a id="planejamento2020" class="btn btn-default-bordered btn-raised btn-upper btn-fluid btn-transparencia" href="http://www.stf.jus.br/arquivo/cms/centralDoCidadaoAcessoInformacaoGestaoEstrategica/anexo/PEConsolidadoRevisoAbril_2017.pptx" target="_blank">Planejamento rumo a 2020</a>
-                        </div>
-                      </div>
-                      <div class="row m-0 p-0">
-                        <div class="col-md-12 p-0">
-                          <a id="atividades2016" class="btn btn-default-bordered btn-raised btn-upper btn-fluid btn-transparencia" href="http://stf.jus.br/relatorio2016/" target="_blank">Relatório de Atividades 2016</a>
-                        </div>
-                      </div>
-                      <div class="row m-0 p-0">
-                        <div class="col-md-12 p-0">
-                          <a id="estrategiaMaisIformacoes" class="btn btn-default-bordered btn-raised btn-upper btn-fluid btn-transparencia" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=centralDoCidadaoAcessoInformacaoGestaoEstrategica" target="_blank">Mais informações</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div> 
-            </div>   
-          </div>
-        </div>
-      </div>      
-    </section>  
-
-    <section id="gestao-transparencia" class="container-fluid m-0 p-0">
-      <div class="row container center-block p-0">
-        <div class="col-xs-12 col-sm-6 col-md-8 row p-0 m-0">
-          <div id="gestao-pessoas" class="card m-b-48">
-            <div class="card-titulo">Gestão de Pessoas</div>
-            <div class="card-conteudo row m-0 m-t-16 b-b-16 p-0">
-              <div class="col-md-6 col-lg-4">
-                <div class="card-caixa-texto m-b-16">
-                  <h4 class="m-0 m-t-8 m-b-16">Demonstrativo de pessoal</h4>
-                  <ul>
-                    <li><a id="quantitativoServidores" href="http://www.stf.jus.br/arquivo/cms/transparenciaQuantitativoPessoal/anexo/QuantitativodePessoalServidores.pdf" target="_blank">Quantitativo de servidores</a></li>
-                    <li><a id="remuneracaoServidores" href="http://www.stf.jus.br/arquivo/cms/transparenciaQuantitativoPessoal/anexo/REMUNERACAOSERVIDORES.pdf" target="_blank">Remuneração de servidores</a></li>
-                    <li><a id="membrosDemonstrativo" href="http://www.stf.jus.br/arquivo/cms/transparenciaQuantitativoPessoal/anexo/QuantitativodePessoalMembros.pdf" target="_blank">Membros do Tribunal</a></li>
-                    <li><a id="servidoresEfetivos" href="http://www.stf.jus.br/arquivo/cms/transparenciaServidorEfetivo/anexo/TransparenciaServidoresefetivos.pdf" target="_blank">Servidores efetivos</a></li>
-                    <li><a id="outrosQuantitativos" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=centralDoCidadaoAcessoInformacaoGestaoPessoa" target="_blank">Outros quantitativos...</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="card-caixa-texto m-b-16">
-                  <h4 class="m-0 m-t-8 m-b-16">Mais informações</h4>
-                  <ul>
-                    <li><a id="membrosMaisInformacoes" href="http://www.stf.jus.br/arquivo/cms/transparenciaQuantitativoPessoal/anexo/QuantitativodePessoalMembros.pdf" target="_blank">Membros do Tribunal</a></li>
-                    <li><a id="magistradosConvocados" href="http://www.stf.jus.br/arquivo/cms/transparenciaMagistradoConvocado/anexo/TransparenciaMagistradosConvocados.pdf" target="_blank">Magistrados convocados</a></li>
-                    <li><a id="servidoresETerceirizados" href="http://www.stf.jus.br/arquivo/cms/transparenciaPostoTrabalho/anexo/TerceirizadosSTFcomCPF20170608.pdf" target="_blank">Servidores e terceirizados</a></li>
-                  </ul>
-                </div>
-                <div class="col-md-2 p-0"></div>
-                  <div class="col-md-12 p-0">
-                    <a id="cargosVagosEOcupados" class="btn btn-default-bordered btn-raised btn-upper btn-fluid btn-transparencia btn-duplo-transparencia" href="http://www.stf.jus.br/arquivo/cms/sobreStfConcursoPublico/anexo/Qtd_vagas_20.07.2017.pdf" target="_blank">Cargos vagos e<br>ocupados</a>
-                  </div>
-                  <div class="col-md-2 p-0"></div>
-              </div>
-              
-              <div class="col-md-12 col-lg-4 row m-0 m-b-16">
-                <div class="col-md-6 col-lg-12 p-0 p-l-md-16">
-                  <div class="card-caixa-texto m-b-8 p-8 __fundo-azul">
-                    <div class="card-titulo-gestao-pessoas p-0 p-b-16">Consulte as indenizações</div>
-                    <a id="auxilioMoradia" class="btn btn-default-bordered btn-raised btn-fluid btn-upper btn-transparencia" target="_blank" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=transparenciaAuxilioMoradia">Auxílio moradia</a>
-                    <a id="ajudaCusto" class="btn btn-default-bordered btn-raised btn-fluid btn-upper btn-transparencia" target="_blank" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=transparenciaAjudaCustos">Ajuda de custo</a>
-                    <a id="passagens" class="btn btn-default-bordered btn-raised btn-fluid btn-upper btn-transparencia" target="_blank" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=transparenciaPassagens">Passagens</a>
-                    <a id="diarias" class="btn btn-default-bordered btn-raised btn-fluid btn-upper btn-transparencia" target="_blank" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=transparenciaDiarias">Diárias</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="gestao-orcamentaria" class="card m-b-48">
-            <div class="card-titulo">Gestão Orçamentária e Financeira</div>
-            <div class="card-conteudo row m-0 m-t-16 b-b-16 p-16">
-              <div class="card-caixa-texto-gestao-transparencia card-caixa-texto m-0 p-8">
-                <div class="col-md-6">
-                  <ul>
-                    <li><a id="execucaoDespesas" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=transparenciaExecucaoDespesa" target="_blank">Execução de despesas</a></li>
-                    <li><a id="execucaoOrcamentaria" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=transparenciaExecucaoOrcamentaria" target="_blank">Execução orçamentária</a></li>
-                    <li><a id="limitacaoEmpenho" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=transparenciaLimitacaoEmpenho" target="_blank">Limitação de Empenho</a></li>
-                    <li><a id="descentralizaCreditos" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=transparenciaDescentralizacaoCreditos" target="_blank">Descentralização de créditos (Destaques recebidos/concedidos</a></li>
-                  </ul>
-                </div>
-                <div class="col-md-6">
-                  <ul>
-                    <li><a id="receitas" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=transparenciaReceita" target="_blank">Receitas</a></li>
-                    <li><a id="recursosTeseouro" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=transparenciaRecursoTesouro" target="_blank">Recursos do Tesouro</a></li>
-                    <li><a id="relatorioGestaoFiscal" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=transparenciaRelatorioGestaoFiscal" target="_blank">Relatório de Gestão Fiscal</a></li>
-                    <li><a id="relatorioSimplificado" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=transparenciaRelatorioSimplificado" target="_blank">Relatório Simplificado</a></li>
-                    <li><a id="restosAPagar" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=transparenciaRestoPagar" target="_blank">Restos a Pagar</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> 
-        <!-- Cards laterais -->
-        <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 p-0 p-l-16 m-0">
-          <div id="despesas-diversas" class="despesas-diversas card m-b-24">
-            <div class="card-titulo">Despesas diversas</div>
-            <div class="card-conteudo">
-              <ul>
-                <li><a id="consumoAgua" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=consumoAgua" target="_blank">Consumo de Água</a></li>
-                <li><a id="consumoEnergia" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=consumoEnergiaEletrica" target="_blank">Consumo de Energia Elétrica</a></li>
-                <li><a id="consumoPapel" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=consumoPapelImpressao" target="_blank">Consumo de Papel para Impressão</a></li>
-                <li><a id="veiculos" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=transparenciaVeiculos" target="_blank">Veículos</a></li>
-                <li><a id="imoveisFuncionais" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=transparenciaImoveisFuncionais" target="_blank">Imóveis Funcionais</a></li>
-                <li><a id="obrasEReformas" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=transparenciaObrasReformas" target="_blank">Obras e Reformas</a></li>
-              </ul>
-            </div>
-          </div>
-          <div id="controle-interno" class="controle-interno card m-b-24">
-            <div class="card-titulo">Controle Interno e Externo</div>
-            <div class="card-conteudo">
-              <ul>
-                <li><a id="auditoria" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=centralDoCidadaoAcessoInformacaoAuditoria" target="_blank">Auditoria</a></li>
-                <li><a id="prestacaoContas" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=centralDoCidadaoAcessoInformacaoAuditoria&pagina=PrestacaoContasAnual" target="_blank">Prestação de contas</a></li>
-              </ul>
-            </div>
-          </div>
-          <h3>Não encontrou o que procura?</h3>
-          <div class="card-conteudo">
-            <div class="card-caixa-texto-nao-encontrou m-0 m-b-16">
-              <ul>
-                  <li><a id="centralCidadao" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=centralDoCidadaoAcessoInformacao&pagina=sobreCentralCidadao" target="_blank">Central do Cidadão</a></li>
-                  <li><a id="acessoAInformacao" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=centralDoCidadaoAcessoInformacaoLeiAcesso" target="_blank">Acesso à Informação</a></li>
-                  <li><a id="linksUteis" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=centralDoCidadaoLinksUteis" target="_blank">Links úteis para outros órgãos e entidades</a></li>
-                  <li><a id="contatos" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=centralDoCidadaoAcessoInformacaoContato" target="_blank">Contatos</a></li>
-                </ul>
-            </div>  
-          </div>  
-        </div>   
       </div>  
-    </section>  
+    </div>
+  </div>
+</section>
+    <section id="conteudo" class="container-fluid m-0 p-0">
+      <div class="row container center-block p-0">
+        <!--Menu Lateral-->
+        <div class="col-xs-12 col-sm-3 col-lg-2 p-16 p-xs-0 m-0">
+          <div class="menu-lateral hidden-xs">
+            <h4><span class="__stf-verde">O STF</span></h4>
+            <ul>
+              <li><a href="#"><span class="">Conheça o STF</span></a>
+                <ul>
+                  <li><a href="#"><span class="">Institucional</span></a></li>
+                  <li><a href="#">Visitação ao STF</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Ministros</a></li>
+              <li><a href="#">Histórico</a></li>
+              <li><a href="#">Quem é quem</a></li>
+              <li><a href="#">Programas e ações</a></li>
+              <li><a href="#">Gestão</a></li>
+            </ul>
+          </div>
+            
+            
+            <div class="card m-t-16">
+                <div class="card-titulo">Filtros</div>
+                <div class="card-conteudo row m-0 m-t-16 m-b-16 p-0">
+                    <iframe class="full-width iframe-pequeno" src='http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=cDzAm&select=clearall' style='border:none;'></iframe>
+                    <iframe class="full-width iframe-pequeno" src='http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=FYJPf&select=clearall' style='border:none;'></iframe>
+                    <iframe class="full-width iframe-pequeno" src='http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=cXwZ&select=clearall' style='border:none;'></iframe>
+                    <iframe class="full-width iframe-pequeno" src='http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=peZCVP&select=clearall' style='border:none;'></iframe>
+                    <iframe class="full-width iframe-pequeno" src='http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=FYJPf&select=clearall'></iframe>  
+                    <iframe class="full-width iframe-pequeno" src='http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=vwVfLPM&select=clearall' style='border:none;'></iframe>
+                </div>
+            </div>
+            
+        </div>
 
-    
+        <div id="texto-pagina-interna-wrapper" class="col-xs-12 col-sm-9 col-lg-10 row m-0 p-xs-0 m-t-24 m-b-24 p-sm-8 __borda-l-cinza-claro">
+          <div id="texto-pagina-interna" class="p-l-40 p-r-40 m-b-40 p-l-xs-0 p-r-xs-0">
+            <div class="texto m-0 row">
+              <div class="col-xs-12 col-md-12 p-0 p-l-xs-16 p-r-xs-16">
+                <div class="card-secao breadcrum hidden-xs col-xs-12 p-l-8 m-b-24">
+                  <span><a href="#">O STF</a></span>
+                  <span><a href="#">Repercussão Geral</a></span>
+                  <span>Votações</span>
+                </div>
+                
+                
+                
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="qlik-embed" data-qlik-objid="cDzAm" data-qlik-appid="3e15b9bf-6795-4077-b00e-721b5d2a417f"></div>
+                </div>
+            </div>
+                  
+                  
+                <!--início do conteudo principal-->  
+                <h3 class="texto-titulo m-b-24">Plenário Virtual</h3>
+
+                <!--filtros-->
+<!--                <div class="card">
+                    <div class="card-titulo">Filtros</div>
+                    <div class="card-conteudo row m-0 m-t-16 m-b-16 p-0">
+                        <div class="col-md-6">
+                            <iframe id="filtro1" class="full-width" style="height: 100px;" src='http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=FYJPf&select=clearall' style='border:none;'></iframe>
+                            <iframe class="full-width" style="height: 100px;" src='http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=cDzAm&select=clearall' style='border:none;'></iframe>
+                            <iframe class="full-width" style="height: 100px;" src='http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=FYJPf&select=clearall'></iframe>  
+                        </div>
+                        <div class="col-md-6">
+                            <iframe class="full-width" style="height: 100px;" src='http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=cXwZ&select=clearall' style='border:none;'></iframe>
+                            <iframe class="full-width" style="height: 100px;" src='http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=peZCVP&select=clearall' style='border:none;'></iframe>
+                            <iframe class="full-width" style="height: 100px;" src='http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=vwVfLPM&select=clearall' style='border:none;'></iframe>
+                        </div>
+                    </div>
+                </div>-->
+                
+                <!--gráfico 1-->  
+                <div class="card col-md-4 col-xs-12 p-0">
+                    <div class="card-titulo">Indicadores</div>
+                    <div class="card-conteudo row m-0 m-t-16 m-b-16 p-0">
+                        <iframe frameborder="0" class="full-width iframe-medio" src='http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=PuzHTem&opt=nointeraction%2Cnoselections&select=clearall'></iframe>
+                    </div>
+                </div>
+                
+                <!--gráfico 2-->
+                <div class="card col-md-4 col-xs-12 p-0">
+                    <div class="card-titulo">Indicadores</div>
+                    <div class="card-conteudo row m-0 m-t-16 m-b-16 p-0">
+                        <iframe frameborder="0" class="full-width iframe-medio" src='http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=dTWWhg&opt=nointeraction%2Cnoselections&select=clearall'></iframe>
+                    </div>
+                </div>
+                
+            
+                <!--Gráfico 3-->
+                <div class="card col-md-4 col-xs-12 p-0">
+                    <div class="card-titulo">Indicadores</div>
+                    <div class="card-conteudo row m-0 m-t-16 m-b-16 p-0">
+                        <iframe frameborder="0" class="full-width iframe-medio" src='http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=ZQPvLMQ&opt=nointeraction%2Cnoselections&select=clearall'></iframe>
+                    </div>
+                </div>
+                
+                <!--tabela-->
+                <div class="card col-md-12 col-xs-12 p-0 m-t-24">
+                    <div class="card-titulo">Votos</div>
+                    <div class="card-conteudo row m-0 m-t-16 m-b-16 ">
+                        <iframe frameborder="0" class="full-width iframe-grande" src='http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=Xhrp&opt=nointeraction%2Cnoselections&select=clearall'></iframe>
+                    </div>                
+                </div>                
+                <!--fim do conteúdo principal-->
+                
+              
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pull-right">
+            asd
+        </div>
+      </div>
+    </section>
     <section id="mapa-do-site">
   <div class="row container center-block">
     <div class="col-xs-6 col-sm-4 col-md-20p p-0">
@@ -622,7 +463,6 @@
     </div>
   </div>
 </section>
-
     <footer id="rodape" class="p-16">
   <div class="row container center-block">
     <div class="logo-STF col-xs-12 col-md-3 col-lg-2 text-center-lt-md m-b-16">
@@ -669,5 +509,5 @@
 </script>
 </footer>
   </div>
-<script type="text/javascript" src="/portalstf-static-frontend/scripts/vendor.js"></script><script type="text/javascript" src="/portalstf-static-frontend/scripts/bundle.js"></script><script type="text/javascript" src="/portalstf-static-frontend/scripts/transparencia.js"></script></body>
+<script type="text/javascript" src="/portalstf-static-frontend/scripts/vendor.js"></script><script type="text/javascript" src="/portalstf-static-frontend/scripts/bundle.js"></script><script type="text/javascript" src="/portalstf-static-frontend/scripts/votacoes.js"></script></body>
 </html>
