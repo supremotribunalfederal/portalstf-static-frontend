@@ -114,3 +114,116 @@ function pesquisarTermoInformativoSTF(termo) {
     var url = "http://www.stf.jus.br/portal/informativo/pesquisarInformativo.asp?s1=" + termo;
     window.open(url, "_blank");
 }
+
+
+
+//--------------------------
+//Pesquisas prontas
+$('#pesquisas-prontas').submit(function(e){
+    var form = $('#pesquisas-prontas');
+    form.validate({
+        errorPlacement: function(label, element) {
+            label.addClass('alert alert-danger col-md-10 m-t-8 m-b-0');
+            label.insertAfter('#btn-pesquisas-prontas');
+        },        
+        rules: {
+            pesquisa: {
+                required: true,
+            }
+        },
+        messages: {
+            pesquisa: {
+                required: "Informe o termo para a busca",
+            }
+        }
+    });
+    
+    if(form.valid()){
+       pesquisaPronta($("#txt-pesquisas-prontas").val());    
+    }
+});
+
+
+ function pesquisaPronta(termo) {
+    var url = "http://www.stf.jus.br/portal/jurisprudencia/listarResultadoPesquisaJurisprudenciaFavorita.asp?palavraChaveJurisprudenciaFavorita=" + termo;
+    window.open(url, "_blank");
+}
+
+
+//-----------------------------------------------------
+//pesquisa de súmulas vinculantes
+	
+//$('#txtNumero').on('focus', function() {
+//        $('#txtPesquisaLivre').val('');
+//});
+//
+//$('#txtPesquisaLivre').on('focus', function() {
+//        $('#txtNumero').val('');
+//});
+
+//$.validator.addMethod( "require_from_group", function( value, element, options ) {
+//	var $fields = $( options[ 1 ], element.form ),
+//		$fieldsFirst = $fields.eq( 0 ),
+//		validator = $fieldsFirst.data( "valid_req_grp" ) ? $fieldsFirst.data( "valid_req_grp" ) : $.extend( {}, this ),
+//		isValid = $fields.filter( function() {
+//			return validator.elementValue( this );
+//		} ).length >= options[ 0 ];
+//
+//	// Store the cloned validator for future validation
+//	$fieldsFirst.data( "valid_req_grp", validator );
+//
+//	// If element isn't being validated, run each require_from_group field's validation rules
+//	if ( !$( element ).data( "being_validated" ) ) {
+//		$fields.data( "being_validated", true );
+//		$fields.each( function() {
+//			validator.element( this );
+//		} );
+//		$fields.data( "being_validated", false );
+//	}
+//	return isValid;
+//}, $.validator.format( "Please fill at least {0} of these fields." ) );
+//
+//$('#frmPesquisa').submit(function(event){
+//    var form = $('#frmPesquisa');
+//    form.validate({
+//        errorPlacement: function(label, element) {
+//            label.addClass('alert alert-danger col-md-10 m-t-8 m-b-0');
+//            label.insertAfter('#btnPesquisarSumula');
+//        },        
+//        rules: {
+//            
+//            txtPesquisaLivre: {
+//                require_from_group: [1, ".campos-sumula"]
+////                required: function(element) {
+////                    return !($("#txtNumero").is(':filled'));
+////                    return (!$("#Phone").hasClass('valid'));
+//            },
+//            txtNumero: {
+//                require_from_group: [1, ".campos-sumula"]
+////                required: function(element) {
+////                    return !($("#txtPesquisaLivre").is(':filled'));
+////                }
+//            },
+////            txtRamoDireito: {
+////                required: function(element) {
+////                    $("#txtNumero").is(':empty');
+////                }
+////            }
+//        },
+//        messages: {
+//            txtPesquisaLivre: {
+//                required: "Informe o termo para a busca - txtPesquisaLivre",
+//            },
+//            txtNumero: {
+//                required: "Informe o termo para a busca - txtNumero",
+//            }
+//        }
+//        
+//        
+//    });
+//    if ($(form).valid()){
+//        $(form).submit();
+//    } else {
+//        event.preventDefault();
+//    }
+//});
