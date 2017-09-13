@@ -254,7 +254,7 @@ function pesquisarProcesso() {
 }
 
 function pesquisarProcessoPorNumeroUnico() {
-    $.get('http://localhost/portal/util/pesquisaProcessoPorNumeroUnico.asp', {
+    $.get('/util/pesquisaProcessoPorNumeroUnico.asp', {
         numeroUnico: $('#pesquisaPrincipalNumeroUnico').data( $.mask.dataName )(),
     }).done(function(data) {
         window.location.href = '//stf.jus.br/portal/processo/verProcessoAndamento.asp?incidente=' + data
@@ -270,7 +270,7 @@ function pesquisarProcessoPorNumeroUnico() {
 }
 
 function pesquisarProcessoPorClasseNumero() {
-    $.get('http://localhost/portal/util/pesquisaProcessoPorClasseNumero.asp', {
+    $.get('/util/pesquisaProcessoPorClasseNumero.asp', {
         classe: $('.pesquisa-processo-classe .processo-classe').val(),
         numero: $('#pesquisaPrincipalClasseNumero').val()
     }).done(function(data) {
