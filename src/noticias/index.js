@@ -24,10 +24,3 @@ $('#noticia-informacao-util-nao').on('click', function(){
 	ga('send', 'event', 'Notícia', 'Classificação de utilidade', 'Não');
 });
 
-$('#noticia-interno-imprimir-inferior').on('click', function() {
-	ga('send', 'event', 'Notícia', 'Impressão', 'Imprimir');
-});
-
-$('#noticia-interno-imprimir-superior').on('click', function() {
-	ga('send', 'event', 'Notícia', 'Impressão', 'Imprimir');
-});

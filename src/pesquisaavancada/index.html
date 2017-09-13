@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Supremo Tribunal Federal</title>
+  <link rel="icon" type="imagem/png" href="<%= require('assets/img/favicon.ico') %>" />
 </head>
 <body class="pagina-interna">
   <div id="main" class="container-fluid p-0">
     <%- include src/includes/header.html %>
-    <%- include src/includes/pesquisa-lista.html %>
+    <%- include src/includes/pesquisa.html %>
     <section id="conteudo" class="container-fluid m-0 p-0">
       <div class="row container center-block p-0">
         <!--Menu Lateral-->
@@ -30,7 +31,7 @@
               <li><a href="#">Gestão</a></li>
             </ul>
           </div>
-            <div class="card m-t-16">
+<!--            <div class="card m-t-16">
                 <div class="card-titulo">Filtros</div>
                 <div class="card-conteudo row m-0 m-t-16 m-b-16 p-0">
                     <iframe class="full-width iframe-pequeno" src='http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=cDzAm&select=clearall' style='border:none;'></iframe>
@@ -40,7 +41,7 @@
                     <iframe class="full-width iframe-pequeno" src='http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=FYJPf&select=clearall'></iframe>  
                     <iframe class="full-width iframe-pequeno" src='http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=vwVfLPM&select=clearall' style='border:none;'></iframe>
                 </div>
-            </div>
+            </div>-->
             
         </div>
 
@@ -52,11 +53,13 @@
                   <span><a href="#">O STF</a></span>
                   <span><a href="#">Repercussão Geral</a></span>
                   <span>Votações</span>
-                </div>      
+                </div>    
+                  
+                <iframe style="height: 1000px;" frameborder="0" class="full-width full-height" src='http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&sheet=fd693dc2-b951-431c-bffa-06de14a80057&select=clearall'></iframe>
                   
                   
                 <!--início do conteudo principal-->  
-                <h3 class="texto-titulo m-b-24">Pesquisa Avançada de Repercussão Geral</h3>
+<!--                <h3 class="texto-titulo m-b-24">Pesquisa Avançada de Repercussão Geral</h3>
                 
                 <div class="row">
                     <div class="col-md-6">
@@ -80,7 +83,7 @@
                         </div>
                     </div>
                     
-<!--                    <div class="col-md-8">
+                    <div class="col-md-8">
                         <div class="card">
                             <div class="card-titulo">Filtros</div>
                             <div class="card-conteudo row m-0 m-t-16 m-b-16 p-0">
@@ -88,7 +91,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>-->
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-md-7">
@@ -119,7 +122,7 @@
                             </div>
                         </div>
                     </div>
-                </div>  
+                </div>  -->
                 
               
               </div>

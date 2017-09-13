@@ -3,9 +3,25 @@ import $ from 'jquery';
 
 import moment from 'moment';
 
-$("#sugerir-correcao-texto").click(function() {
-    $("#form-sugerir-correcao-texto").show();
+$("#texto-informacao-util-sim").click(function() {
+    $("#texto-informacao-util-agradecimento").show();
 });
+
+$("#texto-informacao-util-nao").click(function() {
+    $("#texto-informacao-util-agradecimento").show();
+});
+
+//event tracker do Google Analytics
+
+//botões de feedback
+$('#texto-informacao-util-sim').on('click', function(){
+	ga('send', 'event', 'Textos', 'Classificação de utilidade', 'Sim');
+});
+
+$('#texto-informacao-util-nao').on('click', function(){
+	ga('send', 'event', 'Textos', 'Classificação de utilidade', 'Não');
+});
+
 
 $("#enviar-correcao-texto").click(function() {
     $("#form-sugerir-correcao-texto").hide();
