@@ -17,10 +17,10 @@
         <div class="hidden-md hidden-lg hidden-xl campo-container">
           <select id="menu-pesquisa-mobile" class="pesquisa-select full-width">
             <option value="">Selecione o tipo de pesquisa</option>
-            <option data-aba="abaProcesso" value="">Processos</option>
-            <option data-aba="abaJurisprudencia" value="">Jurisprudência</option>
-            <option data-aba="abaNoticias" value="">Notícias e Textos</option>
-            <option data-aba="abaTransparencia" value="">Transparência</option>
+            <option data-aba="abaProcesso" value="abaProcesso">Processos</option>
+            <option data-aba="abaJurisprudencia" value="abaJurisprudencia">Jurisprudência</option>
+            <option data-aba="abaNoticias" value="abaNoticias">Notícias e Textos</option>
+            <option data-aba="abaTransparencia" value="abaTransparencia">Transparência</option>
           </select>
         </div>
         <div class="form-inline">
@@ -45,16 +45,55 @@
                   <input type="hidden" value="3" id="abaSelecionada" />
                 </div>
 
-                <input class="campo-texto col-md-7 col-xs-12 col-sm-12" type="text" name="pesquisaPrincipal" id="pesquisaPrincipal" placeholder="Digite a classe e número do processo (ex: ADI 100)">
+                
+                <div class="col-md-12 col-xs-12 col-sm-12 pesquisa-processo aba-pesquisa">
+                  <select class="campo-texto tipo-pesquisa-processo">
+                    <option value="CLASSE_E_NUMERO">Por Classe e Número</option>
+                    <option value="NUMERO_UNICO">Por Número Único</option>
+                    <option value="PARTE_OU_ADVOGADO">Por Parte ou Advogado</option>
+                  </select>
+                  <div class="campo-pesquisa-processo pesquisa-processo-classe">
+                    <select class="campo-texto processo-classe">
+                      <option value="">Classe</option>
+                      <option value="ADI">ADI</option>
+                      <option value="HC">HC</option>
+                      <option value="ADPF">ADPF</option>
+                    </select>
+                    <div class="campo-pesquisa-numero">
+                      <input type="text" name="pesquisaPrincipalClasseNumero" id="pesquisaPrincipalClasseNumero" class="campo-texto" placeholder="Digite o número do processo (ex: 100)">
+                    </div>
+                  </div>
+                  <div class="campo-pesquisa-processo pesquisa-numero-unico" style="display: none;">
+                    <input type="text" name="pesquisaPrincipalNumeroUnico" id="pesquisaPrincipalNumeroUnico" class="campo-texto" placeholder="Digite o número único">
+                  </div>
+                  <div class="campo-pesquisa-processo pesquisa-parte-advogado" style="display: none;">
+                    <input type="text" name="pesquisaPrincipalParteAdvogado" id="pesquisaPrincipalParteAdvogado" class="campo-texto" placeholder="Digite o nome da parte ou advogado">
+                  </div>
+                </div>
 
-                <div class="hidden-sm hidden-xs botoes-pesquisa-jurisprudencia col-md-5">
-                  <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador E" data-content="Procura todas as palavras desejadas em qualquer lugar do documento. Ex: ICMS e SUBSTITUIÇÃO." data-value="e" id="jurisprudencia-e" class="pull-left">e</span>
-                  <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador OU" data-content="Procura por qualquer uma das palavras. Pode utilizar o parênteses para combinar a pesquisa com outros operadores. Ex: aposentadoria e (deputado ou parlamentar ou congressista)." data-value="ou" class="pull-left">ou</span>
-                  <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador ADJ" data-content="Busca palavras aproximadas, na mesma ordem colocada na expressão de busca. Ex: MINISTÉRIO adj2 PÚBLICO e TEMPO adj2 SERVIÇO (O número após o 'adj' indica delimitação de distância entre palavras, podendo ser escolhido livremente)." data-value="adj" class="pull-left">adj</span>
-                  <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador NÃO" data-content="Recupera documentos que contenham a primeira, mas não a segunda palavra. Ex: Parlamentar não penal" data-value="não" class="pull-left">não</span>
-                  <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador PROX" data-content="Procura palavras aproximadas em qualquer ordem. Ex: extraordinário prox5 admissibilidade. (O número após o 'PROX' indica delimitação de distância entre palavras, podendo ser escolhido livremente)." data-value="prox" class="pull-left">prox</span>
-                  <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador MESMO" data-content="Operador utilizado para pesquisar no mesmo parágrafo; sua utilização principal é para pesquisa no campo legislação. Ex: aposentadoria mesmo parlamentar (Obs.: Consulte o Ajuda para pesquisa por legislaççao na base de Súmulas)." data-value="mesmo"class="pull-left">mesmo</span>
-                  <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador $" data-content="Este operador substitui qualquer parte da palavra desejada, ou seja, prefixo, radical ou sufixo. Ex: $constitucional$ / militar$ / octavio ga$otti" data-value="$" class="pull-left">$</span>
+                <div class="col-md-12 col-xs-12 col-sm-12 pesquisa-jurisprudencia aba-pesquisa" style="display: none;">
+                  <div class="col-md-7 col-xs-12 col-sm-12 no-padding">
+                    <input type="text" name="pesquisaJurisprudencia" id="pesquisaJurisprudencia" class="campo-texto" placeholder="Digite um termo para a pesquisa de jurisprudência...">
+                  </div>
+
+                  <div class="hidden-sm hidden-xs botoes-pesquisa-jurisprudencia col-md-5">
+                    <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador E" data-content="Procura todas as palavras desejadas em qualquer lugar do documento. Ex: ICMS e SUBSTITUIÇÃO." data-value="e" id="jurisprudencia-e" class="pull-left">e</span>
+                    <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador OU" data-content="Procura por qualquer uma das palavras. Pode utilizar o parênteses para combinar a pesquisa com outros operadores. Ex: aposentadoria e (deputado ou parlamentar ou congressista)." data-value="ou" class="pull-left">ou</span>
+                    <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador ADJ" data-content="Busca palavras aproximadas, na mesma ordem colocada na expressão de busca. Ex: MINISTÉRIO adj2 PÚBLICO e TEMPO adj2 SERVIÇO (O número após o 'adj' indica delimitação de distância entre palavras, podendo ser escolhido livremente)." data-value="adj" class="pull-left">adj</span>
+                    <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador NÃO" data-content="Recupera documentos que contenham a primeira, mas não a segunda palavra. Ex: Parlamentar não penal" data-value="não" class="pull-left">não</span>
+                    <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador PROX" data-content="Procura palavras aproximadas em qualquer ordem. Ex: extraordinário prox5 admissibilidade. (O número após o 'PROX' indica delimitação de distância entre palavras, podendo ser escolhido livremente)." data-value="prox" class="pull-left">prox</span>
+                    <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador MESMO" data-content="Operador utilizado para pesquisar no mesmo parágrafo; sua utilização principal é para pesquisa no campo legislação. Ex: aposentadoria mesmo parlamentar (Obs.: Consulte o Ajuda para pesquisa por legislaççao na base de Súmulas)." data-value="mesmo"class="pull-left">mesmo</span>
+                    <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador $" data-content="Este operador substitui qualquer parte da palavra desejada, ou seja, prefixo, radical ou sufixo. Ex: $constitucional$ / militar$ / octavio ga$otti" data-value="$" class="pull-left">$</span>
+                  </div>
+
+                </div>
+
+                <div class="col-md-12 col-xs-12 col-sm-12 pesquisa-noticias-e-textos aba-pesquisa" style="display: none;">
+                  <input type="text" name="pesquisaNoticiasTextos" id="pesquisaNoticiasTextos" class="campo-texto" placeholder="Informe um assunto sobre uma notícia...">
+                </div>
+
+                <div class="col-md-12 col-xs-12 col-sm-12 pesquisa-transparencia aba-pesquisa" style="display: none;">
+                  <input type="text" name="pesquisaTransparencia" id="pesquisaTransparencia" class="campo-texto" placeholder="Informe o assunto desejado...">
                 </div>
 
                 <button form="pesquisa-principal" id="btnPesquisar" class="btn btn-default pull-right">

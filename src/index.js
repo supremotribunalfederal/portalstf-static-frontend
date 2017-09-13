@@ -1,3 +1,4 @@
+import 'jquery.maskedinput';
 import $ from 'jquery';
 import './index-ga';
 import moment from 'moment';
@@ -29,6 +30,10 @@ $(document).ready(function(){
 moment.locale("pt-BR");    
 $(".tmp-dec").html("H&aacute; " + moment().startOf("day").fromNow());    
 
+var campoInputPesquisa = 'pesquisaPrincipalClasseNumero';
+
+$('#pesquisaPrincipalNumeroUnico').mask('9999999-99.9999.9.99.9999', {autoclear: false});
+
 //--------------------------------
 // controle dos botoes de pesquisa da home na versao Desktop
 
@@ -46,25 +51,42 @@ $("#menuPesquisa li span").on("click", function() {
     
     var placeholder = "";
     var aba = $(this).attr("id");
-    
+
+    $('.aba-pesquisa').hide();
+
+    if (validator) {
+        validator.resetForm();
+        validator.reset();
+    }
+
+    $('#pesquisa-principal')[0].reset();
+
     switch(aba) {
         case "abaProcesso":
             placeholder = "Digite a classe e número do processo (ex: ADI 100)";
             $("#abaSelecionada").val("3");
+            $('.pesquisa-processo').show();
+            campoInputPesquisa = 'pesquisaPrincipalClasseNumero';
             break;
         case "abaJurisprudencia":
             placeholder = "Digite um termo para a pesquisa de jurisprudência...";
             $("#abaSelecionada").val("4");
             $('.botoes-pesquisa-jurisprudencia span').show();
             $('.pesquisa-jurisprudencia-links-inferiores').show();   
+            $('.pesquisa-jurisprudencia').show();
+            campoInputPesquisa = 'pesquisaJurisprudencia';
             break;
         case "abaNoticias":
             placeholder = "Informe um assunto sobre uma notícia...";
             $("#abaSelecionada").val("2");
+            $('.pesquisa-noticias-e-textos').show();
+            campoInputPesquisa = 'pesquisaNoticiasTextos';
             break;
         default:
             placeholder = "Informe o assunto desejado...";
             $("#abaSelecionada").val("6");
+            $('.pesquisa-transparencia').show();
+            campoInputPesquisa = 'pesquisaTransparencia';
             break;
     }
     
@@ -81,26 +103,40 @@ $("#menuPesquisa li span").on("click", function() {
 // controle dos botoes de pesquisa da home na versao mobile
 
 $("#menu-pesquisa-mobile").on("change", function() { 
-    $('.pesquisa-jurisprudencia-links-inferiores').hide();  
+    $('.pesquisa-jurisprudencia-links-inferiores').hide();
+    $('.aba-pesquisa').hide();
     var placeholder = "";
-    var aba = $( "#menu-pesquisa-mobile option:selected" ).data("aba");    
+    var aba = $( "#menu-pesquisa-mobile option:selected" ).data("aba");
+    if (validator) {
+        validator.resetForm();
+        validator.reset();
+    }
+    $('#pesquisa-principal')[0].reset();
     switch(aba) {
         case "abaProcesso":
             placeholder = "Digite a classe e número do processo";
             $("#abaSelecionada").val("3");
+            $('.pesquisa-processo').show();
+            campoInputPesquisa = 'pesquisaPrincipalClasseNumero';
             break;
         case "abaJurisprudencia":
             placeholder = "Digite um termo para a pesquisa de jurisprudência";
             $("#abaSelecionada").val("4");               
-            $('.pesquisa-jurisprudencia-links-inferiores').show();  
+            $('.pesquisa-jurisprudencia-links-inferiores').show();
+            $('.pesquisa-jurisprudencia').show();
+            campoInputPesquisa = 'pesquisaJurisprudencia';
             break;
         case "abaNoticias":
             placeholder = "Informe um assunto sobre uma notícia";
             $("#abaSelecionada").val("2");
+            $('.pesquisa-noticias-e-textos').show();
+            campoInputPesquisa = 'pesquisaNoticiasTextos';
             break;
         default:
             placeholder = "Informe o assunto desejado...";
             $("#abaSelecionada").val("6");
+            $('.pesquisa-transparencia').show();
+            campoInputPesquisa = 'pesquisaTransparencia';
             break;
     }
     
@@ -111,29 +147,158 @@ $("#menu-pesquisa-mobile").on("change", function() {
 // fim do controle dos botoes de pesquisa versao mobile
 //----------------------------------------------------
 
-$('.botoes-pesquisa-jurisprudencia span').on('click', function(){
-    var search = $('#pesquisaPrincipal').val();
-    search = search + ' ' + $(this).data('value') + ' ';
-    $('#pesquisaPrincipal').val(search);        
-    $("#pesquisaPrincipal").focus();
+//----------------------------------------------------
+// controle do tipo de pesquisa de processo
+$(".tipo-pesquisa-processo").change(function(event) {
+    if (validator) {
+        validator.resetForm();
+        validator.reset();
+    }
+    //$('#pesquisa-principal')[0].reset();
+    $('.campo-pesquisa-processo').find('input').val('');
+    $('.campo-pesquisa-processo').find('select.processo-classe').val('');
+    switch($(this).val()) {
+        case "CLASSE_E_NUMERO":
+            $('.campo-pesquisa-processo').hide();
+            $('.pesquisa-processo-classe').show();
+            campoInputPesquisa = 'pesquisaPrincipalClasseNumero';
+            break;
+        case "PARTE_OU_ADVOGADO":
+            $('.campo-pesquisa-processo').hide();
+            $('.pesquisa-parte-advogado').show();
+            
+            campoInputPesquisa = 'pesquisaPrincipalParteAdvogado';
+            break;
+        case "NUMERO_UNICO":
+            $('.campo-pesquisa-processo').hide();
+            $('.pesquisa-numero-unico').show();
+            campoInputPesquisa = 'pesquisaPrincipalNumeroUnico';
+            break;
+    }
 });
 
-function realizarPesquisa(){
+//----------------------------------------------------
+// fim do controle do tipo de pesquisa de processo
+
+//----------------------------------------------------
+// controle do include de pesquisa para listas de notícias
+
+$("#abrir-pesquisa").click(function() {
+    $("#pesquisa-completa").show();
+    $("#fechar-pesquisa").show();
+    $("#abrir-pesquisa").hide();
+    $("#rotulo-pagina").hide();
+});
+
+$("#fechar-pesquisa").click(function() {
+    $("#pesquisa-completa").hide();
+    $("#fechar-pesquisa").hide();
+    $("#abrir-pesquisa").show();
+    $("#rotulo-pagina").show();
+});
+
+//---------------------------------------------------------
+// fim do controle do include de pesquisa para listas de notícias
+
+$('.botoes-pesquisa-jurisprudencia span').on('click', function(){
+    var search = $('#pesquisaJurisprudencia').val();
+    search = search + ' ' + $(this).data('value') + ' ';
+    $('#pesquisaJurisprudencia').val(search);        
+    $("#pesquisaJurisprudencia").focus();
+});
+
+function realizarPesquisa(id){
     var assunto = $("#abaSelecionada").val();
-    var termoPesquisa = $("#pesquisaPrincipal").val();
+    var termoPesquisa = $("#" + id).val();
 
     if (assunto == "4") {
-        window.open("//stf.jus.br/portal/jurisprudencia/listarConsolidada.asp?base=baseAcordaos&base=baseRepercussao&url=&txtPesquisaLivre=" + termoPesquisa, '_blank');
+        window.open("//stf.jus.br/portal/jurisprudencia/listarConsolidada.asp?base=baseAcordaos&base=baseRepercussao&url=&txtPesquisaLivre=" + encodeURIComponent(termoPesquisa), '_blank');
+    } else if (assunto == "3") { // Processo
+        pesquisarProcesso();
     } else {
-        window.open("//stf.jus.br/portal/pesquisa/listarPesquisa.asp?termo=" + termoPesquisa + "&assunto=" + assunto, '_blank');
+        window.open("//stf.jus.br/portal/pesquisa/listarPesquisa.asp?termo=" + encodeURIComponent(termoPesquisa) + "&assunto=" + encodeURIComponent(assunto), '_blank');
     }
 }
 
-//Pesquisa principal do topo da página
-$('#pesquisa-principal').submit(function(e){
-    
+function pesquisarProcesso() {
+    switch($('.tipo-pesquisa-processo').val()) {
+        case "CLASSE_E_NUMERO":
+            if ($('.pesquisa-processo-classe .processo-classe').val()) {
+                pesquisarProcessoPorClasseNumero();
+            } else {
+                pesquisarProcessoPorNumeroApenas();
+            }
+            break;
+        case "PARTE_OU_ADVOGADO":
+            pesquisarProcessoPorNomeDaParteOuAdvogado();
+            break;
+        case "NUMERO_UNICO":
+            pesquisarProcessoPorNumeroUnico();
+            break;
+    }
+}
+
+function pesquisarProcessoPorNumeroUnico() {
+    $.get('/util/pesquisaProcessoPorNumeroUnico.asp', {
+        numeroUnico: $('#pesquisaPrincipalNumeroUnico').data( $.mask.dataName )(),
+    }).done(function(data) {
+        window.location.href = '//stf.jus.br/portal/processo/verProcessoAndamento.asp?incidente=' + data
+    }).fail(function(data) {
+        if (data.responseText) {
+            var obj = $.parseJSON(data.responseText);
+            var validator = $('#pesquisa-principal').validate();
+            validator.showErrors({
+              "pesquisaPrincipalNumeroUnico": obj.error
+            });
+        }
+    });
+}
+
+function pesquisarProcessoPorClasseNumero() {
+    $.get('/util/pesquisaProcessoPorClasseNumero.asp', {
+        classe: $('.pesquisa-processo-classe .processo-classe').val(),
+        numero: $('#pesquisaPrincipalClasseNumero').val()
+    }).done(function(data) {
+        window.location.href = '//stf.jus.br/portal/processo/verProcessoAndamento.asp?incidente=' + data
+    }).fail(function(data) {
+        if (data.responseText) {
+            var obj = $.parseJSON(data.responseText);
+            var validator = $('#pesquisa-principal').validate();
+            validator.showErrors({
+              "pesquisaPrincipalClasseNumero": obj.error
+            });
+        }
+    });
+}
+
+function pesquisarProcessoPorNumeroApenas() {
+    fazerPostListarProcesso('//stf.jus.br/portal/processo/listarProcesso.asp', 1, $('#pesquisaPrincipalClasseNumero').val());
+}
+
+function fazerPostListarProcesso(action, dropmsgoption, value) {
+    $('<form action="' + action + '" method="POST" accept-charset="ISO-8859-1">' +
+    '<input type="hidden" name="dropmsgoption" value="' + dropmsgoption + '">' +
+    '<input type="hidden" name="partesAdvogadosRadio" value="1">' +
+    '<input type="hidden" name="numero" value="' + value + '">' +
+    '</form>').appendTo('body').submit();
+}
+
+function pesquisarProcessoPorNomeDaParteOuAdvogado() {
+    fazerPostListarProcesso('//stf.jus.br/portal/processo/listarProcessoParte.asp', 4, $('#pesquisaPrincipalParteAdvogado').val());
+}
+
+// Traduções do jQuery validator, já que havia um bug
+// a partir da segunda validação, no qual as mensagens
+// eram mostradas em inglês até que se clicasse na página.
+$.extend( $.validator.messages, {
+    required: "Informe o termo para a pesquisa"
+});
+
+var validator;
+
+function configurarValidacaoPesquisa(id) {
     //JQUERY validation
-    $('#pesquisa-principal').validate({
+    var conf = {
         //escolher onde posicionar a mensagem de erro
         errorPlacement: function(label, element) {
             label.addClass('alert alert-danger col-xs-10 m-t-8 m-b-0');
@@ -143,19 +308,29 @@ $('#pesquisa-principal').submit(function(e){
         wrapper: 'span',
         
         rules: {
-            pesquisaPrincipal: {
-                required: true,
-            }
         },
         messages: {
-            pesquisaPrincipal: {
-                required: "Informe o termo para a pesquisa"
-            }
         }
-    });
-    
+    };
+    conf.rules[id] = {
+        required: true,
+    };
+    conf.messages[id] = {
+        required: "Informe o termo para a pesquisa"
+    };
+    if (validator) {
+        validator.destroy();
+    }
+
+    validator = $('#pesquisa-principal').validate(conf);
+}
+
+//Pesquisa principal do topo da página
+$('#pesquisa-principal').submit(function(e){
+    configurarValidacaoPesquisa(campoInputPesquisa);
+
     if( $('#pesquisa-principal').valid()){
-        realizarPesquisa();        
+        realizarPesquisa(campoInputPesquisa); 
     }
 });
 
