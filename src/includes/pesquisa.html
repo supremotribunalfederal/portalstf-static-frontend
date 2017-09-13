@@ -21,6 +21,7 @@
             <option data-aba="abaJurisprudencia" value="abaJurisprudencia">Jurisprudência</option>
             <option data-aba="abaNoticias" value="abaNoticias">Notícias e Textos</option>
             <option data-aba="abaTransparencia" value="abaTransparencia">Transparência</option>
+            <option data-aba="abaRepercussao" value="abaRepercussao">Repercussão Geral</option>
           </select>
         </div>
         <div class="form-inline">
@@ -41,6 +42,9 @@
                     <li>
                         <span id="abaTransparencia">Transparência</span>
                     </li>
+                    <li>
+                        <span id="abaRepercussao">Repercussão Geral</span>
+                    </li>
                   </ul>
                   <input type="hidden" value="3" id="abaSelecionada" />
                 </div>
@@ -55,9 +59,46 @@
                   <div class="campo-pesquisa-processo pesquisa-processo-classe">
                     <select class="campo-texto processo-classe">
                       <option value="">Classe</option>
+                      <option value="AC">AC</option>
+                      <option value="ACO">ACO</option>
+                      <option value="ADC">ADC</option>
                       <option value="ADI">ADI</option>
-                      <option value="HC">HC</option>
+                      <option value="ADO">ADO</option>
                       <option value="ADPF">ADPF</option>
+                      <option value="AI">AI</option>
+                      <option value="AImp">AImp</option>
+                      <option value="AO">AO</option>
+                      <option value="AOE">AOE</option>
+                      <option value="AP">AP</option>
+                      <option value="AR">AR</option>
+                      <option value="ARE">ARE</option>
+                      <option value="AS">AS</option>
+                      <option value="CC">CC</option>
+                      <option value="Cm">Cm</option>
+                      <option value="EI">EI</option>
+                      <option value="EL">EL</option>
+                      <option value="Ext">Ext</option>
+                      <option value="HC">HC</option>
+                      <option value="HD">HD</option>
+                      <option value="IF">IF</option>
+                      <option value="Inq">Inq</option>
+                      <option value="MI">MI</option>
+                      <option value="MS">MS</option>
+                      <option value="OACO">OACO</option>
+                      <option value="Pet">Pet</option>
+                      <option value="PPE">PPE</option>
+                      <option value="PSV">PSV</option>
+                      <option value="RC">RC</option>
+                      <option value="Rcl">Rcl</option>
+                      <option value="RE">RE</option>
+                      <option value="RHC">RHC</option>
+                      <option value="RHD">RHD</option>
+                      <option value="RMI">RMI</option>
+                      <option value="RMS">RMS</option>
+                      <option value="RvC">RvC</option>
+                      <option value="SL">SL</option>
+                      <option value="SS">SS</option>
+                      <option value="STA">STA</option>
                     </select>
                     <div class="campo-pesquisa-numero">
                       <input type="text" name="pesquisaPrincipalClasseNumero" id="pesquisaPrincipalClasseNumero" class="campo-texto" placeholder="Digite o número do processo (ex: 100)">
@@ -94,6 +135,10 @@
 
                 <div class="col-md-12 col-xs-12 col-sm-12 pesquisa-transparencia aba-pesquisa" style="display: none;">
                   <input type="text" name="pesquisaTransparencia" id="pesquisaTransparencia" class="campo-texto" placeholder="Informe o assunto desejado...">
+                </div>
+
+                <div class="col-md-12 col-xs-12 col-sm-12 pesquisa-repercussao aba-pesquisa" style="display: none;">
+                  <input type="text" name="pesquisaRepercussao" id="pesquisaRepercussao" class="campo-texto" placeholder="Digite um tema para pesquisar...">
                 </div>
 
                 <button form="pesquisa-principal" id="btnPesquisar" class="btn btn-default pull-right">
