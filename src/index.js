@@ -421,7 +421,7 @@ $('#btnAcessarPortalNocicitas').on('click', function() {
 
 // Selecionar a pesquisa por URL
 
-(function PesquisaPorURL() {
+(function pesquisaPorURL() {
     var url = window.location.pathname;
     if (url == '/jurisprudencia') {
         $('#abaJurisprudencia').click();
@@ -436,7 +436,11 @@ $('#btnAcessarPortalNocicitas').on('click', function() {
     }
 })();
 
-
+(function pesquisaTopo() {
+    if ($('body.pagina-interna')) {
+        
+    } else {}
+})();
 
 /* ---------------------------------------------------------------------------------------------------------------- */
 
