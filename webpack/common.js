@@ -10,7 +10,7 @@ const chunksOrder = require('./chunks-order');
 
 
 const publicPath = process.env.GH_PAGES ? process.env.GH_PAGES.trim() : '/';
-const VENDORS = ['bootstrap-loader', 'moment', 'urijs', 'jquery-ui/ui/widgets/datepicker'];
+const VENDORS = ['bootstrap-loader', 'moment', 'urijs', 'jquery-ui/ui/widgets/datepicker', 'jquery-validation'];
 
 const homeHtml = new HtmlPlugin({
   template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/index.html')}`,
