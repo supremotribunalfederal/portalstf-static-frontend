@@ -306,7 +306,8 @@ function pesquisarProcessoPorNomeDaParteOuAdvogado() {
 // a partir da segunda validação, no qual as mensagens
 // eram mostradas em inglês até que se clicasse na página.
 $.extend( $.validator.messages, {
-    required: "Informe o termo para a pesquisa"
+    required: "Informe o termo para a pesquisa",
+    minlength: "Por favor, informe {0} ou mais caracteres para sua pesquisa."
 });
 
 var validator;
@@ -333,6 +334,12 @@ function configurarValidacaoPesquisa(id) {
     conf.messages[id] = {
         required: "Informe o termo para a pesquisa"
     };
+
+    if (id === 'pesquisaPrincipalParteAdvogado') {
+        conf.rules[id]['minlength'] = 4;
+        conf.messages[id]['minlength'] = "Por favor, informe {0} ou mais caracteres para sua pesquisa.";
+    }
+
     if (validator) {
         validator.destroy();
     }
