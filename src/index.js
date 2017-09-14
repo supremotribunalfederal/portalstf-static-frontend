@@ -443,11 +443,6 @@ $('#btnAcessarPortalNocicitas').on('click', function() {
     }
 })();
 
-(function pesquisaTopo() {
-    if ($('body.pagina-interna')) {
-        
-    } else {}
-})();
 
 /* ---------------------------------------------------------------------------------------------------------------- */
 
