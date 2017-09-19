@@ -430,13 +430,13 @@ $('#btnAcessarPortalNocicitas').on('click', function() {
 
 (function pesquisaPorURL() {
     var url = window.location.pathname;
-    if (url == '/jurisprudencia') {
+    if (url.match(/^\/jurisprudencia\/?.*/)) {
         $('#abaJurisprudencia').click();
-    } else if (url == '/noticias' || url == '/textos' ) {
+    } else if (url.match(/^\/noticias\/?.*/) || url.match(/^\/textos\/?.*/) || url.match(/^\/listagem\/?.*/) ) {
         $('#abaNoticias').click();
-    } else if (url == '/transparencia') {
+    } else if (url.match(/^\/transparencia\/?.*/)) {
         $('#abaTransparencia').click();
-    } else if (url == '/repercussaogeral') {
+    } else if (url.match(/^\/repercussaogeral\/?.*/) || url.match(/^\/votacoes\/?.*/) || url.match(/^\/pesquisaavancada\/?.*/)) {
         $('#abaRepercussao').click();
     } else  {
         $('#abaProcesso').click();
