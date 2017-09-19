@@ -5,10 +5,16 @@ import moment from 'moment';
 
 $("#texto-informacao-util-sim").click(function() {
     $("#texto-informacao-util-agradecimento").show();
+    $("#pergunta-informacao-util").hide();
+    $("#texto-informacao-util-sim").hide();
+    $("#texto-informacao-util-nao").hide();
 });
 
 $("#texto-informacao-util-nao").click(function() {
     $("#texto-informacao-util-agradecimento").show();
+    $("#pergunta-informacao-util").hide();
+    $("#texto-informacao-util-sim").hide();
+    $("#texto-informacao-util-nao").hide();
 });
 
 //event tracker do Google Analytics
@@ -20,18 +26,6 @@ $('#texto-informacao-util-sim').on('click', function(){
 
 $('#texto-informacao-util-nao').on('click', function(){
 	ga('send', 'event', 'Textos', 'Classificação de utilidade', 'Não');
-});
-
-
-$("#enviar-correcao-texto").click(function() {
-    $("#form-sugerir-correcao-texto").hide();
-    var textoCorrecao = $("#correcao-texto").val();
-
-     // TODO Implementar chamada para o backend.
-    console.log("Enviando correção...");
-    console.log(textoCorrecao);
-
-    $("#correcao-texto").val("");
 });
 
 var dataAtualizacao = $(".data-atualizacao").text();
