@@ -5,11 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Supremo Tribunal Federal</title>
+  <link rel="icon" type="imagem/png" href="<%= require('assets/img/favicon.ico') %>" />
 </head>
 <body>
   <div id="main" class="container-fluid p-0">
+
     <%- include src/includes/header.html %>
-    <%- include src/includes/pesquisa-jurisprudencia.html %>
+    
+    <%- include src/includes/pesquisa.html %>
 
     <section id="conteudo" class="container-fluid m-0 p-0" >
       <div class="row container center-block p-0">
@@ -218,7 +221,7 @@
             </div>
           </div>
           <div id="estatisticasProcessuais" class="card m-b-48">
-            <div class="card-titulo">Estatísticas Processuais</div>
+            <div class="card-titulo">Estatísticas de Repercussão Geral</div>
             <div class="card-conteudo row m-0 m-t-16 b-b-16 p-0">
               <div class="estatisticas-grafico p-0 m-0">
                 <iframe id="repgeral-qtd-sobrestados-categoria" class="full-width full-height" src="http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=42267d4e-5e84-43fa-a444-29bd84294ae1&opt=nointeraction%2Cnoselections&select=clearall" style="border:none;"></iframe>

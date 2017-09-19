@@ -82,11 +82,17 @@ $("#menuPesquisa li span").on("click", function() {
             $('.pesquisa-noticias-e-textos').show();
             campoInputPesquisa = 'pesquisaNoticiasTextos';
             break;
-        default:
+        case "abaTransparencia":
             placeholder = "Informe o assunto desejado...";
             $("#abaSelecionada").val("6");
             $('.pesquisa-transparencia').show();
             campoInputPesquisa = 'pesquisaTransparencia';
+            break;
+        default:
+            placeholder = "Digite um tema para pesquisar...";
+            $("#abaSelecionada").val("7");
+            $('.pesquisa-repercussao').show();
+            campoInputPesquisa = 'pesquisaRepercussao';
             break;
     }
     
@@ -132,12 +138,18 @@ $("#menu-pesquisa-mobile").on("change", function() {
             $('.pesquisa-noticias-e-textos').show();
             campoInputPesquisa = 'pesquisaNoticiasTextos';
             break;
-        default:
+        case "abaTransparencia":
             placeholder = "Informe o assunto desejado...";
             $("#abaSelecionada").val("6");
             $('.pesquisa-transparencia').show();
             campoInputPesquisa = 'pesquisaTransparencia';
             break;
+        default:
+            placeholder = "Digite um tema para pesquisar...";
+            $("#abaSelecionada").val("7");
+            $('.pesquisa-repercussao').show();
+            campoInputPesquisa = 'pesquisaRepercussao';
+            break;    
     }
     
     $("#pesquisaPrincipal").attr("placeholder", placeholder);
@@ -215,7 +227,10 @@ function realizarPesquisa(id){
         window.open("//stf.jus.br/portal/jurisprudencia/listarConsolidada.asp?base=baseAcordaos&base=baseRepercussao&url=&txtPesquisaLivre=" + encodeURIComponent(termoPesquisa), '_blank');
     } else if (assunto == "3") { // Processo
         pesquisarProcesso();
-    } else {
+    } else if (assunto == "7") { // Repercussão Geral
+        window.open("//stf.jus.br/portal/jurisprudenciaRepercussao/listarProcesso.asp?PesquisaEm=tema&PesquisaEm=controversia&PesquisaEm=ambos&situacaoRG=TODAS&situacaoAtual=S&txtTituloTema=" + encodeURIComponent(termoPesquisa) + "&numeroTemaInicial=&numeroTemaFinal=&acao=pesquisarProcesso&dataInicialJulgPV=&dataFinalJulgPV=&classeProcesso=&numeroProcesso=&ministro=&ordenacao=asc&botao=", '_blank');
+    }
+     else {
         window.open("//stf.jus.br/portal/pesquisa/listarPesquisa.asp?termo=" + encodeURIComponent(termoPesquisa) + "&assunto=" + encodeURIComponent(assunto), '_blank');
     }
 }
@@ -291,7 +306,8 @@ function pesquisarProcessoPorNomeDaParteOuAdvogado() {
 // a partir da segunda validação, no qual as mensagens
 // eram mostradas em inglês até que se clicasse na página.
 $.extend( $.validator.messages, {
-    required: "Informe o termo para a pesquisa"
+    required: "Informe o termo para a pesquisa",
+    minlength: "Por favor, informe {0} ou mais caracteres para sua pesquisa."
 });
 
 var validator;
@@ -318,6 +334,12 @@ function configurarValidacaoPesquisa(id) {
     conf.messages[id] = {
         required: "Informe o termo para a pesquisa"
     };
+
+    if (id === 'pesquisaPrincipalParteAdvogado') {
+        conf.rules[id]['minlength'] = 4;
+        conf.messages[id]['minlength'] = "Por favor, informe {0} ou mais caracteres para sua pesquisa.";
+    }
+
     if (validator) {
         validator.destroy();
     }
@@ -404,4 +426,23 @@ $('#btnAcessarPortalNocicitas').on('click', function() {
     location.href = window.location.origin + window.location.pathname + 'listagem/' + pagina;
 });
 
+// Selecionar a pesquisa por URL
+
+(function pesquisaPorURL() {
+    var url = window.location.pathname;
+    if (url == '/jurisprudencia') {
+        $('#abaJurisprudencia').click();
+    } else if (url == '/noticias' || url == '/textos' ) {
+        $('#abaNoticias').click();
+    } else if (url == '/transparencia') {
+        $('#abaTransparencia').click();
+    } else if (url == '/repercussaogeral') {
+        $('#abaRepercussao').click();
+    } else  {
+        $('#abaProcesso').click();
+    }
+})();
+
+
 /* ---------------------------------------------------------------------------------------------------------------- */
+
