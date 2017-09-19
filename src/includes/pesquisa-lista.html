@@ -3,13 +3,18 @@
     <div class="pesquisa-conteudo clearfix">
       <div class="pesquisa-titulo m-t-16 m-b-16">
         <button id="abrir-pesquisa" class="btn btn-default btn-icone pull-right __fundo-transparente m-b-16" type="button" data-toggle="collapse.show" href="#pesquisa-completa" aria-expanded="false" aria-controls="pesquisa-completa">
-          <i class="glyphicon glyphicon-search" aria-label="abrir pesquisa"></i>
+          <i class="glyphicon glyphicon-chevron-down" aria-label="abrir pesquisa"></i>
         </button>
         <button id="fechar-pesquisa" class="btn btn-default btn-icone pull-right __fundo-transparente m-b-16" type="button" data-toggle="collapse.show" href="#pesquisa-completa" aria-expanded="false" aria-controls="pesquisa-completa" style="display: none;">
-          <i class="glyphicon glyphicon-search" aria-label="abrir pesquisa"></i>
+          <i class="glyphicon glyphicon-chevron-up" aria-label="abrir pesquisa"></i>
         </button>
       </div> 
       <div id="pesquisa-completa" class="collapse pesquisa-campos">
+       <div class="hidden-xs pull-right">
+            <p class="__stf-branco">
+              <span class="m-r-16 label-peticione">Peticione e acompanhe processos:</span> <a href="//sistemas.stf.jus.br/peticionamento/" target="_blank" class="btn ">Painel do Peticionador</a>
+            </p>
+        </div>
         <div class="hidden-md hidden-lg hidden-xl campo-container">
           <select id="menu-pesquisa-mobile" class="pesquisa-select full-width">
             <option value="">Selecione o tipo de pesquisa</option>
