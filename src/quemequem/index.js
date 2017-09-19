@@ -8,10 +8,16 @@ $(".data-atualizacao").text(dataMoment.format("dddd, DD") + " de " + dataMoment.
 
 $("#quemequem-informacao-util-sim").click(function() {
     $("#quemequem-informacao-util-agradecimento").show();
+    $("#pergunta-informacao-util").hide();
+    $("#quemequem-informacao-util-sim").hide();
+    $("#quemequem-informacao-util-nao").hide();
 });
 
 $("#quemequem-informacao-util-nao").click(function() {
     $("#quemequem-informacao-util-agradecimento").show();
+    $("#pergunta-informacao-util").hide();
+    $("#quemequem-informacao-util-sim").hide();
+    $("#quemequem-informacao-util-nao").hide();
 });
 
 //event tracker do Google Analytics

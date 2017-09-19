@@ -4,10 +4,16 @@ import moment from 'moment';
 
 $("#noticia-informacao-util-sim").click(function() {
     $("#noticia-informacao-util-agradecimento").show();
+    $("#pergunta-informacao-util").hide();
+    $("#noticia-informacao-util-sim").hide();
+    $("#noticia-informacao-util-nao").hide();
 });
 
 $("#noticia-informacao-util-nao").click(function() {
     $("#noticia-informacao-util-agradecimento").show();
+    $("#pergunta-informacao-util").hide();
+    $("#noticia-informacao-util-sim").hide();
+    $("#noticia-informacao-util-nao").hide();
 });
 
 var horaAtualizacao = $(".hora-atualizacao").text();
