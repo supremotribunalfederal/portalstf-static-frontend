@@ -364,6 +364,13 @@ function selecionarDataJulgamento(data) {
     location.href = "//stf.jus.br/portal/pauta/listarCalendario.asp?data=" + data;
 }
 
+/*
+$('#caledarioPautaJulgamento td.ativa a').on('click', function(){
+    selecionarDataJulgamento(data);
+});
+*/
+
+window.selecionarDataJulgamento = selecionarDataJulgamento;
 
 //criando o método de regex para o validador do processo pautado
 $.validator.addMethod('regex',
