@@ -432,7 +432,7 @@ $('#btnAcessarPortalNocicitas').on('click', function() {
     var url = window.location.pathname;
     if (url.match(/^\/jurisprudencia\/?.*/)) {
         $('#abaJurisprudencia').click();
-    } else if (url.match(/^\/noticias\/?.*/) || url.match(/^\/textos\/?.*/) || url.match(/^\/listagem\/?.*/) ) {
+    } else if (url.match(/(^\/noticias\/?.*|^\/textos\/?.*|^\/listagem\/?.*)/) ) {
         $('#abaNoticias').click();
     } else if (url.match(/^\/transparencia\/?.*/)) {
         $('#abaTransparencia').click();
