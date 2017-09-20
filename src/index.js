@@ -361,14 +361,9 @@ $('#pesquisa-principal').submit(function(e){
 //Usada no ato de clicar sobre um dia no calendário de pauta de julgamento.
 function selecionarDataJulgamento(data) {
     ga('send', 'event', 'Página Geral', 'Pauta Julgamento', 'Link calendario');
-    location.href = "//stf.jus.br/portal/pauta/listarCalendario.asp?data=" + data;
+    //location.href = "//stf.jus.br/portal/pauta/listarCalendario.asp?data=" + data;
+    window.open("//stf.jus.br/portal/pauta/listarCalendario.asp?data=" + data, '_blank');
 }
-
-/*
-$('#caledarioPautaJulgamento td.ativa a').on('click', function(){
-    selecionarDataJulgamento(data);
-});
-*/
 
 window.selecionarDataJulgamento = selecionarDataJulgamento;
 
