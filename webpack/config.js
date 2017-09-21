@@ -24,7 +24,8 @@ const secoes = [
   'ostf',
   'quemequem',
   'votacoes',
-  'pesquisaavancada'
+  'pesquisaavancada',
+  'erro-404'
 ];
 
 const secoesChunks = secoes.reduce((prev, cur) => {
@@ -45,9 +46,7 @@ const includes = [
   'footer',
   'paginacao',
   'pesquisa',
-  'pesquisa-transparencia',
-  'pesquisa-jurisprudencia',
-  'pesquisa-repercussaogeral'
+  'pesquisa-lista'
 ]
 
 module.exports = {
