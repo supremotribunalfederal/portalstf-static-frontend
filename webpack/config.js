@@ -25,7 +25,7 @@ const secoes = [
   'quemequem',
   'votacoes',
   'pesquisaavancada',
-  '404'
+  'erro-404'
 ];
 
 const secoesChunks = secoes.reduce((prev, cur) => {
