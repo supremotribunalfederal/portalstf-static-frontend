@@ -15,9 +15,9 @@ $(document).ready(function(){
     //se nao for a pesquisa de jurisprudencia, esconde botoes da pesquisa jurisprudencia
     if(pesquisaSelecionada != 4){
         $('.botoes-pesquisa-jurisprudencia span').hide();
-        $('.pesquisa-jurisprudencia-links-inferiores').hide();            
+        $('.pesquisa-jurisprudencia-links-inferiores').hide();
     }
-    
+
     $('[data-toggle="popover"]').popover({
         container: 'body'
     });
@@ -27,8 +27,8 @@ $(document).ready(function(){
     });
 });
 
-moment.locale("pt-BR");    
-$(".tmp-dec").html("H&aacute; " + moment().startOf("day").fromNow());    
+moment.locale("pt-BR");
+$(".tmp-dec").html("H&aacute; " + moment().startOf("day").fromNow());
 
 var campoInputPesquisa = 'pesquisaPrincipalClasseNumero';
 
@@ -44,11 +44,11 @@ $("#menuPesquisa li span").on("click", function() {
     });
 
     $('.botoes-pesquisa-jurisprudencia span').hide();
-    $('.pesquisa-jurisprudencia-links-inferiores').hide();   
-    
+    $('.pesquisa-jurisprudencia-links-inferiores').hide();
+
     //Ativa a aba clicada.
     $(this).addClass("ativo");
-    
+
     var placeholder = "";
     var aba = $(this).attr("id");
 
@@ -72,7 +72,7 @@ $("#menuPesquisa li span").on("click", function() {
             placeholder = "Digite um termo para a pesquisa de jurisprudência...";
             $("#abaSelecionada").val("4");
             $('.botoes-pesquisa-jurisprudencia span').show();
-            $('.pesquisa-jurisprudencia-links-inferiores').show();   
+            $('.pesquisa-jurisprudencia-links-inferiores').show();
             $('.pesquisa-jurisprudencia').show();
             campoInputPesquisa = 'pesquisaJurisprudencia';
             break;
@@ -95,7 +95,7 @@ $("#menuPesquisa li span").on("click", function() {
             campoInputPesquisa = 'pesquisaRepercussao';
             break;
     }
-    
+
     $("#pesquisaPrincipal").val("");
     $("#pesquisaPrincipal").attr("placeholder", placeholder);
     $("#pesquisaPrincipal").focus();
@@ -108,7 +108,7 @@ $("#menuPesquisa li span").on("click", function() {
 //--------------------------------
 // controle dos botoes de pesquisa da home na versao mobile
 
-$("#menu-pesquisa-mobile").on("change", function() { 
+$("#menu-pesquisa-mobile").on("change", function() {
     $('.pesquisa-jurisprudencia-links-inferiores').hide();
     $('.aba-pesquisa').hide();
     var placeholder = "";
@@ -127,7 +127,7 @@ $("#menu-pesquisa-mobile").on("change", function() {
             break;
         case "abaJurisprudencia":
             placeholder = "Digite um termo para a pesquisa de jurisprudência";
-            $("#abaSelecionada").val("4");               
+            $("#abaSelecionada").val("4");
             $('.pesquisa-jurisprudencia-links-inferiores').show();
             $('.pesquisa-jurisprudencia').show();
             campoInputPesquisa = 'pesquisaJurisprudencia';
@@ -149,9 +149,9 @@ $("#menu-pesquisa-mobile").on("change", function() {
             $("#abaSelecionada").val("7");
             $('.pesquisa-repercussao').show();
             campoInputPesquisa = 'pesquisaRepercussao';
-            break;    
+            break;
     }
-    
+
     $("#pesquisaPrincipal").attr("placeholder", placeholder);
     $("#pesquisaPrincipal").focus();
 });
@@ -178,7 +178,7 @@ $(".tipo-pesquisa-processo").change(function(event) {
         case "PARTE_OU_ADVOGADO":
             $('.campo-pesquisa-processo').hide();
             $('.pesquisa-parte-advogado').show();
-            
+
             campoInputPesquisa = 'pesquisaPrincipalParteAdvogado';
             break;
         case "NUMERO_UNICO":
@@ -215,7 +215,7 @@ $("#fechar-pesquisa").click(function() {
 $('.botoes-pesquisa-jurisprudencia span').on('click', function(){
     var search = $('#pesquisaJurisprudencia').val();
     search = search + ' ' + $(this).data('value') + ' ';
-    $('#pesquisaJurisprudencia').val(search);        
+    $('#pesquisaJurisprudencia').val(search);
     $("#pesquisaJurisprudencia").focus();
 });
 
@@ -320,9 +320,9 @@ function configurarValidacaoPesquisa(id) {
             label.addClass('alert alert-danger col-xs-10 m-t-8 m-b-0');
             label.insertAfter('.pesquisa-jurisprudencia-links-inferiores:last');
         },
-        
+
         wrapper: 'span',
-        
+
         rules: {
         },
         messages: {
@@ -352,7 +352,7 @@ $('#pesquisa-principal').submit(function(e){
     configurarValidacaoPesquisa(campoInputPesquisa);
 
     if( $('#pesquisa-principal').valid()){
-        realizarPesquisa(campoInputPesquisa); 
+        realizarPesquisa(campoInputPesquisa);
     }
 });
 
@@ -386,9 +386,9 @@ $('#pesquisa-processo-pautado').submit(function(e){
             label.addClass('alert alert-danger col-xs-10 m-t-8 m-b-0');
             label.insertAfter('#botao-pesquisa-pauta');
         },
-        
+
         wrapper: 'span',
-        
+
         rules: {
             pesquisa_pauta: {
                 required: true,
@@ -401,9 +401,9 @@ $('#pesquisa-processo-pautado').submit(function(e){
             }
         }
     });
-    
+
     if( form.valid()){
-        pesquisarProcessoConstaPauta();        
+        pesquisarProcessoConstaPauta();
     }
 });
 
@@ -418,9 +418,9 @@ function pesquisarProcessoConstaPauta() {
 //Botão ACESSAR O PORTAL DE NOTÍCIAS
 $('#btnAcessarPortalNocicitas').on('click', function() {
     ga('send', 'event', 'Página Geral', 'Notícias', 'Botão ACESSAR O PORTAL DE NOTÍCIAS');
-    
+
     var pagina = 'listarNoticias.asp';
-    
+
     if (window.location.port == '3000'){
         pagina = 'index.html';
     }
@@ -434,7 +434,7 @@ $('#btnAcessarPortalNocicitas').on('click', function() {
     var url = window.location.pathname;
     if (url.match(/^\/jurisprudencia\/?.*/)) {
         $('#abaJurisprudencia').click();
-    } else if (url.match(/(^\/noticias\/?.*|^\/textos\/?.*|^\/listagem\/?.*)/) ) {
+    } else if (url.match(/(^\/noticias\/?.*|^\/listagem\/?.*)/) ) {
         $('#abaNoticias').click();
     } else if (url.match(/^\/transparencia\/?.*/)) {
         $('#abaTransparencia').click();
@@ -447,4 +447,3 @@ $('#btnAcessarPortalNocicitas').on('click', function() {
 
 
 /* ---------------------------------------------------------------------------------------------------------------- */
-
