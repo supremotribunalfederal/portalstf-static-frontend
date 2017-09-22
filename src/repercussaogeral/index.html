@@ -128,13 +128,46 @@
             <div id="acessar-portal-noticias" class="row m-0 m-r-8 m-l-8 m-b-48">
                 <div class="col-md-2 p-0"></div>
                     <div class="col-md-8 p-0">
-                        <a class="btn btn-default-bordered btn-raised btn-upper btn-fluid" target="_blank" href="http://analitico.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&sheet=9a8c5198-e42f-4dcb-87ab-c35132218fd6&opt=currsel&select=clearall">Clique para filtrar com detalhes</a>
+                        <a class="btn btn-default-bordered btn-raised btn-upper btn-fluid" target="_blank" href="http://analitico.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&sheet=9a8c5198-e42f-4dcb-87ab-c35132218fd6&opt=currsel&select=clearall">Ir para a pesquisa avançada</a>
                     </div>
                 <div class="col-md-2 p-0"></div>
             </div>
 
+            <div id="repercussao-geral" class="card m-b-48">
+              <div class="card-titulo">Dados da Repercussão geral</div>
+              <div class="card-conteudo row m-0 m-t-16 b-b-16 p-0">
+                <div class="col-md-6 col-lg-4">
+                  <div class="card-caixa-texto m-b-16">
+                    <h4 class="m-0 m-t-8 m-b-16">Teses</h4>
+                    <ul>
+                      <li><a href="//www.stf.jus.br/portal/jurisprudenciaRepercussao/listarProcesso.asp?PesquisaEm=tema&PesquisaEm=controversia&PesquisaEm=ambos&situacaoRG=TODAS&situacaoAtual=S&txtTituloTema=&numeroTemaInicial=&numeroTemaFinal=&acao=pesquisarProcesso&dataInicialJulgPV=&dataFinalJulgPV=&classeProcesso=&numeroProcesso=&ministro=&ordenacao=asc&botao=" target="_blank">Temas de repercussão geral</a></li>
+                      <li><a href="//novoportal.stf.jus.br/textos/verTexto.asp?servico=repercussaoTemasSuspensao&pagina=principal">Temas de suspensão nacional</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="card-caixa-texto m-b-16">
+                    <h4 class="m-0 m-t-8 m-b-16">Números</h4>
+                    <ul>
+                      <li><a href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaRepercussaoGeral&pagina=numeroRepercussao" target="_blank">Repercussão Geral</a></li>
+                      <li><a href="//www.stf.jus.br/portal/jurisprudenciaRepercussao/listarJulgado.asp" target="_blank">Últimos julgados</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-12 col-lg-4 row m-0 m-b-16">
+                  <div class="col-md-6 col-lg-12 p-0 p-l-md-16">
+                    <div class="card-caixa-texto __fundo-escuro p-b-16 m-b-16">
+                      <h4 class="m-0 m-t-8 m-b-16">Fórum</h4>
+                      <p>Somente para órgãos credenciados</p>
+                      <button id="entrarForum" class="btn btn-default-bordered btn-raised btn-fluid btn-upper" type="button" href="https://forum.stf.jus.br/"  target="_blank">Entrar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div class="card m-b-48 ">
-                <div class="card-titulo">Quantidade de temas por categoria</div>
+                <div class="card-titulo">Quantidade de temas pela situação do processo paradigma</div>
                 <div class="card-conteudo card-com-input row m-0 b-b-16 p-0">
                     <div class="p-0 m-0">
                         <iframe id="repgeral-qtd-temas-categoria" class="full-width" src="http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=42267d4e-5e84-43fa-a444-29bd84294ae1&opt=nointeraction%2Cnoselections&select=clearall" style="border:none;"></iframe>
@@ -143,7 +176,7 @@
             </div>
 
             <div class="card m-b-48 ">
-                <div class="card-titulo">Quantidade de processos sobrestados por categoria</div>
+                <div class="card-titulo">Estatística de julgamento de Repercussão Geral</div>
                 <div class="card-conteudo card-com-input row m-0 b-b-16 p-0">
                     <div class="p-0 m-0">
                         <iframe id="repgeral-qtd-sobrestados-categoria" class="full-width" src="http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=9b9149cd-d382-4e97-acd3-111e3fdf782a&opt=nointeraction%2Cnoselections&select=clearall" style="border:none;"></iframe>
@@ -163,7 +196,7 @@
             </div>
 
             <div class="card m-b-48 ">
-                <div class="card-titulo">Quantidade de processos sobrestados por data</div>
+                <div class="card-titulo">Quantidade de processos sobrestados ao longo do tempo</div>
                 <div class="card-conteudo row m-0 b-b-16 p-0">
                     <div class="p-0 m-0">
                         <iframe id="repgeral-qtd-sobrestados-data" class="full-width" src="http://transparencia.stf.jus.br/single?appid=3e15b9bf-6795-4077-b00e-721b5d2a417f&obj=380b7320-4494-4d98-9f0f-37389bdceb46&opt=nointeraction%2Cnoselections&select=clearall" style="border:none;"></iframe>
