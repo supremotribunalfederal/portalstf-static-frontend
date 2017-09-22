@@ -20,7 +20,7 @@
       margin: 8px 0;
     }
   }
-  
+
   &.card-sem-sombra {
     box-shadow: none;
   }
@@ -35,17 +35,17 @@
   .card-titulo-verde {
     background: $stfVerdeEscuro;
     color: $stfVerdeClaro;
-  }  
+  }
 
   .card-titulo-vermelho {
     background: $stfVermelho;
     color: $stfVermelhoClaro;
   }
-  
+
   .card-subtitulo-vermelho {
     color: $stfVermelho;
   }
-  
+
   .card-subtitulo {
     color: $stfAzulEscuro;
     font-weight: bold;
@@ -53,7 +53,7 @@
         color: $stfAzulEscuro;
         cursor: pointer;
     }
-  } 
+  }
 
   .card-conteudo {
     padding: 16px;
@@ -62,9 +62,9 @@
       padding: 8px 16px;
       text-transform: none;
     }
-    
-    .card-topico-conteudo { 
-        color: $stfCinza;    
+
+    .card-topico-conteudo {
+        color: $stfCinza;
     }
 
     .card-media-video {
@@ -173,5 +173,11 @@
         color: #989ba1;
       }
     }
+  }
+}
+
+#banner-competencia-original {
+  .card-conteudo {
+    min-height: 128px;
   }
 }
