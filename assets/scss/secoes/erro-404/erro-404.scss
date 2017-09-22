@@ -1,0 +1,43 @@
+@import "../../variaveis/cores";
+
+.container-404 {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  place-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: auto;
+}
+
+.conteudo-404 {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  place-content: center;
+  align-items: center;
+  max-width: 512px!important;
+}
+
+.error-code {
+  font-size: 112px;
+  text-align: center;
+  line-height: 1;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.message-404 {
+  font-size: 24px;
+  text-align: center;
+  color: $stfCinzaEscuro;
+}
+
+.back-link {
+  font-size: 15px;
+  text-align: center;
+  color: $stfAzul;
+  text-decoration: none;
+}
