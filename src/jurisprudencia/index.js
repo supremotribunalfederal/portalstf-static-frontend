@@ -139,7 +139,7 @@ $('#pesquisas-prontas').submit(function(e){
     });
     
     if(form.valid()){
-       pesquisaPronta($("#txt-pesquisas-prontas").val());    
+       pesquisaPronta($("#txtTermoPesquisaPronta").val());    
     }
 });
 
