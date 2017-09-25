@@ -1,23 +1,23 @@
 #mapa-do-site {
-  background: $stfAzulEscuro;
+  background: $stfCinzaBackground;
   padding: 16px;
   @include card-box-shadow();
 
   @media all and (min-width: $breakpointMediumDevices) {
-    .col-md-20p{ 
+    .col-md-20p{
       width: 20%;
     }
   }
 
   .lista-links {
-    border-left: 2px dotted $stfBrancoAlfa40;
-    color: $stfBranco;
+    border-left: 2px dotted $stfAzulEscuroAlfa60;
+    color: $stfAzul;
     margin: 16px;
     padding-left: 8px;
 
     h4 {
-      background: $stfBrancoAlfa15;
-      color: $stfBranco;
+      background: $stfAzulEscuroAlfa10;
+      color: $stfAzul;
       padding:5px 10px
     }
     ul {
