@@ -25,10 +25,15 @@ $(document).ready(function(){
     $('#alto-contraste').click(function() {
         $('body').toggleClass('alto-contraste');
     });
-});
 
-moment.locale("pt-BR");
-$(".tmp-dec").html("H&aacute; " + moment().startOf("day").fromNow());
+    moment.locale("pt-BR");
+    moment().format('LT');
+    $(".tmp-dec").each(function(){
+        var data = $(this)[0].innerText;
+        var resultado = moment(data, "DD/MM/YYYY h:mm").fromNow();
+        $(this).text("Há " + resultado);
+    });    
+});
 
 var campoInputPesquisa = 'pesquisaPrincipalClasseNumero';
 
