@@ -1,6 +1,6 @@
 .sob-medida {
   background: $stfCinzaClaro;
-  padding: 24px 16px;
+  padding: 16px;
 
   .sob-medida-item {
     float: left;
@@ -9,11 +9,11 @@
     &:last-of-type {
       margin-right: 0;
     }
-    
+
     .btn {
         font-size: 1rem;
     }
-    
+
     .item-titulo {
       color: $stfCinza;
       font-size: 1.188rem;
@@ -25,5 +25,5 @@
         letter-spacing: 0.2px;
       }
     }
-  } 
+  }
 }
