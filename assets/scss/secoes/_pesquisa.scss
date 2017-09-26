@@ -1,3 +1,11 @@
+.pesquisa-padrao {
+  max-height: 210px;
+}
+
+.pesquisa-lista {
+  max-height: 180px;
+}
+
 .pesquisa {
   @include set-bg-img-1x-2x("../img/interface/top-bg.jpg", "../img/interface/top-bg@2x.jpg");
   background-position: center center;
@@ -15,13 +23,8 @@
     width: 100%;
     z-index: 0;
   }
-  min-height: 340px;
   padding: 0 16px;
   position: relative;
-
-  &.pesquisa-pequena {
-    min-height: 260px;
-  }
 
   .container {
     position: relative;
@@ -31,7 +34,7 @@
   .label-peticione {
     font-weight:100;
   }
-  
+
   .btn {
       font-size: 1rem;
   }
@@ -63,7 +66,6 @@
 
     .pesquisa-campos {
       .campo-container {
-        margin: 16px 0;
         overflow: hidden;
         width: 100%;
 
@@ -109,7 +111,7 @@
 
         .pesquisa-jurisprudencia-links-inferiores  {
             line-height: 40px;
-            font-size: 0.8rem;   
+            font-size: 0.8rem;
         }
 
         .pesquisa-jurisprudencia-links-inferiores * {
@@ -161,7 +163,7 @@
             margin: 0;
             padding: 0;
 
-            li {        
+            li {
               display: inline-block;
               height: 30px;
               line-height: 30px;
@@ -194,7 +196,7 @@
                 height: 30px;
                 top: 0;
               }
-              
+
               a {
                 background: $stfBrancoAlfa15;
                 color: $stfBranco;
@@ -206,7 +208,7 @@
                 top: 0px;
 
                 border-top: 1px solid $stfBrancoAlfa40;
-              
+
                 &:hover {
                   background-color: $stfAzulClaro;
                   color: $stfBranco;
