@@ -7,7 +7,7 @@
 .titulos-secoes {
     color: #006998;
     font-size: 1.5rem;
-    margin: 16px 0; 
+    margin: 16px 0;
     font-weight: bold;
 }
 
@@ -30,7 +30,7 @@
 }
 
 hr {
-    border-top: 2px solid rgba(0, 0, 0, 0.2);    
+    border-top: 2px solid rgba(0, 0, 0, 0.2);
 }
 
 .card-conteudo p a {
@@ -44,7 +44,7 @@ hr {
 .card-conheca-palacio {
     position: relative;
     overflow: hidden;
-    background: url("../../img/interface/top-bg.jpg") no-repeat center -100px / cover;   
+    background: url("../../img/interface/top-bg.jpg") no-repeat center -100px / cover;
     height: 420px;
     .legenda {
         position: absolute;
@@ -75,7 +75,7 @@ hr {
         text-align: center;
         vertical-align: middle;
         display: inline-block;
-        
+
         .glyphicon{
             padding-top: 35%;
             font-size: 1.4rem;
@@ -91,14 +91,14 @@ hr {
 }
 
 .regimento-interno {
-    background: url("../../img/interface/fundo-regimento-interno.png") no-repeat center center / cover;   
+    background: url("../../img/interface/fundo-regimento-interno.png") no-repeat center center / cover;
     h3, h4 {
         color: white;
     }
 }
 
 .constituicao-federal {
-    background: url("../../img/interface/fundo-constituicao.jpg") no-repeat center center / cover;   
+    background: url("../../img/interface/fundo-constituicao.jpg") no-repeat center center / cover;
     h3, h4 {
         color: white;
     }
@@ -106,7 +106,7 @@ hr {
 
 .plenario-stf h2, .plenario-stf p {
     font-style: italic;
-    color: $stfCinza;
+    color: $stfCinzaEscuro;
 }
 
 .plenario-stf img {
@@ -114,5 +114,97 @@ hr {
        -moz-filter: grayscale(100%);
          -o-filter: grayscale(100%);
         -ms-filter: grayscale(100%);
-            filter: grayscale(100%); 
+            filter: grayscale(100%);
+}
+
+.plenario-stf {
+  font-size: 1.1rem;
+  min-height: 800px;
+}
+
+.ministro-galeria {
+  position: relative;
+  height: 430px;
+}
+
+.ministro-conteudo {
+  margin-bottom: 16px;
+}
+
+.ministro-conteudo img{
+  border: 1px solid white;
+  //margin: 0 5px 5px 0;
+}
+
+.ministro-conteudo:hover {
+  background-color: transparent;
+}
+
+.ministro-conteudo:hover img{
+  border: 1px solid $stfAzulEscuro;
+}
+
+.ministro-conteudo span{
+  position: absolute;
+  background-color: $stfAzulCinza;
+  padding: 5px;
+  left: -1000px;
+  border: 1px solid $stfCinzaClaro;
+  visibility: hidden;
+  color: $stfPreto;
+  text-decoration: none;
+}
+
+.ministro-conteudo span img{
+  border-width: 0;
+  padding: 2px;
+}
+
+.ministro-conteudo:hover span{
+  visibility: visible;
+  top: -180px;;
+  left: 180px;
+  z-index: 50;
+}
+
+.ministro-card {
+  //@include card-box-shadow();
+
+  //box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
+  font-size: 0.9rem;
+  //border: 1px solid $stfAzulCinza;
+  color: $stfAzulEscuro;
+  margin-bottom: 32px;
+}
+
+.vl {
+  border-left: 1px solid $stfCinza;
+  height: 60px;
+  //height: 210px;
+}
+
+.lateral-vl {
+  height: 70px;
+}
+
+.presidente {
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
+
+.ministros .vl {
+  margin: 20px auto 20px auto;
+  height: 80px;
+}
+
+.ministros {
+  width: 100%;
+  img {
+    left: 10px;
+  }
+  .ministro-conteudo {
+    margin-left: 8.3%;
+  }
+
 }
