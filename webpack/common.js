@@ -31,7 +31,7 @@ module.exports = {
   },
   output: {
     path: process.env.GH_PAGES ? PATHS.ghPages : PATHS.dist,
-    filename: 'scripts/[name].js',
+    filename: 'scripts/[name]-[hash].js',
     publicPath
   },
   resolve: {
