@@ -25,10 +25,15 @@ $(document).ready(function(){
     $('#alto-contraste').click(function() {
         $('body').toggleClass('alto-contraste');
     });
-});
 
-moment.locale("pt-BR");
-$(".tmp-dec").html("H&aacute; " + moment().startOf("day").fromNow());
+    moment.locale("pt-BR");
+    moment().format('LT');
+    $(".tmp-dec").each(function(){
+        var data = $(this)[0].innerText;
+        var resultado = moment(data, "DD/MM/YYYY h:mm").fromNow();
+        $(this).text("Há " + resultado);
+    });    
+});
 
 var campoInputPesquisa = 'pesquisaPrincipalClasseNumero';
 
@@ -229,8 +234,11 @@ function realizarPesquisa(id){
         pesquisarProcesso();
     } else if (assunto == "7") { // Repercussão Geral
         window.open("//stf.jus.br/portal/jurisprudenciaRepercussao/listarProcesso.asp?PesquisaEm=tema&PesquisaEm=controversia&PesquisaEm=ambos&situacaoRG=TODAS&situacaoAtual=S&txtTituloTema=" + encodeURIComponent(termoPesquisa) + "&numeroTemaInicial=&numeroTemaFinal=&acao=pesquisarProcesso&dataInicialJulgPV=&dataFinalJulgPV=&classeProcesso=&numeroProcesso=&ministro=&ordenacao=asc&botao=", '_blank');
+    }else if (assunto == "2") {
+        location.href = window.location.origin + "/listagem/listarNoticias.asp?termoPesquisa=" + termoPesquisa;
     }
-     else {
+    else
+    {
         window.open("//stf.jus.br/portal/pesquisa/listarPesquisa.asp?termo=" + encodeURIComponent(termoPesquisa) + "&assunto=" + encodeURIComponent(assunto), '_blank');
     }
 }

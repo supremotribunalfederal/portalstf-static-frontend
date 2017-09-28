@@ -65,9 +65,11 @@
     }
   }
 
-  .dropdown-menu li {
-    a {
+  .dropdown-menu li a {
       color: $stfPreto;
-    }
+  }
+  .dropdown-menu li a:hover {
+    background-color: $stfCinza;
+    color: $stfAzulCinza;
   }
 }

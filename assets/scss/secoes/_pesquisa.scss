@@ -1,10 +1,7 @@
 .pesquisa-padrao {
-  max-height: 210px;
+  min-height: 340px;
 }
 
-.pesquisa-lista {
-  max-height: 180px;
-}
 
 .pesquisa {
   @include set-bg-img-1x-2x("../img/interface/top-bg.jpg", "../img/interface/top-bg@2x.jpg");

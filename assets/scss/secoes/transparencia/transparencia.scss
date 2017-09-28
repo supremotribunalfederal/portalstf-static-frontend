@@ -2,40 +2,40 @@
 
 .numero-transparencia {
     color: $stfAzulEscuro;
-    font-size: 3rem;
+    font-size: 1.2rem;
     font-weight: 100;
     text-align: center;
-    height: 85px;
+    height: 32px;
     position: relative;
 }
 
 .numero-transparencia-iframe {
     position: absolute;
     overflow: hidden;
-    top: 30%;
+    top: -7%;
     left: 50%;
     transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
-    z-index: -1;  
+    z-index: -1;
 }
 
 .numero-transparencia-verde {
     color: $stfVerdeEscuro;
-    font-size: 3rem;
+    font-size: 1.2rem;
 }
 
 .numero-transparencia-vermelho {
     color: $stfVermelho;
-    font-size: 2.5rem;
+    font-size: 1rem;
     margin: 5px 0 5px 0;
 }
 
 .cifrao {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
 }
 
 .rotulo-transparencia {
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin: 0 8px;
     font-weight: bold;
     text-align: center;
