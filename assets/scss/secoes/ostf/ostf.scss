@@ -168,13 +168,12 @@ hr {
 }
 
 .ministro-card {
-  //@include card-box-shadow();
-
-  //box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
   font-size: 0.9rem;
-  //border: 1px solid $stfAzulCinza;
   color: $stfAzulEscuro;
   margin-bottom: 32px;
+  a {
+    color: $stfAzulEscuro;
+  }
 }
 
 .vl {
