@@ -4,7 +4,7 @@
 
 
 .pesquisa {
-  @include set-bg-img-1x-2x("../img/interface/top-bg.jpg", "../img/interface/top-bg@2x.jpg");
+  @include set-bg-img-1x-2x("../img/interface/top-bg.jpg", "../img/interface/top-bg@2x.jpg") ;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -278,5 +278,18 @@
   .tipo-pesquisa-processo {
     width: 100%;
     margin-bottom: 15px;
+  }
+}
+
+@media all and (min-width: $breakpointMediumDevices) {
+  .pesquisa {
+    @include set-bg-img-1x-2x("../img/interface/top-bg.jpg", "../img/interface/top-bg@2x.jpg") ;
+    background-position: 0px -207px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
 }
