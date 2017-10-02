@@ -284,7 +284,7 @@
 @media all and (min-width: $breakpointMediumDevices) {
   .pesquisa {
     @include set-bg-img-1x-2x("../img/interface/top-bg.jpg", "../img/interface/top-bg@2x.jpg") ;
-    background-position: 0px -207px;
+    background-position: center -210px;
     background-repeat: no-repeat;
     background-attachment: fixed;
     -webkit-background-size: cover;
