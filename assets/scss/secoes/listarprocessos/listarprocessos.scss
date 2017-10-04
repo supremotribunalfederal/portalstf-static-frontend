@@ -1,0 +1,26 @@
+@import "../../variaveis/cores";
+
+table {
+  font-size: 0.95rem;
+}
+
+
+th {
+  text-align: center;
+}
+
+td {
+  text-align: center;
+}
+
+.paginator {
+  border: 1px solid #ddd;
+  overflow-x: hidden;
+  font-size: 0.9rem;
+  min-height: 60px;
+  vertical-align: middle;
+}
+
+.lista-seletor {
+  border: 0px;
+}
