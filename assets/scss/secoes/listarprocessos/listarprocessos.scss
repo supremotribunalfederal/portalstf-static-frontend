@@ -15,12 +15,20 @@ td {
 
 .paginator {
   border: 1px solid #ddd;
+  border-top: 0px;
   overflow-x: hidden;
   font-size: 0.9rem;
   min-height: 60px;
   vertical-align: middle;
+  .btn {
+    margin-top: 2px;
+  }
 }
 
 .lista-seletor {
   border: 0px;
+}
+
+.paginador-informacao {
+  margin-top: 12px;
 }
