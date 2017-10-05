@@ -47,3 +47,47 @@ font-size: 0.8rem;
     font-size: 0.7rem;
   }
 }
+
+ul .nav-tabs {
+  border-bottom: 2px solido $stfCinzaClaro;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+  border-width: 0;
+}
+
+.nav-tabs > li > a {
+  border: none;
+  color: $stfCinzaEscuro;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li > a:hover {
+  border: none; color: $stfAzul !important;
+  background: transparent;
+}
+
+.nav-tabs > li > a::after {
+  content: "";
+  background: $stfAzul;
+  height: 2px; position:
+  absolute; width: 100%;
+  left: 0px; bottom: -1px;
+  transition: all 250ms ease 0s;
+  transform: scale(0);
+}
+
+.nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after {
+  transform: scale(1);
+}
+
+.tab-nav > li > a::after {
+  background: #21527d none repeat scroll 0% 0%;
+  color: $stfBranco;
+}
+
+.tab-pane {
+  padding: 15px 0;
+}
+
+.tab-content {
+  padding:20px;
+}

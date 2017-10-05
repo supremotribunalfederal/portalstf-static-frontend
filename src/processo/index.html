@@ -119,6 +119,22 @@
                             <div class="clearfix"></div>
                         </div>
                       </div>
+                      <ul class="nav nav-tabs pull-left col-md-12" role="tablist">
+                        <li role="presentation" class="active"><a data-toggle="tab" href="#informacoes">Informações gerais</a></li>
+                        <li role="presentation"><a data-toggle="tab" href="#partes"><i class="glyphicon glyphicon-user"></i> Partes</a></li>
+                        <li role="presentation"><a data-toggle="tab" href="#andamentos"><i class="glyphicon glyphicon-time"></i> Andamentos</a></li>
+                        <li role="presentation"><a data-toggle="tab" href="#deslocamento"><i class="glyphicon glyphicon-map-marker"></i> Deslocamento</a></li>
+                        <li role="presentation"><a data-toggle="tab" href="#peticoes"><i class="glyphicon glyphicon-file"></i> Petições</a></li>
+                        <li role="presentation"><a data-toggle="tab" href="#recursos"><i class="glyphicon glyphicon-file"></i> Recursos</a></li>
+                      </ul>
+                      <div class="tab-content col-md-12">
+                        <%- include src/includes/processo-informacoes.html %>
+                        <%- include src/includes/processo-partes.html %>
+                        <%- include src/includes/processo-andamentos.html %>
+                        <%- include src/includes/processo-deslocamento.html %>
+                        <%- include src/includes/processo-peticoes.html %>
+                        <%- include src/includes/processo-recursos.html %>
+                      </div>
                     </div>
                 </div>
 
