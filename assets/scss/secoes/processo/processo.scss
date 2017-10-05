@@ -1,0 +1,49 @@
+@import "../../variaveis/cores";
+
+.btn-primary-spacing {
+margin-right: 5px;
+margin-bottom: 5px !important;
+padding: 0 16px;
+font-size: 0.8rem;
+}
+
+
+
+.processo-titulo {
+  font-size: 1.1rem;
+  font-weight: bold;
+  span {
+    font-size: 0.6rem;
+    vertical-align: middle;
+  }
+  .processo-fisico {
+    background-color: $stfAmarelo;
+    color: $stfAzulCinza;
+  }
+  .processo-eletronico {
+    background-color: $stfVerdeEscuro;
+  }
+}
+
+.processo-rotulo {
+  font-size: 0.6rem;
+}
+
+.card-processo {
+  min-height: 140px;
+  background-color: $stfAzulCinza;
+  .processo-dados {
+    font-size: 0.8rem;
+  }
+  .processo-partes {
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  .processo-classe {
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  .processo-link {
+    font-size: 0.7rem;
+  }
+}
