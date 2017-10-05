@@ -3,7 +3,11 @@
 .btn-primary-spacing {
 margin-right: 5px;
 margin-bottom: 5px !important;
+padding: 0 16px;
+font-size: 0.8rem;
 }
+
+
 
 .processo-titulo {
   font-size: 1.1rem;
@@ -30,6 +34,10 @@ margin-bottom: 5px !important;
   background-color: $stfAzulCinza;
   .processo-dados {
     font-size: 0.8rem;
+  }
+  .processo-partes {
+    font-size: 0.8rem;
+    font-weight: bold;
   }
   .processo-classe {
     font-size: 0.8rem;
