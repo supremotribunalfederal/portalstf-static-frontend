@@ -1,19 +1,52 @@
+.badge {
+  vertical-align: super;
+}
+
 .bg-warning {
   background-color: $stfAmarelo;
   color: $stfAzulCinza;
 }
+
 .bg-success {
   background-color: $stfVerdeEscuro;
 }
+
 .bg-info {
   background-color: $stfAzul;
 }
+
 .bg-primary {
   background-color: $stfAzulEscuro;
 }
+
 .bg-danger {
   background-color: $stfVermelho;
 }
+
 .bg-black {
   background-color: $stfPreto;
+}
+
+.bg-font-warning {
+  color: $stfAmarelo;
+}
+
+.bg-font-success {
+  color: $stfVerdeEscuro;
+}
+
+.bg-font-info {
+  color: $stfAzul;
+}
+
+.bg-font-primary {
+  color: $stfAzulEscuro;
+}
+
+.bg-font-danger {
+  color: $stfVermelho;
+}
+
+.bg-font-black {
+  color: $stfPreto;
 }
