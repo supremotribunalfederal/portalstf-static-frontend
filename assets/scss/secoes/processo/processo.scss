@@ -14,14 +14,7 @@ font-size: 0.8rem;
   font-weight: bold;
   span {
     font-size: 0.6rem;
-    vertical-align: middle;
-  }
-  .processo-fisico {
-    background-color: $stfAmarelo;
-    color: $stfAzulCinza;
-  }
-  .processo-eletronico {
-    background-color: $stfVerdeEscuro;
+    vertical-align: super;
   }
 }
 
@@ -30,14 +23,14 @@ font-size: 0.8rem;
 }
 
 .card-processo {
-  min-height: 140px;
+  min-height: 130px;
   background-color: $stfAzulCinza;
   .processo-dados {
     font-size: 0.8rem;
   }
   .processo-partes {
     font-size: 0.8rem;
-    font-weight: bold;
+    // font-weight: bold;
   }
   .processo-classe {
     font-size: 0.8rem;
@@ -46,6 +39,26 @@ font-size: 0.8rem;
   .processo-link {
     font-size: 0.7rem;
   }
+}
+
+.lista-dados {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid $stfCinzaClaro;
+}
+
+.processo-peticao-bold {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.processo-peticao {
+  font-size: 0.7rem;
+}
+
+.btn-peticao {
+  margin: 0 auto;
+  width: 40%;
 }
 
 ul .nav-tabs {
@@ -61,8 +74,10 @@ ul .nav-tabs {
 }
 
 .nav-tabs > li.active > a, .nav-tabs > li > a:hover {
-  border: none; color: $stfAzul !important;
+  border: none;
+  color: $stfPreto;
   background: transparent;
+  font-weight: bold;
 }
 
 .nav-tabs > li > a::after {
@@ -80,14 +95,15 @@ ul .nav-tabs {
 }
 
 .tab-nav > li > a::after {
-  background: #21527d none repeat scroll 0% 0%;
-  color: $stfBranco;
+  // background: $stfAzulEscuro none repeat scroll 0% 0%;
+  // color: $stfBranco;
+  // 21527d
 }
 
 .tab-pane {
-  padding: 15px 0;
+  padding: 0;
 }
 
 .tab-content {
-  padding:20px;
+  padding: 0 20px;
 }
