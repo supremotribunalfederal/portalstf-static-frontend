@@ -41,7 +41,7 @@
                 <div class="card m-b-48">
                     <div class="card-titulo row m-0">
                       <div class="col-md-4">
-                        <div class="processo-titulo m-b-8"> ADI 100 &nbsp;<span class="badge processo-fisico">Processo físico</span> </div>
+                        <div class="processo-titulo m-b-8"> ADI 100 &nbsp;<span class="badge bg-warning">Processo físico</span> </div>
                         <div class="processo-rotulo">Número único: 0007214-12.2007.1.00.0000</div>
                       </div>
                       <div class="col-md-8">
@@ -65,7 +65,7 @@
                       </div>
                     </div>
                     <div class="card-conteudo row m-0 p-0">
-                      <div class="card-processo col-xs-12 col-md-5 m-b-16">
+                      <div class="card-processo col-xs-12 col-md-5 m-b-8">
                         <div class="processo-classe m-t-8">
                           Ação Direta de Inconstitucionalidade
                         </div>
@@ -76,8 +76,8 @@
                           Relator atual: Min. Ellen Gracie
                         </div>
                       </div>
-                      <div class="card-processo col-xs-12 col-md-7">
-                        <div class="m-b-16 p-l-16">
+                      <div class="card-processo col-xs-12 col-md-7 m-b-8">
+                        <div class="p-l-16">
                           <div class="col-md-4">
                             <div class="processo-partes m-t-8">
                               AUTOR(A/S)(ES)
@@ -118,6 +118,22 @@
 
                             <div class="clearfix"></div>
                         </div>
+                      </div>
+                      <ul class="nav nav-tabs pull-left col-md-12" role="tablist">
+                        <li role="presentation" class="active"><a data-toggle="tab" href="#informacoes">Informações gerais</a></li>
+                        <li role="presentation"><a data-toggle="tab" href="#partes"><i class="glyphicon glyphicon-user"></i> Partes</a></li>
+                        <li role="presentation"><a data-toggle="tab" href="#andamentos"><i class="glyphicon glyphicon-time"></i> Andamentos</a></li>
+                        <li role="presentation"><a data-toggle="tab" href="#deslocamento"><i class="glyphicon glyphicon-map-marker"></i> Deslocamento</a></li>
+                        <li role="presentation"><a data-toggle="tab" href="#peticoes"><i class="glyphicon glyphicon-file"></i> Petições</a></li>
+                        <li role="presentation"><a data-toggle="tab" href="#recursos"><i class="glyphicon glyphicon-file"></i> Recursos</a></li>
+                      </ul>
+                      <div class="tab-content col-md-12">
+                        <%- include src/includes/processo-informacoes.html %>
+                        <%- include src/includes/processo-partes.html %>
+                        <%- include src/includes/processo-andamentos.html %>
+                        <%- include src/includes/processo-deslocamento.html %>
+                        <%- include src/includes/processo-peticoes.html %>
+                        <%- include src/includes/processo-recursos.html %>
                       </div>
                     </div>
                 </div>

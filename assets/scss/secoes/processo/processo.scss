@@ -14,14 +14,6 @@ font-size: 0.8rem;
   font-weight: bold;
   span {
     font-size: 0.6rem;
-    vertical-align: middle;
-  }
-  .processo-fisico {
-    background-color: $stfAmarelo;
-    color: $stfAzulCinza;
-  }
-  .processo-eletronico {
-    background-color: $stfVerdeEscuro;
   }
 }
 
@@ -30,14 +22,14 @@ font-size: 0.8rem;
 }
 
 .card-processo {
-  min-height: 140px;
+  min-height: 130px;
   background-color: $stfAzulCinza;
   .processo-dados {
     font-size: 0.8rem;
   }
   .processo-partes {
     font-size: 0.8rem;
-    font-weight: bold;
+    // font-weight: bold;
   }
   .processo-classe {
     font-size: 0.8rem;
@@ -46,4 +38,228 @@ font-size: 0.8rem;
   .processo-link {
     font-size: 0.7rem;
   }
+}
+
+.processo-informacoes-cabecalho {
+  background-color: $stfCinzaClaro;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.processo-informacoes {
+  .processo-detalhes-bold {
+    margin-bottom: 6px;
+  }
+}
+
+.processo-quadro {
+  border: 2px solid $stfCinzaClaro;
+  padding: 2px;
+  text-align: center;
+  margin-left: 8px;
+  margin-bottom: 8px;
+  vertical-align: middle;
+  height: 100%;
+  width: 20%;
+  .numero {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .rotulo {
+    font-size: 0.75rem;
+    margin-bottom: 18px;
+  }
+}
+
+.lista-dados {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid $stfCinzaClaro;
+}
+
+.processo-detalhes-bold {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.processo-detalhes {
+  font-size: 0.7rem;
+}
+
+.processo-right {
+  text-align: right;
+}
+
+.btn-peticao {
+  margin: 0 auto;
+  width: 40%;
+}
+
+ul .nav-tabs {
+  border-bottom: 2px solido $stfCinzaClaro;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+  border-width: 0;
+}
+
+.nav-tabs > li > a {
+  border: none;
+  color: $stfCinzaEscuro;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li > a:hover {
+  border: none;
+  color: $stfPreto;
+  background: transparent;
+  font-weight: bold;
+}
+
+.nav-tabs > li > a::after {
+  content: "";
+  background: $stfAzul;
+  height: 2px; position:
+  absolute; width: 100%;
+  left: 0px; bottom: -1px;
+  transition: all 250ms ease 0s;
+  transform: scale(0);
+}
+
+.nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after {
+  transform: scale(1);
+}
+
+.tab-nav > li > a::after {
+  // background: $stfAzulEscuro none repeat scroll 0% 0%;
+  // color: $stfBranco;
+  // 21527d
+}
+
+.tab-pane {
+  padding: 0;
+}
+
+.tab-content {
+  padding: 0 20px;
+}
+
+// andamentos
+
+.andamento-item {
+margin-bottom: 25px;
+margin-left: 40px;
+position: relative;
+}
+.andamento-item .andamento-inner {
+background: #fff;
+border: 1px solid #ddd;
+border-radius: 3px;
+padding: 10px;
+position: relative;
+}
+.andamento-item .andamento-inner:before {
+border-right: 10px solid #ddd;
+border-style: solid;
+border-width: 10px;
+color: rgba(0,0,0,0);
+content: "";
+display: block;
+height: 0;
+position: absolute;
+left: -20px;
+top: 6px;
+width: 0;
+}
+.andamento-item .andamento-inner:after {
+border-right: 10px solid #fff;
+border-style: solid;
+border-width: 10px;
+color: rgba(0,0,0,0);
+content: "";
+display: block;
+height: 0;
+position: absolute;
+left: -18px;
+top: 6px;
+width: 0;
+}
+.andamento-item:before {
+background: #fff;
+border-radius: 2px;
+bottom: -30px;
+box-shadow: 0 0 3px rgba(0,0,0,0.2);
+content: "";
+height: 100%;
+left: -30px;
+position: absolute;
+width: 3px;
+}
+.andamento-item:after {
+background: #fff;
+border: 2px solid #ccc;
+border-radius: 50%;
+box-shadow: 0 0 5px rgba(0,0,0,0.1);
+content: "";
+height: 15px;
+left: -36px;
+position: absolute;
+top: 10px;
+width: 15px;
+}
+.clearfix:before, .clearfix:after {
+content: " ";
+display: table;
+}
+.andamento-item .message-head {
+border-bottom: 1px solid #eee;
+margin-bottom: 8px;
+padding-bottom: 8px;
+}
+.andamento-item .message-head .avatar {
+margin-right: 20px;
+}
+.andamento-item .message-head .andamento-detalhe {
+overflow: hidden;
+}
+.andamento-item .message-head .andamento-detalhe h5 {
+font-size: 16px;
+font-weight: bold;
+margin: 0;
+}
+.andamento-detelhe {
+  .btn {
+    line-height: 36px;
+    height: 36px;
+    margin: 0 6px;
+    font-size: 0.75rem;
+  }
+}
+.andamento-item .message-head .post-meta {
+float: left;
+padding: 0 15px 0 0;
+}
+.andamento-item .message-head .post-meta >div {
+color: #333;
+font-weight: bold;
+text-align: right;
+}
+.post-meta > div {
+color: #777;
+font-size: 12px;
+line-height: 22px;
+}
+.andamento-item .message-head .post-meta >div {
+color: #333;
+font-weight: bold;
+text-align: right;
+}
+.post-meta > div {
+color: #777;
+font-size: 12px;
+line-height: 22px;
+}
+img {
+ min-height: 40px;
+ max-height: 40px;
 }

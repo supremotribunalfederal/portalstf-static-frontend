@@ -48,7 +48,13 @@ const includes = [
   'footer',
   'paginacao',
   'pesquisa',
-  'pesquisa-lista'
+  'pesquisa-lista',
+  'processo-informacoes',
+  'processo-partes',
+  'processo-andamentos',
+  'processo-deslocamento',
+  'processo-peticoes',
+  'processo-recursos'
 ]
 
 module.exports = {
