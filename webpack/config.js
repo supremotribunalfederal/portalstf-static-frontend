@@ -27,6 +27,8 @@ const secoes = [
   'pesquisaavancada',
   'erro-404',
   'listarprocessos',
+  'listarporparte',
+  'listarpartes',
   'processo'
 ];
 
