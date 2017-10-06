@@ -143,3 +143,123 @@ ul .nav-tabs {
 .tab-content {
   padding: 0 20px;
 }
+
+// andamentos
+
+.andamento-item {
+margin-bottom: 25px;
+margin-left: 40px;
+position: relative;
+}
+.andamento-item .andamento-inner {
+background: #fff;
+border: 1px solid #ddd;
+border-radius: 3px;
+padding: 10px;
+position: relative;
+}
+.andamento-item .andamento-inner:before {
+border-right: 10px solid #ddd;
+border-style: solid;
+border-width: 10px;
+color: rgba(0,0,0,0);
+content: "";
+display: block;
+height: 0;
+position: absolute;
+left: -20px;
+top: 6px;
+width: 0;
+}
+.andamento-item .andamento-inner:after {
+border-right: 10px solid #fff;
+border-style: solid;
+border-width: 10px;
+color: rgba(0,0,0,0);
+content: "";
+display: block;
+height: 0;
+position: absolute;
+left: -18px;
+top: 6px;
+width: 0;
+}
+.andamento-item:before {
+background: #fff;
+border-radius: 2px;
+bottom: -30px;
+box-shadow: 0 0 3px rgba(0,0,0,0.2);
+content: "";
+height: 100%;
+left: -30px;
+position: absolute;
+width: 3px;
+}
+.andamento-item:after {
+background: #fff;
+border: 2px solid #ccc;
+border-radius: 50%;
+box-shadow: 0 0 5px rgba(0,0,0,0.1);
+content: "";
+height: 15px;
+left: -36px;
+position: absolute;
+top: 10px;
+width: 15px;
+}
+.clearfix:before, .clearfix:after {
+content: " ";
+display: table;
+}
+.andamento-item .message-head {
+border-bottom: 1px solid #eee;
+margin-bottom: 8px;
+padding-bottom: 8px;
+}
+.andamento-item .message-head .avatar {
+margin-right: 20px;
+}
+.andamento-item .message-head .andamento-detalhe {
+overflow: hidden;
+}
+.andamento-item .message-head .andamento-detalhe h5 {
+font-size: 16px;
+font-weight: bold;
+margin: 0;
+}
+.andamento-detelhe {
+  .btn {
+    line-height: 36px;
+    height: 36px;
+    margin: 0 6px;
+    font-size: 0.75rem;
+  }
+}
+.andamento-item .message-head .post-meta {
+float: left;
+padding: 0 15px 0 0;
+}
+.andamento-item .message-head .post-meta >div {
+color: #333;
+font-weight: bold;
+text-align: right;
+}
+.post-meta > div {
+color: #777;
+font-size: 12px;
+line-height: 22px;
+}
+.andamento-item .message-head .post-meta >div {
+color: #333;
+font-weight: bold;
+text-align: right;
+}
+.post-meta > div {
+color: #777;
+font-size: 12px;
+line-height: 22px;
+}
+img {
+ min-height: 40px;
+ max-height: 40px;
+}
