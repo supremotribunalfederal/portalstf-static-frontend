@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Supremo Tribunal Federal</title>
+  <link rel="icon" type="imagem/png" href="<%= require('assets/img/favicon.ico') %>" />
+</head>
+<body class="pagina-interna">
+  <div id="main" class="container-fluid p-0">
+
+    <%- include src/includes/header.html %>
+
+    <%- include src/includes/pesquisa-lista.html %>
+
+    <section id="conteudo" class="container-fluid m-0 p-0">
+      <div class="row container center-block p-0">
+        <!--Menu Lateral-->
+        <div class="col-xs-12 col-sm-3 col-lg-2 p-16 p-xs-0 m-0">
+          <div class="menu-lateral hidden-xs">
+            <h4><span class="__stf-verde">Processos</span></h4>
+            <ul>
+              <li><a class="opcao-selecionada" href="#"><span>Pesquisa de processos</span></a>
+              <li><a href="#"><span>Peticionamento eletrônico</span></a>
+                <ul>
+                  <li><a href="#"><span>Peticionar agora</span></a></li>
+                  <li><a href="#">Informações gerais</a></li>
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+        <div id="texto-pagina-interna-wrapper" class="col-xs-12 col-sm-9 col-lg-10 row m-0 p-xs-0 m-t-24 m-b-24 p-sm-8 __borda-l-cinza-claro">
+          <div id="texto-pagina-interna" class="p-l-40 p-r-40 m-b-40 p-l-xs-0 p-r-xs-0">
+            <div class="texto m-0 row">
+              <div class="col-xs-12 col-md-12 p-0 p-l-xs-16 p-r-xs-16 m-b-16">
+                <div class="lista-processo-parte">
+                  <h4>PROCURADORIA DE JUSTIÇA DO ESTADO DE MINAS GERAIS - <small>5564647853</small> </h4>
+                </div>
+                <div class="table-responsive">
+                  <table class="table table-bordered m-b-0">
+                    <th>Ordem</th>
+                    <th>Identificação</th>
+                    <th>Número único</th>
+                    <th>Data Autuação</th>
+                    <th>Meio</th>
+                    <th>Sigilo</th>
+                    <tr>
+                      <td>1</td>
+                      <td><a href="/processo">AC 100</a></td>
+                      <td>0003772-34.2003.0.01.0000</td>
+                      <td>06/10/2003</td>
+                      <td>Eletrônico</td>
+                      <td>Público</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td><a href="#">ADPF 100</a></td>
+                      <td>0004362-02.1989.0.01.0000</td>
+                      <td>11/10/1989</td>
+                      <td>Eletrônico</td>
+                      <td>Público</td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td><a href="#">AI 100</a></td>
+                      <td>0004362-02.1989.0.01.0000</td>
+                      <td>11/10/1989</td>
+                      <td>Físico</td>
+                      <td>Público</td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td><a href="#">AO 100</a></td>
+                      <td>0004362-02.1989.0.01.0000</td>
+                      <td>11/10/1989</td>
+                      <td>Eletrônico</td>
+                      <td>Segredo de justiça</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-12 p-0 p-l-xs-16 p-r-xs-16 m-b-16">
+                <div class="lista-processo-parte">
+                  <h4>PROCURADORIA DE JUSTIÇA DO ESTADO DE MINAS GERAIS - <small>12547853</small> </h4>
+                </div>
+                <div class="table-responsive">
+                  <table class="table table-bordered m-b-0">
+                    <th>Ordem</th>
+                    <th>Identificação</th>
+                    <th>Número único</th>
+                    <th>Data Autuação</th>
+                    <th>Meio</th>
+                    <th>Sigilo</th>
+                    <tr>
+                      <td>1</td>
+                      <td><a href="#">AC 100</a></td>
+                      <td>0003772-34.2003.0.01.0000</td>
+                      <td>06/10/2003</td>
+                      <td>Eletrônico</td>
+                      <td>Público</td>
+                    </tr>
+                    <tr>
+                      <td>8</td>
+                      <td><a href="#">CJ 100</a></td>
+                      <td>0004362-02.1989.0.01.0000</td>
+                      <td>11/10/1989</td>
+                      <td>Físico</td>
+                      <td>Público</td>
+                    </tr>
+                    <tr>
+                      <td>9</td>
+                      <td><a href="#">Ext 100</a></td>
+                      <td>0004362-02.1989.0.01.0000</td>
+                      <td>11/10/1989</td>
+                      <td>Eletrônico</td>
+                      <td>Público</td>
+                    </tr>
+                    <tr>
+                      <td>10</td>
+                      <td><a href="#">HC 100</a></td>
+                      <td>0004362-02.1989.0.01.0000</td>
+                      <td>11/10/1989</td>
+                      <td>Físico</td>
+                      <td>Público</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td><a href="#">ACO 100</a></td>
+                      <td>0000188-24.1964.0.01.0000</td>
+                      <td>06/05/1964</td>
+                      <td>Físico</td>
+                      <td>Público</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td><a href="#">ACr 100</a></td>
+                      <td>0004362-02.1989.0.01.0000</td>
+                      <td>11/10/1989</td>
+                      <td>Físico</td>
+                      <td>Público</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td><a href="#">ADPF 100</a></td>
+                      <td>0004362-02.1989.0.01.0000</td>
+                      <td>11/10/1989</td>
+                      <td>Eletrônico</td>
+                      <td>Público</td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td><a href="#">AI 100</a></td>
+                      <td>0004362-02.1989.0.01.0000</td>
+                      <td>11/10/1989</td>
+                      <td>Físico</td>
+                      <td>Público</td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td><a href="#">AO 100</a></td>
+                      <td>0004362-02.1989.0.01.0000</td>
+                      <td>11/10/1989</td>
+                      <td>Eletrônico</td>
+                      <td>Segredo de justiça</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-12 p-0 p-l-xs-16 p-r-xs-16 m-b-16">
+                <div class="lista-processo-parte">
+                  <h4>PROCURADORIA DE JUSTIÇA DO ESTADO DE MINAS GERAIS - <small>46547853</small> </h4>
+                </div>
+                <div class="table-responsive">
+                  <table class="table table-bordered m-b-0">
+                    <th>Ordem</th>
+                    <th>Identificação</th>
+                    <th>Número único</th>
+                    <th>Data Autuação</th>
+                    <th>Meio</th>
+                    <th>Sigilo</th>
+                    <tr>
+                      <td>1</td>
+                      <td><a href="#">AC 100</a></td>
+                      <td>0003772-34.2003.0.01.0000</td>
+                      <td>06/10/2003</td>
+                      <td>Eletrônico</td>
+                      <td>Público</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td><a href="#">ACO 100</a></td>
+                      <td>0000188-24.1964.0.01.0000</td>
+                      <td>06/05/1964</td>
+                      <td>Físico</td>
+                      <td>Público</td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td><a href="#">AO 100</a></td>
+                      <td>0004362-02.1989.0.01.0000</td>
+                      <td>11/10/1989</td>
+                      <td>Eletrônico</td>
+                      <td>Segredo de justiça</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td><a href="#">ACr 100</a></td>
+                      <td>0004362-02.1989.0.01.0000</td>
+                      <td>11/10/1989</td>
+                      <td>Físico</td>
+                      <td>Público</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td><a href="#">ADI 100</a></td>
+                      <td>0004362-02.1989.0.01.0000</td>
+                      <td>11/10/1989</td>
+                      <td>Físico</td>
+                      <td>Público</td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td><a href="#">AO 100</a></td>
+                      <td>0004362-02.1989.0.01.0000</td>
+                      <td>11/10/1989</td>
+                      <td>Eletrônico</td>
+                      <td>Segredo de justiça</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td><a href="#">ADPF 100</a></td>
+                      <td>0004362-02.1989.0.01.0000</td>
+                      <td>11/10/1989</td>
+                      <td>Eletrônico</td>
+                      <td>Público</td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td><a href="#">AI 100</a></td>
+                      <td>0004362-02.1989.0.01.0000</td>
+                      <td>11/10/1989</td>
+                      <td>Físico</td>
+                      <td>Público</td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td><a href="#">AO 100</a></td>
+                      <td>0004362-02.1989.0.01.0000</td>
+                      <td>11/10/1989</td>
+                      <td>Eletrônico</td>
+                      <td>Segredo de justiça</td>
+                    </tr>
+                    <tr>
+                      <td>8</td>
+                      <td><a href="#">CJ 100</a></td>
+                      <td>0004362-02.1989.0.01.0000</td>
+                      <td>11/10/1989</td>
+                      <td>Físico</td>
+                      <td>Público</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+    </section>
+
+    <%- include src/includes/mapa-do-site.html %>
+
+    <%- include src/includes/footer.html %>
+  </div>
+</body>
+</html>

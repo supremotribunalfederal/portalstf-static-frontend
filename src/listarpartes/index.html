@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Supremo Tribunal Federal</title>
+  <link rel="icon" type="imagem/png" href="<%= require('assets/img/favicon.ico') %>" />
+</head>
+<body class="pagina-interna">
+  <div id="main" class="container-fluid p-0">
+
+    <%- include src/includes/header.html %>
+
+    <%- include src/includes/pesquisa-lista.html %>
+
+    <section id="conteudo" class="container-fluid m-0 p-0">
+      <div class="row container center-block p-0">
+        <!--Menu Lateral-->
+        <div class="col-xs-12 col-sm-3 col-lg-2 p-16 p-xs-0 m-0">
+          <div class="menu-lateral hidden-xs">
+            <h4><span class="__stf-verde">Processos</span></h4>
+            <ul>
+              <li><a class="opcao-selecionada" href="#"><span>Pesquisa de processos</span></a>
+              <li><a href="#"><span>Peticionamento eletrônico</span></a>
+                <ul>
+                  <li><a href="#"><span>Peticionar agora</span></a></li>
+                  <li><a href="#">Informações gerais</a></li>
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+        <div id="texto-pagina-interna-wrapper" class="col-xs-12 col-sm-9 col-lg-10 row m-0 p-xs-0 m-t-24 m-b-24 p-sm-8 __borda-l-cinza-claro">
+          <div id="texto-pagina-interna" class="p-l-40 p-r-40 m-b-40 p-l-xs-0 p-r-xs-0">
+            <div class="texto m-0 row">
+              <div class="col-xs-12 col-md-12 p-0 p-l-xs-16 p-r-xs-16">
+                <div class="table-responsive">
+                  <table class="table table-bordered m-b-0">
+                    <th>Ordem</th>
+                    <th>Partes ou Advogados</th>
+                    <tr>
+                      <td class="ordem">1</td>
+                      <td><a href="/listarporparte">PROCURADORIA DE JUSTIÇA DO ESTADO DE MINAS GERAIS</a></td>
+                    </tr>
+                    <tr>
+                      <td class="ordem">2</td>
+                      <td><a href="#">PROCURADORIA REGIONAL ELEITORAL DO ESTADO DE MINAS GERAIS</a></td>
+                    </tr>
+                    <tr>
+                      <td class="ordem">3</td>
+                      <td><a href="#">PROCURADORIA-GERAL DA ASSEMBLÉIA LEGISLATIVA DO ESTADO DE MINAS GERAIS</a></td>
+                    </tr>
+                    <tr>
+                      <td class="ordem">4</td>
+                      <td><a href="#">PROCURADORIA-GERAL DE JUSTIÇA ADJUNTA JURÍDICA DO ESTADO DE MINAS GERAIS</a></td>
+                    </tr>
+                    <tr>
+                      <td class="ordem">5</td>
+                      <td><a href="#">PROCURADORIA-GERAL DE JUSTIÇA DO ESTADO DE MINAS GERAIS</a></td>
+                    </tr>
+                    <tr>
+                      <td class="ordem">6</td>
+                      <td><a href="#">PROCURADORIA-GERAL DO ESTADO DE MINAS GERAIS</a></td>
+                    </tr>
+                    <tr>
+                      <td class="ordem">7</td>
+                      <td><a href="#">PROCURADORIA-GERAL DO ESTADO</a></td>
+                    </tr>
+                    <tr>
+                      <td class="ordem">8</td>
+                      <td><a href="#">ESTADO DE MINAS GERAIS - PROCURADORIA-GERAL</a></td>
+                    </tr>
+                    <tr>
+                      <td class="ordem">9</td>
+                      <td><a href="#">ESTADO DE MINAS GERAIS - PROCURADORIA</a></td>
+                    </tr>
+                    <tr>
+                      <td class="ordem">10</td>
+                      <td><a href="#">ESTADO DE MINAS GERAIS - PROCURADORIA-GERAL DO ESTADO</a></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </section>
+
+    <%- include src/includes/mapa-do-site.html %>
+
+    <%- include src/includes/footer.html %>
+  </div>
+</body>
+</html>

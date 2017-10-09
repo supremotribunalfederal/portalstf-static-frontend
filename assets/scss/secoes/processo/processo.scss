@@ -40,6 +40,17 @@ font-size: 0.8rem;
   }
 }
 
+.processo-partes {
+  font-size: 0.85rem;
+  .nome-parte {
+    font-size: 0.85rem;
+    font-weight: bold;
+  }
+  .detalhe-parte {
+    font-size: 0.7rem;
+  }
+}
+
 .processo-informacoes-cabecalho {
   background-color: $stfCinzaClaro;
   margin-left: -20px;
@@ -53,23 +64,23 @@ font-size: 0.8rem;
 }
 
 .processo-quadro {
-  border: 2px solid $stfCinzaClaro;
+  border: 2px solid $stfCinza;
   padding: 2px;
   text-align: center;
   margin-left: 8px;
   margin-bottom: 8px;
   vertical-align: middle;
   height: 100%;
-  width: 20%;
+  min-height: 120px;
+  width: 21%;
   .numero {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: bold;
     margin-top: 24px;
     margin-bottom: 24px;
   }
   .rotulo {
-    font-size: 0.75rem;
-    margin-bottom: 18px;
+    font-size: 0.7rem;
   }
 }
 
@@ -227,12 +238,14 @@ font-size: 16px;
 font-weight: bold;
 margin: 0;
 }
-.andamento-detelhe {
+.andamento-docs {
+  text-align: right;
+  min-height: 32px;
   .btn {
-    line-height: 36px;
-    height: 36px;
-    margin: 0 6px;
-    font-size: 0.75rem;
+    line-height: 32px;
+    height: 32px;
+    margin: 0 4px;
+    font-size: 0.9rem;
   }
 }
 .andamento-item .message-head .post-meta {
@@ -258,8 +271,4 @@ text-align: right;
 color: #777;
 font-size: 12px;
 line-height: 22px;
-}
-img {
- min-height: 40px;
- max-height: 40px;
 }
