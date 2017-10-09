@@ -307,12 +307,11 @@ function fazerPostListarProcesso(action, dropmsgoption, value) {
 }
 
 function pesquisarProcessoPorNomeDaParteOuAdvogado() {
-    //fazerPostListarProcesso('//stf.jus.br/portal/processo/listarProcessoParte.asp', 4, $('#pesquisaPrincipalParteAdvogado').val());
     var url = '';
     if (window.location.pathname.match(/^\/portal\/?.*/)) {
-        url = window.location.origin + '/portal/processos/listar.asp?termo=' + $('#pesquisaPrincipalParteAdvogado').val();
+        url = window.location.origin + '/portal/processos/listarPartes.asp?termo=' + $('#pesquisaPrincipalParteAdvogado').val();
     } else {
-        url = window.location.origin + '/processos/listar.asp?termo=' + $('#pesquisaPrincipalParteAdvogado').val();
+        url = window.location.origin + '/processos/listarPartes.asp?termo=' + $('#pesquisaPrincipalParteAdvogado').val();
     }
     window.location.href = url;
 }
