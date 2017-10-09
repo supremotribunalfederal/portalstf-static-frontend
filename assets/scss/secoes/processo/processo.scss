@@ -40,6 +40,17 @@ font-size: 0.8rem;
   }
 }
 
+.processo-partes {
+  font-size: 0.85rem;
+  .nome-parte {
+    font-size: 0.85rem;
+    font-weight: bold;
+  }
+  .detalhe-parte {
+    font-size: 0.7rem;
+  }
+}
+
 .processo-informacoes-cabecalho {
   background-color: $stfCinzaClaro;
   margin-left: -20px;
