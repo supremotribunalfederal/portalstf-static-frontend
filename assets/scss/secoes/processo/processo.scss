@@ -60,6 +60,7 @@ font-size: 0.8rem;
 .processo-informacoes {
   .processo-detalhes-bold {
     margin-bottom: 6px;
+    margin-left: -20px;
   }
 }
 
@@ -102,6 +103,8 @@ font-size: 0.8rem;
 .processo-right {
   text-align: right;
 }
+
+//processo abas
 
 .btn-peticao {
   margin: 0 auto;
@@ -272,3 +275,10 @@ color: #777;
 font-size: 12px;
 line-height: 22px;
 }
+
+//listar partes select
+// body {margin:20px;}
+//
+// .select button {width:100%; text-align:left;}
+// .select .caret {position:absolute; right:10px; margin-top:10px;}
+// .select:last-child>.btn {border-top-left-radius:5px; border-bottom-left-radius:5px;}
