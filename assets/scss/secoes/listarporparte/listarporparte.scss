@@ -1,9 +1,30 @@
 @import "../../variaveis/cores";
 
 .lista-processo-parte {
-  color: $stfAzulEscuro;
-  margin: 16px 0;
+  color: $stfCinzaEscuroFonte;
+  h5 {
+    font-weight: bold;
+  }
+  padding: 0.8px 12px;
+  background-color: $stfAzulCinza;
+  small {
+    color: $stfCinzaEscuro;
+    font-weight: bold;
+  }
 }
+
+// .lista-processo-parte {
+//   color: $stfAzulCinza;
+//   h5 {
+//     font-weight: bold;
+//   }
+//   padding: 0.8px 12px;
+//   background-color: $stfAzul;
+//   small {
+//     color: $stfBranco;
+//     font-weight: bold;
+//   }
+// }
 
 table {
   font-size: 0.95rem;
