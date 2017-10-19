@@ -10,7 +10,7 @@ $('.dropdown-toggle').hover(function() {
     $(this).find('.dropdown-menu').stop(true, true).delay(0).fadeOut(100);
 });
 
-$(document).ready(function(){
+$(document).ready(function(){    
     var pesquisaSelecionada = $("#abaSelecionada").val();
     //se nao for a pesquisa de jurisprudencia, esconde botoes da pesquisa jurisprudencia
     if(pesquisaSelecionada != 4){
@@ -224,6 +224,12 @@ $('.botoes-pesquisa-jurisprudencia span').on('click', function(){
     $("#pesquisaJurisprudencia").focus();
 });
 
+var map={"â":"a","Â":"A","à":"a","À":"A","á":"a","Á":"A","ã":"a","Ã":"A","ê":"e","Ê":"E","è":"e","È":"E","é":"e","É":"E","î":"i","Î":"I","ì":"i","Ì":"I","í":"i","Í":"I","õ":"o","Õ":"O","ô":"o","Ô":"O","ò":"o","Ò":"O","ó":"o","Ó":"O","ü":"u","Ü":"U","û":"u","Û":"U","ú":"u","Ú":"U","ù":"u","Ù":"U","ç":"c","Ç":"C"};
+
+function removerAcentos(s){ 
+    return s.replace(/[\W\[\] ]/g,function(a){return map[a]||a}) 
+};
+
 function realizarPesquisa(id){
     var assunto = $("#abaSelecionada").val();
     var termoPesquisa = $("#" + id).val();
@@ -239,7 +245,7 @@ function realizarPesquisa(id){
     }
     else
     {
-        window.open("//stf.jus.br/portal/pesquisa/listarPesquisa.asp?termo=" + encodeURIComponent(termoPesquisa) + "&assunto=" + encodeURIComponent(assunto), '_blank');
+        window.open("//stf.jus.br/portal/pesquisa/listarPesquisa.asp?termo=" + removerAcentos(termoPesquisa) + "&assunto=" + assunto, '_blank');
     }
 }
 
