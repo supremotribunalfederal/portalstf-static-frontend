@@ -4,7 +4,7 @@ import moment from 'moment';
 
 $(document).ready(function(){
     var processoClasse = $('.processo-titulo').text().split(' ');
-    var parametros = 'classe=' + processoClasse[0] + '&numero=' + processoClasse[1];
+    var parametros = 'classe=' + processoClasse[0] + '&numero=' + processoClasse[1].substring(0, processoClasse[1].indexOf(' '));
     var incidente = $('#incidente').val();
 
     $('#btn-dje').on('click', function(){
