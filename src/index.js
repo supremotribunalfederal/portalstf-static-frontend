@@ -257,6 +257,9 @@ function pesquisarProcesso() {
         case "NUMERO_UNICO":
             pesquisarProcessoPorNumeroUnico();
             break;
+        case "PARTE_OU_ADVOGADO":
+            pesquisarProcessoPorNomeDaParteOuAdvogado();
+            break;
     }
 }
 
@@ -284,6 +287,16 @@ function pesquisarProcessoPorClasseNumero() {
         url = window.location.origin + '/processos/listarProcessos.asp?classe=' + classe + '&numeroProcesso=' + numero;
     }
     
+    window.location.href = url;
+}
+
+function pesquisarProcessoPorNomeDaParteOuAdvogado() {
+    var url = '';
+    if (window.location.pathname.match(/^\/portal\/?.*/)) {
+       url = window.location.origin + '/portal/processos/listarPartes.asp?termo=' + $('#pesquisaPrincipalParteAdvogado').val();
+    } else {
+       url = window.location.origin + '/processos/listarPartes.asp?termo=' + $('#pesquisaPrincipalParteAdvogado').val();
+    }
     window.location.href = url;
 }
 
