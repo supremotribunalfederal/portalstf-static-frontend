@@ -6,7 +6,8 @@ moment.locale("pt-BR");
 moment().format('LT');
 
 var horaAtualizacao = $(".hora-atualizacao").text();
-$(".intervalo-atualizacao").text(moment(horaAtualizacao, "DD/MM/YYYY hh:mm").fromNow());
+var periodo = moment(horaAtualizacao, "DD/MM/YYYY hh:mm").fromNow()
+$(".intervalo-atualizacao").text(periodo.replace('atrás',''));
 
 //event tracker do Google Analytics
 

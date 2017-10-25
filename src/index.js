@@ -31,7 +31,7 @@ $(document).ready(function(){
     $(".tmp-dec").each(function(){
         var data = $(this)[0].innerText;
         var resultado = moment(data, "DD/MM/YYYY h:mm").fromNow();
-        $(this).text("Há " + resultado);
+        $(this).text("Há " + resultado.replace('atrás',''));
     });    
 });
 
