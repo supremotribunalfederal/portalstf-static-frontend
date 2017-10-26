@@ -8,7 +8,7 @@ $(document).ready(function(){
     var incidente = $('#incidente').val();
 
     $('#btn-dje').on('click', function(){
-        window.open('//stf.jus.br/portal/diarioJustica/listarDiarioJustica.asp?tipoPesquisaDJ=AP&' + parametros, '_black');
+        window.open('//stf.jus.br/portal/diarioJustica/listarDiarioJustica.asp?tipoPesquisaDJ=AP&' + parametros, '_blank');
     });
 
     $('#btn-jurisprudencia').on('click', function(){
