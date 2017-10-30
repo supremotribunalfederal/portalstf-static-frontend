@@ -223,7 +223,13 @@ $("#fechar-pesquisa").click(function() {
 
 $('.botoes-pesquisa-jurisprudencia span').on('click', function(){
     var search = $('#pesquisaJurisprudencia').val();
-    search = search + ' ' + $(this).data('value') + ' ';
+
+    if ($(this).data('value').trim() == '$'){
+        search = search + $(this).data('value');
+    } else {
+        search = search + ' ' + $(this).data('value') + ' ';
+    }
+
     $('#pesquisaJurisprudencia').val(search);
     $("#pesquisaJurisprudencia").focus();
 });
