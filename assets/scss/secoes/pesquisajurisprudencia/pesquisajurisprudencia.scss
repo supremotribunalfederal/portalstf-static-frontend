@@ -1,0 +1,73 @@
+@import "../../variaveis/cores";
+
+//teste
+.teste{
+    background-color: blue;
+    width: 600px;
+    height: 400px;
+    color: green;
+}
+//nav
+ul .nav-tabs {
+    border-bottom: 2px solido $stfCinzaClaro;
+  }
+  .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    border-width: 0;
+  }
+
+  .nav-tabs > li > a {
+    border: none;
+    color: $stfCinzaEscuro;
+  }
+
+  .nav-tabs > li.active > a, .nav-tabs > li > a:hover {
+    border: none;
+    color: $stfPreto;
+    background: transparent;
+    font-weight: bold;
+  }
+
+  .nav-tabs > li > a::after {
+    content: "";
+    background: $stfAzul;
+    height: 2px;
+    position:absolute;
+    width: 100%;
+    left: 0px; bottom: -1px;
+    transition: all 250ms ease 0s;
+    transform: scale(0);
+  }
+
+  .nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after {
+    transform: scale(1);
+  }
+
+  //.tab-nav > li > a::after {
+    // background: $stfAzulEscuro none repeat scroll 0% 0%;
+    // color: $stfBranco;
+    // 21527d
+  //}
+
+  .tab-pane {
+    padding: 0;
+  }
+
+  .tab-content {
+    padding: 0 20px;
+  }
+
+
+
+
+/*hr {
+    border-top: 2px solid rgb(0, 0, 0);
+    height: 3px;
+}
+
+.filtro{
+    font-size: 20pt;
+    font-weight: bold;
+}
+.lista-tipo-tese{
+    font-size: 50pt;
+}*/

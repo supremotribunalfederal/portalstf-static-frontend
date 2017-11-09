@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Supremo Tribunal Federal</title>
+  <link rel="icon" type="imagem/png" href="<%= require('assets/img/favicon.ico') %>" />
+</head>
+<body>
+  <div id="main" class="container-fluid p-0">
+    <%- include src/includes/header.html %>
+    <%- include src/includes/pesquisa-lista.html %>
+    <section id="conteudo" class="container-fluid m-0 p-0">
+          <!--cards lateral direita -->
+     <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 p-16 p-sm-8 p-xs-0 m-0">
+        <div class="card m-b-24 m-t-24">
+            <div class="card-titulo"><i class="glyphicon glyphicon-search"></i> Filtros aplicados</div>
+            <div class="card-conteudo">
+              <div class="col-md-6">
+                <div style="text-align: center">
+                  <span class="badge" style="color: black; background-color: rgb(221, 217, 217); margin: 5px; padding: 7px; font-size: 14px;" >
+                   aborto; <i class="glyphicon glyphicon-remove-sign" style="color: rgb(156, 146, 146)"></i></span> <br>
+                  <span class="badge"  style="color: black; background-color: rgb(221, 217, 217);  margin: 5px; padding: 7px; font-size: 14px;">Plenário;
+                      <i class="glyphicon glyphicon-remove-sign" style="color: rgb(156, 146, 146)"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                  <div style="text-align: center">
+                      <span class="badge"  style="color: black; background-color: rgb(221, 217, 217);  margin: 5px; padding: 7px; font-size: 14px;">Direito da mul...;
+                          <i class="glyphicon glyphicon-remove-sign" style="color: rgb(156, 146, 146)"></i>
+                      </span> <br>
+                      <span class="badge"  style="color: black; background-color: rgb(221, 217, 217);  margin: 5px; padding: 7px; font-size: 14px;">Gilmar Me...;
+                          <i class="glyphicon glyphicon-remove-sign" style="color: rgb(156, 146, 146)"></i>
+                      </span>
+                  </div>
+              </div>
+
+                <div class="row m-0 m-t-16 p-0">
+                  <a id="apagar_filtro" class="col-xs-12 m-b-16" style="cursor:pointer; text-align: center; margin-top: 10px;">
+                    <i class="glyphicon glyphicon-trash" aria-label="apagar filtro"></i> APAGAR FILTROS
+                  </a>
+                </div>
+            </div>
+        </div>     <!--fecha card -->
+
+        <div class="card m-b-24 m-t-24">
+          <div class="card-titulo"> <i class="glyphicon glyphicon-time" aria-hidden="true"></i> Histórico</div>
+          <div class="card-conteudo">
+              <ul>
+                <a><li style="font-size: 14px;">Direito da Mulher</li> </a>
+                <a><li  style="font-size: 14px;">Plenário; Edson Fachin</li></a>
+                <a><li style="font-size: 14px;">Gilmar Mendes</li></a>
+              </ul>
+              <hr/>
+              <ul>
+                <a><li  style="font-size: 14px;">Aborto</li> </a>
+              </ul>
+
+              <a style="cursor:pointer;"><i class="glyphicon glyphicon-plus" aria-label="ver-mais"></i> Ver mais 43 pesquisas realizadas</a>
+
+          </div>
+        </div>     <!--fecha card -->
+
+        <div class="card m-b-24 m-t-24">
+          <div class="card-titulo"><i class="glyphicon glyphicon-list"></i> Filtros</div>
+          <div class="card-conteudo">
+
+              <strong>Palavras-chave (separe por ;)</strong>
+              <div class="campo-container m-t-16">
+                  <form id=filtro-palavra-chave>
+                    <p><input name="pesquisa" class="col-md-9 col-xs-9" placeholder="Aborto; Direito da mulher" type="text" id="txtPalavraChave" />
+                      <button form="pesquisa-palavra-chave" class="btn btn-default btn-icone col-md-3 col-xs-3" id="btnPesquisaInteiroTeor">
+                          <i class="glyphicon glyphicon-plus" aria-label="abrir pesquisa"></i>
+                      </button>
+                    </p>
+                  </form>
+              </div>
+              <br/> <br/>
+              <hr/>
+
+              <strong class="filtro">Número do Processo</strong>
+              <div class="campo-container m-t-16">
+                  <form id=filtro-palavra-chave>
+                    <p><input name="pesquisa" class="col-md-9 col-xs-9" placeholder="Digite o número" type="text" id="txtNumeroProcesso" />
+                      <button form="pesquisa-numero-processo" class="btn btn-default btn-icone col-md-3 col-xs-3" id="btnPesquisaInteiroTeor">
+                          <i class="glyphicon glyphicon-plus" aria-label="abrir pesquisa"></i>
+                      </button>
+                    </p>
+                  </form>
+              </div>
+              <br/> <br/>
+              <hr/>
+
+              <strong>Relator</strong>
+              <div class="campo-container m-t-16">
+                <ul class="relator">
+                    <a><li>Gilmar Mendes</li> </a>
+                    <a><li>Rosa Weber</li></a>
+                    <a><li>Edson Fachin</li></a>
+                </ul>
+
+                <a style="cursor:pointer;"><i class="glyphicon glyphicon-plus" aria-label="ver-mais"></i> Ver mais </a>
+              </div>
+                <br/> <br/>
+              <hr/>
+
+              <strong>Data</strong>
+              <div class="campo-container m-t-16">
+                <form id="filtro-data">
+                    <p><input name="pesquisa" class="col-md-9 col-xs-9" placeholder="De" type="text" id="data" onfocus="(this.type='date')"/>
+                      <button form="pesquisa-numero-processo" class="btn btn-default btn-icone col-md-3 col-xs-3" id="btnPesquisaInteiroTeor">
+                          <i class="glyphicon glyphicon-plus" aria-label="abrir pesquisa"></i>
+                      </button>
+                      <br> <br>
+                    <p><input name="pesquisa" class="col-md-9 col-xs-9" placeholder="De" type="text" id="data" onfocus="(this.type='date')"/>
+                      <button form="pesquisa-numero-processo" class="btn btn-default btn-icone col-md-3 col-xs-3" id="btnPesquisaInteiroTeor">
+                          <i class="glyphicon glyphicon-plus" aria-label="abrir pesquisa"></i>
+                      </button>
+                    </p>
+
+                </form>
+                </div>
+                <br> <br>
+                <hr />
+                <!--data
+                <form id="filtro-data">
+                  <div class="input-group m-b-16">
+                    <span class="input-group-addon" id="btn-datepicker-inicial" style="cursor:pointer;">
+                      <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+
+                    <input type="text" id="data-inicial" class="form-control" placeholder="De" onfocus="(this.type='date')"/>
+                    <span class="input-group-addon add" id="btn-add-inicial" style="cursor:pointer;">
+                      <span class="glyphicon glyphicon-plus"></span>
+                    </span>
+
+                  </div>
+
+                  <div class="input-group">
+                    <span class="input-group-addon" id="btn-datepicker-final" style="cursor:pointer;">
+                      <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+
+                    <input type="text" id="data-final" class="form-control" placeholder="Até" onfocus="(this.type='date')" />
+                    <span class="input-group-addon add" id="btn-add-final" style="cursor:pointer;">
+                      <span class="glyphicon glyphicon-plus"></span>
+                    </span>
+                  </div>
+                </form>
+                 -->
+
+
+              <strong>Tema</strong>
+                <form id=filtro-tema>
+                  <p><input name="pesquisa" class="col-md-9 col-xs-9" placeholder="Digite o tema" type="text" id="txtTema"/>
+                    <button form="pesquisa-tema" class="btn btn-default btn-icone col-md-3 col-xs-3" id="btnPesquisaInteiroTeor">
+                        <i class="glyphicon glyphicon-plus" aria-label="abrir pesquisa"></i>
+                    </button>
+                  </p>
+                </form>
+                <br/> <br/>
+              <hr/>
+
+              <strong>Tese</strong>
+                <form id=filtro-tese>
+                    <p><input name="pesquisa" class="col-md-9 col-xs-9" placeholder="Digite a tese" type="text" id="txtTese" />
+                      <button form="pesquisa-tese" class="btn btn-default btn-icone col-md-3 col-xs-3" id="btnPesquisaInteiroTeor">
+                          <i class="glyphicon glyphicon-plus" aria-label="abrir pesquisa"></i>
+                      </button>
+                    </p>
+                </form>
+              <br/> <br/>
+              <hr/>
+
+              <strong>Tipo de Tese</strong>
+                <div class="campo-container m-t-16">
+                  <ul class="lista-tipo-tese">
+                    <a><li>Controle Concentrado</li> </a>
+                    <a><li>Repercussão Geral</li></a>
+                    <a><li>Outros processos</li></a>
+                  </ul>
+                </div>
+              <br/> <br/>
+              <hr/>
+
+              <strong>Órgão Julgador</strong>
+              <div class="campo-container m-t-16">
+                  <ul class="lista-orgao-julgador">
+                    <a><li>Plenário</li> </a>
+                    <a><li>Plenário Eletrônico</li></a>
+                    <a><li>1ª Turma</li></a>
+                    <a><li>2ª Turma</li></a>
+                  </ul>
+              </div>
+              <br/> <br/>
+              <hr/>
+
+              <strong>Somente no texto da ementa</strong>
+              <form id="filtro-palavra-chave">
+                  <p><input name="pesquisa" class="col-md-9 col-xs-9" placeholder="Digite o número" type="text" id="txtNumeroProcesso" />
+                    <button form="pesquisa-numero-processo" class="btn btn-default btn-icone col-md-3 col-xs-3" id="btnPesquisaInteiroTeor">
+                        <i class="glyphicon glyphicon-plus" aria-label="abrir pesquisa"></i>
+                    </button>
+                  </p>
+              </form>
+                <br/> <br/>
+              <hr/>
+
+              <strong>Legislação</strong>
+                <div class="campo-container m-t-16">
+                  <ul>
+                      <a><li>Acordo (ACO)</li> </a>
+                      <a><li>Acento Regimental (ASR)</li></a>
+                      <a><li>ATO (ATO)</li></a>
+                  </ul> <br>
+
+                   <a style="cursor:pointer;"><i class="glyphicon glyphicon-plus" aria-label="ver-mais"></i> Ver mais </a>
+                </div>  <br>
+
+                <div class="campo-container m-t-16">
+                  <form id="filtro-legislacao">
+                      <p><input name="pesquisa-legilacao" class="col-md-9 col-xs-9" placeholder="Digite o número da legislação" type="text" id="txtNumeroLegislacao" />
+                        <button form="pesquisa-numero-legislacao" class="btn btn-default btn-icone col-md-3 col-xs-3" id="btnPesquisaInteiroTeor">
+                            <i class="glyphicon glyphicon-plus" aria-label="abrir pesquisa"></i>
+                        </button>
+                      </p>
+                  </form> <br> <br> <br>
+                </div>
+
+                <div class="campo-container m-t-16">
+                    <form class="legislacao">
+                      <label style="font-size: 11pt;">Artigo</label>
+                      <div class="inputs" style="float: right;">
+                        <input name="pesquisa" class="col-md-6 col-xs-3" placeholder="Art." type="text" id="txtArtigo"/>
+                       <button form="pesquisa-artigo" class="btn btn-default btn-icone col-md-6 col-xs-3" id="btnPesquisaInteiroTeor">
+                            <i class="glyphicon glyphicon-plus" aria-label="abrir pesquisa"></i>
+                        </button>
+                      </div> <br> <br>
+
+                      <label style="font-size: 11pt;">Parágrafo</label>
+                      <div class="inputs" style="float: right;">
+                        <input name="pesquisa" class="col-md-6 col-xs-3" placeholder="Par." type="text" id="txtParagrafo"/>
+                       <button form="pesquisa-paragrafo" class="btn btn-default btn-icone col-md-6 col-xs-3" id="btnPesquisaInteiroTeor">
+                            <i class="glyphicon glyphicon-plus" aria-label="abrir pesquisa"></i>
+                        </button>
+                      </div><br> <br>
+
+                      <label style="font-size: 11pt;">Inciso</label>
+                      <div class="inputs" style="float: right;">
+                        <input name="pesquisa" class="col-md-6 col-xs-3" placeholder="Inc." type="text" id="txtInciso"/>
+                       <button form="pesquisa-inciso" class="btn btn-default btn-icone col-md-6 col-xs-3" id="btnPesquisaInteiroTeor">
+                            <i class="glyphicon glyphicon-plus" aria-label="abrir pesquisa"></i>
+                        </button>
+                      </div><br> <br>
+
+                      <label style="font-size: 11pt;">Letra</label>
+                      <div class="inputs" style="float: right;">
+                        <input name="pesquisa" class="col-md-6 col-xs-3" placeholder="Let." type="text" id="txtLetra"/>
+                       <button form="pesquisa-letra" class="btn btn-default btn-icone col-md-6 col-xs-3" id="btnPesquisaInteiroTeor">
+                            <i class="glyphicon glyphicon-plus" aria-label="abrir pesquisa"></i>
+                        </button>
+                      </div>
+                    </form>
+                </div>
+          </div>   <!--card conteudo-->
+        </div>     <!--fecha card -->
+
+
+     </div>
+
+
+     <div class="col-xs-12 col-sm-6 col-md-7 col-lg-8 row m-0 p-xs-0 p-sm-8 ">
+
+        <div class="card m-b-48" style="margin-top:35px;">
+
+            <div class="card-conteudo row m-0 p-0">
+              <ul class="nav nav-tabs pull-left col-md-12" role="tablist">
+                <li role="presentation" class="active"><a data-toggle="tab" href="#acordaos">Acordaos</a></li>
+                <li role="presentation"><a data-toggle="tab" href="#repercussao">Repercussão Geral</a></li>
+                <li role="presentation"><a data-toggle="tab" href="#sumulasvinculantes">Súmulas Vinculantes</a></li>
+                <li role="presentation"><a data-toggle="tab" href="#sumulas">Súmulas</a></li>
+                <li role="presentation" class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mais <i class="	glyphicon glyphicon-triangle-bottom"></i></a>
+                    <div class="dropdown-menu">
+                      <ul>
+                      <li><a class="dropdown-item" href="#">option 1</a> </li>
+                      <li><a class="dropdown-item" href="#">option 2</a> </li>
+                      <li><a class="dropdown-item" href="#">option 3</a> </li>
+                      </ul>
+                    </div>
+                  </li>
+              </ul>
+
+              <div class="tab-content col-md-12">
+                <%- include src/includes/pesquisa-acordaos.html %>
+                <%- include src/includes/pesquisa-repercussao-geral.html %>
+                <%- include src/includes/pesquisa-sumulas-vinculantes.html %>
+                <%- include src/includes/pesquisa-sumulas.html %>
+              </div>
+              <div class="tab-content col-md-12">
+                  <a id="mais-resultados" class="btn btn-raised btn-fluid btn-default-bordered btn-upper p-l-16 p-r-16" target="_blank" href="">Carregar mais resultados</a>
+              </div>
+            </div>
+        </div>
+      </div> <!--CONTEUDO -->
+
+     </div>
+
+    </section>
+    <%- include src/includes/mapa-do-site.html %>
+    <%- include src/includes/footer.html %>
+  </div>
+</body>
+</html>
