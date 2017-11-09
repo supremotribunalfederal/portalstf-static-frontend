@@ -32,7 +32,7 @@ $(document).ready(function(){
         var data = $(this)[0].innerText;
         var resultado = moment(data, "DD/MM/YYYY h:mm").fromNow();
         $(this).text("Há " + resultado);
-    });    
+    });
 });
 
 var campoInputPesquisa = 'pesquisaPrincipalClasseNumero';
@@ -460,5 +460,6 @@ $('#btnAcessarPortalNocicitas').on('click', function() {
     }
 })();
 
+//parametros qlik
 
 /* ---------------------------------------------------------------------------------------------------------------- */

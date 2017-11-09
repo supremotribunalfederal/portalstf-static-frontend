@@ -10,7 +10,7 @@ const chunksOrder = require('./chunks-order');
 
 
 const publicPath = process.env.GH_PAGES ? process.env.GH_PAGES.trim() : '/';
-const VENDORS = ['bootstrap-loader', 'moment', 'urijs', 'jquery-ui/ui/widgets/datepicker', 'jquery-validation'];
+const VENDORS = ['bootstrap-loader', 'moment', 'urijs', 'jquery-ui/ui/widgets/datepicker', 'jquery-validation', 'requirejs'];
 
 const homeHtml = new HtmlPlugin({
   template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/index.html')}`,
@@ -25,6 +25,7 @@ module.exports = {
   entry: {
     bundle: [
       path.join(PATHS.src, '/index.js'),
+
       path.join(PATHS.scss, '/main.scss')
     ],
     vendor: VENDORS
