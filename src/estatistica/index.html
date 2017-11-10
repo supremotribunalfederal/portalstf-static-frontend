@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Supremo Tribunal Federal</title>
+  <link rel="icon" type="imagem/png" href="<%= require('assets/img/favicon.ico') %>" />
+</head>
+<body class="pagina-interna">
+  <div id="main" class="container-fluid p-0">
+
+    <%- include src/includes/header.html %>
+
+    <%- include src/includes/pesquisa-lista.html %>
+
+    <section id="conteudo" class="container-fluid m-0 p-0">
+      <div class="row container center-block p-0">
+        <form>
+          <div class="row p-0 m-0">
+            <div class="titulos-secoes m-l-0 p-b-8" id="estatisticasdostf">Estatísticas do STF</div>
+          </div>
+          <div id="lado_esquerdo" class="col-xs-12 col-sm-12 col-md-8 row m-0 p-xs-0 p-sm-8 p-b-32" style="padding-left: 0px;">
+        <div class="card m-b-48">
+            <div class="card-titulo">Filtros</div>
+            <div class="card-conteudo">
+                <div id="lista_ministros" class="sob-medida-item p-0 m-r-16 m-l-16 p-b-10">
+                    <img alt="Ministra Cármen Lúcia" id="MIN. CÁRMEN LÚCIA" title="Ministra Cármen Lúcia" src="../assets/img/ministros/ministra_carmen_lucia.jpg" class="card-imagem-ministros cinza" onclick="clickMinistro(this)">
+                    <img alt="Ministro Dias Toffoli" id="MIN. DIAS TOFFOLI" title="Ministro Dias Toffoli" src="../assets/img/ministros/ministro_dias_toffoli.jpg" class="card-imagem-ministros cinza" onclick="clickMinistro(this)">
+                    <img alt="Ministro Celso de Melo" id="MIN. CELSO DE MELLO" title="Ministro Celso de Melo" src="../assets/img/ministros/ministro_celo_melo.jpg" class="card-imagem-ministros cinza" onclick="clickMinistro(this)">
+                    <img alt="Ministro Marco Aurélio" id="MIN. MARCO AURÉLIO" title="Ministro Marco Aurélio" src="../assets/img/ministros/ministro_marco_aurelio.jpg" class="card-imagem-ministros cinza" onclick="clickMinistro(this)">
+                    <img alt="Ministro Gilmar Mendes" id="MIN. GILMAR MENDES" title="Ministro Gilmar Mendes" src="../assets/img/ministros/ministro_mendes.jpg" class="card-imagem-ministros cinza" onclick="clickMinistro(this)">
+                    <img alt="Ministro Ricardo Lewandowski" id="MIN. RICARDO LEWANDOWSKI" title="Ministro Ricardo Lewandowski" src="../assets/img/ministros/ministro_lewandowski.jpg" class="card-imagem-ministros cinza" onclick="clickMinistro(this)">
+                    <img id="MIN. LUIZ FUX" alt="Ministro Luiz Fux" title="Ministro Luiz Fux" src="../assets/img/ministros/ministro_luiz_fux.jpg" class="card-imagem-ministros cinza" onclick="clickMinistro(this)">
+                    <img alt="Ministra Rosa Weber" id="MIN. ROSA WEBER" title="Ministra Rosa Weber" src="../assets/img/ministros/ministra_rosa_weber.jpg" class="card-imagem-ministros cinza" onclick="clickMinistro(this)">
+                    <img alt="Ministro Roberto Barroso" id="MIN. ROBERTO BARROSO" title="Ministro Roberto Barroso" src="../assets/img/ministros/ministro_roberto_barroso.jpg" class="card-imagem-ministros cinza" onclick="clickMinistro(this)">
+                    <img alt="Ministro Edson Fachin" id="MIN. EDSON FACHIN" title="Ministro Edson Fachin" src="../assets/img/ministros/ministro_fachin.jpg" class="card-imagem-ministros cinza" onclick="clickMinistro(this)">
+                    <img alt="Ministro Alexandre de Moraes" id="MIN. ALEXANDRE DE MORAES" title="Ministro Alexandre de Moraes" src="../assets/img/ministros/ministro_moraes.jpg" class="card-imagem-ministros cinza" onclick="clickMinistro(this)">
+
+                  </div>
+                  <div class="sob-medida-item p-0 m-r-16 m-l-16 m-t-10 m-b-10 p-t-5" style="margin-top: 2%;">
+                      <select id="comboClasses" name="classes" class="campo-texto combo-qlik" style="margin-bottom: 2%;" >
+                          <option value="" selected> Filtre pela classe</option>
+                        </select>
+                        <select id="comboTipoClasse" name="comboTipoClasse" class="campo-texto combo-qlik" style="margin-bottom: 2%;" >
+                            <option value="" selected>Filtre pelo tipo</option>
+                        </select>
+                        <select id="comboLocalizacao" name="comboLocalizacao" class="campo-texto combo-qlik" style="margin-bottom: 2%;" >
+                            <option value="" selected>Filtre pela localização atual</option>
+                        </select>
+                        <span>
+                          <button class="btn pull-right ministros-card m-r-8" alt="Todo o STF" id="tribunal" title="Todo o STF" onclick="clickTodoTribunal()">Limpar Seleção</button>
+                         </span>
+                  </div>
+
+            </div>
+        </div>
+      <div class="card m-b-48">
+        <div class="card-titulo">PRODUTIVIDADE</div>
+        <div class="card-conteudo">
+          <div class="Grafico">
+            <div class="embeddedArea" id="grafico_produtividade" style="height: 45%" data-qlik-objid="JtzRJp" data-qlik-appid = "9e787043-f90c-4781-a48b-c1351ba17379" ></div>
+          </div>
+        </div>
+      </div>
+      <div class="card m-b-48" >
+        <div class="card-titulo">ACERVO POR CLASSE</div>
+        <div class="card-conteudo">
+            <div class="Grafico">
+              <div class="embeddedArea" style="height: 45%" data-qlik-objid="SrkTj" data-qlik-appid = "9e787043-f90c-4781-a48b-c1351ba17379"></div>
+             </div>
+        </div>
+      </div>
+      <div class="card m-b-48">
+        <div class="card-titulo">ACERVO ACUMULADO</div>
+        <div class="card-conteudo">
+          <div class="Grafico">
+            <div class="embeddedArea" style="height: 45%" data-qlik-objid="hxELjsc" data-qlik-appid = "9e787043-f90c-4781-a48b-c1351ba17379" ></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div id="lado_direito" class="col-xs-12 col-sm-12 col-md-4 row m-0 p-xs-0 p-sm-8 p-b-16" style="padding-right: 0px;">
+      <div class="card m-b-24">
+        <div class="row m-0 m-t-0">
+          <div class="card-conteudo">
+            <div>
+              <div class="qlik-numero mt-01">
+                <div class="KPISub">
+                    <div class="embeddedArea" data-qlik-objid="LUjaAP" data-qlik-appid = "9e787043-f90c-4781-a48b-c1351ba17379" ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="qlik-numero rotulo-qlik-numero">
+              Acervo atual
+          </div>
+        </div>
+      </div>
+      <div class="card m-b-24">
+         <div class="card-topico-conteudo row m-0 b-b-16 p-0">
+          <div class="col-md-4">
+            <div class="qlik-numero">
+              <div class="KPISub">
+                  <div class="embeddedArea" data-qlik-objid="BnFJhF" data-qlik-appid = "9e787043-f90c-4781-a48b-c1351ba17379" ></div>
+              </div>
+            </div>
+            <div class="qlik-numero rotulo-qlik-numero">
+              Acervo (2016)
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="qlik-numero">
+              <div class="KPISub">
+                  <div class="embeddedArea" data-qlik-objid="fqJpp" data-qlik-appid = "9e787043-f90c-4781-a48b-c1351ba17379" ></div>
+              </div>
+            </div>
+            <div class="qlik-numero rotulo-qlik-numero">
+              Recebidos (2017)
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="qlik-numero">
+              <div class="KPISub">
+                  <div class="embeddedArea" data-qlik-objid="PmpVAm" data-qlik-appid = "9e787043-f90c-4781-a48b-c1351ba17379" ></div>
+              </div>
+            </div>
+            <div class="qlik-numero rotulo-qlik-numero">
+              Baixados (2017)
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card m-b-24">
+          <div class="card-titulo">ACERVO POR ESTADOS</div>
+          <div class="card-conteudo">
+            <div>
+              <div class="embeddedArea" style="height: 40%" data-qlik-objid="WRGCL" data-qlik-appid = "9e787043-f90c-4781-a48b-c1351ba17379" ></div>
+            </div>
+          </div>
+      </div>
+      <div class="card m-b-24">
+        <div class="card-titulo">BAIXE O ACERVO (.xls)</div>
+        <div class="card-conteudo  m-b-16">
+            <ul>
+              <li>
+                <strong><a href="http://www.stf.jus.br/arquivo/cms/publicacaoBOInternet/anexo/Acervo_originarias2.xlsx">Classes Originárias</a> </strong>
+              </li>
+              <li>
+                <strong><a href="http://www.stf.jus.br/arquivo/cms/publicacaoBOInternet/anexo/Acervo_recursais2.xlsx">Classes Recursais </a></strong>
+              </li>
+              <li>
+                <strong><a href="http://www.stf.jus.br/arquivo/cms/publicacaoBOInternet/anexo/Acervo-Lista_Geral2.xlsx">Todas as Classes</a></strong>
+              </li>
+            </ul>
+        </div>
+      </div>
+      <div class="card m-b-24">
+        <div class="card-titulo">LOCALIZAÇÃO</div>
+        <div class="card-conteudo">
+          <div class="ConteinerGrafico">
+            <div class="embeddedArea" style="width: 100%;height: 50%; align-items: center;" data-qlik-objid="wTZPaVB" data-qlik-appid = "9e787043-f90c-4781-a48b-c1351ba17379" ></div>
+          </div>
+        </div>
+      </div>
+       <div class="card m-b-24">
+        <div class="card-titulo">ENTENDA AS ESTATÍSTICAS</div>
+        <div class="card-conteudo m-b-16">
+          <ul>
+            <li>
+              <strong>
+                <a href="#">Acervo e Produção</a><br>
+              </strong>
+            </li>
+            <li>
+              <strong>
+                <a href="#">Pautas do Plenário</a><br>
+              </strong>
+            </li>
+            <li>
+              <strong>
+                <a href="#">Entenda o Acervo</a><br>
+              </strong>
+            </li>
+            <li>
+              <strong>
+                <a href="#">Glossário do Acervo</a><br>
+              </strong>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+        </form>
+      </div>
+    </section>
+
+    <%- include src/includes/mapa-do-site.html %>
+
+    <%- include src/includes/footer.html %>
+  </div>
+</body>
+</html>
