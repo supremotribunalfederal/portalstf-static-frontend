@@ -11,3 +11,8 @@ filtros.forEach(function(badge){
         this.remove();
     });
 });
+
+//excluir todos os filtros aplicados
+$("#apagar_filtro").click(function(){
+    $(".badge").empty();
+});

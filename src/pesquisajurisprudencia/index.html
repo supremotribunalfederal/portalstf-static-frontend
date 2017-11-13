@@ -19,26 +19,26 @@
             <div class="card-conteudo">
               <div class="col-md-6">
                 <div style="text-align: center">
-                  <span class="badge" style="color: black; background-color: rgb(221, 217, 217); margin: 5px; padding: 7px; font-size: 14px;" >
-                   aborto; <i class="glyphicon glyphicon-remove-sign" style="color: rgb(156, 146, 146)"></i></span> <br>
-                  <span class="badge"  style="color: black; background-color: rgb(221, 217, 217);  margin: 5px; padding: 7px; font-size: 14px;">Plenário;
-                      <i class="glyphicon glyphicon-remove-sign" style="color: rgb(156, 146, 146)"></i>
+                  <span class="badge">
+                   aborto; <i class="glyphicon glyphicon-remove-sign"></i></span> <br>
+                  <span class="badge" >Plenário 
+                    <i class="glyphicon glyphicon-remove-sign"></i>
                   </span>
                 </div>
               </div>
               <div class="col-md-6">
                   <div style="text-align: center">
-                      <span class="badge"  style="color: black; background-color: rgb(221, 217, 217);  margin: 5px; padding: 7px; font-size: 14px;">Direito da mul...;
-                          <i class="glyphicon glyphicon-remove-sign" style="color: rgb(156, 146, 146)"></i>
+                      <span class="badge"  >Direito da mul...;
+                          <i class="glyphicon glyphicon-remove-sign"></i>
                       </span> <br>
-                      <span class="badge"  style="color: black; background-color: rgb(221, 217, 217);  margin: 5px; padding: 7px; font-size: 14px;">Gilmar Me...;
-                          <i class="glyphicon glyphicon-remove-sign" style="color: rgb(156, 146, 146)"></i>
+                      <span class="badge">Gilmar Me...;
+                          <i class="glyphicon glyphicon-remove-sign"></i>
                       </span>
                   </div>
               </div>
 
                 <div class="row m-0 m-t-16 p-0">
-                  <a id="apagar_filtro" class="col-xs-12 m-b-16" style="cursor:pointer; text-align: center; margin-top: 10px;">
+                  <a id="apagar_filtro" class="col-xs-12 m-b-16">
                     <i class="glyphicon glyphicon-trash" aria-label="apagar filtro"></i> APAGAR FILTROS
                   </a>
                 </div>
@@ -49,16 +49,16 @@
           <div class="card-titulo"> <i class="glyphicon glyphicon-time" aria-hidden="true"></i> Histórico</div>
           <div class="card-conteudo">
               <ul>
-                <a><li style="font-size: 14px;">Direito da Mulher</li> </a>
-                <a><li  style="font-size: 14px;">Plenário; Edson Fachin</li></a>
-                <a><li style="font-size: 14px;">Gilmar Mendes</li></a>
+                <a><li>Direito da Mulher</li> </a>
+                <a><li>Plenário; Edson Fachin</li></a>
+                <a><li>Gilmar Mendes</li></a>
               </ul>
               <hr/>
               <ul>
                 <a><li  style="font-size: 14px;">Aborto</li> </a>
               </ul>
 
-              <a style="cursor:pointer;"><i class="glyphicon glyphicon-plus" aria-label="ver-mais"></i> Ver mais 43 pesquisas realizadas</a>
+              <a><i class="glyphicon glyphicon-plus" aria-label="ver-mais"></i> Ver mais 43 pesquisas realizadas</a>
 
           </div>
         </div>     <!--fecha card -->
@@ -124,34 +124,7 @@
                 </div>
                 <br> <br>
                 <hr />
-                <!--data
-                <form id="filtro-data">
-                  <div class="input-group m-b-16">
-                    <span class="input-group-addon" id="btn-datepicker-inicial" style="cursor:pointer;">
-                      <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-
-                    <input type="text" id="data-inicial" class="form-control" placeholder="De" onfocus="(this.type='date')"/>
-                    <span class="input-group-addon add" id="btn-add-inicial" style="cursor:pointer;">
-                      <span class="glyphicon glyphicon-plus"></span>
-                    </span>
-
-                  </div>
-
-                  <div class="input-group">
-                    <span class="input-group-addon" id="btn-datepicker-final" style="cursor:pointer;">
-                      <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-
-                    <input type="text" id="data-final" class="form-control" placeholder="Até" onfocus="(this.type='date')" />
-                    <span class="input-group-addon add" id="btn-add-final" style="cursor:pointer;">
-                      <span class="glyphicon glyphicon-plus"></span>
-                    </span>
-                  </div>
-                </form>
-                 -->
-
-
+                
               <strong>Tema</strong>
                 <form id=filtro-tema>
                   <p><input name="pesquisa" class="col-md-9 col-xs-9" placeholder="Digite o tema" type="text" id="txtTema"/>
@@ -231,32 +204,32 @@
 
                 <div class="campo-container m-t-16">
                     <form class="legislacao">
-                      <label style="font-size: 11pt;">Artigo</label>
-                      <div class="inputs" style="float: right;">
+                      <label class="pesquisa_legislacao">Artigo</label>
+                      <div class="inputs_legislacao">
                         <input name="pesquisa" class="col-md-6 col-xs-3" placeholder="Art." type="text" id="txtArtigo"/>
                        <button form="pesquisa-artigo" class="btn btn-default btn-icone col-md-6 col-xs-3" id="btnPesquisaInteiroTeor">
                             <i class="glyphicon glyphicon-plus" aria-label="abrir pesquisa"></i>
                         </button>
                       </div> <br> <br>
 
-                      <label style="font-size: 11pt;">Parágrafo</label>
-                      <div class="inputs" style="float: right;">
+                      <label class="pesquisa_legislacao">Parágrafo</label>
+                      <div class="inputs_legislacao">
                         <input name="pesquisa" class="col-md-6 col-xs-3" placeholder="Par." type="text" id="txtParagrafo"/>
                        <button form="pesquisa-paragrafo" class="btn btn-default btn-icone col-md-6 col-xs-3" id="btnPesquisaInteiroTeor">
                             <i class="glyphicon glyphicon-plus" aria-label="abrir pesquisa"></i>
                         </button>
                       </div><br> <br>
 
-                      <label style="font-size: 11pt;">Inciso</label>
-                      <div class="inputs" style="float: right;">
+                      <label class="pesquisa_legislacao">Inciso</label>
+                      <div class="inputs_legislacao">
                         <input name="pesquisa" class="col-md-6 col-xs-3" placeholder="Inc." type="text" id="txtInciso"/>
                        <button form="pesquisa-inciso" class="btn btn-default btn-icone col-md-6 col-xs-3" id="btnPesquisaInteiroTeor">
                             <i class="glyphicon glyphicon-plus" aria-label="abrir pesquisa"></i>
                         </button>
                       </div><br> <br>
 
-                      <label style="font-size: 11pt;">Letra</label>
-                      <div class="inputs" style="float: right;">
+                      <label class="pesquisa_legislacao">Letra</label>
+                      <div class="inputs_legislacao">
                         <input name="pesquisa" class="col-md-6 col-xs-3" placeholder="Let." type="text" id="txtLetra"/>
                        <button form="pesquisa-letra" class="btn btn-default btn-icone col-md-6 col-xs-3" id="btnPesquisaInteiroTeor">
                             <i class="glyphicon glyphicon-plus" aria-label="abrir pesquisa"></i>

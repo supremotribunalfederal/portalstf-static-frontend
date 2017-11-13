@@ -1,12 +1,5 @@
 @import "../../variaveis/cores";
 
-//teste
-.teste{
-    background-color: blue;
-    width: 600px;
-    height: 400px;
-    color: green;
-}
 //nav
 ul .nav-tabs {
     border-bottom: 2px solido $stfCinzaClaro;
@@ -56,18 +49,37 @@ ul .nav-tabs {
     padding: 0 20px;
   }
 
+// FILTROS 
 
-
-
-/*hr {
-    border-top: 2px solid rgb(0, 0, 0);
-    height: 3px;
+.badge{
+  color: black; 
+  background-color: rgb(221, 217, 217); 
+  margin: 5px; 
+  padding: 7px; 
+  font-size: 14px;
+  cursor:pointer; 
 }
 
-.filtro{
-    font-size: 20pt;
-    font-weight: bold;
+.glyphicon-remove-sign{
+  color: rgb(156, 146, 146)
 }
-.lista-tipo-tese{
-    font-size: 50pt;
-}*/
+#apagar_filtro{
+  cursor:pointer; 
+  text-align: center;
+  margin-top: 15px;
+}
+li{
+  font-size: 14px;
+}
+a{
+  cursor: pointer;
+}
+
+.pesquisa_legislacao{
+  font-size: 11pt;
+  
+}
+
+.inputs_legislacao{
+  float: right;
+}
