@@ -6,10 +6,10 @@ import moment from 'moment';
 var appid = '9e787043-f90c-4781-a48b-c1351ba17379';
 
 //Carrega os objetos do qlik
-require(["js/qlik"], function (qlik) {
-    var app = qlik.openApp('9e787043-f90c-4781-a48b-c1351ba17379', config);
-    popula(app);
-});
+// require(["js/qlik"], function (qlik) {
+//     var app = qlik.openApp('9e787043-f90c-4781-a48b-c1351ba17379', config);
+//     popula(app);
+// });
 
 //Preenche as variáveis globais
 function popula(app){
