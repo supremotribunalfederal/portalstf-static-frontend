@@ -31,7 +31,11 @@ $(document).ready(function(){
     $(".tmp-dec").each(function(){
         var data = $(this)[0].innerText;
         var resultado = moment(data, "DD/MM/YYYY h:mm").fromNow();
-        $(this).text("Há " + resultado);
+        $(this).text("Há " + resultado.replace('atrás',''));
+    });
+
+    $('#entrarForum').on('click', function(){
+        window.open('https://groups.google.com/forum/#!forum/repgeral', '_blank')
     });
 });
 
@@ -219,10 +223,22 @@ $("#fechar-pesquisa").click(function() {
 
 $('.botoes-pesquisa-jurisprudencia span').on('click', function(){
     var search = $('#pesquisaJurisprudencia').val();
-    search = search + ' ' + $(this).data('value') + ' ';
+
+    if ($(this).data('value').trim() == '$'){
+        search = search + $(this).data('value');
+    } else {
+        search = search + ' ' + $(this).data('value') + ' ';
+    }
+
     $('#pesquisaJurisprudencia').val(search);
     $("#pesquisaJurisprudencia").focus();
 });
+
+var map={"â":"a","Â":"A","à":"a","À":"A","á":"a","Á":"A","ã":"a","Ã":"A","ê":"e","Ê":"E","è":"e","È":"E","é":"e","É":"E","î":"i","Î":"I","ì":"i","Ì":"I","í":"i","Í":"I","õ":"o","Õ":"O","ô":"o","Ô":"O","ò":"o","Ò":"O","ó":"o","Ó":"O","ü":"u","Ü":"U","û":"u","Û":"U","ú":"u","Ú":"U","ù":"u","Ù":"U","ç":"c","Ç":"C"};
+
+function removerAcentos(s){
+    return s.replace(/[\W\[\] ]/g,function(a){return map[a]||a})
+};
 
 function realizarPesquisa(id){
     var assunto = $("#abaSelecionada").val();
@@ -239,80 +255,57 @@ function realizarPesquisa(id){
     }
     else
     {
-        window.open("//stf.jus.br/portal/pesquisa/listarPesquisa.asp?termo=" + encodeURIComponent(termoPesquisa) + "&assunto=" + encodeURIComponent(assunto), '_blank');
+        window.open("//stf.jus.br/portal/pesquisa/listarPesquisa.asp?termo=" + removerAcentos(termoPesquisa) + "&assunto=" + assunto, '_blank');
     }
 }
 
 function pesquisarProcesso() {
     switch($('.tipo-pesquisa-processo').val()) {
         case "CLASSE_E_NUMERO":
-            if ($('.pesquisa-processo-classe .processo-classe').val()) {
-                pesquisarProcessoPorClasseNumero();
-            } else {
-                pesquisarProcessoPorNumeroApenas();
-            }
-            break;
-        case "PARTE_OU_ADVOGADO":
-            pesquisarProcessoPorNomeDaParteOuAdvogado();
+        pesquisarProcessoPorClasseNumero();
             break;
         case "NUMERO_UNICO":
             pesquisarProcessoPorNumeroUnico();
+            break;
+        case "PARTE_OU_ADVOGADO":
+            pesquisarProcessoPorNomeDaParteOuAdvogado();
             break;
     }
 }
 
 function pesquisarProcessoPorNumeroUnico() {
-    $.get('/util/pesquisaProcessoPorNumeroUnico.asp', {
-        numeroUnico: $('#pesquisaPrincipalNumeroUnico').data( $.mask.dataName )(),
-    }).done(function(data) {
-        window.location.href = '//stf.jus.br/portal/processo/verProcessoAndamento.asp?incidente=' + data
-    }).fail(function(data) {
-        if (data.responseText) {
-            var obj = $.parseJSON(data.responseText);
-            var validator = $('#pesquisa-principal').validate();
-            validator.showErrors({
-              "pesquisaPrincipalNumeroUnico": obj.error
-            });
-        }
-    });
+    var numeroUnico = $('#pesquisaPrincipalNumeroUnico').data($.mask.dataName)();
+    var url = '';
+
+    if (window.location.pathname.match(/^\/portal\/?.*/)) {
+        url = window.location.origin + '/portal/processos/listarProcessos.asp?numeroUnico=' + numeroUnico;
+    } else {
+        url = window.location.origin + '/processos/listarProcessos.asp?numeroUnico=' + numeroUnico;
+    }
+
+    window.location.href = url;
 }
 
 function pesquisarProcessoPorClasseNumero() {
-    $.get('/util/pesquisaProcessoPorClasseNumero.asp', {
-        classe: $('.pesquisa-processo-classe .processo-classe').val(),
-        numero: $('#pesquisaPrincipalClasseNumero').val()
-    }).done(function(data) {
-        window.location.href = '//stf.jus.br/portal/processo/verProcessoAndamento.asp?incidente=' + data
-    }).fail(function(data) {
-        if (data.responseText) {
-            var obj = $.parseJSON(data.responseText);
-            var validator = $('#pesquisa-principal').validate();
-            validator.showErrors({
-              "pesquisaPrincipalClasseNumero": obj.error
-            });
-        }
-    });
-}
+    var classe = $('.pesquisa-processo-classe .processo-classe').val();
+    var numero = $('#pesquisaPrincipalClasseNumero').val();
+    var url = '';
 
-function pesquisarProcessoPorNumeroApenas() {
-    fazerPostListarProcesso('//stf.jus.br/portal/processo/listarProcesso.asp', 1, $('#pesquisaPrincipalClasseNumero').val());
-}
+    if (window.location.pathname.match(/^\/portal\/?.*/)) {
+        url = window.location.origin + '/portal/processos/listarProcessos.asp?classe=' + classe + '&numeroProcesso=' + numero;
+    } else {
+        url = window.location.origin + '/processos/listarProcessos.asp?classe=' + classe + '&numeroProcesso=' + numero;
+    }
 
-function fazerPostListarProcesso(action, dropmsgoption, value) {
-    $('<form action="' + action + '" method="POST" accept-charset="ISO-8859-1">' +
-    '<input type="hidden" name="dropmsgoption" value="' + dropmsgoption + '">' +
-    '<input type="hidden" name="partesAdvogadosRadio" value="1">' +
-    '<input type="hidden" name="numero" value="' + value + '">' +
-    '</form>').appendTo('body').submit();
+    window.location.href = url;
 }
 
 function pesquisarProcessoPorNomeDaParteOuAdvogado() {
-    //fazerPostListarProcesso('//stf.jus.br/portal/processo/listarProcessoParte.asp', 4, $('#pesquisaPrincipalParteAdvogado').val());
     var url = '';
     if (window.location.pathname.match(/^\/portal\/?.*/)) {
-        url = window.location.origin + '/portal/processos/listar.asp?termo=' + $('#pesquisaPrincipalParteAdvogado').val();
+       url = window.location.origin + '/portal/processos/listarPartes.asp?termo=' + $('#pesquisaPrincipalParteAdvogado').val();
     } else {
-        url = window.location.origin + '/processos/listar.asp?termo=' + $('#pesquisaPrincipalParteAdvogado').val();
+       url = window.location.origin + '/processos/listarPartes.asp?termo=' + $('#pesquisaPrincipalParteAdvogado').val();
     }
     window.location.href = url;
 }

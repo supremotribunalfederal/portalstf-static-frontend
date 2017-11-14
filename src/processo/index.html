@@ -41,24 +41,27 @@
                 <div class="card m-b-48">
                     <div class="card-titulo row m-0">
                       <div class="col-md-4">
-                        <div class="processo-titulo m-b-8"> ADI 100 &nbsp;<span class="badge bg-warning">Processo físico</span> </div>
+                        <div class="processo-titulo m-b-8">ADI 100 &nbsp;<span class="badge bg-warning">Processo físico</span>
+                          <input type="hidden" id="incidente" value="1491705" />
+                          <input type="hidden" id="classe-numero-processo" value="ADI 100" />
+                        </div>
                         <div class="processo-rotulo">Número único: 0007214-12.2007.1.00.0000</div>
                       </div>
                       <div class="col-md-8">
                         <div class="btn-group pull-right">
-                          <button type="button" class="btn btn-default btn-primary-spacing" aria-label="dje">
+                          <button type="button" class="btn btn-default btn-primary-spacing" aria-label="dje" id="btn-dje">
                             <span aria-hidden="true">Dje</span>
                           </button>
-                          <button type="button" class="btn btn-default btn-primary-spacing" aria-label="jurisprudencia">
+                          <button type="button" class="btn btn-default btn-primary-spacing" aria-label="jurisprudencia" id="btn-jurisprudencia">
                             <span aria-hidden="true">Jurisprudência</span>
                           </button>
-                          <button type="button" class="btn btn-default btn-primary-spacing" aria-label="pecas">
-                            <span class="glyphicon glyphicon-list" aria-hidden="true"> Peças</span>
+                          <button type="button" class="btn btn-default btn-primary-spacing" aria-label="pecas" id="btn-pecas">
+                            <span aria-hidden="true"> Peças</span>
                           </button>
-                          <button type="button" class="btn btn-default btn-primary-spacing" aria-label="push">
-                            <span class="glyphicon glyphicon-plus" aria-hidden="true"> Push</span>
+                          <button type="button" class="btn btn-default btn-primary-spacing" aria-label="push" id="btn-push">
+                            <span aria-hidden="true"> Push</span>
                           </button>
-                          <button type="button" class="btn btn-default btn-primary-spacing" aria-label="Imprimir">
+                          <button type="button" class="btn btn-default btn-primary-spacing" aria-label="Imprimir" id="btn-imprimir" onclick="print()">
                             <span class="glyphicon glyphicon-print" aria-hidden="true"></span>
                           </button>
                         </div>
@@ -95,7 +98,7 @@
                               RÉU(É)(S)
                             </div>
                             <div class="processo-link p-t-8">
-                              <a>Todas as partes</a>
+                              <a id="todas-partes" href="#">Todas as partes</a>
                             </div>
                           </div>
                           <div class="col-md-8">

@@ -1,7 +1,9 @@
 import style from '../../assets/scss/secoes/textos/textos.scss';
 import $ from 'jquery';
-
 import moment from 'moment';
+
+moment.locale("pt-BR");
+moment().format('LT');
 
 $("#texto-informacao-util-sim").click(function() {
     $("#texto-informacao-util-agradecimento").show();
