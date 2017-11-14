@@ -40,10 +40,11 @@
   },
   "dependencies": {
     "jquery": "^3.2.1",
-    "moment": "^2.18.1",
     "jquery-ui": "^1.12.1",
     "jquery-validation": "^1.17.0",
-    "urijs": "^1.18.11",
-    "jquery.maskedinput": "^1.4.1"
+    "jquery.maskedinput": "^1.4.1",
+    "moment": "^2.18.1",
+    "requirejs": "^2.3.5",
+    "urijs": "^1.18.11"
   }
 }

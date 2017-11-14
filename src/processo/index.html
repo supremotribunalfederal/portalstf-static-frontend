@@ -41,7 +41,7 @@
                 <div class="card m-b-48">
                     <div class="card-titulo row m-0">
                       <div class="col-md-4">
-                        <div class="processo-titulo m-b-8">ADI 100 &nbsp;<span class="badge bg-warning">Processo físico</span> 
+                        <div class="processo-titulo m-b-8">ADI 100 &nbsp;<span class="badge bg-warning">Processo físico</span>
                           <input type="hidden" id="incidente" value="1491705" />
                           <input type="hidden" id="classe-numero-processo" value="ADI 100" />
                         </div>
@@ -122,14 +122,16 @@
                             <div class="clearfix"></div>
                         </div>
                       </div>
-                      <ul class="nav nav-tabs pull-left col-md-12" role="tablist">
-                        <li role="presentation" class="active"><a data-toggle="tab" href="#informacoes">Informações gerais</a></li>
-                        <li role="presentation"><a data-toggle="tab" href="#partes" id="tabPartes"><i class="glyphicon glyphicon-user"></i> Partes</a></li>
-                        <li role="presentation"><a data-toggle="tab" href="#andamentos"><i class="glyphicon glyphicon-time"></i> Andamentos</a></li>
-                        <li role="presentation"><a data-toggle="tab" href="#deslocamento"><i class="glyphicon glyphicon-map-marker"></i> Deslocamento</a></li>
-                        <li role="presentation"><a data-toggle="tab" href="#peticoes"><i class="glyphicon glyphicon-file"></i> Petições</a></li>
-                        <li role="presentation"><a data-toggle="tab" href="#recursos"><i class="glyphicon glyphicon-file"></i> Recursos</a></li>
-                      </ul>
+                      <div class="col-md-12 row">
+                        <ul class="nav nav-tabs" role="tablist">
+                          <li role="presentation" class="active"><a data-toggle="tab" href="#informacoes">Informações gerais</a></li>
+                          <li role="presentation"><a data-toggle="tab" href="#partes"><i class="glyphicon glyphicon-user"></i> Partes</a></li>
+                          <li role="presentation"><a data-toggle="tab" href="#andamentos"><i class="glyphicon glyphicon-time"></i> Andamentos</a></li>
+                          <li role="presentation"><a data-toggle="tab" href="#deslocamento"><i class="glyphicon glyphicon-map-marker"></i> Deslocamento</a></li>
+                          <li role="presentation"><a data-toggle="tab" href="#peticoes"><i class="glyphicon glyphicon-file"></i> Petições</a></li>
+                          <li role="presentation"><a data-toggle="tab" href="#recursos"><i class="glyphicon glyphicon-file"></i> Recursos</a></li>
+                        </ul>
+                      </div>
                       <div class="tab-content col-md-12">
                         <%- include src/includes/processo-informacoes.html %>
                         <%- include src/includes/processo-partes.html %>
