@@ -9,31 +9,43 @@ import 'jquery-ui/themes/base/core.css';
 import 'jquery-ui/themes/base/theme.css';
 import 'jquery-ui/themes/base/datepicker.css';
 
-
 $(document).ready(function(){
     $.validator.addMethod('dataValida', function (value, element) {
         return this.optional(element) || moment(value,"DD/MM/YYYY").isValid();
     }, "Data inválida.");
+
+    $.validator.addMethod('dataInicialMenorDataFinal', function (value, element) {
+        var dataInicial = moment(value,"DD/MM/YYYY")
+        
+        var dataFinal = moment($('#data_final').val(),"DD/MM/YYYY");
+                
+        if (dataInicial > dataFinal){
+            return false;
+        }
+
+        return true;
+        
+    }, "Data inicial maior que a data final.");
 });
 
-$('#data-inicial').datepicker({
+$('#data_inicial').datepicker({
     dateFormat: "dd/mm/yy"
 });
-$('#data-final').datepicker({
+$('#data_final').datepicker({
     dateFormat: "dd/mm/yy"
 });
 
 $('#btn-datepicker-inicial').click(function() {
-    $('#data-inicial').datepicker('show');
+    $('#data_inicial').datepicker('show');
 });
 
 $('#btn-datepicker-final').click(function() {
-    $('#data-final').datepicker('show');
+    $('#data_final').datepicker('show');
 });
 
 $('#btn-add-inicial').click(function() {
-    $('#data-inicial').val('');
-    $('#data-inicial').focus();
+    $('#data_inicial').val('');
+    $('#data_inicial').focus();
 });
 
 $('#btn-add-final').click(function() {
@@ -49,8 +61,8 @@ $('#btn-add-final').click(function() {
         window.location.href = url.toString();
     }
     */
-    $('#data-final').val('');
-    $('#data-final').focus();
+    $('#data_final').val('');
+    $('#data_final').focus();
 });
 
 $('#form-pesquisa-noticias').submit(function(e){
@@ -62,7 +74,8 @@ $('#form-pesquisa-noticias').submit(function(e){
         wrapper: 'span',
         rules: {
             data_inicial: {
-                dataValida: true
+                dataValida: true,
+                dataInicialMenorDataFinal: true
             },
             data_final: {
                 dataValida: true
@@ -70,7 +83,8 @@ $('#form-pesquisa-noticias').submit(function(e){
         },
         messages: {
             data_inicial: {
-                dataValida: "Data inicial inválida."
+                dataValida: "Data inicial inválida.",
+                dataInicialMenorDataFinal: "Data inicial maior que a final."
             },
             data_final: {
                 dataValida: "Data final inválida."
@@ -79,9 +93,34 @@ $('#form-pesquisa-noticias').submit(function(e){
     });
 
     if ($('#form-pesquisa-noticias').valid()){
-        console.log('form valido.');
+        pesquisarNoticiasUsandoFiltro();
     }
 });
+
+function pesquisarNoticiasUsandoFiltro(){
+    var dataInicial = $('#data_inicial').datepicker('getDate');
+    var dataFinal = $('#data_final').datepicker('getDate');
+    var url = new URI(window.location.href);
+    url.removeQuery('dataDe');
+    url.removeQuery('dataA');
+    
+    if (dataInicial){
+        var dataInicialFormatada = moment(dataInicial).format("DD/MM/YYYY");
+        $('#data_inicial').datepicker('setDate');
+        url.removeQuery("dataDe");
+        url.addQuery("dataDe", dataInicialFormatada);
+    }
+
+    if (dataFinal){
+        var dataFinalFormatada = moment(dataFinal).format("DD/MM/YYYY");
+        $('#data_final').datepicker('setDate');
+        url.removeQuery("dataA");
+        url.addQuery("dataA", dataFinalFormatada);
+    }
+
+    url.removeQuery("paginaAtual");
+    window.location.href = url.toString(); 
+}
 /*
 $('#btnPesquisarNoticias').click(function(){
     var dataInicial = $('#data-inicial').datepicker('getDate');
