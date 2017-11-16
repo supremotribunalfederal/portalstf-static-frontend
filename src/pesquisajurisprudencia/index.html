@@ -55,7 +55,7 @@
               </ul>
               <hr/>
               <ul>
-                <a><li  style="font-size: 14px;">Aborto</li> </a>
+                <a><li>Aborto</li> </a>
               </ul>
 
               <a><i class="glyphicon glyphicon-plus" aria-label="ver-mais"></i> Ver mais 43 pesquisas realizadas</a>
@@ -244,27 +244,41 @@
      </div>
 
 
-     <div class="col-xs-12 col-sm-6 col-md-7 col-lg-8 row m-0 p-xs-0 p-sm-8 ">
-
-        <div class="card m-b-48" style="margin-top:35px;">
-
+     <div class="col-xs-12 col-sm-6 col-md-7 col-lg-8 row m-0 p-xs-0 p-sm-8">
+        <div class="card m-b-48" style="margin-top: 40px;">
+            
             <div class="card-conteudo row m-0 p-0">
-              <ul class="nav nav-tabs pull-left col-md-12" role="tablist">
-                <li role="presentation" class="active"><a data-toggle="tab" href="#acordaos">Acordaos</a></li>
-                <li role="presentation"><a data-toggle="tab" href="#repercussao">Repercussão Geral</a></li>
-                <li role="presentation"><a data-toggle="tab" href="#sumulasvinculantes">Súmulas Vinculantes</a></li>
-                <li role="presentation"><a data-toggle="tab" href="#sumulas">Súmulas</a></li>
-                <li role="presentation" class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mais <i class="	glyphicon glyphicon-triangle-bottom"></i></a>
-                    <div class="dropdown-menu">
-                      <ul>
-                      <li><a class="dropdown-item" href="#">option 1</a> </li>
-                      <li><a class="dropdown-item" href="#">option 2</a> </li>
-                      <li><a class="dropdown-item" href="#">option 3</a> </li>
-                      </ul>
-                    </div>
-                  </li>
-              </ul>
+              <nav>
+                <ul class="nav nav-tabs col-md-12" role="tablist">
+                  <li role="presentation" class="active"><a data-toggle="tab" href="#acordaos">Acórdãos</a></li>
+                  <li role="presentation"><a data-toggle="tab" href="#repercussao">Repercussão Geral</a></li>
+                  <li role="presentation"><a data-toggle="tab" href="#sumulasvinculantes">Súmulas Vinculantes</a></li>
+                  <li role="presentation"><a data-toggle="tab" href="#sumulas">Súmulas</a></li>
+                  <li role="presentation" class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mais <i class="	glyphicon glyphicon-triangle-bottom"></i></a>
+                      <div class="dropdown-menu">
+                        <ul>
+                        <li><a class="dropdown-item" href="#">option 1</a> </li>
+                        <li><a class="dropdown-item" href="#">option 2</a> </li>
+                        <li><a class="dropdown-item" href="#">option 3</a> </li>
+                        </ul>
+                      </div>
+                    </li>
+                </ul>
+          
+                <!--select do menu para mobile -->
+                <div class="col-md-12">
+                  <select>  
+                    <option selected="selected" value="acordaos" class="active"> <a href"#acordaos"> Acórdãos </a></option> 
+                    <option value="repercussao"><a href="#repercussao"> Repercussão Geral </a></option> 
+                    <option value="sumulas"> <a href="#sumulas"> Súmulas </a></option> 
+                    <option value="sumulas_vinculantes"> <a href="#sumulasvinculantes"> Súmulas Vinculantes </a></option>  
+                    <option value="..."> <a href="#"> option 1 </a></option> 
+                    <option value="..."> <a href="#"> option 2 </a></option> 
+                    <option value="..."> <a href="#"> option 3 </a></option> 
+                  </select>   
+                </div>
+              </nav>    
 
               <div class="tab-content col-md-12">
                 <%- include src/includes/pesquisa-acordaos.html %>
@@ -275,9 +289,9 @@
               <div class="tab-content col-md-12">
                   <a id="mais-resultados" class="btn btn-raised btn-fluid btn-default-bordered btn-upper p-l-16 p-r-16" target="_blank" href="">Carregar mais resultados</a>
               </div>
-            </div>
+            </div> <!--card-conteudo-->
         </div>
-      </div> <!--CONTEUDO -->
+      </div> <!--card-resultados-->
 
      </div>
 

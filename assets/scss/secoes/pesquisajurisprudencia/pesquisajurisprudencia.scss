@@ -11,8 +11,9 @@ ul .nav-tabs {
   .nav-tabs > li > a {
     border: none;
     color: $stfCinzaEscuro;
+    margin-right: 40px;
+    margin-left: 20px;
   }
-
   .nav-tabs > li.active > a, .nav-tabs > li > a:hover {
     border: none;
     color: $stfPreto;
@@ -24,9 +25,10 @@ ul .nav-tabs {
     content: "";
     background: $stfAzul;
     height: 2px;
-    position:absolute;
+    position: absolute;
     width: 100%;
-    left: 0px; bottom: -1px;
+    left: 0;
+    bottom: -1px;
     transition: all 250ms ease 0s;
     transform: scale(0);
   }
@@ -35,18 +37,23 @@ ul .nav-tabs {
     transform: scale(1);
   }
 
-  //.tab-nav > li > a::after {
-    // background: $stfAzulEscuro none repeat scroll 0% 0%;
-    // color: $stfBranco;
-    // 21527d
-  //}
-
   .tab-pane {
     padding: 0;
   }
 
   .tab-content {
     padding: 0 20px;
+  }
+
+  .dropdown-item{
+    display: inline-block; 
+    padding: 0 40px 0 8px;
+  }
+
+  //sumir select
+
+  nav select{
+    display: none;
   }
 
 // FILTROS 
@@ -82,4 +89,61 @@ a{
 
 .inputs_legislacao{
   float: right;
+}
+// conteudos resultado
+.conteudo-resultado{
+  margin: 10px; 
+  width: 97%;
+}
+h5{
+  font-weight: bold;
+}
+
+.card-block{
+  width: 95%;
+  padding: 2px;
+  margin: 15px;
+}
+
+.icons{
+  float: right;
+  margin: 5px;
+}
+.conteudo-pesquisado{
+  margin-top: 15px;
+  text-align: left
+}
+
+.informacao-completa{
+  margin-top: 20px;
+}
+.exibir-mais {
+  float: right;
+}
+
+.exibir-menos{
+  float: right;
+}
+
+// mobile
+
+@media only screen and (max-width: 360px) {
+  .nav-tabs > li > a {
+    margin-left: 5px;
+  }
+}
+// nav aparecer como select
+@media (max-width: 960px) {
+  nav ul{ 
+    display: none; 
+  }
+  nav select{ 
+    display: inline-block; 
+    height: 50px;
+    padding: 0 40px 0 8px;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 15px;
+    background-color: $stfCinzaClaro;
+  }
 }
