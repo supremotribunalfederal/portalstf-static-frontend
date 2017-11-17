@@ -44,7 +44,6 @@
     "jquery-validation": "^1.17.0",
     "jquery.maskedinput": "^1.4.1",
     "moment": "^2.18.1",
-    "requirejs": "^2.3.5",
     "urijs": "^1.18.11"
   }
 }
