@@ -33,6 +33,10 @@
       letter-spacing: -1.25px;
       word-wrap: break-word;
 
+      &.principal {
+        font-size: 1.6rem;
+      }
+
       &:visited {
         color: $stfAzulEscuro;
         text-decoration: none;
