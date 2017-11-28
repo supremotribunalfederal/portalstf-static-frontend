@@ -14,11 +14,12 @@ ul .nav-tabs {
     margin-right: 40px;
     margin-left: 20px;
   }
+ 
   .nav-tabs > li.active > a, .nav-tabs > li > a:hover {
     border: none;
     color: $stfPreto;
     background: transparent;
-    font-weight: bold;
+    font-weight: bold;  
   }
 
   .nav-tabs > li > a::after {
@@ -44,14 +45,20 @@ ul .nav-tabs {
   .tab-content {
     padding: 0 20px;
   }
-
-  .dropdown-item{
+  .dropdown-menu > ul > li > a{
+    color: $stfCinzaEscuro;
+    border: none;
     display: inline-block; 
     padding: 0 40px 0 8px;
   }
-
+  .dropdown-menu > ul > li.active > a, .dropdown-menu > ul > li > a:hover {
+    border: none;
+    color: $stfPreto;
+    background: transparent;
+    text-decoration: none;
+    font-weight: bold;  
+  }
   //sumir select
-
   nav select{
     display: none;
   }
@@ -66,27 +73,37 @@ ul .nav-tabs {
   font-size: 14px;
   cursor:pointer; 
 }
+.span{
+  display: inline-block;
+  
+}
 
 .glyphicon-remove-sign{
-  color: rgb(156, 146, 146)
+  color: rgb(156, 146, 146);
+  margin-left: 1.5px;
 }
 #apagar_filtro{
   cursor:pointer; 
   text-align: center;
   margin-top: 15px;
 }
+a{
+  cursor: pointer;
+}
 li{
   font-size: 14px;
 }
-a{
+
+li > a:hover{
+  color: $stfAmarelo;
   cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .pesquisa_legislacao{
   font-size: 11pt;
-  
 }
-
 .inputs_legislacao{
   float: right;
 }
@@ -98,31 +115,38 @@ a{
 h5{
   font-weight: bold;
 }
-
 .card-block{
   width: 95%;
   padding: 2px;
-  margin: 15px;
+  
 }
 
 .icons{
   float: right;
   margin: 5px;
 }
+.mais-resultados{
+  text-align: center;
+  margin-bottom: 15px;
+}
 .conteudo-pesquisado{
   margin-top: 15px;
   text-align: left
 }
-
 .informacao-completa{
-  margin-top: 20px;
+  margin-top: 15px;
 }
-.exibir-mais {
+.row{
+  margin: 15px;
+}
+.exibir-mais, .exibir-menos {
   float: right;
 }
+.remove{
+  display: none;
+  color: $stfAmarelo;
+  text-decoration: inherit;
 
-.exibir-menos{
-  float: right;
 }
 
 // mobile
