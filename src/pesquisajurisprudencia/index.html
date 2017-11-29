@@ -13,25 +13,25 @@
     <%- include src/includes/pesquisa-lista.html %>
     <section id="conteudo" class="container-fluid m-0 p-0">
           <!--cards lateral esquerda-->
-     <div class="col-xs-12 col-sm-3 col-md-5 col-lg-3 p-16 p-sm-8 p-xs-0 m-0">
+     <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 p-16 p-sm-12 p-xs-0 m-0">
         <div class="card m-b-24 m-t-24">
             <div class="card-titulo"><i class="glyphicon glyphicon-search"></i> Filtros aplicados</div>
             <div class="card-conteudo" id="filtro">
               <div class="col-md-12" id="filtros-aplicados">
                   <span class="badge">
-                   aborto; <i class="glyphicon glyphicon-remove-sign"></i>
+                   aborto; <i class="glyphicon glyphicon-remove-sign remover"></i>
                   </span> 
                   <span class="badge" >Plenário 
-                    <i class="glyphicon glyphicon-remove-sign"></i>
+                    <i class="glyphicon glyphicon-remove-sign remover"></i>
                   </span>
                   <span class="badge"  >Direito da mulher...;
-                      <i class="glyphicon glyphicon-remove-sign"></i>
+                      <i class="glyphicon glyphicon-remove-sign remover"></i>
                   </span> 
                   <span class="badge">Gilmar Me...;
-                      <i class="glyphicon glyphicon-remove-sign"></i>
+                      <i class="glyphicon glyphicon-remove-sign remover"></i>
                   </span>
                   <span class="badge">Texto...;
-                      <i class="glyphicon glyphicon-remove-sign"></i>
+                      <i class="glyphicon glyphicon-remove-sign remover"></i>
                   </span>
               </div>
               <div class="row m-0 m-t-16 p-0">
@@ -67,8 +67,8 @@
               <strong>Palavras-chave (separe por ;)</strong>
               <div class="campo-container m-t-16">
                   <form id="filtro-palavra-chave">
-                    <p><input id="palavraChave" type="text" class="col-md-9 col-xs-9 palavraPesquisa" placeholder="Aborto; Direito da mulher"/>
-                      <button id="btnAddFiltro" class="btn btn-default btn-icone col-md-3 col-xs-3" form="filtro-palavra-chave"  >
+                    <p><input id="palavraChave" type="text" class="col-md-9 col-xs-9 palavraPesquisa" placeholder="Aborto; Direito da mulher" />
+                      <button id="btnPalavraChave" class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="palavraChave" > 
                           <i class="glyphicon glyphicon-plus" aria-label="mais"></i>
                       </button>
                     </p>
@@ -81,7 +81,7 @@
               <div class="campo-container m-t-16">
                   <form id="filtro-numero-processo">
                     <p><input id="inputProcesso" class="col-md-9 col-xs-9 palavraPesquisa" placeholder="Digite o número" type="text" />
-                      <button id="btnProcesso" form="pesquisa-numero-processo" class="btn btn-default btn-icone col-md-3 col-xs-3">
+                      <button id="btnProcesso" class="btn btn-default btn-icone col-md-3 col-xs-3  btnFiltro" data-add-filtro="inputProcesso">
                           <i class="glyphicon glyphicon-plus"></i>
                       </button>
                     </p>
@@ -92,6 +92,26 @@
 
               <strong>Relator</strong>
               <div class="campo-container m-t-16">
+                <div class="campo-container m-t-16">
+                    <form id="filtro-relator">
+                        <p><input  class="col-md-9 col-xs-9 palavraPesquisa" placeholder="Digite o nome do relator" list="suggestionsRelator" type="text" id="inputRelator" />
+                              <datalist id="suggestionsRelator">
+                                <option value="Celso de Mello"></option>
+                                <option value="Gilmar Mendes"></option>
+                                <option value="Dias Tofolli"></option>
+                                <option value="Marco Aurélio"></option>
+                                <option value="Ricardo Lewandowski"></option>
+                                <option value="Luiz Fux"></option>
+                                <option value="Rosa Weber"></option>
+                                <option value="Edson Fachin"></option>
+                                <option value="Roberto Barroso"></option>
+                              </datalist>
+                          <button id="btnRelator" class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="inputRelator">
+                              <i class="glyphicon glyphicon-plus"></i>
+                          </button>
+                        </p>
+                    </form>
+                  </div> <br> <br>
                 <ul >
                     <li class="item_pesquisa"><a><a>Gilmar Mendes </a><i class="glyphicon glyphicon-remove-sign remove"></i></li> 
                     <li class="item_pesquisa"><a><a>Rosa Weber </a><i class="glyphicon glyphicon-remove-sign remove"></i></li>
@@ -106,13 +126,13 @@
               <strong>Data</strong>
               <div class="campo-container m-t-16">
                 <form id="filtro-data">
-                   <p> <input type="text" id="data-inicio" class="col-md-9 col-xs-9" placeholder="De"  onfocus="(this.type='date')"/>
-                      <button form="filtro-data" class="btn btn-default btn-icone col-md-3 col-xs-3" id="btnDataInicio">
+                   <p> <input type="text" id="data-inicio" class="col-md-9 col-xs-9 palavraPesquisa" placeholder="De"  onfocus="(this.type='date')" />
+                      <button id="btn-data-inicio"  class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="data-inicio">
                           <i class="glyphicon glyphicon-plus"></i>
                       </button> 
                      <br/> <br/>  
-                    <p><input  type="text" id="data-final" class="col-md-9 col-xs-9" placeholder="Até" onfocus="(this.type='date')"/>
-                      <button form="filtro-data" class="btn btn-default btn-icone col-md-3 col-xs-3" id="btnDataFinal">
+                    <p><input  type="text" id="data-final" class="col-md-9 col-xs-9  palavraPesquisa" placeholder="Até" onfocus="(this.type='date')" />
+                      <button id="btn-data-final" class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="data-final">
                           <i class="glyphicon glyphicon-plus"></i>
                       </button>
                     </p>
@@ -125,8 +145,8 @@
               <strong>Tema</strong>
                 <div class="campo-container m-t-16">  
                   <form id=filtro-tema>
-                    <p><input class="col-md-9 col-xs-9" placeholder="Digite o tema" type="text" id="inputTema"/>
-                      <button form="pesquisa-tema" class="btn btn-default btn-icone col-md-3 col-xs-3" id="btnTema">
+                    <p><input  id="inputTema" class="col-md-9 col-xs-9  palavraPesquisa" placeholder="Digite o tema" type="text"  />
+                      <button id="btnTema" class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="inputTema">
                           <i class="glyphicon glyphicon-plus"></i>
                       </button>
                     </p>
@@ -136,13 +156,15 @@
               <hr/>
 
               <strong>Tese</strong>
-                <form id=filtro-tese>
-                    <p><input class="col-md-9 col-xs-9" placeholder="Digite a tese" type="text" id="inputTese" />
-                      <button class="btn btn-default btn-icone col-md-3 col-xs-3" id="btnTese">
-                          <i class="glyphicon glyphicon-plus"></i>
-                      </button>
-                    </p>
-                </form>
+                <div class="campo-container m-t-16">
+                  <form id=filtro-tese>
+                      <p><input class="col-md-9 col-xs-9 palavraPesquisa" placeholder="Digite a tese" type="text" id="inputTese" />
+                        <button id="btnTese" class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro"  data-add-filtro="inputTese">
+                            <i class="glyphicon glyphicon-plus"></i>
+                        </button>
+                      </p>
+                  </form>
+                </div>  
               <br/> <br/>
               <hr/>
 
@@ -154,30 +176,41 @@
                     <li class="item_pesquisa"><a>Outros processos </a><i class="glyphicon glyphicon-remove-sign remove"></i></li>
                   </ul>
                 </div>
-              <br/> <br/>
+              <br/>
               <hr/>
 
               <strong>Órgão Julgador</strong>
-              <div class="campo-container m-t-16">
+                <div class="campo-container m-t-16">
                   <ul>
                     <li class="item_pesquisa"><a>Plenário</a><i class="glyphicon glyphicon-remove-sign remove"></i></li>
                     <li class="item_pesquisa"><a>Plenário Eletrônico</a><i class="glyphicon glyphicon-remove-sign remove"></i></li>
                     <li class="item_pesquisa"><a>1ª Turma </a><i class="glyphicon glyphicon-remove-sign remove"></i></li>
                     <li class="item_pesquisa"><a>2ª Turma </a><i class="glyphicon glyphicon-remove-sign remove"></i></li>
                   </ul>
-              </div>
-              <br/> <br/>
+                </div>
+              <br/>
               <hr/>
 
               <strong>Somente no texto da ementa</strong>
-              <form id="filtro-texto-ementa">
-                  <p><input  class="col-md-9 col-xs-9" placeholder="Digite o número" type="text" id="inputEmenta" />
-                    <button form="pesquisa-numero-processo" class="btn btn-default btn-icone col-md-3 col-xs-3" id="btnEmenta">
-                        <i class="glyphicon glyphicon-plus"></i>
-                    </button>
-                  </p>
-              </form>
-                <br/> <br/>
+              <div class="campo-container m-t-16">
+                <form id="filtro-texto-ementa">
+                    <p><input  class="col-md-9 col-xs-9 palavraPesquisa" placeholder="Informe o texto" list="suggestionsEmenta" type="text" id="inputEmenta" />
+                          <datalist id="suggestionsEmenta">
+                            <option value="opção 1"></option>
+                            <option value="opção 2"></option>
+                            <option value="opção 3"></option>
+                            <option value="palavra 1"></option>
+                            <option value="palavra 2"></option>
+                            <option value="exemplo 1"></option>
+                            <option value="exemplo 2"></option>
+                          </datalist>
+                      <button id="btnEmenta" class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="inputEmenta">
+                          <i class="glyphicon glyphicon-plus"></i>
+                      </button>
+                    </p>
+                </form>
+              </div>
+                <br/> </br>
               <hr/>
 
               <strong>Legislação</strong>
@@ -192,8 +225,17 @@
 
                 <div class="campo-container m-t-16">
                   <form id="filtro-legislacao">
-                      <p><input class="col-md-9 col-xs-9" placeholder="Digite o número da legislação" type="text" id="inputLegislacao" />
-                        <button form="pesquisa-numero-legislacao" class="btn btn-default btn-icone col-md-3 col-xs-3" id="btnLegislacao">
+                      <p><input type="text" id="num_legislacao" class="col-md-9 col-xs-9 palavraPesquisa" list="suggestionsLegislacao" placeholder="Digite o número da legislação" />
+                          <datalist id="suggestionsLegislacao">
+                              <option value="opção 1"></option>
+                              <option value="opção 2"></option>
+                              <option value="opção 3"></option>
+                              <option value="palavra 1"></option>
+                              <option value="palavra 2"></option>
+                              <option value="exemplo 1"></option>
+                              <option value="exemplo 2"></option>
+                          </datalist>
+                        <button id="btnLegislacao" class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="num_legislacao">
                             <i class="glyphicon glyphicon-plus"></i>
                         </button>
                       </p>
@@ -203,37 +245,47 @@
                     <form class="legislacao">
                       <label class="pesquisa_legislacao">Artigo</label>
                       <div class="inputs_legislacao">
-                        <input class="col-md-6 col-xs-3" placeholder="Art." type="text" id="txtArtigo"/>
-                       <button  class="btn btn-default btn-icone col-md-6 col-xs-3" id="btnArtigo">
-                            <i class="glyphicon glyphicon-plus"></i>
-                        </button>
-                      </div> <br> <br>
-
-                      <label class="pesquisa_legislacao">Parágrafo</label>
-                      <div class="inputs_legislacao">
-                        <input class="col-md-6 col-xs-3" placeholder="Par." type="text" id="txtParagrafo"/>
-                       <button form="pesquisa-paragrafo" class="btn btn-default btn-icone col-md-6 col-xs-3" id="btnParagrafo">
-                            <i class="glyphicon glyphicon-plus"></i>
-                        </button>
-                      </div><br> <br>
-
-                      <label class="pesquisa_legislacao">Inciso</label>
-                      <div class="inputs_legislacao">
-                        <input class="col-md-6 col-xs-3" placeholder="Inc." type="text" id="txtInciso"/>
-                       <button form="pesquisa-inciso" class="btn btn-default btn-icone col-md-6 col-xs-3" id="btnInciso">
-                            <i class="glyphicon glyphicon-plus"></i>
-                        </button>
-                      </div><br> <br>
-
-                      <label class="pesquisa_legislacao">Letra</label>
-                      <div class="inputs_legislacao">
-                        <input class="col-md-6 col-xs-3" placeholder="Let." type="text" id="txtLetra"/>
-                       <button class="btn btn-default btn-icone col-md-6 col-xs-3" id="btnLetra">
+                        <input class="col-md-6 col-xs-5 palavraPesquisa" placeholder="Art." type="text" id="txtArtigo" />
+                       <button  class="btn btn-default btn-icone col-md-6 col-xs-3 btnFiltro" id="btnArtigo"  data-add-filtro="txtArtigo">
                             <i class="glyphicon glyphicon-plus"></i>
                         </button>
                       </div>
                     </form>
-                </div>
+                </div>      
+                           <br> <br>
+                <div class="campo-container m-t-16">
+                  <form >  
+                      <label class="pesquisa_legislacao">Parágrafo</label>
+                      <div class="inputs_legislacao">
+                        <input class="col-md-6 col-xs-5 palavraPesquisa" placeholder="Par." type="text" id="txtParagrafo" />
+                       <button id="btnParagrafo" class="btn btn-default btn-icone col-md-6 col-xs-3 btnFiltro" data-add-filtro="txtParagrafo">
+                            <i class="glyphicon glyphicon-plus"></i>
+                        </button>
+                      </div><br> <br>
+                  </form>
+                </div>     
+                <div class="campo-container m-t-16">
+                    <form class="legislacao">  
+                      <label class="pesquisa_legislacao">Inciso</label>
+                      <div class="inputs_legislacao">
+                        <input class="col-md-6 col-xs-5 palavraPesquisa" placeholder="Inc." type="text" id="txtInciso" />
+                       <button id="btnInciso" class="btn btn-default btn-icone col-md-6 col-xs-3 btnFiltro" data-add-filtro="txtInciso">
+                            <i class="glyphicon glyphicon-plus"></i>
+                        </button>
+                      </div>
+                  </form>
+                </div>   <br> <br>
+                <div class="campo-container m-t-16">
+                    <form class="legislacao">  
+                      <label class="pesquisa_legislacao">Letra</label>
+                      <div class="inputs_legislacao">
+                        <input class="col-md-6 col-xs-5 palavraPesquisa" placeholder="Let." type="text" id="txtLetra" />
+                       <button id="btnLetra" class="btn btn-default btn-icone col-md-6 col-xs-3 btnFiltro" data-add-filtro="txtLetra">
+                            <i class="glyphicon glyphicon-plus"></i>
+                        </button>
+                      </div>
+                  </form>
+                </div> <br /> <br />
           </div>   <!--card conteudo-->
         </div>     <!--fecha card -->
 

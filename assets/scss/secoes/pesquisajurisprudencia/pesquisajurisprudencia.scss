@@ -19,7 +19,6 @@ ul .nav-tabs {
     border: none;
     color: $stfPreto;
     background: transparent;
-    font-weight: bold;  
   }
 
   .nav-tabs > li > a::after {
@@ -52,11 +51,11 @@ ul .nav-tabs {
     padding: 0 40px 0 8px;
   }
   .dropdown-menu > ul > li.active > a, .dropdown-menu > ul > li > a:hover {
+
+    text-decoration: none; 
     border: none;
     color: $stfPreto;
     background: transparent;
-    text-decoration: none;
-    font-weight: bold;  
   }
   //sumir select
   nav select{
@@ -75,11 +74,48 @@ ul .nav-tabs {
 }
 .span{
   display: inline-block;
-  
+}
+//cores span
+.palavraChave{
+  background-color: #caf3f3;
+}
+.processo{
+  background-color: $stfVermelhoClaro;
+}
+.dataInicio{
+  background-color: $stfAmareloClaro;
+}
+.dataFim{
+  background-color: $stfVerdeClaro;
+}
+.tema{
+  background-color: $stfCinzaClaro;
+}
+.tese{
+  background-color: #af9ad8;
+}
+.txtEmenta{
+  background-color: #f8b6cf;
+}
+.leg{
+  background-color: #eec780;
+}
+.artigo{
+  background-color: #82f8fc;
+}
+.paragrafo{
+  background-color: #eee99eec;
+}
+.inciso{
+  background-color: #aaf1e2e8;
+}
+.letra{
+  background-color: #b2ebb3f5;
 }
 
 .glyphicon-remove-sign{
-  color: rgb(156, 146, 146);
+  color: rgb(0, 0, 0);
+  opacity: 0.5;
   margin-left: 1.5px;
 }
 #apagar_filtro{
@@ -98,15 +134,19 @@ li > a:hover{
   color: $stfAmarelo;
   cursor: pointer;
   text-decoration: none;
-  font-weight: bold;
+  
 }
 
 .pesquisa_legislacao{
   font-size: 11pt;
+  float: left;
+  padding: 5px;
 }
 .inputs_legislacao{
   float: right;
+  margin-bottom: 5px;
 }
+
 // conteudos resultado
 .conteudo-resultado{
   margin: 10px; 
@@ -155,6 +195,12 @@ h5{
   .nav-tabs > li > a {
     margin-left: 5px;
   }
+  .inputs_legislacao {
+    float: right;
+    margin-left: 140px;
+    position: absolute;
+    
+  }
 }
 // nav aparecer como select
 @media (max-width: 960px) {
@@ -169,5 +215,11 @@ h5{
     width: 100%;
     margin-bottom: 15px;
     background-color: $stfCinzaClaro;
+  }
+  .inputs_legislacao {
+    float: right;
+    margin-left: 160px;
+    position: absolute;
+    
   }
 }
