@@ -52,21 +52,26 @@ $(function(){
         e.preventDefault();
 
         var idDoCampo = $(this).data('add-filtro');
+        var classe = $(this).data('classe-campo');
         var valorFiltro = $('#'+idDoCampo).val();
-    
+        var span = document.createElement("span");
+        var icon = document.createElement("i");
+        var text = document.createElement("text");
+      
+        //criando span e conteudo dentro do span
+        span.appendChild(text);
+        text.textContent = valorFiltro;
+        span.appendChild(icon);
+        span.classList.add(classe, "badge");
+        $(icon).addClass('glyphicon glyphicon-remove-sign');
+        console.log(span);
+        
+        // efetua ação apenas se houver conteudo no input
         if($('#'+idDoCampo).val().length != 0){
-            var span = document.createElement("span");
-            var icon = document.createElement("i");
-            $(icon).addClass('glyphicon glyphicon-remove-sign');
-            //criando span e conteudo dentro dele
-            span.textContent = valorFiltro;
-            span.appendChild(icon);
-            span.classList.add("badge");
-            
             // Adicionando span na div
             divFiltros.appendChild(span);  
             //limpar input
-            $('#'+idDoCampo).val("");  
+            $('#'+idDoCampo).val("");    
         } 
     });
 });

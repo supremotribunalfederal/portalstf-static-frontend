@@ -18,20 +18,8 @@
             <div class="card-titulo"><i class="glyphicon glyphicon-search"></i> Filtros aplicados</div>
             <div class="card-conteudo" id="filtro">
               <div class="col-md-12" id="filtros-aplicados">
-                  <span class="badge">
-                   aborto; <i class="glyphicon glyphicon-remove-sign remover"></i>
-                  </span> 
-                  <span class="badge" >Plenário 
+                  <span class="badge" > <text>Exemplo</text> 
                     <i class="glyphicon glyphicon-remove-sign remover"></i>
-                  </span>
-                  <span class="badge"  >Direito da mulher...;
-                      <i class="glyphicon glyphicon-remove-sign remover"></i>
-                  </span> 
-                  <span class="badge">Gilmar Me...;
-                      <i class="glyphicon glyphicon-remove-sign remover"></i>
-                  </span>
-                  <span class="badge">Texto...;
-                      <i class="glyphicon glyphicon-remove-sign remover"></i>
                   </span>
               </div>
               <div class="row m-0 m-t-16 p-0">
@@ -55,7 +43,32 @@
                 <li class="item_pesquisa"><a>Aborto</li> </a>
               </ul>
 
-              <a><i class="glyphicon glyphicon-plus" aria-label="ver-mais"></i> Ver mais 43 pesquisas realizadas</a>
+              <a data-toggle="collapse" href="#verMais" aria-expanded="false" aria-controls="verMais">
+                <i class="glyphicon glyphicon-plus" aria-label="ver-mais"></i> Ver mais 43 pesquisas realizadas
+              </a>
+              <div class="collapse ver-mais-pesquisas" id="verMais"> 
+                  <div class="card ver-mais">
+                     <ul>
+                        <li>lista</li>
+                        <li>lista</li>
+                        <li>lista</li>
+                        <li>lista</li>
+                        <li>lista</li>
+                        <li>lista</li>
+                        <li>lista</li>
+                        <li>lista</li>
+                        <li>lista</li>
+                        <li>lista</li>
+                        <li>lista</li>
+                        <li>lista</li>
+                        <li>lista</li>
+                        <li>lista</li>
+                        <li>lista</li>
+                     </ul>
+                  </div>
+
+              </div>
+              
 
           </div>
         </div>     <!--fecha card -->
@@ -67,8 +80,8 @@
               <strong>Palavras-chave (separe por ;)</strong>
               <div class="campo-container m-t-16">
                   <form id="filtro-palavra-chave">
-                    <p><input id="palavraChave" type="text" class="col-md-9 col-xs-9 palavraPesquisa" placeholder="Aborto; Direito da mulher" />
-                      <button id="btnPalavraChave" class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="palavraChave" > 
+                    <p><input id="palavraChave" type="text" class="col-md-9 col-xs-9 palavraPesquisa" placeholder="Aborto; Direito da mulher" data-nome-filtro="Palvra Chave"/>
+                      <button id="btnPalavraChave" class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="palavraChave" data-classe-campo="palavraChave" > 
                           <i class="glyphicon glyphicon-plus" aria-label="mais"></i>
                       </button>
                     </p>
@@ -81,7 +94,7 @@
               <div class="campo-container m-t-16">
                   <form id="filtro-numero-processo">
                     <p><input id="inputProcesso" class="col-md-9 col-xs-9 palavraPesquisa" placeholder="Digite o número" type="text" />
-                      <button id="btnProcesso" class="btn btn-default btn-icone col-md-3 col-xs-3  btnFiltro" data-add-filtro="inputProcesso">
+                      <button id="btnProcesso" class="btn btn-default btn-icone col-md-3 col-xs-3  btnFiltro" data-add-filtro="inputProcesso" data-classe-campo="processo">
                           <i class="glyphicon glyphicon-plus"></i>
                       </button>
                     </p>
@@ -106,7 +119,7 @@
                                 <option value="Edson Fachin"></option>
                                 <option value="Roberto Barroso"></option>
                               </datalist>
-                          <button id="btnRelator" class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="inputRelator">
+                          <button id="btnRelator" class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="inputRelator" data-classe-campo="relator">
                               <i class="glyphicon glyphicon-plus"></i>
                           </button>
                         </p>
@@ -118,7 +131,31 @@
                     <li class="item_pesquisa"><a><a>Edson Fachin </a><i class="glyphicon glyphicon-remove-sign remove"></i></li>
                 </ul>
 
-                <a><i class="glyphicon glyphicon-plus" aria-label="ver-mais"></i> Ver mais </a>
+                <a data-toggle="collapse" href="#verMaisRelator" aria-expanded="false" aria-controls="verMaisRelator">
+                  <i class="glyphicon glyphicon-plus" aria-label="ver-mais"></i> Ver mais 
+                </a>
+                <div class="collapse ver-mais-pesquisas" id="verMaisRelator"> 
+                    <div class="card">
+                       <ul>
+                          <li>lista</li>
+                          <li>lista</li>
+                          <li>lista</li>
+                          <li>lista</li>
+                          <li>lista</li>
+                          <li>lista</li>
+                          <li>lista</li>
+                          <li>lista</li>
+                          <li>lista</li>
+                          <li>lista</li>
+                          <li>lista</li>
+                          <li>lista</li>
+                          <li>lista</li>
+                          <li>lista</li>
+                          <li>lista</li>
+                       </ul>
+                    </div>
+                </div>
+
               </div>
                 <br/> <br/>
               <hr/>
@@ -127,12 +164,18 @@
               <div class="campo-container m-t-16">
                 <form id="filtro-data">
                    <p> <input type="text" id="data-inicio" class="col-md-9 col-xs-9 palavraPesquisa" placeholder="De"  onfocus="(this.type='date')" />
-                      <button id="btn-data-inicio"  class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="data-inicio">
+                      <button id="btn-data-inicio"  class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="data-inicio" data-classe-campo="dataInicio">
                           <i class="glyphicon glyphicon-plus"></i>
                       </button> 
                      <br/> <br/>  
                     <p><input  type="text" id="data-final" class="col-md-9 col-xs-9  palavraPesquisa" placeholder="Até" onfocus="(this.type='date')" />
-                      <button id="btn-data-final" class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="data-final">
+                      <button id="btn-data-final" class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="data-final" data-classe-campo="dataFim">
+                          <i class="glyphicon glyphicon-plus"></i>
+                      </button>
+                    </p> <br> <br> <br />
+                    <p>
+                      <input  type="date" id="data-teste" class="col-md-9 col-xs-9  palavraPesquisa" placeholder="Até" />
+                      <button id="btn-data-teste" class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="data-teste" data-classe-campo="dataFim">
                           <i class="glyphicon glyphicon-plus"></i>
                       </button>
                     </p>
@@ -146,7 +189,7 @@
                 <div class="campo-container m-t-16">  
                   <form id=filtro-tema>
                     <p><input  id="inputTema" class="col-md-9 col-xs-9  palavraPesquisa" placeholder="Digite o tema" type="text"  />
-                      <button id="btnTema" class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="inputTema">
+                      <button id="btnTema" class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="inputTema" data-classe-campo="tema">
                           <i class="glyphicon glyphicon-plus"></i>
                       </button>
                     </p>
@@ -159,7 +202,7 @@
                 <div class="campo-container m-t-16">
                   <form id=filtro-tese>
                       <p><input class="col-md-9 col-xs-9 palavraPesquisa" placeholder="Digite a tese" type="text" id="inputTese" />
-                        <button id="btnTese" class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro"  data-add-filtro="inputTese">
+                        <button id="btnTese" class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro"  data-add-filtro="inputTese" data-classe-campo="tese">
                             <i class="glyphicon glyphicon-plus"></i>
                         </button>
                       </p>
@@ -196,7 +239,6 @@
                 <form id="filtro-texto-ementa">
                     <p><input  class="col-md-9 col-xs-9 palavraPesquisa" placeholder="Informe o texto" list="suggestionsEmenta" type="text" id="inputEmenta" />
                           <datalist id="suggestionsEmenta">
-                            <option value="opção 1"></option>
                             <option value="opção 2"></option>
                             <option value="opção 3"></option>
                             <option value="palavra 1"></option>
@@ -204,7 +246,7 @@
                             <option value="exemplo 1"></option>
                             <option value="exemplo 2"></option>
                           </datalist>
-                      <button id="btnEmenta" class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="inputEmenta">
+                      <button id="btnEmenta" class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="inputEmenta" data-classe-campo="ementa">
                           <i class="glyphicon glyphicon-plus"></i>
                       </button>
                     </p>
@@ -220,7 +262,30 @@
                       <li class="item_pesquisa"><a>Acento Regimental (ASR)</a><i class="glyphicon glyphicon-remove-sign remove"></i></li>
                       <li class="item_pesquisa"><a>ATO (ATO)</a><i class="glyphicon glyphicon-remove-sign remove"></i></li>
                   </ul> <br>
-                   <a><i class="glyphicon glyphicon-plus" aria-label="ver-mais"></i> Ver mais </a>
+                  <a data-toggle="collapse" href="#verMaisLegislacao" aria-expanded="false" aria-controls="verMaisLegislacao">
+                     <i class="glyphicon glyphicon-plus" aria-label="ver-mais"></i> Ver mais 
+                  </a>
+                  <div class="collapse ver-mais-pesquisas" id="verMaisLegislacao"> 
+                      <div class="card">
+                         <ul>
+                            <li>lista</li>
+                            <li>lista</li>
+                            <li>lista</li>
+                            <li>lista</li>
+                            <li>lista</li>
+                            <li>lista</li>
+                            <li>lista</li>
+                            <li>lista</li>
+                            <li>lista</li>
+                            <li>lista</li>
+                            <li>lista</li>
+                            <li>lista</li>
+                            <li>lista</li>
+                            <li>lista</li>
+                            <li>lista</li>
+                         </ul>
+                      </div>
+                  </div>
                 </div>  <br>
 
                 <div class="campo-container m-t-16">
@@ -235,7 +300,7 @@
                               <option value="exemplo 1"></option>
                               <option value="exemplo 2"></option>
                           </datalist>
-                        <button id="btnLegislacao" class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="num_legislacao">
+                        <button id="btnLegislacao" class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="num_legislacao" data-classe-campo="leg">
                             <i class="glyphicon glyphicon-plus"></i>
                         </button>
                       </p>
@@ -246,7 +311,7 @@
                       <label class="pesquisa_legislacao">Artigo</label>
                       <div class="inputs_legislacao">
                         <input class="col-md-6 col-xs-5 palavraPesquisa" placeholder="Art." type="text" id="txtArtigo" />
-                       <button  class="btn btn-default btn-icone col-md-6 col-xs-3 btnFiltro" id="btnArtigo"  data-add-filtro="txtArtigo">
+                       <button  class="btn btn-default btn-icone col-md-6 col-xs-3 btnFiltro" id="btnArtigo"  data-add-filtro="txtArtigo" data-classe-campo="artigo">
                             <i class="glyphicon glyphicon-plus"></i>
                         </button>
                       </div>
@@ -258,7 +323,7 @@
                       <label class="pesquisa_legislacao">Parágrafo</label>
                       <div class="inputs_legislacao">
                         <input class="col-md-6 col-xs-5 palavraPesquisa" placeholder="Par." type="text" id="txtParagrafo" />
-                       <button id="btnParagrafo" class="btn btn-default btn-icone col-md-6 col-xs-3 btnFiltro" data-add-filtro="txtParagrafo">
+                       <button id="btnParagrafo" class="btn btn-default btn-icone col-md-6 col-xs-3 btnFiltro" data-add-filtro="txtParagrafo" data-classe-campo="paragrafo">
                             <i class="glyphicon glyphicon-plus"></i>
                         </button>
                       </div><br> <br>
@@ -269,7 +334,7 @@
                       <label class="pesquisa_legislacao">Inciso</label>
                       <div class="inputs_legislacao">
                         <input class="col-md-6 col-xs-5 palavraPesquisa" placeholder="Inc." type="text" id="txtInciso" />
-                       <button id="btnInciso" class="btn btn-default btn-icone col-md-6 col-xs-3 btnFiltro" data-add-filtro="txtInciso">
+                       <button id="btnInciso" class="btn btn-default btn-icone col-md-6 col-xs-3 btnFiltro" data-add-filtro="txtInciso" data-classe-campo="inciso">
                             <i class="glyphicon glyphicon-plus"></i>
                         </button>
                       </div>
@@ -280,7 +345,7 @@
                       <label class="pesquisa_legislacao">Letra</label>
                       <div class="inputs_legislacao">
                         <input class="col-md-6 col-xs-5 palavraPesquisa" placeholder="Let." type="text" id="txtLetra" />
-                       <button id="btnLetra" class="btn btn-default btn-icone col-md-6 col-xs-3 btnFiltro" data-add-filtro="txtLetra">
+                       <button id="btnLetra" class="btn btn-default btn-icone col-md-6 col-xs-3 btnFiltro" data-add-filtro="txtLetra" data-classe-campo="letra">
                             <i class="glyphicon glyphicon-plus"></i>
                         </button>
                       </div>

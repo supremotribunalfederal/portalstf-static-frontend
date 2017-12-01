@@ -65,58 +65,87 @@ ul .nav-tabs {
 // FILTROS 
 
 .badge{
-  color: black; 
   background-color: rgb(221, 217, 217); 
   margin: 5px; 
-  padding: 7px; 
-  font-size: 14px;
+  padding: 5px; 
   cursor:pointer; 
+}
+.badge > text{
+  color: #000000; 
+  font-size: 13px;
+}
+.palavraChave::before, .processo::before, .relator::before, .dataInicio::before, .dataFim::before, .tema::before, 
+.tese::before, .ementa::before, .leg::before, .artigo::before, .paragrafo::before, .inciso::before, .letra::before {
+  color: black;
+  font-weight: 600;
+  font-size: 10px;
+  float: left;
+  margin-right: 5px;
+  display: block;
+
 }
 .span{
   display: inline-block;
 }
-//cores span
-.palavraChave{
-  background-color: #caf3f3;
+//cores e nomes span
+.palavraChave, .palavraChave::before{
+  background-color: #abf7f7;
+  content: "Palavra-Chave:";
 }
-.processo{
-  background-color: $stfVermelhoClaro;
+.processo, .processo::before{
+  background-color: #dbb3d1;
+  content: "Processo:";
 }
-.dataInicio{
+.relator, .relator::before{
+  background-color: #d1f3d9;
+  content: "Relator:";
+}
+.dataInicio, .dataInicio::before{
   background-color: $stfAmareloClaro;
+  content: "Data Início:";
 }
-.dataFim{
-  background-color: $stfVerdeClaro;
+.dataFim, .dataFim::before{
+  background-color: #b1ebb1;
+  content: "Data Fim:";
 }
-.tema{
+.tema, .tema::before{
   background-color: $stfCinzaClaro;
+  content: "Tema:";
 }
-.tese{
-  background-color: #af9ad8;
+.tese, .tese::before{
+  background-color: #cebeee;
+  content: "Tese:";
 }
-.txtEmenta{
+.ementa, .ementa::before{
   background-color: #f8b6cf;
+  content: "Ementa:";
 }
-.leg{
+.leg, .leg::before{
   background-color: #eec780;
+  content: "Legislação:";
 }
-.artigo{
-  background-color: #82f8fc;
+.artigo, .artigo::before{
+  background-color: #90c1e2;
+  content: "Artigo:";
 }
-.paragrafo{
-  background-color: #eee99eec;
+.paragrafo, .paragrafo::before{
+  background-color: #fdf9b8;
+  content: "Parágrafo:";
 }
-.inciso{
-  background-color: #aaf1e2e8;
+.inciso, .inciso::before{
+  background-color: #c3d0d6;
+  content: "Inciso:";
 }
-.letra{
-  background-color: #b2ebb3f5;
+.letra, .letra::before{
+  background-color: #ebc9b2;
+  content: "Letra:";
 }
 
 .glyphicon-remove-sign{
-  color: rgb(0, 0, 0);
-  opacity: 0.5;
-  margin-left: 1.5px;
+  color: #313131;
+  opacity: 0.2;
+  margin-left: 2px;
+
 }
 #apagar_filtro{
   cursor:pointer; 
@@ -134,7 +163,6 @@ li > a:hover{
   color: $stfAmarelo;
   cursor: pointer;
   text-decoration: none;
-  
 }
 
 .pesquisa_legislacao{
@@ -159,6 +187,13 @@ h5{
   width: 95%;
   padding: 2px;
   
+}
+
+.ver-mais-pesquisas{
+  max-height: 200px;
+  overflow: auto;
+  margin: 10px;
+  background: transparent;
 }
 
 .icons{
