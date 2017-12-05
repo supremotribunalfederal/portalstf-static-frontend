@@ -229,16 +229,21 @@ border-bottom: 1px solid #eee;
 margin-bottom: 8px;
 padding-bottom: 8px;
 }
-.andamento-item .message-head .avatar {
-margin-right: 20px;
-}
 .andamento-item .message-head .andamento-detalhe {
 overflow: hidden;
 }
 .andamento-item .message-head .andamento-detalhe h5 {
-font-size: 16px;
+font-size: 0.95rem;
 font-weight: bold;
 margin: 0;
+}
+.andamento-data {
+  font-size: 0.95rem;
+  font-weight: bold;
+  margin: 0;
+}
+.andamento-observacao {
+  margin-left: 8rem;
 }
 .andamento-docs {
   text-align: right;
