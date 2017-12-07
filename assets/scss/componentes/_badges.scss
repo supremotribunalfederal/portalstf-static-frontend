@@ -12,7 +12,12 @@
 }
 
 .bg-info {
-  background-color: $stfAzul;
+  background-color: $stfAzulCinza;
+  color: $stfAzulEscuro;
+}
+
+.bg-default {
+  background-color: $stfCinzaEscuro;
 }
 
 .bg-primary {

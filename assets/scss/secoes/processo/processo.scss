@@ -160,7 +160,7 @@ ul .nav-tabs {
 // andamentos
 
 .andamento-item {
-margin-bottom: 25px;
+margin-bottom: 4px;
 margin-left: 40px;
 position: relative;
 }
@@ -168,7 +168,7 @@ position: relative;
 background: #fff;
 border: 1px solid #ddd;
 border-radius: 3px;
-padding: 10px;
+padding: 5px 10px;
 position: relative;
 }
 .andamento-item .andamento-inner:before {
@@ -225,7 +225,6 @@ content: " ";
 display: table;
 }
 .andamento-item .message-head {
-margin-bottom: 8px;
 padding-bottom: 8px;
 }
 .andamento-item .message-head .andamento-detalhe {
@@ -246,7 +245,6 @@ margin: 0;
 }
 .andamento-docs {
   text-align: right;
-  min-height: 32px;
   .btn {
     line-height: 32px;
     height: 32px;
