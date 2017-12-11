@@ -1,6 +1,7 @@
 @import "../../variaveis/cores";
 
 //nav
+
 ul .nav-tabs {
     border-bottom: 2px solido $stfCinzaClaro;
   }
@@ -57,9 +58,16 @@ ul .nav-tabs {
     color: $stfPreto;
     background: transparent;
   }
-  //sumir select
-  nav select{
+  //sumir select e botão aplicar filtros
+  nav select, #btn-aplicar-filtros{
     display: none;
+  }
+
+  #btn-aplicar-filtros{
+    float: right; 
+    background-color: transparent;
+    border: none; 
+    font-size: 20px;
   }
 
 // FILTROS 
@@ -67,22 +75,24 @@ ul .nav-tabs {
 .badge{
   background-color: rgb(221, 217, 217); 
   margin: 5px; 
-  padding: 5px; 
+  padding: 7px; 
   cursor:pointer; 
+  max-width: 100%;
 }
 .badge > text{
   color: #000000; 
   font-size: 13px;
+  max-width: 90%;
+  
 }
 .palavraChave::before, .processo::before, .relator::before, .dataInicio::before, .dataFim::before, .tema::before, 
 .tese::before, .ementa::before, .leg::before, .artigo::before, .paragrafo::before, .inciso::before, .letra::before {
   color: black;
   font-weight: 600;
-  font-size: 10px;
+  font-size: 11px;
   float: left;
   margin-right: 5px;
   display: block;
-
 }
 .span{
   display: inline-block;
@@ -93,19 +103,19 @@ ul .nav-tabs {
   content: "Palavra-Chave:";
 }
 .processo, .processo::before{
-  background-color: #dbb3d1;
+  background-color: #ecdae8;
   content: "Processo:";
 }
 .relator, .relator::before{
-  background-color: #d1f3d9;
+  background-color: #ccf7b3;
   content: "Relator:";
 }
 .dataInicio, .dataInicio::before{
   background-color: $stfAmareloClaro;
-  content: "Data Início:";
+  content: "Data Inicio:";
 }
 .dataFim, .dataFim::before{
-  background-color: #b1ebb1;
+  background-color: #e5f8e5;
   content: "Data Fim:";
 }
 .tema, .tema::before{
@@ -121,7 +131,7 @@ ul .nav-tabs {
   content: "Ementa:";
 }
 .leg, .leg::before{
-  background-color: #eec780;
+  background-color: #FFF7E4;
   content: "Legislação:";
 }
 .artigo, .artigo::before{
@@ -129,7 +139,7 @@ ul .nav-tabs {
   content: "Artigo:";
 }
 .paragrafo, .paragrafo::before{
-  background-color: #fdf9b8;
+  background-color: rgb(217, 242, 243);
   content: "Parágrafo:";
 }
 .inciso, .inciso::before{
@@ -147,10 +157,9 @@ ul .nav-tabs {
   margin-left: 2px;
 
 }
-#apagar_filtro{
+.opc-filtros{
   cursor:pointer; 
   text-align: center;
-  margin-top: 15px;
 }
 a{
   cursor: pointer;
@@ -190,6 +199,7 @@ h5{
 }
 
 .ver-mais-pesquisas{
+  min-height: 200px;
   max-height: 200px;
   overflow: auto;
   margin: 10px;
@@ -221,9 +231,49 @@ h5{
   display: none;
   color: $stfAmarelo;
   text-decoration: inherit;
-
+}
+ 
+input[type=date]::-webkit-inner-spin-button{
+  -webkit-appearance: none;
 }
 
+.btn-tese{
+  width: 176px;
+  border: none;
+  text-decoration: none;
+}
+.tipoVisualizacao{
+  text-align: center;
+}
+.btn-visualizacao{
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+  width: 125px;
+  border: none;
+  text-decoration: none;
+}
+.btn-tese.active, .btn-visualizacao.active{
+  background-color: $stfAzul;
+  color: white;
+  font-weight: 600;
+}
+.inputTese, .inputVisualizacao{
+  border: none;
+  height: 0%;
+  width: 0%;
+}
+
+.qnt_resultado{
+  float: right; 
+  margin-right: 15px; 
+  color: $stfCinzaEscuro; 
+  font-weight: 600;
+}
+///////////////////
+
+
+///////////////////
 // mobile
 
 @media only screen and (max-width: 360px) {
@@ -249,7 +299,10 @@ h5{
     font-size: 1rem;
     width: 100%;
     margin-bottom: 15px;
-    background-color: $stfCinzaClaro;
+    background-color: transparent;
+  }
+  #btn-aplicar-filtros{
+    display: inline-block;
   }
   .inputs_legislacao {
     float: right;
