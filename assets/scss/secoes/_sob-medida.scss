@@ -21,11 +21,12 @@
       text-transform: uppercase;
 
       &.item-titulo-sob-medida {
-        font-size: 1.063rem;
+        font-size: 1rem;
         letter-spacing: 0.2px;
       }
       &.item-titulo-para-voce {
-        letter-spacing: -0.04rem;
+        font-size: 1rem;
+        letter-spacing: 0.03rem;
       }
     }
   }
