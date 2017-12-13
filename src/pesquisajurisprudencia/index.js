@@ -10,7 +10,14 @@ var removeFiltro = document.querySelectorAll(".remover");
 $(document).ready(function(){
     padraoPesquisa();
 });
-
+$(divFiltros).click(function(event){
+    event.preventDefault();
+    event.target.closest(".badge").animate({
+        opacity: 0.5,
+        left: "+=50",
+    });
+    
+});
 //excluir filtro aplicado
 $(divFiltros).dblclick(function(event){
     event.preventDefault();
@@ -48,8 +55,6 @@ function botoesExibir(){
     });
 }
    
-
-
 function criarBadge(valorFiltro, classe){
     var span = document.createElement("span");
     var icon = document.createElement("i");
@@ -86,32 +91,33 @@ $(function(){
 
     });
 });
-//trazer lista de pesquisas abertas ou fechadas
-var pesquisaCompleta = $(".btn-completa");
-var pesquisaResumida = $(".btn-resumida");
+//trazer lista de pesquisas completas ou resumidas
+var pesquisaCompleta = $("#pesquisaCompleta");
+var pesquisaResumida = $("#pesquisaResumida");
 var infoCompleta = $(".informacao-completa");
 
-$(pesquisaCompleta).attr("checked", true);
+$(pesquisaCompleta).attr("selected", true);
 
-function padraoPesquisa(){
-    if($(pesquisaCompleta).attr("checked") == "checked"){
+/*function padraoPesquisa(){
+    if($(pesquisaCompleta).attr("selected") == "selected"){
         $(".bloco-right").hide();
         $(".exibir-menos").hide();
         $(".outras-infos").removeClass('collapse');
         $(".exibirMaisInformacoes").hide();                 
     }
 }; 
-
+*/
+/*
 $(pesquisaCompleta).on("click",function(){
-    pesquisaResumida.attr("checked", false);
-    pesquisaCompleta.attr("checked", true);
+    pesquisaResumida.attr("selected", false);
+    pesquisaCompleta.attr("selected", true);
     $(infoCompleta).removeClass('collapse'); 
     padraoPesquisa();
 });
     
 $(pesquisaResumida).on("click", function(){ 
-    pesquisaCompleta.attr("checked", false);
-    pesquisaResumida.attr("checked", true);
+    pesquisaCompleta.attr("selected", false);
+    pesquisaResumida.attr("selected", true);
     $(infoCompleta).addClass('collapse');
     $(".outras-infos").addClass('collapse');
     $(".bloco-right").show();
@@ -119,6 +125,7 @@ $(pesquisaResumida).on("click", function(){
     $(".exibir-menos").show();
     botoesExibir();    
 });
+*/
 
 
 

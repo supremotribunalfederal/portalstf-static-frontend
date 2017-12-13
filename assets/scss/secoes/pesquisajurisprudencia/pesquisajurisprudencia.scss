@@ -1,7 +1,20 @@
 @import "../../variaveis/cores";
 
-//nav
+//pesquisa
+.pesquisa-titulo{
+  height: 30px;
+}
+.container-jurisprudencia{
+  height: 75px;
+}
 
+.ordenacao, .tipo-visualizacao{
+  margin-left: 5px;
+  width: 172px;
+  float: right;
+  background-color: transparent;
+}
+//nav
 ul .nav-tabs {
     border-bottom: 2px solido $stfCinzaClaro;
   }
@@ -82,8 +95,6 @@ ul .nav-tabs {
 .badge > text{
   color: #000000; 
   font-size: 13px;
-  max-width: 90%;
-  
 }
 .palavraChave::before, .processo::before, .relator::before, .dataInicio::before, .dataFim::before, .tema::before, 
 .tese::before, .ementa::before, .leg::before, .artigo::before, .paragrafo::before, .inciso::before, .letra::before {
@@ -242,17 +253,14 @@ input[type=date]::-webkit-inner-spin-button{
   border: none;
   text-decoration: none;
 }
-.tipoVisualizacao{
-  text-align: center;
-}
 .btn-visualizacao{
   margin-right: auto;
   margin-left: auto;
   margin-top: 10px;
-  width: 125px;
+  width: 123px;
   border: none;
   text-decoration: none;
-}
+} 
 .btn-tese.active, .btn-visualizacao.active{
   background-color: $stfAzul;
   color: white;

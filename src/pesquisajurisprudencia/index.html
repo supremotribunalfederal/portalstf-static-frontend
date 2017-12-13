@@ -10,7 +10,7 @@
 <body>
   <div id="main" class="container-fluid p-0">
     <%- include src/includes/header.html %>
-    <%- include src/includes/pesquisa-lista.html %>
+    <%- include src/includes/pesquisa-jurisprudencia.html %>
     <section id="conteudo" class="container-fluid m-0 p-0">
           <!--cards lateral esquerda-->
       <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 p-16 p-sm-12 p-xs-0 m-0">
@@ -381,7 +381,29 @@
 
      </div>
      <div class="col-xs-12 col-sm-6 col-md-7 col-lg-8 row m-0 p-xs-0 p-sm-8">
-      <div class="card m-b-48" style="margin-top: 40px;">
+          
+             <!-- <div class="btn-group" data-toggle="buttons">
+                  <label class="btn btn-secondary btn-resumida btn-lg btn-visualizacao btn-raised btn-default-bordered btn-upper col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
+                    <input class="inputVisualizacao" type="radio" name="options" id="pesquisaResumida" autocomplete="off" >Pesquisa Resumida
+                  </label>
+                  <label class="btn btn-secondary active btn-completa btn-lg btn-visualizacao btn-raised btn-default-bordered btn-upper col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
+                    <input class="inputVisualizacao" type="radio" name="options" id="pesquisaCompleta" autocomplete="off">Pesquisa Completa
+                  </label>
+              </div> -->
+        <div class="opcoes-pesquisa">      
+              <select class="form-control tipo-visualizacao" id="visualizacao">
+                  <option id="pesquisaCompleta" value="pesquisa-completa" selected>Pesquisa Completa</option>
+                  <option id="pesquisaResumida" value="pesquisa-resumida">Pequisa Resumida</option>
+              </select>  
+              <select class="form-control ordenacao">
+                  <option selected>Ordernar por:</option>
+                  <option value="1">Relevância</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+              </select>
+        </div>      
+        
+      <div class="card m-b-48" style="margin-top: 40px;" >
             <div class="card-conteudo row m-0 p-0">
               <nav>
                 <ul class="nav nav-tabs col-md-12" role="tablist">
@@ -413,17 +435,7 @@
                     <option value="..."> <a href="#"> option 3 </a></option> 
                   </select>   
                 </div>
-              </nav> 
-              <form class="tipoVisualizacao">
-                  <div class="btn-group" data-toggle="buttons">
-                      <label class="btn btn-secondary btn-resumida btn-lg btn-visualizacao btn-raised btn-default-bordered btn-upper col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
-                        <input class="inputVisualizacao" type="radio" name="options" id="pesquisaResumida" autocomplete="off" >Pesquisa Resumida
-                      </label>
-                      <label class="btn btn-secondary active btn-completa btn-lg btn-visualizacao btn-raised btn-default-bordered btn-upper col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
-                        <input class="inputVisualizacao" type="radio" name="options" id="pesquisaCompleta" autocomplete="off">Pesquisa Completa
-                      </label>
-                  </div>
-              </form>  
+              </nav>  
               <div class="tab-content col-md-12">
                 <%- include src/includes/pesquisa-acordaos.html %>
                 <%- include src/includes/pesquisa-repercussao-geral.html %>
