@@ -22,7 +22,7 @@
           <div id="noticias" class="noticias m-b-48">
 
             <div class="card-lt-md card-xs noticia m-0 m-b-24 row">
-              <h3 class="noticia-titulo principal p-l-0 p-r-16 m-t-8 m-b-8"><a class="principal" href="//stf.jus.br/portal/cms/verNoticiaDetalhe.asp?idConteudo=345036">STF amplia para 10 dias prazo para interposição de recurso na AP 470</a></h3>
+              <h3 class="noticia-titulo principal p-l-0 p-r-0 m-t-8 m-b-8"><a class="principal" href="//stf.jus.br/portal/cms/verNoticiaDetalhe.asp?idConteudo=345036">STF amplia para 10 dias prazo para interposição de recurso na AP 470</a></h3>
               <div class="col-md-6 hidden-xs hidden-sm p-0">
                 <div class="noticia-imagem hidden-xs">
                   <img src="<%= require('assets/img/noticias/imagem-n-disponivel.png') %>" alt="">
@@ -340,66 +340,33 @@
               </div>
             </div>
           </div>
-          <div id="jurisprudencia" class="card m-b-48 ">
-            <div class="card-titulo">Jurisprudência do STF</div>
+          <div id="jurisprudencia-do-stf" class="card m-b-48 ">
+            <div class="card-titulo">Jurisprudência</div>
             <div class="card-conteudo row m-0 m-t-16 b-b-16 p-0">
               <div class="col-md-6 col-lg-4">
                 <div class="card-caixa-texto m-b-16">
-                  <h4 class="m-0 m-t-8 m-b-16">Pesquisas prontas</h4>
+                  <h4 class="m-0 m-t-8 m-b-16">Súmulas</h4>
                   <ul>
-                    <li><a id="jurisprudencia-pp-ramo-direito" href="//www.stf.jus.br/portal/jurisprudencia/listarResultadoPesquisaJurisprudenciaFavoritaRamos.asp">Por ramo do Direito</a></li>
-                    <li><a id="jurisprudencia-pp-casos-notorios" href="//www.stf.jus.br/portal/jurisprudencia/listarResultadoPesquisaJurisprudenciaFavoritaCasoNotorio.asp">Casos notórios</a></li>
-                  </ul>
-                </div>
-                <div class="card-caixa-texto m-b-16">
-                  <h4 class="m-0 m-t-8 m-b-16">Jurisprudência selecionada</h4>
-                  <ul>
-                    <li><a id="jurisprudencia-js-temas-relevantes" href="//www.stf.jus.br/portal/jurisprudencia/temasRelevantes.asp">Temas relevantes</a></li>
-                    <li><a id="jurisprudencia-js-indicada-ministros" href="//www.stf.jus.br/portal/acordaodecisaoRelevante/listarMinistroAcordaoDecisao.asp">Indicada por Ministros</a></li>
-                  </ul>
-                </div>
-                <div class="card-caixa-texto m-b-16 m-b-lg-0">
-                  <h4 class="m-0 m-t-8 m-b-16">Acórdãos</h4>
-                  <ul>
-                    <li><a id="jurisprudencia-acordaos-inteiro-teor" href="//www.stf.jus.br/portal/inteiroTeor/pesquisarInteiroTeor.asp">Inteiro teor de acórdãos</a></li>
+                    <li><a id="jurisprudencia-sumulas" href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaSumula" target="_blank">Súmulas</a></li>
+                    <li><a id="jurisprudencia-sumulas-vinculantes" href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaSumulaVinculante" target="_blank">Súmulas Vinculantes</a></li>
+                    <li><a id="jurisprudencia-sumulas-aplicacao" href="//www.stf.jus.br/portal/jurisprudencia/pesquisarSumula.asp" target="_blank">Aplicação das Súmulas no STF</a></li>
                   </ul>
                 </div>
               </div>
               <div class="col-md-6 col-lg-4">
                 <div class="card-caixa-texto m-b-16">
-                  <h4 class="m-0 m-t-8 m-b-16">Súmulas</h4>
-                  <ul>
-                    <li><a id="jurisprudencia-sumulas" href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaSumula">Súmulas</a></li>
-                    <li><a id="jurisprudencia-sumulas-vinculantes" href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaSumulaVinculante">Súmulas Vinculantes</a></li>
-                    <li><a id="jurisprudencia-sumulas-propostas" href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaPropostaSumulaVinculante">Propstas de Súmulas Vinculantes</a></li>
-                    <li><a id="jurisprudencia-sumulas-aplicacao" href="//www.stf.jus.br/portal/jurisprudencia/pesquisarSumula.asp">Aplicação das Súmulas no STF</a></li>
-                  </ul>
-                </div>
-                <div class="card-caixa-texto m-b-16">
                   <h4 class="m-0 m-t-8 m-b-16">Informativos</h4>
                   <ul>
-                    <li><a id="jurisprudencia-informativos-semanal" href="//www.stf.jus.br/portal/informativo/pesquisarInformativo.asp">Informativo semanal</a></li>
-                    <li><a id="jurisprudencia-informativos-temas" href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=publicacaoInformativoTema">Informativo por temas</a></li>
+                    <li><a id="jurisprudencia-informativos-semanal" href="//www.stf.jus.br/portal/informativo/pesquisarInformativo.asp" target="_blank">Informativo semanal</a></li>
+                    <li><a id="jurisprudencia-informativos-temas" href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=publicacaoInformativoTema" target="_blank">Informativo por temas</a></li>
                   </ul>
                 </div>
               </div>
               <div class="col-md-12 col-lg-4 row m-0 m-b-16">
                 <div class="col-md-6 col-lg-12 p-0 p-r-md-16">
-                  <div class="card-caixa-texto __fundo-escuro p-b-16 m-b-16">
-                    <h4 class="m-0 m-t-8 m-b-16">Solicitação de pesquisas</h4>
-                    <p>Não encontrou uma jurisprudência?<br>Nós te ajudamos a pesquisar!</p>
-                    <a class="btn btn-default-bordered btn-raised btn-fluid btn-upper" target="_blank" href="//www.stf.jus.br/portal/jurisprudenciaEmail/criarSolicitacaoEmail.asp">Quero Ajuda!</a>
-                  </div>
-                </div>
-                <div class="col-md-6 col-lg-12 p-0 p-l-md-16">
-                  <div class="card-caixa-texto">
-                    <h4 class="m-0 m-t-8 m-b-16">Mais informações</h4>
-                    <ul>
-                      <li><a id="jurisprudencia-maisinfo-repositorios" href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaRepositorioJurisprudencia">Repositório de jurisprudência</a></li>
-                      <li><a id="jurisprudencia-maisinfo-teses" href="//www.stf.jus.br/portal/jurisprudencia/pesquisarTese.asp">Teses jurídicas</a></li>
-                      <li><a id="jurisprudencia-maisinfo-omissao" href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaOmissaoInconstitucional">Omissão inconstitucional</a></li>
-                      <li><a id="jurisprudencia-maisinfo-glossario" href="//www.stf.jus.br/portal/glossario/">Glossário jurídico</a></li>
-                    </ul>
+                  <div class="card-caixa-texto p-b-16 m-b-16">
+                    <h4 class="m-0 m-t-8 m-b-16">Pesquisa de jurisprudência</h4>
+                    <a class="btn btn-default-bordered btn-raised btn-fluid btn-upper" target="_blank" href="//www.stf.jus.br/portal/jurisprudencia/pesquisarJurisprudência.asp">Ir para a pesquisa</a>
                   </div>
                 </div>
               </div>
