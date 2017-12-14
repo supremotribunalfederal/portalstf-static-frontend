@@ -22,7 +22,7 @@ font-size: 0.8rem;
 }
 
 .card-processo {
-  min-height: 130px;
+  min-height: 175px;
   background-color: $stfAzulCinza;
   .processo-dados {
     font-size: 0.8rem;
@@ -85,8 +85,7 @@ font-size: 0.8rem;
 }
 
 .lista-dados {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding: 16px 0;
   border-bottom: 1px solid $stfCinzaClaro;
 }
 
@@ -108,6 +107,7 @@ font-size: 0.8rem;
 .btn-peticao {
   margin: 0 auto;
   width: 40%;
+  min-width: 128px;
 }
 
 ul .nav-tabs {
@@ -154,7 +154,7 @@ ul .nav-tabs {
 }
 
 .tab-content {
-  padding: 0 20px;
+  padding: 0;
 }
 
 // andamentos
