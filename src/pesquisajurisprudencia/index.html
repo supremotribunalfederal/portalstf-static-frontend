@@ -18,12 +18,10 @@
             <div class="card-titulo"><i class="glyphicon glyphicon-search"></i> Filtros aplicados</div>
             <div class="card-conteudo" id="filtro">
               <div class="col-md-12" id="filtros-aplicados">
-                  <span class="badge" > <text>Exemplo</text> 
-                    <i class="glyphicon glyphicon-remove-sign remover"></i>
-                  </span>
+                 
               </div>
               <div class="row m-0 m-t-16 p-0 opc-filtros">
-                <a id="editar_filtro" class="col-xs-6 m-b-16">
+                <a id="editar_filtros" class="col-xs-6 m-b-16">
                     <i class="glyphicon glyphicon-pencil" aria-label="editar filtros"></i> EDITAR FILTROS
                   </a>
                 <a id="apagar_filtro" class="col-xs-6 m-b-16">
@@ -37,14 +35,10 @@
           <div class="card-titulo"> <i class="glyphicon glyphicon-time" aria-hidden="true"></i> Histórico</div>
           <div class="card-conteudo">
               <ul>
-                <li class="item_pesquisa"><a><a>Direito da Mulher </a><i class="glyphicon glyphicon-remove-sign remove"></i>
-                    <span class="qnt_resultado">(3.154)</span>
-                </li> 
-                <li class="item_pesquisa"><a><a>Plenário; Edson Fachin</a> <i class="glyphicon glyphicon-remove-sign remove"></i>
-                </li>
-                <li class="item_pesquisa"><a><a>Gilmar Mendes </a><i class="glyphicon glyphicon-remove-sign remove"></i>
-                
-                </li>
+                <li class="item_pesquisa"><a>Direito da Mulher </a>
+                    <span class="qnt_resultado">(3.154)</span> </li> 
+                <li class="item_pesquisa"><a>Plenário; Edson Fachin</a></li>
+                <li class="item_pesquisa"><a>Gilmar Mendes </a></li>
               </ul>
               <hr/>
               <ul>
@@ -135,13 +129,13 @@
                     </form>
                   </div> <br /> <br /> <br />
                 <ul >
-                    <li class="item_pesquisa"><a><a>Gilmar Mendes </a><i class="glyphicon glyphicon-remove-sign remove"></i>
+                    <li class="item_pesquisa"><a><a>Gilmar Mendes </a>
                       <span class="qnt_resultado">(4.454)</span>
                     </li> 
-                    <li class="item_pesquisa"><a><a>Rosa Weber </a><i class="glyphicon glyphicon-remove-sign remove"></i>
+                    <li class="item_pesquisa"><a><a>Rosa Weber </a>
                       <span class="qnt_resultado">(3.234)</span>
                     </li>
-                    <li class="item_pesquisa"><a><a>Edson Fachin </a><i class="glyphicon glyphicon-remove-sign remove"></i>
+                    <li class="item_pesquisa"><a><a>Edson Fachin </a>
                       <span class="qnt_resultado">(543)</span>
                     </li>
                 </ul>
@@ -171,13 +165,12 @@
               <div class="campo-container m-t-16">
                 <form id="filtro-data">
                    <p> <input type="text" id="data-inicio" class="col-md-9 col-xs-9 palavraPesquisa datas" placeholder="De" onfocus="(this.type='date')"/>
-                    <date-util format="dd/MM/yyyy"></date-util> 
-                      <button id="btn-data-inicio"  class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="data-inicio" data-classe-campo="dataInicio">
+                      <button id="btn-data-inicio"  class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="data-inicio" data-formata-data="true" data-classe-campo="dataInicio">
                           <i class="glyphicon glyphicon-plus"></i>
                       </button> 
                      <br/> <br/>  
                     <p><input  type="text" id="data-final" class="col-md-9 col-xs-9  palavraPesquisa datas" placeholder="Até" onfocus="(this.type='date')" />
-                      <button id="btn-data-final" class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="data-final" data-classe-campo="dataFim">
+                      <button id="btn-data-final" class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="data-final" data-formata-data="true" data-classe-campo="dataFim">
                           <i class="glyphicon glyphicon-plus"></i>
                       </button>
                     </p>
@@ -224,13 +217,13 @@
               <strong>Tipo de Tese</strong>
                 <div class="campo-container m-t-16">
                   <ul>
-                    <li class="item_pesquisa"><a>Controle Concentrado</a> <i class="glyphicon glyphicon-remove-sign remove"></i>
+                    <li class="item_pesquisa"><a>Controle Concentrado</a> 
                       <span class="qnt_resultado">(3.000)</span>
                     </li>
-                    <li class="item_pesquisa"><a>Repercussão Geral </a><i class="glyphicon glyphicon-remove-sign remove"></i>
+                    <li class="item_pesquisa"><a>Repercussão Geral </a>
                       <span class="qnt_resultado">(123)</span>
                     </li>
-                    <li class="item_pesquisa"><a>Outros processos </a><i class="glyphicon glyphicon-remove-sign remove"></i>
+                    <li class="item_pesquisa"><a>Outros processos </a>
                       <span class="qnt_resultado">(2.234)</span>
                     </li>
                   </ul>
@@ -241,16 +234,16 @@
               <strong>Órgão Julgador</strong>
                 <div class="campo-container m-t-16">
                   <ul>
-                    <li class="item_pesquisa"><a>Plenário</a><i class="glyphicon glyphicon-remove-sign remove"></i>
+                    <li class="item_pesquisa"><a>Plenário</a>
                       <span class="qnt_resultado">(13.154)</span>
                     </li>
-                    <li class="item_pesquisa"><a>Plenário Eletrônico</a><i class="glyphicon glyphicon-remove-sign remove"></i>
+                    <li class="item_pesquisa"><a>Plenário Eletrônico</a>
                       <span class="qnt_resultado">(54)</span>
                     </li>
-                    <li class="item_pesquisa"><a>1ª Turma </a><i class="glyphicon glyphicon-remove-sign remove"></i>
+                    <li class="item_pesquisa"><a>1ª Turma </a>
                       <span class="qnt_resultado">(344)</span>
                     </li>
-                    <li class="item_pesquisa"><a>2ª Turma </a><i class="glyphicon glyphicon-remove-sign remove"></i>
+                    <li class="item_pesquisa"><a>2ª Turma </a>
                       <span class="qnt_resultado">(24)</span>
                     </li>
                   </ul>
@@ -282,13 +275,13 @@
               <strong>Legislação</strong>
                 <div class="campo-container m-t-16">
                   <ul>
-                      <li class="item_pesquisa"><a>Acordo (ACO)</a><i class="glyphicon glyphicon-remove-sign remove"></i>
+                      <li class="item_pesquisa"><a>Acordo (ACO)</a>
                         <span class="qnt_resultado">(4.154)</span>
                       </li>
-                      <li class="item_pesquisa"><a>Acento Regimental (ASR)</a><i class="glyphicon glyphicon-remove-sign remove"></i>
+                      <li class="item_pesquisa"><a>Acento Regimental (ASR)</a>
                         <span class="qnt_resultado">(3.154)</span>
                       </li>
-                      <li class="item_pesquisa"><a>ATO (ATO)</a><i class="glyphicon glyphicon-remove-sign remove"></i>
+                      <li class="item_pesquisa"><a>ATO (ATO)</a>
                         <span class="qnt_resultado">(344)</span>
                       </li>
                   </ul> <br>
@@ -382,28 +375,37 @@
      </div>
      <div class="col-xs-12 col-sm-6 col-md-7 col-lg-8 row m-0 p-xs-0 p-sm-8">
           
-             <!-- <div class="btn-group" data-toggle="buttons">
-                  <label class="btn btn-secondary btn-resumida btn-lg btn-visualizacao btn-raised btn-default-bordered btn-upper col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
-                    <input class="inputVisualizacao" type="radio" name="options" id="pesquisaResumida" autocomplete="off" >Pesquisa Resumida
-                  </label>
-                  <label class="btn btn-secondary active btn-completa btn-lg btn-visualizacao btn-raised btn-default-bordered btn-upper col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
-                    <input class="inputVisualizacao" type="radio" name="options" id="pesquisaCompleta" autocomplete="off">Pesquisa Completa
-                  </label>
-              </div> -->
-        <div class="opcoes-pesquisa">      
-              <select class="form-control tipo-visualizacao" id="visualizacao">
-                  <option id="pesquisaCompleta" value="pesquisa-completa" selected>Pesquisa Completa</option>
-                  <option id="pesquisaResumida" value="pesquisa-resumida">Pequisa Resumida</option>
-              </select>  
-              <select class="form-control ordenacao">
-                  <option selected>Ordernar por:</option>
-                  <option value="1">Relevância</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-              </select>
+        <!-- <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-secondary btn-resumida btn-lg btn-visualizacao btn-raised btn-default-bordered btn-upper col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
+              <input class="inputVisualizacao" type="radio" name="options" id="pesquisaResumida" autocomplete="off" >Pesquisa Resumida
+            </label>
+            <label class="btn btn-secondary active btn-completa btn-lg btn-visualizacao btn-raised btn-default-bordered btn-upper col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
+              <input class="inputVisualizacao" type="radio" name="options" id="pesquisaCompleta" autocomplete="off">Pesquisa Completa
+            </label>
+        </div> -->
+        <div class="opcoes-pesquisa">
+
+            
+          <select class="form-control ordenacao">
+              <option selected>Ordernar por:</option>
+              <option value="1">Relevância</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+          </select>
+      
+          <div class="form-check" >
+            <label class="form-check-label labelVisualizacao">
+              <input class="form-check-input visualizacao" type="radio" name="exampleRadios" id="pesquisaCompleta" value="pesquisaCompleta" checked>
+              Pesquisa Completa
+            </label>
+            <label class="form-check-label labelVisualizacao">
+              <input class="form-check-input visualizacao" type="radio" name="exampleRadios" id="pesquisaResumida" value="pesquisaResumida" >
+              Pesquisa Resumida
+            </label>
+          </div>
         </div>      
         
-      <div class="card m-b-48" style="margin-top: 40px;" >
+      <div class="card m-b-48" style="margin-top: 13px;">
             <div class="card-conteudo row m-0 p-0">
               <nav>
                 <ul class="nav nav-tabs col-md-12" role="tablist">
@@ -429,7 +431,7 @@
                     <option selected="selected" value="acordaos" class="active"> <a href"#acordaos"> Acórdãos </a></option> 
                     <option value="repercussao"><a href="#repercussao"> Repercussão Geral </a></option> 
                     <option value="sumulas"> <a href="#sumulas"> Súmulas </a></option> 
-                    <option value="sumulas_vinculantes"> <a href="#sumulasvinculantes"> Súmulas Vinculantes </a></option>  
+                    <a href="#sumulasvinculantes"><option value="sumulas_vinculantes">  Súmulas Vinculantes </option>  </a>
                     <option value="..."> <a href="#"> option 1 </a></option> 
                     <option value="..."> <a href="#"> option 2 </a></option> 
                     <option value="..."> <a href="#"> option 3 </a></option> 

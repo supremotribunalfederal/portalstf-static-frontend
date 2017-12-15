@@ -5,14 +5,29 @@
   height: 30px;
 }
 .container-jurisprudencia{
-  height: 75px;
+  height: 80px;
 }
-
-.ordenacao, .tipo-visualizacao{
-  margin-left: 5px;
-  width: 172px;
-  float: right;
+.opcoes-pesquisa{
+  vertical-align: auto;
+}
+.ordenacao{
+  width: 20%;
   background-color: transparent;
+  float: right;
+  position: relative;
+}
+.labelVisualizacao{
+  font-size: 14px;
+  color: $stfCinzaEscuro;
+  margin-right: 7px;
+}
+.visualizacao{
+  width: 12px;
+  height: 12px;
+}
+.form-check{
+  text-align: right;
+  margin-right: 200px; 
 }
 //nav
 ul .nav-tabs {
@@ -48,7 +63,7 @@ ul .nav-tabs {
   }
 
   .nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after {
-    transform: scale(1);
+    transform: scale(1); 
   }
 
   .tab-pane {
@@ -84,13 +99,23 @@ ul .nav-tabs {
   }
 
 // FILTROS 
-
+#filtros-aplicados{
+  min-height: 70px;
+}
 .badge{
   background-color: rgb(221, 217, 217); 
   margin: 5px; 
   padding: 7px; 
   cursor:pointer; 
   max-width: 100%;
+
+}
+.ajuste{
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow: ellipsis; 
+  display: block;
+  padding-bottom: 1px;
 }
 .badge > text{
   color: #000000; 
@@ -238,8 +263,7 @@ h5{
 .exibir-mais, .exibir-menos {
   float: right;
 }
-.remove{
-  display: none;
+.remove::after{
   color: $stfAmarelo;
   text-decoration: inherit;
 }
@@ -292,11 +316,15 @@ input[type=date]::-webkit-inner-spin-button{
     float: right;
     margin-left: 140px;
     position: absolute;
-    
   }
 }
-// nav aparecer como select
+
 @media (max-width: 960px) {
+  .ordenacao{
+    width: 40%;
+    margin-right: 15px;
+  }
+ 
   nav ul{ 
     display: none; 
   }
@@ -317,5 +345,11 @@ input[type=date]::-webkit-inner-spin-button{
     margin-left: 160px;
     position: absolute;
     
+  }
+}
+@media (max-width: 1200px){
+  .ordenacao{
+    width: 40%;
+    margin-right: 15px;
   }
 }

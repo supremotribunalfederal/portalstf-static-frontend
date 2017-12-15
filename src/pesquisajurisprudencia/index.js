@@ -5,24 +5,17 @@ import moment from 'moment';
 var divFiltros = document.querySelector("#filtros-aplicados");
 var filtros = document.querySelectorAll(".badge");
 var itens_pesquisados = document.querySelectorAll(".item_pesquisa");
-var removeFiltro = document.querySelectorAll(".remover");
 
 $(document).ready(function(){
     padraoPesquisa();
 });
-$(divFiltros).click(function(event){
-    event.preventDefault();
-    event.target.closest(".badge").animate({
-        opacity: 0.5,
-        left: "+=50",
-    });
-    
-});
 //excluir filtro aplicado
-$(divFiltros).dblclick(function(event){
+$(divFiltros).click(removerFiltro);
+    
+function removerFiltro(){
     event.preventDefault();
     event.target.closest('.badge').remove();
-});
+}
 
 //excluir itens de pesquisa 
 itens_pesquisados.forEach(function(item_pesquisa){
@@ -54,19 +47,18 @@ function botoesExibir(){
         e.preventDefault();
     });
 }
-   
+
 function criarBadge(valorFiltro, classe){
+    //criando span e conteudo dentro do span
     var span = document.createElement("span");
     var icon = document.createElement("i");
-    var texto = document.createElement("text");
-
-    //criando span e conteudo dentro do span
+    var texto = document.createElement("text");  
     span.appendChild(texto);
     texto.textContent = valorFiltro;
     span.appendChild(icon);
     span.classList.add(classe, "badge");
-    $(icon).addClass('glyphicon glyphicon-remove-sign');
-
+    $(texto).addClass('ajuste');
+    $(icon).addClass('glyphicon glyphicon-remove-sign').addClass("remover");
     divFiltros.appendChild(span);  
 };
 
@@ -77,47 +69,37 @@ $(function(){
 
         var idDoCampo = $(this).data('add-filtro');
         var classe = $(this).data('classe-campo');
-        var valorFiltro = $('#'+idDoCampo).val().split(";");
+        var valorFiltro = $(this).data('formata-data') ? [moment($('#'+idDoCampo).val()).format("DD/MM/YYYY")] : $('#'+idDoCampo).val().split(";");
 
         valorFiltro.forEach(function(valor){
             var tirarEspaco = $.trim(valor);
 
             if( tirarEspaco != ""){
                 criarBadge(tirarEspaco, classe);
-            }
-            
+            }  
+
         });
         $('#'+idDoCampo).val(""); 
-
     });
 });
-//trazer lista de pesquisas completas ou resumidas
+
+//trazer lista de pesquisas completa ou resumida
 var pesquisaCompleta = $("#pesquisaCompleta");
 var pesquisaResumida = $("#pesquisaResumida");
 var infoCompleta = $(".informacao-completa");
 
-$(pesquisaCompleta).attr("selected", true);
-
-/*function padraoPesquisa(){
-    if($(pesquisaCompleta).attr("selected") == "selected"){
+function padraoPesquisa(){
+    if($(pesquisaCompleta).attr("checked") == "checked"){
         $(".bloco-right").hide();
         $(".exibir-menos").hide();
         $(".outras-infos").removeClass('collapse');
-        $(".exibirMaisInformacoes").hide();                 
+        $(".exibirMaisInformacoes").hide();                
     }
 }; 
-*/
-/*
-$(pesquisaCompleta).on("click",function(){
-    pesquisaResumida.attr("selected", false);
-    pesquisaCompleta.attr("selected", true);
-    $(infoCompleta).removeClass('collapse'); 
-    padraoPesquisa();
-});
-    
+
 $(pesquisaResumida).on("click", function(){ 
-    pesquisaCompleta.attr("selected", false);
-    pesquisaResumida.attr("selected", true);
+    pesquisaCompleta.attr("checked", false);
+    pesquisaResumida.attr("checked", true);
     $(infoCompleta).addClass('collapse');
     $(".outras-infos").addClass('collapse');
     $(".bloco-right").show();
@@ -125,8 +107,13 @@ $(pesquisaResumida).on("click", function(){
     $(".exibir-menos").show();
     botoesExibir();    
 });
-*/
 
+$(pesquisaCompleta).on("click",function(){
+    $(infoCompleta).removeClass('collapse'); 
+    pesquisaCompleta.attr("checked", true);
+    pesquisaResumida.attr("checked",false); 
+    padraoPesquisa();
+});
 
 
  
