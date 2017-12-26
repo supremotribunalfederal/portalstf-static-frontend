@@ -305,7 +305,7 @@ function pesquisarProcessoPorNumeroUnico() {
 
 function pesquisarProcessoPorClasseNumero() {
     var classe = $('.pesquisa-processo-classe .processo-classe').val();
-    var numero = $('#pesquisaPrincipalClasseNumero').val();
+    var numero = $('#pesquisaPrincipalClasseNumero').val().trim();
     var url = '';
 
     if (window.location.pathname.match(/^\/portal\/?.*/)) {
@@ -380,6 +380,13 @@ function configurarValidacaoPesquisa(id) {
 
 //Pesquisa principal do topo da página
 $('#pesquisa-principal').submit(function(e){
+    //Remove os espaços do campo de pesquisa antes de submeter o formulário à validação.
+    if (campoInputPesquisa === 'pesquisaPrincipalClasseNumero'){
+        $('#pesquisaPrincipalClasseNumero').val($('#pesquisaPrincipalClasseNumero').val().trim());
+    } else if (campoInputPesquisa === 'pesquisaPrincipalNumeroOrigem'){
+        $('#pesquisaPrincipalNumeroOrigem').val($('#pesquisaPrincipalNumeroOrigem').val().trim());
+    }
+
     configurarValidacaoPesquisa(campoInputPesquisa);
 
     if( $('#pesquisa-principal').valid()){
