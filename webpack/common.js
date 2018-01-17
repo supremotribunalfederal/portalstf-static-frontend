@@ -25,6 +25,7 @@ module.exports = {
   entry: {
     bundle: [
       path.join(PATHS.src, '/index.js'),
+
       path.join(PATHS.scss, '/main.scss')
     ],
     vendor: VENDORS
