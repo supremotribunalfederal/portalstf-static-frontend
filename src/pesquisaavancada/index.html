@@ -15,7 +15,7 @@
 
     <section id="conteudo" class="container-fluid m-0 p-0">
 
-          <!--cards lateral esquerda-->
+      <!--cards lateral esquerda-->
       <div class="col-xs-12 col-sm-6 col-md-5 col-lg-3 p-16 p-sm-12 p-xs-0 m-0">
 
         <div class="card text-center m-b-24 m-t-24">
@@ -72,23 +72,28 @@
             </div>
 
             <hr>
-            <div class="campo-container">
-              <label class="">Por ministros</label>
-              <div id="lista_ministros" class="sob-medida-item p-0 m-r-16 m-l-16 p-b-10">
-                <img alt="Ministra Cármen Lúcia" id="MIN. CÁRMEN LÚCIA" title="Ministra Cármen Lúcia" src="../assets/img/ministros/ministra_carmen_lucia.jpg" class="card-imagem-ministros" onclick="">
-                <img alt="Ministro Dias Toffoli" id="MIN. DIAS TOFFOLI" title="Ministro Dias Toffoli" src="../assets/img/ministros/ministro_dias_toffoli.jpg" class="card-imagem-ministros" onclick="">
-                <img alt="Ministro Celso de Melo" id="MIN. CELSO DE MELLO" title="Ministro Celso de Melo" src="../assets/img/ministros/ministro_celo_melo.jpg" class="card-imagem-ministros" onclick="">
-                <img alt="Ministro Marco Aurélio" id="MIN. MARCO AURÉLIO" title="Ministro Marco Aurélio" src="../assets/img/ministros/ministro_marco_aurelio.jpg" class="card-imagem-ministros" onclick="">
-                <img alt="Ministro Gilmar Mendes" id="MIN. GILMAR MENDES" title="Ministro Gilmar Mendes" src="../assets/img/ministros/ministro_mendes.jpg" class="card-imagem-ministros" onclick="">
-                <img alt="Ministro Ricardo Lewandowski" id="MIN. RICARDO LEWANDOWSKI" title="Ministro Ricardo Lewandowski" src="../assets/img/ministros/ministro_lewandowski.jpg" class="card-imagem-ministros" onclick="">
-                <img id="MIN. LUIZ FUX" alt="Ministro Luiz Fux" title="Ministro Luiz Fux" src="../assets/img/ministros/ministro_luiz_fux.jpg" class="card-imagem-ministros" onclick="">
-                <img alt="Ministra Rosa Weber" id="MIN. ROSA WEBER" title="Ministra Rosa Weber" src="../assets/img/ministros/ministra_rosa_weber.jpg" class="card-imagem-ministros" onclick="">
-                <img alt="Ministro Roberto Barroso" id="MIN. ROBERTO BARROSO" title="Ministro Roberto Barroso" src="../assets/img/ministros/ministro_roberto_barroso.jpg" class="card-imagem-ministros" onclick="">
-                <img alt="Ministro Edson Fachin" id="MIN. EDSON FACHIN" title="Ministro Edson Fachin" src="../assets/img/ministros/ministro_fachin.jpg" class="card-imagem-ministros" onclick="">        
-                <img alt="Ministro Alexandre de Moraes" id="MIN. ALEXANDRE DE MORAES" title="Ministro Alexandre de Moraes" src="../assets/img/ministros/ministro_moraes.jpg" class="card-imagem-ministros" onclick="">
-                </div>
-            </div>
 
+            <div class="campo-container m-t-16">
+              <label class="">Por ministros</label>
+              <nav id="lista_ministros_id" class="">
+                <div class="custom_select m-t-16 p-0 m-r-16 m-l-16 p-b-0">
+                <div class="custom_select_selected text-center">Imagem aleatoria</div>
+                  <ul class="custom_select_options">
+                    <li><img src="../assets/img/ministros/ministra_carmen_lucia.jpg" class="card-imagem-ministros img-responsive img-circle" onclick=""></li>
+                    <li><img src="../assets/img/ministros/ministro_dias_toffoli.jpg" class="card-imagem-ministros img-responsive img-circle" onclick=""></li>
+                    <li><img src="../assets/img/ministros/ministro_celo_melo.jpg" class="card-imagem-ministros img-responsive img-circle" onclick=""></li>
+                    <li><img src="../assets/img/ministros/ministro_marco_aurelio.jpg" class="card-imagem-ministros img-responsive img-circle" onclick=""></li>
+                    <li><img src="../assets/img/ministros/ministro_mendes.jpg" class="card-imagem-ministros img-responsive img-circle" onclick=""></li>
+                    <li><img src="../assets/img/ministros/ministro_lewandowski.jpg" class="card-imagem-ministros img-responsive img-circle" onclick=""></li>
+                    <li><img src="../assets/img/ministros/ministro_luiz_fux.jpg" class="card-imagem-ministros img-responsive img-circle" onclick=""></li>
+                    <li><img src="../assets/img/ministros/ministra_rosa_weber.jpg" class="card-imagem-ministros img-responsive img-circle" onclick=""></li>
+                    <li><img src="../assets/img/ministros/ministro_roberto_barroso.jpg" class="card-imagem-ministros img-responsive img-circle" onclick=""></li>
+                    <li><img src="../assets/img/ministros/ministro_fachin.jpg" class="card-imagem-ministros img-responsive img-circle" onclick=""></li>     
+                    <li><img src="../assets/img/ministros/ministro_moraes.jpg" class="card-imagem-ministros img-responsive img-circle" onclick=""></li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
 
           </div>   <!--card conteudo-->
         </div>     <!--fecha card -->
@@ -108,5 +113,7 @@
     <%- include src/includes/mapa-do-site.html %>
     <%- include src/includes/footer.html %>
   </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </body>
 </html>

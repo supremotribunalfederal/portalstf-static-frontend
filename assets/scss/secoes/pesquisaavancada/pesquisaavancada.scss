@@ -362,4 +362,68 @@ input[type=date]::-webkit-inner-spin-button{
   color: #4477aa;
 }
 
-.card-imagem-ministros{width:60px;height:60px;}
+.card-imagem-ministros{
+  width:60px;height:60px;
+}
+
+//select
+#lista_ministros_id div ul {
+  padding: 0%;
+  margin: 0%;
+  list-style: none;
+}
+
+#lista_ministros_id div ul li { 
+  display: inline;
+}
+
+#lista_ministros_id div ul li img {
+  padding: 2px 5px;
+}
+
+.custom_select_selected {
+  color: #333;
+  text-decoration: none;
+  outline: none;
+  padding: 5px;
+  font-size: 100%;
+  width: 100%;
+  cursor: hand;
+}
+
+.custom_select_selected:hover,
+.custom_select_selected:focus {
+  color: #333;
+}
+
+.custom_select_options {
+  border: 1 px solid #d4ca9a;
+  color: #000;
+  display: none;
+  width: 100%;
+  min-width: 140px;
+  list-style: none;
+  position: absolute;
+}
+
+.custom_select_options li {
+  width: 100%;
+}
+
+.custom_select_options li img {
+  background-color: #ccc;
+  width: 50%;
+  padding: 5px;
+  color: #fff;
+}
+
+.custom_select_options li img:hover {
+  background-color: #4477aa;
+  text-decoration: none;
+}
+
+.custom_select {
+  width: 150px;
+  z-index: 999;
+  position: relative;
+}
