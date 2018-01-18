@@ -7,65 +7,104 @@
   <title>Supremo Tribunal Federal</title>
   <link rel="icon" type="imagem/png" href="<%= require('assets/img/favicon.ico') %>" />
 </head>
-<body class="pagina-interna">
+<body>
   <div id="main" class="container-fluid p-0">
 
     <%- include src/includes/header.html %>
+  </br></br></br></br>
 
-    <%- include src/includes/pesquisa-lista.html %>
-    
     <section id="conteudo" class="container-fluid m-0 p-0">
-      <div class="row container center-block p-0">
-        <!--Menu Lateral-->
-        <div class="col-xs-12 col-sm-3 col-lg-2 p-16 p-xs-0 m-0">
-          <div class="menu-lateral hidden-xs">
-            <h4><span class="__stf-verde">O STF</span></h4>
-            <ul>
-              <li><a href="#"><span class="">Conheça o STF</span></a>
-                <ul>
-                  <li><a href="#"><span class="">Institucional</span></a></li>
-                  <li><a href="#">Visitação ao STF</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Ministros</a></li>
-              <li><a href="#">Histórico</a></li>
-              <li><a href="#">Quem é quem</a></li>
-              <li><a href="#">Programas e ações</a></li>
-              <li><a href="#">Gestão</a></li>
-            </ul>
+
+          <!--cards lateral esquerda-->
+      <div class="col-xs-12 col-sm-6 col-md-5 col-lg-3 p-16 p-sm-12 p-xs-0 m-0">
+
+        <div class="card text-center m-b-24 m-t-24">
+          <div class="card-titulo text-left">Indices</div>
+          <div class="indice1 m-t-16">
+            <img src="../../assets/img/pesquisaavancada/indice_em_analise.png">
+            <img src="../../assets/img/pesquisaavancada/indice_negada.png">
           </div>
-<!--            <div class="card m-t-16">
-                <div class="card-titulo">Filtros</div>
-                <div class="card-conteudo row m-0 m-t-16 m-b-16 p-0">
-                    <iframe class="full-width iframe-pequeno" src='http://transparencia.stf.jus.br/single?appid=b88460cb-8745-4fbc-973b-ddfee50c02aa&obj=cDzAm&select=clearall' style='border:none;'></iframe>
-                    <iframe class="full-width iframe-pequeno" src='http://transparencia.stf.jus.br/single?appid=b88460cb-8745-4fbc-973b-ddfee50c02aa&obj=FYJPf&select=clearall' style='border:none;'></iframe>
-                    <iframe class="full-width iframe-pequeno" src='http://transparencia.stf.jus.br/single?appid=b88460cb-8745-4fbc-973b-ddfee50c02aa&obj=cXwZ&select=clearall' style='border:none;'></iframe>
-                    <iframe class="full-width iframe-pequeno" src='http://transparencia.stf.jus.br/single?appid=b88460cb-8745-4fbc-973b-ddfee50c02aa&obj=peZCVP&select=clearall' style='border:none;'></iframe>
-                    <iframe class="full-width iframe-pequeno" src='http://transparencia.stf.jus.br/single?appid=b88460cb-8745-4fbc-973b-ddfee50c02aa&obj=FYJPf&select=clearall'></iframe>  
-                    <iframe class="full-width iframe-pequeno" src='http://transparencia.stf.jus.br/single?appid=b88460cb-8745-4fbc-973b-ddfee50c02aa&obj=vwVfLPM&select=clearall' style='border:none;'></iframe>
-                </div>
-            </div>-->
-            
+          <div class="m-t-16">
+            <img src="../../assets/img/pesquisaavancada/indice_reconhecida.png">
+            <img src="../../assets/img/pesquisaavancada/indice_total.png">
+          </div>
         </div>
 
-        <div id="texto-pagina-interna-wrapper" class="col-xs-12 col-sm-9 col-lg-10 row m-0 p-xs-0 m-t-24 m-b-24 p-sm-8 __borda-l-cinza-claro">
-          <div id="texto-pagina-interna" class="p-l-40 p-r-40 m-b-40 p-l-xs-0 p-r-xs-0">
-            <div class="texto m-0 row">
-              <div class="col-xs-12 col-md-12 p-0 p-l-xs-16 p-r-xs-16">
-                <div class="card-secao breadcrum hidden-xs col-xs-12 p-l-8 m-b-24">
-                  <span><a href="#">O STF</a></span>
-                  <span><a href="#">Repercussão Geral</a></span>
-                  <span>Votações</span>
-                </div>   
-                  
-                <iframe style="height: 1400px;" frameborder="0" class="full-width full-height" src='https://viana1/extensions/PesquisaAvancada/PesquisaAvancada.html'></iframe>              
-                
+        <div class="card m-b-24 m-t-24">
+          <div class="card-titulo">
+            <i class="glyphicon glyphicon-filter"></i>
+            Filtros
+          </div>
+          
+          <div id="card-filtros" class="card-conteudo  collapse navbar-collapse">
+            <div class="campo-container m-t-16">
+              <label class="control-label">Pesquisa livre</label>
+              <form id="filtro-palavra-chave">
+                <input id="palavraChave" type="text" class="col-md-9 col-xs-9 palavraPesquisa" placeholder="Digite algo ..." data-nome-filtro="Palvra Chave"/>
+              </form>
+            </div>
+            <br/> <br/>
+            <hr/>
+
+            <div class="campo-container m-t-16">
+              <label class="control-label">Repercussão Geral</label>
+              <div class="selectContainer">
+                <select class="form-control" placeholder="test">
+                  <option value="">Número Tema</option>
+                  <option value="">Situação da Repercussão Geral</option>
+                  <option value="">Situação Reconhecimento RG</option>
+                  <option value="">Situação Julgamento Mérito RG</option>
+                </select>
               </div>
             </div>
-          </div>
+            <hr/>
+
+            <div class="campo-container m-t-16">
+              <label class="control-label">Processo</label>
+              <div class="selectContainer">
+                <select class="form-control">
+                  <option value="">Classe</option>
+                  <option value="">Número Processo</option>
+                  <option value="">Relator</option>
+                  <option value="">Ramo direito</option>
+                </select>
+              </div>
+            </div>
+
+            <hr>
+            <div class="campo-container">
+              <label class="">Por ministros</label>
+              <div id="lista_ministros" class="sob-medida-item p-0 m-r-16 m-l-16 p-b-10">
+                <img alt="Ministra Cármen Lúcia" id="MIN. CÁRMEN LÚCIA" title="Ministra Cármen Lúcia" src="../assets/img/ministros/ministra_carmen_lucia.jpg" class="card-imagem-ministros" onclick="">
+                <img alt="Ministro Dias Toffoli" id="MIN. DIAS TOFFOLI" title="Ministro Dias Toffoli" src="../assets/img/ministros/ministro_dias_toffoli.jpg" class="card-imagem-ministros" onclick="">
+                <img alt="Ministro Celso de Melo" id="MIN. CELSO DE MELLO" title="Ministro Celso de Melo" src="../assets/img/ministros/ministro_celo_melo.jpg" class="card-imagem-ministros" onclick="">
+                <img alt="Ministro Marco Aurélio" id="MIN. MARCO AURÉLIO" title="Ministro Marco Aurélio" src="../assets/img/ministros/ministro_marco_aurelio.jpg" class="card-imagem-ministros" onclick="">
+                <img alt="Ministro Gilmar Mendes" id="MIN. GILMAR MENDES" title="Ministro Gilmar Mendes" src="../assets/img/ministros/ministro_mendes.jpg" class="card-imagem-ministros" onclick="">
+                <img alt="Ministro Ricardo Lewandowski" id="MIN. RICARDO LEWANDOWSKI" title="Ministro Ricardo Lewandowski" src="../assets/img/ministros/ministro_lewandowski.jpg" class="card-imagem-ministros" onclick="">
+                <img id="MIN. LUIZ FUX" alt="Ministro Luiz Fux" title="Ministro Luiz Fux" src="../assets/img/ministros/ministro_luiz_fux.jpg" class="card-imagem-ministros" onclick="">
+                <img alt="Ministra Rosa Weber" id="MIN. ROSA WEBER" title="Ministra Rosa Weber" src="../assets/img/ministros/ministra_rosa_weber.jpg" class="card-imagem-ministros" onclick="">
+                <img alt="Ministro Roberto Barroso" id="MIN. ROBERTO BARROSO" title="Ministro Roberto Barroso" src="../assets/img/ministros/ministro_roberto_barroso.jpg" class="card-imagem-ministros" onclick="">
+                <img alt="Ministro Edson Fachin" id="MIN. EDSON FACHIN" title="Ministro Edson Fachin" src="../assets/img/ministros/ministro_fachin.jpg" class="card-imagem-ministros" onclick="">        
+                <img alt="Ministro Alexandre de Moraes" id="MIN. ALEXANDRE DE MORAES" title="Ministro Alexandre de Moraes" src="../assets/img/ministros/ministro_moraes.jpg" class="card-imagem-ministros" onclick="">
+                </div>
+            </div>
+
+
+          </div>   <!--card conteudo-->
+        </div>     <!--fecha card -->
+        
+      </div>
+      
+      <div class="card m-b-48">
+        <div class="col-xs-12 col-sm-6 col-md-7 col-lg-9 row m-0 m-t-24">
+          <img src="../../assets/img/pesquisaavancada/grafico1.png" alt="" class="col-md-6 p-t-2">
+          <img src="../../assets/img/pesquisaavancada/grafico2.png" alt="" class="col-md-6 p-t-2">
+          <img src="../../assets/img/pesquisaavancada/exemplo_site.png" alt="" class="col-lg-12 row m-b-6 m-t-24">
         </div>
       </div>
     </section>
+
+
     <%- include src/includes/mapa-do-site.html %>
     <%- include src/includes/footer.html %>
   </div>
