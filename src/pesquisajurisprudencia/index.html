@@ -11,7 +11,7 @@
   <div id="main" class="container-fluid p-0">
     <%- include src/includes/header.html %>
     <%- include src/includes/pesquisa-jurisprudencia.html %>
-    <section id="conteudo" class="container-fluid m-0 p-0">
+    <section id="conteudo" class="container center-block p-0"> 
           <!--cards lateral esquerda-->
       <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 p-16 p-sm-12 p-xs-0 m-0">
         <div class="card m-b-24 m-t-24">
@@ -47,25 +47,27 @@
                 </li> 
               </ul>
 
-              <a data-toggle="collapse" href="#verMais" aria-expanded="false" aria-controls="verMais">
+              <a data-toggle="collapse" href="#verMaisPesquisas" aria-expanded="false" aria-controls="verMais">
                 <i class="glyphicon glyphicon-plus" aria-label="ver-mais"></i> Ver mais 43 pesquisas realizadas
               </a>
-              <div class="collapse ver-mais-pesquisas" id="verMais"> 
-                  <div class="card ver-mais">
-                    <p><input id="inputVerMais" type="text" list="suggestionsVer" class="col-md-9 col-xs-9 palavraPesquisa"></p>
-                    <datalist id="suggestionsVer">
-                      <option value="opc1"></option>
-                      <option value="OPC2"></option>
-                      <option value="opc3"></option>
-                      <option value="exemplo1"></option>
-                      <option value="exemplo2"></option>
-                      <option value="exemplo2"></option>
-                      <option value="teste"></option>
-                      <option value="teste 123"></option>
-                      <option value="teste5"></option>
-                    </datalist>
-                  </div>
-              </div>
+              <div class="collapse ver-mais-pesquisas" id="verMaisPesquisas"> 
+                <input type="search" class="col-md-9 col-xs-9 palavraPesquisa" id="inputMaisPesquisas" placeholder="Filtrar pesquisas" aria-controls="listagem-mais-pesquisas">
+                <button id="btnPesquisas" class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="inputMaisPesquisas" data-classe-campo="maisPesquisas">
+                    <i class="glyphicon glyphicon-plus"></i>
+                </button>
+                <br> <br>
+                <div class="card-lista">
+                  <ul class="lista-pesquisas" id="listagem-mais-pesquisas">
+                      <li><a>lista</a></li>
+                      <li><a>lista1</a></li>
+                      <li><a>lista2</a></li>
+                      <li><a>example</a></li>
+                      <li><a>test</a></li>
+                      <li><a>something</a></li>
+                      <li><a>palavra</a></li>
+                  </ul>
+                </div>
+            </div>
           </div>
         </div>     <!--fecha card -->
 
@@ -145,7 +147,7 @@
                 </a>
                 <div class="collapse ver-mais-pesquisas" id="verMaisRelator"> 
                     <div class="card">
-                       <ul>
+                       <ul class="lista-pesquisas">
                           <li>teste1</li>
                           <li>teste1</li>
                           <li>teste1</li>
@@ -290,7 +292,7 @@
                   </a>
                   <div class="collapse ver-mais-pesquisas" id="verMaisLegislacao"> 
                       <div class="card">
-                         <ul>
+                         <ul class="lista-pesquisas">
                             <li>lista</li>
                             <li>lista</li>
                             <li>lista</li>

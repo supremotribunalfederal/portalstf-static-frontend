@@ -69,7 +69,7 @@ $(function(){
 
         var idDoCampo = $(this).data('add-filtro');
         var classe = $(this).data('classe-campo');
-        var valorFiltro = $(this).data('formata-data') ? [moment($('#'+idDoCampo).val()).format("DD/MM/YYYY")] : $('#'+idDoCampo).val().split(";");
+        var valorFiltro = $(this).data('formata-data') ? [moment($('#'+idDoCampo).val()).format("DD/MM/YYYY")] : $('#'+idDoCampo).val().split(";"); // altera formato data 
 
         valorFiltro.forEach(function(valor){
             var tirarEspaco = $.trim(valor);
@@ -115,6 +115,24 @@ $(pesquisaCompleta).on("click",function(){
     padraoPesquisa();
 });
 
+
+//filtrar lista 
+
+$('input[type="search"]').keyup(function(){
+    
+    var that = this, $allListElements = $('.lista-pesquisas > li');
+
+    var $matchingListElements = $allListElements.filter(function(i, li){
+        var listItemText = $(li).text().toUpperCase(), searchText = that.value.toUpperCase();
+        return ~listItemText.indexOf(searchText);
+    });
+    
+    $allListElements.hide();
+    $matchingListElements.show();
+    
+});
+
+   
 
  
 
