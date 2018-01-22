@@ -50,7 +50,7 @@
     }
 
     .texto {
-      padding-left: 24px;
+      padding: 1rem;
     }
   }
 
@@ -62,5 +62,14 @@
     line-height: 40px;
     padding: 0;
     width: 40px;
+  }
+  &.btn-caret {
+    background: $stfAzul;
+    color: $stfBranco;
+    font-size: 1.125rem;
+    height: 30px;
+    line-height: 30px;
+    padding: 0;
+    width: 32px;
   }
 }

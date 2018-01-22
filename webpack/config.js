@@ -17,6 +17,7 @@ const externals =['datepicker'];
 const secoes = [
   'noticias',
   'textos',
+  'textocombox',
   'repercussaogeral',
   'jurisprudencia',
   'transparencia',

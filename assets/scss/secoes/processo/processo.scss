@@ -22,7 +22,7 @@ font-size: 0.8rem;
 }
 
 .card-processo {
-  min-height: 130px;
+  min-height: 175px;
   background-color: $stfAzulCinza;
   .processo-dados {
     font-size: 0.8rem;
@@ -73,7 +73,6 @@ font-size: 0.8rem;
   vertical-align: middle;
   height: 100%;
   min-height: 120px;
-  width: 21%;
   .numero {
     font-size: 1.3rem;
     font-weight: bold;
@@ -86,8 +85,7 @@ font-size: 0.8rem;
 }
 
 .lista-dados {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding: 16px 0;
   border-bottom: 1px solid $stfCinzaClaro;
 }
 
@@ -109,6 +107,7 @@ font-size: 0.8rem;
 .btn-peticao {
   margin: 0 auto;
   width: 40%;
+  min-width: 128px;
 }
 
 ul .nav-tabs {
@@ -155,13 +154,13 @@ ul .nav-tabs {
 }
 
 .tab-content {
-  padding: 0 20px;
+  padding: 0;
 }
 
 // andamentos
 
 .andamento-item {
-margin-bottom: 25px;
+margin-bottom: 4px;
 margin-left: 40px;
 position: relative;
 }
@@ -169,7 +168,7 @@ position: relative;
 background: #fff;
 border: 1px solid #ddd;
 border-radius: 3px;
-padding: 10px;
+padding: 5px 10px;
 position: relative;
 }
 .andamento-item .andamento-inner:before {
@@ -226,24 +225,23 @@ content: " ";
 display: table;
 }
 .andamento-item .message-head {
-border-bottom: 1px solid #eee;
-margin-bottom: 8px;
 padding-bottom: 8px;
-}
-.andamento-item .message-head .avatar {
-margin-right: 20px;
 }
 .andamento-item .message-head .andamento-detalhe {
 overflow: hidden;
 }
 .andamento-item .message-head .andamento-detalhe h5 {
-font-size: 16px;
+font-size: 0.95rem;
 font-weight: bold;
 margin: 0;
 }
+.andamento-data {
+  font-size: 0.95rem;
+  font-weight: bold;
+  margin: 0;
+}
 .andamento-docs {
   text-align: right;
-  min-height: 32px;
   .btn {
     line-height: 32px;
     height: 32px;
@@ -275,10 +273,3 @@ color: #777;
 font-size: 12px;
 line-height: 22px;
 }
-
-//listar partes select
-// body {margin:20px;}
-//
-// .select button {width:100%; text-align:left;}
-// .select .caret {position:absolute; right:10px; margin-top:10px;}
-// .select:last-child>.btn {border-top-left-radius:5px; border-bottom-left-radius:5px;}

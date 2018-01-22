@@ -39,3 +39,41 @@
 
 */
 
+
+.pagina-interna {
+  #texto-pagina-interna {
+    .texto {
+      border-bottom: 0;
+    }
+
+    .texto-titulo {
+      font-weight: bold;
+      font-size: 1.8rem;
+    }
+
+    .texto-gestor {
+      color: #ababab;
+
+      .glyphicon {
+        margin-right: 8px;
+      }
+    }
+
+    .texto-data {
+      color: #ababab;
+
+      .glyphicon {
+        margin-right: 8px;
+      }
+    }
+
+    .texto-conteudo {
+      text-align: justify;
+      text-justify: inter-word;
+      p {
+        font-size: 1rem;
+        line-height: 1.75;
+      }
+    }
+  }
+}
