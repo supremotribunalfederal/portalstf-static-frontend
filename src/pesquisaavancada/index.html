@@ -11,109 +11,165 @@
   <div id="main" class="container-fluid p-0">
 
     <%- include src/includes/header.html %>
-  </br></br></br></br>
+    
+    <!-- Quebra de linha que separa o header do conteudo principal. Deve ser mudado ... -->
+    <br><br>
 
-    <section id="conteudo" class="container-fluid m-0 p-0">
-
-      <!--cards lateral esquerda-->
-      <div class="col-xs-12 col-sm-6 col-md-5 col-lg-3 p-16 p-sm-12 p-xs-0 m-0">
-
-        <div class="card text-center m-b-24 m-t-24">
-          <div class="card-titulo text-left">Indices</div>
-          <div class="indice1 m-t-16">
-            <img src="../../assets/img/pesquisaavancada/indice_em_analise.png">
-            <img src="../../assets/img/pesquisaavancada/indice_negada.png">
-          </div>
-          <div class="m-t-16">
-            <img src="../../assets/img/pesquisaavancada/indice_reconhecida.png">
-            <img src="../../assets/img/pesquisaavancada/indice_total.png">
-          </div>
-        </div>
-
-        <div class="card m-b-24 m-t-24">
-          <div class="card-titulo">
-            <i class="glyphicon glyphicon-filter"></i>
-            Filtros
+    <section id="conteudo-principal" class="container-fluid m-0 p-0 m-t-64">
+      <div class="container center-block p-0">
+        <!--Menu Lateral-->
+        <div class="col-xs-12 col-sm-3 col-lg-3 p-16 p-xs-0 m-0">
+          <div class="card">
+            <h5 class="card-titulo">Indices</h5>
+            <div class="valores-indices text-center">
+              <img class="row" src="../assets/img/pesquisaavancada/indice_em_analise.png" alt="Foto do indice em analise">
+              <img class="row" src="../assets/img/pesquisaavancada/indice_negada.png" alt="Foto do indice de valores negados">
+              <img class="row" src="../assets/img/pesquisaavancada/indice_total.png" alt="Foto do indice total">
+              <img class="row" src="../assets/img/pesquisaavancada/indice_reconhecida.png" alt="Foto do indice de reconhecidas">
+            </div>
           </div>
           
-          <div id="card-filtros" class="card-conteudo  collapse navbar-collapse">
-            <div class="campo-container m-t-16">
-              <label class="control-label">Pesquisa livre</label>
-              <form id="filtro-palavra-chave">
-                <input id="palavraChave" type="text" class="col-md-9 col-xs-9 palavraPesquisa" placeholder="Digite algo ..." data-nome-filtro="Palvra Chave"/>
-              </form>
-            </div>
-            <br/> <br/>
-            <hr/>
+          <hr>
 
-            <div class="campo-container m-t-16">
-              <label class="control-label">Repercussão Geral</label>
-              <div class="selectContainer">
-                <select class="form-control" placeholder="test">
-                  <option value="">Número Tema</option>
-                  <option value="">Situação da Repercussão Geral</option>
-                  <option value="">Situação Reconhecimento RG</option>
-                  <option value="">Situação Julgamento Mérito RG</option>
-                </select>
+          <div class="card">
+            <h5 class="card-titulo"><i class="glyphicon glyphicon-filter"></i>Filtros</h5>
+            <div class="filtros-pesquisa-avançada">
+
+              <div id="filtro-pesquisa-livre" class="mt-16">
+                <label class="label-filtros m-b-14">Pesquisa livre</label>
+                  <input  class="form-control" type="text" placeholder="Digite ..."/>
+              </div>
+
+              <div id="filtro-repercussao-geral" class="m-t-16">
+                <label class="label-filtros m-b-14">Repercussão Geral</label>                
+                  <select class="form-control">
+                    <option value="#">Selecione ...</option>
+                    <option value="#">Número Tema</option>
+                    <option value="#">Situação da Repercussão Geral</option>
+                    <option value="#">Situação Reconhecimento RG</option>
+                    <option value="#">Situação Julgamento Mérito RG</option>
+                  </select>
+              </div>
+
+              <div id="filtro-processo" class="m-t-16">
+                <label class="label-filtros m-b-14">Processo</label>                
+                  <select class="form-control">
+                    <option value="#">Selecione ...</option>
+                    <option value="#">Classe</option>
+                    <option value="#">Número Processo</option>
+                    <option value="#">Relator</option>
+                    <option value="#">Ramo direito</option>
+                  </select>
+              </div>
+
+              <div id="filtro-processo" class="m-t-16 p-b-16">
+                <label class="label-filtros m-b-14 m-r-13">Ministros 
+                  <span class="glyphicon glyphicon-user"></span>:
+                </label>
+                
+                <%- include src/includes/ministros-drop.html %>
+
               </div>
             </div>
-            <hr/>
-
-            <div class="campo-container m-t-16">
-              <label class="control-label">Processo</label>
-              <div class="selectContainer">
-                <select class="form-control">
-                  <option value="">Classe</option>
-                  <option value="">Número Processo</option>
-                  <option value="">Relator</option>
-                  <option value="">Ramo direito</option>
-                </select>
-              </div>
-            </div>
-
-            <hr>
-
-            <div class="campo-container m-t-16">
-              <label class="">Por ministros</label>
-              <nav id="lista_ministros_id" class="">
-                <div class="custom_select m-t-16 p-0 m-r-16 m-l-16 p-b-0">
-                <div class="custom_select_selected text-center">Imagem aleatoria</div>
-                  <ul class="custom_select_options">
-                    <li><img src="../assets/img/ministros/ministra_carmen_lucia.jpg" class="card-imagem-ministros img-responsive img-circle" onclick=""></li>
-                    <li><img src="../assets/img/ministros/ministro_dias_toffoli.jpg" class="card-imagem-ministros img-responsive img-circle" onclick=""></li>
-                    <li><img src="../assets/img/ministros/ministro_celo_melo.jpg" class="card-imagem-ministros img-responsive img-circle" onclick=""></li>
-                    <li><img src="../assets/img/ministros/ministro_marco_aurelio.jpg" class="card-imagem-ministros img-responsive img-circle" onclick=""></li>
-                    <li><img src="../assets/img/ministros/ministro_mendes.jpg" class="card-imagem-ministros img-responsive img-circle" onclick=""></li>
-                    <li><img src="../assets/img/ministros/ministro_lewandowski.jpg" class="card-imagem-ministros img-responsive img-circle" onclick=""></li>
-                    <li><img src="../assets/img/ministros/ministro_luiz_fux.jpg" class="card-imagem-ministros img-responsive img-circle" onclick=""></li>
-                    <li><img src="../assets/img/ministros/ministra_rosa_weber.jpg" class="card-imagem-ministros img-responsive img-circle" onclick=""></li>
-                    <li><img src="../assets/img/ministros/ministro_roberto_barroso.jpg" class="card-imagem-ministros img-responsive img-circle" onclick=""></li>
-                    <li><img src="../assets/img/ministros/ministro_fachin.jpg" class="card-imagem-ministros img-responsive img-circle" onclick=""></li>     
-                    <li><img src="../assets/img/ministros/ministro_moraes.jpg" class="card-imagem-ministros img-responsive img-circle" onclick=""></li>
-                  </ul>
-                </div>
-              </nav>
-            </div>
-
-          </div>   <!--card conteudo-->
-        </div>     <!--fecha card -->
-        
-      </div>
-      
-      <div class="card m-b-48">
-        <div class="col-xs-12 col-sm-6 col-md-7 col-lg-9 row m-0 m-t-24">
-          <img src="../../assets/img/pesquisaavancada/grafico1.png" alt="" class="col-md-6 p-t-2">
-          <img src="../../assets/img/pesquisaavancada/grafico2.png" alt="" class="col-md-6 p-t-2">
-          <img src="../../assets/img/pesquisaavancada/exemplo_site.png" alt="" class="col-lg-12 row m-b-6 m-t-24">
+          </div>
         </div>
+
+        <div class="col-xs-12 col-sm-9 col-lg-9 row m-0 p-xs-0 m-t-24 m-b-24 p-sm-8 __borda-l-cinza-claro">
+          <div class="card">
+            <div class="container-fluid imagens-graficos">
+              <img src="../../assets/img/pesquisaavancada/grafico1.png" class="col-lg-6 p-xs-0 m-0 m-b-0 img-responsive" alt="" class="col-md-8">
+              <img src="../../assets/img/pesquisaavancada/grafico2.png" class="col-lg-6 p-xs-0 m-0 m-b-0 img-responsive" alt="" class="col-md-8">
+            </div>      
+          </div>
+
+          <hr>
+
+          <div class="container">
+              <div class="row">
+              </div>
+              <div class="row">
+                  <div class="col-lg-12">
+                      <h3>Tabela dinâmica de informações</h3>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-lg-9">
+                      <table class="table" id="table">
+                          <thead>
+                              <tr>
+                                  <th>First column</th>
+                                  <th>Second column</th>
+                                  <th>Third column</th>
+                                  <th>Fourth column</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                <td>Tema</td>
+                                <td>Tema</td>
+                                <td>Tema</td>
+                                <td><a href="#">LINK</a></td>
+                              </tr>
+                              <tr>
+                                <td>Lorem</td>
+                                <td>Ipsum</td>
+                                <td>Dolor</td>
+                                <td><a href="#">LINK</a></td>
+                              </tr>
+                              <tr>
+                                <td>Some</td>
+                                <td>More</td>
+                                <td>Latim</td>
+                                <td><a href="#">LINK</a></td>
+                              </tr>
+                              <tr>
+                                <td>Some</td>
+                                <td>More</td>
+                                <td>Latim</td>
+                                <td><a href="#">LINK</a></td>
+                              </tr>
+                              <tr>
+                                <td>Some</td>
+                                <td>More</td>
+                                <td>Latim</td>
+                                <td><a href="#">LINK</a></td>
+                              </tr>
+                              <tr>
+                                <td>Some</td>
+                                <td>More</td>
+                                <td>Latim</td>
+                                <td><a href="#">LINK</a></td>
+                              </tr>
+                              <tr>
+                                <td>Some</td>
+                                <td>More</td>
+                                <td>Latim</td>
+                                <td><a href="#">LINK</a></td>
+                              </tr>
+                              <tr>
+                                <td>Some</td>
+                                <td>More</td>
+                                <td>Latim</td>
+                                <td><a href="#">LINK</a></td>
+                              </tr>
+                            </tr>
+                              
+                          </tbody>
+                      </table>
+                      <hr>
+                  </div>
+              </div>
+          </div>
+          
+        </div>
+        
       </div>
     </section>
 
-
     <%- include src/includes/mapa-do-site.html %>
     <%- include src/includes/footer.html %>
+
   </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </body>
 </html>
