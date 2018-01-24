@@ -2,23 +2,13 @@ import style from '../../assets/scss/secoes/pesquisaavancada/pesquisaavancada.sc
 import $ from 'jquery';
 import moment from 'moment';
 
-$(function () {
-	$( '#table' ).searchable({
-			striped: true,
-			oddRow: { 'background-color': '#f5f5f5' },
-			evenRow: { 'background-color': '#fff' },
-			searchType: 'fuzzy'
+$(document).ready(function() {
+	$("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
+			e.preventDefault();
+			$(this).siblings('a.active').removeClass("active");
+			$(this).addClass("active");
+			var index = $(this).index();
+			$("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+			$("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
 	});
-	
-	$( '#searchable-container' ).searchable({
-			searchField: '#container-search',
-			selector: '.row',
-			childSelector: '.col-xs-4',
-			show: function( elem ) {
-					elem.slideDown(100);
-			},
-			hide: function( elem ) {
-					elem.slideUp( 100 );
-			}
-	})
 });

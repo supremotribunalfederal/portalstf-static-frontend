@@ -33,43 +33,10 @@
 
           <div class="card">
             <h5 class="card-titulo"><i class="glyphicon glyphicon-filter"></i>Filtros</h5>
-            <div class="filtros-pesquisa-avançada">
+            <div class="filtros-pesquisa-avançada texte-center">
+              
+              <%- include src/includes/pesquisa-avancada/tabs-filtro.html %>
 
-              <div id="filtro-pesquisa-livre" class="mt-16">
-                <label class="label-filtros m-b-14">Pesquisa livre</label>
-                  <input  class="form-control" type="text" placeholder="Digite ..."/>
-              </div>
-
-              <div id="filtro-repercussao-geral" class="m-t-16">
-                <label class="label-filtros m-b-14">Repercussão Geral</label>                
-                  <select class="form-control">
-                    <option value="#">Selecione ...</option>
-                    <option value="#">Número Tema</option>
-                    <option value="#">Situação da Repercussão Geral</option>
-                    <option value="#">Situação Reconhecimento RG</option>
-                    <option value="#">Situação Julgamento Mérito RG</option>
-                  </select>
-              </div>
-
-              <div id="filtro-processo" class="m-t-16">
-                <label class="label-filtros m-b-14">Processo</label>                
-                  <select class="form-control">
-                    <option value="#">Selecione ...</option>
-                    <option value="#">Classe</option>
-                    <option value="#">Número Processo</option>
-                    <option value="#">Relator</option>
-                    <option value="#">Ramo direito</option>
-                  </select>
-              </div>
-
-              <div id="filtro-processo" class="m-t-16 p-b-16">
-                <label class="label-filtros m-b-14 m-r-13">Ministros 
-                  <span class="glyphicon glyphicon-user"></span>:
-                </label>
-                
-                <%- include src/includes/ministros-drop.html %>
-
-              </div>
             </div>
           </div>
         </div>

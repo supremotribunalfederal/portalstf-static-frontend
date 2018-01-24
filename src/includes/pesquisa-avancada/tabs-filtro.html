@@ -1,0 +1,70 @@
+<div class="col-lg-2 bhoechie-tab-container">
+    <div class="col-lg-2 bhoechie-tab-menu">
+      <div class="list-group">
+        <a href="#" class="list-group-item active text-center">
+          <h4 class="glyphicon glyphicon-search" title="Por pesquisa livre"></h4><br/>
+        </a>
+        <a href="#" class="list-group-item text-center">
+          <h4 class="glyphicon glyphicon-user" title="Por ministros"></h4><br/>
+        </a>
+        <a href="#" class="list-group-item text-center">
+          <h4 class="glyphicon glyphicon-star-empty" title="Pré-configurados"></h4><br/>
+        </a>
+        <a href="#" class="list-group-item text-center">
+          <h4 class="glyphicon glyphicon-bookmark" title="Por processos e RG"></h4><br/>
+        </a>
+      </div>
+    </div>
+    <div class="col-lg-7 col-md-9 col-sm-9 col-xs-9 bhoechie-tab">
+        <!-- sessão de pesquisa livre -->
+        <div class="bhoechie-tab-content active">
+            <center>
+              <label class="label-filtros"></label>
+              <h1 class="glyphicon glyphicon-search"></h1>
+              <input  class="form-control" type="text"/>
+            </center>
+        </div>
+        <!-- Sessão de ministros -->
+        <div class="bhoechie-tab-content">
+            <center>
+              <label class="label-filtros m-b-14 m-r-13"> 
+                <span class="glyphicon glyphicon-user"></span>:
+              </label>
+                
+              <%- include ministros-drop.html %>
+            </center>
+        </div>
+
+        <!-- Sessão de filtros configurados -->
+        <div class="bhoechie-tab-content"  id="bhochie-tab-configurados">
+            <center>
+              
+            </center>
+        </div>
+
+        <!-- Sessão de processos e repercussão geral -->
+        <div class="bhoechie-tab-content">
+          <label class="label-filtros">Repercussão Geral</label>
+          <center>
+            <select class="form-control">
+              <option value="#">Selecione ...</option>
+              <option value="#">Número Tema</option>
+              <option value="#">Situação da Repercussão Geral</option>
+              <option value="#">Situação Reconhecimento RG</option>
+              <option value="#">Situação Julgamento Mérito RG</option>
+            </select>
+          </center>
+
+          <label class="label-filtros">Processo</label>
+          <center>
+            <select class="form-control">
+              <option value="#">Selecione ...</option>
+              <option value="#">Classe</option>
+              <option value="#">Número Processo</option>
+              <option value="#">Relator</option>
+              <option value="#">Ramo direito</option>
+            </select>
+          </center>
+        </div>
+    </div>
+</div>
