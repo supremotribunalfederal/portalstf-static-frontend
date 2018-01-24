@@ -89,13 +89,10 @@ ul.dropdown-cart li .item-right button{
 
 // Vertical Tabs
 
-
-
 /*  bhoechie tab */
 div.bhoechie-tab-container{
   background-color: #ffffff;
   padding: 0 !important;
-  
   background-clip: padding-box;
   opacity: 0.97;
   filter: alpha(opacity=97);
@@ -106,9 +103,6 @@ div.bhoechie-tab-menu{
   padding-left: 0;
   padding-bottom: 0;
   box-shadow: 0 2px 4px rgba(0,0,0,.16);  
-}
-div#bhochie-tab-configurados {
-  height: auto;  
 }
 div.bhoechie-tab {
   padding-left: 0px;
@@ -158,6 +152,12 @@ div.bhoechie-tab-content{
   background-color: #ffffff;
   /* border: 1px solid #eeeeee; */
   padding: 10px 10px;  
+}
+
+/* Configuração feita de forma menos otimizada [Melhorar] */
+div.bhoechie-tab-c {
+  border: 1px solid #eeeeee;
+  box-shadow: 0 2px 4px rgba(0,0,0,.16);
 }
 
 div.bhoechie-tab div.bhoechie-tab-content:not(.active){
