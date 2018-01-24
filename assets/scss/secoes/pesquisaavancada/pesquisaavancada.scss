@@ -1,5 +1,8 @@
 @import "../../variaveis/cores";
 
+a {
+  cursor:pointer;
+}
 .valores-indices {
   padding-left: auto;
   padding-right: auto;
@@ -38,7 +41,11 @@
 .label-filtros {
   padding-top: 10px;
 }
-
+.num_tema{
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
 // dropdown de ministros
 
 ul.dropdown-cart{
@@ -157,3 +164,23 @@ div.bhoechie-tab-content{
 div.bhoechie-tab div.bhoechie-tab-content:not(.active){
   display: none;
 }
+
+// informações da modal do tema
+
+th{
+  text-align: center;
+  max-width: 130px;
+}
+.modal-content{
+  padding: 10px;
+}
+.descricao{
+  max-width: 600px;
+}
+
+tr{
+  margin: 5px;
+  text-align: center;
+}
+
+
