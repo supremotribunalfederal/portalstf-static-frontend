@@ -46,8 +46,21 @@ a {
   vertical-align: middle;
   cursor: pointer;
 }
+
 // dropdown de ministros
 
+.conjunto-busca-relator {
+  position: relative;
+  left: 6px;
+}
+input[name=busca] {
+  background-image: url('../../img/pesquisaavancada/search-icon.png');
+  background-position: 10px 10px;   
+} 
+input[name=busca-relator] {
+  background-image: url('../../img/pesquisaavancada/icone-pessoa.png');
+  background-position: 2px 7px; 
+}
 ul.dropdown-cart{
   min-width:250px;
   position: absolute;
@@ -102,8 +115,6 @@ div.bhoechie-tab-container{
   padding: 0 !important;
   border-radius: 4px;
   -moz-border-radius: 4px;
-  border:1px solid #ddd;
-  -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.16);
   box-shadow: 0 2px 4px rgba(0,0,0,.16);
   -moz-box-shadow: 0 2px 4px rgba(0,0,0,.16);
   background-clip: padding-box;
@@ -183,4 +194,49 @@ tr{
   text-align: center;
 }
 
+.situacao{
+  text-align: center;
+  z-index: auto;
+  }
+.badge-repercussao{
+    background-color: #4cbb71;
+    color: white;
+    padding: 10px;
+   
+    margin-top: 70px;
+}
 
+// glyphicons
+
+.glyphicon-ok-circle {
+  color: $stfVerde;
+}
+.glyphicon-remove-circle{
+  color: $stfVermelho;
+}
+.glyphicon-links-tabela {
+  color: purple;
+}
+
+// search animado
+
+input[name=busca], input[name=busca-relator] {
+  width: 0px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+  background-color: white;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[name=busca]:focus {
+  width: 100%;
+}
+
+input[name=busca-relator]:focus {
+  width: 90%;
+}

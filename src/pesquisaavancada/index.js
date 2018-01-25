@@ -2,6 +2,7 @@ import style from '../../assets/scss/secoes/pesquisaavancada/pesquisaavancada.sc
 import $ from 'jquery';
 import moment from 'moment';
 
+/* Método para tabs dos filtros */
 $(document).ready(function() {
 	$("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
 			e.preventDefault();

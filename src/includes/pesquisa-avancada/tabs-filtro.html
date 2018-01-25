@@ -2,10 +2,7 @@
     <div class="col-lg-2 bhoechie-tab-menu">
       <div class="list-group">
         <a href="#" class="list-group-item active text-center">
-          <h4 class="glyphicon glyphicon-search" title="Por pesquisa livre"></h4><br/>
-        </a>
-        <a href="#" class="list-group-item text-center">
-          <h4 class="glyphicon glyphicon-user" title="Por ministros"></h4><br/>
+          <h4 class="glyphicon glyphicon-search" title="Principais"></h4><br/>
         </a>
         <a href="#" class="list-group-item text-center">
           <h4 class="glyphicon glyphicon-star-empty" title="Pré-configurados"></h4><br/>
@@ -16,173 +13,300 @@
       </div>
     </div>
     <div class="col-lg-10 col-md-9 col-sm-9 col-xs-9 bhoechie-tab">
-        <!-- sessão de pesquisa livre -->
-        <div class="bhoechie-tab-content active">
-            <center>
-              <label class="label-filtros">Número Tema</label>
-               <span class="glyphicon glyphicon-search"></span>
-              <input  class="form-control" type="text"/>
-            </center>
-        </div>
+
+      <!-- sessão de pesquisa livre -->
+      <div class="bhoechie-tab-content active">
+        <center>
+          <input type="text" name="busca" placeholder="Filtrar...">
+        </center>
+        
+        <hr>
+
         <!-- Sessão de ministros -->
-        <div class="bhoechie-tab-content">
-            <center>
-              <label class="label-filtros m-b-14 m-r-13"> 
-                <span class="glyphicon glyphicon-user"></span>:
-              </label>
-                
-              <%- include ministros-drop.html %>
-            </center>
-        </div>
+        <%- include ministros-drop.html %>
+      </div>
 
-        <!-- Sessão de filtros configurados -->
-        <div class="bhoechie-tab-content bhoechie-tab-c">
-            <center>
-
-              <!-- Simulação de listagem dos filtros -->
-              <!-- Esse código será bem menor quando houver a ligação com os objs Qlik -->
-                <div class="card">
-                  <div class="card-header" id="headingOne">
-                    <h5 class="mb-0">
-                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                        Filtro 1
-                      </button>
-                    </h5>
-                  </div>
-                  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                    <div class="card-body">
-                      <ul>
-                        <li>Item</li>
-                        <li>Item</li>
-                        <li>Item</li>
-                        <li>Item</li>
-                        <li>Item</li>
-                      </ul>
-                    </div>
-                  </div>
+      <!-- Sessão de filtros configurados -->
+      <div class="bhoechie-tab-content bhoechie-tab-c">
+        <label class="label-filtros">Configurados</label>        
+        <center>
+          <!-- Simulação de listagem dos filtros -->
+          <!-- Esse código será bem menor quando houver a ligação com os objs Qlik -->
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    Filtro 1
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                  <ul>
+                    <li>Item</li>
+                    <li>Item</li>
+                    <li>Item</li>
+                    <li>Item</li>
+                    <li>Item</li>
+                  </ul>
                 </div>
+              </div>
+            </div>
 
-                <div class="card">
-                  <div class="card-header" id="headingTwo">
-                    <h5 class="mb-0">
-                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          Filtro 2
-                      </button>
-                    </h5>
-                  </div>
-                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                    <div class="card-body">
-                      <ul>
-                        <li>Item</li>
-                        <li>Item</li>
-                        <li>Item</li>
-                        <li>Item</li>
-                        <li>Item</li>
-                      </ul>
-                    </div>
-                  </div>
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Filtro 2
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                  <ul>
+                    <li>Item</li>
+                    <li>Item</li>
+                    <li>Item</li>
+                    <li>Item</li>
+                    <li>Item</li>
+                  </ul>
                 </div>
+              </div>
+            </div>
 
-                <div class="card">
-                  <div class="card-header" id="headingThree">
-                    <h5 class="mb-0">
-                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          Filtro 3
-                      </button>
-                    </h5>
-                  </div>
-                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                    <div class="card-body">
-                      <ul>
-                        <li>Item</li>
-                        <li>Item</li>
-                        <li>Item</li>
-                        <li>Item</li>
-                        <li>Item</li>
-                      </ul>
-                    </div>
-                  </div>
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Filtro 3
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body">
+                  <ul>
+                    <li>Item</li>
+                    <li>Item</li>
+                    <li>Item</li>
+                    <li>Item</li>
+                    <li>Item</li>
+                  </ul>
                 </div>
+              </div>
+            </div>
 
-                <div class="card">
-                  <div class="card-header" id="headingFour">
-                    <h5 class="mb-0">
-                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                          Filtro 4
-                      </button>
-                    </h5>
-                  </div>
-                  <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-                    <div class="card-body">
-                      <ul>
-                        <li>Item</li>
-                        <li>Item</li>
-                        <li>Item</li>
-                        <li>Item</li>
-                        <li>Item</li>
-                      </ul>
-                    </div>
-                  </div>
+            <div class="card">
+              <div class="card-header" id="headingFour">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      Filtro 4
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                <div class="card-body">
+                  <ul>
+                    <li>Item</li>
+                    <li>Item</li>
+                    <li>Item</li>
+                    <li>Item</li>
+                    <li>Item</li>
+                  </ul>
                 </div>
+              </div>
+            </div>
 
-                <div class="card">
-                  <div class="card-header" id="headingFive">
-                    <h5 class="mb-0">
-                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                          Filtro 5
-                      </button>
-                    </h5>
-                  </div>
-                  <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
-                    <div class="card-body">
-                      <ul>
-                        <li>Item</li>
-                        <li>Item</li>
-                        <li>Item</li>
-                        <li>Item</li>
-                        <li>Item</li>
-                      </ul>
-                    </div>
-                  </div>
+            <div class="card">
+              <div class="card-header" id="headingFive">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                      Filtro 5
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                <div class="card-body">
+                  <ul>
+                    <li>Item</li>
+                    <li>Item</li>
+                    <li>Item</li>
+                    <li>Item</li>
+                    <li>Item</li>
+                  </ul>
                 </div>
-                <!-- Fim simulação de listagem dos filtros --> 
+              </div>
+            </div>
+            <!-- Fim simulação de listagem dos filtros --> 
 
-            </center>
+          </center>
         </div>
 
         <!-- Sessão de processos e repercussão geral -->
         <div class="bhoechie-tab-content">
           <label class="label-filtros">Repercussão Geral</label>
           <center>
-            <select class="form-control">
-              <option value="#">Selecione ...</option>
-              <option value="#">Número Tema</option>
-              <option value="#">Situação da Repercussão Geral</option>
-              <option value="#">Situação Reconhecimento RG</option>
-              <option value="#">Situação Julgamento Mérito RG</option>
-            </select>
+            <div class="card">
+              <div class="card-header" id="filtro-numero-tema">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#numero-tema" aria-expanded="false" aria-controls="numero-tema">
+                    Número tema
+                  </button>
+                </h5>
+              </div>
+              <div id="numero-tema" class="collapse" aria-labelledby="filtro-numero-tema" data-parent="#accordion">
+                <div class="card-body">
+                  <input type="text" class="form-control" placeholder="Pesquise ..."  list="lista-numeros-temas" autocomplete="off">
+                  <datalist id="lista-numeros-temas">
+                    <option value="1"></option>
+                    <option value="2"></option>
+                    <option value="3"></option>
+                  </datalist>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="filtro-situacao-rg">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#situacao-rg" aria-expanded="false" aria-controls="situacao-rg">
+                    Situação da Repercussão Geral
+                  </button>
+                </h5>
+              </div>
+              <div id="situacao-rg" class="collapse" aria-labelledby="filtro-situacao-rg" data-parent="#accordion">
+                <div class="card-body">
+                  <input type="text" class="form-control" placeholder="Pesquise ..."  list="lista-situacoes-rg" autocomplete="off">
+                  <datalist id="lista-situacoes-rg">
+                    <option value="opcão"></option>
+                    <option value="opcão"></option>
+                    <option value="opcão"></option>
+                  </datalist>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="filtro-reconhecimento-rg">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#reconhecimento-rg" aria-expanded="false" aria-controls="reconhecimento-rg">
+                    Situação Reconhecimento RG
+                  </button>
+                </h5>
+              </div>
+              <div id="reconhecimento-rg" class="collapse" aria-labelledby="filtro-reconhecimento-rg" data-parent="#accordion">
+                <div class="card-body">
+                  <input type="text" class="form-control" placeholder="Pesquise ..."  list="lista-opcoes-reconhecimento" autocomplete="off">
+                  <datalist id="lista-opcoes-reconhecimento">
+                      <option value="opcão"></option>
+                      <option value="opcão"></option>
+                      <option value="opcão"></option>
+                  </datalist>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="filtro-julgamento-merito">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#julgamento-merito" aria-expanded="false" aria-controls="julgamento-merito">
+                    Situação Julgamento Mérito RG
+                  </button>
+                </h5>
+              </div>
+              <div id="julgamento-merito" class="collapse" aria-labelledby="filtro-julgamento-merito" data-parent="#accordion">
+                <div class="card-body">
+                  <input type="text" class="form-control" placeholder="Pesquise ..."  list="lista-opcoes-julgamento" autocomplete="off">
+                  <datalist id="lista-opcoes-julgamento">
+                      <option value="opcão"></option>
+                      <option value="opcão"></option>
+                      <option value="opcão"></option>
+                  </datalist>
+                </div>
+              </div>
+            </div>
           </center>
 
           <label class="label-filtros">Processo</label>
           <center>
-            <select class="form-control">
-              <option value="#">Selecione ...</option>
-              <option value="#">Classe</option>
-              <option value="#">Número Processo</option>
-              <option value="#">Relator</option>
-              <option value="#">Ramo direito</option>
-            </select>
-          </center>
+            <div class="card">
+              <div class="card-header" id="filtro-classe">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#classe" aria-expanded="false" aria-controls="classe">
+                    Classe
+                  </button>
+                </h5>
+              </div>
+              <div id="classe" class="collapse" aria-labelledby="filtro-classe" data-parent="#accordion">
+                <div class="card-body">
+                  <input type="text" class="form-control" placeholder="Pesquise ..."  list="lista-classe" autocomplete="off">
+                  <datalist id="lista-classe">
+                    <option value="1"></option>
+                    <option value="2"></option>
+                    <option value="3"></option>
+                  </datalist>
+                </div>
+              </div>
+            </div>
 
-          <label class="label-filtros">Ramo do Direito</label>
-          <center>
-            <select class="form-control">
-              <option value="#">Selecione ...</option>
-              <option value="#">option</option>
-              <option value="#">option</option>
-              <option value="#">select</option>
-              <option value="#">Select</option>
-            </select>
+            <div class="card">
+              <div class="card-header" id="filtro-numero-processo">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#numero-processo" aria-expanded="false" aria-controls="numero-processo">
+                    Número processo
+                  </button>
+                </h5>
+              </div>
+              <div id="numero-processo" class="collapse" aria-labelledby="filtro-numero-processo" data-parent="#accordion">
+                <div class="card-body">
+                  <input type="text" class="form-control" placeholder="Pesquise ..."  list="lista-numeros-processos" autocomplete="off">
+                  <datalist id="lista-numeros-processos">
+                    <option value="opcão"></option>
+                    <option value="opcão"></option>
+                    <option value="opcão"></option>
+                  </datalist>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="filtro-relator">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#relator" aria-expanded="false" aria-controls="relator">
+                    Relator
+                  </button>
+                </h5>
+              </div>
+              <div id="relator" class="collapse" aria-labelledby="filtro-relator" data-parent="#accordion">
+                <div class="card-body">
+                  <input type="text" class="form-control" placeholder="Pesquise ..."  list="lista-relatores" autocomplete="off">
+                  <datalist id="lista-relatores">
+                      <option value="opcão"></option>
+                      <option value="opcão"></option>
+                      <option value="opcão"></option>
+                  </datalist>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="filtro-ramo-direito">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#ramo-direito" aria-expanded="false" aria-controls="ramo-direito">
+                      Ramo do direito
+                  </button>
+                </h5>
+              </div>
+              <div id="ramo-direito" class="collapse" aria-labelledby="filtro-ramo-direito" data-parent="#accordion">
+                <div class="card-body">
+                  <input type="text" class="form-control" placeholder="Pesquise ..."  list="lista-ramos-direitos" autocomplete="off">
+                  <datalist id="lista-ramos-direitos">
+                      <option value="opcão"></option>
+                      <option value="opcão"></option>
+                      <option value="opcão"></option>
+                  </datalist>
+                </div>
+              </div>
+            </div>
           </center>
 
           <label class="label-filtros">Período</label>
