@@ -251,3 +251,16 @@ input[name=busca]:focus {
 input[name=busca-relator]:focus {
   width: 90%;
 }
+
+// icones 
+
+.ok{
+  color: $stfVerde;
+}
+.glyphicon-remove{
+  color: rgb(207, 74, 70);
+}
+
+i{
+  cursor: pointer;
+}
