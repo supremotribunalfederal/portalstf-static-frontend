@@ -3,6 +3,17 @@
 a {
   cursor:pointer;
 }
+// indicadores/temas
+.indicadores{
+  font-weight: bold;
+  margin-top: 2px;
+}
+
+td > h3{
+ color: $stfAzulHover;
+ font-weight: bold;
+ margin-top: -1px;
+}
 .valores-indices {
   padding-left: auto;
   padding-right: auto;
@@ -194,21 +205,21 @@ tr{
   text-align: center;
 }
 
-.situacao{
-  text-align: center;
+.badge-repercussao, .badge-suspensao{
+  background-color: #4cbb71;
+  color: white;
+}
+.badge{
+  margin: 10px;
+  padding: 10px;
+  width: 200px;
   z-index: auto;
-  }
-.badge-repercussao{
-    background-color: #4cbb71;
-    color: white;
-    padding: 10px;
-   
-    margin-top: 70px;
+  text-align: center;
 }
 
 // glyphicons
 
-.glyphicon-ok-circle {
+.harepercussao {
   color: $stfVerde;
 }
 .glyphicon-remove-circle{
