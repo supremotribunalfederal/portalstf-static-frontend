@@ -210,7 +210,7 @@ tr{
   color: white;
 }
 .badge{
-  margin: 10px;
+  margin-top: 10px;
   padding: 10px;
   width: 200px;
   z-index: auto;
@@ -219,15 +219,7 @@ tr{
 
 // glyphicons
 
-.harepercussao {
-  color: $stfVerde;
-}
-.glyphicon-remove-circle{
-  color: $stfVermelho;
-}
-.glyphicon-links-tabela {
-  color: purple;
-}
+
 
 // search animado
 
@@ -254,13 +246,17 @@ input[name=busca-relator]:focus {
 
 // icones 
 
-.ok{
+.ok, .mer_julgado{
   color: $stfVerde;
 }
-.glyphicon-remove{
+.clear, .mer_pendente{
   color: rgb(207, 74, 70);
 }
 
 i{
   cursor: pointer;
+}
+
+.less{
+  display: none;
 }

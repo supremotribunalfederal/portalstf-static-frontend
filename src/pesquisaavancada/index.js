@@ -13,3 +13,20 @@ $(document).ready(function() {
 			$("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
 	});
 });
+
+
+//mostrar e esconder icone descricao do tema
+var mostrar=$('.more');
+var esconder = $('.less');
+
+mostrar.click(function(e){
+	e.preventDefault();
+	mostrar.hide();
+	esconder.show();
+});
+
+esconder.click(function(e){
+	e.preventDefault();
+	esconder.hide();
+	mostrar.show();
+});
