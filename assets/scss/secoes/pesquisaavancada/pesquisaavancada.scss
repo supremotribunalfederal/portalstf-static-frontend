@@ -252,6 +252,9 @@ input[name=busca-relator]:focus {
 .clear, .mer_pendente{
   color: rgb(207, 74, 70);
 }
+.suspensao{
+  color: #182491;
+}
 
 i{
   cursor: pointer;
@@ -259,8 +262,4 @@ i{
 
 .less{
   display: none;
-}
-
-.acoes{
-  align-items:flex-start
 }
