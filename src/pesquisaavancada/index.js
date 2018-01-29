@@ -47,8 +47,3 @@ var pesquisa = function(input, fonte, tipo) {
 
 pesquisa("#input-pesquisa-livre", "#tabela-RG", "tr");
 pesquisa("#input-busca-ministro", ".dropdown-menu-ministros", "li");
-
-$('.selectpicker').selectpicker({
-  style: 'btn-info',
-  size: 4
-});
