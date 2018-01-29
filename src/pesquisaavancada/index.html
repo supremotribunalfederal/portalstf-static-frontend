@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>Supremo Tribunal Federal</title>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <title>Supremo Tribunal Federal</title>
   <link rel="icon" type="imagem/png" href="<%= require('assets/img/favicon.ico') %>" />
 </head>
 <body>
@@ -70,11 +72,9 @@
 
           <div class="card">
             <h5 class="card-titulo"><i class="glyphicon glyphicon-filter"></i>Filtros</h5>
-            <div class="filtros-pesquisa-avançada">
 
               <%- include src/includes/pesquisa-avancada/tabs-filtro.html %>
 
-            </div>
           </div>
         </div>
 
@@ -110,7 +110,7 @@
                               <th class="acoes"></th>
                             </tr>
                           </thead>
-                          <tbody>
+                          <tbody id="tabela-RG">
                             <tr>
                               <td>
                                 <a class="num_tema" data-toggle="modal" data-target=".bd-example-modal-lg">984 </a>
@@ -266,4 +266,5 @@
   </div>
 
 </body>
+
 </html>

@@ -30,3 +30,20 @@ esconder.click(function(e){
 	esconder.hide();
 	mostrar.show();
 });
+
+/**
+ * @description 
+ */
+var pesquisa = function(input, fonte, tipo) {
+	$(document).ready(function(){
+		$(input).on("keyup", function() {
+			var value = $(this).val().toLowerCase();
+			$(fonte + " " + tipo).filter(function() {
+				$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+			});
+		});
+	});
+}
+
+pesquisa("#input-pesquisa-livre", "#tabela-RG", "tr");
+pesquisa("#input-busca-ministro", ".dropdown-menu-ministros", "li");

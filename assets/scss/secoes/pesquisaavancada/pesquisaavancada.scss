@@ -60,18 +60,21 @@ td > h3{
 
 // dropdown de ministros
 
+#input-busca-ministro {
+  border: 0;
+  border-radius: 0;
+  background: #f1f1f1;
+}
 .conjunto-busca-relator {
   position: relative;
   left: 6px;
 }
 input[name=busca] {
   background-image: url('../../img/pesquisaavancada/search-icon.png');
-  background-position: 10px 10px;   
+  background-position: 5px 8px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 30px;  
 } 
-input[name=busca-relator] {
-  background-image: url('../../img/pesquisaavancada/icone-pessoa.png');
-  background-position: 2px 7px; 
-}
 ul.dropdown-cart{
   min-width:250px;
   position: absolute;
@@ -215,33 +218,6 @@ tr{
   width: 200px;
   z-index: auto;
   text-align: center;
-}
-
-// glyphicons
-
-
-
-// search animado
-
-input[name=busca], input[name=busca-relator] {
-  width: 0px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  font-size: 12px;
-  background-color: white;
-  background-repeat: no-repeat;
-  padding: 12px 20px 12px 40px;
-  -webkit-transition: width 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out;
-}
-
-input[name=busca]:focus {
-  width: 100%;
-}
-
-input[name=busca-relator]:focus {
-  width: 90%;
 }
 
 // icones 
