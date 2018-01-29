@@ -30,3 +30,15 @@ esconder.click(function(e){
 	esconder.hide();
 	mostrar.show();
 });
+
+/**
+ * @description 
+ */
+$(document).ready(function(){
+  $("#input-pesquisa-livre").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#tabela-RG tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
