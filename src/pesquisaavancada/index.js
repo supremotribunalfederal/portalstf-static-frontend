@@ -34,11 +34,21 @@ esconder.click(function(e){
 /**
  * @description 
  */
-$(document).ready(function(){
-  $("#input-pesquisa-livre").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $("#tabela-RG tr").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    });
-  });
+var pesquisa = function(input, fonte, tipo) {
+	$(document).ready(function(){
+		$(input).on("keyup", function() {
+			var value = $(this).val().toLowerCase();
+			$(fonte + " " + tipo).filter(function() {
+				$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+			});
+		});
+	});
+}
+
+pesquisa("#input-pesquisa-livre", "#tabela-RG", "tr");
+pesquisa("#input-busca-ministro", ".dropdown-menu-ministros", "li");
+
+$('.selectpicker').selectpicker({
+  style: 'btn-info',
+  size: 4
 });
