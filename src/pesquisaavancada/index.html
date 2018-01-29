@@ -21,9 +21,9 @@
     <section id="conteudo-principal" class="container-fluid m-0 p-0 m-t-64">
       <div class="container center-block p-0">
         <!--Menu Lateral-->
-        <div class="col-xs-12 col-sm-3 col-lg-3 p-xs-0 m-0 m-t-24">
+        <div class="col-xs-12 col-sm-4 col-lg-4 p-xs-0 m-0 m-t-24">
           <div class="card">
-            <h5 class="card-titulo card-titulo-over" id="">Temas
+            <h5 class="card-titulo card-titulo-over">Temas
               
             </h5>
             <div class="valores-indices text-center">
@@ -33,9 +33,13 @@
                     <h2 class="indicadores"  >978</h2> 
                     <h3>Total</h3>
                   </td>
-                  <td class="reconhecida">
+                  <td class="reconhecida" style="border-right: 1px solid #f0eaea">
                       <h2 class="indicadores" style="color: #4477AA">657</h2> 
                       <h3>Reconhecida</h3>
+                  </td>
+                  <td class="julgado temas-adicionais">
+                    <h2 class="indicadores" style="color: #4477AA" >359</h2> 
+                    <h3>Mérito julgado</h3>
                   </td>
                 </tr>
 
@@ -44,22 +48,16 @@
                     <h2 class="indicadores" style="color: #D9534F" >317</h2> 
                     <h3>Negada</h3>
                   </td>
-                  <td class="emAnalise" style="border-top: 0;">
+                  <td class="emAnalise" style="border-top: 0; border-right: 1px solid #f0eaea">
                       <h2 class="indicadores" style="color: #68B95C">4</h2> 
                       <h3>Em Análise</h3>
                   </td>
-                </tr>
 
-                <tr>
-                    <td class="julgado">
-                      <h2 class="indicadores" style="color: #4477AA" >359</h2> 
-                      <h3>Mérito julgado</h3>
-                    </td>
-                    <td class="nao_julgado">
-                        <h2 class="indicadores" style="color: #68B95C">302</h2> 
-                        <h3>Mérito não Julgado</h3>
-                    </td>
-                  </tr>
+                  <td class="nao_julgado temas-adicionais" style="border-top: 0;">
+                    <h2 class="indicadores" style="color: #68B95C">302</h2> 
+                    <h3>Mérito não Julgado</h3>
+                 </td>
+                </tr>
               </table>
               <!--<img class="row" src="../assets/img/pesquisaavancada/indice_em_analise.png" alt="Foto do indice em analise">
               <img class="row" src="../assets/img/pesquisaavancada/indice_reconhecida.png" alt="Foto do indice de reconhecidas">
@@ -72,13 +70,11 @@
 
           <div class="card">
             <h5 class="card-titulo"><i class="glyphicon glyphicon-filter"></i>Filtros</h5>
-
-              <%- include src/includes/pesquisa-avancada/tabs-filtro.html %>
-
+              <%- include src/includes/pesquisa-avancada/horizontal-tabs.html %>
           </div>
         </div>
 
-        <div class="col-xs-12 col-sm-9 col-lg-9 row m-0 p-xs-0 m-t-24 m-b-24 p-sm-8 __borda-l-cinza-claro">
+        <div class="col-xs-12 col-sm-8 col-lg-8 row m-0 p-xs-0 m-t-24 m-b-24 p-sm-8 __borda-l-cinza-claro">
           <div class="card card-graficos">
             <div class="container-fluid imagens-graficos">
               <img src="../../assets/img/pesquisaavancada/grafico1.png" class="col-lg-6 p-xs-0 m-0 m-b-0 img-responsive" alt="" class="col-md-8">

@@ -2,7 +2,7 @@ import style from '../../assets/scss/secoes/pesquisaavancada/pesquisaavancada.sc
 import $ from 'jquery';
 import moment from 'moment';
 
-/* Método para tabs dos filtros */
+/*
 $(document).ready(function() {
 	$("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
 			e.preventDefault();
@@ -13,7 +13,7 @@ $(document).ready(function() {
 			$("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
 	});
 });
-
+*/
 
 //mostrar e esconder icone descricao do tema
 var mostrar=$('.more');
@@ -47,3 +47,16 @@ var pesquisa = function(input, fonte, tipo) {
 
 pesquisa("#input-pesquisa-livre", "#tabela-RG", "tr");
 pesquisa("#input-busca-ministro", ".dropdown-menu-ministros", "li");
+
+// codigos teste
+
+$(document).ready(function() {
+    $("div.list-group>a").click(function(e) {
+        e.preventDefault();
+        $(this).siblings('a.active').removeClass("active");
+        $(this).addClass("active");
+        var index = $(this).index();
+        $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+        $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+    });
+});
