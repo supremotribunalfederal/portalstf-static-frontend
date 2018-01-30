@@ -124,7 +124,7 @@ ul.dropdown-cart li .item-right button{
   background: #f1f1f1;
 }
 
-// informações da modal do tema
+/* Informações das modais */
 
 th{
   text-align: center;
@@ -145,16 +145,39 @@ tr{
 .badge-repercussao{
   background-color: #4cbb71;
   color: white;
+  width: 200px;
 }
 .badge-suspensao{
   background-color: #3383dd;
+  width: 200px;
+}
+.badge-relator{
+  background-color: #08aae7;
+  color: #ffffff;
+  margin-left: 10px;
 }
 .badge{
   margin-top: 10px;
   padding: 10px;
-  width: 200px;
   z-index: auto;
   text-align: center;
+}
+figure.imagem-card-ministro {
+  position: relative;
+  float: left;
+  margin-right: 10px
+}
+label.titulo-cargos {
+  font-size: 150%;
+}
+label.nome-ministro {
+  font-size: 300%;
+}
+hr.divide-nomes-principais {
+  margin: 7px;
+}
+ul.formacao li, ul.atividades-exercidas li {
+  margin-bottom: 10px;
 }
 
 // icones 
