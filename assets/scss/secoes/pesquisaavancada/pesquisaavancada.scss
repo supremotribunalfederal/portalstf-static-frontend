@@ -3,29 +3,6 @@
 a {
   cursor:pointer;
 }
-// indicadores/temas
-.indicadores{
-  font-weight: bold;
-  margin: 0px;
-}
-td > h3{
- color: $stfAzulHover;
- font-weight: bold;
- margin: 0px ;
-}
-.valores-indices {
-  padding-left: auto;
-  padding-right: auto;
-}
-.imagens-graficos {
-  border: none
-}
-.card-titulo-over {
-  margin-top: 0px;
-}
-.card-graficos {
-  height: 203px;
-}
 .card-titulo {
   margin-bottom: 0px;
 }
@@ -34,9 +11,47 @@ td > h3{
   text-align: center;
   vertical-align: middle;
 }
+.imagens-graficos {
+  border: none
+}
+.card-graficos {
+  height: 203px;
+}
 
+/* Card de Temas */ 
 
-/* Dropdown de ministros */
+table.valores-temas .valor{
+  font-weight: bold;
+  margin: 0px;
+}
+td > h3{
+ color: $stfAzulHover;
+ font-weight: bold;
+ margin: 0px ;
+}
+.card-titulo-over {
+  margin-top: 0px;
+}
+// Tabela
+h2#valor-reconhecida, h2#valor-merito-julgado {
+  color: #4477AA;
+}
+h2#valor-negada {
+  color: #D9534F;
+}
+h2#valor-em-analise, h2#valor-merito-n-julgado {
+  color: #68B95C;
+}
+td#valor-tema-negada, td#valor-tema-em-analise {
+  border-top: 0;
+  padding-bottom: 12px;
+}
+td#valor-tema-merito-julgado, td#valor-tema-merito-n-julgado {
+  border-top: 1px solid #f0eaea;
+  padding-top: 12px;
+}
+
+/* Dropdown de Ministros */
 
 .dropdown-menu-ministros {
   position: relative;

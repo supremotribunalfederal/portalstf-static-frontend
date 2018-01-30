@@ -23,43 +23,41 @@
         <!--Menu Lateral-->
         <div class="col-xs-12 col-sm-3 col-lg-3 p-xs-0 m-0 m-t-24">
           <div class="card">
-            <h5 class="card-titulo card-titulo-over">Temas
-              
-            </h5>
-            <div class="valores-indices text-center">
-              <table class="table tabela-indicadores">
-                <tr>
-                  <td class="total">
-                    <h2 class="indicadores"  >978</h2> 
-                    <h3>Total</h3>
-                  </td>
-                  <td class="reconhecida" style="border-right: 1px solid #f0eaea">
-                      <h2 class="indicadores" style="color: #4477AA">657</h2> 
-                      <h3>Reconhecida</h3>
-                  </td>
-                  <td class="julgado temas-adicionais">
-                    <h2 class="indicadores" style="color: #4477AA" >359</h2> 
-                    <h3>Mérito julgado</h3>
-                  </td>
-                </tr>
+            <h5 class="card-titulo card-titulo-over">Temas</h5>
+            <table class="table valores-temas">
+              <tr>
+                <td>
+                  <h2 class="valor" id="valor-total">978</h2> 
+                  <h3>Total</h3>
+                </td>
+                <td>
+                    <h2 class="valor" id="valor-reconhecida">657</h2> 
+                    <h3>Reconhecida</h3>
+                </td>
+              </tr>
 
-                <tr>
-                  <td class="negada"style="border-top: 0;" >
-                    <h2 class="indicadores" style="color: #D9534F" >317</h2> 
-                    <h3>Negada</h3>
-                  </td>
-                  <td class="emAnalise" style="border-top: 0; border-right: 1px solid #f0eaea">
-                      <h2 class="indicadores" style="color: #68B95C">4</h2> 
-                      <h3>Em Análise</h3>
-                  </td>
+              <tr>
+                <td id="valor-tema-negada">
+                  <h2 class="valor" id="valor-negada">317</h2> 
+                  <h3>Negada</h3>
+                </td>
+                <td id="valor-tema-em-analise">
+                    <h2 class="valor" id="valor-em-analise">4</h2> 
+                    <h3>Em Análise</h3>
+                </td>
+              </tr>
 
-                  <td class="nao_julgado temas-adicionais" style="border-top: 0;">
-                    <h2 class="indicadores" style="color: #68B95C">302</h2> 
-                    <h3>Mérito não Julgado</h3>
-                 </td>
-                </tr>
-              </table>
-            </div>
+              <tr>
+                <td id="valor-tema-merito-julgado">
+                  <h2 class="valor" id="valor-merito-julgado" >359</h2> 
+                  <h3>Mérito julgado</h3>
+                </td>
+                <td id="valor-tema-merito-n-julgado">
+                  <h2 class="valor" id="valor-merito-n-julgado">302</h2> 
+                  <h3>Mérito não Julgado</h3>
+                </td>
+              </tr>
+            </table>
           </div>
           
           <hr>
