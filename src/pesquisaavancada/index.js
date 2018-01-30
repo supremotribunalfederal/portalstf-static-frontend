@@ -35,7 +35,7 @@ var filtraDados = function(dadoDeEntrada, elementoASerfiltrado, tagParaFiltragem
 	});
 }
 
-filtraDados("#input-pesquisa-livre", "#tabela-RG", "tr");
+filtraDados(".pesquisa-livre", "#tabela-RG", "tr");
 filtraDados("#input-busca-ministro", ".dropdown-menu-ministros", "li");
 
 /**
@@ -47,7 +47,7 @@ $(document).ready(function() {
         $(this).siblings('a.active').removeClass("active");
         $(this).addClass("active");
         var index = $(this).index();
-        $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
-        $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+        $("div.conteudo-tab-filtros>div.conteudo-sessao-filtros").removeClass("active");
+        $("div.conteudo-tab-filtros>div.conteudo-sessao-filtros").eq(index).addClass("active");
     });
 });

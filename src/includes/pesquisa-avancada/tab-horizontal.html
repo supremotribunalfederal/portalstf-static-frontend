@@ -19,7 +19,7 @@
         <!-- Sessão de pesquisas principais -->
         <div class="conteudo-sessao-filtros active">
             
-            <input class="form-control" name="busca" id="input-pesquisa-livre" type="text" placeholder="Pesquisa Livre">
+            <input class="form-control pesquisa-livre" type="text" placeholder="Pesquisa Livre">
             
                 <%- include ministros-drop.html %>
                 <br>
@@ -68,7 +68,7 @@
         <!-- Sessão dos predefinidos -->
         <div class="conteudo-sessao-filtros">
             
-                <label class="label-filtros">Pré-definidos</label>        
+                <label class="nome-filtro">Pré-definidos</label>        
                 
                   <!-- Simulação de listagem dos filtros -->
                   <!-- Esse código será bem menor quando houver a ligação com os objs Qlik -->
@@ -244,7 +244,7 @@
 
         <!-- Sessão de repercussão geral e processos -->
         <div class="conteudo-sessao-filtros">
-            <label class="label-filtros">Repercussão Geral</label>
+            <label class="nome-filtro">Repercussão Geral</label>
               <div class="card">
                 <div class="card-header" id="filtro-numero-tema">
                   <h5 class="mb-0">
@@ -328,7 +328,7 @@
               </div>
             </center>
   
-            <label class="label-filtros">Processo</label>
+            <label class="nome-filtro">Processo</label>
             <center>
               <div class="card">
                 <div class="card-header" id="filtro-classe">
@@ -411,7 +411,7 @@
               </div>
             </center>
   
-            <label class="label-filtros">Período</label>
+            <label class="nome-filtro">Período</label>
               
                 <input type="text" id="data_inicial" class="form-control" placeholder="De" onfocus="(this.type='date')" />
               

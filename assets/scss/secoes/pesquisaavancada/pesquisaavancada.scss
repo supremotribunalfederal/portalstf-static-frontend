@@ -17,39 +17,17 @@ td > h3{
   padding-left: auto;
   padding-right: auto;
 }
-
-.dropdown-menu-ministros {
-  position: relative;
-}
-
-.mais-detalhes-ministros {
-  font-size: 80%;
-  display: inline-flex;
-  padding-top: 12px;
-}
-
-.mais-detalhes-texto {
-  padding-right: 6px;
-}
-
 .imagens-graficos {
   border: none
 }
-
 .card-titulo-over {
   margin-top: 0px;
 }
-
 .card-graficos {
   height: 203px;
 }
-
 .card-titulo {
   margin-bottom: 0px;
-}
-
-.label-filtros {
-  padding-top: 10px;
 }
 .num_tema{
   cursor: pointer;
@@ -57,23 +35,25 @@ td > h3{
   vertical-align: middle;
 }
 
-// dropdown de ministros
 
-#input-busca-ministro {
-  border: 0;
-  border-radius: 0;
-  background: #f1f1f1;
+/* Dropdown de ministros */
+
+.dropdown-menu-ministros {
+  position: relative;
+}
+.mais-detalhes-ministros {
+  font-size: 80%;
+  display: inline-flex;
+  padding-top: 12px;
+}
+.mais-detalhes-texto {
+  padding-right: 6px;
 }
 .conjunto-busca-relator {
   position: relative;
   left: 6px;
 }
-input[name=busca] {
-  background-image: url('../../img/pesquisaavancada/search-icon.png');
-  background-position: 5px 8px;
-  background-repeat: no-repeat;
-  padding: 12px 20px 12px 30px;  
-} 
+
 ul.dropdown-cart{
   min-width:250px;
   position: absolute;
@@ -118,6 +98,12 @@ ul.dropdown-cart li .item-right button{
 .row-padding {
   margin-top: 25px;
   margin-bottom: 25px;
+}
+
+#input-busca-ministro {
+  border: 0;
+  border-radius: 0;
+  background: #f1f1f1;
 }
 
 // informações da modal do tema
@@ -188,10 +174,6 @@ div.principal-tab-filtros{
   opacity: 0.97;
   filter: alpha(opacity=97);
 }
-.list-group-item.active, .list-group-item.active:focus{
-  background-color: $stfAzulClaro;
-  border-color: $stfAzulClaro;
-}
 div.menu-tab-filtros div.list-group>a:first-child{
   border-top-right-radius: 0;
   -moz-border-top-right-radius: 0;
@@ -200,33 +182,46 @@ div.menu-tab-filtros div.list-group>a:last-child{
   border-bottom-right-radius: 0;
   -moz-border-bottom-right-radius: 0;
 }
-
 div.conteudo-sessao-filtros{
   background-color: #ffffff;
   /* border: 1px solid #eeeeee; */
   padding-left: 20px;
   padding-top: 10px;
 }
-
 div.conteudo-tab-filtros div.conteudo-sessao-filtros:not(.active){
   display: none;
 }
-
 div.list-group-menu .list-group-item {
   display: inline-block;
   margin-bottom: 0;
   margin-left:-4px;
   margin-right: 0;
 }
-
 div.list-group-menu .list-group-item:first-child {
-	border-top-right-radius:0;
-	border-bottom-left-radius:4px;
+  border-top-right-radius:0;
+  border-bottom-left-radius:4px;
 }
 div.list-group-menu .list-group-item:last-child {
-	border-top-right-radius:4px;
-	border-bottom-left-radius:0;
+  border-top-right-radius:4px;
+  border-bottom-left-radius:0;
 }
+.list-group-item.active, .list-group-item.active:focus{
+  background-color: $stfAzulClaro;
+  border-color: $stfAzulClaro;
+}
+
+label.nome-filtro {
+  padding-top: 10px;
+}
+input.pesquisa-livre {
+  background-image: url('../../img/pesquisaavancada/search-icon.png');
+  background-position: 5px 6px;
+  background-repeat: no-repeat;
+  padding: 9px 20px 9px 30px;  
+  border: 1px solid;
+} 
+
+
 //conteudo da pesquisa tabs
 
 .btn-link{
