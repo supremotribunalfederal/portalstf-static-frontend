@@ -24,7 +24,43 @@
             <hr>
             
             <%- include ministros-drop.html %>
-            <br>
+            
+            <hr>
+
+            <input type="text" class="form-control opcao-filtro-rg" placeholder="Número do tema"  list="lista-numeros-temas" autocomplete="on">
+            <datalist id="lista-numeros-temas">
+              <option value="979"></option>
+              <option value="980"></option>
+              <option value="981"></option>
+              <option value="982"></option>
+              <option value="983"></option>
+              <option value="984"></option>
+            </datalist>
+            
+            <input type="text" class="form-control opcao-filtro-rg" placeholder="Situação da Repercussão Geral"  list="lista-situacao-rg" autocomplete="on">
+            <datalist id="lista-situacao-rg">
+              <option value="Em Análise Preliminar de RG"></option>
+              <option value="RG Reconhecida"></option>
+              <option value="Com RG – Mérito Julgado"></option>
+              <option value="Com RG – Reafirmação de Jurisprudência"></option>
+              <option value="Sem RG – Matéria Constitucional"></option>
+              <option value="Sem RG – Matéria Infraconstitucional"></option>
+            </datalist>
+  
+            <input type="text" class="form-control opcao-filtro-rg" placeholder="Situação Reconhecimento RG"  list="lista-opcoes-reconhecimento" autocomplete="on">
+            <datalist id="lista-opcoes-reconhecimento">
+              <option value="RG negada"></option>
+              <option value="RG reconhecida"></option>
+              <option value="Tema em análise"></option>
+            </datalist>
+  
+
+            <input type="text" class="form-control opcao-filtro-rg" placeholder="Situação Julgamento Mérito RG"  list="lista-opcoes-julgamento" autocomplete="on">
+            <datalist id="lista-opcoes-julgamento">
+                <option value="**Não se aplica**"></option>
+                <option value="Julgado"></option>
+                <option value="Pendente"></option>
+            </datalist>
 
         </div>
 
@@ -206,44 +242,6 @@
 
         <!-- Sessão de repercussão geral e processos -->
         <div class="conteudo-sessao-filtros p-l-0">
-            <label class="nome-filtro p-t-10">Repercussão Geral</label>
-  
-            <input type="text" class="form-control opcao-filtro-rg" placeholder="Número do tema"  list="lista-numeros-temas" autocomplete="on">
-            <datalist id="lista-numeros-temas">
-              <option value="979"></option>
-              <option value="980"></option>
-              <option value="981"></option>
-              <option value="982"></option>
-              <option value="983"></option>
-              <option value="984"></option>
-            </datalist>
-            
-            <input type="text" class="form-control opcao-filtro-rg" placeholder="Situação da Repercussão Geral"  list="lista-situacao-rg" autocomplete="on">
-            <datalist id="lista-situacao-rg">
-              <option value="Em Análise Preliminar de RG"></option>
-              <option value="RG Reconhecida"></option>
-              <option value="Com RG – Mérito Julgado"></option>
-              <option value="Com RG – Reafirmação de Jurisprudência"></option>
-              <option value="Sem RG – Matéria Constitucional"></option>
-              <option value="Sem RG – Matéria Infraconstitucional"></option>
-            </datalist>
-  
-            <input type="text" class="form-control opcao-filtro-rg" placeholder="Situação Reconhecimento RG"  list="lista-opcoes-reconhecimento" autocomplete="on">
-            <datalist id="lista-opcoes-reconhecimento">
-              <option value="RG negada"></option>
-              <option value="RG reconhecida"></option>
-              <option value="Tema em análise"></option>
-            </datalist>
-  
-
-            <input type="text" class="form-control opcao-filtro-rg" placeholder="Situação Julgamento Mérito RG"  list="lista-opcoes-julgamento" autocomplete="on">
-            <datalist id="lista-opcoes-julgamento">
-                <option value="**Não se aplica**"></option>
-                <option value="Julgado"></option>
-                <option value="Pendente"></option>
-            </datalist>
-
-            <hr>
   
             <label class="nome-filtro">Processo</label>
             <center>
