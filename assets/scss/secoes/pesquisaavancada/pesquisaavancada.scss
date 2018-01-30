@@ -119,9 +119,10 @@ ul.dropdown-cart li .item-right button{
 }
 
 #input-busca-ministro {
-  border: 0;
-  border-radius: 0;
-  background: #f1f1f1;
+  border: 1px solid #c9c5c5;
+  border-radius: 5px;
+  background: transparent;
+  margin-bottom: 5px;
 }
 
 /* Informações das modais */
@@ -181,7 +182,6 @@ ul.formacao li, ul.atividades-exercidas li {
 }
 
 // icones 
-
 .ok, .mer_julgado{
   color: $stfVerde;
 }
@@ -199,12 +199,19 @@ i{
 .less{
   display: none;
 }
-
+.add{
+  vertical-align: bottom; 
+  font-size: 1.2em
+}
+.filter-icon{
+  vertical-align: bottom; 
+  font-size: 1.5em;
+}
 /* Tab dos filtros */
 
 div.principal-tab-filtros{
   width: 100%;
-  background-color: #ffffff;
+  background-color: transparent;
   padding: 5px !important;
   border-radius: 4px;
   -moz-border-radius: 4px;
@@ -255,7 +262,7 @@ input.pesquisa-livre {
   background-position: 5px 6px;
   background-repeat: no-repeat;
   padding: 9px 20px 9px 30px;  
-  border: 1px solid;
+  border: 1px solid #c9c5c5;
 }
 input.opcao-filtro-rg {
   margin-bottom: 6px;
@@ -290,4 +297,11 @@ input.opcao-filtro-rg {
 .input-fav{
   height: 0%;
   width: 0%;
+}
+
+.tabela-rg, .tabela-rg > thead{
+  border: 1px solid #f0eaea;
+}
+.tabela-rg > thead > tr > th{
+
 }
