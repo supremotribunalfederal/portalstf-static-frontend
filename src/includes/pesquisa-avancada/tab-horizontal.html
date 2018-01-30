@@ -2,22 +2,65 @@
 
     <!-- Menu de navegação da tab -->
     <div class="menu-tab-filtros list-group list-group-menu text-center">
-        <a href="#" class="list-group-item active text-center">
-            <i class="material-icons" title="Pesquisa Livre">search</i> 
-        </a>  
-        <a href="#" class="list-group-item text-center">
+        
+      <a href="#" class="list-group-item active text-center">
             <i class="material-icons" title="Filtros Pré-Definidos">star</i> 
-        </a>
-        <a href="#" class="list-group-item text-center">
+      </a>
+      
+      <a href="#" class="list-group-item text-center">
+          <i class="material-icons" title="Pesquisa Livre">search</i> 
+      </a>  
+      
+      <a href="#" class="list-group-item text-center">
             <i class="material-icons" title="Repercussão Geral e Processos">bookmark_border</i> 
-        </a>
+      </a>
     </div>
     
     <!-- Conteúdo das abas -->
     <div class="conteudo-tab-filtros col-lg-12 col-md-12 col-sm-12 col-xs-12 p-0">
 
-        <!-- Sessão de pesquisas principais -->
+        
+        <!-- Sessão dos predefinidos -->
         <div class="conteudo-sessao-filtros active p-l-0">
+                    
+          <!-- Simulação de listagem dos filtros -->
+          <!-- Esse código será bem menor quando houver a ligação com os objs Qlik -->
+     
+            <div class="btn-group btn-group-toggle text-center" data-toggle="buttons">
+              <label class="btn btn-secondary btn-fav btn-lg btn-default-bordered active col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
+                <input class="input-fav" type="radio" name="options" id="option1" autocomplete="off"> Relação Completa de Temas
+              </label>
+              <label class="btn btn-secondary btn-fav btn-lg btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
+                  <input class="input-fav" type="radio" name="options" id="option1" autocomplete="off"> Teses de Repercussão Geral
+                </label>
+                <label class="btn btn-secondary btn-fav btn-lg btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
+                    <input type="radio" class="input-fav" name="options" id="option1" autocomplete="off"> Temas com RG Negada
+                </label>
+                <label class="btn btn-secondary btn-fav btn-lg  btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
+                      <input type="radio" class="input-fav" name="options" id="option1" autocomplete="off"> Temas com RG Reconhecida
+                </label>
+                <label class="btn btn-secondary btn-fav btn-lg  btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
+                    <input type="radio" class="input-fav" name="options" id="option1" autocomplete="off"> Com RG Reconhecida e Mérito Julgado
+                  </label>
+                <label class="btn btn-secondary btn-fav btn-lg btn-default-bordered col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
+                      <input type="radio" class="input-fav" name="options" id="option1" autocomplete="off"> Com RG Reconhecida e Mérito Pendente
+                    </label>
+                <label class="btn btn-secondary btn-fav btn-lg  btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
+                        <input type="radio" class="input-fav" name="options" id="option1" autocomplete="off"> Temas com Suspensão Nacional
+                </label>
+                <label class="btn btn-secondary btn-fav btn-lg  btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
+                  <input type="radio" class="input-fav" name="options" id="option2" autocomplete="off"> Representativo de Controvérsia
+                </label>
+            </div>
+
+
+
+            <!-- Fim simulação de listagem dos filtros --> 
+      </div>
+
+      
+      <!-- Sessão de pesquisas principais -->
+        <div class="conteudo-sessao-filtros p-l-0">
             
             <input class="form-control pesquisa-livre" type="text" placeholder="Pesquisa Livre">
             
@@ -60,41 +103,7 @@
 
         </div>
 
-        <!-- Sessão dos predefinidos -->
-        <div class="conteudo-sessao-filtros p-l-0">
-                    
-            <!-- Simulação de listagem dos filtros -->
-            <!-- Esse código será bem menor quando houver a ligação com os objs Qlik -->
-       
-              <div class="btn-group btn-group-toggle text-center" data-toggle="buttons">
-                  <label class="btn btn-secondary btn-fav btn-lg btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
-                    <input class="input-fav" type="radio" name="options" id="option1" autocomplete="off"> Teses de Repercussão Geral
-                  </label>
-                  <label class="btn btn-secondary btn-fav btn-lg btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
-                      <input type="radio" class="input-fav" name="options" id="option1" autocomplete="off"> Temas com RG Negada
-                  </label>
-                  <label class="btn btn-secondary btn-fav btn-lg  btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
-                        <input type="radio" class="input-fav" name="options" id="option1" autocomplete="off"> Temas com RG Reconhecida
-                  </label>
-                  <label class="btn btn-secondary btn-fav btn-lg  btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
-                      <input type="radio" class="input-fav" name="options" id="option1" autocomplete="off"> Com RG Reconhecida e Mérito Julgado
-                    </label>
-                  <label class="btn btn-secondary btn-fav btn-lg btn-default-bordered col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
-                        <input type="radio" class="input-fav" name="options" id="option1" autocomplete="off"> Com RG Reconhecida e Mérito Pendente
-                      </label>
-                  <label class="btn btn-secondary btn-fav btn-lg  btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
-                          <input type="radio" class="input-fav" name="options" id="option1" autocomplete="off"> Temas com Suspensão Nacional
-                  </label>
-                  <label class="btn btn-secondary btn-fav btn-lg  btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
-                    <input type="radio" class="input-fav" name="options" id="option2" autocomplete="off"> Representativo de Controvérsia
-                  </label>
-              </div>
-
-
-
-              <!-- Fim simulação de listagem dos filtros --> 
-        </div>
-
+      
         <!-- Sessão de repercussão geral e processos -->
         <div class="conteudo-sessao-filtros p-l-0">
   
