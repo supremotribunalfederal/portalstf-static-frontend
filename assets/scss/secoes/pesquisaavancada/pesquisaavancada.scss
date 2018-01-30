@@ -118,11 +118,12 @@ ul.dropdown-cart li .item-right button{
   margin-bottom: 25px;
 }
 
-#input-busca-ministro {
-  border: 1px solid #c9c5c5;
-  border-radius: 5px;
-  background: transparent;
+input#busca-ministro {
+  background-image: url('../../img/pesquisaavancada/icone-pessoa.png');
+  background-position: -1px 3px;
+  background-repeat: no-repeat;
   margin-bottom: 5px;
+  padding-left: 35px;
 }
 
 /* Informações das modais */
@@ -261,8 +262,7 @@ input.pesquisa-livre {
   background-image: url('../../img/pesquisaavancada/search-icon.png');
   background-position: 5px 6px;
   background-repeat: no-repeat;
-  padding: 9px 20px 9px 30px;  
-  border: 1px solid #c9c5c5;
+  padding: 9px 20px 9px 35px;
 }
 input.opcao-filtro-rg {
   margin-bottom: 6px;

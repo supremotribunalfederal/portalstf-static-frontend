@@ -51,3 +51,17 @@ $(document).ready(function() {
         $("div.conteudo-tab-filtros>div.conteudo-sessao-filtros").eq(index).addClass("active");
     });
 });
+
+/**
+ * @description Alterna os icones que mostram e escondem os filtros da parte de pesquisa livre
+*/
+$(document).ready(function() {
+	$("#icone-add-filtros").click(function() {
+		var valorIcone = $("#icone-add-filtros").text();
+		if(valorIcone == "add_circle_outline") {
+			$("#icone-add-filtros").text("remove");
+		} else {	
+			$("#icone-add-filtros").text("add_circle_outline");
+		}
+	});
+});
