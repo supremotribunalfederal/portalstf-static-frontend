@@ -120,76 +120,6 @@ ul.dropdown-cart li .item-right button{
   margin-bottom: 25px;
 }
 
-// Vertical Tabs
-
-/*  bhoechie tab 
-div.bhoechie-tab-container{
-  background-color: #ffffff;
-  padding: 1px !important;
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0,0,0,.16);
-  -moz-box-shadow: 0 2px 4px rgba(0,0,0,.16);
-  background-clip: padding-box;
-  opacity: 0.97;
-  filter: alpha(opacity=97);
-  width:100%;
-  border-top-width: 0px;
-}
-div.bhoechie-tab-menu{
-  padding-right: 0;
-  padding-left: 0;
-  padding-bottom: 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,.16); 
-}
-div.bhoechie-tab-menu div.list-group{
-  margin-bottom: 0;
-}
-div.bhoechie-tab-menu div.list-group>a{
-  margin-bottom: 0;
-}
-div.bhoechie-tab-menu div.list-group>a .glyphicon,
-div.bhoechie-tab-menu div.list-group>a .fa {
-  color: $stfAzulClaro;
-}
-div.bhoechie-tab-menu div.list-group>a:first-child{
-  border-top-right-radius: 0;
-  -moz-border-top-right-radius: 0;
-}
-div.bhoechie-tab-menu div.list-group>a:last-child{
-  border-bottom-right-radius: 0;
-  -moz-border-bottom-right-radius: 0;
-}
-div.bhoechie-tab-menu div.list-group>a.active,
-div.bhoechie-tab-menu div.list-group>a.active .glyphicon,
-div.bhoechie-tab-menu div.list-group>a.active .fa{
-  background-color: $stfAzulClaro;
-  background-image: $stfAzulClaro;
-  color: #ffffff;
-}
-div.bhoechie-tab-menu div.list-group>a.active:after{
-  content: '';
-  position: absolute;
-  left: 100%;
-  top: 50%;
-  margin-top: -13px;
-  border-left: 0;
-  border-bottom: 13px solid transparent;
-  border-top: 13px solid transparent;
-  border-left: 10px solid $stfAzulClaro;
-}
-
-div.bhoechie-tab-content{
-  background-color: #ffffff;
-  /* border: 1px solid #eeeeee; 
-  padding: 10px 10px;  
-}
-
-div.bhoechie-tab div.bhoechie-tab-content:not(.active){
-  display: none;
-}
-<%- include src/includes/pesquisa-avancada/tabs-filtro.html %> 
-*/
 // informações da modal do tema
 
 th{
@@ -242,11 +172,10 @@ i{
 .less{
   display: none;
 }
-// codigos teste
 
-/*  bhoechie tab */
+/* Tab dos filtros */
 
-div.bhoechie-tab-container{
+div.principal-tab-filtros{
   width: 100%;
   background-color: #ffffff;
   padding: 5px !important;
@@ -263,38 +192,38 @@ div.bhoechie-tab-container{
   background-color: $stfAzulClaro;
   border-color: $stfAzulClaro;
 }
-div.bhoechie-tab-menu div.list-group>a:first-child{
+div.menu-tab-filtros div.list-group>a:first-child{
   border-top-right-radius: 0;
   -moz-border-top-right-radius: 0;
 }
-div.bhoechie-tab-menu div.list-group>a:last-child{
+div.menu-tab-filtros div.list-group>a:last-child{
   border-bottom-right-radius: 0;
   -moz-border-bottom-right-radius: 0;
 }
 
-div.bhoechie-tab-content{
+div.conteudo-sessao-filtros{
   background-color: #ffffff;
   /* border: 1px solid #eeeeee; */
   padding-left: 20px;
   padding-top: 10px;
 }
 
-div.bhoechie-tab div.bhoechie-tab-content:not(.active){
+div.conteudo-tab-filtros div.conteudo-sessao-filtros:not(.active){
   display: none;
 }
 
-.list-group-horizontal .list-group-item {
+div.list-group-menu .list-group-item {
   display: inline-block;
   margin-bottom: 0;
   margin-left:-4px;
   margin-right: 0;
 }
 
-.list-group-horizontal .list-group-item:first-child {
+div.list-group-menu .list-group-item:first-child {
 	border-top-right-radius:0;
 	border-bottom-left-radius:4px;
 }
-.list-group-horizontal .list-group-item:last-child {
+div.list-group-menu .list-group-item:last-child {
 	border-top-right-radius:4px;
 	border-bottom-left-radius:0;
 }
