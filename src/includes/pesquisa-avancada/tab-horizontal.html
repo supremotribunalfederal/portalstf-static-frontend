@@ -24,45 +24,6 @@
             <%- include ministros-drop.html %>
             <br>
 
-            <div class="card-body">
-            <input type="text" class="form-control" placeholder="Número do tema"  list="numeros-temas" autocomplete="on">
-            <datalist id="numeros-temas">
-                <option value="1123"></option>
-                <option value="322"></option>
-                <option value="3321"></option>
-            </datalist>
-            </div>
-            <br> 
-            <div class="card-body">
-                <input type="text" class="form-control" placeholder="Situação Repercussão Geral"  list="situacao-repercussao" autocomplete="on">
-                <datalist id="situacao-repercussao">
-                    <option value="Com RG – Mérito Julgado"></option>
-                    <option value="Com RG – Reafirmação de Jurisprudência"></option>
-                    <option value="Em análise Preliminar de RG"></option>
-                    <option value="RG Reconhecida"></option>
-                    <option value="Sem RG – Matéria Constitucionals"></option>
-                    <option value="Sem RG – Matéria Infraconstitucional"></option>
-                </datalist>
-            </div>
-            <br>
-            <div class="card-body">
-                <input type="text" class="form-control" placeholder="Situação Reconhecimento de RG"  list="lista-rg" autocomplete="on">
-                <datalist id="lista-rg">
-                    <option value="RG Negada"></option>
-                    <option value="RG Reconhecida"></option>
-                    <option value="Tema em Análise"></option>
-                </datalist>
-            </div>
-            <br>
-            <div class="card-body">
-                <input type="text" class="form-control" placeholder="Situação Julgamento Mérito RG"  list="lista-julgamento" autocomplete="on">
-                <datalist id="lista-julgamento">
-                    <option value="**Não se Aplica**"></option>
-                    <option value="Julgado"></option>
-                    <option value="Pendente"></option>
-                </datalist>
-            </div>
-
         </div>
 
         <!-- Sessão dos predefinidos -->
@@ -80,7 +41,7 @@
                 </div>
 
                 <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                    <div class="card-body">
+                    <div class="card-body text-center">
                         <ul>
                             <li>Item</li>
                             <li>Item</li>
@@ -101,7 +62,7 @@
                   </h5>
                 </div>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                  <div class="card-body">
+                  <div class="card-body text-center">
                     <ul>
                       <li>Item</li>
                       <li>Item</li>
@@ -122,7 +83,7 @@
                   </h5>
                 </div>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                  <div class="card-body">
+                  <div class="card-body text-center">
                     <ul>
                       <li>Item</li>
                       <li>Item</li>
@@ -143,7 +104,7 @@
                   </h5>
                 </div>
                 <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-                  <div class="card-body">
+                  <div class="card-body text-center">
                     <ul>
                       <li>Item</li>
                       <li>Item</li>
@@ -164,7 +125,7 @@
                   </h5>
                 </div>
                 <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
-                  <div class="card-body">
+                  <div class="card-body text-center">
                     <ul>
                       <li>Item</li>
                       <li>Item</li>
@@ -185,7 +146,7 @@
                   </h5>
                 </div>
                 <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
-                  <div class="card-body">
+                  <div class="card-body text-center">
                     <ul>
                       <li>Item</li>
                       <li>Item</li>
@@ -206,7 +167,7 @@
                   </h5>
                 </div>
                 <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
-                  <div class="card-body">
+                  <div class="card-body text-center">
                     <ul>
                       <li>Item</li>
                       <li>Item</li>
@@ -227,7 +188,7 @@
                   </h5>
                 </div>
                 <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
-                  <div class="card-body">
+                  <div class="card-body text-center">
                     <ul>
                       <li>Item</li>
                       <li>Item</li>
@@ -243,88 +204,44 @@
 
         <!-- Sessão de repercussão geral e processos -->
         <div class="conteudo-sessao-filtros p-l-0">
-            <label class="nome-filtro">Repercussão Geral</label>
-              <div class="card">
-                <div class="card-header" id="filtro-numero-tema">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#numero-tema" aria-expanded="false" aria-controls="numero-tema">
-                      Número tema
-                    </button>
-                  </h5>
-                </div>
-                <div id="numero-tema" class="collapse" aria-labelledby="filtro-numero-tema" data-parent="#accordion">
-                  <div class="card-body">
-                    <input type="text" class="form-control" placeholder="Pesquise ..."  list="lista-numeros-temas" autocomplete="off">
-                    <datalist id="lista-numeros-temas">
-                      <option value="1"></option>
-                      <option value="2"></option>
-                      <option value="3"></option>
-                    </datalist>
-                  </div>
-                </div>
-              </div>
+            <label class="nome-filtro p-t-10">Repercussão Geral</label>
   
-              <div class="card">
-                <div class="card-header" id="filtro-situacao-rg">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#situacao-rg" aria-expanded="false" aria-controls="situacao-rg">
-                      Situação da Repercussão Geral
-                    </button>
-                  </h5>
-                </div>
-                <div id="situacao-rg" class="collapse" aria-labelledby="filtro-situacao-rg" data-parent="#accordion">
-                  <div class="card-body">
-                    <select id="lista-situacoes-rg">
-                      <option>Em Análise Preliminar de RG</option>
-                      <option>RG Reconhecida</option>
-                      <option>Com RG – Mérito Julgado</option>
-                      <option>Com RG – Reafirmação de Jurisprudência</option>
-                      <option>Sem RG – Matéria Constitucional</option>
-                      <option>Sem RG – Matéria Infraconstitucional</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
+            <input type="text" class="form-control opcao-filtro-rg" placeholder="Número do tema"  list="lista-numeros-temas" autocomplete="on">
+            <datalist id="lista-numeros-temas">
+              <option value="979"></option>
+              <option value="980"></option>
+              <option value="981"></option>
+              <option value="982"></option>
+              <option value="983"></option>
+              <option value="984"></option>
+            </datalist>
+            
+            <input type="text" class="form-control opcao-filtro-rg" placeholder="Situação da Repercussão Geral"  list="lista-situacao-rg" autocomplete="on">
+            <datalist id="lista-situacao-rg">
+              <option value="Em Análise Preliminar de RG"></option>
+              <option value="RG Reconhecida"></option>
+              <option value="Com RG – Mérito Julgado"></option>
+              <option value="Com RG – Reafirmação de Jurisprudência"></option>
+              <option value="Sem RG – Matéria Constitucional"></option>
+              <option value="Sem RG – Matéria Infraconstitucional"></option>
+            </datalist>
   
-              <div class="card">
-                <div class="card-header" id="filtro-reconhecimento-rg">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#reconhecimento-rg" aria-expanded="false" aria-controls="reconhecimento-rg">
-                      Situação Reconhecimento RG
-                    </button>
-                  </h5>
-                </div>
-                <div id="reconhecimento-rg" class="collapse" aria-labelledby="filtro-reconhecimento-rg" data-parent="#accordion">
-                  <div class="card-body">
-                    <input type="text" class="form-control" placeholder="Pesquise ..."  list="lista-opcoes-reconhecimento" autocomplete="off">
-                    <datalist id="lista-opcoes-reconhecimento">
-                        <option value="opcão"></option>
-                        <option value="opcão"></option>
-                        <option value="opcão"></option>
-                    </datalist>
-                  </div>
-                </div>
-              </div>
+            <input type="text" class="form-control opcao-filtro-rg" placeholder="Situação Reconhecimento RG"  list="lista-opcoes-reconhecimento" autocomplete="on">
+            <datalist id="lista-opcoes-reconhecimento">
+              <option value="RG negada"></option>
+              <option value="RG reconhecida"></option>
+              <option value="Tema em análise"></option>
+            </datalist>
   
-              <div class="card">
-                <div class="card-header" id="filtro-julgamento-merito">
-                  <h5 class="mb-0">
-                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#julgamento-merito" aria-expanded="false" aria-controls="julgamento-merito">
-                      Situação Julgamento Mérito RG
-                    </button>
-                  </h5>
-                </div>
-                <div id="julgamento-merito" class="collapse" aria-labelledby="filtro-julgamento-merito" data-parent="#accordion">
-                  <div class="card-body">
-                    <input type="text" class="form-control" placeholder="Pesquise ..."  list="lista-opcoes-julgamento" autocomplete="off">
-                    <datalist id="lista-opcoes-julgamento">
-                        <option value="opcão"></option>
-                        <option value="opcão"></option>
-                        <option value="opcão"></option>
-                    </datalist>
-                  </div>
-                </div>
-              </div>
+
+            <input type="text" class="form-control opcao-filtro-rg" placeholder="Situação Julgamento Mérito RG"  list="lista-opcoes-julgamento" autocomplete="on">
+            <datalist id="lista-opcoes-julgamento">
+                <option value="**Não se aplica**"></option>
+                <option value="Julgado"></option>
+                <option value="Pendente"></option>
+            </datalist>
+
+            <hr>
   
             <label class="nome-filtro">Processo</label>
             <center>
@@ -408,6 +325,8 @@
                 </div>
               </div>
             </center>
+
+            <hr>
   
             <label class="nome-filtro">Período</label>
               

@@ -224,16 +224,15 @@ div.list-group-menu .list-group-item:last-child {
   background-color: $stfAzulClaro;
   border-color: $stfAzulClaro;
 }
-
-label.nome-filtro {
-  padding-top: 10px;
-}
 input.pesquisa-livre {
   background-image: url('../../img/pesquisaavancada/search-icon.png');
   background-position: 5px 6px;
   background-repeat: no-repeat;
   padding: 9px 20px 9px 30px;  
   border: 1px solid;
+}
+input.opcao-filtro-rg {
+  margin-bottom: 6px;
 }
 
 //conteudo da pesquisa tabs
