@@ -3,13 +3,13 @@
     <!-- Menu de navegação da tab -->
     <div class="menu-tab-filtros list-group list-group-menu text-center">
         <a href="#" class="list-group-item active text-center">
-            <i class="material-icons">search</i> 
+            <i class="material-icons" title="Pesquisa Livre">search</i> 
         </a>  
         <a href="#" class="list-group-item text-center">
-            <i class="material-icons">star</i> 
+            <i class="material-icons" title="Filtros Pré-Definidos">star</i> 
         </a>
         <a href="#" class="list-group-item text-center">
-            <i class="material-icons">bookmark_border</i> 
+            <i class="material-icons" title="Repercussão Geral e Processos">bookmark_border</i> 
         </a>
     </div>
     
@@ -66,177 +66,36 @@
 
         <!-- Sessão dos predefinidos -->
         <div class="conteudo-sessao-filtros p-l-0">
-            
-            <label class="nome-filtro">Pré-definidos</label>        
-                
+                    
             <!-- Simulação de listagem dos filtros -->
             <!-- Esse código será bem menor quando houver a ligação com os objs Qlik -->
-            <div class="card">
-                <div class="card-header" id="headingOne">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Teses de Repercussão Geral</button>
-                    </h5>
-                </div>
+       
+              <div class="btn-group btn-group-toggle text-center" data-toggle="buttons">
+                  <label class="btn btn-secondary btn-fav btn-lg btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
+                    <input class="input-fav" type="radio" name="options" id="option1" autocomplete="off"> Teses Repercussão Geral
+                  </label>
+                  <label class="btn btn-secondary btn-fav btn-lg btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
+                      <input type="radio" class="input-fav" name="options" id="option1" autocomplete="off"> Temas com Repercussão Geral Negada
+                  </label>
+                  <label class="btn btn-secondary btn-fav btn-lg  btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
+                        <input type="radio" class="input-fav" name="options" id="option1" autocomplete="off"> Temas com Repercussão Geral Reconhecida
+                  </label>
+                  <label class="btn btn-secondary btn-fav btn-lg  btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
+                      <input type="radio" class="input-fav" name="options" id="option1" autocomplete="off"> Temas com RG Reconhecida e Mérito Julgado
+                    </label>
+                  <label class="btn btn-secondary btn-fav btn-lg btn-default-bordered col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
+                        <input type="radio" class="input-fav" name="options" id="option1" autocomplete="off"> Temas com RG Reconhecida e Mérito Pendente
+                      </label>
+                  <label class="btn btn-secondary btn-fav btn-lg  btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
+                          <input type="radio" class="input-fav" name="options" id="option1" autocomplete="off"> Temas com Suspensão Nacional
+                  </label>
+                  <label class="btn btn-secondary btn-fav btn-lg  btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
+                    <input type="radio" class="input-fav" name="options" id="option2" autocomplete="off"> Representativo de Controvérsia
+                  </label>
+              </div>
 
-                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                    <div class="card-body text-center">
-                        <ul>
-                            <li>Item</li>
-                            <li>Item</li>
-                            <li>Item</li>
-                            <li>Item</li>
-                            <li>Item</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-    
-              <div class="card">
-                <div class="card-header" id="headingTwo">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      Temas em Análise Preliminar de RG
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                  <div class="card-body text-center">
-                    <ul>
-                      <li>Item</li>
-                      <li>Item</li>
-                      <li>Item</li>
-                      <li>Item</li>
-                      <li>Item</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="card">
-                <div class="card-header" id="headingThree">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      Temas com Repercussão Geral Negada
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                  <div class="card-body text-center">
-                    <ul>
-                      <li>Item</li>
-                      <li>Item</li>
-                      <li>Item</li>
-                      <li>Item</li>
-                      <li>Item</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="card">
-                <div class="card-header" id="headingFour">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                      Temas com Repercussão Geral Reconhecida
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-                  <div class="card-body text-center">
-                    <ul>
-                      <li>Item</li>
-                      <li>Item</li>
-                      <li>Item</li>
-                      <li>Item</li>
-                      <li>Item</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="card">
-                <div class="card-header" id="headingFive">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                      Temas com RG Reconhecida e Mérito Julgado
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
-                  <div class="card-body text-center">
-                    <ul>
-                      <li>Item</li>
-                      <li>Item</li>
-                      <li>Item</li>
-                      <li>Item</li>
-                      <li>Item</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="card">
-                <div class="card-header" id="headingSix">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                      Temas com RG Reconhecida e Mérito Pendente
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
-                  <div class="card-body text-center">
-                    <ul>
-                      <li>Item</li>
-                      <li>Item</li>
-                      <li>Item</li>
-                      <li>Item</li>
-                      <li>Item</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="card">
-                <div class="card-header" id="headingSeven">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                      Temas com Suspensão Nacional
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
-                  <div class="card-body text-center">
-                    <ul>
-                      <li>Item</li>
-                      <li>Item</li>
-                      <li>Item</li>
-                      <li>Item</li>
-                      <li>Item</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-    
-              <div class="card">
-                <div class="card-header" id="headingEight">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                      Representativo de Controvérsia
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
-                  <div class="card-body text-center">
-                    <ul>
-                      <li>Item</li>
-                      <li>Item</li>
-                      <li>Item</li>
-                      <li>Item</li>
-                      <li>Item</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+
+
               <!-- Fim simulação de listagem dos filtros --> 
         </div>
 

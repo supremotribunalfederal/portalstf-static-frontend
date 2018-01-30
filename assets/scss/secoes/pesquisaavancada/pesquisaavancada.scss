@@ -25,13 +25,14 @@ a {
 
 table.valores-temas .valor{
   font-weight: bold;
-  margin: 0px;
+  margin-top: -1px;
 }
-td > h3{
+td > h4{
  color: $stfAzulHover;
- font-weight: bold;
- margin: 0px ;
+ font-weight: 600;
+ margin: 0px;
 }
+
 .card-titulo-over {
   margin-top: 0px;
 }
@@ -51,7 +52,6 @@ td#valor-tema-negada, td#valor-tema-em-analise {
 }
 td#valor-tema-merito-julgado, td#valor-tema-merito-n-julgado {
   border-top: 1px solid #f0eaea;
-  padding-top: 12px;
 }
 
 /* Dropdown de Ministros */
@@ -265,4 +265,29 @@ input.opcao-filtro-rg {
 
 .btn-link{
   width: 100%;
+}
+
+// botões na area de favoritos
+.btn-fav{
+  text-align: center;
+  width: 99%;
+  border: none;
+  text-decoration: none;
+  margin: 2px;
+  font-weight: 600;
+  position: relative;
+}
+
+.btn-fav.active{
+  background-color: $stfAzul;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  border: transparent;
+  box-shadow: none;
+}
+
+.input-fav{
+  height: 0%;
+  width: 0%;
 }
