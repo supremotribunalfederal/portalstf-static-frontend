@@ -60,12 +60,19 @@
 
 
     <!-- Sessão de pesquisas principais -->
-    <div class="conteudo-sessao-filtros p-l-0">
+    <div class="conteudo-sessao-filtros p-l-0 text-center">
 
       <input class="form-control pesquisa-livre" type="text" placeholder="Pesquisa Livre">
 
       <%- include ministros-drop.html %>
 
+      <hr>
+
+      <a data-toggle="collapse" href="#mais-filtros-principais" aria-expanded="true" aria-controls="mais-filtros-principais">
+        <i class="material-icons add-mais-filtros" id="icone-add-filtros" title="Filtros">add_circle_outline</i>
+      </a>
+
+      <div id="mais-filtros-principais" class="collapse">
         <input type="text" class="form-control opcao-filtro-rg" placeholder="Número do tema" list="lista-numeros-temas" autocomplete="on">
         <datalist id="lista-numeros-temas">
           <option value="979"></option>
@@ -103,6 +110,7 @@
           <option value="Julgado"></option>
           <option value="Pendente"></option>
         </datalist>
+      </div>
 
     </div>
 
