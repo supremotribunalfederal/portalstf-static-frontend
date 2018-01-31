@@ -12,13 +12,14 @@ a {
   vertical-align: middle;
 }
 .imagem-grafico {
-  height: 250px;
+  height: 220px;
 }
 .imagens-graficos {
   border: none
 }
 .card-graficos {
   height: 271.500px;
+  margin-left: 15px;
 }
 
 /* Card de Temas */ 
@@ -125,6 +126,7 @@ input#busca-ministro {
   background-color: #f0eaea;
   margin-bottom: 5px;
   padding-left: 37px;
+  margin-top: -17px;
 }
 
 /* Informações das modais */
@@ -264,9 +266,13 @@ input.pesquisa-livre {
   background-position: 5px 6px;
   background-repeat: no-repeat;
   padding: 9px 20px 9px 35px;
+  margin-top: -17px;
 }
 input.opcao-filtro-rg {
   margin-bottom: 6px;
+}
+.conteudo-sessao-filtros > label{
+  margin: 8px;
 }
 
 //conteudo da pesquisa tabs
@@ -304,3 +310,6 @@ input.opcao-filtro-rg {
   border: 1px solid #f0eaea;
   margin-top: 20px;
 }
+
+
+

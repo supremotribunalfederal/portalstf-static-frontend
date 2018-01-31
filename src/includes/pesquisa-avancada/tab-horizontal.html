@@ -10,6 +10,10 @@
     <a href="#" class="list-group-item text-center">
       <i class="material-icons" title="Pesquisa Livre">search</i>
     </a>
+
+    <a class="list-group-item limpar-filtros text-center">
+        <i class="material-icons" title="Limprar todos os filtros">clear</i>
+    </a>
   </div>
 
   <!-- Conteúdo das abas -->
@@ -24,10 +28,10 @@
 
       <div class="btn-group btn-group-toggle text-center" data-toggle="buttons">
         <label class="btn btn-secondary btn-fav btn-lg btn-default-bordered active col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
-          <input class="input-fav" type="radio" name="options" id="option1" autocomplete="off"> Relação Completa de Temas
+          <input class="input-fav" type="radio" name="options" id="option1" autocomplete="off"> <text>Relação Completa de Temas</text>
         </label>
         <label class="btn btn-secondary btn-fav btn-lg btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
-          <input class="input-fav" type="radio" name="options" id="option1" autocomplete="off"> Teses de Repercussão Geral
+          <input class="input-fav" type="radio" name="options" id="option1" autocomplete="off"> <text>Teses de Repercussão Geral</text>
         </label>
         <label class="btn btn-secondary btn-fav btn-lg btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
           <input type="radio" class="input-fav" name="options" id="option1" autocomplete="off"> Temas com RG Negada
@@ -59,10 +63,9 @@
     <div class="conteudo-sessao-filtros p-l-0">
 
       <input class="form-control pesquisa-livre" type="text" placeholder="Pesquisa Livre">
-
-
-      <label class="nome-filtro">Repercussão Geral</label>
-
+  
+      <label class="filtro-rg">Repercussão Geral</label>
+  
       <input type="text" class="form-control opcao-filtro-rg" placeholder="Número do tema" list="lista-numeros-temas" autocomplete="on">
       <datalist id="lista-numeros-temas">
         <option value="984"></option>
