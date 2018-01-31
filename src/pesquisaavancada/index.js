@@ -66,12 +66,3 @@ $(document).ready(function() {
 	});
 });
 
-//alterar o nome da pesquisa apresentado na parte superior dos gráficos
-
-/*$(function mudarTituloPesquisa(){
-	
-	$('.btn-fav').on('click',function(e){
-		e.preventDefault();
-
-	});
-})*/

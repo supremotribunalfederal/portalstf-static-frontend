@@ -27,29 +27,44 @@
       <!-- Esse código será bem menor quando houver a ligação com os objs Qlik -->
 
       <div class="btn-group btn-group-toggle text-center" data-toggle="buttons">
-        <label class="btn btn-secondary btn-fav btn-lg btn-default-bordered active col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
-          <input class="input-fav" type="radio" name="options" id="option1" autocomplete="off"> <text>Relação Completa de Temas</text>
+        <label data-nome-pesquisa="temasCompletos" class="btn btn-secondary btn-fav btn-lg btn-default-bordered active col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
+          <input class="input-fav" type="radio" name="options" id="option1" autocomplete="off"> 
+            Relação Completa de Temas
         </label>
-        <label class="btn btn-secondary btn-fav btn-lg btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
-          <input class="input-fav" type="radio" name="options" id="option1" autocomplete="off"> <text>Teses de Repercussão Geral</text>
+
+        <label data-nome-pesquisa="tesesRG" class="btn btn-secondary btn-fav btn-lg btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
+          <input class="input-fav" type="radio" name="options" id="option1" autocomplete="off"> 
+            Teses de Repercussão Geral
         </label>
-        <label class="btn btn-secondary btn-fav btn-lg btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
-          <input type="radio" class="input-fav" name="options" id="option1" autocomplete="off"> Temas com RG Negada
+
+        <label data-nome-pesquisa="rgNegada" class="btn btn-secondary btn-fav btn-lg btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
+          <input type="radio" class="input-fav" name="options" id="option1" autocomplete="off"> 
+            Temas com RG Negada
         </label>
-        <label class="btn btn-secondary btn-fav btn-lg  btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
-          <input type="radio" class="input-fav" name="options" id="option1" autocomplete="off"> Temas com RG Reconhecida
+
+        <label data-nome-pesquisa="rgReconhecida" class="btn btn-secondary btn-fav btn-lg  btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
+          <input type="radio" class="input-fav" name="options" id="option1" autocomplete="off"> 
+            Temas com RG Reconhecida
         </label>
-        <label class="btn btn-secondary btn-fav btn-lg  btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
-          <input type="radio" class="input-fav" name="options" id="option1" autocomplete="off"> Com RG Reconhecida e Mérito Julgado
+
+        <label data-nome-pesquisa="meritoJulgado" class="btn btn-secondary btn-fav btn-lg  btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
+          <input type="radio" class="input-fav" name="options" id="option1" autocomplete="off"> 
+            Com RG Reconhecida e Mérito Julgado
         </label>
-        <label class="btn btn-secondary btn-fav btn-lg btn-default-bordered col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
-          <input type="radio" class="input-fav" name="options" id="option1" autocomplete="off"> Com RG Reconhecida e Mérito Pendente
+
+        <label data-nome-pesquisa="meritoPendente" class="btn btn-secondary btn-fav btn-lg btn-default-bordered col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
+          <input type="radio" class="input-fav" name="options" id="option1" autocomplete="off"> 
+            Com RG Reconhecida e Mérito Pendente
         </label>
-        <label class="btn btn-secondary btn-fav btn-lg  btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
-          <input type="radio" class="input-fav" name="options" id="option1" autocomplete="off"> Temas com Suspensão Nacional
+
+        <label data-nome-pesquisa="suspensao" class="btn btn-secondary btn-fav btn-lg  btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
+          <input type="radio" class="input-fav" name="options" id="option1" autocomplete="off"> 
+            Temas com Suspensão Nacional
         </label>
-        <label class="btn btn-secondary btn-fav btn-lg  btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
-          <input type="radio" class="input-fav" name="options" id="option2" autocomplete="off"> Representativo de Controvérsia
+
+        <label data-nome-pesquisa="controversia" class="btn btn-secondary btn-fav btn-lg  btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
+          <input type="radio" class="input-fav" name="options" id="option2" autocomplete="off"> 
+            Representativo de Controvérsia
         </label>
       </div>
 
