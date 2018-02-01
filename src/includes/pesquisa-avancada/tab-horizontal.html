@@ -78,7 +78,11 @@
     <div class="conteudo-sessao-filtros p-l-0">
 
       <input class="form-control pesquisa-livre" type="text" placeholder="Pesquisa Livre">
+   
+      <%- include ministros-drop.html %>
   
+      <hr>
+
       <label class="filtro-rg">Repercussão Geral</label>
   
       <input type="text" class="form-control opcao-filtro-rg" placeholder="Número do tema" list="lista-numeros-temas" autocomplete="on">
@@ -128,7 +132,6 @@
 
       <label class="nome-filtro">Processo Paradigma</label>
 
-      <%- include ministros-drop.html %>
 
         <input type="text" class="form-control opcao-filtro-rg" placeholder="Situação Processo Paradigma" list="lista-opcoes-processo-paradima"
           autocomplete="on">

@@ -36,7 +36,7 @@ var filtraDados = function(dadoDeEntrada, elementoASerfiltrado, tagParaFiltragem
 }
 
 filtraDados(".pesquisa-livre", "#tabela-RG", "tr");
-filtraDados("#input-busca-ministro", ".dropdown-menu-ministros", "li");
+filtraDados("#busca-relator", "#lista-relatores", ".list-group-item");
 
 /**
  * @description Alterna os estados de ativo de cada aba da tab de navegação dos filtros
