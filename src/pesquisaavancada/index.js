@@ -81,3 +81,12 @@ $(document).ready(function() {
 	})
 });
 
+/**
+ * @description Limpa filtros
+ */
+$(document).ready(function() {
+	$("i.clear-icon").click(function() {
+		$("input.opcao-filtro-rg, input.pesquisa-livre, input.data-rg").val("");
+	})
+});
+

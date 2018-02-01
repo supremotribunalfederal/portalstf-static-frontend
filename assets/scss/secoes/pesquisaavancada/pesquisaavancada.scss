@@ -90,14 +90,13 @@ input#busca-relator {
     border-box: box-sizing;
     background-image: url('../../img/pesquisaavancada/person3.png');
     background-repeat: no-repeat;
-    font-size: 16px;
     padding: 14px 20px 12px 45px;
     cursor: pointer;
     margin: 5px 0px;
 }
 .dropdown-content {
     display: none;
-    position: absolute;
+    position: relative;
     background-color: #fff;
 }
 .show {display:block;}
@@ -145,11 +144,9 @@ tr{
 .suspensao{
   color: #3383dd;
 }
-
 i{
   cursor: pointer;
 }
-
 .less{
   display: none;
 }
@@ -161,6 +158,11 @@ i{
   vertical-align: bottom; 
   font-size: 1.5em;
 }
+.clear-icon {
+  float: right;
+  font-size: 21px;
+}
+
 /* Tab dos filtros */
 
 div.principal-tab-filtros{
@@ -175,6 +177,7 @@ div.principal-tab-filtros{
   background-clip: padding-box;
   opacity: 0.97;
   filter: alpha(opacity=97);
+  margin-bottom: 10px;
 }
 div.menu-tab-filtros div.list-group>a:first-child{
   border-top-right-radius: 0;
@@ -215,7 +218,7 @@ input.pesquisa-livre {
   background-image: url('../../img/pesquisaavancada/search.png');
   background-position: 5px 6px;
   background-repeat: no-repeat;
-  padding: 9px 20px 9px 35px;
+  padding: 9px 20px 9px 45px;
   margin-top: -17px;
 }
 input.opcao-filtro-rg {
@@ -223,12 +226,6 @@ input.opcao-filtro-rg {
 }
 .conteudo-sessao-filtros > label{
   margin: 8px;
-}
-
-//conteudo da pesquisa tabs
-
-.btn-link{
-  width: 100%;
 }
 
 // botões na area de favoritos
