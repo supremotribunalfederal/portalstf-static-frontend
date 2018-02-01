@@ -88,5 +88,12 @@ $(document).ready(function() {
 	$("i.clear-icon").click(function() {
 		$("input.opcao-filtro-rg, input.pesquisa-livre, input.data-rg").val("");
 	})
+
+
+
+	$('.btn-fav').click(function(){
+		var texto = $(this).data('titulo-pesquisa');
+		$('#titulo-filtro').text(texto);
+	});
 });
 
