@@ -57,7 +57,15 @@ td#valor-tema-merito-julgado, td#valor-tema-merito-n-julgado {
 
 /* Dropdown de Ministros */
 
+
 div.dropdown-relatores {
+  .list-group {
+    background-color: #b7b1b1;
+    min-width: 252.5px;
+  }
+  .cinza img{
+    filter: grayscale(100%);
+  }
   .list-group-item {
     margin-bottom: 1px;
     padding: 5px 5px;
