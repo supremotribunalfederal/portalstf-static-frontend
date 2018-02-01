@@ -57,13 +57,19 @@ td#valor-tema-merito-julgado, td#valor-tema-merito-n-julgado {
 
 /* Dropdown de Ministros */
 
+button.list-group-item{
+  cursor: default;
 
+  img {
+    cursor: pointer;
+  }
+}
 div.dropdown-relatores {
   .list-group {
     background-color: #b7b1b1;
     min-width: 252.5px;
   }
-  .cinza img{
+  .cinza{
     filter: grayscale(100%);
   }
   .list-group-item {
@@ -91,7 +97,6 @@ input#busca-relator {
     background-image: url('../../img/pesquisaavancada/person3.png');
     background-repeat: no-repeat;
     padding: 14px 20px 12px 45px;
-    cursor: pointer;
     margin: 5px 0px;
 }
 .dropdown-content {

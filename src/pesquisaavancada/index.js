@@ -72,7 +72,7 @@ $(document).ready(function() {
  * @description Alterna estado dos relatores no dropdown de busca
  */
 $(document).ready(function() {
-	$("button.relator").click(function() {
+	$("img.relator").click(function() {
 		if($(this).hasClass("cinza")) {
 			$(this).removeClass("cinza");
 		} else {
