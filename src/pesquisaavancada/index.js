@@ -36,7 +36,7 @@ var filtraDados = function(dadoDeEntrada, elementoASerfiltrado, tagParaFiltragem
 }
 
 filtraDados(".pesquisa-livre", "#tabela-RG", "tr");
-filtraDados("#busca-ministro", ".dropdown-menu-ministros", "li");
+filtraDados("#busca-relator", "#lista-relatores", ".list-group-item");
 filtraDados("#busca-tabela-julgados", ".julgados", "tbody tr");
 filtraDados("#busca-tabela-pendentes", ".pendentes", "tbody tr");
 
@@ -67,3 +67,4 @@ $(document).ready(function() {
 		}
 	});
 });
+

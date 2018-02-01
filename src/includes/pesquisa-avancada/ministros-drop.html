@@ -1,71 +1,60 @@
-<div class="ministros-drop">
-  <div class="link-min-dropdonw text-center m-t-16">
-    
-    <div class="dropdown">
-      <a href="#" class="botão-ministro" data-toggle="dropdown" role="button">
-        <input class="form-control" id="busca-ministro" type="text" placeholder="Relatores" autocomplete="on">
-      </a>
-      <ul class="dropdown-menu dropdown-cart dropdown-menu-ministros" role="menu">
-      
+<div class="dropdown-relatores">
+  <div class="dropdown">
+    <input id="busca-relator" class="form-control" type="text" placeholder="Relator..." onclick="mostraRelatores()">
+    <div id="lista-relatores" class="dropdown-content">
+      <div class="list-group">
+
         <!-- MIN. Carmen Lucia -->
-        <li>
-          <div class="item">
-            <div class="item-left">
-              <img src="../assets/img/ministros/ministra_carmen_lucia.jpg" height="70" width="70" class="imagem-ministro img-circle" alt="Carmen Lucia">
-              <span class="item-info">
-                <label>MIN. Carmen Lucia</label><br>
-                <a href="#" class="mais-detalhes-ministros">
-                    <span class="mais-detalhes-texto">
-                        <a data-toggle="modal" data-target=".card-relator">Mais detalhes
-                            <i class="material-icons add">add_circle_outline</i>
-                        </a>
-                    </span>
-                </a>
-              </span>
-            </div>
+        <button class="list-group-item list-group-item-action">
+          <img src="../assets/img/ministros/ministra_carmen_lucia.jpg" height="70" width="70" class="imagem-ministro img-circle" alt="Carmen Lucia">
+          <h5>MIN. Carmen Lucia</h5>
+          <hr>
+          <div class="link-modal-relator">
+            <a data-toggle="modal" data-target=".modal-relator">Mais detalhes
+              <i class="material-icons add">add_circle_outline</i>
+            </a>
           </div>
-        </li>
+        </button>
     
         <!-- MIN. Rosa Weber -->
-        <li>
-          <div class="item">
-            <div class="item-left">
-              <img src="../assets/img/ministros/ministra_rosa_weber.jpg" height="70" width="70" class="imagem-ministro img-circle" alt="Rosa Weber">
-              <span class="item-info">
-                <label>MIN. Rosa Weber</label><br>
-                <a href="#" class="mais-detalhes-ministros">
-                  <span class="mais-detalhes-texto">
-                      <a data-toggle="modal" data-target=".card-relator">Mais detalhes
-                          <i class="material-icons add">add_circle_outline</i>
-                      </a>
-                  </span>
-                </a>
-              </span>
-            </div>
+        <button class="list-group-item list-group-item-action">
+          <img src="../assets/img/ministros/ministra_rosa_weber.jpg" height="70" width="70" class="imagem-ministro img-circle" alt="Rosa Weber">
+          <h5>MIN. Rosa Weber</h5>
+          <div class="link-modal-relator">
+            <a data-toggle="modal" data-target=".modal-relator">Mais detalhes
+              <i class="material-icons add">add_circle_outline</i>
+            </a>
           </div>
-        </li>
+        </button>
     
         <!-- MIN. Celo Melo -->
-        <li>
-          <div class="item">
-            <div class="item-left">
-              <img src="../assets/img/ministros/ministro_celo_melo.jpg" height="70" width="70" class="imagem-ministro img-circle" alt="Celo Melo">
-              <span class="item-info">
-                <label>MIN. Celo Melo</label><br>
-                <a href="#" class="mais-detalhes-ministros">
-                    <span class="mais-detalhes-texto">
-                        <a data-toggle="modal" data-target=".card-relator">Mais detalhes
-                            <i class="material-icons add">add_circle_outline</i>
-                        </a>
-                    </span>
-                </a>
-              </span>
-            </div>
+        <button class="list-group-item list-group-item-action">
+          <img src="../assets/img/ministros/ministro_celo_melo.jpg" height="70" width="70" class="imagem-ministro img-circle" alt="Celo Melo">
+          <h5>MIN. Celo Melo</h5>
+          <div class="link-modal-relator">
+            <a data-toggle="modal" data-target=".modal-relator">Mais detalhes
+              <i class="material-icons add">add_circle_outline</i>
+            </a>
           </div>
-        </li>
-    
-      </ul>
+        </button>
+
+        <button class="list-group-item list-group-item-action">
+          <img src="../assets/img/ministros/ministro_dias_toffoli.jpg" height="70" width="70" class="imagem-ministro img-circle" alt="Dias Toffoli">
+          <h5>MIN. Dias Toffoli</h5>
+          <div class="link-modal-relator">
+            <a data-toggle="modal" data-target=".modal-relator">Mais detalhes
+              <i class="material-icons add">add_circle_outline</i>
+            </a>
+          </div>
+        </button>
+        
+      </div>    
     </div>
-    
   </div>
 </div>
+
+<script>
+  function mostraRelatores() {
+    document.getElementById("lista-relatores").classList.toggle("show");
+  }
+</script>
