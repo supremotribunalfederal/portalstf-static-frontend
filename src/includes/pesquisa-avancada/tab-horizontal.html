@@ -71,7 +71,7 @@
 
 
     <!-- Sessão de pesquisas principais -->
-    <div class="conteudo-sessao-filtros p-l-0 text-center">
+    <div class="conteudo-sessao-filtros p-l-0">
 
       <input class="form-control pesquisa-livre" type="text" onfocus="this.value=''" placeholder="Pesquisa Livre">
    
@@ -80,6 +80,7 @@
       <hr>
 
       <a data-toggle="collapse" href="#mais-filtros-principais" aria-expanded="true" aria-controls="mais-filtros-principais">
+        <label class="nome-grupo-filtro">Repercussão Geral</label>        
         <i class="material-icons add-mais-filtros" id="icone-add-filtros" title="Filtros">add_circle_outline</i>
       </a>
 
@@ -128,9 +129,16 @@
           <option value="Não"></option>
           <option value="Sim"></option>
         </datalist>
+      </div>
   
-        <label class="nome-filtro">Processo Paradigma</label>
-  
+      <hr>
+
+      <a data-toggle="collapse" href="#mais-filtros-processos" aria-expanded="true" aria-controls="mais-filtros-processos">
+        <label class="nome-grupo-filtro">Processo Paradigma</label>        
+        <i class="material-icons add-mais-filtros" id="icone-add-filtros" title="Filtros">add_circle_outline</i>
+      </a>
+
+      <div id="mais-filtros-processos" class="collapse">
         <input type="text" class="form-control opcao-filtro-rg" placeholder="Situação Processo Paradigma" list="lista-opcoes-processo-paradima">
         <datalist id="lista-opcoes-processo-paradima">
           <option value="Analisada Preliminar de RG"></option>
@@ -171,9 +179,16 @@
           <option value="Direito Penal"></option>
           <option value="Direitio Previdenciário"></option>
         </datalist>
-  
-  
-        <label class="nome-filtro">Período</label>
+      </div>
+
+      <hr>
+
+      <a data-toggle="collapse" href="#mais-filtros-data" aria-expanded="true" aria-controls="mais-filtros-data">
+        <label class="nome-grupo-filtro">Período</label>        
+        <i class="material-icons add-mais-filtros" id="icone-add-filtros" title="Filtros">add_circle_outline</i>
+      </a>
+
+      <div id="mais-filtros-data" class="collapse">
   
         <input type="text" id="data_inicial" class="form-control data-rg" placeholder="De" onfocus="(this.type='date')" />
   

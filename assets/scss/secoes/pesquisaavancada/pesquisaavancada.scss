@@ -232,6 +232,10 @@ input.opcao-filtro-rg {
 .conteudo-sessao-filtros > label{
   margin: 8px;
 }
+.add-mais-filtros {
+  position: relative;
+  top: 6px;
+}
 
 // botões na area de favoritos
 .btn-fav{
@@ -265,6 +269,9 @@ input.opcao-filtro-rg {
 
 .nome-filtro{
   display: none;
+}
+.nome-grupo-filtro {
+  cursor: pointer;
 }
 
 /* Card relator */
