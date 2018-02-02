@@ -4,6 +4,7 @@ a {
   cursor:pointer;
 }
 .card-titulo {
+  margin-top: 0px;
   margin-bottom: 0px;
 }
 .num_tema{
@@ -20,6 +21,7 @@ a {
 .card-graficos {
   height: 271.500px;
   margin-left: 15px;
+  margin: 20px;
 }
 
 /* Card de Temas */ 
@@ -92,12 +94,15 @@ div.dropdown-relatores {
     }
   }
 }
+//esconder filtros relator e livre p/ não aparecer nos favoritos
+
 input#busca-relator {
     border-box: box-sizing;
     background-image: url('../../img/pesquisaavancada/person3.png');
     background-repeat: no-repeat;
     padding: 14px 20px 12px 45px;
-    margin: 5px 0px;
+    margin-top: 5px;
+    width: 100%;
 }
 .dropdown-content {
     display: none;
@@ -168,7 +173,7 @@ i{
   font-size: 21px;
 }
 
-/* Tab dos filtros */
+/* Tab dos filtros 
 
 div.principal-tab-filtros{
   width: 100%;
@@ -184,6 +189,10 @@ div.principal-tab-filtros{
   filter: alpha(opacity=97);
   margin-bottom: 10px;
 }
+div.menu-tab-filtros{
+  margin-bottom: 0px;
+}
+
 div.menu-tab-filtros div.list-group>a:first-child{
   border-top-right-radius: 0;
   -moz-border-top-right-radius: 0;
@@ -194,8 +203,8 @@ div.menu-tab-filtros div.list-group>a:last-child{
 }
 div.conteudo-sessao-filtros{
   background-color: #ffffff;
-  /* border: 1px solid #eeeeee; */
-  padding-left: 20px;
+  /* border: 1px solid #eeeeee; 
+  padding-left: 10px;
   padding-top: 10px;
 }
 div.conteudo-tab-filtros div.conteudo-sessao-filtros:not(.active){
@@ -207,6 +216,7 @@ div.list-group-menu .list-group-item {
   margin-left:-4px;
   margin-right: 0;
 }
+
 div.list-group-menu .list-group-item:first-child {
   border-top-right-radius:0;
   border-bottom-left-radius:4px;
@@ -219,12 +229,15 @@ div.list-group-menu .list-group-item:last-child {
   background-color: $stfAzulClaro;
   border-color: $stfAzulClaro;
 }
+*/
 input.pesquisa-livre {
   background-image: url('../../img/pesquisaavancada/search.png');
   background-position: 5px 6px;
+  width: 100%;
+  position: relative;
   background-repeat: no-repeat;
   padding: 9px 20px 9px 45px;
-  margin-top: -17px;
+  margin-top: 5px;
 }
 input.opcao-filtro-rg {
   margin-bottom: 6px;
@@ -325,4 +338,48 @@ div.tabelas-relatores {
   position: relative;
   float: right;
   margin-left: 5px;
+}
+//nav
+ul .nav-tabs {
+  border-bottom: 2px solido $stfCinzaClaro;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+  border-width: 0;
+}
+
+.nav-tabs > li > a {
+  border: none;
+  color: $stfCinzaEscuro;
+  margin-right: 40px;
+  margin-left: 20px;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li > a:hover {
+  border: none;
+  color: $stfPreto;
+  background: transparent;
+}
+
+.nav-tabs > li > a::after {
+  content: "";
+  background: $stfAzul;
+  height: 2px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -1px;
+  transition: all 250ms ease 0s;
+  transform: scale(0);
+}
+
+.nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after {
+  transform: scale(1); 
+}
+
+.tab-pane {
+  padding: 0;
+}
+
+.tab-content {
+  padding: 0 20px;
 }
