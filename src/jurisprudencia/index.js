@@ -145,7 +145,7 @@ $('#pesquisas-prontas').submit(function(e){
 
 
  function pesquisaPronta(termo) {
-    var url = "http://www.stf.jus.br/portal/jurisprudencia/listarResultadoPesquisaJurisprudenciaFavorita.asp?palavraChaveJurisprudenciaFavorita=" + termo;
+    var url = "http://www.stf.jus.br/portal/jurisprudencia/listarResultadoPesquisaJurisprudenciaFavorita.asp?palavraChaveJurisprudenciaFavorita=" + escape(termo);
     window.open(url, "_blank");
 }
 
