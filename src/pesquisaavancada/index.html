@@ -17,112 +17,81 @@
 
     <%- include src/includes/header.html %>
 
-      <!-- Quebra de linha que separa o header do conteudo principal. Deve ser mudado ... -->
-      <br>
-      <br>
+    <%- include src/includes/pesquisa-repercussao-geral.html %>
 
-      <section id="conteudo-principal" class="container-fluid m-0 p-0 m-t-64">
-        <div class="container center-block p-0">
-          <!--Menu Lateral-->
-          <div class="col-xs-12 col-sm-3 col-lg-3 p-xs-0 m-0 m-t-24">
-            <div class="card">
-              <h5 class="card-titulo card-titulo-over">Temas</h5>
-              <table class="table valores-temas">
-                <tr>
-                  <td>
-                    <h2 class="valor" id="valor-total">978</h2>
-                    <h4>Total</h4>
-                  </td>
-                  <td>
-                    <h2 class="valor" id="valor-reconhecida">657</h2>
-                    <h4>Reconhecida</h4>
-                  </td>
-                </tr>
+    <section id="conteudo-principal" class="container-fluid m-0 p-0">
+      <div class="container center-block p-0">
+        <!--Menu Lateral-->
+        <div class="col-xs-12 col-sm-3 col-lg-12 p-xs-0 m-0 m-t-24">
+          <div class="card">
+            <h5 class="card-titulo card-titulo-over">Temas</h5>
+            <table class="table valores-temas">
+              <tr>
+                <td>
+                  <h2 class="valor" id="valor-total">978</h2>
+                  <h4>Total</h4>
+                </td>
+                <td>
+                  <h2 class="valor" id="valor-reconhecida">657</h2>
+                  <h4>Reconhecida</h4>
+                </td>
 
-                <tr>
-                  <td id="valor-tema-negada">
-                    <h2 class="valor" id="valor-negada">317</h2>
-                    <h4>Negada</h4>
-                  </td>
-                  <td id="valor-tema-em-analise">
-                    <h2 class="valor" id="valor-em-analise">4</h2>
-                    <h4>Em Análise</h4>
-                  </td>
-                </tr>
+                <td id="valor-tema-negada">
+                  <h2 class="valor" id="valor-negada">317</h2>
+                  <h4>Negada</h4>
+                </td>
+                <td id="valor-tema-em-analise">
+                  <h2 class="valor" id="valor-em-analise">4</h2>
+                  <h4>Em Análise</h4>
+                </td>
 
-                <tr>
-                  <td id="valor-tema-merito-julgado">
-                    <h2 class="valor" id="valor-merito-julgado">359</h2>
-                    <h4>Mérito julgado</h4>
-                  </td>
-                  <td id="valor-tema-merito-n-julgado">
-                    <h2 class="valor" id="valor-merito-n-julgado">302</h2>
-                    <h4>Mérito não Julgado</h4>
-                  </td>
-                </tr>
-              </table>
-            </div>
-
-     <!--   <div class="card">
-              <h5 class="card-titulo">
-                <i class="material-icons filter-icon">filter_list</i> Filtros
-                <i class="material-icons clear-icon" title="Limpar filtros">clear</i>
-              </h5>
-            
-            </div> -->
+                <td id="valor-tema-merito-julgado">
+                  <h2 class="valor" id="valor-merito-julgado">359</h2>
+                  <h4>Mérito julgado</h4>
+                </td>
+                <td id="valor-tema-merito-n-julgado">
+                  <h2 class="valor" id="valor-merito-n-julgado">302</h2>
+                  <h4>Mérito não Julgado</h4>
+                </td>
+              </tr>
+            </table>
           </div>
 
-          <div class="col-xs-12 col-sm-9 col-lg-9 row m-0 p-xs-0 m-t-24 m-b-24 p-sm-8">
-              <div class="card">
-                <h5 class="card-titulo">
-                  <i class="material-icons filter-icon">filter_list</i> Pesquisa Livre
-                <i class="material-icons clear-icon" title="Limpar filtros">clear</i>
-                </h5>
-                <%- include src/includes/pesquisa-avancada/filtro-superior.html %>
-              </div>
-            <div class="container">
-
-              
-              <div class="modal-tema">
-                <%- include src/includes/pesquisa-avancada/tema.html %>
-                  <%- include src/includes/pesquisa-avancada/card-relator.html %>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <div class="container center-block p-0">
-            <div class="card m-b-48">
-                <div class="card-conteudo row m-0 p-0">
-                  <nav>
-                    <ul class="nav nav-tabs col-md-12" role="tablist">
-                      <li role="presentation" class="active"><a data-toggle="tab" href="#tab-table">Tabela de Temas</a></li>
-                      <li role="presentation"><a data-toggle="tab" href="#tab-graficos">Gráficos</a></li>
-                      <select class="form-control select-favoritos" style="float: right; width: 31%; margin-top: 8px; margin-right: 5px;">
-                          <option selected>Temas de Repercussão Geral</option>
-                          <option value="1">Teses de Repercussão Geral</option>
-                          <option value="2">Temas com Rg Negada</option>
-                          <option value="3">Temas com RG Reconhecida</option>
-                          <option value="4">Temas com RG Reconhecida e Mérito Julgado</option>
-                          <option value="6">Temas com RG Reconhecida e Mérito Pendente</option>
-                          <option value="7">Temas com RG Suspensão Nacional</option>
-                          <option value="8">Representativo de Controvérsia</option>
-                      </select>
-                    </ul>
-                  </nav> 
-
-                  <div class="tab-content col-md-12">
-                      <%- include src/includes/pesquisa-avancada/tabela-tema.html %>
-                      <%- include src/includes/pesquisa-avancada/graficos.html %>
-                  </div>
-                </div>  
-            </div>    
+      <!--   <div class="card">
+            <h5 class="card-titulo">
+              <i class="material-icons filter-icon">filter_list</i> Filtros
+              <i class="material-icons clear-icon" title="Limpar filtros">clear</i>
+            </h5>
+          
+          </div> -->
         </div>
 
-      </section>
+      </div>
+      <div class="container center-block p-0">
+          <div class="card m-b-48">
+              <div class="card-conteudo col-xs-12 col-sm-3 col-lg-12 p-xs-0 m-0">
+                <nav>
+                  <ul class="nav nav-tabs col-md-12" role="tablist">
+                    <li role="presentation" class="active"><a data-toggle="tab" href="#tab-table">Tabela de Temas</a></li>
+                    <li role="presentation"><a data-toggle="tab" href="#tab-graficos">Gráficos</a></li>
+                    <input type="text" class="form-control" style="position: relative; float: rigth; width: 30%; top: 10px; left: 200px;" placeholder="Filtra tabela ...">
+                    <i class="material-icons icon-print-graficos" title="Informações" data-toggle="popover" data-content="Relaciona todos os Temas de Repercussão Geral, exceto os Temas 'Cancelados'" style="top: -15px; right: 10px">info_outline</i>
+                    <i class="material-icons icon-download" title="Download" style="top: -15px; right: 10px">file_download</i>
+                  </ul>
+                </nav> 
 
-      <%- include src/includes/mapa-do-site.html %>
-        <%- include src/includes/footer.html %>
+                <div class="tab-content col-md-12">
+                    <%- include src/includes/pesquisa-avancada/tabela-tema.html %>
+                    <%- include src/includes/pesquisa-avancada/graficos.html %>
+                </div>
+              </div>  
+          </div>    
+      </div>
+
+    </section>
+
+    <%- include src/includes/mapa-do-site.html %>
+    <%- include src/includes/footer.html %>
 
   </div>
 
