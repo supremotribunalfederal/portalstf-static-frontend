@@ -7,7 +7,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+  <!--material design -->
+  <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="icon" type="imagem/png" href="<%= require('assets/img/favicon.ico') %>" />
 </head>
@@ -28,11 +29,11 @@
                   <i class="material-icons clear-icon" title="Limpar filtros">clear</i>
                   </h5>
                   <div class="card-conteudo">
+
                       <input class="form-control pesquisa-livre" type="text" onfocus="this.value=''" placeholder="Pesquisa Livre">
-                       <br>
                      
                       <%- include src/includes/pesquisa-avancada/filtro-ministros.html %>
-                      <br>
+  
                       <label>Filtros Pré-Configurados</label>
                       <select class="form-control select-favoritos">
                           <option selected>Temas de Repercussão Geral</option>
@@ -186,21 +187,21 @@
           </div>
 
           <div class="col-xs-12 col-md-9 col-lg-9 ">
-              <div class="card">
-                  <div class="card-conteudo row m-0 p-0">
-                    <nav>
-                      <ul class="nav nav-tabs col-md-12" role="tablist">
-                        <li role="presentation" class="active"><a data-toggle="tab" href="#tab-table">Tabela de Temas</a></li>
-                        <li role="presentation"><a data-toggle="tab" href="#tab-graficos">Gráficos</a></li>
-                      </ul>
-                    </nav> 
-  
-                    <div class="tab-content col-md-12">
-                        <%- include src/includes/pesquisa-avancada/tabela-tema.html %>
-                        <%- include src/includes/pesquisa-avancada/graficos.html %>
-                    </div>
-                  </div>  
-              </div>    
+            <div class="card">
+              <div class="card-conteudo row m-0 p-0">
+                <nav>
+                  <ul class="nav nav-tabs col-md-12" role="tablist">
+                    <li role="presentation" class="active"><a data-toggle="tab" href="#tab-table">Tabela de Temas</a></li>
+                    <li role="presentation"><a data-toggle="tab" href="#tab-graficos">Gráficos</a></li>
+                  </ul>
+                </nav> 
+
+                <div class="tab-content col-md-12">
+                    <%- include src/includes/pesquisa-avancada/tabela-tema.html %>
+                    <%- include src/includes/pesquisa-avancada/graficos.html %>
+                </div>
+              </div>  
+            </div>    
           </div>
 
         </div>  <!--fecha container -->    

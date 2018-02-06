@@ -101,6 +101,7 @@ input#busca-relator {
     background-repeat: no-repeat;
     padding: 14px 20px 12px 45px;
     margin-top: 5px;
+    margin-bottom: 5px;
     width: 100%;
 }
 .dropdown-content {
@@ -322,6 +323,17 @@ ul .nav-tabs {
 .tab-content {
   padding: 0%;
 }
+
+#mais-resultados{
+  margin-bottom: 10px;
+}
 .conteudo-principal{
   margin-top: 0px;
+}
+
+.titulo-pesquisa{
+  background-color: #00A7E6; 
+  color: white; 
+  padding: 15px; 
+  margin-bottom: -20px;
 }
