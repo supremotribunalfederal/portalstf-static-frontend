@@ -56,16 +56,7 @@
               </tr>
             </table>
           </div>
-
-      <!--   <div class="card">
-            <h5 class="card-titulo">
-              <i class="material-icons filter-icon">filter_list</i> Filtros
-              <i class="material-icons clear-icon" title="Limpar filtros">clear</i>
-            </h5>
-          
-          </div> -->
         </div>
-
       </div>
       <div class="container center-block p-0">
           <div class="card m-b-48">
@@ -73,7 +64,7 @@
                 <nav>
                   <ul class="nav nav-tabs col-md-12" role="tablist">
                     <li role="presentation" class="active"><a data-toggle="tab" href="#tab-table">Tabela de Temas</a></li>
-                    <li role="presentation"><a data-toggle="tab" href="#tab-graficos">Gráficos</a></li>
+                    <li role="presentation"><a data-toggle="tab" href="#tab-navegacao-graficos">Gráficos</a></li>
                     <input type="text" class="form-control" style="position: relative; float: rigth; width: 30%; top: 10px; left: 200px;" placeholder="Filtra tabela ...">
                     <i class="material-icons icon-print-graficos" title="Informações" data-toggle="popover" data-content="Relaciona todos os Temas de Repercussão Geral, exceto os Temas 'Cancelados'" style="top: -15px; right: 10px">info_outline</i>
                     <i class="material-icons icon-download" title="Download" style="top: -15px; right: 10px">file_download</i>
@@ -81,8 +72,14 @@
                 </nav> 
 
                 <div class="tab-content col-md-12">
-                    <%- include src/includes/pesquisa-avancada/tabela-tema.html %>
-                    <%- include src/includes/pesquisa-avancada/graficos.html %>
+                  <!-- Inclue tabela de temas -->
+                  <%- include src/includes/pesquisa-avancada/tabela-tema.html %>
+                  
+                  <!-- Mostra as tabelas de exemplo -->
+                  <div class="p-t-16" id="tab-navegacao-graficos">
+                    <img src="../../assets/img/pesquisaavancada/grafico1.png" alt="Exemplo de gráfico">
+                    <img src="../../assets/img/pesquisaavancada/grafico2.png" alt="Exemplo de gráfico">
+                  </div>
                 </div>
               </div>  
           </div>    

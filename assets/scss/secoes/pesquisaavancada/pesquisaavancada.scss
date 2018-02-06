@@ -12,16 +12,10 @@ a {
   text-align: center;
   vertical-align: middle;
 }
-.imagem-grafico {
-  height: 220px;
-}
-.imagens-graficos {
-  border: none
-}
-.card-graficos {
-  height: 271.500px;
-  margin-left: 15px;
-  margin: 20px;
+#tab-navegacao-graficos {
+  img {
+    width: 49%;
+  }
 }
 
 /* Card de Temas */ 
@@ -376,47 +370,6 @@ ul .nav-tabs {
   transform: scale(1); 
 }
 
-.tab-pane {
-  padding: 0;
-}
-
 .tab-content {
   padding: 0 20px;
-}
-
-/*-------------------------------*/
-/*    Carousel Fade Transition   */
-/*-------------------------------*/
-
-#fade-quote-carousel.carousel {
-  padding-bottom: 60px;
-}
-#fade-quote-carousel.carousel .carousel-inner .item {
-  opacity: 0;
-  -webkit-transition-property: opacity;
-      -ms-transition-property: opacity;
-          transition-property: opacity;
-}
-#fade-quote-carousel.carousel .carousel-inner .active {
-  opacity: 1;
-  -webkit-transition-property: opacity;
-      -ms-transition-property: opacity;
-          transition-property: opacity;
-}
-#fade-quote-carousel.carousel .carousel-indicators {
-  bottom: 10px;
-}
-#fade-quote-carousel.carousel .carousel-indicators > li {
-  background-color: blue;
-  border: none;
-}
-#fade-quote-carousel blockquote {
-    text-align: center;
-    border: none;
-}
-#fade-quote-carousel .profile-circle {
-    width: 100px;
-    height: 100px;
-    margin: 0 auto;
-    border-radius: 100px;
 }
