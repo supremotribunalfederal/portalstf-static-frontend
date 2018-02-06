@@ -89,12 +89,11 @@ $(document).ready(function() {
 		$("input.opcao-filtro-rg, input.pesquisa-livre, input.data-rg").val("");
 	})
 
-// mudar nome da pesquisa de acordo com o filtro selecionado
+
 
 	$('.btn-fav').click(function(){
 		var texto = $(this).data('titulo-pesquisa');
 		$('#titulo-filtro').text(texto);
 	});
-
 });
 
