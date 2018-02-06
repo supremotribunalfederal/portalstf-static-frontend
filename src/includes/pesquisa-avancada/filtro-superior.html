@@ -1,104 +1,17 @@
-<div class="principal-tab-filtros col-xs-12 col-sm-12 col-md-12 col-lg-12" style="border: 1px solid #f0eaea;">
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
 
-    <!-- Menu de navegação da tab 
-    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-        <div class="menu-tab-filtros list-group list-group-menu">
+    
+    <input class="form-control pesquisa-livre" type="text" onfocus="this.value=''" placeholder="Pesquisa Livre">
 
-            <a href="#" class="list-group-item active text-center star">
-            <i class="material-icons" title="Filtros Pré-Definidos">star</i>
-            </a>
+    <%- include filtro-ministros.html %>
 
-            <a href="#" class="list-group-item text-center lupa">
-            <i class="material-icons" title="Pesquisa Livre">search</i>
-            </a>
-        </div>
-    </div> -->
- <!--   select favoritos
-    <div class="col-xs-6 col-sm-6 col-md-10 col-lg-10">
-        <select class="form-control select-favoritos" style="margin-top: 7px;">
-            <option selected>Temas de Repercussão Geral</option>
-            <option value="1">Teses de Repercussão Geral</option>
-            <option value="2">Temas com Rg Negada</option>
-            <option value="3">Temas com RG Reconhecida</option>
-            <option value="4">Temas com RG Reconhecida e Mérito Julgado</option>
-            <option value="6">Temas com RG Reconhecida e Mérito Pendente</option>
-            <option value="7">Temas com RG Suspensão Nacional</option>
-            <option value="8">Representativo de Controvérsia</option>
-        </select>
-    </div>
--->
-
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
-        <input class="form-control pesquisa-livre" type="text" onfocus="this.value=''" placeholder="Pesquisa Livre">
-    </div>
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
-        <%- include filtro-ministros.html %>
-    </div>
         
         <!-- Conteúdo das abas -->
     <div class="conteudo-tab-filtros col-lg-12 col-md-12 col-sm-12 col-xs-12 p-0">
   
   
-      <!-- Sessão dos predefinidos -->
-    <div class="conteudo-sessao-filtros p-l-0">
-  
-        <!-- Simulação de listagem dos filtros -->
-        <!-- Esse código será bem menor quando houver a ligação com os objs Qlik -->
-    <!--    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 p-0">
-            <div class="btn-group btn-group-toggle text-center" data-toggle="buttons">
-                
-                <label data-titulo-pesquisa="Temas de Repercussão Geral" data-nome-pesquisa="temasCompletos" class="btn btn-secondary btn-fav btn-lg btn-default-bordered active col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
-                    <input class="input-fav" type="radio" name="options"  autocomplete="off">
-                    Temas de Repercussão Geral
-                </label>
-        
-                <label data-titulo-pesquisa="Teses de Repercussão Geral" data-nome-pesquisa="tesesRG" class="btn btn-secondary btn-fav btn-lg btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
-                    <input class="input-fav" type="radio" name="options" autocomplete="off"> 
-                    Teses de Repercussão Geral
-                </label>
-        
-                <label data-titulo-pesquisa="Temas com Repercussão Geral Negada" class="btn btn-secondary btn-fav btn-lg btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
-                    <input type="radio" class="input-fav" name="options"  autocomplete="off"> 
-                    Temas com RG Negada
-                </label>
-        
-                <label  data-titulo-pesquisa="Temas com Repercussão Geral Reconhecida" class="btn btn-secondary btn-fav btn-lg  btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
-                    <input type="radio" class="input-fav" name="options"  autocomplete="off"> 
-                    Temas com RG Reconhecida
-                </label>
-            </div> 
-        </div>  
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 p-0">     
-            <div class="btn-group btn-group-toggle text-center" data-toggle="buttons">
-                <label  data-titulo-pesquisa="Temas com Repercussão Geral Reconhecida e Mérito Julgado" class="btn btn-secondary btn-fav btn-lg  btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
-                    <input type="radio" class="input-fav" name="options"autocomplete="off"> 
-                    Com RG Reconhecida e Mérito Julgado
-                </label>
-        
-                <label data-titulo-pesquisa="Temas com Repercussão Geral Reconhecida e Mérito Pendente" class="btn btn-secondary btn-fav btn-lg btn-default-bordered col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
-                    <input type="radio" class="input-fav" name="options" autocomplete="off"> 
-                    Com RG Reconhecida e Mérito Pendente
-                </label>
-        
-                <label data-titulo-pesquisa="Temas com Suspensão Nacional" class="btn btn-secondary btn-fav btn-lg  btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
-                    <input type="radio" class="input-fav" name="options"  autocomplete="off"> 
-                    Temas com Suspensão Nacional
-                </label>
-        
-                <label data-titulo-pesquisa="Representativo de Controvérsia" class="btn btn-secondary btn-fav btn-lg  btn-default-bordered  col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
-                    <input type="radio" class="input-fav" name="options"  autocomplete="off"> 
-                    Representativo de Controvérsia   
-                </label>
-            </div>
-        -->   
-        <!-- Fim simulação de listagem dos filtros -->
-      </div>
-    </div>  
-  
       <!-- Sessão de pesquisas principais -->
-      <div class="conteudo-sessao-filtros p-l-0">
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                
+      <div class="conteudo-sessao-filtros p-l-0">     
             <div id="mais-filtros-principais" style="margin-top: 10px">
                 
                 <input type="text" class="form-control opcao-filtro-rg" placeholder="Número do tema" list="lista-numeros-temas" autocomplete="on">
@@ -144,10 +57,7 @@
                     <option value="Não"></option>
                     <option value="Sim"></option>
                 </datalist>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" style="margin-top: 10px">
-            
+            </div> 
             <div id="mais-filtros-processos" >
                 <input type="text" class="form-control opcao-filtro-rg" placeholder="Situação Processo Paradigma" list="lista-opcoes-processo-paradima">
                 <datalist id="lista-opcoes-processo-paradima">
@@ -190,17 +100,12 @@
                     <option value="Direitio Previdenciário"></option>
                 </datalist>
             </div>
-                
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" style="margin-top: 10px">
 
             <div id="mais-filtros-data">
             
                 <input type="text" id="data_inicial" class="form-control data-rg" placeholder="De" onfocus="(this.type='date')" />
-            
                 <input type="text" id="data_final" class="form-control data-rg" placeholder="Até" onfocus="(this.type='date')" style="margin-top: 5px;"/>
             </div>
-        </div>
       </div>
     </div>
   </div>
