@@ -1,6 +1,6 @@
 <section id="pesquisa" class="pesquisa pesquisa-padrao row m-0 m-t-96 p-l-0 p-r-0">
   <div class="container center-block">
-    <div class="hidden-xs pull-right m-t-16">
+    <div class="link-peticionamento hidden-xs pull-right m-t-16">
       <p class="__stf-branco m-0">
         <span class="m-r-16 label-peticione">Peticione e acompanhe processos:</span> <a href="//sistemas.stf.jus.br/peticionamento/" target="_blank" class="btn ">Peticionamento eletrônico</a>
       </p>
@@ -135,7 +135,7 @@
                 </div>
 
                 <div class="col-md-12 col-xs-12 col-sm-12 pesquisa-repercussao aba-pesquisa" style="display: none;">
-                  <input type="text" name="pesquisaRepercussao" id="pesquisaRepercussao" class="campo-texto" placeholder="Digite o queira saber...">
+                  <input type="text" name="pesquisaRepercussao" id="pesquisaRepercussao" class="campo-texto" placeholder="Digite o que quer saber...">
                 </div>
 
                 <button form="pesquisa-principal" id="btnPesquisar" class="btn btn-default pull-right">
@@ -144,7 +144,129 @@
                 </button>
 
                 <div class="hidden-sm hidden-xs pesquisa-rg-links-inferiores">
-                  <a href="#">Pesquisa avançada</a>
+                  <div class="collapse" id="pesquisa-avancada">
+                    <div class="card card-body">
+                      
+                      <!-- Filtros -->
+
+                      <div style="position: relative; float: left;">
+                        <div>
+                          <label>Número do tema</label>
+                          <input type="text" class="form-control" placeholder="Número do tema" list="lista-num-temas">
+                          <datalist id="lista-num-temas">
+                            <option value="984"></option>
+                            <option value="983"></option>
+                            <option value="982"></option>
+                            <option value="981"></option>
+                            <option value="980"></option>
+                            <option value="979"></option>
+                          </datalist>
+                        </div>
+                        
+                        <div>
+                          <label>Situação da Repercussão Geral</label>
+                          <input type="text" class="form-control" placeholder="Situação da Repercussão Geral" list="lista-situacao-rg">
+                          <datalist id="lista-situacao-rg">
+                            <option value="Em Análise Preliminar de RG"></option>
+                            <option value="RG Reconhecida"></option>
+                            <option value="Com RG – Novo Tema"></option>
+                            <option value="Com RG – Reafirmação de Jurisprudência"></option>
+                            <option value="Sem RG – Questão sem Relevância"></option>
+                            <option value="Sem RG – Matéria Infraconstitucional"></option>
+                          </datalist>
+                        </div>
+  
+                        <div>
+                          <label>Situação Reconhecimento RG</label>
+                          <input type="text" class="form-control" placeholder="Situação Reconhecimento RG" list="lista-opcoes-reconhecimento">
+                          <datalist id="lista-opcoes-reconhecimento">
+                            <option value="RG negada"></option>
+                            <option value="RG reconhecida"></option>
+                            <option value="Tema em análise"></option>
+                          </datalist>
+                        </div>
+                    
+                        <div>
+                          <label>Situação Julgamento Mérito RG</label>
+                          <input type="text" class="form-control" placeholder="Situação Julgamento Mérito RG" list="lista-opcoes-julgamento">
+                          <datalist id="lista-opcoes-julgamento">
+                            <option value="**Não se aplica**"></option>
+                            <option value="Julgado"></option>
+                            <option value="Pendente"></option>
+                          </datalist>
+                        </div>
+                    
+                        <div>
+                          <label>Tem Tese</label>
+                          <input type="text" class="form-control" placeholder="Tem Tese" list="lista-opcoes-tem-tese">
+                          <datalist id="lista-opcoes-tem-tese">
+                            <option value="Não"></option>
+                            <option value="Sim"></option>
+                          </datalist>
+                        </div>
+                      </div>
+                      
+                      <!-- Filtros processo -->
+                      <div style="position: relative; float: right;">
+                        <div>
+                          <label>Situação Processo Paradigma</label>
+                          <input type="text" class="form-control opcao-filtro-rg" placeholder="Situação Processo Paradigma" list="lista-opcoes-processo-paradima">
+                          <datalist id="lista-opcoes-processo-paradima">
+                            <option value="Analisada Preliminar de RG"></option>
+                            <option value="Acórdão de RG Publicado"></option>
+                            <option value="Em Julgamento"></option>
+                            <option value="Mérito Julgado"></option>
+                            <option value="Acórdão do Mérito Julgado"></option>
+                            <option value="Trânsito em Julgado"></option>
+                            <option value="Aguarda Substituição de Paradigma"></option>
+                          </datalist>
+                        </div>
+                    
+                        <div>
+                          <label>Classe Processo Paradigma</label>
+                          <input type="text" class="form-control opcao-filtro-rg" placeholder="Classe Processo Paradigma" list="lista-classe-processo">
+                          <datalist id="lista-classe-processo">
+                            <option value="AI"></option>
+                            <option value="ARE"></option>
+                            <option value="RE"></option>
+                          </datalist>
+                        </div>
+                    
+                        <div>
+                          <label>Número Processo Paradigma</label>
+                          <input type="text" class="form-control opcao-filtro-rg" placeholder="Número Processo Paradigma" list="lista-numero-processo">
+                          <datalist id="lista-numero-processo">
+                            <option value="136821"></option>
+                            <option value="221142"></option>
+                            <option value="330817"></option>
+                            <option value="333889"></option>
+                            <option value="377457"></option>
+                            <option value="398365"></option>
+                          </datalist>
+                        </div>
+                    
+                        <div>
+                          <label>Ramo do Direito</label>
+                          <input type="text" class="form-control opcao-filtro-rg" placeholder="Ramo do Direito" list="lista-ramo-direito">
+                          <datalist id="lista-ramo-direito">
+                            <option value="Direito Administrativo"></option>
+                            <option value="Direito Civil"></option>
+                            <option value="Direito do Consumidor"></option>
+                            <option value="Direito do Trabalho"></option>
+                            <option value="Direito Penal"></option>
+                            <option value="Direitio Previdenciário"></option>
+                          </datalist>
+                        </div>
+                        
+                        <!-- <div>
+                          <input type="text" id="data_inicial" class="form-control data-rg" placeholder="De" onfocus="(this.type='date')" /> <br>
+                          <input type="text" id="data_final" class="form-control data-rg" placeholder="Até" onfocus="(this.type='date')" style="margin-top: 5px;"/>
+                        </div> -->
+
+                      </div>
+                    </div>
+                  </div>
+                  <a class="link-pesquisa-avancada-rg" href="#pesquisa-avancada" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="pesquisa-avancada" style="clear: left;">Pesquisa avançada</a>
                 </div>
 
                 <div class="hidden-sm hidden-xs pesquisa-jurisprudencia-links-inferiores">
