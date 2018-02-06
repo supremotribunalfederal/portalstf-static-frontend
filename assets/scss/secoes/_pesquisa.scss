@@ -106,13 +106,20 @@
           margin-left: 5px;
         }
 
-        .pesquisa-jurisprudencia-links-inferiores  {
+        .pesquisa-jurisprudencia-links-inferiores,
+        .pesquisa-rg-links-inferiores  {
             line-height: 40px;
             font-size: 0.8rem;
         }
 
-        .pesquisa-jurisprudencia-links-inferiores * {
+        .pesquisa-jurisprudencia-links-inferiores *,
+        .pesquisa-rg-links-inferiores * {
           color: white;
+        }
+
+        .pesquisa-rg-links-inferiores * {
+          position: relative;
+          float: right;
         }
 
         .btn {

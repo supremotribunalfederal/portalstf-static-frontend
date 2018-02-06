@@ -54,6 +54,7 @@ $("#menuPesquisa li span").on("click", function() {
 
     $('.botoes-pesquisa-jurisprudencia span').hide();
     $('.pesquisa-jurisprudencia-links-inferiores').hide();
+    $('.pesquisa-rg-links-inferiores').hide();
 
     //Ativa a aba clicada.
     $(this).addClass("ativo");
@@ -101,6 +102,7 @@ $("#menuPesquisa li span").on("click", function() {
             placeholder = "Digite um tema para pesquisar...";
             $("#abaSelecionada").val("7");
             $('.pesquisa-repercussao').show();
+            $('.pesquisa-rg-links-inferiores').show();
             campoInputPesquisa = 'pesquisaRepercussao';
             break;
     }
