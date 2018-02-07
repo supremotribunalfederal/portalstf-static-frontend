@@ -66,7 +66,7 @@
 		</div>
 
 		<!-- Filtros processo -->
-		<div class="container m-0" style="display: grid; grid-template-rows: 0px 25px 35px 25px;width: 795px; background-color: rgba(0, 167, 230, 0.9);">
+		<div class="container m-0" style="display: grid; grid-template-rows: 0px 25px 35px 25px 35px 25px;width: 795px; background-color: rgba(0, 167, 230, 0.9);">
 			<div class="row">
 				<div class="col-lg-6">
 					<label>Por Situação Processo Paradigma:</label>
@@ -105,7 +105,7 @@
 					<label>Por Ramo do Direito:</label>
 				</div>
 			</div>
-			<div class="row m-b-16">
+			<div class="row">
 				<div class="col-lg-6" style="padding-right: 0;">
 					<input type="text" class="form-control opcao-filtro-rg" placeholder="Situação Processo Paradigma" list="lista-opcoes-processo-paradima" style="width: 100%; color: black;">
 					<datalist id="lista-opcoes-processo-paradima">
@@ -131,10 +131,24 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col" style="text-align: right; position: relative; right: 15px;">
+				<div class="col-lg-6">
+					<label>Relatores</label>
+				</div>
+				<div class="col-lg-6">
 					<label>Data período:</label>
-					<input type="text" id="data_inicial" class="form-control data-rg" placeholder="De" onfocus="(this.type='date')"/>
-					<input type="text" id="data_final" class="form-control data-rg" placeholder="Até" onfocus="(this.type='date')"/>
+				</div>
+			</div>
+			<div class="row m-b-16">
+				<div class="col-lg-6">
+					<%- include ministros-drop.html %>						
+				</div>
+				<div class="col-lg-6">
+					<input type="text" id="data_inicial" class="form-control data-rg" placeholder="De" onfocus="(this.type='date')" style="
+					width: 49.5%;
+			"/>
+					<input type="text" id="data_final" class="form-control data-rg" placeholder="Até" onfocus="(this.type='date')" style="
+					width: 49.5%;
+			"/>
 				</div>
 			</div>
 		</div>
