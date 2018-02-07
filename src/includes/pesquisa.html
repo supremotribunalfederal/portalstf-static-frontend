@@ -1,13 +1,13 @@
 <section id="pesquisa" class="pesquisa pesquisa-padrao row m-0 m-t-96 p-l-0 p-r-0">
   <div class="container center-block">
-    <div class="link-peticionamento hidden-xs pull-right m-t-16">
+    <div class="link-peticionamento hidden-xs pull-right m-t-16 collapse in multi-collapse">
       <p class="__stf-branco m-0">
         <span class="m-r-16 label-peticione">Peticione e acompanhe processos:</span> <a href="//sistemas.stf.jus.br/peticionamento/" target="_blank" class="btn ">Peticionamento eletrônico</a>
       </p>
     </div>
     <div class="pesquisa-conteudo clearfix">
       <div class="pesquisa-titulo m-t-40 m-b-16">
-        <h3 class="m-0">O que você procura?</h3>
+        <h3 class="m-0 collapse in multi-collapse">O que você procura?</h3>
       </div>
       <!--<h3 class="pesquisa-titulo-expandida m-b-24 campo-texto">O que você procura?</h3>-->
       <div class="pesquisa-campos">
@@ -144,12 +144,11 @@
                 </button>
 
                 <div class="hidden-sm hidden-xs pesquisa-rg-links-inferiores">
-                  <div class="collapse" id="pesquisa-avancada">
+                  <div class="collapse multi-collapse">
                     <div class="card card-body">
                       
                       <!-- Filtros -->
-
-                      <div style="position: relative; float: left;">
+                      <div>
                         <div>
                           <label>Número do tema</label>
                           <input type="text" class="form-control" placeholder="Número do tema" list="lista-num-temas">
@@ -207,7 +206,7 @@
                       </div>
                       
                       <!-- Filtros processo -->
-                      <div style="position: relative; float: right;">
+                      <div>
                         <div>
                           <label>Situação Processo Paradigma</label>
                           <input type="text" class="form-control opcao-filtro-rg" placeholder="Situação Processo Paradigma" list="lista-opcoes-processo-paradima">
@@ -266,7 +265,7 @@
                       </div>
                     </div>
                   </div>
-                  <a class="link-pesquisa-avancada-rg" href="#pesquisa-avancada" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="pesquisa-avancada" style="clear: left;">Pesquisa avançada</a>
+                  <a class="link-pesquisa-avancada-rg" href=".multi-collapse" data-toggle="collapse">Pesquisa avançada</a>
                 </div>
 
                 <div class="hidden-sm hidden-xs pesquisa-jurisprudencia-links-inferiores">

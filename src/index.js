@@ -455,21 +455,6 @@ $('#btnAcessarPortalNocicitas').on('click', function() {
     }
 })();
 
-var escondeMostraElemento = function(elementoDeClick, elementoAMudar, classe) {
-    $(document).ready(function() {
-        $(elementoDeClick).click(function() {
-            if($(elementoAMudar).hasClass(classe)) {
-                $(elementoAMudar).removeClass(classe).show();
-            } else {
-                $(elementoAMudar).addClass(classe).hide();
-            }
-        })
-    });
-}
-
-escondeMostraElemento("a.link-pesquisa-avancada-rg", "div.link-peticionamento", "escondido");
-escondeMostraElemento("a.link-pesquisa-avancada-rg", "div.pesquisa-titulo h3", "escondido");
-
 //parametros qlik
 
 /* ---------------------------------------------------------------------------------------------------------------- */
