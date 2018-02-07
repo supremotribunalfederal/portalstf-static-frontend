@@ -12,16 +12,10 @@ a {
   text-align: center;
   vertical-align: middle;
 }
-.imagem-grafico {
-  height: 220px;
-}
-.imagens-graficos {
-  border: none
-}
-.card-graficos {
-  height: 271.500px;
-  margin-left: 15px;
-  margin: 20px;
+#tab-navegacao-graficos {
+  img {
+    width: 49%;
+  }
 }
 
 /* Card de Temas */ 
@@ -100,9 +94,8 @@ input#busca-relator {
     border-box: box-sizing;
     background-image: url('../../img/pesquisaavancada/person3.png');
     background-repeat: no-repeat;
+    background-position: 5px 8px;
     padding: 14px 20px 12px 45px;
-    margin-top: 5px;
-    width: 100%;
 }
 .dropdown-content {
     display: none;
@@ -374,10 +367,6 @@ ul .nav-tabs {
 
 .nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after {
   transform: scale(1); 
-}
-
-.tab-pane {
-  padding: 0;
 }
 
 .tab-content {
