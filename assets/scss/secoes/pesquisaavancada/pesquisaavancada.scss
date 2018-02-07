@@ -122,12 +122,19 @@ tr{
   text-align: center;
 }
 
-.badge-repercussao{
+.badge-verde{
   background-color: #4cbb71;
   color: white;
 }
-.badge-suspensao{
+.badge-vermelho{
+  background-color: red;
+}
+.badge-azul{
   background-color: #3383dd;
+}
+.badge-preto{
+  background-color: black;
+  color: white;
 }
 .badge{
   margin-top: 10px;
