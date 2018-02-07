@@ -145,58 +145,94 @@
 
                 <div class="hidden-sm hidden-xs pesquisa-rg-links-inferiores">
                   <div class="collapse multi-collapse">
-                    <div style="position: relative;display: grid;float: left;grid-template-columns: 1fr 1fr;grid-template-rows: 30px 30px 30px 30px 30px;width: 88%;padding: 0px 20px;">
+                    <div class="container" style="display: grid;">
                       
                       <!-- Filtros -->
-                      <label>Número do tema</label>
-                      <label>Situação da Repercussão Geral</label>
-                      <input type="text" class="form-control" placeholder="Número do tema" list="lista-num-temas">
-                      <datalist id="lista-num-temas">
-                        <option value="984"></option>
-                        <option value="983"></option>
-                        <option value="982"></option>
-                        <option value="981"></option>
-                        <option value="980"></option>
-                        <option value="979"></option>
-                      </datalist>
-                      <input type="text" class="form-control" placeholder="Situação da Repercussão Geral" list="lista-situacao-rg">
-                      <datalist id="lista-situacao-rg">
-                        <option value="Em Análise Preliminar de RG"></option>
-                        <option value="RG Reconhecida"></option>
-                        <option value="Com RG – Novo Tema"></option>
-                        <option value="Com RG – Reafirmação de Jurisprudência"></option>
-                        <option value="Sem RG – Questão sem Relevância"></option>
-                        <option value="Sem RG – Matéria Infraconstitucional"></option>
-                      </datalist>
+                      <div class="row">
+                        <div class="col-lg-2"><label>Número do tema</label></div>
+                        <div class="col-lg-2"><label>Tem Tese</label></div>
+                        <div class="col-lg-4"><label>Situação Reconhecimento RG</label></div>
+                      </div>
 
-                      <label>Situação Reconhecimento RG</label>
-                      <label>Situação Julgamento Mérito RG</label>
-                      <input type="text" class="form-control" placeholder="Situação Reconhecimento RG" list="lista-opcoes-reconhecimento">
-                      <datalist id="lista-opcoes-reconhecimento">
-                        <option value="RG negada"></option>
-                        <option value="RG reconhecida"></option>
-                        <option value="Tema em análise"></option>
-                      </datalist>
-                      <input type="text" class="form-control" placeholder="Situação Julgamento Mérito RG" list="lista-opcoes-julgamento">
-                      <datalist id="lista-opcoes-julgamento">
-                        <option value="**Não se aplica**"></option>
-                        <option value="Julgado"></option>
-                        <option value="Pendente"></option>
-                      </datalist>
-                  
-                      <label>Tem Tese</label>
-                      <div></div>
-                      <input type="text" class="form-control" placeholder="Tem Tese" list="lista-opcoes-tem-tese">
-                      <datalist id="lista-opcoes-tem-tese">
-                        <option value="Não"></option>
-                        <option value="Sim"></option>
-                      </datalist>
-                    </div>
+                      <div class="row">
+                        <div class="col-lg-2">
+                          <input type="text" class="form-control" placeholder="Número do tema" list="lista-num-temas" style="color: black;">
+                          <datalist id="lista-num-temas">
+                            <option value="984"></option>
+                            <option value="983"></option>
+                            <option value="982"></option>
+                            <option value="981"></option>
+                            <option value="980"></option>
+                            <option value="979"></option>
+                          </datalist>
+                        </div>
+                        <div class="col-lg-2">    
+                          <input type="text" class="form-control" placeholder="Tem Tese" list="lista-opcoes-tem-tese" style="color: black;">
+                          <datalist id="lista-opcoes-tem-tese">
+                            <option value="Não"></option>
+                            <option value="Sim"></option>
+                          </datalist>
+                        </div>
+                        <div class="col-lg-4">
+                          <input type="text" class="form-control" placeholder="Situação Reconhecimento RG" list="lista-opcoes-reconhecimento" style="width: 100%; color: black;">
+                          <datalist id="lista-opcoes-reconhecimento">
+                            <option value="RG negada"></option>
+                            <option value="RG reconhecida"></option>
+                            <option value="Tema em análise"></option>
+                          </datalist>
+                        </div>
+                      </div>
 
-                    <div style="position: relative;display: grid;float: left;grid-template-columns: 1fr 1fr;grid-template-rows: 30px 30px 30px 30px 30px;width: 88%;padding: 0px 20px;">
+                      <div class="row">
+                        <div class="col-lg-4"><label>Situação da Repercussão Geral</label></div>
+                        <div class="col-lg-4"><label>Situação Julgamento Mérito RG</label></div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-4" style="padding-right: 0;">
+                          <input type="text" class="form-control" placeholder="Situação da Repercussão Geral" list="lista-situacao-rg" style="width: 100%; color: black;">
+                          <datalist id="lista-situacao-rg">
+                            <option value="Em Análise Preliminar de RG"></option>
+                            <option value="RG Reconhecida"></option>
+                            <option value="Com RG – Novo Tema"></option>
+                            <option value="Com RG – Reafirmação de Jurisprudência"></option>
+                            <option value="Sem RG – Questão sem Relevância"></option>
+                            <option value="Sem RG – Matéria Infraconstitucional"></option>
+                          </datalist>
+                        </div>
+                        <div class="col-lg-4">
+                          <input type="text" class="form-control" placeholder="Situação Julgamento Mérito RG" list="lista-opcoes-julgamento" style="width: 100%; color: black;">
+                          <datalist id="lista-opcoes-julgamento">
+                            <option value="**Não se aplica**"></option>
+                            <option value="Julgado"></option>
+                            <option value="Pendente"></option>
+                          </datalist>                
+                        </div>
+                      </div>
+                      <!-- 
+
+                    <div style="position: relative;display: grid;float: left;grid-template-columns: 1fr 1fr;grid-template-rows: 30px 30px 30px 30px 30px;width: 88%;padding: 0px 20px;"> -->
                       <!-- Filtros processo -->
+                      <!-- <label>Situação Processo Paradigma</label>
+                      <input type="text" class="form-control opcao-filtro-rg" placeholder="Classe Processo Paradigma" list="lista-classe-processo">
+                      <datalist id="lista-classe-processo">
+                        <option value="AI"></option>
+                        <option value="ARE"></option>
+                        <option value="RE"></option>
+                      </datalist>
+                      
+                      <label>Número Processo Paradigma</label>
+                      <input type="text" class="form-control opcao-filtro-rg" placeholder="Número Processo Paradigma" list="lista-numero-processo">
+                      <datalist id="lista-numero-processo">
+                        <option value="136821"></option>
+                        <option value="221142"></option>
+                        <option value="330817"></option>
+                        <option value="333889"></option>
+                        <option value="377457"></option>
+                        <option value="398365"></option>
+                      </datalist>
+                      
                       <label>Classe Processo Paradigma</label>
-                      <label>Situação Processo Paradigma</label>
+                      <label>Ramo do Direito</label>
                       <input type="text" class="form-control opcao-filtro-rg" placeholder="Situação Processo Paradigma" list="lista-opcoes-processo-paradima">
                       <datalist id="lista-opcoes-processo-paradima">
                         <option value="Analisada Preliminar de RG"></option>
@@ -207,24 +243,6 @@
                         <option value="Trânsito em Julgado"></option>
                         <option value="Aguarda Substituição de Paradigma"></option>
                       </datalist>
-                      <input type="text" class="form-control opcao-filtro-rg" placeholder="Classe Processo Paradigma" list="lista-classe-processo">
-                      <datalist id="lista-classe-processo">
-                        <option value="AI"></option>
-                        <option value="ARE"></option>
-                        <option value="RE"></option>
-                      </datalist>
-                
-                      <label>Número Processo Paradigma</label>
-                      <label>Ramo do Direito</label>
-                      <input type="text" class="form-control opcao-filtro-rg" placeholder="Número Processo Paradigma" list="lista-numero-processo">
-                      <datalist id="lista-numero-processo">
-                        <option value="136821"></option>
-                        <option value="221142"></option>
-                        <option value="330817"></option>
-                        <option value="333889"></option>
-                        <option value="377457"></option>
-                        <option value="398365"></option>
-                      </datalist>
                       <input type="text" class="form-control opcao-filtro-rg" placeholder="Ramo do Direito" list="lista-ramo-direito">
                       <datalist id="lista-ramo-direito">
                         <option value="Direito Administrativo"></option>
@@ -233,7 +251,7 @@
                         <option value="Direito do Trabalho"></option>
                         <option value="Direito Penal"></option>
                         <option value="Direitio Previdenciário"></option>
-                      </datalist>
+                      </datalist> -->
                         
                         <!-- <div>
                           <input type="text" id="data_inicial" class="form-control data-rg" placeholder="De" onfocus="(this.type='date')" /> <br>
