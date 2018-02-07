@@ -91,10 +91,18 @@ $(document).ready(function() {
 
 // mudar nome da pesquisa de acordo com o filtro selecionado
 
-	$('.btn-fav').click(function(){
+/*	$('.btn-fav').click(function(){
 		var texto = $(this).data('titulo-pesquisa');
 		$('#titulo-filtro').text(texto);
-	});
+	});*/
 
+	$('#favoritos').change(function(){
+		var str="";
+		$('#favoritos option:selected').each(function(){
+			str += $(this).text() + " ";
+		});
+		$('#filtro-pesquisado').text(str);
+	}).trigger('change');
+	
 });
 

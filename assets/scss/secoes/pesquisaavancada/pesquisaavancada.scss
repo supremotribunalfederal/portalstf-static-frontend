@@ -16,13 +16,17 @@ a {
   height: 220px;
 }
 .imagens-graficos {
-  border: none
+  border: none;
+  padding: 10px;
 }
 .card-graficos{
   margin: 5px;
   padding: 2px;
 }
 
+.card-filtros{
+  padding: 5px 3px;
+}
 /* Card de Temas */ 
 
 table.valores-temas .valor{
@@ -35,9 +39,6 @@ td > h4{
  margin: 0px;
 }
 
-.card-titulo-over {
-  margin-top: 0px;
-}
 // Tabela
 h2#valor-reconhecida, h2#valor-merito-julgado {
   color: #4477AA;
@@ -165,7 +166,7 @@ i{
   font-size: 1.2em
 }
 .filter-icon{
-  vertical-align: bottom; 
+  vertical-align: text-bottom; 
   font-size: 1.5em;
 }
 .clear-icon {
@@ -216,8 +217,7 @@ input.opcao-filtro-rg {
 }
 
 .tabela-rg, .tabela-rg > thead{
-  border: 1px solid #f0eaea;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
 .nome-filtro{
@@ -268,13 +268,8 @@ div.tabelas-relatores {
   top: 3px;
   margin-left: 10px;
 }
-.info-icon {
-  position: relative;
-  float: right;
-  top: 7px;
-  margin-right: 10px;
-}
-.icon-print-graficos, .icon-download {
+
+.icon-info, .icon-download {
   position: relative;
   float: right;
   margin-left: 5px;
@@ -317,23 +312,22 @@ ul .nav-tabs {
 }
 
 .tab-pane {
-  padding: 0;
+  padding: 0%;
 }
 
 .tab-content {
   padding: 0%;
+
 }
 
 #mais-resultados{
   margin-bottom: 10px;
-}
-.conteudo-principal{
-  margin-top: 0px;
 }
 
 .titulo-pesquisa{
   background-color: #00A7E6; 
   color: white; 
   padding: 15px; 
-  margin-bottom: -20px;
+  margin-bottom: -6px;
+  margin-top: 0px;
 }
