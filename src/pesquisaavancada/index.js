@@ -104,5 +104,19 @@ $(document).ready(function() {
 		$('#filtro-pesquisado').text(str);
 	}).trigger('change');
 	
+
+	$('.votos').click(function(){
+		$('#tab-detalhes').removeClass('active').removeClass('in');
+		$('#li-detalhes').removeClass('active');
+		$('#tab-votos').addClass('active').addClass('in');
+		$('#li-votos').addClass('active');
+	});
+
+	$('.num_tema').click(function(){
+		$('#tab-votos').removeClass('active').removeClass('in');
+		$('#li-votos').removeClass('active');
+		$('#tab-detalhes').addClass('active').addClass('in');
+		$('#li-detalhes').addClass('active');
+	});
 });
 
