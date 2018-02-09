@@ -1,5 +1,5 @@
 <div id="tab-table" class="tab-pane fade in active">
-        <table class="table tabela-rg" id="table">
+        <table class="table tabela-rg" id="table-temas">
         <thead>
             <tr>
             <th>Número Tema</th>
@@ -10,32 +10,16 @@
                 <br>Sobrestados
             </th>
             <th style="width: 170px;">Situação</th>
-            <th class="acoes"></th>
+            <th style="width: 95px;">Ações</th>
             </tr>
         </thead>
         <tbody id="tabela-RG">
             <tr>
-            <td>
+            <td style="vertical-align: middle;">
                 <a class="num_tema" data-toggle="modal" data-target=".modal-tema">984 </a>
             </td>
             <td>Natureza jurídica dos reajustes concedidos aos servidores da carreira militar pela Lei n. 7.622/2000,
                 do Estado da Bahia.
-                <br>
-                <a class="icon-descricao" data-toggle="collapse" href="#descricaoTema" aria-expanded="false" aria-controls="descricaoTema">
-                <i class="material-icons more" title="Ver Descrição">expand_more</i>
-                <i class="material-icons less" title="Ver Menos">expand_less</i>
-                </a>
-                <div class="collapse" id="descricaoTema" style="text-align: left">
-                Recurso extraordinário em que se discute, à luz dos artigos 149, § 2º, III, a; e 195, IV, da Constituição Federal, a constitucionalidade,
-                ou não, da expressão “acrescido do valor do Imposto sobre Operações Relativas à Circulação de
-                Mercadorias e sobre Prestação de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação
-                – ICMS incidente no desembaraço aduaneiro e do valor das próprias contribuições”, contida no
-                inciso I do art. 7º da Lei nº 10.865/2004, o qual estabelece que a base de cálculo da Contribuição
-                para o Financiamento da Seguridade Social - COFINS e do Programa de Integração Social - PIS,
-                em operações de importação, equivale, para efeitos da referida norma legal, ao valor aduaneiro,
-                entendido como o montante que servir ou que serviria de base para o cálculo do imposto de importação,
-                acrescido do valor do ICMS incidente no desembaraço aduaneiro e do valor das próprias contribuições.
-                </div>
             </td>
             <td>RE ###
             </td>
@@ -52,17 +36,13 @@
                 <p>21/03/2013</p>
             </td>
             <td>
-                <a>
-                <i class="material-icons" title="Acórdão">list</i>
-                </a>
-                <br>
-                <a>
-                <i class="material-icons" title="Plenário Virtual">language</i>
-                </a>
-                <br>
-                <a>
-                <i class="material-icons" title="Manifestação">chat</i>
-                </a>
+                <select id="acoes" class="form-control select-favoritos" style="padding-left: 2px"> 
+                        <option>Ações</option>
+                        <option class="acao-plenario">Plenário Virtual</option>
+                        <option class="acao-manifestacao">Manifestação</option>
+                        <option class="acao-acordao">Acórdão</option>
+                </select> 
+                <p><a data-toggle="modal" data-target=".modal-tema">Detalhar Tema</a></p> 
             </td>
             </tr>
             <tr>
@@ -83,17 +63,15 @@
                 <p>21/03/2013</p>
             </td>
             <td>
-                <a>
-                <i class="material-icons" title="Acórdão">list</i>
-                </a>
-                <br>
-                <a>
-                <i class="material-icons" title="Plenário Virtual">language</i>
-                </a>
-                <br>
-                <a>
-                <i class="material-icons" title="Manifestação">subject</i>
-                </a>
+                <select id="acoes" class="form-control select-favoritos" style="padding-left: 2px"> 
+                        <option>Ações</option>
+                        <option class="acao-plenario">Plenário Virtual</option>
+                        <option class="acao-manifestacao">Manifestação</option>
+                        <option class="acao-acordao">Acórdão</option>
+                </select> <br>
+                <p><a data-toggle="modal" data-target=".modal-tema">
+                    <i class="material-icons" title="Detalhar tema">launch</i></a>
+                </p> 
             </td>
             </tr>
             <tr>

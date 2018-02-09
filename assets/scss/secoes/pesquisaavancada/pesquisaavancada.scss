@@ -12,6 +12,7 @@ a {
   text-align: center;
   vertical-align: middle;
 }
+
 .imagem-grafico {
   height: 220px;
 }
@@ -39,7 +40,7 @@ td > h4{
  margin: 0px;
 }
 
-// Tabela
+// Tabela indicadores
 h2#valor-reconhecida, h2#valor-merito-julgado {
   color: #4477AA;
 }
@@ -118,21 +119,32 @@ th{
   text-align: center;
   max-width: 130px;
 }
+//modal
+
 .modal-content{
-  padding: 10px;
+  padding: 0%;
+}
+.modal-body{
+  padding: 0%;
+
 }
 .descricao{
   max-width: 600px;
+}
+.descricao-tema{
+  padding: 15px;
 }
 
 tr{
   margin: 5px;
   text-align: center;
 }
-
+//badges modal
 .badge-repercussao{
   background-color: #4cbb71;
-  color: white;
+}
+.badge-merito-pendente{
+  background-color: #D9534F;
 }
 .badge-suspensao{
   background-color: #3383dd;
@@ -143,6 +155,7 @@ tr{
   z-index: auto;
   text-align: center;
   width: 200px;
+  color: white;
 }
 
 // icones 
@@ -157,9 +170,6 @@ tr{
 }
 i{
   cursor: pointer;
-}
-.less{
-  display: none;
 }
 .add{
   vertical-align: bottom; 
@@ -273,6 +283,9 @@ div.tabelas-relatores {
   position: relative;
   float: right;
   margin-left: 5px;
+}
+.more, .less{
+  vertical-align: middle;
 }
 //nav
 ul .nav-tabs {

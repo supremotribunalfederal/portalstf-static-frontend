@@ -3,19 +3,17 @@ import $ from 'jquery';
 import moment from 'moment';
 
 //mostrar e esconder icone descricao do tema
-var mostrar=$('.more');
-var esconder = $('.less');
+var mostrar=$('.ver-mais');
+var esconder = $('.ver-menos');
 
 mostrar.click(function(e){
 	e.preventDefault();
-	mostrar.hide();
-	esconder.show();
+	$('.descricao-resumida').hide();
+	
 });
 
 esconder.click(function(e){
-	e.preventDefault();
-	esconder.hide();
-	mostrar.show();
+	$('.descricao-resumida').show();
 });
 
 /**
