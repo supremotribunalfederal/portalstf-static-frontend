@@ -131,14 +131,14 @@ th{
 .descricao{
   max-width: 600px;
 }
-.descricao-tema{
+.manifestacao{
   padding: 15px;
 }
-
 tr{
   margin: 5px;
   text-align: center;
 }
+
 //badges modal
 .badge-repercussao{
   background-color: #4cbb71;
@@ -324,12 +324,8 @@ ul .nav-tabs {
   transform: scale(1); 
 }
 
-.tab-pane {
-  padding: 0%;
-}
-
 .tab-content {
-  padding: 0%;
+  padding: 1%;
 
 }
 

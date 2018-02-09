@@ -41,26 +41,28 @@
                     <span class="badge badge-merito-pendente">Mérito Pendente</span>
                 </div>
             </div>
-            <div class="modal-body" style="min-height: 800px;">
-                <div class="col-xs-12 col-md-12 col-lg-12 ">
-                        <div class="card">
-                            <div class="card-conteudo row m-0 p-0">
-                            <nav>
-                                <ul class="nav nav-tabs col-md-12" role="tablist">
-                                <li role="presentation" id="li-detalhes" class="active"><a data-toggle="tab" href="#tab-detalhes"> Detalhamento</a></li>
-                                <li role="presentation" id="li-detalhes"><a data-toggle="tab" href="#tab-descricao">Manifestação</a></li>
-                                <li role="presentation" id="li-votos"><a data-toggle="tab" href="#tab-votos">Plenário Virtual</a></li>
-                                <li role="presentation"><a data-toggle="tab" href="#"> Outro Link</a></li>
-                                </ul>
-                            </nav> 
+            <div class="modal-body">
+                <div class="card">
+                    <div class="card-conteudo row m-0 p-0">
+                        <nav>
+                            <ul class="nav nav-tabs col-md-12" role="tablist">
+                            <li role="presentation" id="li-detalhes" class="active"><a data-toggle="tab" href="#tab-detalhes"> Detalhamento</a></li>
+                            <li role="presentation" id="li-votos"><a data-toggle="tab" href="#tab-votos">Plenário Virtual</a></li>
+                            <li role="presentation" id="li-manifestacao"><a data-toggle="tab" href="#tab-manifestacao">Manifestação</a></li>
+                            <li role="presentation"><a data-toggle="tab" href="#tab-acordao"> Acórdão</a></li>
+                            </ul>
+                        </nav> 
+        
+                        <div class="tab-content col-md-12">
+
+                            <%- include acordao-tema.html %>
+                            <%- include detalhes-tema.html %>
+                            <%- include votos.html %>
+                            <%- include manifestacao.html %>
+                        </div>
+                    </div>  
+                </div>    
             
-                            <div class="tab-content col-md-12">
-                                <%- include detalhes-tema.html %>
-                                <%- include votos.html %>
-                            </div>
-                        </div>  
-                    </div>    
-                </div>
             </div>
         </div> <!-- conteudo modal-->
     </div>
