@@ -17,10 +17,10 @@
   <div id="main" class="container-fluid p-0">
     <%- include src/includes/header.html %>
     <%- include src/includes/pesquisa-repercussaogeral.html %>
-      <section id="conteudo-principal" class="container-fluid m-0 p-0 m-t-64">
+      <section id="conteudo-principal" class="container-fluid m-0 p-0">
         <div class="container center-block p-0" style="margin-bottom: 10px;">
           <!--Menu Lateral-->
-          <div class="col-xs-12 col-sm-3 col-lg-3 p-xs-0 m-0 m-t-24">
+          <div class="col-xs-12 col-sm-3 col-lg-3 p-xs-0 m-0">
               <div class="card">
                 <h5 class="card-titulo">
                   <i class="material-icons filter-icon">filter_list</i> Filtros
@@ -146,13 +146,13 @@
               </div>
               <div class="container">
                 <div class="modal-tema">
-                    <%- include src/includes/pesquisa-avancada/tema.html %>
+                    <%- include src/includes/pesquisa-avancada/modal-tema.html %>
                     <%- include src/includes/pesquisa-avancada/card-relator.html %>
                 </div>
               </div>
           </div>
           <!--card indicadores -->
-          <div class="col-xs-12 col-sm-9 col-lg-9 p-xs-0 m-0 m-t-24">
+          <div class="col-xs-12 col-sm-9 col-lg-9 p-xs-0 m-0">
             <div class="card">
               <h5 class="card-titulo card-titulo-over">Temas</h5>
               <table class="table valores-temas">
@@ -184,8 +184,18 @@
                 </tr>
               </table>
             </div>
+            <form>
+              <div style="text-align: end">
+                  <label>
+                  <input type="checkbox" id="julgamentos_abertos"/> Julgamentos em Aberto
+                  </label>
+                  <label>
+                      <input type="checkbox" id="julgamentos_realizar"/> Julgamentos a serem realizados
+                  </label>
+              </div>
+            </form>
           </div>
-
+    
           <div class="col-xs-12 col-md-9 col-lg-9 ">
             <div class="card">
               <h3 class="titulo-pesquisa">

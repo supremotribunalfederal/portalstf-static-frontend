@@ -95,7 +95,12 @@ div.dropdown-relatores {
     }
   }
 }
-//esconder filtros relator e livre p/ não aparecer nos favoritos
+//filtros superiores
+#julgamentos_abertos, #julgamentos_realizar{
+  width: 15px;
+  height: 15px; 
+  vertical-align:bottom
+}
 
 input#busca-relator {
    // border-box: box-sizing;

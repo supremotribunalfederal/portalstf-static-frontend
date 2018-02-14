@@ -88,12 +88,6 @@ $(document).ready(function() {
 	})
 
 // mudar nome da pesquisa de acordo com o filtro selecionado
-
-/*	$('.btn-fav').click(function(){
-		var texto = $(this).data('titulo-pesquisa');
-		$('#titulo-filtro').text(texto);
-	});*/
-
 	$('#favoritos').change(function(){
 		var str="";
 		$('#favoritos option:selected').each(function(){
@@ -101,20 +95,8 @@ $(document).ready(function() {
 		});
 		$('#filtro-pesquisado').text(str);
 	}).trigger('change');
-	
 
-	$('.votos').click(function(){
-		$('#tab-detalhes').removeClass('active').removeClass('in');
-		$('#li-detalhes').removeClass('active');
-		$('#tab-votos').addClass('active').addClass('in');
-		$('#li-votos').addClass('active');
-	});
-
-	$('.num_tema').click(function(){
-		$('#tab-votos').removeClass('active').removeClass('in');
-		$('#li-votos').removeClass('active');
-		$('#tab-detalhes').addClass('active').addClass('in');
-		$('#li-detalhes').addClass('active');
-	});
+	// função para a brir 
+	var acaoChamada = data('acao-chamada');
 });
 
