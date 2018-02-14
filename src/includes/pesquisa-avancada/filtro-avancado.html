@@ -1,17 +1,11 @@
 <div class="hidden-sm hidden-xs pesquisa-rg-links-inferiores" style="width: 800px;">
 	<div class="collapse multi-collapse">
-		<div class="container" style="display: grid; grid-template-rows: 0px 25px 35px 25px;width: 795px; border-bottom: 1px solid white;background-color: rgba(0, 167, 230, 0.9);">
+		<div class="container" style="display: grid; grid-template-rows: 0px 50px 55px;width: 795px; border-bottom: 1px solid white;background-color: rgba(0, 167, 230, 0.9);">
 			
 			<!-- Filtros -->
 			<div class="row">
-				<div class="col-lg-3"><label>Por Número do Tema:</label></div>
-				<div class="col-lg-3"><label>Por Tem Tese:</label></div>
-				<div class="col-lg-6"><label>Por Situação Reconhecimento RG:</label></div>
-			</div>
-
-			<div class="row">
 				<div class="col-lg-3">
-					<input type="text" class="form-control" placeholder="Número do tema" list="lista-num-temas" style="color: black;">
+					<input type="text" class="box-opcoes-filtros form-control" list="lista-num-temas" required>
 					<datalist id="lista-num-temas">
 						<option value="984"></option>
 						<option value="983"></option>
@@ -20,31 +14,30 @@
 						<option value="980"></option>
 						<option value="979"></option>
 					</datalist>
+					<label class="titulo-opcao-filtro">Número do Tema</label>
 				</div>
-				<div class="col-lg-3">    
-					<input type="text" class="form-control" placeholder="Tem Tese" list="lista-opcoes-tem-tese" style="color: black;">
+				<div class="col-lg-3">
+					<input type="text" class="box-opcoes-filtros form-control" list="lista-opcoes-tem-tese" required>
 					<datalist id="lista-opcoes-tem-tese">
 						<option value="Não"></option>
 						<option value="Sim"></option>
 					</datalist>
+					<label class="titulo-opcao-filtro">Tem Tese</label>
 				</div>
 				<div class="col-lg-6">
-					<input type="text" class="form-control" placeholder="Situação Reconhecimento RG" list="lista-opcoes-reconhecimento" style="width: 100%; color: black;">
+					<input type="text" class="box-opcoes-filtros form-control" list="lista-opcoes-reconhecimento" style="width: 100%;" required>
 					<datalist id="lista-opcoes-reconhecimento">
 						<option value="RG negada"></option>
 						<option value="RG reconhecida"></option>
 						<option value="Tema em análise"></option>
 					</datalist>
+					<label class="titulo-opcao-filtro">Situação Reconhecimento RG</label>
 				</div>
 			</div>
 
 			<div class="row">
-				<div class="col-lg-6"><label>Por Situação da Repercussão Geral:</label></div>
-				<div class="col-lg-6"><label>Por Situação Julgamento Mérito RG:</label></div>
-			</div>
-			<div class="row m-b-16">
-				<div class="col-lg-6" style="padding-right: 0;">
-					<input type="text" class="form-control" placeholder="Situação da Repercussão Geral" list="lista-situacao-rg" style="width: 100%; color: black;">
+				<div class="col-lg-6">
+					<input type="text" class="box-opcoes-filtros form-control" list="lista-situacao-rg" style="width: 100%;" required>
 					<datalist id="lista-situacao-rg">
 						<option value="Em Análise Preliminar de RG"></option>
 						<option value="RG Reconhecida"></option>
@@ -53,39 +46,34 @@
 						<option value="Sem RG – Questão sem Relevância"></option>
 						<option value="Sem RG – Matéria Infraconstitucional"></option>
 					</datalist>
+					<label class="titulo-opcao-filtro">Situação da Repercussão Geral</label>
 				</div>
 				<div class="col-lg-6">
-					<input type="text" class="form-control" placeholder="Situação Julgamento Mérito RG" list="lista-opcoes-julgamento" style="width: 100%; color: black;">
+					<input type="text" class="box-opcoes-filtros form-control" list="lista-opcoes-julgamento" style="width: 100%;" required>
 					<datalist id="lista-opcoes-julgamento">
 						<option value="**Não se aplica**"></option>
 						<option value="Julgado"></option>
 						<option value="Pendente"></option>
 					</datalist>                
+					<label class="titulo-opcao-filtro">Situação Julgamento Mérito RG</label>
 				</div>
 			</div>
 		</div>
 
 		<!-- Filtros processo -->
-		<div class="container m-0" style="display: grid; grid-template-rows: 0px 25px 35px 25px 35px 25px;width: 795px; background-color: rgba(0, 167, 230, 0.9);">
+		<div class="container m-0" style="display: grid; grid-template-rows: 0px 50px 40px 25px 45px; width: 795px; background-color: rgba(0, 167, 230, 0.9);">
 			<div class="row">
 				<div class="col-lg-6">
-					<label>Por Situação Processo Paradigma:</label>
-				</div>
-				<div class="col-lg-6">
-					<label>Por Número Processo Paradigma:</label>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-6" style="padding-right: 0;">
-					<input type="text" class="form-control opcao-filtro-rg" placeholder="Classe Processo Paradigma" list="lista-classe-processo" style="width: 100%; color: black;">
+					<input type="text" class="box-opcoes-filtros form-control" list="lista-classe-processo" style="width: 100%;" required>
 					<datalist id="lista-classe-processo">
 						<option value="AI"></option>
 						<option value="ARE"></option>
 						<option value="RE"></option>
 					</datalist>
+					<label class="titulo-opcao-filtro">Situação Processo Paradigma</label>
 				</div>
 				<div class="col-lg-6">
-					<input type="text" class="form-control opcao-filtro-rg" placeholder="Número Processo Paradigma" list="lista-numero-processo" style="width: 100%; color: black;">
+					<input type="text" class="box-opcoes-filtros form-control" list="lista-numero-processo" style="width: 100%;" required>
 					<datalist id="lista-numero-processo">
 						<option value="136821"></option>
 						<option value="221142"></option>
@@ -94,20 +82,12 @@
 						<option value="377457"></option>
 						<option value="398365"></option>
 					</datalist>
-				</div>
-					
-			</div>
-			<div class="row">
-				<div class="col-lg-6">
-					<label>Por Classe Processo Paradigma:</label>
-				</div>
-				<div class="col-lg-6">
-					<label>Por Ramo do Direito:</label>
+					<label class="titulo-opcao-filtro">Número Processo Paradigma</label>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-lg-6" style="padding-right: 0;">
-					<input type="text" class="form-control opcao-filtro-rg" placeholder="Situação Processo Paradigma" list="lista-opcoes-processo-paradima" style="width: 100%; color: black;">
+				<div class="col-lg-6">
+					<input type="text" class="box-opcoes-filtros form-control" list="lista-opcoes-processo-paradima" style="width: 100%;" required>
 					<datalist id="lista-opcoes-processo-paradima">
 						<option value="Analisada Preliminar de RG"></option>
 						<option value="Acórdão de RG Publicado"></option>
@@ -117,9 +97,10 @@
 						<option value="Trânsito em Julgado"></option>
 						<option value="Aguarda Substituição de Paradigma"></option>
 					</datalist>
+					<label class="titulo-opcao-filtro">Classe Processo Paradigma</label>
 				</div>
 				<div class="col-lg-6">
-					<input type="text" class="form-control opcao-filtro-rg" placeholder="Ramo do Direito" list="lista-ramo-direito" style="width: 100%; color: black;">
+					<input type="text" class="box-opcoes-filtros form-control" list="lista-ramo-direito" style="width: 100%;" required>
 					<datalist id="lista-ramo-direito">
 						<option value="Direito Administrativo"></option>
 						<option value="Direito Civil"></option>
@@ -128,6 +109,7 @@
 						<option value="Direito Penal"></option>
 						<option value="Direitio Previdenciário"></option>
 					</datalist>
+					<label class="titulo-opcao-filtro">Ramo do Direito</label>
 				</div>
 			</div>
 			<div class="row">
@@ -152,10 +134,12 @@
 		</div>
 		<div style="position: absolute;"> 
 			<a href="#">
-				<i class="material-icons" style="position: relative;bottom: -7px;">clear</i>
-				Limpar Filtros
+				<a href="#" style="color: white;">
+					<i class="material-icons" style="position: relative;bottom: -7px;">clear</i>
+					Limpar Filtros
+				</a>
 			</a>
 		</div>
 	</div>
-	<a class="link-pesquisa-avancada-rg" href=".multi-collapse" data-toggle="collapse">Pesquisa avançada<span class="caret"></span></a>
+	<a class="link-pesquisa-avancada-rg" href=".multi-collapse" data-toggle="collapse" style="color: white;">Pesquisa avançada<span class="caret"></span></a>
 </div>
