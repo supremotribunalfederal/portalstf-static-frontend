@@ -22,7 +22,7 @@
     <section id="conteudo-principal" class="container-fluid m-0 p-0">
       <div class="container center-block p-0">
         <!--Menu Lateral-->
-        <div class="col-xs-12 col-sm-3 col-lg-12 p-xs-0 m-0 m-t-24">
+        <div class="col-xs-12 col-sm-3 col-lg-12 p-xs-0 m-0 m-t-8">
           <div class="card">
             <h5 class="card-titulo card-titulo-over">Temas</h5>
             <table class="table valores-temas">
@@ -73,7 +73,12 @@
                 <div class="tab-content col-md-12">
                   <!-- Inclue tabela de temas -->
                   <%- include src/includes/pesquisa-avancada/tabela-tema.html %>
-                  
+                  <div class="modal-tema">
+                    <%- include src/includes/pesquisa-avancada/tema.html %>
+                    <%- include src/includes/pesquisa-avancada/card-relator.html %>
+                    <%- include src/includes/pesquisa-avancada/detalhes-situacao.html %>
+                  </div>
+
                   <!-- Mostra as tabelas de exemplo -->
                   <div class="tab-pane fade p-t-16" id="tab-navegacao-graficos">
                     <img src="../../assets/img/pesquisaavancada/grafico1.png" alt="Exemplo de gráfico">
@@ -82,7 +87,18 @@
                 </div>
               </div>  
           </div>    
+          <div class="div_teste">
+            <a><i class="material-icons" title="Acórdão">list</i></a> 
+            <span style="position:relative;bottom: 7px;">Acórdão</span>
+            <hr style="margin: 0;">
+            <a><i class="material-icons" title="Plenário Virtual">language</i></a>
+            <span style="position:relative;bottom: 7px;">Plenário Virtual</span>
+            <hr style="margin: 0;">
+            <a><i class="material-icons" title="Manifestação">chat</i></a>
+            <span style="position:relative;bottom: 7px;">Manifestação</span>
+          </div>
       </div>
+
 
     </section>
 
