@@ -96,4 +96,17 @@ $(document).ready(function() {
 		$('#titulo-filtro').text(texto);
 	});
 
+	//mostrar e esconder icone descricao do tema
+	var mostrar=$('.ver-mais');
+	var esconder = $('.ver-menos');
+
+	mostrar.click(function(e){
+		e.preventDefault();
+		$('.descricao-resumida').hide();
+	});
+
+	esconder.click(function(e){
+		$('.descricao-resumida').show();
+	});
+
 });

@@ -110,8 +110,50 @@ th{
   text-align: center;
   max-width: 130px;
 }
+
+//modal
+
 .modal-content{
+  padding: 0%;
+}
+.modal-body{
+  padding: 0%;
+
+}
+.descricao{
+  max-width: 600px;
+}
+.manifestacao{
+  padding: 15px;
+}
+tr{
+  margin: 5px;
+  text-align: center;
+}
+.tabela-votos{
+  width: 400px; 
+  margin-left: auto; 
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+//badges modal
+.badge-repercussao{
+  background-color: #4cbb71;
+}
+.badge-merito-pendente{
+  background-color: #D9534F;
+}
+.badge-suspensao{
+  background-color: #3383dd;
+}
+.badge{
+  margin-top: 10px;
   padding: 10px;
+  z-index: auto;
+  text-align: center;
+  width: 200px;
+  color: white;
 }
 
 tr{
