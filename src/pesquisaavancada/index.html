@@ -27,11 +27,19 @@
                 </h5>
                   <div class="card-filtros">
                    
-                      <a id="limpar_filtros">
-                         
-                      </a>  
-                      <input class="form-control pesquisa-livre" type="text" onfocus="this.value=''" placeholder="Pesquisa Livre">
-                     
+                    <div class="mdc-text-field mdc-text-field--outlined" data-mdc-auto-init="MDCTextField">
+                      <input class="mdc-text-field__input pesquisa-livre" type="text" id="input">
+                      <label for="input-pesquisa-livre" class="mdc-text-field__label">
+                          Pesquisa Livre
+                      </label>
+                      <div class="mdc-text-field__outline" data-mdc-auto-init="MDCTextField">
+                        <svg>
+                            <path class="mdc-text-field__outline-path"/>
+                          </svg>
+                      </div>
+                      <div class="mdc-text-field__idle-outline"></div>
+                    </div>
+      
                       <%- include src/includes/pesquisa-avancada/filtro-ministros.html %>
   
                       <label>Filtros Pré-Configurados</label>
@@ -227,7 +235,7 @@
 
   </div>
   <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-  <script>window.mdc.autoInit();</script>
+  <script type="text/javascript">window.mdc.autoInit();</script>
 
 </body>
 

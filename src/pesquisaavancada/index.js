@@ -96,7 +96,5 @@ $(document).ready(function() {
 		$('#filtro-pesquisado').text(str);
 	}).trigger('change');
 
-	// função para a brir 
-	var acaoChamada = data('acao-chamada');
 });
 

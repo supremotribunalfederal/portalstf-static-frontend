@@ -188,15 +188,19 @@ i{
   float: right;
   font-size: 21px;
 }
-
-input.pesquisa-livre {
-  background-image: url('../../img/pesquisaavancada/search.png');
-  background-position: 5px 6px;
+.mdc-text-field--outlined .mdc-text-field__input{
+  display: flex;
+  height: 40px;
+  padding: 12px;
+  margin-bottom: 15px;
   width:100%;
-  position: relative;
-  background-repeat: no-repeat;
-  padding: 9px 20px 9px 45px;
 }
+.mdc-text-field__idle-outline, .mdc-text-field__outline{
+  height: 40px;
+  width: 255px;
+}
+
+
 input.opcao-filtro-rg {
   margin-bottom: 6px;
 }
