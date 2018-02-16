@@ -96,5 +96,21 @@ $(document).ready(function() {
 		$('#filtro-pesquisado').text(str);
 	}).trigger('change');
 
+	// exemplo
+	$('#link-votos').click(function(e){
+		e.preventDefault();
+		$('#tab-detalhes').removeClass('active in');
+		$('#li-detalhes').removeClass('active');
+		$('#tab-votos').addClass('active in');
+		$('#li-plenario').addClass('active');
+	});
+	
+	$('.num_tema').click(function(e){
+		e.preventDefault();
+		$('#tab-detalhes').addClass('active in');
+		$('#li-detalhes').addClass('active');
+		$('#tab-votos').removeClass('active in');
+		$('#li-plenario').removeClass('active');
+	});
 });
 

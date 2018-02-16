@@ -35,14 +35,24 @@
                 </div>
                 <p>21/03/2013</p>
             </td>
-            <td>
-                <select id="acoes" class="form-control select-favoritos" style="padding-left: 2px"> 
-                        <option>Ações</option>
-                        <option class="acao-plenario">Plenário Virtual</option>
-                        <option class="acao-manifestacao">Manifestação</option>
-                        <option class="acao-acordao">Acórdão</option>
-                </select> 
-                <p><a data-toggle="modal" data-target=".modal-tema">Detalhar Tema</a></p> 
+        
+            <td class="td-acoes" style="vertical-align: middle;">
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle btn-sm btn-acoes" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Selecionar               
+                    </button>
+                    <div class="dropdown-menu" style="padding: 5px; " >
+                        <a class="acao-item" id="link-votos" data-toggle="modal" data-target="#modal-tema">  
+                            Plenário Virtual
+                        </a>
+                        <a class="acao-item" data-toggle="modal" data-target="#modal-tema">
+                            Manifestação
+                        </a><br>
+                        <a class="acao-item" data-toggle="modal" data-target="#modal-tema">
+                            Acórdão
+                        </a>
+                    </div>
+                </div>    
             </td>
             </tr>
             <tr>
@@ -63,13 +73,24 @@
                 <p>21/03/2013</p>
             </td>
             <td>
-                <select id="acoes" class="form-control select-favoritos" style="padding-left: 2px"> 
-                        <option>Ações</option>
-                        <option class="acao-plenario">Plenário Virtual</option>
-                        <option class="acao-manifestacao">Manifestação</option>
-                        <option class="acao-acordao">Acórdão</option>
-                </select> <br>
-                <p><a data-toggle="modal" data-target=".modal-tema">
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle btn-sm btn-acoes" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Selecionar               
+                    </button>
+                    <div class="dropdown-menu" 
+                        style="padding: 5px; " >
+                        <a class="acao-item">
+                            Manifestação
+                        </a><br>
+                        <a class="acao-item">  
+                            Plenário Virtual
+                        </a>
+                        <a class="acao-item">
+                            Acórdão
+                        </a>
+                    </div>
+                </div> </br>
+                <p><a data-toggle="modal" data-target="#modal-tema">
                     <i class="material-icons" title="Detalhar tema">launch</i></a>
                 </p> 
             </td>

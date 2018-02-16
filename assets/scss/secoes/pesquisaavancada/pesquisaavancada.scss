@@ -195,11 +195,11 @@ i{
   margin-bottom: 15px;
   width:100%;
 }
+
 .mdc-text-field__idle-outline, .mdc-text-field__outline{
   height: 40px;
   width: 255px;
 }
-
 
 input.opcao-filtro-rg {
   margin-bottom: 6px;
@@ -348,4 +348,29 @@ ul .nav-tabs {
   padding: 15px; 
   margin-bottom: -6px;
   margin-top: 0px;
+}
+
+//dropdown ações
+.acao-item{
+  color: #313131; 
+  text-decoration: none;
+}
+
+.acao-item:hover{
+  font-weight: 550;
+  text-decoration: none;
+  color: #313131; 
+}
+
+.btn-acoes{
+  background-color: #00A7E6; 
+  border: none; 
+  border-radius: 4px; 
+  color: white; 
+  vertical-align: text-top
+  
+}
+
+.btn-acoes:hover, .btn-acoes:focus{
+  color: white;
 }
