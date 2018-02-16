@@ -463,3 +463,25 @@ label.titulo-opcao-filtro {
   font-weight: normal;
   color: #757575;
 }
+
+@media (max-width: 414px) {
+  table.valores-temas {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+  table.valores-temas {
+    thead, tbody, th,
+    td, tr {
+     display: inline-block;
+   }
+  }
+}
+
+@media (max-width: 768px) {
+  .dados-temas th.esconde,
+  .dados-temas td.esconde {
+    display: none;
+  }
+}
+
