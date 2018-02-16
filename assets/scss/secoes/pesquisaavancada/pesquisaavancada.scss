@@ -140,7 +140,6 @@ th{
   padding: 15px;
 }
 tr{
-  margin: 5px;
   text-align: center;
 }
 
@@ -188,18 +187,69 @@ i{
   float: right;
   font-size: 21px;
 }
+//configs inputs e labels
 .mdc-text-field--outlined .mdc-text-field__input{
   display: flex;
   height: 40px;
   padding: 12px;
   margin-bottom: 15px;
   width:100%;
-}
 
+}
 .mdc-text-field__idle-outline, .mdc-text-field__outline{
   height: 40px;
   width: 255px;
+} 
+
+// =====================================
+
+.form-item {
+  
+  position:relative;
+  margin-bottom:.5em;
+
+  .label-filter, .input-filter {
+    display:inline-block;
+    transition:all 150ms;
+  }
+
+  .input-filter {
+    margin-top: 5px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #222;
+    
+    
+    &:valid  + .label-filter {
+      transform:translateY(-17px) scale(0.75);
+    }
+    
+    &:focus + .label-filter {
+      transform:translateY(-17px) scale(0.75);
+    }
+    
+    &:focus {
+      outline: none;
+      + .label-filter {
+        color:rgb(7, 186, 252);
+        font-size: 14px;
+
+      }
+    }
+  }
+
+  .label-filter {
+    position:absolute;
+    top:12px;
+    left:17px;
+    padding:0 2px;
+    color: #8b8a8a;
+    background:#fff;
+    transform-origin:left center;
+    transform:translateY(0) scale(1);
+  }  
 }
+// =====================================
 
 input.opcao-filtro-rg {
   margin-bottom: 6px;
@@ -373,4 +423,5 @@ ul .nav-tabs {
 
 .btn-acoes:hover, .btn-acoes:focus{
   color: white;
+  background-color: $stfAzulMenu;
 }

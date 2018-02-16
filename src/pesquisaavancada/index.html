@@ -26,18 +26,9 @@
                   <i class="material-icons filter-icon">filter_list</i> Filtros
                 </h5>
                   <div class="card-filtros">
-                   
-                    <div class="mdc-text-field mdc-text-field--outlined" data-mdc-auto-init="MDCTextField">
-                      <input class="mdc-text-field__input pesquisa-livre" type="text" id="input" >
-                      <label for="input-pesquisa-livre" class="mdc-text-field__label">
-                          Pesquisa Livre
-                      </label>
-                      <div class="mdc-text-field__outline" data-mdc-auto-init="MDCTextField">
-                        <svg>
-                            <path class="mdc-text-field__outline-path"/>
-                          </svg>
-                      </div>
-                      <div class="mdc-text-field__idle-outline"></div>
+                    <div class="form-item">
+                        <input type="text" id="pesquisa-livre" class="form-control input-filter pesquisa-livre" required>
+                        <label for="pesquisa-livre" class="label-filter">Pesquisa Livre</label>
                     </div>
       
                       <%- include src/includes/pesquisa-avancada/filtro-ministros.html %>
