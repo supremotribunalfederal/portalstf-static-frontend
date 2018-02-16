@@ -478,6 +478,11 @@ label.titulo-opcao-filtro {
   }
 }
 
+@media (min-width: 1024px) {
+  #ex-numero-tema {
+    display: none;
+  }
+}
 @media (max-width: 414px) {
   label.numero-do-tema {
     color: #666;
