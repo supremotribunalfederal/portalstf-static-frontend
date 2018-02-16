@@ -478,10 +478,39 @@ label.titulo-opcao-filtro {
   }
 }
 
-@media (max-width: 768px) {
-  .dados-temas th.esconde,
-  .dados-temas td.esconde {
-    display: none;
+@media (max-width: 414px) {
+  label.numero-do-tema {
+    color: #666;
+  }
+  label.numero-do-tema:hover {
+    color: #000;
+  }
+  label.numero-do-tema::before {
+    font-family: Consolas, monaco, monospace;
+    font-weight: bold;
+    font-size: 15px;
+    content: "+";
+    vertical-align: text-top;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 3px;
+    background: radial-gradient(ellipse at center, #CCC 50%, transparent 50%);;
+  }
+  #ex-numero-tema {
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.5s;
+    color: #000;
+  }
+  #toggle:checked ~ #ex-numero-tema {
+    height: 25px;
+  }
+  #toggle1:checked ~ #ex-numero-tema {
+    height: 90px;
+  }
+  #toggle:checked ~ label.numero-do-tema::before,
+  #toggle1:checked ~ label.numero-do-tema::before {
+    content: "-";
   }
 }
-
