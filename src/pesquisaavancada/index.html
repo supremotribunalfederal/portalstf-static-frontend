@@ -26,15 +26,9 @@
                   <i class="material-icons filter-icon">filter_list</i> Filtros
                 </h5>
                   <div class="card-filtros">
-                    <div class="form-item">
-                        <input type="text" id="pesquisa-livre" class="form-control input-filter pesquisa-livre" required>
-                        <label for="pesquisa-livre" class="label-filter">Pesquisa Livre</label>
-                    </div>
-      
-                      <%- include src/includes/pesquisa-avancada/filtro-ministros.html %>
-  
-                      <label>Filtros Pré-Configurados</label>
-                      <select id="favoritos" class="form-control select-favoritos">
+
+                   <div class="form-item">
+                      <select id="favoritos" class="form-control select-favoritos input-filter">
                           <option selected> Temas de Repercussão Geral </option>
                           <option>Teses de Repercussão Geral</option>
                           <option>Temas com Repercussão Geral Negada</option>
@@ -44,10 +38,17 @@
                           <option>Temas com Suspensão Nacional </option>
                           <option>Representativo de Controvérsia</option>
                       </select>
+                      <label class="label-filter">Filtros Pré-Configurados</label>
+                   </div>
+                  
+                    <%- include src/includes/pesquisa-avancada/filtro-ministros.html %>
+              
                       <!--filtros temas -->
-                      <div id="mais-filtros-principais" style="margin-top: 10px">
-                        <label>Temas</label>
-                          <input type="text" class="form-control opcao-filtro-rg" placeholder="Número do tema" list="lista-numeros-temas" autocomplete="on">
+                      <div id="mais-filtros-principais">
+                        <div class="form-item">
+                          <input type="text" class="form-control opcao-filtro-rg  input-filter"  list="lista-numeros-temas" autocomplete="on" required>
+                          <label class="label-filter">Temas</label>
+                        </div>
                           <datalist id="lista-numeros-temas">
                               <option value="984"></option>
                               <option value="983"></option>
@@ -56,9 +57,12 @@
                               <option value="980"></option>
                               <option value="979"></option>
                           </datalist>
-                      
-                          <input type="text" class="form-control opcao-filtro-rg" placeholder="Situação da Repercussão Geral" list="lista-situacao-rg"
+                          
+                          <div class="form-item">
+                            <input type="text" class="form-control opcao-filtro-rg input-filter" list="lista-situacao-rg" required
                               autocomplete="on">
+                            <label class="label-filter">Situação da Repercussão Geral</label>    
+                          </div>
                           <datalist id="lista-situacao-rg">
                               <option value="Em Análise Preliminar de RG"></option>
                               <option value="RG Reconhecida"></option>
@@ -67,35 +71,50 @@
                               <option value="Sem RG – Questão sem Relevância"></option>
                               <option value="Sem RG – Matéria Infraconstitucional"></option>
                           </datalist>
-                      
-                          <input type="text" class="form-control opcao-filtro-rg" placeholder="Situação Reconhecimento RG" list="lista-opcoes-reconhecimento"
+                          
+                          <div class="form-item">
+                            <input type="text" class="form-control opcao-filtro-rg input-filter" required list="lista-opcoes-reconhecimento"
                               autocomplete="on">
+                          <label class="label-filter">Situação Reconhecimento RG</label>
+                          </div>
+                              
                           <datalist id="lista-opcoes-reconhecimento">
                               <option value="RG negada"></option>
                               <option value="RG reconhecida"></option>
                               <option value="Tema em análise"></option>
                           </datalist>
-                      
-                          <input type="text" class="form-control opcao-filtro-rg" placeholder="Situação Julgamento Mérito RG" list="lista-opcoes-julgamento"
-                              autocomplete="on">
+
+                          <div class="form-item">
+                            <input type="text" class="form-control opcao-filtro-rg input-filter" list="lista-opcoes-julgamento"
+                            autocomplete="on" required>
+                            <label class="label-filter">Situação Julgamento Mérito RG</label>  
+                          </div>
                           <datalist id="lista-opcoes-julgamento">
                               <option value="**Não se aplica**"></option>
                               <option value="Julgado"></option>
                               <option value="Pendente"></option>
                           </datalist>
-                      
-                          <input type="text" class="form-control opcao-filtro-rg" placeholder="Tem Tese" list="lista-opcoes-tem-tese"
-                          autocomplete="on">
-                          <datalist id="lista-opcoes-tem-tese">
-                              <option value="Não"></option>
-                              <option value="Sim"></option>
-                          </datalist>
+                          
+                          <div class="form-item">
+                            <select type="text" class="form-control opcao-filtro-rg input-filter" list="lista-opcoes-tem-tese"
+                            autocomplete="on" required>
+                            <option>  </option>
+                            <option>sim</option>
+                            <option>não</option>
+                            </select>
+                            <label class="label-filter">Possui Tese</label>
+                          </div>
+
                       </div> 
                       <!--filtros processo -->
                       <div id="mais-filtros-processos" >
-                        <label>Processo Paradigma</label>
-                          <input type="text" class="form-control opcao-filtro-rg" placeholder="Situação Processo Paradigma" list="lista-opcoes-processo-paradima">
-                          <datalist id="lista-opcoes-processo-paradima">
+                        <label class="label-titulo">Processo Paradigma</label>
+
+                        <div class="form-item">
+                          <input type="text" class="form-control opcao-filtro-rg input-filter" required list="lista-opcoes-processo-paradima">
+                          <label class="label-filter">Situação Processo Paradigma</label>
+                        </div>
+                        <datalist id="lista-opcoes-processo-paradima">
                               <option value="Analisada Preliminar de RG"></option>
                               <option value="Acórdão de RG Publicado"></option>
                               <option value="Em Julgamento"></option>
@@ -104,17 +123,23 @@
                               <option value="Trânsito em Julgado"></option>
                               <option value="Aguarda Substituição de Paradigma"></option>
                           </datalist>
-                      
-                          <input type="text" class="form-control opcao-filtro-rg" placeholder="Classe Processo Paradigma" list="lista-classe-processo"
-                              autocomplete="on">
+                          
+                          <div class="form-item">
+                              <input type="text" class="form-control opcao-filtro-rg input-filter" list="lista-classe-processo"
+                              autocomplete="on" required >
+                              <label class="label-filter">Classe Processo Paradigma</label>    
+                          </div>
                           <datalist id="lista-classe-processo">
                               <option value="AI"></option>
                               <option value="ARE"></option>
                               <option value="RE"></option>
                           </datalist>
-                      
-                          <input type="text" class="form-control opcao-filtro-rg" placeholder="Número Processo Paradigma" list="lista-numero-processo"
-                              autocomplete="on">
+                          
+                          <div class="form-item">
+                            <input type="text" class="form-control opcao-filtro-rg input-filter" list="lista-numero-processo"
+                            autocomplete="on" required>
+                            <label class="label-filter">N° Processo Paradigma</label>
+                          </div>
                           <datalist id="lista-numero-processo">
                               <option value="136821"></option>
                               <option value="221142"></option>
@@ -123,8 +148,12 @@
                               <option value="377457"></option>
                               <option value="398365"></option>
                           </datalist>
-          
-                          <input type="text" class="form-control opcao-filtro-rg" placeholder="Ramo do Direito" list="lista-ramo-direito" autocomplete="on">
+                          
+                          <div class="form-item">
+                            <input type="text" class="form-control opcao-filtro-rg input-filter" list="lista-ramo-direito"
+                            autocomplete="on" required>
+                            <label class="label-filter">Ramo do Direito</label>
+                          </div>
                           <datalist id="lista-ramo-direito">
                               <option value="Direito Administrativo"></option>
                               <option value="Direito Civil"></option>
@@ -136,9 +165,16 @@
                       </div>
                       <!--filtros de data -->
                       <div id="mais-filtros-data">
-                        <label>Período</label>
-                          <input type="text" id="data_inicial" class="form-control data-rg" placeholder="De" onfocus="(this.type='date')" />
-                          <input type="text" id="data_final" class="form-control data-rg" placeholder="Até" onfocus="(this.type='date')" style="margin-top: 5px;"/>
+                        <label class="label-titulo">Período</label>
+                        <div class="form-item">
+                          <input type="text" id="data_inicial" class="form-control data-rg input-filter"onfocus="(this.type='date')"  required/>
+                          <label class="label-filter">De</label>
+                        </div>
+                        <div class="form-item">
+                          <input type="text" id="data_final" class="form-control data-rg input-filter" onfocus="(this.type='date')" required/>
+                          <label class="label-filter">Até</label>
+                        </div>  
+                          
                       </div>
                   </div>
                   
@@ -207,6 +243,13 @@
                   <ul class="nav nav-tabs col-md-12" role="tablist">
                     <li role="presentation" class="active"><a data-toggle="tab" href="#tab-table">Temas</a></li>
                     <li role="presentation"><a data-toggle="tab" href="#tab-graficos">Gráficos</a></li>
+                    <li style="float: right; margin-right: 5px;"> 
+                      <div class="form-item">
+                          <input type="text" id="pesquisa-livre" class="form-control pesquisa-livre input-filter" required> 
+                          <label class="label-filter">Pesquisa Livre</label>
+                      </div>
+                     
+                    </li>   
                   </ul>
                 </nav> 
 

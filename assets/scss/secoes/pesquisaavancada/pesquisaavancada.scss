@@ -107,8 +107,7 @@ input#busca-relator {
     background-image: url('../../img/pesquisaavancada/person3.png');
     background-repeat: no-repeat;
     padding: 14px 20px 12px 45px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-bottom:.3em;
     width: 100%;
 }
 .dropdown-content {
@@ -187,30 +186,21 @@ i{
   float: right;
   font-size: 21px;
 }
-//configs inputs e labels
-.mdc-text-field--outlined .mdc-text-field__input{
-  display: flex;
-  height: 40px;
-  padding: 12px;
-  margin-bottom: 15px;
-  width:100%;
 
+// ====configurações para o nome do filtro====
+.label-titulo{
+  margin: 1px;
 }
-.mdc-text-field__idle-outline, .mdc-text-field__outline{
-  height: 40px;
-  width: 255px;
-} 
-
-// =====================================
 
 .form-item {
   
   position:relative;
-  margin-bottom:.5em;
+  margin-bottom:.3em;
 
   .label-filter, .input-filter {
     display:inline-block;
     transition:all 150ms;
+    font-weight: 550;
   }
 
   .input-filter {
@@ -218,6 +208,7 @@ i{
     line-height: 20px;
     font-size: 14px;
     color: #222;
+    font-weight: 500;
     
     
     &:valid  + .label-filter {
@@ -232,7 +223,7 @@ i{
       outline: none;
       + .label-filter {
         color:rgb(7, 186, 252);
-        font-size: 14px;
+        font-size: 14.5px;
 
       }
     }
@@ -241,19 +232,14 @@ i{
   .label-filter {
     position:absolute;
     top:12px;
-    left:17px;
-    padding:0 2px;
+    left:13px;
     color: #8b8a8a;
-    background:#fff;
+    background:white;
     transform-origin:left center;
     transform:translateY(0) scale(1);
   }  
 }
 // =====================================
-
-input.opcao-filtro-rg {
-  margin-bottom: 6px;
-}
 
 .add-mais-filtros {
   position: relative;
