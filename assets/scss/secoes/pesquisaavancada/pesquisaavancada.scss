@@ -474,3 +474,22 @@ div.tabela-temas {
     text-align: justify;
   }
 }
+
+@media (max-width: 414px) {
+  table.valores-temas {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+  table.valores-temas {
+    thead, tbody, th,
+    td, tr {
+     display: inline-block;
+   }
+  }
+}
+@media (max-width: 768px) {
+  .tabela-temas, .busca-e-icones-tabela {
+    display: none;
+  }
+}
