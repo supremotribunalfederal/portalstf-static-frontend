@@ -9,8 +9,6 @@ a {
 }
 .num_tema{
   cursor: pointer;
-  text-align: center;
-  vertical-align: middle;
 }
 #tab-navegacao-graficos {
   img {
@@ -464,58 +462,15 @@ label.titulo-opcao-filtro {
   color: #757575;
 }
 
-@media (max-width: 414px) {
-  table.valores-temas {
-    display: block;
+div.tabela-temas {
+  .cabecalho-tabela {
     position: relative;
-    width: 100%;
+    top: 12px;
   }
-  table.valores-temas {
-    thead, tbody, th,
-    td, tr {
-     display: inline-block;
-   }
+  .conteudo-tabela-temas {
+    border-bottom: 1px solid #D1C8C8;
   }
-}
-
-@media (min-width: 1024px) {
-  #ex-numero-tema {
-    display: none;
-  }
-}
-@media (max-width: 414px) {
-  label.numero-do-tema {
-    color: #666;
-  }
-  label.numero-do-tema:hover {
-    color: #000;
-  }
-  label.numero-do-tema::before {
-    font-family: Consolas, monaco, monospace;
-    font-weight: bold;
-    font-size: 15px;
-    content: "+";
-    vertical-align: text-top;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-right: 3px;
-    background: radial-gradient(ellipse at center, #CCC 50%, transparent 50%);;
-  }
-  #ex-numero-tema {
-    height: 0px;
-    overflow: hidden;
-    transition: height 0.5s;
-    color: #000;
-  }
-  #toggle:checked ~ #ex-numero-tema {
-    height: 25px;
-  }
-  #toggle1:checked ~ #ex-numero-tema {
-    height: 90px;
-  }
-  #toggle:checked ~ label.numero-do-tema::before,
-  #toggle1:checked ~ label.numero-do-tema::before {
-    content: "-";
+  .descricao-tema {
+    text-align: justify;
   }
 }
