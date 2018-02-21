@@ -32,12 +32,14 @@ a {
 
 table.valores-temas .valor{
   font-weight: bold;
-  margin-top: -1px;
+  margin: 0px;
+  text-align: center;
 }
 td > h4{
  color: $stfAzulHover;
  font-weight: 600;
  margin: 0px;
+ text-align: center;
 }
 
 // Tabela indicadores
@@ -103,11 +105,7 @@ div.dropdown-relatores {
 }
 
 input#busca-relator {
-   // border-box: box-sizing;
-    background-image: url('../../img/pesquisaavancada/person3.png');
-    background-repeat: no-repeat;
-    padding: 14px 20px 12px 45px;
-    margin-bottom:.3em;
+    margin-bottom:.2em;
     width: 100%;
 }
 .dropdown-content {
@@ -139,7 +137,27 @@ th{
   padding: 15px;
 }
 tr{
+  text-align: justify;
+}
+
+#tabela-RG > tr > .td-num-tema{
+  vertical-align: middle; 
+  text-align:center;
+}
+#tabela-RG > tr > .td-acoes{
+  vertical-align: middle; 
+}
+
+//modal-plenario
+.voto-favor, .voto-contra{
   text-align: center;
+  font-weight: 700;
+}
+.voto-favor{
+  color: #4cbb71;
+}
+.voto-contra{
+  color: #D9534F;
 }
 
 //badges modal
@@ -370,8 +388,7 @@ ul .nav-tabs {
 }
 
 .tab-content {
-  padding: 1%;
-
+  padding: 0%;
 }
 
 #mais-resultados{
