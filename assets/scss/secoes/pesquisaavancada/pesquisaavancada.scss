@@ -18,9 +18,12 @@ a {
 
 /* Card de Temas */ 
 
+table.valores-temas{
+  margin-bottom: 1px;
+}
 table.valores-temas .valor{
   font-weight: bold;
-  margin-top: -1px;
+  margin: 0px;
 }
 td > h4{
  color: $stfAzulHover;
@@ -41,12 +44,8 @@ h2#valor-negada {
 h2#valor-em-analise, h2#valor-merito-n-julgado {
   color: #68B95C;
 }
-td#valor-tema-negada, td#valor-tema-em-analise {
-  border-top: 0;
-  padding-bottom: 12px;
-}
-td#valor-tema-merito-julgado, td#valor-tema-merito-n-julgado {
-  border-top: 1px solid #f0eaea;
+td#valor-tema-em-analise{
+  border-right: 2px solid rgb(221, 220, 220);
 }
 
 /* Dropdown de Ministros */
@@ -198,8 +197,8 @@ tr{
 i{
   cursor: pointer;
 }
-.less{
-  display: none;
+.more, .less{
+  vertical-align: middle;
 }
 .add{
   vertical-align: bottom; 
@@ -214,63 +213,6 @@ i{
   font-size: 21px;
 }
 
-/* Tab dos filtros 
-
-div.principal-tab-filtros{
-  width: 100%;
-  background-color: transparent;
-  padding: 5px !important;
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
-  box-shadow: 0 6px 12px rgba(0,0,0,.175);
-  -moz-box-shadow: 0 6px 12px rgba(0,0,0,.175);
-  background-clip: padding-box;
-  opacity: 0.97;
-  filter: alpha(opacity=97);
-  margin-bottom: 10px;
-}
-div.menu-tab-filtros{
-  margin-bottom: 0px;
-}
-
-div.menu-tab-filtros div.list-group>a:first-child{
-  border-top-right-radius: 0;
-  -moz-border-top-right-radius: 0;
-}
-div.menu-tab-filtros div.list-group>a:last-child{
-  border-bottom-right-radius: 0;
-  -moz-border-bottom-right-radius: 0;
-}
-div.conteudo-sessao-filtros{
-  background-color: #ffffff;
-  /* border: 1px solid #eeeeee; 
-  padding-left: 10px;
-  padding-top: 10px;
-}
-div.conteudo-tab-filtros div.conteudo-sessao-filtros:not(.active){
-  display: none;
-}
-div.list-group-menu .list-group-item {
-  display: inline-block;
-  margin-bottom: 0;
-  margin-left:-4px;
-  margin-right: 0;
-}
-
-div.list-group-menu .list-group-item:first-child {
-  border-top-right-radius:0;
-  border-bottom-left-radius:4px;
-}
-div.list-group-menu .list-group-item:last-child {
-  border-top-right-radius:4px;
-  border-bottom-left-radius:0;
-}
-.list-group-item.active, .list-group-item.active:focus{
-  background-color: $stfAzulClaro;
-  border-color: $stfAzulClaro;
-}
-*/
 input.pesquisa-livre {
   background-image: url('../../img/pesquisaavancada/search.png');
   background-position: 5px 6px;
@@ -315,11 +257,53 @@ input.opcao-filtro-rg {
   height: 0%;
   width: 0%;
 }
+// tabela repercussao geral
 
 .tabela-rg, .tabela-rg > thead{
-  border: 1px solid #f0eaea;
-  margin-top: 20px;
+  margin-top: 0px;
 }
+//votos
+.barra-sim{
+  background-color: #4cbb71;
+}
+.barra-nao{
+  background-color: #D9534F;
+}
+//dropdown de ações
+
+#tabela-RG > tr > .td-num-tema{
+  vertical-align: middle; 
+  text-align:center;
+}
+#tabela-RG > tr > .td-acoes, #tabela-RG > tr > .td-votos{
+  vertical-align: middle; 
+}
+.acao-item{
+  color: #313131; 
+  text-decoration: none;
+}
+
+.acao-item:hover{
+  font-weight: 550;
+  text-decoration: none;
+  color: #313131; 
+}
+
+.btn-acoes{
+  background-color: #00A7E6; 
+  border: none; 
+  border-radius: 4px; 
+  color: white; 
+  vertical-align: text-top
+  
+}
+
+.btn-acoes:hover, .btn-acoes:focus{
+  color: white;
+  background-color: $stfAzulMenu;
+}
+
+
 
 .nome-filtro{
   display: none;
@@ -418,7 +402,7 @@ ul .nav-tabs {
 }
 
 .tab-content {
-  padding: 0 20px;
+  padding: 0px;
 }
 
 .div_teste{
