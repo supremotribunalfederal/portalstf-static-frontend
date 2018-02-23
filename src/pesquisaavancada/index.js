@@ -72,7 +72,7 @@ $(document).ready(function() {
  * @description Alterna estado dos relatores no dropdown de busca
  */
 $(document).ready(function() {
-	$("img.relator").click(function() {
+	$("img.card-imagem-ministros").click(function() {
 		if($(this).hasClass("cinza")) {
 			$(this).removeClass("cinza");
 		} else {
@@ -85,16 +85,31 @@ $(document).ready(function() {
  * @description Limpa filtros
  */
 $(document).ready(function() {
-	$("i.clear-icon").click(function() {
+	$(".limpar-filtros").click(function() {
 		$("input.opcao-filtro-rg, input.pesquisa-livre, input.data-rg").val("");
-	})
+
+		var imagens = document.getElementById("lista_ministros").getElementsByTagName("img");
+		$(imagens).addClass('cinza');
+	
+	});
+
+
+// esconder link pesquisa-avançada 
+	$('.link-pesquisa-avancada-rg').click(function(){
+		$(this).hide();
+	});
+	$('.esconder-filtros').click(function(){
+		$('.link-pesquisa-avancada-rg').show();
+	});
+
+
 
 // mudar nome da pesquisa de acordo com o filtro selecionado
 
-	$('.btn-fav').click(function(){
-		var texto = $(this).data('titulo-pesquisa');
-		$('#titulo-filtro').text(texto);
-	});
+	// $('.btn-fav').click(function(){
+	// 	var texto = $(this).data('titulo-pesquisa');
+	// 	$('#titulo-filtro').text(texto);
+	// });
 
 	//mostrar e esconder icone descricao do tema
 	var mostrar=$('.ver-mais');
