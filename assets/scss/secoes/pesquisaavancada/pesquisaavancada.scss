@@ -48,43 +48,6 @@ td#valor-tema-em-analise{
   border-right: 2px solid rgb(221, 220, 220);
 }
 
-/* Dropdown de Ministros */
-
-// button.list-group-item{
-//   cursor: default;
-
-//   img {
-//     cursor: pointer;
-//   }
-// }
-// div.dropdown-relatores {
-//   .list-group {
-//     background-color: #b7b1b1;
-//     min-width: 252.5px;
-//   }
-//   .cinza{
-//     filter: grayscale(100%);
-//   }
-//   .list-group-item {
-//     margin-bottom: 1px;
-//     padding: 5px 5px;
-//     display: inline-block;
-
-//     hr {
-//       margin: 10px;
-//     }
-//     h5, .link-modal-relator {
-//       text-align: right;
-//     }
-//     .link-modal-relator {
-//       font-size: 95%;
-//     }
-//     img {
-//       position: relative;
-//       float: left;
-//     }
-//   }
-// }
 
 //esconder filtros relator e livre p/ não aparecer nos favoritos
 
@@ -213,15 +176,6 @@ i{
   font-size: 21px;
 }
 
-input.pesquisa-livre {
-  background-image: url('../../img/pesquisaavancada/search.png');
-  background-position: 5px 6px;
-  width: 100%;
-  position: relative;
-  background-repeat: no-repeat;
-  padding: 9px 20px 9px 45px;
-  margin-top: 5px;
-}
 input.opcao-filtro-rg {
   margin-bottom: 6px;
 }
@@ -425,7 +379,7 @@ ul .nav-tabs {
 }
 
 #lista_ministros{
-  margin-top: 15px;
+  margin-top: 0px;
 }
 .cinza{
   filter: grayscale(100%)
@@ -439,19 +393,19 @@ ul .nav-tabs {
   width: 795px; 
   padding-bottom: 5px;
   margin-bottom: 10px; 
-  background-color: rgba(0, 167, 230, 0.4);
+  background-color: rgba(99, 207, 247, 0.4);
 }
 
-input.box-opcoes-filtros {
+.box-opcoes-filtros {
   border: none;
   position: relative;
   top: 15px;
   margin-top: 17px;
 }
-input.box-opcoes-filtros:focus {
+.box-opcoes-filtros:focus {
   outline: none;
 }
-input.box-opcoes-filtros:focus ~ .titulo-opcao-filtro,
+.box-opcoes-filtros:focus ~ .titulo-opcao-filtro,
 .box-opcoes-filtros:valid ~ .titulo-opcao-filtro {
   top: -2px;
   margin-top: 5px;
@@ -464,11 +418,32 @@ label.titulo-opcao-filtro {
   -moz-transition:0.2s ease all; 
   -webkit-transition:0.2s ease all;
   position: absolute;
-  top: 27px;
+  top: 30px;
   left: 20px;
   font-size: 16px;
-  font-weight: normal;
-  color: #757575;
+  font-weight: 600;
+  color: #979696;
+}
+
+.link-pesquisa-avancada-rg{
+  color:black; 
+  bottom: 35px; 
+  right: 10px; 
+  font-size: 14px;
+}
+
+.esconder-filtros, .limpar-filtros{
+  color: white; 
+  font-size: 16px; 
+  
+}
+.esconder-filtros{
+  float: right
+}
+.esconder-filtros:hover, .limpar-filtros:hover{
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
 }
 
 div.tabela-temas {
