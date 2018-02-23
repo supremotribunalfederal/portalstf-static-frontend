@@ -97,6 +97,17 @@ tr{
   margin-top: 10px;
 }
 
+.voto-favor, .voto-contra{
+  font-weight: 600;
+  font-size: 18px;
+}
+.voto-favor{
+  color: #4cbb71;
+}  
+.voto-contra{
+  color: #D9534F;
+}
+
 //badges modal
 .badge-repercussao{
   background-color: #4cbb71;
