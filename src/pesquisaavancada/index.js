@@ -86,7 +86,7 @@ $(document).ready(function() {
  */
 $(document).ready(function() {
 	$(".limpar-filtros").click(function() {
-		$("input.opcao-filtro-rg, input.pesquisa-livre, input.data-rg").val("");
+		$(".box-opcoes-filtros").val("");
 
 		var imagens = document.getElementById("lista_ministros").getElementsByTagName("img");
 		$(imagens).addClass('cinza');
