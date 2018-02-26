@@ -227,6 +227,12 @@ input.opcao-filtro-rg {
 .tabela-rg, .tabela-rg > thead{
   margin-top: 0px;
 }
+table#table-temas > thead > tr > th.th-tema{
+  width:33%;
+}
+table#table-temas > thead > tr > th.th-num-tema, th.th-acoes, th.th-qtd-sobrestados, th.th-processo{
+  width:5%;
+}
 //votos
 .barra-sim{
   background-color: #4cbb71;
@@ -395,6 +401,12 @@ ul .nav-tabs {
 .cinza{
   filter: grayscale(100%)
 }
+/* opacidade ao clicar nos ministros apenas no IE*/
+// @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+//   .cinza{
+//    opacity: 0.5;
+//  } 
+// } 
 
 
 /* google animation */
