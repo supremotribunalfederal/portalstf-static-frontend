@@ -402,18 +402,29 @@ ul .nav-tabs {
   filter: grayscale(100%)
 }
 /* opacidade ao clicar nos ministros apenas no IE*/
-// @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
-//   .cinza{
-//    opacity: 0.5;
-//  } 
-// } 
 
-
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+  .cinza{
+   opacity: 0.65;
+ } 
+ .container-filtros-rg{
+    height: 500px;
+    top: 50px;
+    width: 63em;
+    margin-bottom: 5px;
+  }
+} 
 /* google animation */
+
+.label-ministros{
+  color: white; 
+  margin-left: 15px;
+}
 
 .container-filtros-rg{
   display: grid; 
   width: 62em; 
+  margin-bottom: 2em;
   background-color: rgba(99, 207, 247, 0.4);
 }
 
