@@ -25,7 +25,6 @@ const secoes = [
   'quemequem',
   'votacoes',
   'pesquisaavancada',
-  'pesquisajurisprudencia',
   'erro-404',
   'listarprocessos',
   'listarporparte',
@@ -53,16 +52,17 @@ const includes = [
   'paginacao',
   'pesquisa',
   'pesquisa-lista',
-  'pesquisa-acordaos',
-  'pesquisa-repercussao-geral',
-  'pesquisa-sumulas',
-  'pesquisa-sumulas-vinculantes',
   'processo-informacoes',
   'processo-partes',
   'processo-andamentos',
   'processo-deslocamento',
   'processo-peticoes',
-  'processo-recursos'
+  'processo-recursos',
+  'pesquisaavancada/tabela-temas',
+  'pesquisaavancada/filtro-avancado',
+  'pesquisaavancada/modal-tema',
+  'pesquisaavancada/modal-relator',
+  'pesquisaavancada/modal-pesquisa-mobile'
 ]
 
 module.exports = {

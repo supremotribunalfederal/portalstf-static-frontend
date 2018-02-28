@@ -16,84 +16,68 @@
   <div id="main" class="container-fluid p-0">
 
     <%- include src/includes/header.html %>
-
     <%- include src/includes/pesquisa.html %>
 
     <section id="conteudo-principal" class="container-fluid m-0 p-0">
-      <div class="container center-block p-0">
-        <!--Menu Lateral-->
-        <div class="col-xs-12 col-sm-12 col-lg-12 p-xs-0 m-0 m-t-8 card-temas">
-          <div class="card table-responsive">
-            <h5 class="card-titulo card-titulo-over">Temas</h5>
-            <table class="table valores-temas">
-              <tr>
-                <td>
-                  <h2 class="valor" id="valor-total">978</h2>
-                  <h4>Total</h4>
-                </td>
-                <td>
-                  <h2 class="valor" id="valor-reconhecida">657</h2>
-                  <h4>Reconhecida</h4>
-                </td>
+		<div class="container center-block container-temas">
+			<div class="card card-de-temas">
+				<h5 class="card-titulo">Temas</h5>
+				<div class="text-center __stf-azul-hover">
+					<div class="col-lg-2 col-xs-4">
+						<h2 class="bg-font-black m-t-0">978</h2><h4>Total</h4>
+					</div>
+					<div class="col-lg-2 col-xs-4">
+						<h2 class="__stf-azul-escuro m-t-0">657</h2><h4>Reconhecida</h4>
+					</div>
+					<div class="col-lg-2 col-xs-4">
+						<h2 class="__stf-vermelho m-t-0">317</h2><h4>Negada</h4>
+					</div>
+					<div class="col-lg-2 col-xs-4">
+						<h2 class="__stf-verde m-t-0">4</h2><h4>Em Análise</h4>
+					</div>
+					<div class="col-lg-2 col-xs-4 __borda-l-cinza">
+						<h2 class="__stf-azul-escuro m-t-0">359</h2><h4>Mérito julgado</h4>
+					</div>
+					<div class="col-lg-2 col-xs-4">
+						<h2 class="__stf-verde m-t-0">302</h2><h4>Mérito não Julgado</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container center-block p-0 container-tabela-e-graficos">
+			<div class="card m-b-48">
+				<div class="card-conteudo col-xs-12 col-sm-12 col-lg-12 p-xs-0 m-0">
+					<nav>
+						<ul class="nav nav-tabs col-md-12" role="tablist">
+							<li role="presentation" class="active"><a data-toggle="tab" href="#tabela-de-temas">Tabela de Temas</a></li>
+							<li role="presentation"><a data-toggle="tab" href="#graficos-de-temas">Gráficos</a></li>
+						</ul>
+					</nav>
 
-                <td id="valor-tema-negada">
-                  <h2 class="valor" id="valor-negada">317</h2>
-                  <h4>Negada</h4>
-                </td>
-                <td id="valor-tema-em-analise">
-                  <h2 class="valor" id="valor-em-analise">4</h2>
-                  <h4>Em Análise</h4>
-                </td>
+					<div class="tab-content col-md-12">
+						<!-- Inclue tabela de temas -->
+						<%- include src/includes/pesquisaavancada/tabela-temas.html %>
 
-                <td id="valor-tema-merito-julgado">
-                  <h2 class="valor" id="valor-merito-julgado">359</h2>
-                  <h4>Mérito julgado</h4>
-                </td>
-                <td id="valor-tema-merito-n-julgado">
-                  <h2 class="valor" id="valor-merito-n-julgado">302</h2>
-                  <h4>Mérito não Julgado</h4>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </div>
-      </div>
-      <div class="container center-block p-0">
-          <div class="card m-b-48">
-              <div class="card-conteudo col-xs-12 col-sm-12 col-lg-12 p-xs-0 m-0">
-                <nav>
-                  <ul class="nav nav-tabs col-md-12" role="tablist">
-                    <li role="presentation" class="active"><a data-toggle="tab" href="#tab-table">Tabela de Temas</a></li>
-                    <li role="presentation"><a data-toggle="tab" href="#tab-navegacao-graficos">Gráficos</a></li>
-                  </ul>
-                </nav> 
-
-                <div class="tab-content col-md-12">
-                  <!-- Inclue tabela de temas -->
-                  <%- include src/includes/pesquisa-avancada/tabela-tema.html %>
-                  <div class="modal-tema">
-                    <%- include src/includes/pesquisa-avancada/modal-tema.html %>
-                    <%- include src/includes/pesquisa-avancada/card-relator.html %>
-                    <%- include src/includes/pesquisa-avancada/detalhes-situacao.html %>
-                  </div>
-
-                  <!-- Mostra as tabelas de exemplo -->
-                  <div class="tab-pane fade p-t-16" id="tab-navegacao-graficos">
-                    <img src="../../assets/img/pesquisaavancada/grafico1.png" alt="Exemplo de gráfico">
-                    <img src="../../assets/img/pesquisaavancada/grafico2.png" alt="Exemplo de gráfico">
-                  </div>
-                </div>
-              </div>  
-          </div> 
-      </div>
-
-
-    </section>
-
+						<%- include src/includes/pesquisaavancada/modal-tema.html %>
+						
+						<!-- Mostra as tabelas de exemplo -->
+						<div class="tab-pane fade p-t-16" id="graficos-de-temas">
+							<img src="../../assets/img/repgeral/grafico1.png" alt="Exemplo de gráfico">
+							<img src="../../assets/img/repgeral/grafico2.png" alt="Exemplo de gráfico">
+						</div>
+					</div>
+					
+				</div>  
+			</div> 
+		</div>
+		
+	</section>
+	
     <%- include src/includes/mapa-do-site.html %>
     <%- include src/includes/footer.html %>
-
-  </div>
+	
+</div>
 
 </body>
 
