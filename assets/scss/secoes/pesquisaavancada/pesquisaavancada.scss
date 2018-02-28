@@ -10,6 +10,13 @@ a {
 /**************************************************************************************************
 CONFIGURAÇÃO DO CARD DE TEMAS
 **************************************************************************************************/
+.pesquisa-temas-mobile {
+  input {width: 17rem;}
+  a {
+    position: relative;
+    top: 8px;
+  }
+}
 .container-temas{
     h2 {font-weight: bold;}
     .card-de-temas {overflow-x: auto;}
@@ -18,8 +25,6 @@ CONFIGURAÇÃO DO CARD DE TEMAS
 /**************************************************************************************************
 CONFIGURAÇÃO DO CARD DA TABELA TEMAS
 **************************************************************************************************/
-@media (max-width: 768px) {.tabela-temas {display: none;}}
-
 /*
 * NAV (NAVEGAÇÃO TABELA E GRAFICOS)
 */
@@ -75,8 +80,8 @@ CONFIGURAÇÃO DO FILTRO DE PESQUISA AVANCADA
   }
 } 
 .container-filtros-rg{
-  display: grid; 
-  width: 62em;
+  display: grid;
+  width: 49rem;
   grid-template-rows: 0.5em 6em 4.5em 4.5em 4.5em 4.5em 4.5em; 
   background-color: rgba(99, 207, 247, 0.4);
 }
