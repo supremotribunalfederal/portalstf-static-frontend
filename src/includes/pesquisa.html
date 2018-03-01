@@ -284,22 +284,24 @@
                           <input type="text" id="data_final" class="form-control data-rg box-opcoes-filtros" placeholder="Até" onfocus="(this.type='date')" style="width: 97%"/>
                         </div>	
                       </div>
-                      <div style="position: relative; margin-top: 20px;"> 
-                        <a class="limpar-filtros">
-                          <i class="material-icons" style="position: relative;bottom: -7px;">clear</i>
-                          Limpar Filtros
-                        </a>				
-                        <a class="hidden-sm hidden-xs esconder-filtros" href=".multi-collapse" data-toggle="collapse">
-                          Pesquisa avançada <i class="material-icons seta" title="Fechar Filtros">expand_less</i>
-                        </a>
+                      <div class="row">
+                        <div class="col-lg-4 limpar-filtros">
+                          <a><i class="material-icons icones-pesquisa-avancada">clear</i>Limpar Filtros</a>
+                        </div>
+                        <div class="col-lg-4 esconder-filtros">
+                          <a href=".multi-collapse" data-toggle="collapse">
+                            Pesquisa avançada <i class="material-icons icones-pesquisa-avancada seta" title="Fechar Filtros">expand_less</i>
+                          </a>
+                        </div>
                       </div>
                         
                     </div>
                   </div>
-                  <a class="hidden-sm hidden-xs link-pesquisa-avancada-rg" href=".multi-collapse" data-toggle="collapse" style="float: right; position: relative; bottom: 43px;">
-                    Pesquisa avançada <i class="material-icons seta" title="Mais Filtros" style="bottom: -7px; position: relative">expand_more</i>
+                  <a class="hidden-sm hidden-xs link-pesquisa-avancada-rg" href=".multi-collapse" data-toggle="collapse">
+                    Pesquisa avançada <i class="material-icons icones-pesquisa-avancada seta" title="Mais Filtros">expand_more</i>
                   </a>  
                 </div>
+                <!-- Fim Pesquisa avançada -->
 
                 <div class="hidden-sm hidden-xs pesquisa-jurisprudencia-links-inferiores">
                   <a href="http://www.stf.jus.br/portal/jurisprudencia/pesquisarVocabularioJuridico.asp">Clique aqui para consultar o vocabulário jurídico (Tesauro)</a>

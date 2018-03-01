@@ -19,51 +19,32 @@ var filtraDados = function(dadoDeEntrada, elementoASerfiltrado, tagParaFiltragem
 	});
 }
 
-filtraDados(".pesquisa-livre", "#tabela-RG", "tr");
-filtraDados("#busca-relator", "#lista-relatores", ".list-group-item");
 filtraDados("#busca-tabela-julgados", ".julgados", "tbody tr");
 filtraDados("#busca-tabela-pendentes", ".pendentes", "tbody tr");
 
 /**
- * @description Alterna os estados de ativo de cada aba da tab de navegação dos filtros
-*/
-$(document).ready(function() {
-    $("div.list-group>a").click(function(e) {
-        e.preventDefault();
-        $(this).siblings('a.active').removeClass("active");
-        $(this).addClass("active");
-        var index = $(this).index();
-        $("div.conteudo-tab-filtros>div.conteudo-sessao-filtros").removeClass("active");
-        $("div.conteudo-tab-filtros>div.conteudo-sessao-filtros").eq(index).addClass("active");
-    });
-});
-
-/**
- * @description Alterna os icones que mostram e escondem os filtros da parte de pesquisa livre
-*/
-$(document).ready(function() {
-	$("#icone-add-filtros").click(function() {
-		var valorIcone = $("#icone-add-filtros").text();
-		if(valorIcone == "add_circle_outline") {
-			$("#icone-add-filtros").text("remove");
-		} else {	
-			$("#icone-add-filtros").text("add_circle_outline");
-		}
-	});
-});
-
-/**
- * @description Alterna estado dos relatores no dropdown de busca
+ * @description Alterna estado das imagens dos ministros
  */
-$(document).ready(function() {
+$(function() {
 	$("img.card-imagem-ministros").click(function() {
-		if($(this).hasClass("cinza")) {
-			$(this).removeClass("cinza");
-		} else {
-			$(this).addClass("cinza");
-		}
+		$(this).hasClass("cinza") ? $(this).removeClass("cinza") : $(this).addClass("cinza");
 	})
 });
+
+/**
+ * @description Mostrar e esconder link pesquisa-avançada
+ */
+$(function() {
+	$('.link-pesquisa-avancada-rg').click(function(e){
+		e.preventDefault();
+		$(this).hide();
+	});
+	$('.esconder-filtros').click(function(e){
+		e.preventDefault();
+		$('.link-pesquisa-avancada-rg').show();
+	});
+})
+
 
 /**
  * @description Limpar filtros
@@ -75,17 +56,6 @@ $(document).ready(function() {
 		var imagens = document.getElementById("lista_ministros").getElementsByTagName("img");
 		$(imagens).addClass('cinza');
 	
-	});
-
-
-// esconder link pesquisa-avançada 
-	$('.link-pesquisa-avancada-rg').click(function(e){
-		e.preventDefault();
-		$(this).hide();
-	});
-	$('.esconder-filtros').click(function(e){
-		e.preventDefault();
-		$('.link-pesquisa-avancada-rg').show();
 	});
 
 // abrir modal plenario
@@ -105,11 +75,6 @@ $(".num_tema").click(function(){
 });
 
 // mudar nome da pesquisa de acordo com o filtro selecionado
-
-	// $('.btn-fav').click(function(){
-	// 	var texto = $(this).data('titulo-pesquisa');
-	// 	$('#titulo-filtro').text(texto);
-	// });
 
 	//mostrar e esconder icone descricao do tema
 	var mostrar=$('.ver-mais');

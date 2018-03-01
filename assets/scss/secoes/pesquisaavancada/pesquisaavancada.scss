@@ -82,7 +82,7 @@ CONFIGURAÇÃO DO FILTRO DE PESQUISA AVANCADA
 .container-filtros-rg{
   display: grid;
   width: 49rem;
-  grid-template-rows: 0.5em 6em 4.5em 4.5em 4.5em 4.5em 4.5em; 
+  grid-template-rows: 0.5em 6em 4.5em 4.5em 4.5em 4.5em 6em; 
   background-color: rgba(99, 207, 247, 0.4);
 }
 
@@ -116,22 +116,34 @@ CONFIGURAÇÃO DO FILTRO DE PESQUISA AVANCADA
   color: #979696;
 }
 
+/**
+* LINKS DA PESQUISA AVANÇADA
+*/
 .link-pesquisa-avancada-rg{
   color:black; 
-  right: 10px; 
+  right: 10px;
   font-size: 14px;
+  float: right; 
+  position: relative; 
+  bottom: 43px;
 }
-.esconder-filtros, .limpar-filtros{
-  color: white; 
-  font-size: 16px; 
-}
-.esconder-filtros{
-  float: right
-}
-.esconder-filtros:hover, .limpar-filtros:hover{
-  font-weight: 600;
+.esconder-filtros a, 
+.limpar-filtros a{
   color: white;
+  font-size: 16px;
+}
+.esconder-filtros {
+  float: right;
+  a{float: right;}
+}
+.esconder-filtros:hover, 
+.limpar-filtros:hover{
+  font-weight: 600;
   text-decoration: none;
+}
+.icones-pesquisa-avancada {
+  top: 7px; 
+  position: relative;
 }
 
 /* ALTERAR */
@@ -180,23 +192,4 @@ CONFIGURAÇÃO DO FILTRO DE PESQUISA AVANCADA
 //   z-index: 100;
 //   // border: 1px solid #00a7e6;
 //   border-radius: 5px;
-// }
-
-// @media (max-width: 414px) {
-//   table.valores-temas {
-//     display: block;
-//     position: relative;
-//     width: 100%;
-//   }
-//   table.valores-temas {
-//     thead, tbody, th,
-//     td, tr {
-//      display: inline-block;
-//    }
-//   }
-// }
-// @media (max-width: 768px) {
-//   .tabela-temas, .busca-e-icones-tabela {
-//     display: none;
-//   }
 // }
