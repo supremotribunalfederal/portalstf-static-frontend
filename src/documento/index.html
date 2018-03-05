@@ -42,39 +42,40 @@
 
                                 <div class="card m-b-48">
                                     <div class="card-titulo">Pesquisa</div>
-                                    <div class="card-conteudo card-gabinete row m-0 m-t-16 p-0">
+                                    <div class="card-conteudo row m-0 m-t-16 p-0">
                                         <div class="col-xs-12 col-md-12 m-b-24">
                                             <div>
                                                 <div class="col-xs-10 col-md-12">
-                                                    <div class="pesquisa-autenticacao-documentos-eletronicos">
-                                                        <div class="row">
-                                                            <h3><strong>Tipo de documento:</strong></h3>
-                                                            <div class="col-md-1 col-xs-5">
-                                                                <input type="radio" name="radio-tipo-documento" id="documento-eletrônico-geral" class="check-pesquisa-autenticacao half-width" value="option1">
+                                                    <form id="pesquisa-autenticacao" action="javascript:void(0);">
+                                                        <div class="pesquisa-autenticacao-documentos-eletronicos">
+                                                            <div class="row">
+                                                                <h3><strong>Tipo de documento:</strong></h3>
+                                                                <div class="col-md-1 col-xs-5">
+                                                                    <input type="radio" name="radio-tipo-documento" id="documento-eletrônico-geral" class="check-pesquisa-autenticacao half-width" value="option1" checked>
+                                                                </div>
+                                                                <div class="textos-pesquisa-autenticacao col-md-3 col-xs-5">
+                                                                    <label class="form-check-label" for="documento-eletrônico-geral">Documento eletrônico geral</label>
+                                                                </div>
+                                                                <div class="col-md-1 col-xs-5">
+                                                                    <input type="radio" name="radio-tipo-documento" id="margem-consignável" class="check-pesquisa-autenticacao half-width" value="option2">
+                                                                </div>
+                                                                <div class="textos-pesquisa-autenticacao  col-md-3 col-xs-5">
+                                                                    <label class="form-check-label" for="margem-consignável">Margem consignável</label>
+                                                                </div>
                                                             </div>
-                                                            <div class="textos-pesquisa-autenticacao col-md-3 col-xs-5">
-                                                                <label class="form-check-label" for="documento-eletrônico-geral">Documento eletrônico geral</label>
+                                                            <div class="row">
+                                                                <h3><strong>Identificação do documento:</strong></h3>
+                                                                <input type="text" class="form-control" name="identificacaoDocumento" id="identificacaoDocumento">
                                                             </div>
-                                                            <div class="col-md-1 col-xs-5">
-                                                                <input type="radio" name="radio-tipo-documento" id="margem-consignável" class="check-pesquisa-autenticacao half-width" value="option2">
-                                                            </div>
-                                                            <div class="textos-pesquisa-autenticacao  col-md-3 col-xs-5">
-                                                                <label class="form-check-label" for="margem-consignável">Margem consignável</label>
+                                                            <div class="row">
+                                                                <h3><strong>Código de verificação:</strong></h3>
+                                                                <div class="g-recaptcha" data-sitekey="#"></div>
                                                             </div>
                                                         </div>
-                                                        <div class="row">
-                                                            <h3><strong>Identificação do documento:</strong></h3>
-                                                            <input type="text" class="form-control">
-                                                        </div>
-                                                        <div class="row">
-                                                            <h3><strong>Código de verificação:</strong></h3>
-                                                            <div class="g-recaptcha" data-sitekey="#"></div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <button class="btn __stf-azul-claro __borda-azul-claro">Pesquisar</button>
-                                                            <button class="btn __stf-azul-claro __borda-azul-claro">Limpar</button>
-                                                        </div>
-                                                    </div>
+                                                    </form>
+                                                    <button form="pesquisa-autenticacao" class="btn btn-autenticacao __stf-azul-claro __borda-azul-claro">Pesquisar</button>
+                                                    <button class="btn btn-autenticacao __stf-azul-claro __borda-azul-claro">Limpar</button>
+                                                    <label class="mensagemAutenticacao"></label>
                                                 </div>
                                             </div>
                                         </div>
