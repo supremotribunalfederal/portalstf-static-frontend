@@ -18,10 +18,10 @@
 
     .noticia-resumo {
       color: #000000;
-      font-size: 1.1rem;
+      font-size: 1rem;
       word-wrap: break-word;
       letter-spacing: -0.3px;
-      line-height: 20px;
+      line-height: 1.5rem;
     }
 
     .noticia-autor {
@@ -42,8 +42,8 @@
       text-align: justify;
       text-justify: inter-word;
       p {
-        font-size: 1.25rem;
-        line-height: 1.75;
+        font-size: 1rem;
+        line-height: 1.5rem;
       }
     }
   }

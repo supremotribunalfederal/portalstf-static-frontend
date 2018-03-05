@@ -14,7 +14,7 @@
 
     <%- include src/includes/pesquisa-lista.html %>
 
-    <section id="conteudo" class="container-fluid m-0 p-0">
+    <section id="conteudo" class="container-fluid m-0 p-0 m-r-8 m-l-8">
       <div class="row container center-block p-0">
         <!--Menu Lateral-->
         <div class="col-xs-12 col-sm-3 col-lg-2 p-16 p-xs-0 m-0">
@@ -41,7 +41,11 @@
                 <div class="card m-b-48">
                     <div class="card-titulo row m-0">
                       <div class="col-md-4">
-                        <div class="processo-titulo m-b-8">ADI 100 &nbsp;<span class="badge bg-warning">Processo físico</span>
+                        <div class="processo-titulo m-b-8">ADI 100
+                          <div>
+                            <span class="badge bg-default">Processo físico</span>
+                            <span class="badge bg-warning">Segredo de Justiça</span>
+                          </div>
                           <input type="hidden" id="incidente" value="1491705" />
                           <input type="hidden" id="classe-numero-processo" value="ADI 100" />
                           <input type="hidden" id="peca" value="S" />
@@ -70,65 +74,67 @@
                       </div>
                     </div>
                     <div class="card-conteudo row m-0 p-0">
-                      <div class="card-processo col-xs-12 col-md-5 m-b-8">
-                        <div class="processo-classe m-t-8">
-                          Ação Direta de Inconstitucionalidade
-                        </div>
-                        <div class="processo-dados">
-                          Origem: MG - Minas Gerais
-                        </div>
-                        <div class="processo-dados">
-                          Relator atual: Min. Ellen Gracie
-                        </div>
-                      </div>
-                      <div class="card-processo col-xs-12 col-md-7 m-b-8">
-                        <div class="p-l-16">
-                          <div class="col-md-4">
-                            <div class="processo-partes m-t-8">
-                              AUTOR(A/S)(ES)
-                            </div>
-                            <div class="processo-partes">
-                              PROC.(A/S)(ES)
-                            </div>
-                            <div class="processo-partes">
-                              RÉU(É)(S)
-                            </div>
-                            <div class="processo-partes">
-                              ADV.(A)(S)
-                            </div>
-                            <div class="processo-partes">
-                              RÉU(É)(S)
-                            </div>
-                            <div class="processo-link p-t-8">
-                              <a id="todas-partes" href="#">Todas as partes</a>
-                            </div>
+                      <div class="card-processo">
+                        <div class="col-xs-12 col-md-5 m-b-8">
+                          <div class="processo-classe m-t-8">
+                            Ação Direta de Inconstitucionalidade
                           </div>
-                          <div class="col-md-8">
-                            <div class="processo-partes m-t-8">
-                              MINISTÉRIO PÚBLICO FEDERAL
-                            </div>
-                            <div class="processo-partes">
-                              PROCURADOR-GERAL DA REPÚBLICA
-                            </div>
-                            <div class="processo-partes">
-                              JOSÉ DIRCEU DE OLIVEIRA E SILVA
-                            </div>
-                            <div class="processo-partes">
-                              JOSÉ LUIS MENDES DE OLIVEIRA LIMA
-                            </div>
-                            <div class="processo-partes">
-                              JOSÉ GENOÍNO NETO
-                            </div>
+                          <div class="processo-dados">
+                            Origem: MG - Minas Gerais
                           </div>
+                          <div class="processo-dados">
+                            Relator atual: Min. Ellen Gracie
+                          </div>
+                        </div>
+                        <div class="card-processo col-xs-12 col-md-7 m-b-8">
+                          <div class="p-l-0">
+                            <div class="col-md-4 p-l-0">
+                              <div class="processo-partes m-t-8">
+                                AUTOR(A/S)(ES)
+                              </div>
+                              <div class="processo-partes">
+                                PROC.(A/S)(ES)
+                              </div>
+                              <div class="processo-partes">
+                                RÉU(É)(S)
+                              </div>
+                              <div class="processo-partes">
+                                ADV.(A)(S)
+                              </div>
+                              <div class="processo-partes">
+                                RÉU(É)(S)
+                              </div>
+                              <div class="processo-link p-t-8">
+                                <a id="todas-partes" href="#">Todas as partes</a>
+                              </div>
+                            </div>
+                            <div class="col-md-8 p-l-0">
+                              <div class="processo-partes m-t-8">
+                                MINISTÉRIO PÚBLICO FEDERAL
+                              </div>
+                              <div class="processo-partes">
+                                PROCURADOR-GERAL DA REPÚBLICA
+                              </div>
+                              <div class="processo-partes">
+                                JOSÉ DIRCEU DE OLIVEIRA E SILVA
+                              </div>
+                              <div class="processo-partes">
+                                JOSÉ LUIS MENDES DE OLIVEIRA LIMA
+                              </div>
+                              <div class="processo-partes">
+                                JOSÉ GENOÍNO NETO
+                              </div>
+                            </div>
 
-                            <div class="clearfix"></div>
+                              <div class="clearfix"></div>
+                          </div>
                         </div>
                       </div>
                       <div class="col-md-12 row">
                         <ul class="nav nav-tabs" role="tablist">
-                          <li role="presentation" class="active"><a data-toggle="tab" href="#informacoes">Informações gerais</a></li>
+                          <li role="presentation"><a data-toggle="tab" href="#informacoes">Informações gerais</a></li>
                           <li role="presentation"><a data-toggle="tab" href="#partes"><i class="glyphicon glyphicon-user"></i> Partes</a></li>
-                          <li role="presentation"><a data-toggle="tab" href="#andamentos"><i class="glyphicon glyphicon-time"></i> Andamentos</a></li>
+                          <li role="presentation" class="active"><a data-toggle="tab" href="#andamentos"><i class="glyphicon glyphicon-time"></i> Andamentos</a></li>
                           <li role="presentation"><a data-toggle="tab" href="#deslocamento"><i class="glyphicon glyphicon-map-marker"></i> Deslocamento</a></li>
                           <li role="presentation"><a data-toggle="tab" href="#peticoes"><i class="glyphicon glyphicon-file"></i> Petições</a></li>
                           <li role="presentation"><a data-toggle="tab" href="#recursos"><i class="glyphicon glyphicon-file"></i> Recursos</a></li>

@@ -31,7 +31,8 @@ const secoes = [
   'listarporparte',
   'listarpartes',
   'processo',
-  'estatistica'
+  'estatistica',
+  'documento'
 ];
 
 const secoesChunks = secoes.reduce((prev, cur) => {

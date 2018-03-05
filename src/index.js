@@ -305,7 +305,7 @@ function pesquisarProcessoPorNumeroUnico() {
 
 function pesquisarProcessoPorClasseNumero() {
     var classe = $('.pesquisa-processo-classe .processo-classe').val();
-    var numero = $('#pesquisaPrincipalClasseNumero').val();
+    var numero = $('#pesquisaPrincipalClasseNumero').val().trim();
     var url = '';
 
     if (window.location.pathname.match(/^\/portal\/?.*/)) {
@@ -337,13 +337,13 @@ $.extend( $.validator.messages, {
 
 var validator;
 
-function configurarValidacaoPesquisa(id) {
+function configurarValidacaoPesquisa(id, elementoValidator, elementoDeReferencia) {
     //JQUERY validation
     var conf = {
         //escolher onde posicionar a mensagem de erro
         errorPlacement: function(label, element) {
             label.addClass('alert alert-danger col-xs-10 m-t-8 m-b-0');
-            label.insertAfter('.pesquisa-jurisprudencia-links-inferiores:last');
+            label.insertAfter(elementoDeReferencia + ':last');
         },
 
         wrapper: 'span',
@@ -375,16 +375,31 @@ function configurarValidacaoPesquisa(id) {
         validator.destroy();
     }
 
-    validator = $('#pesquisa-principal').validate(conf);
+    validator = $(elementoValidator).validate(conf);
 }
 
 //Pesquisa principal do topo da página
 $('#pesquisa-principal').submit(function(e){
-    configurarValidacaoPesquisa(campoInputPesquisa);
+    //Remove os espaços do campo de pesquisa antes de submeter o formulário à validação.
+    if (campoInputPesquisa === 'pesquisaPrincipalClasseNumero'){
+        $('#pesquisaPrincipalClasseNumero').val($('#pesquisaPrincipalClasseNumero').val().trim());
+    } else if (campoInputPesquisa === 'pesquisaPrincipalNumeroOrigem'){
+        $('#pesquisaPrincipalNumeroOrigem').val($('#pesquisaPrincipalNumeroOrigem').val().trim());
+    }
+
+    configurarValidacaoPesquisa(campoInputPesquisa, '#pesquisa-principal', '.pesquisa-jurisprudencia-links-inferiores');
 
     if( $('#pesquisa-principal').valid()){
         realizarPesquisa(campoInputPesquisa);
     }
+});
+
+//Pesquisa de autenticação  de documentos eletrônicos
+$('#pesquisa-autenticacao').submit(function(e){
+    campoInputPesquisa = 'identificacaoDocumento';
+    $('#identificacaoDocumento').val($('#identificacaoDocumento').val().trim());
+
+    configurarValidacaoPesquisa(campoInputPesquisa, '#pesquisa-autenticacao', '.mensagemAutenticacao');
 });
 
 /* Pauta de Julgamento da Home ------------------------------------------------------------------------------------ */
