@@ -59,7 +59,6 @@ const includes = [
   'processo-peticoes',
   'processo-recursos',
   'pesquisaavancada/tabela-temas',
-  'pesquisaavancada/filtro-avancado',
   'pesquisaavancada/modal-tema',
   'pesquisaavancada/modal-relator',
   'pesquisaavancada/modal-pesquisa-mobile'

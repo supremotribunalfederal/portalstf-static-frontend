@@ -19,8 +19,8 @@ var filtraDados = function(dadoDeEntrada, elementoASerfiltrado, tagParaFiltragem
 	});
 }
 
-filtraDados("#busca-tabela-julgados", ".julgados", "tbody tr");
-filtraDados("#busca-tabela-pendentes", ".pendentes", "tbody tr");
+// filtraDados("#busca-tabela-julgados", ".julgados", "tbody tr");
+// filtraDados("#busca-tabela-pendentes", ".pendentes", "tbody tr");
 
 /**
  * @description Alterna estado das imagens dos ministros
@@ -34,6 +34,7 @@ $(function() {
 
 /**
  * @description Mostrar e esconder link pesquisa-avançada
+ * @param none
  */
 $(function() {
 	$('.link-pesquisa-avancada-rg').click(function(e){
@@ -50,7 +51,7 @@ $(function() {
 /**
  * @description Limpar filtros
  */
-$(document).ready(function() {
+$(function() {
 	$(".limpar-filtros").click(function() {
 		$(".box-opcoes-filtros").val("");
 
