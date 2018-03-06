@@ -149,141 +149,88 @@
                     <div class="container container-filtros-rg m-b-16 p-b-8">
                       
                       <!-- Filtros -->
-                      <div class="row">
-                        <label style="color: white; margin-left: 15px;"> Filtrar por Ministros: </label> <br>
+                      <div class="row m-l-8">
+                        <label class="__stf-branco"> Filtrar por Ministros: </label>
                       </div>
                       <div class="row filtro-por-ministros">
-                        <div id="lista_ministros" class="sob-medida-item p-0 m-r-16 m-l-16 p-b-10 m-t-0 text-center">
-                          <img alt="Ministra Cármen Lúcia" id="MIN. CÁRMEN LÚCIA" title="Ministra Cármen Lúcia" src="../assets/img/ministros/ministra_carmen_lucia.jpg" class="card-imagem-ministros cinza img-circle" onclick="clickMinistro(this)">
-                          <img alt="Ministro Dias Toffoli" id="MIN. DIAS TOFFOLI" title="Ministro Dias Toffoli" src="../assets/img/ministros/ministro_dias_toffoli.jpg" class="card-imagem-ministros cinza img-circle" onclick="clickMinistro(this)">
-                          <img alt="Ministro Celso de Melo" id="MIN. CELSO DE MELLO" title="Ministro Celso de Melo" src="../assets/img/ministros/ministro_celo_melo.jpg" class="card-imagem-ministros cinza img-circle" onclick="clickMinistro(this)">
-                          <img alt="Ministro Marco Aurélio" id="MIN. MARCO AURÉLIO" title="Ministro Marco Aurélio" src="../assets/img/ministros/ministro_marco_aurelio.jpg" class="card-imagem-ministros cinza img-circle" onclick="clickMinistro(this)">
-                          <img alt="Ministro Gilmar Mendes" id="MIN. GILMAR MENDES" title="Ministro Gilmar Mendes" src="../assets/img/ministros/ministro_mendes.jpg" class="card-imagem-ministros cinza img-circle" onclick="clickMinistro(this)">
-                          <img alt="Ministro Ricardo Lewandowski" id="MIN. RICARDO LEWANDOWSKI" title="Ministro Ricardo Lewandowski" src="../assets/img/ministros/ministro_lewandowski.jpg" class="card-imagem-ministros cinza img-circle" onclick="clickMinistro(this)">
-                          <img id="MIN. LUIZ FUX" alt="Ministro Luiz Fux" title="Ministro Luiz Fux" src="../assets/img/ministros/ministro_luiz_fux.jpg" class="card-imagem-ministros cinza img-circle" onclick="clickMinistro(this)">
-                          <img alt="Ministra Rosa Weber" id="MIN. ROSA WEBER" title="Ministra Rosa Weber" src="../assets/img/ministros/ministra_rosa_weber.jpg" class="card-imagem-ministros cinza img-circle" onclick="clickMinistro(this)">
-                          <img alt="Ministro Roberto Barroso" id="MIN. ROBERTO BARROSO" title="Ministro Roberto Barroso" src="../assets/img/ministros/ministro_roberto_barroso.jpg" class="card-imagem-ministros cinza img-circle" onclick="clickMinistro(this)">
-                          <img alt="Ministro Edson Fachin" id="MIN. EDSON FACHIN" title="Ministro Edson Fachin" src="../assets/img/ministros/ministro_fachin.jpg" class="card-imagem-ministros cinza img-circle" onclick="clickMinistro(this)">
-                          <img alt="Ministro Alexandre de Moraes" id="MIN. ALEXANDRE DE MORAES" title="Ministro Alexandre de Moraes" src="../assets/img/ministros/ministro_moraes.jpg" class="card-imagem-ministros cinza img-circle" onclick="clickMinistro(this)">
+                        <div class="p-0 m-r-16 m-l-16 p-b-10 m-t-0 text-center">
+
+                          <ul class="p-l-0">
+                            <li><a id="min-carmen-lucia" class="card-imagem-ministros cinza">Ministra Cármen Lúcia</a></li>
+                            <li><a id="min-dias-toffoli" class="card-imagem-ministros cinza">Ministro Dias Toffoli</a></li>
+                            <li><a id="min-celso-melo" class="card-imagem-ministros cinza">Ministro Celso de Melo</a></li>
+                            <li><a id="min-marco-aurelio" class="card-imagem-ministros cinza">Ministro Marco Aurélio</a></li>
+                            <li><a id="min-gilmar-mendes" class="card-imagem-ministros cinza">Ministro Gilmar Mendes</a></li>
+                            <li><a id="min-ricardo-lewandowski" class="card-imagem-ministros cinza">Ministro Ricardo Lewandowski</a></li>
+                            <li><a id="min-luiz-fux" class="card-imagem-ministros cinza">Ministro Luiz Fux</a></li>
+                            <li><a id="min-rosa-weber" class="card-imagem-ministros cinza">Ministra Rosa Weber</a></li>
+                            <li><a id="min-roberto-barroso" class="card-imagem-ministros cinza">Ministro Roberto Barroso</a></li>
+                            <li><a id="min-edson-fachin" class="card-imagem-ministros cinza">Ministro Edson Fachin</a></li>
+                            <li><a id="min-alexandre-moraes" class="card-imagem-ministros cinza">Ministro Alexandre de Moraes</a></li>
+                          </ul>
+
                         </div>
                       </div>         
                       <div class="row">
                         <div class="col-lg-6">
-                          <select class="form-control box-opcoes-filtros" style="width: 100%" required>
-                            <option selected></option>
-                            <option>Temas de Repercussão Geral</option>
-                            <option>Teses de Repercussão Geral</option>
-                            <option>Temas com Repercussão Geral Negada</option>
-                            <option>Temas com Repercussão Geral Reconhecida</option>
-                            <option>Temas com Repercussão Geral Reconhecida e Mérito Julgado</option>
-                            <option>Temas com Repercussão Geral Reconhecida e Mérito Pendente</option>
-                            <option>Temas com Suspensão Nacional </option>
-                            <option>Representativo de Controvérsia</option>
+                          <select class="box-opcoes-filtros form-control" required>
                           </select>
                           <label class="titulo-opcao-filtro">Filtros Pré-Configurados</label>
                         </div>
                         <div class="col-lg-6">
-                          <input type="text" class="box-opcoes-filtros form-control" list="lista-opcoes-reconhecimento" style="width: 100%;" required>
-                          <datalist id="lista-opcoes-reconhecimento">
-                            <option value="RG negada"></option>
-                            <option value="RG reconhecida"></option>
-                            <option value="Tema em análise"></option>
-                          </datalist>
+                          <select class="box-opcoes-filtros form-control" required>
+                          </select>
                           <label class="titulo-opcao-filtro">Situação Reconhecimento RG</label>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-lg-6">
-                          <input type="text" class="box-opcoes-filtros form-control" list="lista-num-temas" style="width: 100%;" required>
-                          <datalist id="lista-num-temas">
-                            <option value="984"></option>
-                            <option value="983"></option>
-                            <option value="982"></option>
-                            <option value="981"></option>
-                            <option value="980"></option>
-                            <option value="979"></option>
-                          </datalist>
+                          <select class="box-opcoes-filtros form-control" required>
+                          </select>
                           <label class="titulo-opcao-filtro">Número do Tema</label>
                         </div>
                         <div class="col-lg-6">
-                          <input type="text" class="box-opcoes-filtros form-control" list="lista-opcoes-julgamento" style="width: 100%;" required>
-                          <datalist id="lista-opcoes-julgamento">
-                            <option value="**Não se aplica**"></option>
-                            <option value="Julgado"></option>
-                            <option value="Pendente"></option>
-                          </datalist>                
+                          <select class="box-opcoes-filtros form-control" required>
+                          </select>                
                           <label class="titulo-opcao-filtro">Situação Julgamento Mérito RG</label>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-lg-6">
-                          <input type="text" class="box-opcoes-filtros form-control" list="lista-classe-processo" style="width: 100%;" required>
-                          <datalist id="lista-classe-processo">
-                            <option value="AI"></option>
-                            <option value="ARE"></option>
-                            <option value="RE"></option>
-                          </datalist>
+                          <select class="box-opcoes-filtros form-control" required>
+                          </select>
                           <label class="titulo-opcao-filtro">Situação Processo Paradigma</label>
                         </div>
                         <div class="col-lg-6">
-                          <input type="text" class="box-opcoes-filtros form-control" list="lista-numero-processo" style="width: 100%;" required>
-                          <datalist id="lista-numero-processo">
-                            <option value="136821"></option>
-                            <option value="221142"></option>
-                            <option value="330817"></option>
-                            <option value="333889"></option>
-                            <option value="377457"></option>
-                            <option value="398365"></option>
-                          </datalist>
+                          <select class="box-opcoes-filtros form-control" required>
+                          </select>
                           <label class="titulo-opcao-filtro">Número Processo Paradigma</label>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-lg-6">
-                          <input type="text" class="box-opcoes-filtros form-control" list="lista-opcoes-processo-paradima" style="width: 100%;" required>
-                          <datalist id="lista-opcoes-processo-paradima">
-                            <option value="Analisada Preliminar de RG"></option>
-                            <option value="Acórdão de RG Publicado"></option>
-                            <option value="Em Julgamento"></option>
-                            <option value="Mérito Julgado"></option>
-                            <option value="Acórdão do Mérito Julgado"></option>
-                            <option value="Trânsito em Julgado"></option>
-                            <option value="Aguarda Substituição de Paradigma"></option>
-                          </datalist>
+                          <select class="box-opcoes-filtros form-control" required>
+                          </select>
                           <label class="titulo-opcao-filtro">Classe Processo Paradigma</label>
                         </div>
                         <div class="col-lg-6">
-                          <input type="text" class="box-opcoes-filtros form-control" list="lista-ramo-direito" style="width: 100%;" required>
-                          <datalist id="lista-ramo-direito">
-                            <option value="Direito Administrativo"></option>
-                            <option value="Direito Civil"></option>
-                            <option value="Direito do Consumidor"></option>
-                            <option value="Direito do Trabalho"></option>
-                            <option value="Direito Penal"></option>
-                            <option value="Direitio Previdenciário"></option>
-                          </datalist>
+                          <select class="box-opcoes-filtros form-control" required>
+                          </select>
                           <label class="titulo-opcao-filtro">Ramo do Direito</label>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-lg-6">
-                          <input type="text" class="box-opcoes-filtros form-control" list="lista-situacao-rg" style="width: 100%;" required>
-                          <datalist id="lista-situacao-rg">
-                            <option value="Em Análise Preliminar de RG"></option>
-                            <option value="RG Reconhecida"></option>
-                            <option value="Com RG – Novo Tema"></option>
-                            <option value="Com RG – Reafirmação de Jurisprudência"></option>
-                            <option value="Sem RG – Questão sem Relevância"></option>
-                            <option value="Sem RG – Matéria Infraconstitucional"></option>
-                          </datalist>
+                          <select class="box-opcoes-filtros form-control" required>
+                          </select>
                           <label class="titulo-opcao-filtro">Situação da Repercussão Geral</label>
                         </div>
                         <div class="col-lg-3">
-                          <input type="text" id="data_inicial" class="form-control data-rg box-opcoes-filtros" placeholder="De" onfocus="(this.type='date')"  style="width: 97%"/>
+                          <input type="text" id="data_inicial" class="form-control data-rg box-opcoes-filtros" placeholder="De" onfocus="(this.type='date')"/>
                           <label class="titulo-opcao-filtro">Período</label>
                         </div>
                         <div class="col-lg-3">
-                          <input type="text" id="data_final" class="form-control data-rg box-opcoes-filtros" placeholder="Até" onfocus="(this.type='date')" style="width: 97%"/>
+                          <input type="text" id="data_final" class="form-control data-rg box-opcoes-filtros" placeholder="Até" onfocus="(this.type='date')"/>
                         </div>	
                       </div>
                       <div class="row">
