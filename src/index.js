@@ -398,8 +398,12 @@ $('#pesquisa-principal').submit(function(e){
 $('#pesquisa-autenticacao').submit(function(e){
     campoInputPesquisa = 'identificacaoDocumento';
     $('#identificacaoDocumento').val($('#identificacaoDocumento').val().trim());
+    
+    configurarValidacaoPesquisa(campoInputPesquisa, '#pesquisa-autenticacao', '.mensagem-autenticacao');
 
-    configurarValidacaoPesquisa(campoInputPesquisa, '#pesquisa-autenticacao', '.mensagemAutenticacao');
+    if( $('#pesquisa-autenticacao').valid()){
+        realizarPesquisa(campoInputPesquisa);
+    }
 });
 
 /* Pauta de Julgamento da Home ------------------------------------------------------------------------------------ */
