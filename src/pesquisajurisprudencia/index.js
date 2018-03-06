@@ -18,15 +18,16 @@ function removerFiltro(){
 }
 
 //excluir itens de pesquisa 
-itens_pesquisados.forEach(function(item_pesquisa){
-    item_pesquisa.addEventListener("click", function(){
-        this.remove();
-    });
-});
+// itens_pesquisados.forEach(function(item_pesquisa){
+//     item_pesquisa.addEventListener("click", function(){
+//         this.remove();
+//     });
+// });
 
 //botão excluir todos os filtros aplicados na div
 $("#apagar_filtro").click(function(){
     $(".badge").empty();
+    $('input').val('');
 });
 
 function botoesExibir(){
@@ -79,7 +80,8 @@ $(function(){
             }  
 
         });
-        $('#'+idDoCampo).val(""); 
+        //limpa input
+  //      $('#'+idDoCampo).val(""); 
     });
 });
 
@@ -131,8 +133,43 @@ $('input[type="search"]').keyup(function(){
     $matchingListElements.show();
     
 });
+//mostrar valores registrados
+$('#btnPesquisar').click(function(e){
+    e.preventDefault();
 
-   
+    var objetoDePesquisa = {
+        pesquisa: $('#pesquisaPrincipal').val(),
+        filtros: {
+            palavraChave:$('#palavraChave').val(),
+            numeroDoProcesso: $('#inputProcesso').val(),
+            relator: $('#inputRelator').val(),
+    
+            dataInicial: $('#data-inicio').val(),
+            dataFinal: $('#data-final').val(),
+    
+            tema: $('#inputTema').val(),
+            tese: $('#inputTese').val(),
+            possuiRepercussaoGeral: $('.active input[type="radio"]').attr('value'),
+            tipoDeTese: $(''),
+            orgaoJulgador: $(''),
+            ementa: $('#inputEmenta').val(),
+    
+            legislacao: {
+                tipo: $(' '),
+                numero: $('#num_legislacao').val(), 
+                artigo: $('#txtArtigo').val(),
+                paragrafo: $('#txtParagrafo').val(),
+                inciso: $('#txtInciso').val(),
+                letra:  $('#txtLetra').val()
+            }
+    
+        }
+    };
+
+    console.log(objetoDePesquisa.filtros);
+});   
+
+
 
  
 
