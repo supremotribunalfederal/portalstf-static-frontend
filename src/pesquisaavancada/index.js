@@ -3,19 +3,15 @@ import $ from 'jquery';
 import moment from 'moment';
 
 
-$(function() {
-	$(".card-imagem-ministros").click(function() {
-		$(this).toggleClass("cinza");
-	})
-});
+
 
 
 $(function() {
 	$(".limpar-filtros").click(function() {
 		$(".box-opcoes-filtros").val("");
 
-		var imagens = document.getElementById("lista_ministros").getElementsByTagName("img");
-		$(imagens).addClass('cinza');
+		var ministros = document.getElementsByClassName("card-imagem-ministros");
+		$(ministros).addClass('cinza');
 	});
 });
 

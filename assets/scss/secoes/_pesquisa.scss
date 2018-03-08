@@ -325,7 +325,7 @@ CONFIGURAÇÃO DO FILTRO DE PESQUISA AVANCADA
     #min-edson-fachin {background-image: url('../img/ministros/ministro_fachin.jpg');}
     #min-alexandre-moraes {background-image: url('../img/ministros/ministro_moraes.jpg');}
 
-    ul {list-style-type: none;}
+    .lista-de-ministros {list-style-type: none;}
     li, .card-imagem-ministros {display: inline-block;}
 
   }
@@ -339,27 +339,28 @@ CONFIGURAÇÃO DO FILTRO DE PESQUISA AVANCADA
     background-color: rgba(99, 207, 247, 0.4);
   }
   
-  /*
-  * ANIMAÇÃO DOS INPUTS
-  */
-  .box-opcoes-filtros {width: 100%;border: none;position: relative;top: 15px;margin-top: 17px;}
-
-  .box-opcoes-filtros:focus {outline: none;}
-
-  .box-opcoes-filtros:focus ~ .titulo-opcao-filtro,.box-opcoes-filtros:valid ~ .titulo-opcao-filtro {top: 7px;margin-top: 5px;font-size: 12px;color: $stfBranco;}
-
-  .titulo-opcao-filtro {pointer-events: none;transition:0.2s ease all;-moz-transition:0.2s ease all;-webkit-transition:0.2s ease all;position: absolute;top: 39px;left: 20px;font-size: 16px;font-weight: 600;color: #979696;}
-  
-  /**
-  * LINKS DA PESQUISA AVANÇADA
-  */
-  .link-pesquisa-avancada-rg{color:black; right: 10px;font-size: 14px;float: right; position: relative; bottom: 43px;}
-  
-  .esconder-filtros a,.limpar-filtros a{color: $stfBranco;font-size: 16px;}
-
-  .esconder-filtros {float: right;a{float: right;}}
-
-  .esconder-filtros a:hover,.limpar-filtros a:hover{font-weight: 600;text-decoration: none;}
-
-  .icones-pesquisa-avancada {top: 7px; position: relative;}
 }
+
+/*
+* ANIMAÇÃO DOS INPUTS
+*/
+.box-opcoes-filtros {border: none;position: relative;top: 15px;margin-top: 17px;}
+
+.box-opcoes-filtros:focus {outline: none;}
+
+.box-opcoes-filtros:focus ~ .titulo-opcao-filtro,.box-opcoes-filtros:valid ~ .titulo-opcao-filtro {top: 7px;margin-top: 5px;font-size: 12px;color: $stfBranco;}
+
+.titulo-opcao-filtro {pointer-events: none;transition:0.2s ease all;-moz-transition:0.2s ease all;-webkit-transition:0.2s ease all;position: absolute;top: 39px;left: 20px;font-size: 16px;font-weight: 600;color: #979696;}
+
+/**
+* LINKS DA PESQUISA AVANÇADA
+*/
+.link-pesquisa-avancada-rg{color:black; right: 10px;font-size: 14px;float: right; position: relative; bottom: 43px;}
+
+.esconder-filtros a,.limpar-filtros a{color: $stfBranco;font-size: 16px;}
+
+.esconder-filtros {float: right;a{float: right;}}
+
+.esconder-filtros a:hover,.limpar-filtros a:hover{font-weight: 600;text-decoration: none;}
+
+.icones-pesquisa-avancada {top: 7px; position: relative;}

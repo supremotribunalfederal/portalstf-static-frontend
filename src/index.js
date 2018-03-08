@@ -455,6 +455,12 @@ $('#btnAcessarPortalNocicitas').on('click', function() {
     }
 })();
 
+$(function() {
+	$(".card-imagem-ministros").click(function() {
+		$(this).toggleClass("cinza");
+	})
+});
+
 //parametros qlik
 
 /* ---------------------------------------------------------------------------------------------------------------- */
