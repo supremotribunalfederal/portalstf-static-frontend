@@ -65,13 +65,12 @@ module.exports = {
       },
       {
         test: /\.(jpg|jpeg|gif|png|svg|ico)$/i,
-        // Alteração de limite realizada, pois o build não estava conseguindo gerar imagens tão grandes
-        use: `url-loader?limit=240000&name=[name].[ext]&publicPath=${publicPath}&outputPath=assets/img/`,
+        use: `url-loader?limit=24000&name=[name].[ext]&publicPath=${publicPath}&outputPath=assets/img/`,
         include: path.join(PATHS.node, '/jquery-ui/themes/base')
       },
       {
         test: /\.(jpg|jpeg|gif|png|svg|ico)$/i,
-        use: `url-loader?limit=240000&name=[name].[ext]&publicPath=${publicPath}&outputPath=assets/img/`,
+        use: `url-loader?limit=24000&name=[name].[ext]&publicPath=${publicPath}&outputPath=assets/img/`,
         include: PATHS.img
       },
       {
