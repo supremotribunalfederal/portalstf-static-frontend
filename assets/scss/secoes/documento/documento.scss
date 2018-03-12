@@ -1,0 +1,8 @@
+@import "../../variaveis/cores";
+
+.pesquisa-autenticacao-documentos-eletronicos {
+    display: grid;
+    grid-template-rows: 75px 80px 145px;
+    .check-pesquisa-autenticacao {position: relative;bottom: 14px;}
+    .textos-pesquisa-autenticacao {position: relative;right: 40px;}
+}
