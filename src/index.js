@@ -181,19 +181,28 @@ $(".tipo-pesquisa-processo").change(function(event) {
     switch($(this).val()) {
         case "CLASSE_E_NUMERO":
             $('.campo-pesquisa-processo').hide();
+            $('.pesquisa-numero-origem').hide();
             $('.pesquisa-processo-classe').show();
             campoInputPesquisa = 'pesquisaPrincipalClasseNumero';
             break;
         case "PARTE_OU_ADVOGADO":
             $('.campo-pesquisa-processo').hide();
+            $('.pesquisa-numero-origem').hide();
             $('.pesquisa-parte-advogado').show();
 
             campoInputPesquisa = 'pesquisaPrincipalParteAdvogado';
             break;
         case "NUMERO_UNICO":
             $('.campo-pesquisa-processo').hide();
+            $('.pesquisa-numero-origem').hide();
             $('.pesquisa-numero-unico').show();
             campoInputPesquisa = 'pesquisaPrincipalNumeroUnico';
+            break;
+        case "NUMERO_ORIGEM":
+            $('.campo-pesquisa-processo').hide();
+            $('.pesquisa-numero-unico').hide();
+            $('.pesquisa-numero-origem').show();
+            campoInputPesquisa = 'pesquisaPrincipalNumeroOrigem';
             break;
     }
 });
@@ -267,10 +276,18 @@ function pesquisarProcesso() {
         case "NUMERO_UNICO":
             pesquisarProcessoPorNumeroUnico();
             break;
+        case "NUMERO_ORIGEM":
+            pesquisarProcessoNumeroOrigem();
+            break;
         case "PARTE_OU_ADVOGADO":
             pesquisarProcessoPorNomeDaParteOuAdvogado();
             break;
     }
+}
+
+function pesquisarProcessoNumeroOrigem(){
+    var numeroOrigem = $('#pesquisaPrincipalNumeroOrigem').val();
+    window.location.href = window.location.origin + '/processos/listarProcessos.asp?numeroOrigem=' + numeroOrigem;
 }
 
 function pesquisarProcessoPorNumeroUnico() {
@@ -288,7 +305,7 @@ function pesquisarProcessoPorNumeroUnico() {
 
 function pesquisarProcessoPorClasseNumero() {
     var classe = $('.pesquisa-processo-classe .processo-classe').val();
-    var numero = $('#pesquisaPrincipalClasseNumero').val();
+    var numero = $('#pesquisaPrincipalClasseNumero').val().trim();
     var url = '';
 
     if (window.location.pathname.match(/^\/portal\/?.*/)) {
@@ -320,13 +337,13 @@ $.extend( $.validator.messages, {
 
 var validator;
 
-function configurarValidacaoPesquisa(id) {
+function configurarValidacaoPesquisa(id, elementoValidator, elementoDeReferencia) {
     //JQUERY validation
     var conf = {
         //escolher onde posicionar a mensagem de erro
         errorPlacement: function(label, element) {
             label.addClass('alert alert-danger col-xs-10 m-t-8 m-b-0');
-            label.insertAfter('.pesquisa-jurisprudencia-links-inferiores:last');
+            label.insertAfter(elementoDeReferencia + ':last');
         },
 
         wrapper: 'span',
@@ -346,20 +363,45 @@ function configurarValidacaoPesquisa(id) {
     if (id === 'pesquisaPrincipalParteAdvogado') {
         conf.rules[id]['minlength'] = 4;
         conf.messages[id]['minlength'] = "Por favor, informe {0} ou mais caracteres para sua pesquisa.";
+    } else if (id ==='pesquisaPrincipalNumeroOrigem'){
+        conf.rules[id]['number'] = true;
+        conf.messages[id]['number'] = "Informe apenas números.";
+    } else if (id === 'pesquisaPrincipalClasseNumero'){
+        conf.rules[id]['number'] = true;
+        conf.messages[id]['number'] = "Informe apenas números.";
     }
 
     if (validator) {
         validator.destroy();
     }
 
-    validator = $('#pesquisa-principal').validate(conf);
+    validator = $(elementoValidator).validate(conf);
 }
 
 //Pesquisa principal do topo da página
 $('#pesquisa-principal').submit(function(e){
-    configurarValidacaoPesquisa(campoInputPesquisa);
+    //Remove os espaços do campo de pesquisa antes de submeter o formulário à validação.
+    if (campoInputPesquisa === 'pesquisaPrincipalClasseNumero'){
+        $('#pesquisaPrincipalClasseNumero').val($('#pesquisaPrincipalClasseNumero').val().trim());
+    } else if (campoInputPesquisa === 'pesquisaPrincipalNumeroOrigem'){
+        $('#pesquisaPrincipalNumeroOrigem').val($('#pesquisaPrincipalNumeroOrigem').val().trim());
+    }
+
+    configurarValidacaoPesquisa(campoInputPesquisa, '#pesquisa-principal', '.pesquisa-jurisprudencia-links-inferiores');
 
     if( $('#pesquisa-principal').valid()){
+        realizarPesquisa(campoInputPesquisa);
+    }
+});
+
+//Pesquisa de autenticação  de documentos eletrônicos
+$('#pesquisa-autenticacao').submit(function(e){
+    campoInputPesquisa = 'identificacaoDocumento';
+    $('#identificacaoDocumento').val($('#identificacaoDocumento').val().trim());
+    
+    configurarValidacaoPesquisa(campoInputPesquisa, '#pesquisa-autenticacao', '.mensagem-autenticacao');
+
+    if( $('#pesquisa-autenticacao').valid()){
         realizarPesquisa(campoInputPesquisa);
     }
 });

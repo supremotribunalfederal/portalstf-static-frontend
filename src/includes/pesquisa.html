@@ -17,7 +17,6 @@
             <option data-aba="abaProcesso" value="abaProcesso">Processos</option>
             <option data-aba="abaJurisprudencia" value="abaJurisprudencia">Jurisprudência</option>
             <option data-aba="abaNoticias" value="abaNoticias">Notícias e Textos</option>
-            <option data-aba="abaTransparencia" value="abaTransparencia">Transparência</option>
             <option data-aba="abaRepercussao" value="abaRepercussao">Repercussão Geral</option>
           </select>
         </div>
@@ -37,9 +36,6 @@
                         <span id="abaNoticias">Notícias</span>
                     </li>
                     <li>
-                        <span id="abaTransparencia">Transparência</span>
-                    </li>
-                    <li>
                         <span id="abaRepercussao">Repercussão Geral</span>
                     </li>
                   </ul>
@@ -50,6 +46,7 @@
                 <div class="col-md-12 col-xs-12 col-sm-12 pesquisa-processo aba-pesquisa">
                   <select class="campo-texto tipo-pesquisa-processo">
                     <option value="CLASSE_E_NUMERO">Por Classe e Número</option>
+                    <option value="NUMERO_ORIGEM">Por Número na Origem</option>
                     <option value="NUMERO_UNICO">Por Número Único</option>
                     <option value="PARTE_OU_ADVOGADO">Por Parte ou Advogado</option>
                   </select>
@@ -107,6 +104,9 @@
                   <div class="campo-pesquisa-processo pesquisa-parte-advogado" style="display: none;">
                     <input type="text" name="pesquisaPrincipalParteAdvogado" id="pesquisaPrincipalParteAdvogado" class="campo-texto" placeholder="Digite o nome da parte ou advogado">
                   </div>
+                  <div class="campo-pesquisa-processo pesquisa-numero-origem" style="display: none;">
+                    <input type="text" name="pesquisaPrincipalNumeroOrigem" id="pesquisaPrincipalNumeroOrigem" class="campo-texto" placeholder="Digite o número na origem">
+                  </div>
                 </div>
 
                 <div class="col-md-12 col-xs-12 col-sm-12 pesquisa-jurisprudencia aba-pesquisa" style="display: none;">
@@ -130,12 +130,8 @@
                   <input type="text" name="pesquisaNoticiasTextos" id="pesquisaNoticiasTextos" class="campo-texto" placeholder="Informe um assunto sobre uma notícia...">
                 </div>
 
-                <div class="col-md-12 col-xs-12 col-sm-12 pesquisa-transparencia aba-pesquisa" style="display: none;">
-                  <input type="text" name="pesquisaTransparencia" id="pesquisaTransparencia" class="campo-texto" placeholder="Informe o assunto desejado...">
-                </div>
-
                 <div class="col-md-12 col-xs-12 col-sm-12 pesquisa-repercussao aba-pesquisa" style="display: none;">
-                  <input type="text" name="pesquisaRepercussao" id="pesquisaRepercussao" class="campo-texto" placeholder="Digite um tema para pesquisar...">
+                  <input type="text" name="pesquisaRepercussao" id="pesquisaRepercussao" class="campo-texto" placeholder="Informe uma palavra-chave...">
                 </div>
 
                 <button form="pesquisa-principal" id="btnPesquisar" class="btn btn-default pull-right">
@@ -144,9 +140,9 @@
                 </button>
 
                 <div class="hidden-sm hidden-xs pesquisa-jurisprudencia-links-inferiores">
-                  <a href="http://www.stf.jus.br/portal/jurisprudencia/pesquisarVocabularioJuridico.asp">Clique aqui para consultar o vocabulário jurídico (Tesauro)</a>
+                  <a href="http://www.stf.jus.br/portal/jurisprudencia/pesquisarVocabularioJuridico.asp">Vocabulário jurídico (Tesauro)</a>
                   <span>ou</span>
-                  <a target="_blank" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaPesquisaGeral&pagina=ajudaPesquisaJurisprudencia&popup=S">Conheça dicas para melhorar seus resultados de pesquisa</a>
+                  <a target="_blank" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaPesquisaGeral&pagina=ajudaPesquisaJurisprudencia&popup=S">Dicas de pesquisa</a>
                 </div>
 
                 <div class="hidden-md hidden-lg hidden-xl pesquisa-jurisprudencia-links-inferiores">

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Supremo Tribunal Federal</title>
+  <link rel="icon" type="imagem/png" href="<%= require('assets/img/favicon.ico') %>" />
+</head>
+<body class="pagina-interna">
+    <div id="main" class="container-fluid p-0">
+        <%- include src/includes/header.html %>
+        <%- include src/includes/pesquisa-lista.html %>
+
+        <section id="conteudo" class="container-fluid m-0 p-0">
+            <div class="row container center-block p-0">
+                <!--Menu Lateral-->
+                <div class="col-xs-12 col-sm-3 col-lg-2 p-16 p-xs-0 m-0">
+                    <div class="menu-lateral hidden-xs">
+                        <h4><span class="__stf-verde">O STF</span></h4>
+                        <ul>
+                            <li><a href="#"><span>Conheça o STF</span></a>
+                                <ul>
+                                    <li><a href="#"><span>Institucional</span></a></li>
+                                    <li><a href="#">Visitação ao STF</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Ministros</a></li>
+                            <li><a href="#">Histórico</a></li>
+                            <li><a class="opcao-selecionada" href="#">Quem é quem</a></li>
+                            <li><a href="#">Programas e ações</a></li>
+                            <li><a href="#">Gestão</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div id="texto-pagina-interna-wrapper" class="col-xs-12 col-sm-9 col-lg-10 row m-0 p-xs-0 m-t-24 m-b-24 p-sm-8 __borda-l-cinza-claro">
+                    <div id="texto-pagina-interna" class="p-l-40 p-r-40 m-b-40 p-l-xs-0 p-r-xs-0">
+                        <div class="texto m-0 row">
+                            <div class="col-xs-12 col-md-12 p-0 p-l-xs-16 p-r-xs-16">
+                                <h3 class="texto-titulo m-b-24"><strong>Autenticação de Documentos Eletrônicos</strong></h3>
+
+                                <div class="card m-b-48">
+                                    <div class="card-titulo">Pesquisa</div>
+                                    <div class="card-conteudo row m-0 m-t-16 p-0">
+                                        <div class="col-xs-12 col-md-12 m-b-24">
+                                            <div>
+                                                <div class="col-xs-10 col-md-12">
+                                                    <form id="pesquisa-autenticacao" action="javascript:void(0);">
+                                                        <div class="pesquisa-autenticacao-documentos-eletronicos">
+                                                            <div class="row">
+                                                                <h3><strong>Tipo de documento:</strong></h3>
+                                                                <div class="col-md-1 col-xs-5">
+                                                                    <input type="radio" name="radio-tipo-documento" id="documento-eletrônico-geral" class="check-pesquisa-autenticacao half-width" value="option1" checked>
+                                                                </div>
+                                                                <div class="textos-pesquisa-autenticacao col-md-3 col-xs-5">
+                                                                    <label class="form-check-label" for="documento-eletrônico-geral">Documento eletrônico geral</label>
+                                                                </div>
+                                                                <div class="col-md-1 col-xs-5">
+                                                                    <input type="radio" name="radio-tipo-documento" id="margem-consignável" class="check-pesquisa-autenticacao half-width" value="option2">
+                                                                </div>
+                                                                <div class="textos-pesquisa-autenticacao  col-md-3 col-xs-5">
+                                                                    <label class="form-check-label" for="margem-consignável">Margem consignável</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <h3><strong>Identificação do documento:</strong></h3>
+                                                                <input type="text" class="form-control" name="identificacaoDocumento" id="identificacaoDocumento">
+                                                            </div>
+                                                            <div class="row">
+                                                                <h3><strong>Código de verificação:</strong></h3>
+                                                                <div class="g-recaptcha" data-sitekey="#"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-10 col-md-4 mensagem-autenticacao">
+                                                            <div class="col-md-6">
+                                                                <button form="pesquisa-autenticacao" class="btn btn-default-bordered btn-fluid">Pesquisar</button>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <button class="btn btn-default-bordered btn-fluid">Limpar</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <%- include src/includes/mapa-do-site.html %>
+        <%- include src/includes/footer.html %>
+    </div>
+</body>
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
+</html>

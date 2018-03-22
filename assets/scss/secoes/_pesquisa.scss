@@ -78,7 +78,7 @@
         //  border-radius: 0;
           height: 50px;
           padding: 0 40px 0 8px;
-          font-size: 1rem;
+          font-size: 0.9rem;
         }
 
         .campo-texto:focus {
@@ -165,15 +165,15 @@
               height: 30px;
               line-height: 30px;
               margin: 0;
-              margin-right:10px;
+              margin-right:8px;
 
               span{
-                background: $stfBrancoAlfa15;
-                color: $stfBranco;
+                background: $stfBrancoAlfa80;
+                color: $stfAzulEscuro;
                 display: block;
                 font-size: 0.75rem;
                 height: 30px;
-                padding: 0 15px;
+                padding: 0 12px;
                 position: relative;
                 top: 0px;
                 cursor: pointer;
@@ -188,6 +188,7 @@
 
               span.ativo {
                 background: $stfAzulClaro;
+                color: $stfBranco;
                 border-top: none;
                 font-size: 0.875rem;
                 height: 30px;

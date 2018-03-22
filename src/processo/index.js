@@ -6,6 +6,8 @@ $(document).ready(function(){
     var processoClasse = $('#classe-numero-processo').val().split(' ');
     var parametros = 'classe=' + processoClasse[0] + '&numero=' + processoClasse[1];
     var incidente = $('#incidente').val();
+    var tipoMeioProcesso = $('#meio').val();
+    var peca = $('#peca').val();
 
     $('#btn-dje').on('click', function(){
         window.open('//stf.jus.br/portal/diarioJustica/listarDiarioJustica.asp?tipoPesquisaDJ=AP&' + parametros, '_blank');
@@ -16,7 +18,11 @@ $(document).ready(function(){
     });
 
     $('#btn-pecas').on('click', function(){
-        window.open('//redir.stf.jus.br/estfvisualizadorpub/jsp/consultarprocessoeletronico/ConsultarProcessoEletronico.jsf?seqobjetoincidente=' + incidente, '_blank');
+        if(peca != 'S' && tipoMeioProcesso == 'E'){
+            window.location.href = "/textos/verTexto.asp?servico=processoManualeSTF&pagina=informacaoVerPecaEletronica";
+        } else {
+            window.open('//redir.stf.jus.br/estfvisualizadorpub/jsp/consultarprocessoeletronico/ConsultarProcessoEletronico.jsf?seqobjetoincidente=' + incidente, '_blank');
+        }
     });
 
     $('#btn-push').on('click', function(){

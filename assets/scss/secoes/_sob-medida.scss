@@ -11,7 +11,7 @@
     }
 
     .btn {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .item-titulo {
@@ -21,8 +21,12 @@
       text-transform: uppercase;
 
       &.item-titulo-sob-medida {
-        font-size: 1.063rem;
+        font-size: 1rem;
         letter-spacing: 0.2px;
+      }
+      &.item-titulo-para-voce {
+        font-size: 1rem;
+        letter-spacing: 0.03rem;
       }
     }
   }
