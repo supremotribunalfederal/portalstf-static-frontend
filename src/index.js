@@ -482,9 +482,26 @@ $('#btnAcessarPortalNocicitas').on('click', function() {
 
 (function pesquisaPorURL() {
     var url = window.location.pathname;
-    if (url.match(/^\/jurisprudencia\/?.*/)) {
+    if (url.match(/^\/jurisprudencia\/?.*/) || url.match(/^\/sobmedidaestudantes\/?.*/)) {
         $('#abaJurisprudencia').click();
-    } else if (url.match(/(^\/noticias\/?.*|^\/listagem\/?.*)/) ) {
+    } else if (url.match(/(^\/noticias\/?.*|^\/listagem\/?.*)/)) {
+        $('#abaNoticias').click();
+    } else if (url.match(/^\/transparencia\/?.*/)) {
+        $('#abaTransparencia').click();
+    } else if (url.match(/^\/repercussaogeral\/?.*/) || url.match(/^\/votacoes\/?.*/) || url.match(/^\/pesquisaavancada\/?.*/)) {
+        $('#abaRepercussao').click();
+    } else  {
+        $('#abaProcesso').click();
+    }
+})();
+
+// selecionar background por página
+
+(function backgroundPorURL() {
+    var url = window.location.pathname;
+    if (url.match(/^\/sobmedidaestudantes\/?.*/)) {
+        $('.pesquisa').css('background-image', 'url(/assets/img/sobre@2x.png)');
+    } else if (url.match(/(^\/noticias\/?.*|^\/listagem\/?.*)/)) {
         $('#abaNoticias').click();
     } else if (url.match(/^\/transparencia\/?.*/)) {
         $('#abaTransparencia').click();

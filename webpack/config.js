@@ -32,7 +32,8 @@ const secoes = [
   'listarpartes',
   'processo',
   'estatistica',
-  'documento'
+  'documento',
+  'sobmedidaestudantes'
 ];
 
 const secoesChunks = secoes.reduce((prev, cur) => {
@@ -54,6 +55,7 @@ const includes = [
   'paginacao',
   'pesquisa',
   'pesquisa-lista',
+  'pesquisa-estudante',
   'processo-informacoes',
   'processo-partes',
   'processo-andamentos',
