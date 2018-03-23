@@ -73,6 +73,7 @@ const includes = [
   'card-noticias',
   'card-numerosSTF',
   'card-pautas-julgamento',
+  'card-radio-justica',
   'card-repercussao-geral',
   'card-supremo-em-acao',
   'card-transparencia',
