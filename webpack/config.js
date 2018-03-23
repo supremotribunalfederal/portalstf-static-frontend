@@ -55,13 +55,28 @@ const includes = [
   'paginacao',
   'pesquisa',
   'pesquisa-lista',
-  'pesquisa-estudante',
   'processo-informacoes',
   'processo-partes',
   'processo-andamentos',
   'processo-deslocamento',
   'processo-peticoes',
-  'processo-recursos'
+  'processo-recursos',
+  'card-acessar-portal-transparencia',
+  'card-agenda-dos-ministros',
+  'card-audiencias-publicas',
+  'card-banners-qlik',
+  'card-cadastro-newsletter',
+  'card-canais-atendimento',
+  'card-estatisticasProcessuais',
+  'card-forum',
+  'card-jurisprudencia-do-stf',
+  'card-noticias',
+  'card-numerosSTF',
+  'card-pautas-julgamento',
+  'card-repercussao-geral',
+  'card-supremo-em-acao',
+  'card-transparencia',
+  'card-tv-justica'
 ]
 
 module.exports = {
