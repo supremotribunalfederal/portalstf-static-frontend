@@ -500,15 +500,18 @@ $('#btnAcessarPortalNocicitas').on('click', function() {
 (function backgroundPorURL() {
     var url = window.location.pathname;
     if (url.match(/^\/sobmedidaestudantes\/?.*/)) {
-        $('.pesquisa').css('background-image', 'url(/assets/img/sobre@2x.png)');
-    } else if (url.match(/(^\/noticias\/?.*|^\/listagem\/?.*)/)) {
-        $('#abaNoticias').click();
-    } else if (url.match(/^\/transparencia\/?.*/)) {
-        $('#abaTransparencia').click();
-    } else if (url.match(/^\/repercussaogeral\/?.*/) || url.match(/^\/votacoes\/?.*/) || url.match(/^\/pesquisaavancada\/?.*/)) {
-        $('#abaRepercussao').click();
+        $(".pesquisa").css({"background":"linear-gradient(135deg, rgba(0, 73, 119, 1), rgba(0, 73, 119, 0.6), rgba(0, 73, 119, 1))", 
+        "background-image":"url(/assets/img/interface/bg-sob-medida.jpg)", 
+        "background-position":"center -210px", 
+        "background-repeat":"no-repeat",
+        "background-attachment":"fixed", 
+        "-webkit-background-size":"cover"});
+    } else if (url.match(/(^\/sobmedidaadvogados\/?.*|^\/sobmedidaorgaos\/?.*)/)) {
+        $('.pesquisa').css('background-image', 'url(/assets/img/bg-sob-medida.jpg)');
+    } else if (url.match(/^\/sobmedidacidadaos\/?.*/)) {
+        $('.pesquisa').css('background-image', 'url(/assets/img/interface/bg-cidadaos.jpg)');
     } else  {
-        $('#abaProcesso').click();
+       // $('.pesquisa').css('background-image', 'url(/assets/img/top-bg.jpg)');
     }
 })();
 
