@@ -70,24 +70,8 @@
                                 </div>
                             </div>
                            
-                        
-                        
-                            <div class="card m-b-24 m-t-24 __fundo-escuro">
-                                <div class="card-conteudo p-b-0">
-                                    <div class="row m-0 p-b-8 p-t-8">
-                                        <div class="pull-left p-0 p-b-16">
-                                            <h3 class="m-0 p-b-8">DÚVIDAS</h3>
-                                            <small>Entre em contato conosco</small>
-                                        </div>
-                                        <div class="row m-0 p-0 pull-right">
-                                            <a id="ostf-telefones-uteis" href="//stf.jus.br/portal/cms/verTexto.asp?servico=sobreStfConhecaStfTelefoneUtil" target="_blank"
-                                                class="btn btn-raised btn-fluid btn-default-bordered btn-upper p-l-16 p-r-16">
-                                                TELEFONES ÚTEIS
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <!--card duvidas-->
+                            <%- include src/includes/card-duvidas.html %>             
                         
                             <div id="card-presidente-turmas" class="card m-b-48 ">
                                 <div class="card-titulo">Presidentes e turmas do Supremo Tribunal Federal </div>
@@ -378,39 +362,14 @@
                         </div>
                         <!--cards lateral-->
                         <div class="col-xs-12 col-sm-12 col-md-4 m-0 p-xs-0 p-sm-8">
-                            <div class="card constituicao-federal m-b-24 m-t-24">
-                                <div class="card-conteudo">
-                                    <h3 class="">
-                                        <strong>CONSTITUIÇÃO FEDERAL</strong>
-                                    </h3>
-                                    <h4 class="m-t-8 m-b-24">ATUALIZADA</h4>
-                            
-                                    <a id="ostf-constituicao" target="_blank" href="//www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12 m-b-16">
-                                        Quero conhecer
-                                    </a>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </div>
 
-                            <div class="card-glossario-juridico card m-b-24">
-                                <div class="card-titulo">Glossário Jurídico</div>
+                            <!--card constituição federal-->
+                            <%- include src/includes/card-constituicao.html %>
                             
-                                <div class="card-conteudo p-0">
-                                    <div class="card-caixa-texto card-descricao m-b-8 p-16">
-                                        <p>Não entendeu algum termo? Descubra aqui o que ele significa!</p>
-                                    </div>
-                                </div>
-                            
-                                <div class="row m-16 p-0 p-b-16">
-                                    <a href="#" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper btn-card-lateral col-xs-12">
-                                        Pesquisar um termo
-                                    </a>
-                                    <a href="#" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper btn-card-lateral col-xs-12" style=" margin-top: 20px;">
-                                        glossário mirim
-                                    </a>
-                                </div>  
-                            </div>
+                            <!--card glossario-->
+                            <%- include src/includes/card-glossario.html %>
 
+                            <!--card transparencia-->
                             <div class="card-transparencia card m-b-24">
                                 <div class="card-titulo">transparência</div>
                             
