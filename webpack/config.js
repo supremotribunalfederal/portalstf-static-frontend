@@ -26,6 +26,7 @@ const secoes = [
   'quemequem',
   'votacoes',
   'pesquisaavancada',
+  'pesquisajurisprudencia',
   'erro-404',
   'listarprocessos',
   'listarporparte',
@@ -33,6 +34,9 @@ const secoes = [
   'processo',
   'estatistica',
   'documento',
+  'sobmedidaadvogados',
+  'sobmedidacidadaos',
+  'sobmedidaorgaos',  
   'sobmedidaestudantes'
 ];
 
@@ -55,6 +59,10 @@ const includes = [
   'paginacao',
   'pesquisa',
   'pesquisa-lista',
+  'pesquisa-acordaos',
+  'pesquisa-repercussao-geral',
+  'pesquisa-sumulas',
+  'pesquisa-sumulas-vinculantes',
   'processo-informacoes',
   'processo-partes',
   'processo-andamentos',

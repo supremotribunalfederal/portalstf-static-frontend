@@ -3,17 +3,19 @@ import $ from 'jquery';
 import moment from 'moment';
 
 //mostrar e esconder icone descricao do tema
-var mostrar=$('.ver-mais');
-var esconder = $('.ver-menos');
+var mostrar=$('.more');
+var esconder = $('.less');
 
 mostrar.click(function(e){
 	e.preventDefault();
-	$('.descricao-resumida').hide();
-	
+	mostrar.hide();
+	esconder.show();
 });
 
 esconder.click(function(e){
-	$('.descricao-resumida').show();
+	e.preventDefault();
+	esconder.hide();
+	mostrar.show();
 });
 
 /**
@@ -87,30 +89,11 @@ $(document).ready(function() {
 		$("input.opcao-filtro-rg, input.pesquisa-livre, input.data-rg").val("");
 	})
 
-// mudar nome da pesquisa de acordo com o filtro selecionado
-	$('#favoritos').change(function(){
-		var str="";
-		$('#favoritos option:selected').each(function(){
-			str += $(this).text() + " ";
-		});
-		$('#filtro-pesquisado').text(str);
-	}).trigger('change');
 
-	// exemplo
-	$('#link-votos').click(function(e){
-		e.preventDefault();
-		$('#tab-detalhes').removeClass('active in');
-		$('#li-detalhes').removeClass('active');
-		$('#tab-votos').addClass('active in');
-		$('#li-plenario').addClass('active');
-	});
-	
-	$('.num_tema').click(function(e){
-		e.preventDefault();
-		$('#tab-detalhes').addClass('active in');
-		$('#li-detalhes').addClass('active');
-		$('#tab-votos').removeClass('active in');
-		$('#li-plenario').removeClass('active');
+
+	$('.btn-fav').click(function(){
+		var texto = $(this).data('titulo-pesquisa');
+		$('#titulo-filtro').text(texto);
 	});
 });
 

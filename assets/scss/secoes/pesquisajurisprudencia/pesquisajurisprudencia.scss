@@ -1,0 +1,358 @@
+@import "../../variaveis/cores";
+
+//pesquisa
+.pesquisa-titulo{
+  height: 30px;
+}
+.container-jurisprudencia{
+  height: 80px;
+}
+.opcoes-pesquisa{
+  vertical-align: auto;
+}
+.ordenacao{
+  width: 20%;
+  background-color: transparent;
+  float: right;
+  position: relative;
+}
+.labelVisualizacao{
+  font-size: 14px;
+  color: $stfCinzaEscuro;
+  margin-right: 7px;
+}
+.visualizacao{
+  width: 12px;
+  height: 12px;
+}
+.form-check{
+  text-align: right;
+  margin-right: 200px; 
+}
+//nav
+ul .nav-tabs {
+    border-bottom: 2px solido $stfCinzaClaro;
+  }
+  .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    border-width: 0;
+  }
+
+  .nav-tabs > li > a {
+    border: none;
+    color: $stfCinzaEscuro;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+ 
+  .nav-tabs > li.active > a, .nav-tabs > li > a:hover {
+    border: none;
+    color: $stfPreto;
+    background: transparent;
+  }
+
+  .nav-tabs > li > a::after {
+    content: "";
+    background: $stfAzul;
+    height: 2px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -1px;
+    transition: all 250ms ease 0s;
+    transform: scale(0);
+  }
+
+  .nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after {
+    transform: scale(1); 
+  }
+
+  .tab-pane {
+    padding: 0;
+  }
+
+  .tab-content {
+    padding: 0 20px;
+  }
+  .dropdown-menu > ul > li > a{
+    color: $stfCinzaEscuro;
+    border: none;
+    display: inline-block; 
+    padding: 0 40px 0 8px;
+  }
+  .dropdown-menu > ul > li.active > a, .dropdown-menu > ul > li > a:hover {
+
+    text-decoration: none; 
+    border: none;
+    color: $stfPreto;
+    background: transparent;
+  }
+  //sumir select e botão aplicar filtros
+  nav select, #btn-aplicar-filtros{
+    display: none;
+  }
+
+  #btn-aplicar-filtros{
+    float: right; 
+    background-color: transparent;
+    border: none; 
+    font-size: 20px;
+  }
+
+// FILTROS 
+#filtros-aplicados{
+  min-height: 70px;
+}
+.badge{
+  background-color: rgb(221, 217, 217); 
+  margin: 5px; 
+  padding: 7px; 
+  cursor:pointer; 
+  max-width: 100%;
+
+}
+.ajuste{
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow: ellipsis; 
+  display: block;
+  padding-bottom: 1px;
+}
+.badge > text{
+  color: #000000; 
+  font-size: 13px;
+}
+.palavraChave::before, .processo::before, .relator::before, .dataInicio::before, .dataFim::before, .tema::before, 
+.tese::before, .ementa::before, .leg::before, .artigo::before, .paragrafo::before, .inciso::before, .letra::before {
+  color: black;
+  font-weight: 600;
+  font-size: 11px;
+  float: left;
+  margin-right: 5px;
+  display: block;
+}
+.span{
+  display: inline-block;
+}
+//cores e nomes span
+.palavraChave, .palavraChave::before{
+  background-color: #abf7f7;
+  content: "Palavra-Chave:";
+}
+.processo, .processo::before{
+  background-color: #ecdae8;
+  content: "Processo:";
+}
+.relator, .relator::before{
+  background-color: #ccf7b3;
+  content: "Relator:";
+}
+.dataInicio, .dataInicio::before{
+  background-color: $stfAmareloClaro;
+  content: "Data Inicio:";
+}
+.dataFim, .dataFim::before{
+  background-color: #e5f8e5;
+  content: "Data Fim:";
+}
+.tema, .tema::before{
+  background-color: $stfCinzaClaro;
+  content: "Tema:";
+}
+.tese, .tese::before{
+  background-color: #cebeee;
+  content: "Tese:";
+}
+.ementa, .ementa::before{
+  background-color: #f8b6cf;
+  content: "Ementa:";
+}
+.leg, .leg::before{
+  background-color: #FFF7E4;
+  content: "Legislação:";
+}
+.artigo, .artigo::before{
+  background-color: #90c1e2;
+  content: "Artigo:";
+}
+.paragrafo, .paragrafo::before{
+  background-color: rgb(217, 242, 243);
+  content: "Parágrafo:";
+}
+.inciso, .inciso::before{
+  background-color: #c3d0d6;
+  content: "Inciso:";
+}
+.letra, .letra::before{
+  background-color: #ebc9b2;
+  content: "Letra:";
+}
+
+.glyphicon-remove-sign{
+  color: #313131;
+  opacity: 0.2;
+  margin-left: 2px;
+
+}
+.opc-filtros{
+  cursor:pointer; 
+  text-align: center;
+}
+a{
+  cursor: pointer;
+}
+li{
+  font-size: 14px;
+}
+
+li > a:hover{
+  color: $stfAmarelo;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.pesquisa_legislacao{
+  font-size: 11pt;
+  float: left;
+  padding: 5px;
+}
+.inputs_legislacao{
+  float: right;
+  margin-bottom: 5px;
+}
+
+// conteudos resultado
+.conteudo-resultado{
+  margin: 10px; 
+  width: 97%;
+}
+h5{
+  font-weight: bold;
+}
+.card-block{
+  width: 95%;
+  padding: 2px;
+  
+}
+
+.ver-mais-pesquisas{
+  margin: 10px;
+  background: transparent;
+}
+.card-lista{
+  min-height: 200px;
+  max-height: 200px;
+  overflow: auto;
+  margin: 10px;
+}
+
+.icons{
+  float: right;
+  margin: 5px;
+}
+.mais-resultados{
+  text-align: center;
+  margin-bottom: 15px;
+}
+.conteudo-pesquisado{
+  margin-top: 15px;
+  text-align: left
+}
+.informacao-completa{
+  margin-top: 15px;
+}
+.row{
+  margin: 15px;
+}
+.exibir-mais, .exibir-menos {
+  float: right;
+}
+.remove::after{
+  color: $stfAmarelo;
+  text-decoration: inherit;
+}
+ 
+input[type=date]::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+}
+
+.btn-tese{
+  width: 144px;
+  border: none;
+  text-decoration: none;
+}
+.btn-visualizacao{
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+  width: 123px;
+  border: none;
+  text-decoration: none;
+} 
+.btn-tese.active, .btn-visualizacao.active{
+  background-color: $stfAzul;
+  color: white;
+  font-weight: 600;
+}
+.radioBtnTese, .inputVisualizacao{
+  border: none;
+  height: 0%;
+  width: 0%;
+}
+
+.qnt_resultado{
+  float: right; 
+  margin-right: 15px; 
+  color: $stfCinzaEscuro; 
+  font-weight: 600;
+}
+///////////////////
+
+
+///////////////////
+// mobile
+
+@media only screen and (max-width: 360px) {
+  .nav-tabs > li > a {
+    margin-left: 5px;
+  }
+  .inputs_legislacao {
+    float: right;
+    margin-left: 140px;
+    position: absolute;
+  }
+}
+
+@media (max-width: 960px) {
+  .ordenacao{
+    width: 40%;
+    margin-right: 15px;
+  }
+ 
+  nav ul{ 
+    display: none; 
+  }
+  nav select{ 
+    display: inline-block; 
+    height: 50px;
+    padding: 0 40px 0 8px;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 15px;
+    background-color: transparent;
+  }
+  #btn-aplicar-filtros{
+    display: inline-block;
+  }
+  .inputs_legislacao {
+    float: right;
+    margin-left: 160px;
+    position: absolute;
+    
+  }
+}
+@media (max-width: 1200px){
+  .ordenacao{
+    width: 40%;
+    margin-right: 15px;
+  }
+}

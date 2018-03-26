@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Supremo Tribunal Federal</title>
+    <link rel="icon" type="imagem/png" href="<%= require('assets/img/favicon.ico') %>" />
+
+</head>
+
+<body>
+    <div id="main" class="container-fluid p-0">
+        <%- include src/includes/header.html %>
+
+            <%- include src/includes/pesquisa.html %>
+
+
+                <section id="conteudo" class="container-fluid m-0 p-0 p-t-8 m-r-8 m-l-8">
+                    <h2 class="titulo-pagina">Sob medida para
+                        <b>ADVOGADOS</b>
+                    </h2>
+                    <div class="row container center-block p-0">
+
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 row m-0 p-xs-0 p-sm-8">
+                            <div class="card-peticionamento card m-b-24">
+                                <div class="card-titulo">Peticionamento Eletrônico</div>
+
+                                <div class="card-conteudo p-0">
+                                    <div class="card-caixa-texto card-descricao m-b-8 p-16">
+                                        <p>Acesse a área do Advogado para peticionar, acompanhar processos em tramitação e ter acesso às informações personalizadas.</p>
+                                    </div>
+                                </div>
+
+                                <div class="row m-16 p-0 p-b-16">
+                                    <a href="#" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper btn-card-lateral col-xs-12">
+                                        Quero peticionar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 row m-0 p-xs-0 p-sm-8">
+                            <!-- card jurisprudencia-->
+                            <%- include src/includes/card-jurisprudencia-lateral.html %>
+
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-4 m-0 p-xs-0 p-sm-8">
+                            <div class="card-rg card m-b-24">
+                                <div class="card-titulo">Repercussão Geral</div>
+                            
+                                <div class="card-conteudo p-0">
+                                    <div class="card-caixa-texto card-descricao m-b-8 p-16">
+                                        <p>Conheça os temas de Repercussão Geral e acompanhe as votações em tempo real.</p> <br> 
+                                    </div>
+                                </div>
+                            
+                                <div class="row m-16 p-0 p-b-16">
+                                    <a href="#" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper btn-card-lateral col-xs-12">
+                                       Conheça os temas de Repercussão Geral
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Nova seção -->
+                    <div class="row container center-block p-0">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 row m-0 p-xs-0 p-sm-8">
+                            <!--card news letter-->
+                            <div class="card m-b-24 m-t-24 __fundo-escuro">
+                                <div class="card-conteudo p-b-0">
+                                    <div class="row m-0 p-b-8 p-t-8">
+                                        <div class="pull-left p-0 p-b-16">
+                                            <h3 class="m-0 p-b-8">RECEBA NO SEU E-MAIL (PUSH)</h3>
+                                            <small>Notícias e atualizações processuais</small>
+                                        </div>
+                                    </div>
+                                   
+                                    <div class="p-b-8 ">
+                                        <a id="atendimento-ao-advogado" href="#" target="_blank" style="width: 50%" class="btn btn-raised btn-fluid btn-default-bordered btn-upper p-l-16 p-r-16">
+                                            quero me cadastrar
+                                        </a>
+                                    </div>
+                                 
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 row m-0 p-xs-0 p-sm-8">
+                        
+                            <div class="card m-b-24 m-t-24 __fundo-escuro">
+                                <div class="card-conteudo p-b-0">
+                                    <div class="row m-0 p-b-8 p-t-8">
+                                        <div class="pull-left p-0 p-b-16">
+                                            <h3 class="m-0 p-b-8">SERVIÇOS PARA O ADVOGADO</h3>
+                                            <small>Carga programada, guia do advogado, pedido de certidão e mais...</small> 
+                                        </div>
+                                    </div>
+                                    <div class="row m-0 p-0  p-b-8">
+                                        <a id="atendimento-ao-advogado" href="#" target="_blank" style="width: 50%" class="btn btn-raised btn-fluid btn-default-bordered btn-upper p-l-16 p-r-16">
+                                            atendimento ao advogado
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <%- include src/includes/mapa-do-site.html %>
+
+                <%- include src/includes/footer.html %>
+
+    </div>
+
+</body>
+
+</html>

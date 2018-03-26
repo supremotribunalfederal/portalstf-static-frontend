@@ -4,7 +4,6 @@ a {
   cursor:pointer;
 }
 .card-titulo {
-  margin-top: 0px;
   margin-bottom: 0px;
 }
 .num_tema{
@@ -12,37 +11,33 @@ a {
   text-align: center;
   vertical-align: middle;
 }
-
 .imagem-grafico {
   height: 220px;
 }
 .imagens-graficos {
-  border: none;
-  padding: 10px;
+  border: none
 }
-.card-graficos{
-  margin: 5px;
-  padding: 2px;
+.card-graficos {
+  height: 271.500px;
+  margin-left: 15px;
 }
 
-.card-filtros{
-  padding: 5px 3px;
-}
 /* Card de Temas */ 
 
 table.valores-temas .valor{
   font-weight: bold;
-  margin: 0px;
-  text-align: center;
+  margin-top: -1px;
 }
 td > h4{
  color: $stfAzulHover;
  font-weight: 600;
  margin: 0px;
- text-align: center;
 }
 
-// Tabela indicadores
+.card-titulo-over {
+  margin-top: 0px;
+}
+// Tabela
 h2#valor-reconhecida, h2#valor-merito-julgado {
   color: #4477AA;
 }
@@ -97,16 +92,12 @@ div.dropdown-relatores {
     }
   }
 }
-//filtros superiores
-#julgamentos_abertos, #julgamentos_realizar{
-  width: 15px;
-  height: 15px; 
-  vertical-align:bottom
-}
-
 input#busca-relator {
-    margin-bottom:.2em;
-    width: 100%;
+    border-box: box-sizing;
+    background-image: url('../../img/pesquisaavancada/person3.png');
+    background-repeat: no-repeat;
+    padding: 14px 20px 12px 45px;
+    margin: 5px 0px;
 }
 .dropdown-content {
     display: none;
@@ -121,51 +112,21 @@ th{
   text-align: center;
   max-width: 130px;
 }
-//modal
-
 .modal-content{
-  padding: 0%;
-}
-.modal-body{
-  padding: 0%;
-
+  padding: 10px;
 }
 .descricao{
   max-width: 600px;
 }
-.manifestacao{
-  padding: 15px;
-}
+
 tr{
-  text-align: justify;
-}
-
-#tabela-RG > tr > .td-num-tema{
-  vertical-align: middle; 
-  text-align:center;
-}
-#tabela-RG > tr > .td-acoes{
-  vertical-align: middle; 
-}
-
-//modal-plenario
-.voto-favor, .voto-contra{
+  margin: 5px;
   text-align: center;
-  font-weight: 700;
-}
-.voto-favor{
-  color: #4cbb71;
-}
-.voto-contra{
-  color: #D9534F;
 }
 
-//badges modal
 .badge-repercussao{
   background-color: #4cbb71;
-}
-.badge-merito-pendente{
-  background-color: #D9534F;
+  color: white;
 }
 .badge-suspensao{
   background-color: #3383dd;
@@ -176,7 +137,6 @@ tr{
   z-index: auto;
   text-align: center;
   width: 200px;
-  color: white;
 }
 
 // icones 
@@ -192,12 +152,15 @@ tr{
 i{
   cursor: pointer;
 }
+.less{
+  display: none;
+}
 .add{
   vertical-align: bottom; 
   font-size: 1.2em
 }
 .filter-icon{
-  vertical-align: text-bottom; 
+  vertical-align: bottom; 
   font-size: 1.5em;
 }
 .clear-icon {
@@ -205,60 +168,70 @@ i{
   font-size: 21px;
 }
 
-// ====configurações para o nome do filtro====
-.label-titulo{
-  margin: 1px;
+/* Tab dos filtros */
+
+div.principal-tab-filtros{
+  width: 100%;
+  background-color: transparent;
+  padding: 5px !important;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  -moz-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  background-clip: padding-box;
+  opacity: 0.97;
+  filter: alpha(opacity=97);
+  margin-bottom: 10px;
 }
-
-.form-item {
-  
-  position:relative;
-  margin-bottom:.3em;
-
-  .label-filter, .input-filter {
-    display:inline-block;
-    transition:all 150ms;
-    font-weight: 550;
-  }
-
-  .input-filter {
-    margin-top: 5px;
-    line-height: 20px;
-    font-size: 14px;
-    color: #222;
-    font-weight: 500;
-    
-    
-    &:valid  + .label-filter {
-      transform:translateY(-17px) scale(0.75);
-    }
-    
-    &:focus + .label-filter {
-      transform:translateY(-17px) scale(0.75);
-    }
-    
-    &:focus {
-      outline: none;
-      + .label-filter {
-        color:rgb(7, 186, 252);
-        font-size: 14.5px;
-
-      }
-    }
-  }
-
-  .label-filter {
-    position:absolute;
-    top:12px;
-    left:13px;
-    color: #8b8a8a;
-    background:white;
-    transform-origin:left center;
-    transform:translateY(0) scale(1);
-  }  
+div.menu-tab-filtros div.list-group>a:first-child{
+  border-top-right-radius: 0;
+  -moz-border-top-right-radius: 0;
 }
-// =====================================
-
+div.menu-tab-filtros div.list-group>a:last-child{
+  border-bottom-right-radius: 0;
+  -moz-border-bottom-right-radius: 0;
+}
+div.conteudo-sessao-filtros{
+  background-color: #ffffff;
+  /* border: 1px solid #eeeeee; */
+  padding-left: 20px;
+  padding-top: 10px;
+}
+div.conteudo-tab-filtros div.conteudo-sessao-filtros:not(.active){
+  display: none;
+}
+div.list-group-menu .list-group-item {
+  display: inline-block;
+  margin-bottom: 0;
+  margin-left:-4px;
+  margin-right: 0;
+}
+div.list-group-menu .list-group-item:first-child {
+  border-top-right-radius:0;
+  border-bottom-left-radius:4px;
+}
+div.list-group-menu .list-group-item:last-child {
+  border-top-right-radius:4px;
+  border-bottom-left-radius:0;
+}
+.list-group-item.active, .list-group-item.active:focus{
+  background-color: $stfAzulClaro;
+  border-color: $stfAzulClaro;
+}
+input.pesquisa-livre {
+  background-image: url('../../img/pesquisaavancada/search.png');
+  background-position: 5px 6px;
+  background-repeat: no-repeat;
+  padding: 9px 20px 9px 45px;
+  margin-top: -17px;
+}
+input.opcao-filtro-rg {
+  margin-bottom: 6px;
+}
+.conteudo-sessao-filtros > label{
+  margin: 8px;
+}
 .add-mais-filtros {
   position: relative;
   top: 6px;
@@ -290,7 +263,8 @@ i{
 }
 
 .tabela-rg, .tabela-rg > thead{
-  margin-top: 0px;
+  border: 1px solid #f0eaea;
+  margin-top: 20px;
 }
 
 .nome-filtro{
@@ -341,90 +315,14 @@ div.tabelas-relatores {
   top: 3px;
   margin-left: 10px;
 }
-
-.icon-info, .icon-download {
+.info-icon {
+  position: relative;
+  float: right;
+  top: 7px;
+  margin-right: 10px;
+}
+.icon-print-graficos, .icon-download {
   position: relative;
   float: right;
   margin-left: 5px;
-}
-.more, .less{
-  vertical-align: middle;
-}
-//nav
-ul .nav-tabs {
-  border-bottom: 2px solido $stfCinzaClaro;
-}
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
-  border-width: 0;
-}
-
-.nav-tabs > li > a {
-  border: none;
-  color: $stfCinzaEscuro;
-  margin-right: 40px;
-  margin-left: 20px;
-}
-
-.nav-tabs > li.active > a, .nav-tabs > li > a:hover {
-  border: none;
-  color: $stfPreto;
-  background: transparent;
-}
-
-.nav-tabs > li > a::after {
-  content: "";
-  background: $stfAzul;
-  height: 2px;
-  position: absolute;
-  width: 100%;
-  left: 0;
-  bottom: -1px;
-  transition: all 250ms ease 0s;
-  transform: scale(0);
-}
-
-.nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after {
-  transform: scale(1); 
-}
-
-.tab-content {
-  padding: 0%;
-}
-
-#mais-resultados{
-  margin-bottom: 10px;
-}
-
-.titulo-pesquisa{
-  background-color: #00A7E6; 
-  color: white; 
-  padding: 15px; 
-  margin-bottom: -6px;
-  margin-top: 0px;
-}
-
-//dropdown ações
-.acao-item{
-  color: #313131; 
-  text-decoration: none;
-}
-
-.acao-item:hover{
-  font-weight: 550;
-  text-decoration: none;
-  color: #313131; 
-}
-
-.btn-acoes{
-  background-color: #00A7E6; 
-  border: none; 
-  border-radius: 4px; 
-  color: white; 
-  vertical-align: text-top
-  
-}
-
-.btn-acoes:hover, .btn-acoes:focus{
-  color: white;
-  background-color: $stfAzulMenu;
 }
