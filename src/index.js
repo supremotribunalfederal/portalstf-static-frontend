@@ -501,16 +501,26 @@ $('#btnAcessarPortalNocicitas').on('click', function() {
     var url = window.location.pathname;
     if (url.match(/^\/sobmedidaestudantes\/?.*/)) {
         $(".pesquisa").css({"background":"linear-gradient(135deg, rgba(0, 73, 119, 1), rgba(0, 73, 119, 0.6), rgba(0, 73, 119, 1))", 
-        "background-image":"url(/assets/img/interface/bg-sob-medida.jpg)", 
+        "background-image":"url(/assets/img/interface/bg-sob-medida-estudantes.jpg)", 
         "background-position":"center -210px", 
         "background-repeat":"no-repeat",
         "background-attachment":"fixed", 
         "-webkit-background-size":"cover"});
     } else if (url.match(/(^\/sobmedidaadvogados\/?.*|^\/sobmedidaorgaos\/?.*)/)) {
-        $('.pesquisa').css('background-image', 'url(/assets/img/bg-sob-medida.jpg)');
+        $(".pesquisa").css({"background":"linear-gradient(135deg, rgba(0, 73, 119, 1), rgba(0, 73, 119, 0.6), rgba(0, 73, 119, 1))", 
+        "background-image":"url(/assets/img/interface/bg-sob-medida.jpg)", 
+        "background-position":"center -210px", 
+        "background-repeat":"no-repeat",
+        "background-attachment":"fixed", 
+        "-webkit-background-size":"cover"});
     } else if (url.match(/^\/sobmedidacidadaos\/?.*/)) {
-        $('.pesquisa').css('background-image', 'url(/assets/img/interface/bg-cidadaos.jpg)');
-    } else  {
+        $(".pesquisa").css({"background":"linear-gradient(135deg, rgba(0, 73, 119, 1), rgba(0, 73, 119, 0.6), rgba(0, 73, 119, 1))", 
+        "background-image":"url(/assets/img/interface/bg-sob-medida-cidadaos.jpg)", 
+        "background-position":"center -210px", 
+        "background-repeat":"no-repeat",
+        "background-attachment":"fixed", 
+        "-webkit-background-size":"cover"});
+    //} else  {
        // $('.pesquisa').css('background-image', 'url(/assets/img/top-bg.jpg)');
     }
 })();
