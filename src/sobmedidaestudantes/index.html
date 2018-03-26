@@ -14,61 +14,46 @@
 
     <%- include src/includes/pesquisa.html %>
 
-    <%- include src/includes/sob-medida.html %>
-
     <section id="conteudo" class="container-fluid m-0 p-0 p-t-8 m-r-8 m-l-8">
+            <h2 class="titulo-pagina">Sob medida para <b>ESTUDANTES</b></h2>
       <div class="row container center-block p-0">
           <div class="col-xs-12 col-sm-6 col-md-7 col-lg-8 row m-0 p-xs-0 p-sm-8">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 m-0 p-xs-0 p-sm-8">
+                        <%- include src/includes/card-glossario.html %>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 m-0 p-xs-0 p-sm-8">
+                        <%- include src/includes/card-jurisprudencia-lateral.html %>
+                </div>
+            </div>
             <%- include src/includes/card-noticias.html %>
 
           </div>  
         <!-- Cards laterais -->
         <div class="col-xs-12 col-sm-12 col-md-4 m-0 p-xs-0 p-sm-8">
-
-          <%- include src/includes/card-pautas-julgamento.html %> 
-            
-          <%- include src/includes/card-canais-atendimento.html %>
-
-          <%- include src/includes/card-agenda-dos-ministros.html %>
-
-          <%- include src/includes/card-cadastro-newsletter.html %>
-
+           <%- include src/includes/card-legislacao-anotada.html %>
+    
+           <%- include src/includes/card-informativo.html %>
+            <div id="repercussao-geral-estudantes" class="agenda-dos-ministros card m-b-16">
+                <div class="card-titulo">Repercussão Geral</div>
+                <div class="card-conteudo">
+                    <div class="card-caixa-texto">
+                        A Repercussão Geral existe para uniformizar a interpretação que o STF decida múltiplos casos idênticos sobre a mesma questão constitucional. Além disso, delimita a competência do STF às questões com relevância social, política, econômica ou jurídica.
+                    </div>
+                    <div class="row m-0 m-t-16 p-0">
+                    <a href="#"class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12">
+                        Pesquisar um termo
+                    </a>
+                    </div>
+                    <div class="row m-0 m-t-16 p-0">
+                        <a href="#"class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12">
+                            Glossário Mirim
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
       </div>
-<!-- Nova seção -->
-      <div class="row container center-block p-0">
-          <div class="col-xs-12 col-sm-6 col-md-7 col-lg-8 row m-0 p-xs-0 p-sm-8">
-              <%- include src/includes/card-repercussao-geral.html %>
-
-              <%- include src/includes/card-numerosSTF.html %>
-  
-              <%- include src/includes/card-jurisprudencia-do-stf.html %>
-  
-              <%- include src/includes/card-estatisticasProcessuais.html %>
-
-          </div>  
-          <!-- Cards laterais -->
-        <div class="col-xs-12 col-sm-12 col-md-4 m-0 p-xs-0 p-sm-8">
-            <%- include src/includes/card-banners-qlik.html %>
-
-            <%- include src/includes/card-supremo-em-acao.html %>
-
-            <%- include src/includes/card-tv-justica.html %>
-
-            <%- include src/includes/card-radio-justica.html %>
-
-            <%- include src/includes/card-forum.html %>
-
-        </div>  
-
-      </div>
-
-      <div class="row container center-block p-0">
-        <div class="col-md-12 row m-0 p-xs-0 p-sm-8">
-            <%- include src/includes/card-transparencia.html %>
-        </div>
-      </div>
-
     </section>
 
     <%- include src/includes/mapa-do-site.html %>
