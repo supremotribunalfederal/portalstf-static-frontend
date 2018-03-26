@@ -36,7 +36,7 @@ const secoes = [
   'documento',
   'sobmedidaadvogados',
   'sobmedidacidadaos',
-  'sobmedidaorgaos',
+  'sobmedidaorgaos',  
   'sobmedidaestudantes'
 ];
 
