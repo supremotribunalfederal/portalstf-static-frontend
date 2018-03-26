@@ -35,6 +35,7 @@ const secoes = [
   'estatistica',
   'documento',
   'sobmedidaadvogados',
+  'sobmedidacidadao',
   'sobmedidaorgaos'  
 ];
 
