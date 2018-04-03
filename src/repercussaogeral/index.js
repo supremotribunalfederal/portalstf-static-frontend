@@ -34,7 +34,39 @@ $(document).ready(function() {
         return false;
     });
 });
-        
+
+function clickMinistro(ministro) {
+    var imagem = document.getElementById(ministro.id);
+    imagem.classList.toggle("cinza");
+
+    qlikSense.getAplicacao(qlikSense.ACERVO).then(function (facadeAcervoQlik) {
+
+        var selecionados = [].slice.call(document.querySelectorAll('.card-imagem-ministros:not(.cinza)'));
+        var valores = selecionados.reduce(function (valores, ministro) {
+            valores.push(ministro.id);
+            return valores;
+        }, []);
+
+        facadeAcervoQlik.selecionaCampo(facadeAcervoQlik.CAMPO_NOME_MINISTRO, valores);
+    });
+};
+
+
+function clickTodoTribunal() {
+    var imagens = [].slice.call(document.querySelectorAll('.card-imagem-ministros'));
+    imagens.forEach(function (imagem) {
+        imagem.classList.add('cinza');
+    });
+
+    qlikSense.getAplicacao(qlikSense.ACERVO).then(function (facadeAcervoQlik) {
+        facadeAcervoQlik.limpaSelecoesEFiltros();
+    });
+
+    $("#comboClasses").val('');
+    $("#comboTipoClasse").val('');
+    $("#comboLocalizacao").val('');
+};
+
 
 
 //GOOGLE ANALYTICS
