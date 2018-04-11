@@ -29,7 +29,7 @@ plugins.push(new webpack.optimize.CommonsChunkPlugin({
 }));
 
 let SERVICE_URL = JSON.stringify('http://localhost:3000');
-if (process.env.NODE_ENV == 'producao') {
+if (process.env.NODE_ENV == 'production') {
     SERVICE_URL = JSON.stringify('http://endereco-da-aplicacao');
 
     plugins.push(new webpack.optimize.ModuleConcatenationPlugin());
@@ -57,8 +57,8 @@ plugins.push(new webpack.DefinePlugin({
 
 module.exports = {
     entry: {
-        app: './src/index.js',
-        vendor: ['jquery', 'bootstrap', 'moment', 'urijs']
+        app: './src/index.js'
+        //vendor: ['jquery', 'bootstrap', 'moment', 'urijs']
     },
 
     output: {

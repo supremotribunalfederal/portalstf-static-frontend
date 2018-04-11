@@ -5,10 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development && webpack-dev-server",
-    "build": "export NODE_ENV=production || SET NODE_ENV=production&& rimraf dist && webpack -p",
-    "gh-pages": "export GH_PAGES=/portalstf-static-frontend/ || set GH_PAGES=/portalstf-static-frontend/&& rimraf showroom-build && webpack -p",
-    "serve:dist": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "cross-env NODE_ENV=production && rimraf dist && webpack",
+    "build-dev": "webpack --config webpack.config.js",
+    "gh-pages": "export GH_PAGES=/portalstf-static-frontend/ || set GH_PAGES=/portalstf-static-frontend/&& rimraf showroom-build && webpack -p"
   },
   "keywords": [],
   "author": "Fabricio Mendonca <fabriciomendonca@gmail.com> (https://github.com/fabriciomendonca)",
