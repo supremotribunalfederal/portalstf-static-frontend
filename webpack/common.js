@@ -10,7 +10,7 @@ const chunksOrder = require('./chunks-order');
 
 
 const publicPath = process.env.GH_PAGES ? process.env.GH_PAGES.trim() : '/';
-const VENDORS = ['bootstrap-loader', 'moment', 'urijs', 'jquery-ui/ui/widgets/datepicker', 'jquery-validation'];
+const VENDORS = ['jquery', 'bootstrap', 'moment', 'urijs', 'jquery-ui/ui/widgets/datepicker', 'jquery-validation'];
 
 const homeHtml = new HtmlPlugin({
   template: `!!ejs-compiled-loader!${path.join(PATHS.src, '/index.html')}`,
@@ -20,6 +20,12 @@ const homeHtml = new HtmlPlugin({
 });
 const homeCss = new ExtractTextPlugin("assets/styles/[name].css");
 const datepickerCss = new ExtractTextPlugin("assets/styles/datepicker.css");
+const bootstrapCss = new ExtractTextPlugin("assets/styles/bootstrap.css");
+
+const jqueryGlobal = new webpack.ProvidePlugin({
+  '$': 'jquery/dist/jquery.js',
+  'jQuery': 'jquery/dist/jquery.js'
+});
 
 module.exports = {
   entry: {
@@ -81,14 +87,11 @@ module.exports = {
       {
         test: /\.(ttf|eot)$/,
         use: `file-loader?name=[name].[ext]&publicPath=${publicPath}&outputPath=assets/fonts/`
-      },
-      {
-        test:/bootstrap-sass[\/\\]assets[\/\\]javascripts[\/\\]/,
-        use: 'imports-loader?jQuery=jquery'
       }
     ]
   },
   plugins: [
+    jqueryGlobal,
     homeHtml,
     homeCss,
     datepickerCss,
@@ -96,6 +99,6 @@ module.exports = {
       names: ['vendor'],
       minChunks: 2
     }),
-    new CleanExcludedChunksCss()
+    new CleanExcludedChunksCss(),
   ]
 };

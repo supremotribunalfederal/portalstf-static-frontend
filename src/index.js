@@ -3,6 +3,7 @@ import $ from 'jquery';
 import './index-ga';
 import moment from 'moment';
 import validation from 'jquery-validation';
+import 'bootstrap/dist/css/bootstrap.css';
 
 $('.dropdown-toggle').hover(function() {
     $(this).find('.dropdown-menu').stop(true, true).delay(0).fadeIn(100);
