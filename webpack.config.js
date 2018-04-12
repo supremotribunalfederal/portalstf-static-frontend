@@ -13,7 +13,7 @@ const indexHtml = new htmlWebpack({
 
 let plugins = [];
 plugins.push(indexHtml);
-plugins.push(new extractText('estilos.css')); 
+plugins.push(new extractText('assets/styles/[name].css')); 
 
 plugins.push(new webpack.ProvidePlugin({
     '$': 'jquery/dist/jquery.js',
@@ -95,12 +95,12 @@ module.exports = {
             },
             {
                 test: /\.(jpg|jpeg|gif|png|svg|ico)$/i,
-                use: 'url-loader?limit=24000&name=[name].[ext]&outputPath=assets/img/',
+                use: 'url-loader?limit=24000&name=[name].[ext]&outputPath=assets/img/&publicPath=../../',
                 include: path.resolve(__dirname, 'assets/img')
             },
             { 
                 test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/, 
-                loader: 'url-loader?limit=10000&mimetype=application/font-woff' 
+                loader: 'url-loader?limit=10000&mimetype=application/font-woff&publicPath=../../'
             },
             { 
                 test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, 
@@ -108,7 +108,7 @@ module.exports = {
             },
             { 
                 test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, 
-                loader: 'file-loader' 
+                loader: 'file-loader'
             },
             { 
                 test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, 
