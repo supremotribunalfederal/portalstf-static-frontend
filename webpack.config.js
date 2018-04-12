@@ -6,8 +6,9 @@ const extractText = require('extract-text-webpack-plugin');
 const optimizeCss = require('optimize-css-assets-webpack-plugin');
 
 const indexHtml = new htmlWebpack({
-  template: '!!ejs-compiled-loader!./src/index.html',
-  chunks: ['vendor', 'bundle']
+    template: '!!ejs-compiled-loader!./src/index.html',
+    chunks: ['vendor', 'bundle'],
+    hash: true
 });
 
 let plugins = [];
