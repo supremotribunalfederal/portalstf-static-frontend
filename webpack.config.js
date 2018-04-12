@@ -11,9 +11,17 @@ const indexHtml = new htmlWebpack({
     hash: true
 });
 
+const documentoHtml = new htmlWebpack({
+    template: '!!ejs-compiled-loader!./src/documento/index.html',
+    filename: 'documento/index.html',
+    chunks: ['vendor', 'bundle', 'documento'],
+    hash: true
+});
+
 let plugins = [];
 plugins.push(indexHtml);
-plugins.push(new extractText('assets/styles/[name].css')); 
+plugins.push(documentoHtml);
+plugins.push(new extractText('assets/styles/[name].css'));
 
 plugins.push(new webpack.ProvidePlugin({
     '$': 'jquery/dist/jquery.js',
@@ -25,10 +33,7 @@ plugins.push(new webpack.optimize.CommonsChunkPlugin({
     filename: 'scripts/vendor.js'
 }));
 
-let SERVICE_URL = JSON.stringify('http://localhost:3000');
 if (process.env.NODE_ENV == 'production') {
-    SERVICE_URL = JSON.stringify('http://endereco-da-aplicacao');
-    
     plugins.push(new webpack.optimize.ModuleConcatenationPlugin());
 
     plugins.push(new babili());
@@ -44,18 +49,15 @@ if (process.env.NODE_ENV == 'production') {
     }));
 }
 
-plugins.push(new webpack.DefinePlugin({
-    SERVICE_URL: SERVICE_URL
-}));
-
 module.exports = {
     entry: {
         bundle: ['./src/index.js', './assets/scss/main.scss'],
-        vendor: ['jquery', 'bootstrap', 'moment', 'urijs']
+        vendor: ['jquery', 'bootstrap', 'moment', 'urijs'],
+        documento: ['./src/documento/index.js', './assets/scss/secoes/documento/documento.scss']
     },
 
     output: {
-        filename: 'scripts/bundle.js',
+        filename: 'scripts/[name].js',
         path: path.resolve(__dirname, 'dist')
     },
 
