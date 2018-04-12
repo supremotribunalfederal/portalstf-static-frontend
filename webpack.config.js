@@ -1,10 +1,9 @@
 const path = require('path');
 const babili = require('babili-webpack-plugin');
+const webpack = require('webpack');
+const htmlWebpack = require('html-webpack-plugin');
 const extractText = require('extract-text-webpack-plugin');
 const optimizeCss = require('optimize-css-assets-webpack-plugin');
-const htmlWebpack = require('html-webpack-plugin');
-
-const webpack = require('webpack');
 
 const indexHtml = new htmlWebpack({
   template: '!!ejs-compiled-loader!./src/index.html',
@@ -12,7 +11,6 @@ const indexHtml = new htmlWebpack({
 });
 
 let plugins = [];
-
 plugins.push(indexHtml);
 plugins.push(new extractText('estilos.css')); 
 
@@ -22,22 +20,19 @@ plugins.push(new webpack.ProvidePlugin({
 }));
 
 plugins.push(new webpack.optimize.CommonsChunkPlugin({
-
     name: 'vendor',
     filename: 'scripts/vendor.js'
-
 }));
 
 let SERVICE_URL = JSON.stringify('http://localhost:3000');
 if (process.env.NODE_ENV == 'production') {
     SERVICE_URL = JSON.stringify('http://endereco-da-aplicacao');
-
+    
     plugins.push(new webpack.optimize.ModuleConcatenationPlugin());
 
     plugins.push(new babili());
     
     plugins.push(new optimizeCss({
-
         cssProcessor: require('cssnano'),
         cssProcessorOptions: {
             discardComments: {
@@ -45,19 +40,16 @@ if (process.env.NODE_ENV == 'production') {
             }
         },
         canPrint: true
-
     }));
 }
 
 plugins.push(new webpack.DefinePlugin({
-
     SERVICE_URL: SERVICE_URL
-
 }));
 
 module.exports = {
     entry: {
-        app: './src/index.js',
+        bundle: ['./src/index.js', './assets/scss/main.scss'],
         vendor: ['jquery', 'bootstrap', 'moment', 'urijs']
     },
 
@@ -82,7 +74,7 @@ module.exports = {
                     loader: 'babel-loader'
                 }
             },
-            /* {
+            {
                 test: /\.scss$/,
                 use: extractText.extract({
                     use: [
@@ -91,8 +83,8 @@ module.exports = {
                     ], 
                     fallback: 'style-loader'
                 }),
-                exclude: new RegExp('node_modules}')
-            }, */
+                exclude: new RegExp('node_modules|secoes}')
+            },
             {
                 test: /\.css$/,
                 use: extractText.extract({

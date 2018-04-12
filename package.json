@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=development && webpack-dev-server",
-    "build": "cross-env NODE_ENV=production && rimraf dist && webpack",
-    "build-dev": "cross-env NODE_ENV=development && rimraf dist && webpack --config webpack.config.js",
+    "start": "export NODE_ENV=development || set NODE_ENV=development&& webpack-dev-server",
+    "build": "export NODE_ENV=production || set NODE_ENV=production&& rimraf dist && webpack --config webpack.config.js",
+    "build-dev": "export NODE_ENV=development || set NODE_ENV=development&& rimraf dist && webpack --config webpack.config.js",
     "gh-pages": "export GH_PAGES=/portalstf-static-frontend/ || set GH_PAGES=/portalstf-static-frontend/&& rimraf showroom-build && webpack -p"
   },
   "keywords": [],
@@ -18,7 +18,6 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "babili-webpack-plugin": "^0.1.1",
-    "cross-env": "^5.0.1",
     "css-loader": "^0.28.4",
     "cssnano": "^3.10.0",
     "ejs-compiled-loader": "^1.1.0",
