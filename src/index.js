@@ -1,8 +1,8 @@
-// import 'jquery.maskedinput';
+import 'jquery.maskedinput/src/jquery.maskedinput.js';
 import $ from 'jquery';
 import './index-ga';
-// import moment from 'moment';
-// import validation from 'jquery-validation';
+import moment from 'moment';
+import validation from 'jquery-validation/dist/jquery.validate.js';
 import 'bootstrap/dist/css/bootstrap.css';
 
 $('.dropdown-toggle').hover(function() {

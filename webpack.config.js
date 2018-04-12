@@ -8,7 +8,7 @@ const webpack = require('webpack');
 
 const indexHtml = new htmlWebpack({
   template: '!!ejs-compiled-loader!./src/index.html',
-  chunks: ['bundle']
+  chunks: ['vendor', 'bundle']
 });
 
 let plugins = [];
@@ -16,18 +16,18 @@ let plugins = [];
 plugins.push(indexHtml);
 plugins.push(new extractText('estilos.css')); 
 
-/* plugins.push(new webpack.ProvidePlugin({
+plugins.push(new webpack.ProvidePlugin({
     '$': 'jquery/dist/jquery.js',
     'jQuery': 'jquery/dist/jquery.js'
-})); */
+}));
 
-/* plugins.push(new webpack.optimize.CommonsChunkPlugin({
+plugins.push(new webpack.optimize.CommonsChunkPlugin({
 
     name: 'vendor',
-    filename: 'vendor.js'
+    filename: 'scripts/vendor.js'
 
 }));
- */
+
 let SERVICE_URL = JSON.stringify('http://localhost:3000');
 if (process.env.NODE_ENV == 'production') {
     SERVICE_URL = JSON.stringify('http://endereco-da-aplicacao');
@@ -57,8 +57,8 @@ plugins.push(new webpack.DefinePlugin({
 
 module.exports = {
     entry: {
-        app: './src/index.js'
-        //vendor: ['jquery', 'bootstrap', 'moment', 'urijs']
+        app: './src/index.js',
+        vendor: ['jquery', 'bootstrap', 'moment', 'urijs']
     },
 
     output: {
