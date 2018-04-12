@@ -8,7 +8,7 @@ const webpack = require('webpack');
 
 const indexHtml = new htmlWebpack({
   template: '!!ejs-compiled-loader!./src/index.html',
-  chunks: ['vendor', 'bundle']
+  chunks: ['bundle']
 });
 
 let plugins = [];
@@ -16,18 +16,18 @@ let plugins = [];
 plugins.push(indexHtml);
 plugins.push(new extractText('estilos.css')); 
 
-plugins.push(new webpack.ProvidePlugin({
+/* plugins.push(new webpack.ProvidePlugin({
     '$': 'jquery/dist/jquery.js',
     'jQuery': 'jquery/dist/jquery.js'
-}));
+})); */
 
-plugins.push(new webpack.optimize.CommonsChunkPlugin({
+/* plugins.push(new webpack.optimize.CommonsChunkPlugin({
 
     name: 'vendor',
     filename: 'vendor.js'
 
 }));
-
+ */
 let SERVICE_URL = JSON.stringify('http://localhost:3000');
 if (process.env.NODE_ENV == 'production') {
     SERVICE_URL = JSON.stringify('http://endereco-da-aplicacao');
@@ -63,8 +63,7 @@ module.exports = {
 
     output: {
         filename: 'scripts/bundle.js',
-        path: path.resolve(__dirname, 'dist'),
-        publicPath: 'dist'
+        path: path.resolve(__dirname, 'dist')
     },
 
     resolve: {
@@ -83,7 +82,7 @@ module.exports = {
                     loader: 'babel-loader'
                 }
             },
-            {
+            /* {
                 test: /\.scss$/,
                 use: extractText.extract({
                     use: [
@@ -92,7 +91,14 @@ module.exports = {
                     ], 
                     fallback: 'style-loader'
                 }),
-                exclude: new RegExp('node_modules|secoes}')
+                exclude: new RegExp('node_modules}')
+            }, */
+            {
+                test: /\.css$/,
+                use: extractText.extract({
+                    use: 'css-loader',
+                    fallback: 'style-loader'
+                })
             },
             {
                 test: /\.(jpg|jpeg|gif|png|svg|ico)$/i,
