@@ -11,16 +11,8 @@ const indexHtml = new htmlWebpack({
     hash: true
 });
 
-const documentoHtml = new htmlWebpack({
-    template: '!!ejs-compiled-loader!./src/documento/index.html',
-    filename: 'documento/index.html',
-    chunks: ['vendor', 'bundle', 'documento'],
-    hash: true
-});
-
 let plugins = [];
 plugins.push(indexHtml);
-plugins.push(documentoHtml);
 plugins.push(new extractText('assets/styles/[name].css'));
 
 plugins.push(new webpack.ProvidePlugin({
@@ -48,12 +40,10 @@ if (process.env.NODE_ENV == 'production') {
         canPrint: true
     }));
 }
-
-module.exports = {
+let config = {
     entry: {
         bundle: ['./src/index.js', './assets/scss/main.scss'],
-        vendor: ['jquery', 'bootstrap', 'moment', 'urijs'],
-        documento: ['./src/documento/index.js', './assets/scss/secoes/documento/documento.scss']
+        vendor: ['jquery', 'bootstrap', 'moment', 'urijs']
     },
 
     output: {
@@ -82,11 +72,12 @@ module.exports = {
                 use: extractText.extract({
                     use: [
                         {loader: "css-loader"},
-                        {loader: "sass-loader"}
+                        {loader: "resolve-url-loader"},
+                        {loader: "sass-loader?sourceMap"}
                     ], 
                     fallback: 'style-loader'
                 }),
-                exclude: new RegExp('node_modules|secoes}')
+                exclude: new RegExp('node_modules}')
             },
             {
                 test: /\.css$/,
@@ -99,6 +90,11 @@ module.exports = {
                 test: /\.(jpg|jpeg|gif|png|svg|ico)$/i,
                 use: 'url-loader?limit=24000&name=[name].[ext]&outputPath=assets/img/&publicPath=../../',
                 include: path.resolve(__dirname, 'assets/img')
+            },
+            {
+                test: /\.(jpg|jpeg|gif|png|svg|ico)$/i,
+                use: 'url-loader?limit=100000',
+                include: path.resolve(__dirname, 'node_modules')
             },
             { 
                 test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/, 
@@ -121,3 +117,44 @@ module.exports = {
 
     plugins: plugins
 };
+
+const secoes = [
+    'noticias',
+    'textos',
+    'textocombox',
+    'repercussaogeral',
+    'jurisprudencia',
+    'transparencia',
+    'listagem',
+    'ostf',
+    'quemequem',
+    'votacoes',
+    'pesquisaavancada',
+    'erro-404',
+    'listarprocessos',
+    'listarporparte',
+    'listarpartes',
+    'processo',
+    'estatistica',
+    'documento'
+];
+
+secoes.map(secao => {
+    let configuracaoDaSecao = {
+        nome: secao,
+        entry: [`./src/${secao}/index.js`, `./assets/scss/secoes/${secao}/${secao}.scss`],
+        plugin: new htmlWebpack({
+            template: `!!ejs-compiled-loader!./src/${secao}/index.html`,
+            filename: `${secao}/index.html`,
+            chunks: ['vendor', 'bundle', secao],
+            hash: true
+        })
+    };
+
+    return configuracaoDaSecao;
+}).forEach(configuracaoDaSecao => {
+    config.plugins.push(configuracaoDaSecao.plugin);
+    config.entry[configuracaoDaSecao.nome] = configuracaoDaSecao.entry;
+});
+
+module.exports = config;
