@@ -5,14 +5,13 @@ const htmlWebpack = require('html-webpack-plugin');
 const extractText = require('extract-text-webpack-plugin');
 const optimizeCss = require('optimize-css-assets-webpack-plugin');
 
-const indexHtml = new htmlWebpack({
+let plugins = [];
+plugins.push(new htmlWebpack({
     template: '!!ejs-compiled-loader!./src/index.html',
     chunks: ['vendor', 'bundle'],
     hash: true
-});
+}));
 
-let plugins = [];
-plugins.push(indexHtml);
 plugins.push(new extractText('assets/styles/[name].css'));
 
 plugins.push(new webpack.ProvidePlugin({
@@ -40,6 +39,7 @@ if (process.env.NODE_ENV == 'production') {
         canPrint: true
     }));
 }
+
 let config = {
     entry: {
         bundle: ['./src/index.js', './assets/scss/main.scss'],
