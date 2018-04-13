@@ -399,8 +399,12 @@ $('#pesquisa-principal').submit(function(e){
 $('#pesquisa-autenticacao').submit(function(e){
     campoInputPesquisa = 'identificacaoDocumento';
     $('#identificacaoDocumento').val($('#identificacaoDocumento').val().trim());
+    
+    configurarValidacaoPesquisa(campoInputPesquisa, '#pesquisa-autenticacao', '.mensagem-autenticacao');
 
-    configurarValidacaoPesquisa(campoInputPesquisa, '#pesquisa-autenticacao', '.mensagemAutenticacao');
+    if( $('#pesquisa-autenticacao').valid()){
+        realizarPesquisa(campoInputPesquisa);
+    }
 });
 
 /* Pauta de Julgamento da Home ------------------------------------------------------------------------------------ */
@@ -479,9 +483,9 @@ $('#btnAcessarPortalNocicitas').on('click', function() {
 
 (function pesquisaPorURL() {
     var url = window.location.pathname;
-    if (url.match(/^\/jurisprudencia\/?.*/)) {
+    if (url.match(/^\/jurisprudencia\/?.*/) || url.match(/^\/sobmedidaestudantes\/?.*/)) {
         $('#abaJurisprudencia').click();
-    } else if (url.match(/(^\/noticias\/?.*|^\/listagem\/?.*)/) ) {
+    } else if (url.match(/(^\/noticias\/?.*|^\/listagem\/?.*)/)) {
         $('#abaNoticias').click();
     } else if (url.match(/^\/transparencia\/?.*/)) {
         $('#abaTransparencia').click();
@@ -489,6 +493,26 @@ $('#btnAcessarPortalNocicitas').on('click', function() {
         $('#abaRepercussao').click();
     } else  {
         $('#abaProcesso').click();
+    }
+})();
+
+// selecionar background por página
+
+(function backgroundPorURL() {
+    var url = window.location.pathname;
+    if (url.match(/^\/sobmedidaestudantes\/?.*/)) {
+        $(".pesquisa").css({"background":"linear-gradient(135deg, rgba(0, 73, 119, 1), rgba(0, 73, 119, 0.6), rgba(0, 73, 119, 1))", 
+        "background-image":"url(/assets/img/interface/bg-sob-medida.jpg)", 
+        "background-position":"center -210px", 
+        "background-repeat":"no-repeat",
+        "background-attachment":"fixed", 
+        "-webkit-background-size":"cover"});
+    } else if (url.match(/(^\/sobmedidaadvogados\/?.*|^\/sobmedidaorgaos\/?.*)/)) {
+        $('.pesquisa').css('background-image', 'url(/assets/img/bg-sob-medida.jpg)');
+    } else if (url.match(/^\/sobmedidacidadaos\/?.*/)) {
+        $('.pesquisa').css('background-image', 'url(/assets/img/interface/bg-cidadaos.jpg)');
+    } else  {
+       // $('.pesquisa').css('background-image', 'url(/assets/img/top-bg.jpg)');
     }
 })();
 

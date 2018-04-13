@@ -4,6 +4,84 @@
     width: 100% !important;
 }
 
+.card-imagem-ministros{
+    width:60px;
+    height:60px;
+    background-color:#666;
+    border-radius:200px
+}
+
+.ministros-card{
+    text-decoration:underline;
+    color:#056bb3;
+    font-size:.9rem
+}
+
+.cinza{
+  filter: grayscale(100%);
+}
+
+/* opacidade apenas no IE*/
+ @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+   .cinza{
+    opacity: 0.5;
+  } 
+} 
+
+.embeddedArea {
+  resize: none;
+  width: 100%;
+  height: 100%;
+  color: #4477aa;
+}
+
+.combo-qlik {
+    height: 35px;
+    background-color: #eeebeb;
+}
+
+.card-imagem-ministros{
+    width:54px; 
+    height:54px; 
+    background-color:#666; 
+    border-radius: 200px;
+}
+
+.ministros-card {
+    text-decoration: underline;
+    color: #056bb3;
+    font-size: 0.9rem;
+}
+
+.numero-transparencia{
+    color:#006998;
+    font-size:1.2rem;
+    font-weight:100;
+    text-align:center;
+    height:32px;
+    position:relative
+}
+
+.numero-transparencia-iframe{
+    position:absolute;
+    overflow:hidden;
+    top:-7%;left:50%;
+    transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+    z-index:-1
+}
+
+.numero-transparencia-verde{
+    color:#417505;
+    font-size:1.2rem
+}
+
+.numero-transparencia-vermelho{
+    color:#d0021b;
+    font-size:1rem;
+    margin:5px 0
+}
+
 .acompanhe-votacoes-imagem {
     width: 80px;
     height: 77px;

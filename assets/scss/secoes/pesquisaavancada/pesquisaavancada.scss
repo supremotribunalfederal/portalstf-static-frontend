@@ -1,58 +1,430 @@
-/*.pagina-interna {
-  #texto-pagina-interna {
-    .texto {
-      border-bottom: 0;
+@import "../../variaveis/cores";
+
+a {
+  cursor:pointer;
+}
+.card-titulo {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.num_tema{
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.imagem-grafico {
+  height: 220px;
+}
+.imagens-graficos {
+  border: none;
+  padding: 10px;
+}
+.card-graficos{
+  margin: 5px;
+  padding: 2px;
+}
+
+.card-filtros{
+  padding: 5px 3px;
+}
+/* Card de Temas */ 
+
+table.valores-temas .valor{
+  font-weight: bold;
+  margin: 0px;
+  text-align: center;
+}
+td > h4{
+ color: $stfAzulHover;
+ font-weight: 600;
+ margin: 0px;
+ text-align: center;
+}
+
+// Tabela indicadores
+h2#valor-reconhecida, h2#valor-merito-julgado {
+  color: #4477AA;
+}
+h2#valor-negada {
+  color: #D9534F;
+}
+h2#valor-em-analise, h2#valor-merito-n-julgado {
+  color: #68B95C;
+}
+td#valor-tema-negada, td#valor-tema-em-analise {
+  border-top: 0;
+  padding-bottom: 12px;
+}
+td#valor-tema-merito-julgado, td#valor-tema-merito-n-julgado {
+  border-top: 1px solid #f0eaea;
+}
+
+/* Dropdown de Ministros */
+
+button.list-group-item{
+  cursor: default;
+
+  img {
+    cursor: pointer;
+  }
+}
+div.dropdown-relatores {
+  .list-group {
+    background-color: #b7b1b1;
+    min-width: 252.5px;
+  }
+  .cinza{
+    filter: grayscale(100%);
+  }
+  .list-group-item {
+    margin-bottom: 1px;
+    padding: 5px 5px;
+    display: inline-block;
+
+    hr {
+      margin: 10px;
     }
-
-    .texto-titulo {
-      font-weight: bold;
-      font-size: 1.8rem;
+    h5, .link-modal-relator {
+      text-align: right;
     }
-
-    .texto-gestor {
-      color: #ababab;
-
-      .glyphicon {
-        margin-right: 8px;
-      }
+    .link-modal-relator {
+      font-size: 95%;
     }
-
-    .texto-data {
-      color: #ababab;
-
-      .glyphicon {
-        margin-right: 8px;
-      }
+    img {
+      position: relative;
+      float: left;
     }
+  }
+}
+//filtros superiores
+#julgamentos_abertos, #julgamentos_realizar{
+  width: 15px;
+  height: 15px; 
+  vertical-align:bottom
+}
 
-    .texto-conteudo {
-      text-align: justify;
-      text-justify: inter-word;
-      p {
-        font-size: 1.25rem;
-        line-height: 1.75;
+input#busca-relator {
+    margin-bottom:.2em;
+    width: 100%;
+}
+.dropdown-content {
+    display: none;
+    position: relative;
+    background-color: #fff;
+}
+.show {display:block;}
+
+/* Informações das modais */
+
+th{
+  text-align: center;
+  max-width: 130px;
+}
+//modal
+
+.modal-content{
+  padding: 0%;
+}
+.modal-body{
+  padding: 0%;
+
+}
+.descricao{
+  max-width: 600px;
+}
+.manifestacao{
+  padding: 15px;
+}
+tr{
+  text-align: justify;
+}
+
+#tabela-RG > tr > .td-num-tema{
+  vertical-align: middle; 
+  text-align:center;
+}
+#tabela-RG > tr > .td-acoes{
+  vertical-align: middle; 
+}
+
+//modal-plenario
+.voto-favor, .voto-contra{
+  text-align: center;
+  font-weight: 700;
+}
+.voto-favor{
+  color: #4cbb71;
+}
+.voto-contra{
+  color: #D9534F;
+}
+
+//badges modal
+.badge-repercussao{
+  background-color: #4cbb71;
+}
+.badge-merito-pendente{
+  background-color: #D9534F;
+}
+.badge-suspensao{
+  background-color: #3383dd;
+}
+.badge{
+  margin-top: 10px;
+  padding: 10px;
+  z-index: auto;
+  text-align: center;
+  width: 200px;
+  color: white;
+}
+
+// icones 
+.ok, .mer_julgado{
+  color: $stfVerde;
+}
+.clear, .mer_pendente{
+  color: rgb(207, 74, 70);
+}
+.suspensao{
+  color: #3383dd;
+}
+i{
+  cursor: pointer;
+}
+.add{
+  vertical-align: bottom; 
+  font-size: 1.2em
+}
+.filter-icon{
+  vertical-align: text-bottom; 
+  font-size: 1.5em;
+}
+.clear-icon {
+  float: right;
+  font-size: 21px;
+}
+
+// ====configurações para o nome do filtro====
+.label-titulo{
+  margin: 1px;
+}
+
+.form-item {
+  
+  position:relative;
+  margin-bottom:.3em;
+
+  .label-filter, .input-filter {
+    display:inline-block;
+    transition:all 150ms;
+    font-weight: 550;
+  }
+
+  .input-filter {
+    margin-top: 5px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #222;
+    font-weight: 500;
+    
+    
+    &:valid  + .label-filter {
+      transform:translateY(-17px) scale(0.75);
+    }
+    
+    &:focus + .label-filter {
+      transform:translateY(-17px) scale(0.75);
+    }
+    
+    &:focus {
+      outline: none;
+      + .label-filter {
+        color:rgb(7, 186, 252);
+        font-size: 14.5px;
+
       }
     }
   }
-}*/
 
-iframe {
-    border: none;
+  .label-filter {
+    position:absolute;
+    top:12px;
+    left:13px;
+    color: #8b8a8a;
+    background:white;
+    transform-origin:left center;
+    transform:translateY(0) scale(1);
+  }  
 }
-.iframe-pequeno {
-    height: 170px;
-}
-.iframe-medio {
-    height: 300px;
-}
-.iframe-grande {
-    height: 500px;
+// =====================================
+
+.add-mais-filtros {
+  position: relative;
+  top: 6px;
 }
 
+// botões na area de favoritos
+.btn-fav{
+  text-align: center;
+  width: 99%;
+  border: none;
+  text-decoration: none;
+  margin: 2px;
+  font-weight: 600;
+  position: relative;
+}
 
-/*<!--Static height to show qlik object, this can be modified.-->
-                <style>
-                    .qlik-embed {
-                        height: 500px;
-                    }
-                </style>  */
+.btn-fav.active{
+  background-color: $stfAzul;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  border: transparent;
+  box-shadow: none;
+}
+
+.input-fav{
+  height: 0%;
+  width: 0%;
+}
+
+.tabela-rg, .tabela-rg > thead{
+  margin-top: 0px;
+}
+
+.nome-filtro{
+  display: none;
+}
+.nome-grupo-filtro {
+  cursor: pointer;
+}
+
+/* Card relator */
+
+div.tabelas-relatores {
+  display: -webkit-inline-box;
+  padding-top: 10px;
+
+  .julgados, .pendentes {
+    width: 50%;
+
+    thead {
+      color: #fff;
+    }
+    th {
+      width: 25%;
+    }
+  }
+  .pendentes thead {
+    background-color: #333;
+  }
+  .julgados thead {
+    background-color: #0505a5;
+  }
+}
+#busca-tabela-julgados, #busca-tabela-pendentes {
+  width: 20%;
+  position: relative;
+}
+#busca-tabela-pendentes {
+  float: right;
+}
+#busca-tabela-julgados {
+  float: left;
+}
+
+.relacao-completa-filtro {
+  position: relative;
+  float: left;
+  font-size: 12px;
+  top: 3px;
+  margin-left: 10px;
+}
+
+.icon-info, .icon-download {
+  position: relative;
+  float: right;
+  margin-left: 5px;
+}
+.more, .less{
+  vertical-align: middle;
+}
+//nav
+ul .nav-tabs {
+  border-bottom: 2px solido $stfCinzaClaro;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+  border-width: 0;
+}
+
+.nav-tabs > li > a {
+  border: none;
+  color: $stfCinzaEscuro;
+  margin-right: 40px;
+  margin-left: 20px;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li > a:hover {
+  border: none;
+  color: $stfPreto;
+  background: transparent;
+}
+
+.nav-tabs > li > a::after {
+  content: "";
+  background: $stfAzul;
+  height: 2px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -1px;
+  transition: all 250ms ease 0s;
+  transform: scale(0);
+}
+
+.nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after {
+  transform: scale(1); 
+}
+
+.tab-content {
+  padding: 0%;
+}
+
+#mais-resultados{
+  margin-bottom: 10px;
+}
+
+.titulo-pesquisa{
+  background-color: #00A7E6; 
+  color: white; 
+  padding: 15px; 
+  margin-bottom: -6px;
+  margin-top: 0px;
+}
+
+//dropdown ações
+.acao-item{
+  color: #313131; 
+  text-decoration: none;
+}
+
+.acao-item:hover{
+  font-weight: 550;
+  text-decoration: none;
+  color: #313131; 
+}
+
+.btn-acoes{
+  background-color: #00A7E6; 
+  border: none; 
+  border-radius: 4px; 
+  color: white; 
+  vertical-align: text-top
+  
+}
+
+.btn-acoes:hover, .btn-acoes:focus{
+  color: white;
+  background-color: $stfAzulMenu;
+}

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Supremo Tribunal Federal</title>
+  <link rel="icon" type="imagem/png" href="<%= require('assets/img/favicon.ico') %>" />
+</head>
+<body>
+  <div id="main" class="container-fluid p-0">
+    <%- include src/includes/header.html %>
+    <%- include src/includes/pesquisa-jurisprudencia.html %>
+    <section id="conteudo" class="container center-block p-0"> 
+          <!--cards lateral esquerda-->
+      <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 p-16 p-sm-12 p-xs-0 m-0">
+        <div class="card m-b-24 m-t-24">
+            <div class="card-titulo"><i class="glyphicon glyphicon-search"></i> Filtros aplicados</div>
+            <div class="card-conteudo" id="filtro">
+              <div class="col-md-12" id="filtros-aplicados">
+                 
+              </div>
+              <div class="row m-0 m-t-16 p-0 opc-filtros">
+                <a id="editar_filtros" class="col-xs-6 m-b-16">
+                    <i class="glyphicon glyphicon-pencil" aria-label="editar filtros"></i> EDITAR FILTROS
+                  </a>
+                <a id="apagar_filtro" class="col-xs-6 m-b-16">
+                  <i class="glyphicon glyphicon-trash" aria-label="apagar filtro"></i> APAGAR FILTROS
+                </a>
+              </div>
+            </div>
+        </div>     <!--fecha card -->
+
+        <div class="card m-b-24 m-t-24">
+          <div class="card-titulo"> <i class="glyphicon glyphicon-time" aria-hidden="true"></i> Histórico</div>
+          <div class="card-conteudo">
+              <ul>
+                <li class="item_pesquisa"><a>Direito da Mulher </a>
+                    <span class="qnt_resultado">(3.154)</span> </li> 
+                <li class="item_pesquisa"><a>Plenário; Edson Fachin</a></li>
+                <li class="item_pesquisa"><a>Gilmar Mendes </a></li>
+              </ul>
+              <hr/>
+              <ul>
+                <li class="item_pesquisa"><a>Aborto</a>
+                    <span class="qnt_resultado">(30.154)</span>  
+                </li> 
+              </ul>
+
+              <a data-toggle="collapse" href="#verMaisPesquisas" aria-expanded="false" aria-controls="verMais">
+                <i class="glyphicon glyphicon-plus" aria-label="ver-mais"></i> Ver mais 43 pesquisas realizadas
+              </a>
+              <div class="collapse ver-mais-pesquisas" id="verMaisPesquisas"> 
+                <input type="search" class="col-md-9 col-xs-9 palavraPesquisa" id="inputMaisPesquisas" placeholder="Filtrar pesquisas" aria-controls="listagem-mais-pesquisas">
+                <button id="btnPesquisas" class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="inputMaisPesquisas" data-classe-campo="maisPesquisas">
+                    <i class="glyphicon glyphicon-plus"></i>
+                </button>
+                <br> <br>
+                <div class="card-lista">
+                  <ul class="lista-pesquisas" id="listagem-mais-pesquisas">
+                      <li><a>lista</a></li>
+                      <li><a>lista1</a></li>
+                      <li><a>lista2</a></li>
+                      <li><a>example</a></li>
+                      <li><a>test</a></li>
+                      <li><a>something</a></li>
+                      <li><a>palavra</a></li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+        </div>     <!--fecha card -->
+
+        <div class="card m-b-24 m-t-24">
+          <div class="card-titulo"><i class="glyphicon glyphicon-filter"></i> Filtros  
+            <button id="btn-aplicar-filtros" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#card-filtros" aria-expanded="false">
+              <i class="glyphicon glyphicon-menu-hamburger"></i>
+            </button>
+          </div>
+          <div id="card-filtros" class="card-conteudo  collapse navbar-collapse">
+              <strong>Palavras-chave (separe por ;)</strong>
+              <div class="campo-container m-t-16">
+                  <form id="filtro-palavra-chave">
+                    <p><input id="palavraChave" type="text" class="col-md-9 col-xs-9 palavraPesquisa" placeholder="Aborto; Direito da mulher" data-nome-filtro="Palvra Chave"/>
+                      <button id="btnPalavraChave" class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="palavraChave" data-classe-campo="palavraChave" > 
+                          <i class="glyphicon glyphicon-plus" aria-label="mais"></i>
+                      </button>
+                    </p>
+                  </form>
+              </div>
+              <br/> <br/>
+              <hr/>
+
+              <strong class="filtro">Número do Processo</strong>
+              <div class="campo-container m-t-16">
+                  <form id="filtro-numero-processo">
+                    <p><input id="inputProcesso" class="col-md-9 col-xs-9 palavraPesquisa" placeholder="Digite o número" type="text" />
+                      <button id="btnProcesso" class="btn btn-default btn-icone col-md-3 col-xs-3  btnFiltro" data-add-filtro="inputProcesso" data-classe-campo="processo">
+                          <i class="glyphicon glyphicon-plus"></i>
+                      </button>
+                    </p>
+                  </form>
+              </div>
+              <br/> <br/>
+              <hr/>
+
+              <strong>Relator</strong>
+              <div class="campo-container m-t-16">
+                <div class="campo-container m-t-16">
+                    <form id="filtro-relator">
+                        <p>    
+                          
+                          
+                          <input type="text" id="inputRelator" class="col-md-9 col-xs-9 palavraPesquisa " placeholder="Digite o nome do relator"  list="listRelatores" autocomplete="off" title="">
+                          <datalist id="listRelatores">
+                              <option value="Digite o nome do relator"></option>
+                              <option value="Celso de Mello "></option>
+                              <option value="Gilmar Mendes "></option>
+                              <option value="Dias Tofolli"></option>
+                              <option value="Marco Aurélio "></option>
+                              <option value="Ricardo Lewandowski "></option>
+                              <option value="Rosa Weber "></option>
+                              <option value="Edson Fachin"></option>
+                              <option value="Roberto Barroso"></option>
+                          </datalist> 
+                                             
+                          <button id="btnRelator" class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="inputRelator" data-classe-campo="relator">
+                              <i class="glyphicon glyphicon-plus"></i>
+                          </button>
+                        </p>
+                    </form>
+                  </div> <br /> <br /> <br />
+                <ul >
+                    <li class="item_pesquisa"><a><a>Gilmar Mendes </a>
+                      <span class="qnt_resultado">(4.454)</span>
+                    </li> 
+                    <li class="item_pesquisa"><a><a>Rosa Weber </a>
+                      <span class="qnt_resultado">(3.234)</span>
+                    </li>
+                    <li class="item_pesquisa"><a><a>Edson Fachin </a>
+                      <span class="qnt_resultado">(543)</span>
+                    </li>
+                </ul>
+
+                <a data-toggle="collapse" href="#verMaisRelator" aria-expanded="false" aria-controls="verMaisRelator">
+                  <i class="glyphicon glyphicon-plus" aria-label="ver-mais"></i> Ver mais 
+                </a>
+                <div class="collapse ver-mais-pesquisas" id="verMaisRelator"> 
+                    <div class="card">
+                       <ul class="lista-pesquisas">
+                          <li>teste1</li>
+                          <li>teste1</li>
+                          <li>teste1</li>
+                          <li>teste1</li>
+                          <li>teste1</li>
+                          <li>teste1</li>
+                          <li>teste1</li>
+                       </ul>
+                    </div>
+                </div>
+
+              </div>
+                <br/> <br/>
+              <hr/>
+
+              <strong>Data</strong>
+              <div class="campo-container m-t-16">
+                <form id="filtro-data">
+                   <p> <input type="text" id="data-inicio" class="col-md-9 col-xs-9 palavraPesquisa datas" placeholder="De" onfocus="(this.type='date')"/>
+                      <button id="btn-data-inicio"  class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="data-inicio" data-formata-data="true" data-classe-campo="dataInicio">
+                          <i class="glyphicon glyphicon-plus"></i>
+                      </button> 
+                     <br/> <br/>  
+                    <p><input  type="text" id="data-final" class="col-md-9 col-xs-9  palavraPesquisa datas" placeholder="Até" onfocus="(this.type='date')" />
+                      <button id="btn-data-final" class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="data-final" data-formata-data="true" data-classe-campo="dataFim">
+                          <i class="glyphicon glyphicon-plus"></i>
+                      </button>
+                    </p>
+                </form>
+              </div> <br> <br><hr />
+                
+              <strong>Tema</strong>
+                <div class="campo-container m-t-16">  
+                  <form id=filtro-tema>
+                    <p><input  id="inputTema" class="col-md-9 col-xs-9  palavraPesquisa" placeholder="Digite o tema" type="text"  />
+                      <button id="btnTema" class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="inputTema" data-classe-campo="tema">
+                          <i class="glyphicon glyphicon-plus"></i>
+                      </button>
+                    </p>
+                  </form>
+                </div>  
+                <br/> <br/>
+              <hr/>
+
+              <strong>Tese</strong>
+                <div class="campo-container m-t-16">
+                  <form id=filtro-tese style="margin: auto;">   
+                   
+                    <p><input id="inputTese" type="text" class="col-md-9 col-xs-9 palavraPesquisa" placeholder="Digite a tese" data-nome-filtro="tese"/>
+                      <button id="btnTese" class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="inputTese" data-classe-campo="tese" > 
+                          <i class="glyphicon glyphicon-plus" aria-label="mais"></i>
+                      </button>
+                    </p> <br/> <br/> <br>
+                        
+       
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-secondary btn-lg btn-tese btn-raised btn-default-bordered btn-upper col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
+                          <input class="radioBtnTese" type="radio" name="radioTese" id="possuiRepercussao" value="Sim" autocomplete="off" >Tem Repercussão Geral
+                        </label>
+                        <label class="btn btn-secondary active btn-lg btn-tese btn-raised btn-default-bordered btn-upper col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
+                          <input class="radioBtnTese" type="radio" name="radioTese" id="naoPossuiRepercussao" value="Não" autocomplete="off" checked>Não Tem
+                        </label>
+                      </div>
+                  </form>
+                </div>  
+              <br/> 
+              <hr/>
+
+              <strong>Tipo de Tese</strong>
+                <div class="campo-container m-t-16">
+                  <ul>
+                    <li class="item_pesquisa"><a>Controle Concentrado</a> 
+                      <span class="qnt_resultado">(3.000)</span>
+                    </li>
+                    <li class="item_pesquisa"><a>Repercussão Geral </a>
+                      <span class="qnt_resultado">(123)</span>
+                    </li>
+                    <li class="item_pesquisa"><a>Outros processos </a>
+                      <span class="qnt_resultado">(2.234)</span>
+                    </li>
+                  </ul>
+                </div>
+              <br/>
+              <hr/>
+
+              <strong>Órgão Julgador</strong>
+                <div class="campo-container m-t-16">
+                  <ul>
+                    <li class="item_pesquisa"><a>Plenário</a>
+                      <span class="qnt_resultado">(13.154)</span>
+                    </li>
+                    <li class="item_pesquisa"><a>Plenário Eletrônico</a>
+                      <span class="qnt_resultado">(54)</span>
+                    </li>
+                    <li class="item_pesquisa"><a>1ª Turma </a>
+                      <span class="qnt_resultado">(344)</span>
+                    </li>
+                    <li class="item_pesquisa"><a>2ª Turma </a>
+                      <span class="qnt_resultado">(24)</span>
+                    </li>
+                  </ul>
+                </div>
+              <br/>
+              <hr/>
+
+              <strong>Somente no texto da ementa</strong>
+              <div class="campo-container m-t-16">
+                <form id="filtro-texto-ementa">
+                    <p><input  class="col-md-9 col-xs-9 palavraPesquisa" placeholder="Informe o texto" list="suggestionsEmenta" type="text" id="inputEmenta" />
+                          <datalist id="suggestionsEmenta">
+                            <option value="opção 2"></option>
+                            <option value="opção 3"></option>
+                            <option value="palavra 1"></option>
+                            <option value="palavra 2"></option>
+                            <option value="exemplo 1"></option>
+                            <option value="exemplo 2"></option>
+                          </datalist>
+                      <button id="btnEmenta" class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="inputEmenta" data-classe-campo="ementa">
+                          <i class="glyphicon glyphicon-plus"></i>
+                      </button>
+                    </p>
+                </form>
+              </div>
+                <br/> </br>
+              <hr/>
+
+              <strong>Legislação</strong>
+                <div class="campo-container m-t-16">
+                  <ul>
+                      <li class="item_pesquisa"><a>Acordo (ACO)</a>
+                        <span class="qnt_resultado">(4.154)</span>
+                      </li>
+                      <li class="item_pesquisa"><a>Acento Regimental (ASR)</a>
+                        <span class="qnt_resultado">(3.154)</span>
+                      </li>
+                      <li class="item_pesquisa"><a>ATO (ATO)</a>
+                        <span class="qnt_resultado">(344)</span>
+                      </li>
+                  </ul> <br>
+                  <a data-toggle="collapse" href="#verMaisLegislacao" aria-expanded="false" aria-controls="verMaisLegislacao">
+                     <i class="glyphicon glyphicon-plus" aria-label="ver-mais"></i> Ver mais 
+                  </a>
+                  <div class="collapse ver-mais-pesquisas" id="verMaisLegislacao"> 
+                      <div class="card">
+                         <ul class="lista-pesquisas">
+                            <li>lista</li>
+                            <li>lista</li>
+                            <li>lista</li>
+                            <li>lista</li>
+                            <li>lista</li>
+                            <li>lista</li>
+                            <li>lista</li>
+                            <li>lista</li>
+                            <li>lista</li>
+                         </ul>
+                      </div>
+                  </div>
+                </div>  <br>
+
+                <div class="campo-container m-t-16">
+                  <form id="filtro-legislacao">
+                      <p><input type="text" id="num_legislacao" class="col-md-9 col-xs-9 palavraPesquisa" list="suggestionsLegislacao" placeholder="Digite o número da legislação" />
+                          <datalist id="suggestionsLegislacao">
+                              <option value="opção 1"></option>
+                              <option value="opção 2"></option>
+                              <option value="opção 3"></option>
+                              <option value="palavra 1"></option>
+                              <option value="palavra 2"></option>
+                              <option value="exemplo 1"></option>
+                              <option value="exemplo 2"></option>
+                          </datalist>
+                        <button id="btnLegislacao" class="btn btn-default btn-icone col-md-3 col-xs-3 btnFiltro" data-add-filtro="num_legislacao" data-classe-campo="leg">
+                            <i class="glyphicon glyphicon-plus"></i>
+                        </button>
+                      </p>
+                  </form> <br> <br> <br>
+                </div>  
+                <div class="campo-container m-t-16">
+                    <form class="legislacao">
+                      <label class="pesquisa_legislacao">Artigo</label>
+                      <div class="inputs_legislacao">
+                        <input class="col-md-6 col-xs-5 palavraPesquisa" placeholder="Art." type="text" id="txtArtigo" />
+                       <button  class="btn btn-default btn-icone col-md-6 col-xs-3 btnFiltro" id="btnArtigo"  data-add-filtro="txtArtigo" data-classe-campo="artigo">
+                            <i class="glyphicon glyphicon-plus"></i>
+                        </button>
+                      </div>
+                    </form>
+                </div>      
+                           <br> <br>
+                <div class="campo-container m-t-16">
+                  <form >  
+                      <label class="pesquisa_legislacao">Parágrafo</label>
+                      <div class="inputs_legislacao">
+                        <input class="col-md-6 col-xs-5 palavraPesquisa" placeholder="Par." type="text" id="txtParagrafo" />
+                       <button id="btnParagrafo" class="btn btn-default btn-icone col-md-6 col-xs-3 btnFiltro" data-add-filtro="txtParagrafo" data-classe-campo="paragrafo">
+                            <i class="glyphicon glyphicon-plus"></i>
+                        </button>
+                      </div><br> <br>
+                  </form>
+                </div>     
+                <div class="campo-container m-t-16">
+                    <form class="legislacao">  
+                      <label class="pesquisa_legislacao">Inciso</label>
+                      <div class="inputs_legislacao">
+                        <input class="col-md-6 col-xs-5 palavraPesquisa" placeholder="Inc." type="text" id="txtInciso" />
+                       <button id="btnInciso" class="btn btn-default btn-icone col-md-6 col-xs-3 btnFiltro" data-add-filtro="txtInciso" data-classe-campo="inciso">
+                            <i class="glyphicon glyphicon-plus"></i>
+                        </button>
+                      </div>
+                  </form>
+                </div>   <br> <br>
+                <div class="campo-container m-t-16">
+                    <form class="legislacao">  
+                      <label class="pesquisa_legislacao">Letra</label>
+                      <div class="inputs_legislacao">
+                        <input class="col-md-6 col-xs-5 palavraPesquisa" placeholder="Let." type="text" id="txtLetra" />
+                       <button id="btnLetra" class="btn btn-default btn-icone col-md-6 col-xs-3 btnFiltro" data-add-filtro="txtLetra" data-classe-campo="letra">
+                            <i class="glyphicon glyphicon-plus"></i>
+                        </button>
+                      </div>
+                  </form>
+                </div> <br /> <br />
+          </div>   <!--card conteudo-->
+        </div>     <!--fecha card -->
+
+
+     </div>
+     <div class="col-xs-12 col-sm-6 col-md-7 col-lg-8 row m-0 p-xs-0 p-sm-8">
+          
+        <!-- <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-secondary btn-resumida btn-lg btn-visualizacao btn-raised btn-default-bordered btn-upper col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
+              <input class="inputVisualizacao" type="radio" name="options" id="pesquisaResumida" autocomplete="off" >Pesquisa Resumida
+            </label>
+            <label class="btn btn-secondary active btn-completa btn-lg btn-visualizacao btn-raised btn-default-bordered btn-upper col-xs-6 col-md-6 m-t-xs-8 m-t-sm-8">
+              <input class="inputVisualizacao" type="radio" name="options" id="pesquisaCompleta" autocomplete="off">Pesquisa Completa
+            </label>
+        </div> -->
+        <div class="opcoes-pesquisa">
+
+            
+          <select class="form-control ordenacao">
+              <option selected>Ordernar por:</option>
+              <option value="1">Relevância</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+          </select>
+      
+          <div class="form-check" >
+            <label class="form-check-label labelVisualizacao">
+              <input class="form-check-input visualizacao" type="radio" name="exampleRadios" id="pesquisaCompleta" value="pesquisaCompleta" checked>
+              Pesquisa Completa
+            </label>
+            <label class="form-check-label labelVisualizacao">
+              <input class="form-check-input visualizacao" type="radio" name="exampleRadios" id="pesquisaResumida" value="pesquisaResumida" >
+              Pesquisa Resumida
+            </label>
+          </div>
+        </div>      
+        
+      <div class="card m-b-48" style="margin-top: 13px;">
+            <div class="card-conteudo row m-0 p-0">
+              <nav>
+                <ul class="nav nav-tabs col-md-12" role="tablist">
+                  <li role="presentation" class="active"><a data-toggle="tab" href="#acordaos">Acórdãos</a></li>
+                  <li role="presentation"><a data-toggle="tab" href="#repercussao">Repercussão Geral</a></li>
+                  <li role="presentation"><a data-toggle="tab" href="#sumulasvinculantes">Súmulas Vinculantes</a></li>
+                  <li role="presentation"><a data-toggle="tab" href="#sumulas">Súmulas</a></li>
+                  <li role="presentation" class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mais <i class="	glyphicon glyphicon-triangle-bottom"></i></a>
+                      <div class="dropdown-menu">
+                        <ul>
+                        <li><a class="dropdown-item" href="#">option 1</a> </li>
+                        <li><a class="dropdown-item" href="#">option 2</a> </li>
+                        <li><a class="dropdown-item" href="#">option 3</a> </li>
+                        </ul>
+                      </div>
+                    </li>
+                </ul>
+          
+                <!--select do menu para mobile -->
+                <div class="col-md-12">
+                  <select>  
+                    <option selected="selected" value="acordaos" class="active"> <a href"#acordaos"> Acórdãos </a></option> 
+                    <option value="repercussao"><a href="#repercussao"> Repercussão Geral </a></option> 
+                    <option value="sumulas"> <a href="#sumulas"> Súmulas </a></option> 
+                    <a href="#sumulasvinculantes"><option value="sumulas_vinculantes">  Súmulas Vinculantes </option>  </a>
+                    <option value="..."> <a href="#"> option 1 </a></option> 
+                    <option value="..."> <a href="#"> option 2 </a></option> 
+                    <option value="..."> <a href="#"> option 3 </a></option> 
+                  </select>   
+                </div>
+              </nav>  
+              <div class="tab-content col-md-12">
+                <%- include src/includes/pesquisa-acordaos.html %>
+                <%- include src/includes/pesquisa-repercussao-geral.html %>
+                <%- include src/includes/pesquisa-sumulas-vinculantes.html %>
+                <%- include src/includes/pesquisa-sumulas.html %>
+              </div>
+              <div class="tab-content col-md-12 mais-resultados">
+                  <a id="mais-resultados" class="btn btn-raised btn-default-bordered btn-upper p-l-16 p-r-16" target="_blank" href="">Carregar mais resultados</a>
+              </div>
+            </div> <!--card-conteudo-->
+        </div>
+      </div> <!--card-resultados-->
+
+      </div> 
+    </section>
+    <%- include src/includes/mapa-do-site.html %>
+    <%- include src/includes/footer.html %>
+  </div>
+</body>
+</html>

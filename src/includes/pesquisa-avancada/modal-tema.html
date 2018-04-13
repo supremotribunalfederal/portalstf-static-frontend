@@ -1,0 +1,74 @@
+
+<div class="modal fade" id="modal-tema" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="info-geral col-md-8">
+                    <h4> <strong class="titulo-completo-tema">984 - Natureza jurídica dos reajustes concedidos aos servidores
+                        da carreira militar pela Lei n. 7.622/2000, do Estado da Bahia.</strong>                                                              
+                    </h4>  
+                    <div style="float: right">
+                        <p><strong class="data-inicio-tema">Data de Início: </strong>15/12/2017</p>
+                        <p><strong class="data-fim-tema">Data Prevista Fim: </strong>15/02/2018</p>
+                    </div>
+                    <p><strong class="relator-tema">Relator:</strong> Min. DIAS TOFFOLI</p> 
+                    <p><strong class="pp-tema"> Processo Paradigma:</strong><a> RE 976610</a></p> 
+
+                    <strong>Descrição:</strong>  <p class="descricao-resumida"> 
+                        Recurso extraordinário em que se discute, à luz dos artigos 149, § 2º, III, a; e 195, IV, da Constituição Federal, 
+                        a constitucionalidade,ou não, da expressão “acrescido do valor do Imposto sobre Operações Relativas à Circulação de
+                        Mercadorias e sobre Prestação de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação
+                        <a class="ver-mais" data-toggle="collapse" href="#descricaoTema" aria-expanded="false" aria-controls="descricaoTema">...
+                            Ver mais <i class="material-icons more" title="Ver Descrição">expand_more</i>
+                        </a>
+                    </p>    
+                        <div class="collapse" id="descricaoTema" style="text-align: left">
+                        Recurso extraordinário em que se discute, à luz dos artigos 149, § 2º, III, a; e 195, IV, da Constituição Federal, 
+                        a constitucionalidade,ou não, da expressão “acrescido do valor do Imposto sobre Operações Relativas à Circulação de
+                        Mercadorias e sobre Prestação de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação
+                        – ICMS incidente no desembaraço aduaneiro e do valor das próprias contribuições”, contida no
+                        inciso I do art. 7º da Lei nº 10.865/2004, o qual estabelece que a base de cálculo da Contribuição
+                        para o Financiamento da Seguridade Social - COFINS e do Programa de Integração Social - PIS,
+                        em operações de importação, equivale, para efeitos da referida norma legal, ao valor aduaneiro,
+                        entendido como o montante que servir ou que serviria de base para o cálculo do imposto de importação,
+                        acrescido do valor do ICMS incidente no desembaraço aduaneiro e do valor das próprias contribuições.
+                        <a class="ver-menos" data-toggle="collapse" href="#descricaoTema" aria-expanded="false" aria-controls="descricaoTema">Ver menos
+                            <i class="material-icons less" title="Ver Menos">expand_less</i>
+                        </a>
+                        </div>
+                  
+                </div>
+                <div class="com-md-4 situacao"> 
+                    <span class="badge badge-repercussao">Há Repercussão Geral</span> 
+                    <span class="badge badge-suspensao">Há Suspensão Nacional</span>
+                    <span class="badge badge-merito-pendente">Mérito Pendente</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="card">
+                    <div class="card-conteudo row m-0 p-0">
+                        <nav>
+                            <ul class="nav nav-tabs col-md-12" role="tablist">
+                            <li role="presentation" id="li-detalhes" class="active"><a data-toggle="tab" href="#tab-detalhes"> Detalhamento</a></li>
+                            <li role="presentation" id="li-plenario" data-acao-chamada="plenario"><a data-toggle="tab" href="#tab-votos">Plenário Virtual</a></li>
+                            <li role="presentation" id="li-manifestacao"><a data-toggle="tab" href="#tab-manifestacao">Manifestação</a></li>
+                            <li role="presentation"><a data-toggle="tab" href="#tab-acordao"> Acórdão</a></li>
+                            </ul>
+                        </nav> 
+        
+                        <div class="tab-content col-md-12">
+
+                            <%- include acordao-tema.html %>
+                            <%- include detalhes-tema.html %>
+                            <%- include votos.html %>
+                            <%- include manifestacao.html %>
+                        </div>
+                    </div>  
+                </div>    
+            </div>
+        </div> <!--fim modal content -->
+    </div>
+</div>
