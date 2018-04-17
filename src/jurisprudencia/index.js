@@ -49,6 +49,15 @@ $('#juris-ver-todas-sumulas').on('click', function(){
 	ga('send', 'event', 'Jurisprudencia', 'Ultimas alterações Súmulas', 'Ver todas as Súmulas');
 });
 
+// Eventos de limpeza de campos ao colocar o foco em outro
+$('#txtNumero').focus(function() {
+    $('#txtPesquisaLivre').val('');
+});
+
+$('#txtPesquisaLivre').focus(function() {
+    $('#txtNumero').val('');
+});
+
 function pesquisarInteiroTeorProcesso(){
     window.open('//stf.jus.br/portal/inteiroTeor/pesquisarInteiroTeor.asp?tipoPesquisa=pesquisarNumero&argumento=' + txtNumeroProcesso.value, '_blank');
 }
@@ -111,11 +120,11 @@ $('#pesquisa-informativo-semanal').submit(function(e){
 });
 
 function pesquisarTermoInformativoSTF(termo) {
-    var url = "http://www.stf.jus.br/portal/informativo/pesquisarInformativo.asp?s1=" + termo;
-    window.open(url, "_blank");
+    if (termo.trim() != '') {
+        var url = "http://www.stf.jus.br/portal/informativo/pesquisarInformativo.asp?s1=" + escape(termo);
+        window.open(url, "_blank");
+    }
 }
-
-
 
 //--------------------------
 //Pesquisas prontas
