@@ -313,17 +313,17 @@ CONFIGURAÇÃO DO FILTRO DE PESQUISA AVANCADA
   .filtro-por-ministros {
     .card-imagem-ministros{width:60px;height:60px;background-size: 60px 60px;text-indent: -999999px;border-radius: 50%;}
     
-    #min-carmen-lucia {background-image: url('../img/ministros/ministra_carmen_lucia.jpg');}
-    #min-dias-toffoli {background-image: url('../img/ministros/ministro_dias_toffoli.jpg');}
-    #min-celso-melo {background-image: url('../img/ministros/ministro_celo_melo.jpg');}
-    #min-marco-aurelio {background-image: url('../img/ministros/ministro_marco_aurelio.jpg');}
-    #min-gilmar-mendes {background-image: url('../img/ministros/ministro_mendes.jpg');}
-    #min-ricardo-lewandowski {background-image: url('../img/ministros/ministro_lewandowski.jpg');}
-    #min-luiz-fux {background-image: url('../img/ministros/ministro_luiz_fux.jpg');}
-    #min-rosa-weber {background-image: url('../img/ministros/ministra_rosa_weber.jpg');}
-    #min-roberto-barroso {background-image: url('../img/ministros/ministro_roberto_barroso.jpg');}
-    #min-edson-fachin {background-image: url('../img/ministros/ministro_fachin.jpg');}
-    #min-alexandre-moraes {background-image: url('../img/ministros/ministro_moraes.jpg');}
+    .min-carmen-lucia {background-image: url('../img/ministros/ministra_carmen_lucia.jpg');}
+    .min-dias-toffoli {background-image: url('../img/ministros/ministro_dias_toffoli.jpg');}
+    .min-celso-melo {background-image: url('../img/ministros/ministro_celo_melo.jpg');}
+    .min-marco-aurelio {background-image: url('../img/ministros/ministro_marco_aurelio.jpg');}
+    .min-gilmar-mendes {background-image: url('../img/ministros/ministro_mendes.jpg');}
+    .min-ricardo-lewandowski {background-image: url('../img/ministros/ministro_lewandowski.jpg');}
+    .min-luiz-fux {background-image: url('../img/ministros/ministro_luiz_fux.jpg');}
+    .min-rosa-weber {background-image: url('../img/ministros/ministra_rosa_weber.jpg');}
+    .min-roberto-barroso {background-image: url('../img/ministros/ministro_roberto_barroso.jpg');}
+    .min-edson-fachin {background-image: url('../img/ministros/ministro_fachin.jpg');}
+    .min-alexandre-moraes {background-image: url('../img/ministros/ministro_moraes.jpg');}
 
     .lista-de-ministros {list-style-type: none;}
     li, .card-imagem-ministros {display: inline-block;}

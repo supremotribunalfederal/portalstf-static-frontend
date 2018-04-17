@@ -456,16 +456,8 @@ $('#btnAcessarPortalNocicitas').on('click', function() {
 })();
 
 $(function() {
-	$(".card-imagem-ministros").click(function() {
-		$(this).toggleClass("cinza");
-	})
-});
-$(function() {
 	$(".limpar-filtros").click(function() {
 		$(".box-opcoes-filtros").val("");
-
-		var ministros = document.getElementsByClassName("card-imagem-ministros");
-		$(ministros).addClass('cinza');
 	});
 });
 $(function() {
