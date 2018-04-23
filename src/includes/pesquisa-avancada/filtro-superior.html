@@ -1,0 +1,111 @@
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+
+    
+    <input class="form-control pesquisa-livre" type="text" onfocus="this.value=''" placeholder="Pesquisa Livre">
+
+    <%- include filtro-ministros.html %>
+
+        
+        <!-- Conteúdo das abas -->
+    <div class="conteudo-tab-filtros col-lg-12 col-md-12 col-sm-12 col-xs-12 p-0">
+  
+  
+      <!-- Sessão de pesquisas principais -->
+      <div class="conteudo-sessao-filtros p-l-0">     
+            <div id="mais-filtros-principais" style="margin-top: 10px">
+                
+                <input type="text" class="form-control opcao-filtro-rg" placeholder="Número do tema" list="lista-numeros-temas" autocomplete="on">
+                <datalist id="lista-numeros-temas">
+                    <option value="984"></option>
+                    <option value="983"></option>
+                    <option value="982"></option>
+                    <option value="981"></option>
+                    <option value="980"></option>
+                    <option value="979"></option>
+                </datalist>
+            
+                <input type="text" class="form-control opcao-filtro-rg" placeholder="Situação da Repercussão Geral" list="lista-situacao-rg"
+                    autocomplete="on">
+                <datalist id="lista-situacao-rg">
+                    <option value="Em Análise Preliminar de RG"></option>
+                    <option value="RG Reconhecida"></option>
+                    <option value="Com RG – Novo Tema"></option>
+                    <option value="Com RG – Reafirmação de Jurisprudência"></option>
+                    <option value="Sem RG – Questão sem Relevância"></option>
+                    <option value="Sem RG – Matéria Infraconstitucional"></option>
+                </datalist>
+            
+                <input type="text" class="form-control opcao-filtro-rg" placeholder="Situação Reconhecimento RG" list="lista-opcoes-reconhecimento"
+                    autocomplete="on">
+                <datalist id="lista-opcoes-reconhecimento">
+                    <option value="RG negada"></option>
+                    <option value="RG reconhecida"></option>
+                    <option value="Tema em análise"></option>
+                </datalist>
+            
+                <input type="text" class="form-control opcao-filtro-rg" placeholder="Situação Julgamento Mérito RG" list="lista-opcoes-julgamento"
+                    autocomplete="on">
+                <datalist id="lista-opcoes-julgamento">
+                    <option value="**Não se aplica**"></option>
+                    <option value="Julgado"></option>
+                    <option value="Pendente"></option>
+                </datalist>
+            
+                <input type="text" class="form-control opcao-filtro-rg" placeholder="Tem Tese" list="lista-opcoes-tem-tese"
+                autocomplete="on">
+                <datalist id="lista-opcoes-tem-tese">
+                    <option value="Não"></option>
+                    <option value="Sim"></option>
+                </datalist>
+            </div> 
+            <div id="mais-filtros-processos" >
+                <input type="text" class="form-control opcao-filtro-rg" placeholder="Situação Processo Paradigma" list="lista-opcoes-processo-paradima">
+                <datalist id="lista-opcoes-processo-paradima">
+                    <option value="Analisada Preliminar de RG"></option>
+                    <option value="Acórdão de RG Publicado"></option>
+                    <option value="Em Julgamento"></option>
+                    <option value="Mérito Julgado"></option>
+                    <option value="Acórdão do Mérito Julgado"></option>
+                    <option value="Trânsito em Julgado"></option>
+                    <option value="Aguarda Substituição de Paradigma"></option>
+                </datalist>
+            
+                <input type="text" class="form-control opcao-filtro-rg" placeholder="Classe Processo Paradigma" list="lista-classe-processo"
+                    autocomplete="on">
+                <datalist id="lista-classe-processo">
+                    <option value="AI"></option>
+                    <option value="ARE"></option>
+                    <option value="RE"></option>
+                </datalist>
+            
+                <input type="text" class="form-control opcao-filtro-rg" placeholder="Número Processo Paradigma" list="lista-numero-processo"
+                    autocomplete="on">
+                <datalist id="lista-numero-processo">
+                    <option value="136821"></option>
+                    <option value="221142"></option>
+                    <option value="330817"></option>
+                    <option value="333889"></option>
+                    <option value="377457"></option>
+                    <option value="398365"></option>
+                </datalist>
+            
+            
+                <input type="text" class="form-control opcao-filtro-rg" placeholder="Ramo do Direito" list="lista-ramo-direito" autocomplete="on">
+                <datalist id="lista-ramo-direito">
+                    <option value="Direito Administrativo"></option>
+                    <option value="Direito Civil"></option>
+                    <option value="Direito do Consumidor"></option>
+                    <option value="Direito do Trabalho"></option>
+                    <option value="Direito Penal"></option>
+                    <option value="Direitio Previdenciário"></option>
+                </datalist>
+            </div>
+
+            <div id="mais-filtros-data">
+            
+                <input type="text" id="data_inicial" class="form-control data-rg" placeholder="De" onfocus="(this.type='date')" />
+                <input type="text" id="data_final" class="form-control data-rg" placeholder="Até" onfocus="(this.type='date')" style="margin-top: 5px;"/>
+            </div>
+      </div>
+    </div>
+  </div>

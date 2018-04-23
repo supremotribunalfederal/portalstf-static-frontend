@@ -18,15 +18,16 @@ function removerFiltro(){
 }
 
 //excluir itens de pesquisa 
-itens_pesquisados.forEach(function(item_pesquisa){
-    item_pesquisa.addEventListener("click", function(){
-        this.remove();
-    });
-});
+// itens_pesquisados.forEach(function(item_pesquisa){
+//     item_pesquisa.addEventListener("click", function(){
+//         this.remove();
+//     });
+// });
 
 //botão excluir todos os filtros aplicados na div
 $("#apagar_filtro").click(function(){
     $(".badge").empty();
+    $('input').val('');
 });
 
 function botoesExibir(){
@@ -69,7 +70,7 @@ $(function(){
 
         var idDoCampo = $(this).data('add-filtro');
         var classe = $(this).data('classe-campo');
-        var valorFiltro = $(this).data('formata-data') ? [moment($('#'+idDoCampo).val()).format("DD/MM/YYYY")] : $('#'+idDoCampo).val().split(";");
+        var valorFiltro = $(this).data('formata-data') ? [moment($('#'+idDoCampo).val()).format("DD/MM/YYYY")] : $('#'+idDoCampo).val().split(";"); // altera formato data 
 
         valorFiltro.forEach(function(valor){
             var tirarEspaco = $.trim(valor);
@@ -79,7 +80,8 @@ $(function(){
             }  
 
         });
-        $('#'+idDoCampo).val(""); 
+        //limpa input
+  //      $('#'+idDoCampo).val(""); 
     });
 });
 
@@ -114,6 +116,59 @@ $(pesquisaCompleta).on("click",function(){
     pesquisaResumida.attr("checked",false); 
     padraoPesquisa();
 });
+
+
+//filtrar lista 
+
+$('input[type="search"]').keyup(function(){
+    
+    var that = this, $allListElements = $('.lista-pesquisas > li');
+
+    var $matchingListElements = $allListElements.filter(function(i, li){
+        var listItemText = $(li).text().toUpperCase(), searchText = that.value.toUpperCase();
+        return ~listItemText.indexOf(searchText);
+    });
+    
+    $allListElements.hide();
+    $matchingListElements.show();
+    
+});
+//mostrar valores registrados
+$('#btnPesquisar').click(function(e){
+    e.preventDefault();
+
+    var objetoDePesquisa = {
+        pesquisa: $('#pesquisaPrincipal').val(),
+        filtros: {
+            palavraChave:$('#palavraChave').val(),
+            numeroDoProcesso: $('#inputProcesso').val(),
+            relator: $('#inputRelator').val(),
+    
+            dataInicial: $('#data-inicio').val(),
+            dataFinal: $('#data-final').val(),
+    
+            tema: $('#inputTema').val(),
+            tese: $('#inputTese').val(),
+            possuiRepercussaoGeral: $('.active input[type="radio"]').attr('value'),
+            tipoDeTese: $(''),
+            orgaoJulgador: $(''),
+            ementa: $('#inputEmenta').val(),
+    
+            legislacao: {
+                tipo: $(' '),
+                numero: $('#num_legislacao').val(), 
+                artigo: $('#txtArtigo').val(),
+                paragrafo: $('#txtParagrafo').val(),
+                inciso: $('#txtInciso').val(),
+                letra:  $('#txtLetra').val()
+            }
+    
+        }
+    };
+
+    console.log(objetoDePesquisa.filtros);
+});   
+
 
 
  

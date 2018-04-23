@@ -17,6 +17,7 @@ const externals =['datepicker'];
 const secoes = [
   'noticias',
   'textos',
+  'textocombox',
   'repercussaogeral',
   'jurisprudencia',
   'transparencia',
@@ -30,7 +31,12 @@ const secoes = [
   'listarporparte',
   'listarpartes',
   'processo',
-  'estatistica'
+  'estatistica',
+  'documento',
+  'sobmedidaadvogados',
+  'sobmedidacidadaos',
+  'sobmedidaorgaos',  
+  'sobmedidaestudantes'
 ];
 
 const secoesChunks = secoes.reduce((prev, cur) => {
@@ -61,7 +67,33 @@ const includes = [
   'pesquisaavancada/tabela-temas',
   'pesquisaavancada/modal-tema',
   'pesquisaavancada/modal-relator',
-  'pesquisaavancada/modal-pesquisa-mobile'
+  'pesquisaavancada/modal-pesquisa-mobile',
+  'card-acessar-portal-transparencia',
+  'card-agenda-dos-ministros',
+  'card-audiencias-publicas',
+  'card-banners-qlik',
+  'card-cadastro-newsletter',
+  'card-canais-atendimento',
+  'card-composicao',
+  'card-constituicao',
+  'card-duvidas',
+  'card-estatisticasProcessuais',
+  'card-forum',
+  'card-glossario',
+  'card-guardiao',
+  'card-informativo',
+  'card-jurisprudencia-do-stf',
+  'card-jurisprudencia-lateral',
+  'card-legislacao-anotada',
+  'card-noticias',
+  'card-numerosSTF',
+  'card-pautas-julgamento',
+  'card-radio-justica',
+  'card-repercussao-geral',
+  'card-repercussao-lateral',
+  'card-supremo-em-acao',
+  'card-transparencia',
+  'card-tv-justica'
 ]
 
 module.exports = {

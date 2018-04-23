@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Supremo Tribunal Federal</title>
+    <link rel="icon" type="imagem/png" href="<%= require('assets/img/favicon.ico') %>" />
+
+</head>
+
+<body>
+    <div id="main" class="container-fluid p-0">
+        <%- include src/includes/header.html %>
+
+            <%- include src/includes/pesquisa.html %>
+
+
+                    <section id="conteudo" class="container-fluid m-0 p-0 p-t-8 m-r-8 m-l-8">
+                        <h2 class="titulo-pagina">Sob medida para <b>INSTITUIÇÕES</b></h2>
+                        <div class="row container center-block p-0">
+
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 row m-0 p-xs-0 p-sm-8">
+                                <!--card jurisprudencia -->
+                                <%- include src/includes/card-jurisprudencia-lateral.html %>
+                                
+                                <!--card repercussão geral -->
+
+                                <div class="card-repercussao-geral card m-b-24">
+                                    <div class="card-titulo">Repercussão Geral</div>
+                                
+                                    <div class="card-conteudo p-0">
+                                        <div class="card-caixa-texto card-descricao m-b-8 p-16">
+                                            <p> Conheça os temas de Repercussão geral e acompanhe as votações em tempo real.</p>   
+                                
+                                        </div>
+                                    </div>
+                                
+                                    <div class="row m-16 p-0 p-b-16">
+                                        <a href="#" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper btn-card-lateral col-xs-12">
+                                            Conheça os temas de Repercussão Geral
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 row m-0 p-xs-0 p-sm-8">
+                                <!-- card informativo stf-->
+                                <%- include src/includes/card-informativo.html %>
+
+                            </div>
+                            
+                            <!-- Cards laterais -->
+                            <div class="col-xs-12 col-sm-12 col-md-4 m-0 p-xs-0 p-sm-8">
+                                <%- include src/includes/card-pautas-julgamento.html %>
+                            </div>
+                        </div>
+                        <!-- Nova seção -->
+                        <div class="row container center-block p-0">
+                            <div class="col-xs-12 col-sm-6 col-md-7 col-lg-8 row m-0 p-xs-0 p-sm-8">
+
+                                <div class="card m-b-24 m-t-24 __fundo-escuro">
+                                    <div class="card-conteudo p-b-0">
+                                        <div class="row m-0 p-b-8 p-t-8">
+                                            <div class="pull-left p-0 p-b-16">
+                                                <h3 class="m-0 p-b-8">PORTAL DA INTEGRAÇÃO</h3>
+                                                <small>Conecte os sistemas da sua instituição com o STF</small>
+                                            </div>
+                                            <div class="row m-0 p-0 pull-right">
+                                                <a id="portal-da-integracao" href="#" target="_blank"
+                                                    class="btn btn-raised btn-fluid btn-default-bordered btn-upper p-l-16 p-r-16">
+                                                    mais informações
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="aplicacao-sumulas" class="card m-b-48">
+                                    <div class="card-titulo">Aplicação das Súmulas no STF</div>
+                    
+                                    <div class=" card-rodape p-0">
+                                        <div class="card-caixa-texto card-com-input p-16">
+                                            <strong>Pesquise o termo desejado para saber se há alguma súmula relacionada:</strong>
+                                            <div class="campo-container m-t-16">
+                                                <form name="frmPesquisa" style="overflow:auto" target="_blank" id="frmPesquisa" method="POST" action="http://stf.jus.br/portal/jurisprudencia/listarConsolidadaSumulas.asp">
+                                                    <div>
+                                                        <input class="col-md-4 m-b-8" type="text" name="txtPesquisaLivre" id="txtPesquisaLivre" placeholder="Digite o termo para pesquisar..."/>
+                                                    </div>
+                                
+                                                    <select id="pesquisa-ramo-direito" class="pesquisa-select col-md-4 col-xs-5"   name="txtRamoDireito">
+                                                        <option value="">Escolha o Ramo do Direito</option>
+                                                        <option value="1">Administrativo</option>
+                                                        <option value="2">Civil</option>
+                                                        <option value="3">Constitucional</option>
+                                                        <option value="4">Empresarial</option>
+                                                        <option value="5">Internacional</option>
+                                                        <option value="6">Militar</option>
+                                                        <option value="7">Penal</option>
+                                                        <option value="8">Previdenciário</option>
+                                                        <option value="9">Processual Civil</option>
+                                                        <option value="10">Processual do Trabalho</option>
+                                                        <option value="11">Processual Penal</option>
+                                                        <option value="12">Trabalhista</option>
+                                                        <option value="13">Tributário</option>
+                                                    </select>
+                                
+                                                    <button form="frmPesquisa" class="btn btn-default btn-icone col-md-2" id="btnPesquisarSumula">
+                                                        <i class="glyphicon glyphicon-search" aria-label="abrir pesquisa"></i>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- Cards laterais -->
+                            <div class="col-xs-12 col-sm-12 col-md-4 m-0 p-xs-0 p-sm-8">
+                                <!--card legislação anotada-->
+                                <%- include src/includes/card-legislacao-anotada.html %> 
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                    <%- include src/includes/mapa-do-site.html %>
+
+                    <%- include src/includes/footer.html %>
+
+    </div>
+   
+</body>
+
+</html>
