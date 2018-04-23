@@ -64,7 +64,6 @@ const includes = [
   'processo-deslocamento',
   'processo-peticoes',
   'processo-recursos',
-  'pesquisa-avancada/tabela-temas',
   'pesquisa-avancada/modais',
   'card-acessar-portal-transparencia',
   'card-agenda-dos-ministros',
