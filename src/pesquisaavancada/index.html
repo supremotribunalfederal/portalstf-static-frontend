@@ -37,7 +37,8 @@
 					<h5 class="card-titulo m-t-0">Temas</h5>
 					<div class="col-lg-2 col-xs-4 m-b-8">
 						<div class="qlik-numero">
-							<div class="embeddedArea qlik-autoload" data-qlik-objid="QUANTIDADE_REPERCUSSAO_GERAL_RECONHECIDA" data-qlik-app-name="REPERCUSSAOGERAL"></div>
+							<!-- Código para importar objeto do Qlik Sense no projeto que está no SVN -->
+							<!-- <div class="embeddedArea qlik-autoload" data-qlik-objid="QUANTIDADE_REPERCUSSAO_GERAL_RECONHECIDA" data-qlik-app-name="REPERCUSSAOGERAL"></div> -->
 						</div>
 						<div class="rotulo-qlik-numero">
 							<a href="" id="situacaoRGReconhecida">Reconhecida</a>
@@ -45,7 +46,8 @@
 					</div>
 					<div class="col-lg-2 col-xs-4 m-b-8">
 						<div class="qlik-numero">
-							<div class="embeddedArea qlik-autoload" data-qlik-objid="QUANTIDADE_REPERCUSSAO_GERAL_NEGADA" data-qlik-app-name="REPERCUSSAOGERAL"></div>
+							<!-- Código para importar objeto do Qlik Sense no projeto que está no SVN -->
+							<!-- <div class="embeddedArea qlik-autoload" data-qlik-objid="QUANTIDADE_REPERCUSSAO_GERAL_NEGADA" data-qlik-app-name="REPERCUSSAOGERAL"></div> -->
 						</div>
 						<div class="rotulo-qlik-numero">
 							<a href=""  id="situacaoRGNegada">Negada</a>
@@ -53,7 +55,8 @@
 					</div>
 					<div class="col-lg-2 col-xs-4 m-b-8">
 						<div class="qlik-numero">
-							<div class="embeddedArea qlik-autoload" data-qlik-objid="QUANTIDADE_REPERCUSSAO_GERAL_EM_ANALISE" data-qlik-app-name="REPERCUSSAOGERAL"></div>
+							<!-- Código para importar objeto do Qlik Sense no projeto que está no SVN -->
+							<!-- <div class="embeddedArea qlik-autoload" data-qlik-objid="QUANTIDADE_REPERCUSSAO_GERAL_EM_ANALISE" data-qlik-app-name="REPERCUSSAOGERAL"></div> -->
 						</div>
 						<div class="rotulo-qlik-numero">
 							<a href="" id="situacaoRGEmAnalise">Em análise</a>
@@ -61,7 +64,8 @@
 					</div>
 					<div class="col-lg-2 col-xs-4 m-b-8">
 						<div class="qlik-numero">
-							<div class="embeddedArea qlik-autoload" data-qlik-objid="QUANTIDADE_REPERCUSSAO_GERAL_TOTAL" data-qlik-app-name="REPERCUSSAOGERAL"></div>
+							<!-- Código para importar objeto do Qlik Sense no projeto que está no SVN -->
+							<!-- <div class="embeddedArea qlik-autoload" data-qlik-objid="QUANTIDADE_REPERCUSSAO_GERAL_TOTAL" data-qlik-app-name="REPERCUSSAOGERAL"></div> -->
 						</div>
 						<div class="rotulo-qlik-numero m-b-8  p-t-4">
 							<a href="#temas-repercussao"> Total</a>
@@ -69,7 +73,8 @@
 					</div>
 					<div class="col-lg-2 col-xs-4 m-b-8 __borda-l-cinza">
 						<div class="qlik-numero">
-							<div class="embeddedArea qlik-autoload" data-qlik-objid="QUANTIDADE_TEMAS_MERITO_JULGADO" data-qlik-app-name="REPERCUSSAOGERAL"></div>
+							<!-- Código para importar objeto do Qlik Sense no projeto que está no SVN -->
+							<!-- <div class="embeddedArea qlik-autoload" data-qlik-objid="QUANTIDADE_TEMAS_MERITO_JULGADO" data-qlik-app-name="REPERCUSSAOGERAL"></div> -->
 						</div>
 						<div class="rotulo-qlik-numero">
 							<a href="" id="situacaoMeritoJulgado">Julgado</a>
@@ -77,7 +82,8 @@
 					</div>
 					<div class="col-lg-2 col-xs-4 m-b-8">
 						<div class="qlik-numero">
-							<div class="embeddedArea qlik-autoload" data-qlik-objid="QUANTIDADE_TEMAS_MERITO_NAO_JULGADO" data-qlik-app-name="REPERCUSSAOGERAL"></div>
+							<!-- Código para importar objeto do Qlik Sense no projeto que está no SVN -->
+							<!-- <div class="embeddedArea qlik-autoload" data-qlik-objid="QUANTIDADE_TEMAS_MERITO_NAO_JULGADO" data-qlik-app-name="REPERCUSSAOGERAL"></div> -->
 						</div>
 						<div class="rotulo-qlik-numero">
 							<a href="" id="situacaoMeritoPendente">Pendente</a>
@@ -98,6 +104,7 @@
 						</ul>
 					</nav>
 
+					<%- include src/includes/pesquisa-avancada/modais.html %>
 					<div class="tab-content col-md-12">
 						<div id="tabela-de-temas" class="tab-pane fade in active">
 							<!-- Código referente a pesquisa no modo mobile -->
@@ -109,16 +116,14 @@
 							</div>
 
 							<div class="hidden-xs hidden-sm tabela-temas">
-								<%- include src/includes/pesquisa-avancada/tabela-temas.html %>
 								<!-- Código para importar objeto do Qlik Sense no projeto que está no SVN -->
 								<!-- <div class="embeddedArea qlik-autoload" data-qlik-objid="TABELA_PESQUISA_AVANCADA_TEMAS" data-qlik-app-name="REPERCUSSAOGERAL"></div> -->
 							</div>
 						</div>
-						<%- include src/includes/pesquisa-avancada/modais.html %>
 						
 						<div class="tab-pane fade p-t-16" id="graficos-de-temas">
 							<!-- Código para importar objeto do Qlik Sense no projeto que está no SVN -->
-							<!-- <div class="embeddedArea qlik-autoload" data-qlik-objid="CATEGORIA_HORIZONTAL" data-qlik-app-name="REPERCUSSAOGERAL"></div> -->
+							<!-- [escolher gráficos] -->
 						</div>
 					</div>
 					

@@ -20,6 +20,26 @@ CONFIGURAÇÃO DO CARD DE TEMAS
 .container-temas{
     h2 {font-weight: bold;}
     .card-de-temas {overflow-x: auto;}
+    .cards-principais{
+        position: relative;
+        left: 3em;
+        
+        .painel-filtros-selecionados ul li div{
+            box-shadow: 0px 1px 2px 0px rgb(0, 0, 0);
+            text-align: center;
+            position: relative;
+            float: left;
+        }
+        .link-limpar-filtro{
+            color: white;
+            float: right;
+            position: relative;
+            bottom: 13px;
+        }
+    }
+}
+.qlik-numero{
+    z-index:0;
 }
 
 /**************************************************************************************************
@@ -53,6 +73,4 @@ CONFIGURAÇÃO DO CARD DA TABELA TEMAS
     }
     .nav-tabs > li.active > a::after,
     .nav-tabs > li:hover > a::after {transform: scale(1);}
-
-    #graficos-de-temas img{width: 49%;}
 }
