@@ -16,7 +16,8 @@ plugins.push(new extractText('assets/styles/[name].css'));
 
 plugins.push(new webpack.ProvidePlugin({
     '$': 'jquery/dist/jquery.js',
-    'jQuery': 'jquery/dist/jquery.js'
+    'jQuery': 'jquery/dist/jquery.js',
+    'Q': 'q/q.js'
 }));
 
 plugins.push(new webpack.optimize.CommonsChunkPlugin({
@@ -43,7 +44,7 @@ if (process.env.NODE_ENV == 'production') {
 let config = {
     entry: {
         bundle: ['./src/index.js', './assets/scss/main.scss'],
-        vendor: ['jquery', 'bootstrap', 'moment', 'urijs']
+        vendor: ['jquery', 'bootstrap', 'moment', 'urijs', 'q']
     },
 
     output: {

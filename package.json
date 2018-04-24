@@ -25,6 +25,7 @@
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
     "html-webpack-plugin": "^2.29.0",
+    "imports-loader": "^0.8.0",
     "merge": "^1.2.0",
     "node-sass": "^4.5.2",
     "optimize-css-assets-webpack-plugin": "^2.0.0",
@@ -38,16 +39,18 @@
     "webpack-dev-server": "^2.5.1"
   },
   "dependencies": {
-    "bootstrap": "^3.3.7",
     "@material/form-field": "^0.30.0",
     "@material/select": "^0.30.0",
     "@material/textfield": "^0.30.0",
     "@material/theme": "^0.30.0",
+    "bootstrap": "^3.3.7",
     "jquery": "^3.2.1",
     "jquery-ui": "^1.12.1",
     "jquery-validation": "^1.17.0",
     "jquery.maskedinput": "^1.4.1",
     "moment": "^2.18.1",
+    "q": "^1.5.1",
+    "requirejs": "^2.3.5",
     "urijs": "^1.18.11"
   }
 }
