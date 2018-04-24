@@ -36,6 +36,7 @@ $(document).ready(function(){
         tabPartes.parent().attr('class', 'active');
         tabPartes.attr('aria-expanded','true');
         $('#partes').attr('class', 'tab-pane fade active in');
+        $('ul>li.li-partes').addClass('active');
         $('#informacoes').removeClass('active in');
         $('#peticoes').removeClass('active in');
         $('#andamentos').removeClass('active in');
@@ -43,3 +44,37 @@ $(document).ready(function(){
         $('#deslocamento').removeClass('active in');
     });
 });
+//esconder informações de processo ao rolar o scroll
+$('div.tab-content').scroll(function(){
+    $('.card-processo').fadeOut('slow', function(){
+        $('#btn-todas-partes').removeClass('btn-escondido');
+        $('.icone-expandir').removeClass('btn-escondido');
+    });
+});
+
+$('.icone-expandir').click(function(){
+    $('.card-processo').fadeIn("fast", function(){
+        $('#btn-todas-partes').addClass('btn-escondido');
+        $('.icone-expandir').addClass('btn-escondido');
+    });
+});
+
+$('#btn-todas-partes').click(function(){
+    var tabPartes = $('#tabPartes');
+    $('ul>li.active').removeClass('active');
+    tabPartes.parent().attr('class', 'active');
+    tabPartes.attr('aria-expanded', 'true');
+    $('#partes').addClass('tab-pane fade active in');
+    $('ul>li.li-partes').addClass('active');
+    $('#informacoes').removeClass('active in');
+    $('#peticoes').removeClass('active in');
+    $('#andamentos').removeClass('active in');
+    $('#recursos').removeClass('active in');
+    $('#deslocamento').removeClass('active in');
+});
+
+
+
+
+
+

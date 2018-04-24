@@ -7,23 +7,48 @@ padding: 0 16px;
 font-size: 0.8rem;
 }
 
+.btn-escondido{
+  display: none;
+}
 
-
-.processo-titulo {
+.processo-titulo {   
   font-size: 1.1rem;
   font-weight: bold;
   span {
-    font-size: 0.6rem;
+     font-size: 0.6rem;
   }
-}
+ }
 
 .processo-rotulo {
   font-size: 0.6rem;
+  float: left;
 }
 
+.icone-expandir > a{
+  font-size: 0.7rem;
+  float: right;
+  margin-right: 20px;
+  margin-top: 5px;
+  cursor: pointer;
+  color: white;
+
+  &:hover{
+    font-weight: 600;
+    text-decoration-line: none;
+  }
+}
+
+.titulo-processo{
+  background-color:#41b5ec !important;
+  color: #fff;
+  padding: 5px;
+  text-transform: uppercase;
+}
 .card-processo {
-  min-height: 175px;
-  background-color: $stfAzulCinza;
+  min-height: 180px;
+  padding-bottom: 10px;
+  background-color:#41b5ec;
+  color: white;
   .processo-dados {
     font-size: 0.8rem;
   }
@@ -37,6 +62,11 @@ font-size: 0.8rem;
   }
   .processo-link {
     font-size: 0.7rem;
+  }
+  a#todas-partes{
+    color: white;
+    font-weight: 700;
+    font-size: 1.2em;
   }
 }
 
@@ -52,9 +82,9 @@ font-size: 0.8rem;
 }
 
 .processo-informacoes-cabecalho {
-  background-color: $stfCinzaClaro;
-  margin-left: -20px;
-  margin-right: -20px;
+    background-color: #efefef;
+    margin-left: -20px;
+    margin-right: -20px;
 }
 
 .processo-informacoes {
@@ -154,7 +184,9 @@ ul .nav-tabs {
 }
 
 .tab-content {
-  padding: 0;
+  height: 600px;
+  overflow: auto;
+  padding: 0 20px;
 }
 
 // andamentos

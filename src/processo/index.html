@@ -38,7 +38,7 @@
               <div class="col-xs-12 col-md-12 p-0 p-l-xs-16 p-r-xs-16">
 
                 <div class="card m-b-48">
-                    <div class="card-titulo row m-0">
+                    <div class="titulo-processo row m-0">
                       <div class="col-md-4">
                         <div class="processo-titulo m-b-8">ADI 100
                           <div>
@@ -54,6 +54,9 @@
                       </div>
                       <div class="col-md-8">
                         <div class="btn-group pull-right">
+                          <button type="button" class="btn btn-default btn-primary-spacing btn-escondido" aria-label="Todas as Partes" id="btn-todas-partes">
+                            <span aria-hidden="true"><i class="glyphicon glyphicon-user" title="Todas as Partes"></i></span>
+                          </button>
                           <button type="button" class="btn btn-default btn-primary-spacing" aria-label="dje" id="btn-dje">
                             <span aria-hidden="true">Dje</span>
                           </button>
@@ -71,6 +74,9 @@
                           </button>
                         </div>
                       </div>
+                      <div class="icone-expandir btn-escondido">
+                        <a>Expandir <span class="glyphicon glyphicon-menu-down expandir"></span></a>
+                      </div>
                     </div>
                     <div class="card-conteudo row m-0 p-0">
                       <div class="card-processo">
@@ -85,7 +91,7 @@
                             Relator atual: Min. Ellen Gracie
                           </div>
                         </div>
-                        <div class="card-processo col-xs-12 col-md-7 m-b-8">
+                        <div class="col-xs-12 col-md-7 m-b-8">
                           <div class="p-l-0">
                             <div class="col-md-4 p-l-0">
                               <div class="processo-partes m-t-8">
@@ -131,12 +137,12 @@
                       </div>
                       <div class="col-md-12 row">
                         <ul class="nav nav-tabs" role="tablist">
-                          <li role="presentation"><a data-toggle="tab" href="#informacoes">Informações gerais</a></li>
-                          <li role="presentation"><a data-toggle="tab" href="#partes"><i class="glyphicon glyphicon-user"></i> Partes</a></li>
-                          <li role="presentation" class="active"><a data-toggle="tab" href="#andamentos"><i class="glyphicon glyphicon-time"></i> Andamentos</a></li>
-                          <li role="presentation"><a data-toggle="tab" href="#deslocamento"><i class="glyphicon glyphicon-map-marker"></i> Deslocamento</a></li>
-                          <li role="presentation"><a data-toggle="tab" href="#peticoes"><i class="glyphicon glyphicon-file"></i> Petições</a></li>
-                          <li role="presentation"><a data-toggle="tab" href="#recursos"><i class="glyphicon glyphicon-file"></i> Recursos</a></li>
+                          <li role="presentation" class="li-info-geral"><a data-toggle="tab" href="#informacoes">Informações gerais</a></li>
+                          <li role="presentation" class="li-partes"><a data-toggle="tab" href="#partes"><i class="glyphicon glyphicon-user"></i> Partes</a></li>
+                          <li role="presentation" class="li-andamentos active"><a data-toggle="tab" href="#andamentos"><i class="glyphicon glyphicon-time"></i> Andamentos</a></li>
+                          <li role="presentation" class="li-deslocamento"><a data-toggle="tab" href="#deslocamento"><i class="glyphicon glyphicon-map-marker"></i> Deslocamento</a></li>
+                          <li role="presentation" class="li-peticoes"><a data-toggle="tab" href="#peticoes"><i class="glyphicon glyphicon-file"></i> Petições</a></li>
+                          <li role="presentation" class="li-recursos"><a data-toggle="tab" href="#recursos"><i class="glyphicon glyphicon-file"></i> Recursos</a></li>
                         </ul>
                       </div>
                       <div class="tab-content col-md-12">
