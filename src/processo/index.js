@@ -29,13 +29,15 @@ $(document).ready(function(){
         window.open('http://stf.jus.br/portal/push/autenticarUsuario.asp?incluirProcesso=S', '_blank');
     });
 
-    $('#todas-partes').on('click', function(){
+    $('#todas-partes').on('click', function(e){
+        e.preventDefault();
         var tabPartes = $('#tabPartes');
         $('ul>li.active').removeClass('active');
         $('ul>li.active').attr('aria-expanded','false');
         tabPartes.parent().attr('class', 'active');
         tabPartes.attr('aria-expanded','true');
         $('#partes').attr('class', 'tab-pane fade active in');
+        $('ul>li.li-partes').addClass('active');
         $('#informacoes').removeClass('active in');
         $('#peticoes').removeClass('active in');
         $('#andamentos').removeClass('active in');
@@ -43,3 +45,39 @@ $(document).ready(function(){
         $('#deslocamento').removeClass('active in');
     });
 });
+//esconder informações de processo ao rolar o scroll
+$('div.tab-content').scroll(function(){
+    $('.card-processo').fadeOut('slow', function(){
+        $('#btn-todas-partes').removeClass('btn-escondido');
+        $('.icone-expandir').removeClass('btn-escondido');
+    });
+});
+
+$('.icone-expandir').click(function(e){
+    e.preventDefault();
+    $('.card-processo').fadeIn("fast", function(){
+        $('#btn-todas-partes').addClass('btn-escondido');
+        $('.icone-expandir').addClass('btn-escondido');
+    });
+});
+
+$('#btn-todas-partes').click(function(e){
+    e.preventDefault();
+    var tabPartes = $('#tabPartes');
+    $('ul>li.active').removeClass('active');
+    tabPartes.parent().attr('class', 'active');
+    tabPartes.attr('aria-expanded', 'true');
+    $('#partes').addClass('tab-pane fade active in');
+    $('ul>li.li-partes').addClass('active');
+    $('#informacoes').removeClass('active in');
+    $('#peticoes').removeClass('active in');
+    $('#andamentos').removeClass('active in');
+    $('#recursos').removeClass('active in');
+    $('#deslocamento').removeClass('active in');
+});
+
+
+
+
+
+
