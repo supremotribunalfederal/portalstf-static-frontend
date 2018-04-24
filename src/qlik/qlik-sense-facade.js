@@ -36,7 +36,7 @@ import 'q/q.js';
  * |-- @desc Retorna referência direta da conexão com o Qlik
  *
  */
-export default (function ($) {
+module.exports = (function ($) {
     /**
      * Configuração de conexão com o Qlik Sense
      */
@@ -50,7 +50,7 @@ export default (function ($) {
      * Configura o RequireJS, AMD utilizado pelo Qlik para carregar
      * o código Javascript sua API de integração.
      */
-    requirejs.config({
+    window.requirejs.config({
         baseUrl: (config.isSecure ? "https://" : "http://")
             + config.host
             + (config.port ? ":" + config.port : "")
@@ -120,6 +120,7 @@ export default (function ($) {
     var registraAplicacao = function (facade) {
         aplicacoesDoQlik[facade.id] = facade;
     };
+
     var aplicacaoExiste = function (id) {
         return aplicacoesDoQlik[id] != undefined;
     };
@@ -147,6 +148,25 @@ export default (function ($) {
             return facade;
         });
     };
+
+    /**
+     * Carrega valores de um determinado campo do Qlik
+     * 
+     * @param campoQlik Campo do Qlik Sense (http://help.qlik.com/en-US/sense-developer/3.0/Subsystems/APIs/Content/FieldAPI/QField.htm)
+     * @param callbackComValores
+     */
+    var armazenaValoresDoCampo = function(campoQlik, callbackComValores) {
+        campoQlik.getData();
+        campoQlik.OnData.bind(function observer() {
+            var valores = campoQlik.rows.map(function(element) {
+                return element.qText;
+            });
+            callbackComValores(valores);
+
+            campoQlik.OnData.unbind(observer);
+        });
+    };
+
     /**
      * Pega uma conexão direta com o Qlik Sense por meio do
      * RequireJS e a armazena na variável 'qlik'.
@@ -188,6 +208,7 @@ export default (function ($) {
     modulo.getAplicacao = getAplicacao;
     modulo.aplicacaoExiste = aplicacaoExiste;
     modulo.registraAplicacao = registraAplicacao;
+    modulo.armazenaValoresDoCampo = armazenaValoresDoCampo;
     modulo.getConexaoDiretaComQlik = getConexaoDiretaComQlik;
     return modulo;
 })(jQuery);
@@ -196,21 +217,3 @@ export default (function ($) {
 // ##################################################
 // # Funções utilitárias para trabalhar com o Qlik. #
 // ##################################################
-
-/**
- * Carrega valores de um determinado campo do Qlik
- * 
- * @param campoQlik Campo do Qlik Sense (http://help.qlik.com/en-US/sense-developer/3.0/Subsystems/APIs/Content/FieldAPI/QField.htm)
- * @param callbackComValores
- */
-var armazenaValoresDoCampo = function(campoQlik, callbackComValores) {
-    campoQlik.getData();
-    campoQlik.OnData.bind(function observer() {
-        var valores = campoQlik.rows.map(function(element) {
-            return element.qText;
-        });
-        callbackComValores(valores);
-
-        campoQlik.OnData.unbind(observer);
-    });
-};
