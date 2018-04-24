@@ -29,7 +29,8 @@ $(document).ready(function(){
         window.open('http://stf.jus.br/portal/push/autenticarUsuario.asp?incluirProcesso=S', '_blank');
     });
 
-    $('#todas-partes').on('click', function(){
+    $('#todas-partes').on('click', function(e){
+        e.preventDefault();
         var tabPartes = $('#tabPartes');
         $('ul>li.active').removeClass('active');
         $('ul>li.active').attr('aria-expanded','false');
@@ -52,14 +53,16 @@ $('div.tab-content').scroll(function(){
     });
 });
 
-$('.icone-expandir').click(function(){
+$('.icone-expandir').click(function(e){
+    e.preventDefault();
     $('.card-processo').fadeIn("fast", function(){
         $('#btn-todas-partes').addClass('btn-escondido');
         $('.icone-expandir').addClass('btn-escondido');
     });
 });
 
-$('#btn-todas-partes').click(function(){
+$('#btn-todas-partes').click(function(e){
+    e.preventDefault();
     var tabPartes = $('#tabPartes');
     $('ul>li.active').removeClass('active');
     tabPartes.parent().attr('class', 'active');

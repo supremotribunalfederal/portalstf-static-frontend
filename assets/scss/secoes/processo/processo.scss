@@ -186,7 +186,7 @@ ul .nav-tabs {
 .tab-content {
   height: 600px;
   overflow: auto;
-  padding: 0 20px;
+  padding: 10px 20px;
 }
 
 // andamentos
@@ -200,7 +200,7 @@ position: relative;
 background: #fff;
 border: 1px solid #ddd;
 border-radius: 3px;
-padding: 5px 10px;
+padding: 5px 5px 0px 5px;;
 position: relative;
 }
 .andamento-item .andamento-inner:before {
@@ -236,7 +236,7 @@ bottom: -30px;
 box-shadow: 0 0 3px rgba(0,0,0,0.2);
 content: "";
 height: 100%;
-left: -30px;
+left: -34px;
 position: absolute;
 width: 3px;
 }
@@ -247,17 +247,85 @@ border-radius: 50%;
 box-shadow: 0 0 5px rgba(0,0,0,0.1);
 content: "";
 height: 15px;
-left: -36px;
+left: -40px;
 position: absolute;
 top: 10px;
 width: 15px;
 }
+
+// se tiver orgão julgador 
+.julgador{
+  &:after{
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 45px;
+    left: -56px;    
+    top: -6px;
+    width: 45px;
+  }
+}
+.presidente{
+  &:after{
+    background-image: url('../../img/ministros/presidente.jpg');
+  }
+}
+.marco-aurelio{
+  &:after{
+    background-image: url('../../img/ministros/ministro_marco_aurelio.jpg');
+  }
+}
+.dias-toffoli{
+  &:after{
+    background-image: url('../../img/ministros/ministro_dias_toffoli.jpg');
+  }
+}
+.fachin{
+  &:after{
+    background-image: url('../../img/ministros/ministro_fachin.jpg');
+  }
+}
+.lewandowski{
+  &:after{
+    background-image: url('../../img/ministros/ministro_lewandowski.jpg');
+  }
+}
+.luiz-fux{
+  &:after{
+    background-image: url('../../img/ministros/ministro_luiz_fux.jpg');
+  }
+}
+.alexandre-moraes{
+  &:after{
+    background-image: url('../../img/ministros/ministro_moraes.jpg');
+  }
+}
+.celso-mello{
+  &:after{
+    background-image: url('../../img/ministros/ministro_celso_mello.jpg');
+  }
+}
+.rosa-weber{
+  &:after{
+    background-image: url('../../img/ministros/ministra_rosa_weber.jpg');
+  }
+}
+.gilmar-mendes{
+  &:after{
+    background-image: url('../../img/ministros/ministro_mendes.jpg');
+  }
+}
+.roberto-barroso{
+  &:after{
+    background-image: url('../../img/ministros/ministro_roberto_barroso.jpg');
+  }
+}
+
 .clearfix:before, .clearfix:after {
 content: " ";
 display: table;
 }
 .andamento-item .message-head {
-padding-bottom: 8px;
+padding-bottom: 2px;
 }
 .andamento-item .message-head .andamento-detalhe {
 overflow: hidden;
@@ -300,10 +368,7 @@ color: #333;
 font-weight: bold;
 text-align: right;
 }
-.andamento-julgador {
-  font-size: 0.7rem;
-  font-weight: bold;
-}
+
 .post-meta > div {
 color: #777;
 font-size: 12px;
