@@ -62,6 +62,13 @@ let config = {
     module: {
         rules: [
             {
+                test: path.join(__dirname, 'src', 'qlik', 'qlik-sense-facade.js'),
+                use: [{
+                    loader:'expose-loader',
+                    options: 'qlikSense'
+                }]
+            },
+            {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
