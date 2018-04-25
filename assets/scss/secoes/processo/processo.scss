@@ -45,7 +45,7 @@ font-size: 0.8rem;
   text-transform: uppercase;
 }
 .card-processo {
-  min-height: 180px;
+  min-height: 135px;
   padding-bottom: 10px;
   background-color:#41b5ec;
   color: white;
@@ -173,11 +173,11 @@ ul .nav-tabs {
   transform: scale(1);
 }
 
-.tab-nav > li > a::after {
+//.tab-nav > li > a::after {
   // background: $stfAzulEscuro none repeat scroll 0% 0%;
   // color: $stfBranco;
   // 21527d
-}
+//}
 
 .tab-pane {
   padding: 0;
@@ -200,7 +200,7 @@ position: relative;
 background: #fff;
 border: 1px solid #ddd;
 border-radius: 3px;
-padding: 5px 5px 0px 5px;;
+padding: 5px 5px 0px 5px;
 position: relative;
 }
 .andamento-item .andamento-inner:before {
@@ -254,70 +254,46 @@ width: 15px;
 }
 
 // se tiver orgão julgador 
-.julgador{
-  &:after{
+.julgador:after{
     background-size: contain;
     background-repeat: no-repeat;
     height: 45px;
     left: -56px;    
     top: -6px;
     width: 45px;
-  }
 }
-.presidente{
-  &:after{
+.presidente:after{
     background-image: url('../../img/ministros/presidente.jpg');
-  }
 }
-.marco-aurelio{
-  &:after{
+.marco-aurelio:after{
     background-image: url('../../img/ministros/ministro_marco_aurelio.jpg');
-  }
 }
-.dias-toffoli{
-  &:after{
+.dias-toffoli:after{
     background-image: url('../../img/ministros/ministro_dias_toffoli.jpg');
-  }
 }
-.fachin{
-  &:after{
+.fachin:after{
     background-image: url('../../img/ministros/ministro_fachin.jpg');
-  }
 }
-.lewandowski{
-  &:after{
+.lewandowski:after{
     background-image: url('../../img/ministros/ministro_lewandowski.jpg');
-  }
 }
-.luiz-fux{
-  &:after{
+.luiz-fux:after{
     background-image: url('../../img/ministros/ministro_luiz_fux.jpg');
-  }
 }
-.alexandre-moraes{
-  &:after{
+.alexandre-moraes:after{
     background-image: url('../../img/ministros/ministro_moraes.jpg');
-  }
 }
-.celso-mello{
-  &:after{
+.celso-mello:after{
     background-image: url('../../img/ministros/ministro_celso_mello.jpg');
-  }
 }
-.rosa-weber{
-  &:after{
+.rosa-weber:after{
     background-image: url('../../img/ministros/ministra_rosa_weber.jpg');
-  }
 }
-.gilmar-mendes{
-  &:after{
+.gilmar-mendes:after{
     background-image: url('../../img/ministros/ministro_mendes.jpg');
-  }
 }
-.roberto-barroso{
-  &:after{
+.roberto-barroso:after{
     background-image: url('../../img/ministros/ministro_roberto_barroso.jpg');
-  }
 }
 
 .clearfix:before, .clearfix:after {
