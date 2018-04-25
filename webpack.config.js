@@ -68,7 +68,7 @@ plugins.push(new webpack.DefinePlugin({
 let config = {
     entry: {
         bundle: ['./src/index.js', './assets/scss/main.scss'],
-        vendor: ['jquery', 'bootstrap', 'moment', 'urijs', 'q']
+        vendor: ['jquery', 'bootstrap', 'moment', 'urijs', 'q', './assets/qlik/qlik-styles.css', './assets/qlik/qlik.css']
     },
 
     output: {
@@ -109,12 +109,25 @@ let config = {
                     ], 
                     fallback: 'style-loader'
                 }),
-                exclude: new RegExp('node_modules}')
+                exclude: new RegExp('node_modules')
             },
             {
                 test: /\.css$/,
                 use: extractText.extract({
                     use: 'css-loader',
+                    fallback: 'style-loader'
+                }),
+                exclude: path.join(__dirname, 'assets', 'qlik', 'qlik-styles.css')
+            },
+            {
+                test: /qlik-styles\.css$/,
+                use: extractText.extract({
+                    use: [{
+                        loader:'css-loader',
+                        options: {
+                            url: false
+                        }
+                    }],
                     fallback: 'style-loader'
                 })
             },
