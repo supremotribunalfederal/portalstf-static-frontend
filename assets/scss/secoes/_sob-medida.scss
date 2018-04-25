@@ -2,9 +2,13 @@
   background: $stfCinzaClaro;
   padding: 16px;
 
+  .sob-medida-container {
+    text-align: center;
+  }
+
   .sob-medida-item {
-    float: left;
-    margin-right: 24px;
+    margin-right: 88px;
+    display: inline-block;
 
     &:last-of-type {
       margin-right: 0;
