@@ -24,14 +24,14 @@ var populaComboBox = function(idCombo) {
 };
 
 qlikSense.getAplicacao(qlikSense.ACERVO).then(function(facadeAcervoQlik) {
-    console.log('facade acervo', facadeAcervoQlik);
+
     facadeAcervoQlik.getClasses().then(populaComboBox('comboClasses'));
     facadeAcervoQlik.getTiposOrgao().then(populaComboBox('comboLocalizacao'));
     facadeAcervoQlik.getTiposClasse().then(populaComboBox('comboTipoClasse'));
 
 });
 
-function clickMinistro(ministro) {
+window.clickMinistro = function(ministro) {
     var imagem = document.getElementById(ministro.id);
     imagem.classList.toggle("cinza");
 
@@ -48,7 +48,7 @@ function clickMinistro(ministro) {
 };
 
 
-function clickTodoTribunal(){
+window.clickTodoTribunal = function() {
     var imagens = [].slice.call(document.querySelectorAll('.card-imagem-ministros'));
     imagens.forEach(function(imagem) {
         imagem.classList.add('cinza');
