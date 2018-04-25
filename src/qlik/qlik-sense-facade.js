@@ -41,7 +41,7 @@ module.exports = (function ($) {
      * Configuração de conexão com o Qlik Sense
      */
     var config = {
-        host: 'transparencia.stf.jus.br',
+        host: `${QLIK.URL}`,
         prefix: '/',
         port: 80,
         isSecure: false
@@ -200,8 +200,8 @@ module.exports = (function ($) {
     /**
      * Constantes que identificam as aplicações no Qlik.
      */
-    modulo.ACERVO = '9e787043-f90c-4781-a48b-c1351ba17379';
-    modulo.REPERCUSSAOGERAL = 'b88460cb-8745-4fbc-973b-ddfee50c02aa';
+    modulo.ACERVO = `${QLIK.ACERVO.ID}`;
+    modulo.REPERCUSSAOGERAL = `${QLIK.REPERCUSSAOGERAL.ID}`;
     /**
      * API pública do módulo.
      */

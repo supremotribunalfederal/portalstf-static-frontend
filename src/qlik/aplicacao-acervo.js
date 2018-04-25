@@ -74,7 +74,7 @@ module.exports = (function(qlikSense) {
      * de maneira transparente.
      */
     var aplicacao = {
-        id: '9e787043-f90c-4781-a48b-c1351ba17379'
+        id: qlikSense.ACERVO
     };
 
     /**

@@ -25,6 +25,16 @@ plugins.push(new webpack.optimize.CommonsChunkPlugin({
     filename: 'scripts/vendor.js'
 }));
 
+let QLIK = {
+    URL: JSON.stringify('analiticod.stf.jus.br'),
+    ACERVO: {
+        ID: JSON.stringify('2f46c444-d61d-48f9-b6b3-124773a3c764')
+    },
+    REPERCUSSAOGERAL: {
+        ID: JSON.stringify('b88460cb-8745-4fbc-973b-ddfee50c02aa')
+    }
+};
+
 if (process.env.NODE_ENV == 'production') {
     plugins.push(new webpack.optimize.ModuleConcatenationPlugin());
 
@@ -39,7 +49,21 @@ if (process.env.NODE_ENV == 'production') {
         },
         canPrint: true
     }));
+
+    QLIK = {
+        URL: JSON.stringify('transparencia.stf.jus.br'),
+        ACERVO: {
+            ID: JSON.stringify('9e787043-f90c-4781-a48b-c1351ba17379')
+        },
+        REPERCUSSAOGERAL: {
+            ID: JSON.stringify('b88460cb-8745-4fbc-973b-ddfee50c02aa')
+        }
+    };
 }
+
+plugins.push(new webpack.DefinePlugin({
+    'QLIK': QLIK
+}));
 
 let config = {
     entry: {
