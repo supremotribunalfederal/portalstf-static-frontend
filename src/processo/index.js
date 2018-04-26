@@ -49,7 +49,6 @@ $(document).ready(function(){
 $('div.tab-content').scroll(function(){
     $('.card-processo').fadeOut('slow', function(){
         $('#btn-todas-partes').fadeIn();
-        $('.icone-expandir').removeClass('btn-escondido');
     });
 });
 
