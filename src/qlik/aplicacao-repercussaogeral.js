@@ -1,4 +1,4 @@
-import qlikSense from './qlik-sense-facade.js';
+import '../qlik/qlik-sense-facade.js';
 /**
  * Registra a aplicação ACERVO no módulo de integração com o Qlik Sense.
  *
@@ -53,14 +53,15 @@ import qlikSense from './qlik-sense-facade.js';
  *    |-- @desc Acopla a visualização de um objeto do Qlik em um elemento HTML
  *    |-- @param elemento Elemento html que renderizará uma informação provida pela aplicação
  */
-export default (function (qlikSense) {
+module.exports = (function () {
     /**
      * Expõe a todas as funcionalidades disponíveis na aplicação Qlik
      * de maneira transparente.
      */
     var aplicacao = {
-        id: 'b88460cb-8745-4fbc-973b-ddfee50c02aa'
+        id: qlikSense.REPERCUSSAOGERAL
     };
+
     /**
      * Constantes que identificam cada campo disponível na aplicação
      */
@@ -83,10 +84,10 @@ export default (function (qlikSense) {
     aplicacao.QUANTIDADE_REPERCUSSAO_GERAL_TOTAL = 'dLqvJBz';
     aplicacao.QUANTIDADE_REPERCUSSAO_GERAL_EM_ANALISE = 'kbxua';
     aplicacao.TABELA_ACUMULADO_TEMAS = 'kBQWmJ';
-    aplicacao.TABELA_SITUACAO_MERITO = 'NQbAxS';
-    aplicacao.TABELA_SITUACAO_RG = 'KPuDBmk';
+    aplicacao.TABELA_SITUACAO_MERITO = `${QLIK.REPERCUSSAOGERAL.TABELA_SITUACAO_MERITO}`;
+    aplicacao.TABELA_SITUACAO_RG = `${QLIK.REPERCUSSAOGERAL.TABELA_SITUACAO_RG}`;
     aplicacao.TABELA_SITUACAO_RECONHECIMENTO_RG = 'b60a6338-5e54-4c85-97bf-f8a6b0424eca';
-    aplicacao.TABELA_MERITOJULGADO_PENDENTE = 'arPD';
+    aplicacao.TABELA_MERITOS_JULGADOS_ANO = `${QLIK.REPERCUSSAOGERAL.TABELA_MERITOS_JULGADOS_ANO}`;;
     /**
      * Referência para a aplicação ACERVO no Qlik Sense.
      */
@@ -120,7 +121,7 @@ export default (function (qlikSense) {
     var getValorDoCampo = function (idDoCampo) {
         if (aplicacao.valoresCampos[idDoCampo] == 'nao-carregado') {
             var deferred = Q.defer();
-            armazenaValoresDoCampo(aplicacao.campos[idDoCampo], function (valores) {
+            qlikSense.armazenaValoresDoCampo(aplicacao.campos[idDoCampo], function (valores) {
                 aplicacao.valoresCampos[idDoCampo] = valores;
                 deferred.resolve(valores);
             });
@@ -167,4 +168,4 @@ export default (function (qlikSense) {
         aplicacaoNoQlik.close();
     };
     qlikSense.registraAplicacao(aplicacao);
-})(qlikSense);
+})();
