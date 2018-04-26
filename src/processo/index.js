@@ -49,9 +49,16 @@ $(document).ready(function(){
 $('div.tab-content').scroll(function(){
     $('.card-processo').fadeOut('slow', function(){
         $('#btn-todas-partes').fadeIn();
+        $('.icone-expandir').fadeIn();
     });
 });
-
+//expnadir informações ao clicar no icone 
+$('.icone-expandir').click(function(){
+    $('.card-processo').fadeIn("slow");
+    $(this).fadeOut('slow');
+    $('#btn-todas-partes').fadeOut('slow');
+});
+//ir para tab ao clicar no icone 'partes'
 $('#btn-todas-partes').click(function(e){
     e.preventDefault();
     $('ul>li.active').removeClass('active');
@@ -63,12 +70,13 @@ $('#btn-todas-partes').click(function(e){
     $('#recursos').removeClass('active in');
     $('#deslocamento').removeClass('active in');
 });
-
+//mostrar informações com o scroll no topo
 $(window).mouseover(function(e){
     e.preventDefault();
     if ($('div.tab-content').scrollTop() == 0){
         $('.card-processo').fadeIn("slow", function () {
             $('#btn-todas-partes').fadeOut();
+            $('.icone-expandir').fadeOut();
         });
     }
 });

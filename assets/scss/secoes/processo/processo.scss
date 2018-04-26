@@ -24,6 +24,20 @@ font-size: 0.8rem;
   float: left;
 }
 
+.icone-expandir > a{
+  font-size: 0.7rem;
+  float: right;
+  margin-right: 20px;
+  margin-top: 5px;
+  cursor: pointer;
+  color: white;
+
+  &:hover{
+    font-weight: 600;
+    text-decoration-line: none;
+  }
+}
+
 .titulo-processo{
   background-color:#41b5ec !important;
   color: #fff;
