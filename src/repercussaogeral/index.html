@@ -89,152 +89,248 @@
             </div>
           </div>
 
-            <div id="temas-repercussao" class="card m-b-48">
-                <div class="card-titulo">Temas de Repercussão Geral</div>
-                <div class="card-conteudo row m-0 p-0">
-                    <div class="col-md-4 text-center p-t-16">
-                        <div class="qlik-numero">
-                          <div class="embeddedArea" data-qlik-objid="yeAFV" data-qlik-appid="b88460cb-8745-4fbc-973b-ddfee50c02aa"></div>
-                        </div>
-                        <div class="rotulo-qlik-numero">
-                          <a href="/repercussaogeral#repgeral-qtd-temas-categoria-card"> Mérito julgado</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 text-center p-t-16">
-                        <div class="qlik-numero">
-                            <div class="embeddedArea" data-qlik-objid="RNAB" data-qlik-appid="b88460cb-8745-4fbc-973b-ddfee50c02aa"></div>
-                        </div>
-                        <div class="rotulo-qlik-numero m-b-8">
-                            <a href="/repercussaogeral#repgeral-qtd-temas-categoria-card"> Mérito não julgado</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 text-center p-t-16">
-                      <div class="qlik-numero">
-                        <div class="embeddedArea" data-qlik-objid="kPzDGe" data-qlik-appid="b88460cb-8745-4fbc-973b-ddfee50c02aa"></div>
-                      </div>
-                      <div class="rotulo-qlik-numero m-b-8">
-                        <a href="/repercussaogeral#repgeral-qtd-temas-categoria-card"> Sem repercussão</a>
-                      </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="acessar-portal-noticias" class="row m-0 m-r-8 m-l-8 m-b-48">
-                <div class="col-md-2 p-0"></div>
-                    <div class="col-md-8 p-0">
-                        <a class="btn btn-default-bordered btn-raised btn-upper btn-fluid" target="_blank" href="http://www.stf.jus.br/portal/jurisprudenciaRepercussao/pesquisarProcesso.asp">Ir para a pesquisa avançada</a>
-                    </div>
-                <div class="col-md-2 p-0"></div>
-            </div>
-
-            <div id="repercussao-geral" class="card m-b-48">
-              <div class="card-titulo">Dados da Repercussão geral</div>
-              <div class="card-conteudo row m-0 m-t-16 b-b-16 p-0">
-                <div class="col-md-6 col-lg-4">
-                  <div class="card-caixa-texto m-b-16">
-                    <h4 class="m-0 m-t-8 m-b-16">Teses</h4>
-                    <ul>
-                      <li><a href="//www.stf.jus.br/portal/jurisprudenciaRepercussao/listarProcesso.asp?PesquisaEm=tema&PesquisaEm=controversia&PesquisaEm=ambos&situacaoRG=TODAS&situacaoAtual=S&txtTituloTema=&numeroTemaInicial=&numeroTemaFinal=&acao=pesquisarProcesso&dataInicialJulgPV=&dataFinalJulgPV=&classeProcesso=&numeroProcesso=&ministro=&ordenacao=asc&botao=" target="_blank">Temas de repercussão geral</a></li>
-                      <li><a href="//novoportal.stf.jus.br/textos/verTexto.asp?servico=repercussaoTemasSuspensao&pagina=principal">Temas de suspensão nacional</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                  <div class="card-caixa-texto m-b-16">
-                    <h4 class="m-0 m-t-8 m-b-16">Números</h4>
-                    <ul>
-                      <li><a href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaRepercussaoGeral&pagina=numeroRepercussao" target="_blank">Repercussão Geral</a></li>
-                      <li><a href="//www.stf.jus.br/portal/jurisprudenciaRepercussao/listarJulgado.asp" target="_blank">Últimos julgados</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-md-12 col-lg-4 row m-0 m-b-16">
-                  <div class="col-md-6 col-lg-12 p-0 p-l-md-16">
-                    <div class="card-caixa-texto __fundo-escuro p-b-16 m-b-16">
-                      <h4 class="m-0 m-t-8 m-b-16">Fórum</h4>
-                      <p>Somente para órgãos credenciados</p>
-                      <button id="entrarForum" class="btn btn-default-bordered btn-raised btn-fluid btn-upper" type="button" href="https://forum.stf.jus.br/"  target="_blank">Entrar</button>
-                    </div>
-                  </div>
-                </div>
+          <div id="filtroMinistro" class="card m-b-24 m-t-24">
+            <div class="card-titulo">Filtre por um ministro</div>
+            <div class="card-conteudo">
+              <div id="lista_ministros" class="sob-medida-item p-0 m-r-16 m-l-16 p-b-10">
+                <img alt="Ministro Presidente" id="MINISTRO PRESIDENTE" title="Ministro Presidente" src="../assets/img/ministros/presidente.jpg"
+                  class="card-imagem-ministros cinza" onclick="clickMinistro(this)">
+                <img alt="Ministra Cármen Lúcia" id="MIN. CÁRMEN LÚCIA" title="Ministra Cármen Lúcia" src="../assets/img/ministros/ministra_carmen_lucia.jpg"
+                  class="card-imagem-ministros cinza" onclick="clickMinistro(this)">
+                <img alt="Ministro Dias Toffoli" id="MIN. DIAS TOFFOLI" title="Ministro Dias Toffoli" src="../assets/img/ministros/ministro_dias_toffoli.jpg"
+                  class="card-imagem-ministros cinza" onclick="clickMinistro(this)">
+                <img alt="Ministro Celso de Melo" id="MIN. CELSO DE MELLO" title="Ministro Celso de Melo" src="../assets/img/ministros/ministro_celo_melo.jpg"
+                  class="card-imagem-ministros cinza" onclick="clickMinistro(this)">
+                <img alt="Ministro Marco Aurélio" id="MIN. MARCO AURÉLIO" title="Ministro Marco Aurélio" src="../assets/img/ministros/ministro_marco_aurelio.jpg"
+                  class="card-imagem-ministros cinza" onclick="clickMinistro(this)">
+                <img alt="Ministro Gilmar Mendes" id="MIN. GILMAR MENDES" title="Ministro Gilmar Mendes" src="../assets/img/ministros/ministro_mendes.jpg"
+                  class="card-imagem-ministros cinza" onclick="clickMinistro(this)">
+                <img alt="Ministro Ricardo Lewandowski" id="MIN. RICARDO LEWANDOWSKI" title="Ministro Ricardo Lewandowski" src="../assets/img/ministros/ministro_lewandowski.jpg"
+                  class="card-imagem-ministros cinza" onclick="clickMinistro(this)">
+                <img id="MIN. LUIZ FUX" alt="Ministro Luiz Fux" title="Ministro Luiz Fux" src="../assets/img/ministros/ministro_luiz_fux.jpg"
+                  class="card-imagem-ministros cinza" onclick="clickMinistro(this)">
+                <img alt="Ministra Rosa Weber" id="MIN. ROSA WEBER" title="Ministra Rosa Weber" src="../assets/img/ministros/ministra_rosa_weber.jpg"
+                  class="card-imagem-ministros cinza" onclick="clickMinistro(this)">
+                <img alt="Ministro Roberto Barroso" id="MIN. ROBERTO BARROSO" title="Ministro Roberto Barroso" src="../assets/img/ministros/ministro_roberto_barroso.jpg"
+                  class="card-imagem-ministros cinza" onclick="clickMinistro(this)">
+                <img alt="Ministro Edson Fachin" id="MIN. EDSON FACHIN" title="Ministro Edson Fachin" src="../assets/img/ministros/ministro_fachin.jpg"
+                  class="card-imagem-ministros cinza" onclick="clickMinistro(this)">
+                <img alt="Ministro Alexandre de Moraes" id="MIN. ALEXANDRE DE MORAES" title="Ministro Alexandre de Moraes" src="../assets/img/ministros/ministro_moraes.jpg"
+                  class="card-imagem-ministros cinza" onclick="clickMinistro(this)">
+              </div>
+              <div class="sob-medida-item p-0 m-r-16 m-l-16 m-t-10 m-b-10 p-t-5" style="margin-top: 2%;">
+                <select id="comboRelatores" name="relatores" class="campo-texto combo-qlik" style="margin-bottom: 2%;">
+                  <option value="" selected>Outros Relatores</option>
+                </select>
+                <span>
+                  <button class="btn pull-right ministros-card m-r-8" alt="Todo o STF" id="tribunal" title="Todo o STF" onclick="clickTodoTribunal()">Limpar Seleção</button>
+                </span>
               </div>
             </div>
+          </div>
 
-            <div class="card m-b-48 ">
-                <div id="repgeral-qtd-temas-categoria-card" class="card-titulo">Quantidade de temas pela situação do processo paradigma</div>
-                <div class="card-conteudo card-com-input row m-0 b-b-16 p-0">
-                    <div class="p-0 m-0">
-                        <iframe id="repgeral-qtd-temas-categoria" class="full-width" src="http://transparencia.stf.jus.br/single?appid=b88460cb-8745-4fbc-973b-ddfee50c02aa&obj=42267d4e-5e84-43fa-a444-29bd84294ae1&opt=nointeraction%2Cnoselections&select=clearall" style="border:none;"></iframe>
-                    </div>
+          <div id="temas-repercussao" class="card m-b-24">
+            <div class="card-titulo">Situação da Repercussão Geral</div>
+            <div class="card-conteudo" style="height: 85%">
+              <div class="col-md-3 text-center p-t-2">
+                <div class="qlik-numero">
+                  <div class="embeddedArea qlik-autoload" data-qlik-objid="QUANTIDADE_REPERCUSSAO_GERAL_RECONHECIDA" data-qlik-app-name="REPERCUSSAOGERAL"></div>
                 </div>
-            </div>
-
-            <div class="card m-b-48 ">
-                <div class="card-titulo">Estatística de julgamento de Repercussão Geral</div>
-                <div class="card-conteudo card-com-input row m-0 b-b-16 p-0">
-                    <div class="p-0 m-0">
-                        <iframe id="repgeral-qtd-sobrestados-categoria" class="full-width" src="http://transparencia.stf.jus.br/single?appid=b88460cb-8745-4fbc-973b-ddfee50c02aa&obj=9b9149cd-d382-4e97-acd3-111e3fdf782a&opt=nointeraction%2Cnoselections&select=clearall" style="border:none;"></iframe>
-                    </div>
+                <div class="rotulo-qlik-numero">
+                  <a href="" id="situacaoRGReconhecida">Reconhecida</a>
                 </div>
-            </div>
-
-
-
-            <div class="card m-b-48 ">
-                <div class="card-titulo">Quantidade de temas por data</div>
-                <div class="card-conteudo row m-0 b-b-16 p-0">
-                    <div class="p-0 m-0">
-                        <iframe id="repgeral-qtd-temas-data" class="full-width" src="http://transparencia.stf.jus.br/single?appid=b88460cb-8745-4fbc-973b-ddfee50c02aa&obj=CFUqHJw&opt=nointeraction%2Cnoselections&select=clearall" style="border:none;"></iframe>
-                    </div>
+              </div>
+              <div class="col-md-3 text-center p-t-2">
+                <div class="qlik-numero">
+                  <div class="embeddedArea qlik-autoload" data-qlik-objid="QUANTIDADE_REPERCUSSAO_GERAL_NEGADA" data-qlik-app-name="REPERCUSSAOGERAL"></div>
                 </div>
-            </div>
-
-            <div class="card m-b-48 ">
-                <div class="card-titulo">Quantidade de processos sobrestados ao longo do tempo</div>
-                <div class="card-conteudo row m-0 b-b-16 p-0">
-                    <div class="p-0 m-0">
-                        <iframe id="repgeral-qtd-sobrestados-data" class="full-width" src="http://transparencia.stf.jus.br/single?appid=b88460cb-8745-4fbc-973b-ddfee50c02aa&obj=380b7320-4494-4d98-9f0f-37389bdceb46&opt=nointeraction%2Cnoselections&select=clearall" style="border:none;"></iframe>
-                    </div>
+                <div class="rotulo-qlik-numero">
+                  <a href="" id="situacaoRGNegada">Negada</a>
                 </div>
+              </div>
+              <div class="col-md-3 text-center p-t-2">
+                <div class="qlik-numero">
+                  <div class="embeddedArea qlik-autoload" data-qlik-objid="QUANTIDADE_REPERCUSSAO_GERAL_EM_ANALISE" data-qlik-app-name="REPERCUSSAOGERAL"></div>
+                </div>
+                <div class="rotulo-qlik-numero">
+                  <a href="" id="situacaoRGEmAnalise">Em análise</a>
+                </div>
+              </div>
+              <div class="col-md-3 text-center p-t-2">
+                <div class="qlik-numero">
+                  <div class="embeddedArea qlik-autoload" data-qlik-objid="QUANTIDADE_REPERCUSSAO_GERAL_TOTAL" data-qlik-app-name="REPERCUSSAOGERAL"></div>
+                </div>
+                <div class="rotulo-qlik-numero m-b-8  p-t-4">
+                  <a href="#temas-repercussao"> Total</a>
+                </div>
+              </div>
+              <div class="embeddedArea qlik-autoload" style="width: 100%;height: 90%;" data-qlik-objid="TABELA_SITUACAO_MERITO" data-qlik-app-name="REPERCUSSAOGERAL"></div>
             </div>
+          </div>
 
-          <div id="conheca-mais-repercussao" class="card m-b-48 m-b-xs-0">
+          <!--card de situação do mérito-->
+          <div id="situacao-merito" class="card m-b-24">
+            <div class="card-titulo">Situação do Mérito</div>
+            <div class="card-conteudo card-com-input b-b-16" style="height: 90%">
+              <div class="col-md-4 text-center p-t-4">
+                <div class="qlik-numero">
+                  <div class="embeddedArea qlik-autoload" data-qlik-objid="QUANTIDADE_TEMAS_MERITO_JULGADO" data-qlik-app-name="REPERCUSSAOGERAL"></div>
+                </div>
+                <div class="rotulo-qlik-numero">
+                  <a href="" id="situacaoMeritoJulgado">Julgado</a>
+                </div>
+              </div>
+              <div class="col-md-4 text-center p-t-4">
+                <div class="qlik-numero">
+                  <div class="embeddedArea qlik-autoload" data-qlik-objid="QUANTIDADE_TEMAS_MERITO_NAO_JULGADO" data-qlik-app-name="REPERCUSSAOGERAL"></div>
+                </div>
+                <div class="rotulo-qlik-numero">
+                  <a href="" id="situacaoMeritoPendente">Pendente</a>
+                </div>
+              </div>
+              <div class="col-md-4 text-center p-t-4">
+                <div class="qlik-numero">
+                  <div class="embeddedArea qlik-autoload" data-qlik-objid="QUANTIDADE_TEMAS" data-qlik-app-name="REPERCUSSAOGERAL"></div>
+                </div>
+                <div class="rotulo-qlik-numero m-b-8  p-t-4">
+                  <a href="#situacao-merito"> Total</a>
+                </div>
+              </div>
+              <div class="Grafico">
+                <div class="embeddedArea qlik-autoload" style="width: 100%; height: 90%; align-items: center;" data-qlik-objid="TABELA_SITUACAO_RECONHECIMENTO_RG"
+                  data-qlik-app-name="REPERCUSSAOGERAL"></div>
+              </div>
+            </div>
+          
+          </div>
+
+          <div class="card m-b-24">
+            <div class="card-titulo">Méritos Julgados por Ano</div>
+            <div class="card-conteudo">
+              <div class="embeddedArea qlik-autoload" style="width: 100%; height: 50%; align-items: center;" data-qlik-objid="TABELA_MERITOJULGADO_PENDENTE"
+                data-qlik-app-name="REPERCUSSAOGERAL"></div>
+            </div>
+          </div>
+          
+          <div id="conheca-mais-repercussao" class="card m-b-24 m-b-xs-0">
             <div class="card-titulo">Conheça mais o instituto de repercussão geral</div>
             <div class="card-conteudo row m-0 m-t-16 b-b-16 p-0">
               <div class="col-md-7 col-lg-7">
                 <div class="card-caixa-texto m-b-16">
                   <h4 class="m-0 m-t-8 m-b-16">Conheça o instituto de Repercussão Geral</h4>
                   <ul>
-                    <li><a id="repgeral-conheca" href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaRepercussaoGeral&pagina=apresentacao" target="_blank">Conheça os fundamentos legais, finalidades, natureza e competência para o exame do instituto</a></li>
+                    <li>
+                    <a id="repgeral-conheca" href="" >Conheça os fundamentos legais, finalidades, natureza e competência para o exame do instituto</a>
+                    </li>
                   </ul>
                   <h4 class="m-0 m-t-8 m-b-16 p-t-8">Vigência</h4>
                   <ul>
-                    <li><a id="repgeral-vigencia" href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaRepercussaoGeral&pagina=vigencia" target="_blank">Entenda quando o instituto entrou em vigor</a></li>
+                    <li>
+                      <a id="repgeral-vigencia" href="" >Entenda quando o instituto entrou em vigor</a>
+                    </li>
                   </ul>
                   <h4 class="m-0 m-t-8 m-b-16 p-t-8">Regulamentação</h4>
                   <ul>
-                    <li><a id="repgeral-regulamentacao" href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaRepercussaoGeral&pagina=regulamentacao" target="_blank">Veja a legislação aplicável ao regima da Repercussão Geral</a></li>
+                    <li>
+                    <a id="repgeral-regulamentacao" href="">Veja a legislação aplicável ao regima da Repercussão Geral</a>
+                    </li>
                   </ul>
                 </div>
               </div>
               <div class="col-md-5 col-lg-5">
                 <div class="card-caixa-texto m-b-16">
-                  <h4 class="m-0 m-t-8 m-b-16">Questões práticas</h4>
+                  <h4 class="m-0 m-t-8 m-b-16">Digno de Nota</h4>
                   <ul>
-                    <li><a id="repgeral-questao-pratica" href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaRepercussaoGeral&pagina=processamentoMultiplo" target="_blank">Procedimentos adotados e decisões administrativas e judiciais sobre o Instituto no STF</a></li>
+                    <li>
+                      <a id="repgeral-questao-pratica" href="">Em breve</a>
+                    </li>
                   </ul>
                   <h4 class="m-0 m-t-8 m-b-16 p-t-8">Questões de ordem</h4>
                   <ul>
-                    <li><a id="repgeral-questao-ordem" href="//www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaRepercussaoInformacaoGeral&pagina=questoesdeordem" target="_blank">Conheça os temas pertinentes a todo processo submetido à sistemática de Repercussão Geral</a></li>
+                    <li>
+                      <a id="repgeral-questao-ordem" href="#" </a>
+                    </li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
+
+           
+
+  
         </div>
 
         <!-- Cards laterais -->
-        <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 p-16 p-sm-8 p-xs-0 m-0">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 p-16 p-sm-8 p-xs-0 m-0">
+          <!--card pesquisa avançada-->
+            <div id="entrar-forum-repercussao" class="card m-t-24 m-b-24 __fundo-escuro">
+              <div class="card-conteudo p-b-0">
+                <div class="row m-0">
+                  <div class="p-0 p-b-16">
+                    <h3 class="m-0">Pesquisa Avançada</h3>
+                    <small></small>
+                  </div>
+                  <div class="row m-0 p-0">
+                    <div class="col-xs-12 p-0 p-b-16">
+                      <a href="jurisprudenciaRepercussao/pesquisarProcesso" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12" id="todosTemas">Pesquisar</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Card todos os temas -->
+            <div id="entrar-forum-repercussao" class="card m-b-24 __fundo-escuro">
+              <div class="card-conteudo p-b-0">
+                <div class="row m-0">
+                  <div class="p-0 p-b-16">
+                    <h3 class="m-0">Temas</h3>
+                    <small>Veja todos os temas</small>
+                  </div>
+                  <div class="row m-0 p-0">
+                    <div class="col-xs-12 p-0 p-b-16">
+                     <a href="jurisprudenciaRepercussao/listarProcesso" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12" id="todosTemas">Entrar</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!--Card todos as Teses Teses -->
+            <div id="entrar-forum-repercussao" class="card m-b-24 __fundo-escuro">
+              <div class="card-conteudo p-b-0">
+                <div class="row m-0">
+                  <div class="p-0 p-b-16">
+                    <h3 class="m-0">Teses</h3>
+                    <small>Veja todas as teses</small>
+                  </div>
+                  <div class="row m-0 p-0">
+                    <div class="col-xs-12 p-0 p-b-16">
+                      <a href="jurisprudenciaRepercussao/abrirTemasComTesesFirmadas.asp" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12">Entrar</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!--Card todos as Teses Números -->
+            <div id="entrar-forum-repercussao" class="card m-b-24 __fundo-escuro">
+              <div class="card-conteudo p-b-0">
+                <div class="row m-0">
+                  <div class="p-0 p-b-16">
+                    <h3 class="m-0">Números</h3>
+                    <small>Veja estatísticas de repercussão geral</small>
+                  </div>
+                  <div class="row m-0 p-0">
+                    <div class="col-xs-12 p-0 p-b-16">
+                     <a href="cms/publicacaoBOInternet/anexo/RG/Numeros/Total_RG_Geral.mhtml" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12">Entrar</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
 
             <div class="teses-repgeral card m-b-24">
                 <div class="card-titulo">Teses de Repercussão Geral</div>
@@ -392,80 +488,6 @@
                     </div>
                 </div>
             </div>
-
-            <div id="temas-repercussao-geral" class="teses-repgeral card m-b-24">
-                <div class="card-titulo">Temas de Repercussão Geral</div>
-                <div class="card-conteudo p-0">
-                    <div class="card-caixa-texto tese-descricao m-b-24 p-16">
-                        Recursos Extraordinários que serão analisados de acordo com os critérios de relevância jurídica, política, social ou econômica.
-                        A decisão proveniente dessa análise será aplicada posteriormente pelas instâncias inferiores, em casos idênticos.
-                        <a href="#">Conheça mais</a>
-                    </div>
-                </div>
-                <div class="card-conteudo p-t-0">
-                    <h4 class="p-b-16"><strong>Temas com maior impacto</strong></h4>
-
-                    <div class="card-subtitulos">
-                        <h4 class="card-subtitulo m-0"><a href="#">Tema 234</a></h4>
-                        <span>Poupança</span>
-                    </div>
-                    <div class="card-topico-conteudo">
-                        334.034 (33%) processos. Desde 23/04/2010
-                    </div>
-                </div>
-                <div class="card-conteudo p-t-0">
-                    <div class="card-subtitulos">
-                        <h4 class="card-subtitulo m-0"><a href="#">Tema 234</a></h4>
-                        <span>Poupança</span>
-                  </div>
-                  <div  class="card-topico-conteudo">
-                      334.034 (33%) processos. Desde 23/04/2010
-                  </div>
-                </div>
-                <div class="row m-16 p-0 p-b-16">
-                    <a href="#" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12">
-                      Ver todos os temas
-                    </a>
-                </div>
-            </div>
-
-            <div class="teses-suspensao-nacional card m-b-24">
-                <div class="card-titulo">Teses de Suspensão Nacional</div>
-
-                <div class="card-conteudo p-0">
-                    <div class="card-caixa-texto tese-descricao m-b-8 p-16">
-                        Temas em repercussão geral com determinação de suspensão nacional dos processos em tramitação que versem sobre a mesma questão,
-                        nos termos do <a href="#">art. 1035, §5° do CPC.</a>
-                    </div>
-                </div>
-
-                <div class="card-conteudo p-t-16">
-                    <div class="card-subtitulos p-b-8">
-                        <h4 class="card-subtitulo m-0"><a href="#">RE 566622</a></h4>
-                        <small>TEMA 32 - 19/10/2016</small>
-                    </div>
-                    <div class="card-topico-conteudo">
-                        Reserva da lei complementar para instituir requisitos à concessão de imunidade tributária às entidades beneficentes de assistência social.
-                    </div>
-                </div>
-
-                <div class="card-conteudo p-t-16">
-                    <div class="card-subtitulos p-b-8">
-                        <h4 class="card-subtitulo m-0"><a href="#">RE 573872</a></h4>
-                        <small>TEMA 45 - 26/10/2016</small>
-                    </div>
-                    <div class="card-topico-conteudo">
-                        Possibilidade de execução provisória de obrigação de fazer contra a Fazenda Pública.
-                    </div>
-                </div>
-
-                <div class="row m-16 p-0 p-b-16">
-                    <a href="#" target="_blank" class="btn btn-raised btn-fluid btn-default-bordered btn-upper btn-card-lateral col-xs-12">
-                      Todos com suspensão nacional
-                    </a>
-                </div>
-            </div>
-
             <div id="entrar-forum-repercussao" class="card m-b-24 __fundo-escuro">
                 <div class="card-conteudo p-b-0">
                   <div class="row m-0">
@@ -484,17 +506,13 @@
                 </div>
             </div>
 
-            <div id="mais-info" class="card m-b-48 m-b-xs-0 card-sem-sombra">
-                <div class="card-conteudo row m-0 m-t-16 b-b-16 p-0">
-                    <div class="card-caixa-texto m-b-16 p-l-40">
-                      <h4 class="m-0 m-t-8 m-b-16">Mais informações</h4>
-                      <ul>
-                        <li><a id="repgeral-boletim" href="#">Boletim anual</a></li>
-                        <li><a id="repgeral-impact" href="#">Impacto dos julgamentos</a></li>
-                      </ul>
-                    </div>
-                </div>
+            <div id="mais-info" class="card m-b-48">
+              <div class="card-titulo">Informações Consolidadas</div>
+              <div class="card-conteudo">
+                
+              </div>
             </div>
+
         </div>
       </div>
     </section>
