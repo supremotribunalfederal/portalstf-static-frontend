@@ -37,7 +37,8 @@ const secoes = [
   'sobmedidaadvogados',
   'sobmedidacidadaos',
   'sobmedidaorgaos',  
-  'sobmedidaestudantes'
+  'sobmedidaestudantes',
+  'centraldocidadao'
 ];
 
 const secoesChunks = secoes.reduce((prev, cur) => {
