@@ -1,72 +1,135 @@
 import style from '../../assets/scss/secoes/repercussaogeral/repercussaogeral.scss';
-
-
 import $ from 'jquery';
+import '../qlik/qlik-sense-facade.js';
+import '../qlik/aplicacao-repercussaogeral.js';
 
-$(document).ready(function() {
-    
-    var showChar = 150;  
-    var ellipsestext = "...";
-    var moretext = "Leia mais";
-    var lesstext = "Mostrar menos";    
-
-    $('.more').each(function() {
-        var content = $(this).html(); 
-        if(content.length > showChar) { 
-            var c = content.substr(0, showChar);
-            var h = content.substr(showChar, content.length - showChar); 
-            var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>'; 
-            $(this).html(html);
-        } 
-    });
- 
-    $(".morelink").click(function(e){
-        e.preventDefault();
-        if($(this).hasClass("less")) {
-            $(this).removeClass("less");
-            $(this).html(moretext);
-        } else {
-            $(this).addClass("less");
-            $(this).html(lesstext);
-        }
-        $(this).parent().prev().toggle();
-        $(this).prev().toggle();
-        return false;
-    });
+qlikSense.getAplicacao(qlikSense.REPERCUSSAOGERAL).then(function(facadeRepercussaoGeralQlik) {
+    popula(facadeRepercussaoGeralQlik);
 });
 
-function clickMinistro(ministro) {
+//Preenche as variáveis globais
+function popula(facadeRepercussaoGeralQlik) {
+    
+    var mapeiaValorEmOption = function(valor) {
+        var opt = document.createElement('option');
+        opt.value = valor;
+        opt.innerHTML = valor;
+
+        return opt;
+    };
+
+    var populaComboBox = function(idCombo) {
+        return function(valores) {
+            var select = document.getElementById(idCombo);
+
+            valores.forEach(function(valor) {
+                select.appendChild(mapeiaValorEmOption(valor));
+            });
+        };
+        
+    };
+
+    var excluiMinistrosAtuaisParaCombo = function(idCombo) {
+        return function(ministros) {
+            var ministrosAntigos = ministros.filter(function(nomeMinistro) {
+                return document.getElementById(nomeMinistro) == null;
+            });
+
+            var populador = populaComboBox(idCombo);
+            populador(ministrosAntigos);
+        };
+    };
+
+    facadeRepercussaoGeralQlik.getRelatores().then(excluiMinistrosAtuaisParaCombo('comboRelatores'));
+        
+};
+
+
+window.clickMinistro = function(ministro) {
     var imagem = document.getElementById(ministro.id);
     imagem.classList.toggle("cinza");
 
-    qlikSense.getAplicacao(qlikSense.ACERVO).then(function (facadeAcervoQlik) {
+    qlikSense.getAplicacao(qlikSense.REPERCUSSAOGERAL).then(function(facadeRepercussaoGeralQlik) {
 
         var selecionados = [].slice.call(document.querySelectorAll('.card-imagem-ministros:not(.cinza)'));
-        var valores = selecionados.reduce(function (valores, ministro) {
+        var valores = selecionados.reduce(function(valores, ministro) {
             valores.push(ministro.id);
             return valores;
         }, []);
 
-        facadeAcervoQlik.selecionaCampo(facadeAcervoQlik.CAMPO_NOME_MINISTRO, valores);
+        facadeRepercussaoGeralQlik.selecionaCampo(facadeRepercussaoGeralQlik.CAMPO_NOME_MINISTRO, valores);
+    });
+};
+
+function pesquisaTema(){
+    qlikSense.getAplicacao(qlikSense.REPERCUSSAOGERAL).then(function(facadeRepercussaoGeralQlik) {
+        var valorSelecionado = $("#numero_tema").val();
+        facadeRepercussaoGeralQlik.selecionaCampo(facadeRepercussaoGeralQlik.NUMERO_TEMA, [valorSelecionado]);
     });
 };
 
 
-function clickTodoTribunal() {
+window.clickTodoTribunal = function(){
     var imagens = [].slice.call(document.querySelectorAll('.card-imagem-ministros'));
-    imagens.forEach(function (imagem) {
+    imagens.forEach(function(imagem) {
         imagem.classList.add('cinza');
     });
 
-    qlikSense.getAplicacao(qlikSense.ACERVO).then(function (facadeAcervoQlik) {
-        facadeAcervoQlik.limpaSelecoesEFiltros();
+    qlikSense.getAplicacao(qlikSense.REPERCUSSAOGERAL).then(function(facadeRepercussaoGeralQlik) {
+        facadeRepercussaoGeralQlik.limpaSelecoesEFiltros();
     });
 
     $("#comboClasses").val('');
-    $("#comboTipoClasse").val('');
-    $("#comboLocalizacao").val('');
+    $("#comboRelatores").val('');
+    $("#comboSituacaoRepercussaoGeral").val('');
 };
 
+
+$(function(){
+
+    //filtra pelo relator
+    $("#comboRelatores").on('change', function(){
+        var valorSelecionado = $(this).val();
+        qlikSense.getAplicacao(qlikSense.REPERCUSSAOGERAL).then(function(facadeRepercussaoGeralQlik) {
+            facadeRepercussaoGeralQlik.selecionaCampo(facadeRepercussaoGeralQlik.CAMPO_NOME_MINISTRO, [valorSelecionado]);
+        });
+    });
+	
+	$("#situacaoRGReconhecida").on('click', function () {
+        qlikSense.getAplicacao(qlikSense.REPERCUSSAOGERAL).then(function (facadeRepercussaoGeralQlik) {
+            var parametro = "RG Reconhecida";
+            facadeRepercussaoGeralQlik.selecionaCampo(facadeRepercussaoGeralQlik.SITUACAO_REPERCUSSAO_GERAL, [parametro]);
+        });
+    });
+
+    $("#situacaoRGNegada").on('click', function () {
+        qlikSense.getAplicacao(qlikSense.REPERCUSSAOGERAL).then(function (facadeRepercussaoGeralQlik) {
+            var parametro = "RG Negada";
+            facadeRepercussaoGeralQlik.selecionaCampo(facadeRepercussaoGeralQlik.SITUACAO_REPERCUSSAO_GERAL, [parametro]);
+        });
+    });
+
+    $("#situacaoRGEmAnalise").on('click', function () {
+        qlikSense.getAplicacao(qlikSense.REPERCUSSAOGERAL).then(function (facadeRepercussaoGeralQlik) {
+            var parametro = "Tema em Análise";
+            facadeRepercussaoGeralQlik.selecionaCampo(facadeRepercussaoGeralQlik.SITUACAO_REPERCUSSAO_GERAL, [parametro]);
+        });
+    });
+	
+	$("#situacaoMeritoJulgado").on('click', function () {
+        qlikSense.getAplicacao(qlikSense.REPERCUSSAOGERAL).then(function (facadeRepercussaoGeralQlik) {
+            var parametro = "Julgado";
+            facadeRepercussaoGeralQlik.selecionaCampo(facadeRepercussaoGeralQlik.SITUACAO_MERITO_RG_MINISTRO, [parametro]);
+        });
+    });
+
+    $("#situacaoMeritoPendente").on('click', function () {
+        qlikSense.getAplicacao(qlikSense.REPERCUSSAOGERAL).then(function (facadeRepercussaoGeralQlik) {
+            var parametro = "Pendente";
+            facadeRepercussaoGeralQlik.selecionaCampo(facadeRepercussaoGeralQlik.SITUACAO_MERITO_RG_MINISTRO, [parametro]);
+        });
+    });
+});
 
 
 //GOOGLE ANALYTICS

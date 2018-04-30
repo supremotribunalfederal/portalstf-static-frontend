@@ -1,92 +1,91 @@
 import style from '../../assets/scss/secoes/estatistica/estatistica.scss';
 import $ from 'jquery';
 import moment from 'moment';
+import '../qlik/qlik-sense-facade.js';
+import '../qlik/aplicacao-acervo.js';
 
+var mapeiaValorEmOption = function(valor) {
+    var opt = document.createElement('option');
+    opt.value = valor;
+    opt.innerHTML = valor;
 
-var appid = '9e787043-f90c-4781-a48b-c1351ba17379';
+    return opt;
+};
 
-//Carrega os objetos do qlik
-// require(["js/qlik"], function (qlik) {
-//     var app = qlik.openApp('9e787043-f90c-4781-a48b-c1351ba17379', config);
-//     popula(app);
-// });
+var populaComboBox = function(idCombo) {
+    return function(valores) {
+        var select = document.getElementById(idCombo);
 
-//Preenche as variáveis globais
-function popula(app){
-    var classes = app.field('Classe Processo').getData();
-    var tipoClasses = app.field('Tipo Classe Processo').getData();
-    var localizacoes = app.field('Tipo Órgão Processo').getData();
-
-    classes.OnData.bind(function(){
-        classes.rows.forEach(function(element) {
-            var select = document.getElementById('comboClasses');
-            var opt = document.createElement('option');
-            opt.value = element.qText;
-            opt.innerHTML = element.qText;
-            select.appendChild(opt);
-        }, this);
-    });
-
-    tipoClasses.OnData.bind(function(){
-        tipoClasses.rows.forEach(function(tipoClasse) {
-            var select = document.getElementById('comboTipoClasse');
-            var opt = document.createElement('option');
-            opt.value = tipoClasse.qText;
-            opt.innerHTML = tipoClasse.qText;
-            select.appendChild(opt);
-        }, this);
-    });
-
-    localizacoes.OnData.bind(function(){
-        localizacoes.rows.forEach(function(localizacao) {
-            var select = document.getElementById('comboLocalizacao');
-            var opt = document.createElement('option');
-            opt.value = localizacao.qText;
-            opt.innerHTML = localizacao.qText;
-            select.appendChild(opt);
-        }, this);
-    });
-}
-
-
-function clickMinistro(ministro){
-    var imagem = document.getElementById(ministro.id);
-    imagem.classList.toggle("cinza")
-    var app = qlikApps[appid];
-    app.field("Nome Ministro").toggleSelect(ministro.id);
-}
-
-
-function clickTodoTribunal(){
-    var imagens = document.getElementById("lista_ministros").getElementsByTagName("img");
-    for (var i = imagens.length - 1; i >= 0; i--) {
-        var temp = imagens[i];
-        $(temp).css("filter","grayscale(100%)");
+        valores.forEach(function(valor) {
+            select.appendChild(mapeiaValorEmOption(valor));
+        });
     }
-    var app = qlikApps[appid];
-    app.clearAll();
-}
+    
+};
+
+qlikSense.getAplicacao(qlikSense.ACERVO).then(function(facadeAcervoQlik) {
+
+    facadeAcervoQlik.getClasses().then(populaComboBox('comboClasses'));
+    facadeAcervoQlik.getTiposOrgao().then(populaComboBox('comboLocalizacao'));
+    facadeAcervoQlik.getTiposClasse().then(populaComboBox('comboTipoClasse'));
+
+});
+
+window.clickMinistro = function(ministro) {
+    var imagem = document.getElementById(ministro.id);
+    imagem.classList.toggle("cinza");
+
+    qlikSense.getAplicacao(qlikSense.ACERVO).then(function(facadeAcervoQlik) {
+
+        var selecionados = [].slice.call(document.querySelectorAll('.card-imagem-ministros:not(.cinza)'));
+        var valores = selecionados.reduce(function(valores, ministro) {
+            valores.push(ministro.id);
+            return valores;
+        }, []);
+
+        facadeAcervoQlik.selecionaCampo(facadeAcervoQlik.CAMPO_NOME_MINISTRO, valores);
+    });
+};
+
+
+window.clickTodoTribunal = function() {
+    var imagens = [].slice.call(document.querySelectorAll('.card-imagem-ministros'));
+    imagens.forEach(function(imagem) {
+        imagem.classList.add('cinza');
+    });
+
+    qlikSense.getAplicacao(qlikSense.ACERVO).then(function(facadeAcervoQlik) {
+        facadeAcervoQlik.limpaSelecoesEFiltros();
+    });
+
+    $("#comboClasses").val('');
+    $("#comboTipoClasse").val('');
+    $("#comboLocalizacao").val('');
+};
 
 
 $(function(){
     //filtra pela classe
     $("#comboClasses").change(function(){
-        var app = qlikApps[appid];
-        var valorSelecionado = $("#comboClasses").val();
-        app.field("Classe Processo").selectValues([valorSelecionado]);
+        qlikSense.getAplicacao(qlikSense.ACERVO).then(function(facadeAcervoQlik) {
+            var valorSelecionado = $("#comboClasses").val();
+            facadeAcervoQlik.selecionaCampo(facadeAcervoQlik.CAMPO_CLASSE_PROCESSO, [valorSelecionado]);
+        });
     });
 
-    //filtra
-    $("#comboTipoClasse").change(function(){
-        var app = qlikApps[appid];
-        var valorSelecionado = $("#comboTipoClasse").val();
-        app.field("Tipo Classe Processo").selectValues([valorSelecionado]);
+    //filtra 
+    $("#comboTipoClasse").change(function() {
+        qlikSense.getAplicacao(qlikSense.ACERVO).then(function(facadeAcervoQlik) {
+            var valorSelecionado = $("#comboTipoClasse").val();
+            facadeAcervoQlik.selecionaCampo(facadeAcervoQlik.CAMPO_TIPO_CLASSE_PROCESSO, [valorSelecionado]);
+        });
     });
 
-    //filtra
+    //filtra 
     $("#comboLocalizacao").change(function(){
-        var app = qlikApps[appid];
-        var valorSelecionado = $("#comboLocalizacao").val();
-        app.field("Tipo Órgão Processo").selectValues([valorSelecionado]);
+        qlikSense.getAplicacao(qlikSense.ACERVO).then(function(facadeAcervoQlik) {
+            var valorSelecionado = $("#comboLocalizacao").val();
+            facadeAcervoQlik.selecionaCampo(facadeAcervoQlik.CAMPO_TIPO_ORGAO_PROCESSO, [valorSelecionado]);
+        });
     });
 });
