@@ -18,6 +18,10 @@ const secoes = [
     'listarpartes',
     'processo',
     'estatistica',
+    'sobmedidaadvogados',
+    'sobmedidaestudantes',
+    'sobmedidaorgaos',
+    'sobmedidacidadaos',
     'documento'
 ];
 
