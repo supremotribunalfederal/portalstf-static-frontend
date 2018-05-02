@@ -65,37 +65,182 @@
                     <div id="texto-pagina-interna" class="p-l-40 p-r-40 m-b-40 p-l-xs-0 p-r-xs-0">
                         <div class="texto m-0 row">
                             <div class="col-xs-12 col-md-12 p-0 p-l-xs-16 p-r-xs-16">
-                                <div class="card-secao hidden-xs col-xs-12 p-l-8 m-b-24">
-                                    <a href="#">Notícias</a>
-                                </div>
-                                <div class="row p-0 m-0">
-                                    <h3 class="texto-titulo m-b-24 text-center">Central do Cidadão STF</h3>
-                                </div>
+                            <div class="card-secao hidden-xs col-xs-12 p-l-8 m-b-24">
+                                <a href="#">Central do Cidadão</a>
+                            </div>
+                            <div class="row p-0 m-0">
+                                <h3 class="texto-titulo m-b-24 text-center">Central do Cidadão STF</h3>
+                            </div>
 
-                                <div class="card m-b-48">
-                                    <div class="card-titulo">dados pessoais</div>
-                                    <div class="card-conteudo">
+                            <div class="card m-b-48">
+                                <div class="card-titulo">dados pessoais</div>
+                                <div class="card-conteudo">
+                                    <div id="parte1">
+                                        <h4>Parte 1 de 3</h4>
                                         <form>
                                             <div class="row">
                                                 <div class="form-group col-md-9">
                                                     <label>Nome*</label>
-                                                    <input type="text" class="form-control"><br>
+                                                    <input type="text" class="form-control" required><br>
                                                     <label>Tipo de documento*<small>(preencha ao menos uma das opções)</small></label>
-                                                  
-                                                </div> 
+                                                    <div class="form-check">
+                                                        <div class="opcDocumento">
+                                                            <label class="form-check-label labelDoc">
+                                                                <input class="form-check-input radioDoc" type="radio" id="tipoCPF" value="cpf">CPF:
+                                                            </label>
+                                                            <input class="form-control input-cpf" type="text" id="cpf" maxlength="14">
+                                                        </div>
+                                                    </div>
+                                                </div>    
                                                 <div class="form-group col-md-3">
                                                     <label>Sexo*</label>
-                                                    <select class="form-control" id="select-sexo">
+                                                    <select class="form-control" id="select-sexo" required>
                                                         <option>Selecione</option>
                                                         <option values="feminino">Feminino</option>
                                                         <option values="masculino">Masculino</option>
                                                     </select>
                                                 </div>
                                             </div>
+                                            <div class="row">
+                                                <div class="form-group col-md-7">
+                                                    <div class="opcDocumento">
+                                                        <label class="form-check-label labelDoc">
+                                                            <input class="form-check-input radioDoc" type="radio" id="tipoRG" value="rg">Documento de Identificação:
+                                                        </label>
+                                                        <input class="form-control input-rg" type="text" id="rg" maxlength="15">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-5">
+                                                    <div class="opcDocumento">
+                                                        <label class="form-check-label labelDoc">Órgão Expedidor</label>
+                                                        <input class="form-control input-orgao-expedidor" type="text" id="orgao" maxlength="15" style="width: 50%">
+                                                    </div>
+                                                </div>
+                                            </div>    
+                                            <div class="row">  
+                                                <div class="form-group col-md-9">
+                                                    <label>Ocupação*</label>
+                                                    <select class="form-control" id="select-ocupacao">
+                                                        <option> </option>
+                                                        <option value="246">ADMINISTRADOR</option>
+                                                        <option value="14">ADVOGADO</option>
+                                                        <option value="248">AGRÔNOMO</option>
+                                                        <option value="12">APOSENTADO</option>
+                                                        <option value="321">ASSISTENTE SOCIAL</option>
+                                                        <option value="250">BIBLIOTECARIO</option>
+                                                        <option value="249">BIÓLOGO</option>
+                                                        <option value="252">CONTADOR</option>
+                                                        <option value="181">DEFENSOR PÚBLICO</option>
+                                                        <option value="245">DELEGADO</option>
+                                                        <option value="161">DENTISTA</option>
+                                                        <option value="41">DESEMPREGADO</option>
+                                                        <option value="301">DIPLOMATA</option>
+                                                        <option value="251">ECONOMISTA</option>
+                                                        <option value="1">EMPREGADO DE EMPRESA PRIVADA</option>
+                                                        <option value="241">EMPREGADO DE EMPRESA PÚBLICA</option>
+                                                        <option value="4">EMPREGADO DE INST. FINANCEIRA PÚBLICA OU PRIVADA</option>
+                                                        <option value="6">EMPREGADO/CONTRATADO DE ORG INTERNAC OU NÃO GOV</option>
+                                                        <option value="10">EMPRESÁRIO</option>
+                                                        <option value="253">ENFERMEIRO</option>
+                                                        <option value="242">ENGENHEIRO</option>
+                                                        <option value="101">ESTUDANTE</option>
+                                                        <option value="221">JORNALISTA</option>
+                                                        <option value="61">MAGISTRADO</option>
+                                                        <option value="141">MÉDICO</option>
+                                                        <option value="254">MEMBRO DO MINISTÉRIO PÚBLICO</option>
+                                                        <option value="11">MILITAR</option>
+                                                        <option value="2">NÃO INFORMADO</option>
+                                                        <option value="247">NUTRICIONISTA</option>
+                                                        <option value="261">OUTROS</option>
+                                                        <option value="">Selecione</option>
+                                                        <option value="281">PARLAMENTAR</option>
+                                                        <option value="13">PENSIONISTA</option>
+                                                        <option value="244">POLICIAL</option>
+                                                        <option value="15">PRESIDIÁRIO</option>
+                                                        <option value="81">PROFESSOR</option>
+                                                        <option value="8">PROFISSIONAL LIBERAL OU AUTÔNOMO</option>
+                                                        <option value="243">PSICÓLOGO</option>
+                                                        <option value="9">SERVIDOR PÚBLICO</option>
+                                                    </select>
+                                                    <div class="form-check">
+                                                        <input type="checkbox" class="form-check-input" id="maior60anos">
+                                                        <label class="form-check-label mais60anos">Tenho mais de 60 anos</label>
+                                                        <input type="checkbox" class="form-check-input" id="portadorDeficiencia">
+                                                        <label class="form-check-label portadorDeficiencia">Portador de Deficiência/ Doença Grave</label>
+                                                    </div>
+                                                    <label>Forma de Resposta*</label>
+                                                    <select class="form-control select-resposta" style="width: 130px;">
+                                                        <option value="email">E-mail</option>
+                                                        <option values="carta">Carta</option>
+                                                    </select>
+                                                </div>
+                                            </div>    
+                                            <div class="row">
+                                                <div class="col-md-9">
+                                                    <small>Os campos marcados com (*) são de preenchimento obrigatório.</small>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <a class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12 btn-continuar btn-next-1"> continuar </a>
+                                                </div>
+                                            </div>
+
                                             
+                                        </form> 
+                                    </div> <!--fim parte 1-->
+                                    <div id="parte2">
+                                        <h4>Parte 2 de 3</h4>
+                                        <form>
+                                            <div class="row">
+                                                <div class="form-group col-md-6">
+                                                    <label>E-mail*</label>
+                                                    <input type="text" class="form-control" required>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label>Confirme o seu E-mail*</label>
+                                                    <input type="text" class="form-control" required>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col-md-5">
+                                                    <label>Cidade*</label>
+                                                    <input type="text" class="form-control" required>
+                                                </div>
+                                                <div class="form-group col-md-2">
+                                                    <label>UF*</label>
+                                                    <select class="form-control">
+                                                        
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-md-5">
+                                                    <label>País*</label>
+                                                    <select class="form-control"></select>
+                                                </div>
+
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <small>Os campos marcados com (*) são de preenchimento obrigatório.</small>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <a class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12 btn-voltar btn-voltar-2"> voltar </a>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <a class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12 btn-continuar btn-next-2"> continuar </a>
+                                                </div>
+                                            </div>
                                         </form>    
-                                    </div>
+                                    
+                                    </div> <!-- fim parte 2-->
+                                    <div id="parte3">
+                                        <h4>Parte 3 de 3</h4>
+                                        <form>
+                                            <div class="row">
+                                                <div class="form-group col-md-12">
+                                                    <label>Tipo de Relato* <small>(marque ao menos uma das opções)</small></label>
+                                                   
+                                    </div><!-- fim parte 3-->
                                 </div>
+                            </div>
 
                             </div>
                         </div>

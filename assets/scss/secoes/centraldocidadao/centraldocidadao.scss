@@ -1,1 +1,39 @@
 @import "../../variaveis/cores";
+
+.opcDocumento{
+    margin-top: 7px;
+    display: -webkit-box;
+    max-width: 80%;
+}
+.labelDoc{
+    font-size: 14px;
+    margin-right: 3px;
+    margin-top: 5px;
+}
+input[type="radio"]{
+    width: 12px;
+    height: 12px;
+    margin-right: 3px;
+    vertical-align: top;
+}
+.input-cpf, .input-rg, .input-orgao-expedidor{
+    width: 70%;
+}
+input[type="checkbox"]{
+    width: 14px;
+    vertical-align: middle;
+}    
+
+.mais60anos, .portadorDeficiencia{
+    vertical-align: -webkit-baseline-middle;
+    margin-right: 10px;
+}
+.btn-continuar{
+    float: right;
+}
+.btn-continuar:hover, .btn-voltar:hover{
+    border-color: $stfAzulEscuro;
+    background-color: $stfAzulEscuro;
+    color: white
+}
+
