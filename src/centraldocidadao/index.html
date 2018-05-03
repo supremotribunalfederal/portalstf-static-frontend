@@ -86,7 +86,7 @@
                                                     <div class="form-check">
                                                         <div class="opcDocumento">
                                                             <label class="form-check-label labelDoc">
-                                                                <input class="form-check-input radioDoc" type="radio" id="tipoCPF" value="cpf">CPF:
+                                                                <input class="form-check-input radioDoc" type="radio" id="tipoCPF" value="cpf">CPF
                                                             </label>
                                                             <input class="form-control input-cpf" type="text" id="cpf" maxlength="14">
                                                         </div>
@@ -95,7 +95,7 @@
                                                 <div class="form-group col-md-3">
                                                     <label>Sexo*</label>
                                                     <select class="form-control" id="select-sexo" required>
-                                                        <option>Selecione</option>
+                                                        <option> </option>
                                                         <option values="feminino">Feminino</option>
                                                         <option values="masculino">Masculino</option>
                                                     </select>
@@ -105,7 +105,7 @@
                                                 <div class="form-group col-md-7">
                                                     <div class="opcDocumento">
                                                         <label class="form-check-label labelDoc">
-                                                            <input class="form-check-input radioDoc" type="radio" id="tipoRG" value="rg">Documento de Identificação:
+                                                            <input class="form-check-input radioDoc" type="radio" id="tipoRG" value="rg">Documento de Identificação
                                                         </label>
                                                         <input class="form-control input-rg" type="text" id="rg" maxlength="15">
                                                     </div>
@@ -164,9 +164,9 @@
                                                     </select>
                                                     <div class="form-check">
                                                         <input type="checkbox" class="form-check-input" id="maior60anos">
-                                                        <label class="form-check-label mais60anos">Tenho mais de 60 anos</label>
+                                                        <label class="form-check-label">Tenho mais de 60 anos</label>
                                                         <input type="checkbox" class="form-check-input" id="portadorDeficiencia">
-                                                        <label class="form-check-label portadorDeficiencia">Portador de Deficiência/ Doença Grave</label>
+                                                        <label class="form-check-label">Portador de Deficiência/ Doença Grave</label>
                                                     </div>
                                                     <label>Forma de Resposta*</label>
                                                     <select class="form-control select-resposta" style="width: 130px;">
@@ -235,9 +235,65 @@
                                         <h4>Parte 3 de 3</h4>
                                         <form>
                                             <div class="row">
-                                                <div class="form-group col-md-12">
+                                                <div class="form-group col-md-12 col-sm-12">
                                                     <label>Tipo de Relato* <small>(marque ao menos uma das opções)</small></label>
-                                                   
+                                                    <div class="form-check text-center">
+                                                        <input type="checkbox" class="form-check-input" id="acesso-info">
+                                                        <label class="form-check-label">Acesso à informação (Lei 12.527/2011)</label>
+
+                                                        <input type="checkbox" class="form-check-input" id="agradecimento">
+                                                        <label class="form-check-label">Agradecimento</label>
+
+                                                        <input type="checkbox" class="form-check-input" id="consulta">
+                                                        <label class="form-check-label ">Consulta</label>
+
+                                                        <input type="checkbox" class="form-check-input" id="denuncia">
+                                                        <label class="form-check-label ">Denúncia</label>
+
+                                                        <input type="checkbox" class="form-check-input" id="duvida">
+                                                        <label class="form-check-label ">Dúvida</label>
+
+                                                        <input type="checkbox" class="form-check-input" id="elogio">
+                                                        <label class="form-check-label ">Elogio</label>
+
+                                                        <input type="checkbox" class="form-check-input" id="felicitacao">
+                                                        <label class="form-check-label ">Felicitações</label><br>
+
+                                                        <input type="checkbox" class="form-check-input" id="informacoes">
+                                                        <label class="form-check-label ">Informações</label>
+
+                                                        <input type="checkbox" class="form-check-input" id="manifestacao">
+                                                        <label class="form-check-label">Manifestação</label>
+
+                                                        <input type="checkbox" class="form-check-input" id="reclamacao">
+                                                        <label class="form-check-label">Reclamação</label>
+
+                                                        <input type="checkbox" class="form-check-input" id="solicitacao">
+                                                        <label class="form-check-label">Solicitação</label>
+
+                                                        <input type="checkbox" class="form-check-input" id="sugestacao">
+                                                        <label class="form-check-label">Sugestão</label>  
+                                                    </div>
+                                                    <label>Relato*</label>
+                                                    <textarea class="form-control" maxlength="3600"> </textarea>
+                                                    <small> 0/3600 caracteres</small>  
+                                                </div>
+                                            </div> <!-- fim row-->
+                                            <div class="row">
+                                                <div class="col-md-9">
+                                                    <div class="form-check ">
+                                                        <input type="checkbox" class="form-check-input" id="receber-email">
+                                                        <label class="form-check-label">Desejo Receber e-mail de confirmação de envio do relato</label>
+                                                    </div>
+                                                    <small>Os campos marcados com (*) são de preenchimento obrigatório.</small> <br>
+                                                    <small style="color:red">Clique no botao 'Enviar' para registrar o seu relato ao Atendimento STF e aguarde a confirmaçao na próxima tela!</small>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <a class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12 btn-voltar btn-voltar-3"> voltar </a> 
+                                                    <a class="btn btn-raised btn-fluid btn-default-bordered btn-upper col-xs-12 btn-voltar btn-enviar"> Enviar </a>
+                                                </div>
+                                            </div>    
+                                        </form>          
                                     </div><!-- fim parte 3-->
                                 </div>
                             </div>

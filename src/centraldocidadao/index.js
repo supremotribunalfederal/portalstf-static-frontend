@@ -16,7 +16,7 @@ $('#tipoRG').click(function () {
 
 //paginação 
 $(function(){
-    $('#parte2').hide();
+    $('#parte2, #parte3').hide();
 //parte 1 
     $(".btn-next-1").click(function(){
         $('#parte1').hide();
@@ -32,5 +32,10 @@ $(function(){
         $('#parte2').hide();
         $('#parte3').show();
       
+    });
+    $(".btn-voltar-3").click(function () {
+        $('#parte3').hide();
+        $('#parte2').show();
+
     });
 });

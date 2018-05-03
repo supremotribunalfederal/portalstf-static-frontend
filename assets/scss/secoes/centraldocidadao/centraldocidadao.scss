@@ -24,7 +24,7 @@ input[type="checkbox"]{
     vertical-align: middle;
 }    
 
-.mais60anos, .portadorDeficiencia{
+.form-check-label{
     vertical-align: -webkit-baseline-middle;
     margin-right: 10px;
 }
@@ -35,5 +35,9 @@ input[type="checkbox"]{
     border-color: $stfAzulEscuro;
     background-color: $stfAzulEscuro;
     color: white
+}
+
+.btn-enviar{
+    margin-top:25px;
 }
 
