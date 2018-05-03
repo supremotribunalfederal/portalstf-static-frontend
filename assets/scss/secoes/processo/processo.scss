@@ -1,5 +1,11 @@
 @import "../../variaveis/cores";
 
+@media only print {
+  .processo-impressao {
+    overflow: visible;
+  }
+}
+
 .btn-primary-spacing {
 margin-right: 5px;
 margin-bottom: 5px !important;
