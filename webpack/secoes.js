@@ -18,7 +18,9 @@ const secoes = [
     'listarpartes',
     'processo',
     'estatistica',
-    'documento'
+    'documento',
+    'centraldocidadao',
+    'pesquisajurisprudencia'
 ];
 
 const entries = secoes.map(secao => {
