@@ -20,43 +20,90 @@
             <div class="row container center-block p-0">
                 <!--Menu Lateral-->
                 <div class="col-xs-12 col-sm-3 col-lg-2 p-16 p-xs-0 m-0">
-                    <div class="menu-lateral hidden-xs">
+                    <div id="menuLateral" class="menu-lateral hidden-xs">
                         <h4>
-                            <span class="__stf-verde">Processos</span>
+                            <span class="__stf-verde">Transparência</span>
                         </h4>
-                        <ul>
-                            <li>
-                                <a class="opcao-selecionada" href="#">
-                                    <span>Pesquisa de processos</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span>Central do Cidadão</span>
-                                </a>
-                                <ul>
-                                    <li>
-                                        <a href="http://portal.stf.jus.br/textos/verTexto.asp?servico=centralDoCidadaoAcessoInformacao&pagina=sobreCentralCidadao">
-                                            <span>Sobre a Central do Cidadão</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span>Peticionamento eletrônico</span>
-                                </a>
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <span>Peticionar agora</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Informações gerais</a>
-                                    </li>
-                                </ul>
-                            </li>
+                        <ul id="subItens">
+                            <ul>
+                                <li>
+                                    <a href="/centraldocidadao" style="font-weight: bold">
+                                        Central do Cidadão
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="http://portal.stf.jus.br/textos/verTexto.asp?servico=centralDoCidadaoAcessoInformacao&pagina=sobreCentralCidadao">
+                                                Sobre a Central do Cidadão
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Sobre a Lei de Acesso a Informação
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="http://www.cnj.jus.br/pesquisas-judiciarias/supremo-em-acao">Supremo em Ação</a>
+                                </li>
+                                <li>
+                                    <a href="#">Prestação de Contas</a>
+                                </li>
+                                <li>
+                                    <a href="#">Licitações e Contratos</a>
+                                </li>
+                                <li>
+                                    <a href="#">Gestão Orçamentária</a>
+                                </li>
+                                <li>
+                                    <a href="#">Gestão Estratégica</a>
+                                </li>
+                                <li>
+                                    <a href="#">Gestão de Pessoas</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="http://www.stf.jus.br/portal/remuneracao/">Remuneração</a>
+                                </li>
+                                <li>
+                                    <a href="#">Auxílio Moradia</a>
+                                </li>
+                                <li>
+                                    <a href="#">Ajuda de Custos e Indeniz.</a>
+                                </li>
+                                <li>
+                                    <a href="#">Passagens</a>
+                                </li>
+                                <li>
+                                    <a href="#">Diárias</a>
+                                </li>
+                                <li>
+                                    <a href="#">Consumo de Água</a>
+                                </li>
+                                <li>
+                                    <a href="#">Consumo de Energia Elétrica</a>
+                                </li>
+                                <li>
+                                    <a href="#">Consumo de Papel para Imp.</a>
+                                </li>
+                                <li>
+                                    <a href="#">Veículos</a>
+                                </li>
+                                <li>
+                                    <a href="#">Obras e Reformas</a>
+                                </li>
+                                <li>
+                                    <a href="#">Auditoria</a>
+                                </li>
+                                <li>
+                                    <a href="#">Acesso à Informação</a>
+                                </li>
+                                <li>
+                                    <a href="#">Links Úteis</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contatos</a>
+                                </li>
+                            </ul>
                         </ul>
                     </div>
                 </div>
@@ -255,8 +302,9 @@
                                                         <label class="form-check-label ">Elogio</label>
 
                                                         <input type="checkbox" class="form-check-input" id="felicitacao">
-                                                        <label class="form-check-label ">Felicitações</label><br>
-
+                                                        <label class="form-check-label ">Felicitações</label>
+                                                    </div>    
+                                                    <div class="form-check text-center">
                                                         <input type="checkbox" class="form-check-input" id="informacoes">
                                                         <label class="form-check-label ">Informações</label>
 

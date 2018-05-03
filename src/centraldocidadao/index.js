@@ -18,8 +18,6 @@ jQuery("#cpf").mask("999.999.999-99");
 //mascara rg
 jQuery("#rg").mask("9.999.999");
  
-
-
 //paginação 
 $(function(){
     $('#parte2, #parte3').hide();
