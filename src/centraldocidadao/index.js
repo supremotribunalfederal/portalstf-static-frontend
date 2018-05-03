@@ -14,28 +14,11 @@ $('#tipoRG').click(function () {
     $('#tipoRG').prop("checked", true);
 });
 //mascara cpf
+jQuery("#cpf").mask("999.999.999-99");
+//mascara rg
+jQuery("#rg").mask("9.999.999");
+ 
 
-//valida o CPF digitado  
-function ValidarCPF() {
-    var cpf = $('#cpf').value;
-    exp = /\.|\-/g
-    cpf = cpf.toString().replace(exp, "");
-    var digitoDigitado = eval(cpf.charAt(9) + cpf.charAt(10));
-    var soma1 = 0, soma2 = 0;
-    var vlr = 11;
-
-    for (i = 0; i < 9; i++) {
-        soma1 += eval(cpf.charAt(i) * (vlr - 1));
-        soma2 += eval(cpf.charAt(i) * vlr);
-        vlr--;
-    }
-    soma1 = (((soma1 * 10) % 11) == 10 ? 0 : ((soma1 * 10) % 11));
-    soma2 = (((soma2 + (2 * soma1)) * 10) % 11);
-
-    var digitoGerado = (soma1 * 10) + soma2;
-    if (digitoGerado != digitoDigitado)
-        alert('CPF Invalido!');
-}
 
 //paginação 
 $(function(){
@@ -63,4 +46,9 @@ $(function(){
         $('#parte2').show();
         $('.titulo-etapa').text('tipo de resposta');
     });
+});
+//contar palavras
+$('#relato').keydown(function () {
+    var qtdCaracteres = $('#relato').val().length;
+    $('.num-caracteres').text(qtdCaracteres);
 });
