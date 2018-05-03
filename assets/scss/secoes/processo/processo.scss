@@ -11,7 +11,7 @@ font-size: 0.8rem;
   display: none;
 }
 
-.processo-titulo {   
+.processo-titulo {
   font-size: 1.1rem;
   font-weight: bold;
   span {
@@ -102,10 +102,21 @@ font-size: 0.8rem;
 }
 
 .processo-informacoes {
+  margin: 24px 0 24px 8px;
+  padding-top: 8px;
+  border-top: solid 2px $stfCinzaEscuro;
+  font-size: 1.1rem;
+  font-weight: bold;
+
   .processo-detalhes-bold {
     margin-bottom: 6px;
     margin-left: -20px;
   }
+}
+
+.cabecalho {
+  margin-left: 20px;
+  margin-right: -12px;
 }
 
 .processo-quadro {
