@@ -108,8 +108,8 @@ font-size: 0.8rem;
 }
 
 .processo-informacoes {
-  margin: 24px 0 24px 8px;
-  padding-top: 8px;
+  margin: 24px 0 12px 8px;
+  padding-top: 16px;
   border-top: solid 2px $stfCinzaEscuro;
   font-size: 1.1rem;
   font-weight: bold;
@@ -218,6 +218,16 @@ ul .nav-tabs {
   height: 600px;
   overflow: auto;
   padding: 10px 20px;
+}
+
+// informações
+
+#informacoes {
+  .processo-informacoes {
+    margin-top: -8px;
+    margin-left: -15px;
+    border-top: none;
+  }
 }
 
 // andamentos
