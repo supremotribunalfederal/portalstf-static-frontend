@@ -48,13 +48,15 @@ $(document).ready(function(){
 //esconder informações de processo ao rolar o scroll
 $('div.tab-content').scroll(function(){
     $('.card-processo').fadeOut('slow', function(){
+        $('.linha-2').fadeOut();
         $('#btn-todas-partes').fadeIn();
         $('.icone-expandir').fadeIn();
     });
 });
 //expnadir informações ao clicar no icone 
 $('.icone-expandir').click(function(){
-    $('.card-processo').fadeIn("slow");
+    $('.card-processo').fadeIn('slow');
+    $('.linha-2').fadeIn();
     $(this).fadeOut('slow');
     $('#btn-todas-partes').fadeOut('slow');
 });
@@ -75,6 +77,7 @@ $(window).mouseover(function(e){
     e.preventDefault();
     if ($('div.tab-content').scrollTop() == 0){
         $('.card-processo').fadeIn("slow", function () {
+            $('.linha-2').fadeIn();
             $('#btn-todas-partes').fadeOut();
             $('.icone-expandir').fadeOut();
         });
