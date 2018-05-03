@@ -17,6 +17,7 @@ const secoes = [
     'listarporparte',
     'listarpartes',
     'processo',
+    'processoimpressao',
     'estatistica',
     'sobmedidaadvogados',
     'sobmedidaestudantes',
