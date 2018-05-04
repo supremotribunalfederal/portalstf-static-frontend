@@ -1,9 +1,13 @@
 @import "../../variaveis/cores";
 
 @media only print {
-  .processo-impressao {
+  .container-processo {
     overflow: visible;
   }
+}
+
+.container-processo {
+  width: 940px;
 }
 
 .btn-primary-spacing {
@@ -118,6 +122,11 @@ font-size: 0.8rem;
     margin-bottom: 6px;
     margin-left: -20px;
   }
+}
+
+.gerais {
+  border-top: none;
+  margin-top: 0px;
 }
 
 .cabecalho {
