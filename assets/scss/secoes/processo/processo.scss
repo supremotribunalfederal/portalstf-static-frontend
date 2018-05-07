@@ -190,9 +190,22 @@ ul .nav-tabs {
 }
 
 .tab-content {
-  height: 600px;
-  overflow: auto;
   padding: 10px 20px;
+}
+/* quando rolar a pagina irá fixar o titulo do card e outros objetos */
+.fixar-objeto{
+    position: fixed;
+    z-index: 1;
+    width: 864px;
+}
+.fixar-titulo{
+    top: 97px;
+}
+.fixar-card-processo{
+    top: 178px;
+}
+.fixar-linha-2{
+   top: 313px;
 }
 
 // andamentos

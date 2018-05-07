@@ -45,41 +45,47 @@ $(document).ready(function(){
         $('#deslocamento').removeClass('active in');
     });
 });
-//esconder informações de processo ao rolar o scroll
-$('div.tab-content').scroll(function(){
-    $('.card-processo').fadeOut('slow', function(){
-        $('#btn-todas-partes').fadeIn();
-        $('.icone-expandir').fadeIn();
+//expandir informações ao clicar no icone 
+$('.icone-expandir').click(function () {
+    $('.card-processo, .linha-2').fadeIn("fast", function () {
+        $('#btn-todas-partes, .icone-expandir').fadeOut('fast');
     });
 });
-//expnadir informações ao clicar no icone 
-$('.icone-expandir').click(function(){
-    $('.card-processo').fadeIn("slow");
-    $(this).fadeOut('slow');
-    $('#btn-todas-partes').fadeOut('slow');
-});
-//ir para tab ao clicar no icone 'partes'
-$('#btn-todas-partes').click(function(e){
+
+
+$(window).scroll(function (e) {
     e.preventDefault();
-    $('ul>li.active').removeClass('active');
-    $('#partes').addClass('tab-pane fade active in');
-    $('ul>li.li-partes').addClass('active');
-    $('#informacoes').removeClass('active in');
-    $('#peticoes').removeClass('active in');
-    $('#andamentos').removeClass('active in');
-    $('#recursos').removeClass('active in');
-    $('#deslocamento').removeClass('active in');
-});
-//mostrar informações com o scroll no topo
-$(window).mouseover(function(e){
-    e.preventDefault();
-    if ($('div.tab-content').scrollTop() == 0){
-        $('.card-processo').fadeIn("slow", function () {
-            $('#btn-todas-partes').fadeOut();
-            $('.icone-expandir').fadeOut();
+    //rolar pagina para o topo mostrar o header do card inteiro, ou quando chegar embaixo tirar fixed
+    if ($(window).scrollTop() < 300 || $(window).scrollTop() >= 3800) {
+        $('.titulo-processo, .card-processo, .linha-2').removeClass('fixar-objeto');
+        $('.titulo-processo').removeClass('fixar-titulo');
+        $('.card-processo').removeClass('fixar-card-processo');
+        $('.linha-2').removeClass('fixar-linha-2');
+        $('.card-processo, .linha-2').fadeIn("fast", function () {
+            $('#btn-todas-partes, .icone-expandir').fadeOut('fast');
+        });
+    }
+    // esconder informações quando o scroll estiver no meio da página
+    else if ($(window).scrollTop() >= 300) {
+        $('.titulo-processo, .card-processo, .linha-2').addClass('fixar-objeto');
+        $('.titulo-processo').addClass('fixar-titulo');
+        $('.card-processo').addClass('fixar-card-processo');
+        $('.linha-2').addClass('fixar-linha-2');
+        $('.card-processo, .linha-2').fadeOut('fast', function () {
+            $('#btn-todas-partes, .icone-expandir').fadeIn('fast');
         });
     }
 });
+
+$('#btn-todas-partes').click(function (e) {
+    $('ul>li.active').removeClass('active');
+    $('#partes').addClass('tab-pane fade active in');
+    $('ul>li.li-partes').addClass('active');
+    $('#informacoes, #peticoes, #andamentos, #recursos, #deslocamento').removeClass('active in');
+    $(window).scrollTop(300);
+});
+
+
 
 
 
