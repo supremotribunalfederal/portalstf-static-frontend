@@ -20,7 +20,11 @@ const secoes = [
     'estatistica',
     'documento',
     'centraldocidadao',
-    'pesquisajurisprudencia'
+    'pesquisajurisprudencia',
+    'sobmedidacidadaos',
+    'sobmedidaadvogados',
+    'sobmedidaestudantes',
+    'sobmedidaorgaos'
 ];
 
 const entries = secoes.map(secao => {
