@@ -55,8 +55,10 @@ $('.icone-expandir').click(function () {
 
 $(window).scroll(function (e) {
     e.preventDefault();
-    //rolar pagina para o topo mostrar o header do card inteiro, ou quando chegar embaixo tirar fixed
-    if ($(window).scrollTop() < 300 || $(window).scrollTop() >= 3800) {
+
+    var alturaPage = $(".tab-content").height();
+    //tira a classe que fixa o header no topo 
+    if ($(window).scrollTop() < 300 || $(window).scrollTop() > alturaPage) {
         $('.titulo-processo, .card-processo, .linha-2').removeClass('fixar-objeto');
         $('.titulo-processo').removeClass('fixar-titulo');
         $('.card-processo').removeClass('fixar-card-processo');
@@ -65,7 +67,7 @@ $(window).scroll(function (e) {
             $('#btn-todas-partes, .icone-expandir').fadeOut('fast');
         });
     }
-    // esconder informações quando o scroll estiver no meio da página
+    // fixa header no topo enquanto a page é rolada 
     else if ($(window).scrollTop() >= 300) {
         $('.titulo-processo, .card-processo, .linha-2').addClass('fixar-objeto');
         $('.titulo-processo').addClass('fixar-titulo');
@@ -78,13 +80,13 @@ $(window).scroll(function (e) {
 });
 
 $('#btn-todas-partes').click(function (e) {
+    e.preventDefault();
     $('ul>li.active').removeClass('active');
     $('#partes').addClass('tab-pane fade active in');
     $('ul>li.li-partes').addClass('active');
     $('#informacoes, #peticoes, #andamentos, #recursos, #deslocamento').removeClass('active in');
     $(window).scrollTop(300);
 });
-
 
 
 
