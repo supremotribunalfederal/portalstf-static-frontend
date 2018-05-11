@@ -57,22 +57,23 @@ $(window).scroll(function (e) {
     e.preventDefault();
 
     var alturaPage = $(".tab-content").height();
-    //tira a classe que fixa o header no topo 
+
     if ($(window).scrollTop() < 300 || $(window).scrollTop() > alturaPage) {
-        $('.titulo-processo, .card-processo, .linha-2').removeClass('fixar-objeto');
+        $('.titulo-processo, .card-processo, .linha-2, .menu-processo').removeClass('fixar-objeto');
         $('.titulo-processo').removeClass('fixar-titulo');
         $('.card-processo').removeClass('fixar-card-processo');
         $('.linha-2').removeClass('fixar-linha-2');
+        $('.menu-processo').removeClass('ajustar-menu');
         $('.card-processo, .linha-2').fadeIn("fast", function () {
             $('#btn-todas-partes, .icone-expandir').fadeOut('fast');
         });
     }
-    // fixa header no topo enquanto a page é rolada 
     else if ($(window).scrollTop() >= 300) {
-        $('.titulo-processo, .card-processo, .linha-2').addClass('fixar-objeto');
+        $('.titulo-processo, .card-processo, .linha-2, .menu-processo').addClass('fixar-objeto');
         $('.titulo-processo').addClass('fixar-titulo');
         $('.card-processo').addClass('fixar-card-processo');
         $('.linha-2').addClass('fixar-linha-2');
+        $('.menu-processo').addClass('ajustar-menu');
         $('.card-processo, .linha-2').fadeOut('fast', function () {
             $('#btn-todas-partes, .icone-expandir').fadeIn('fast');
         });
