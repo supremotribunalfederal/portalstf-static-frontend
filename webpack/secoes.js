@@ -17,6 +17,7 @@ const secoes = [
     'listarporparte',
     'listarpartes',
     'processo',
+    'processoimpressao',
     'estatistica',
     'documento',
     'centraldocidadao',
@@ -30,7 +31,7 @@ const secoes = [
 const entries = secoes.map(secao => {
     let configuracaoDaSecao = {
         nome: secao,
-        entry: [`./src/${secao}/index.js`, `./assets/scss/secoes/${secao}/${secao}.scss`],
+        entry: [`./src/${secao}/index.js`],
         plugin: new htmlWebpack({
             template: `!!ejs-compiled-loader!./src/${secao}/index.html`,
             filename: `${secao}/index.html`,

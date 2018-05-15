@@ -47,11 +47,11 @@ $(document).ready(function(){
 });
 //expandir informações ao clicar no icone 
 $('.icone-expandir').click(function () {
+    $('.menu-processo').removeClass('ajustar-menu').css('background', 'white');
     $('.card-processo, .linha-2').fadeIn("fast", function () {
         $('#btn-todas-partes, .icone-expandir').fadeOut('fast');
     });
 });
-
 
 $(window).scroll(function (e) {
     e.preventDefault();
@@ -59,6 +59,7 @@ $(window).scroll(function (e) {
     var alturaPage = $(".tab-content").height();
 
     if ($(window).scrollTop() < 300 || $(window).scrollTop() > alturaPage) {
+        $('.tab-content').css('padding-top', '10px');
         $('.titulo-processo, .card-processo, .linha-2, .menu-processo').removeClass('fixar-objeto');
         $('.titulo-processo').removeClass('fixar-titulo');
         $('.card-processo').removeClass('fixar-card-processo');
@@ -69,6 +70,7 @@ $(window).scroll(function (e) {
         });
     }
     else if ($(window).scrollTop() >= 300) {
+        $('.tab-content').css('padding-top', '241px');
         $('.titulo-processo, .card-processo, .linha-2, .menu-processo').addClass('fixar-objeto');
         $('.titulo-processo').addClass('fixar-titulo');
         $('.card-processo').addClass('fixar-card-processo');
@@ -80,14 +82,16 @@ $(window).scroll(function (e) {
     }
 });
 
-$('#btn-todas-partes').click(function (e) {
+$('#btn-todas-partes, .processo-link').click(function (e) {
     e.preventDefault();
-    $('ul>li.active').removeClass('active');
+    $('.li-info-geral, .li-andamentos, .li-deslocamento, .li-peticoes, .li-recursos').removeClass('active');
     $('#partes').addClass('tab-pane fade active in');
     $('ul>li.li-partes').addClass('active');
     $('#informacoes, #peticoes, #andamentos, #recursos, #deslocamento').removeClass('active in');
     $(window).scrollTop(300);
 });
+
+
 
 
 

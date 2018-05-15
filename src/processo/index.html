@@ -96,13 +96,16 @@
                       <div class="card-processo">
                         <div class="col-xs-12 col-md-5 m-b-8">
                           <div class="processo-classe m-t-8">
-                            Ação Direta de Inconstitucionalidade
+                            AÇÃO DIRETA DE INCONSTITUCIONALIDADE
                           </div>
                           <div class="processo-dados">
-                            Origem: MG - Minas Gerais
+                            Origem: MG - MINAS GERAIS
                           </div>
                           <div class="processo-dados">
-                            Relator atual: Min. Ellen Gracie
+                            Relator atual: MIN. ELLEN GRACIE
+                          </div>
+                          <div class="processo-dados">
+                            Processo(s) Apensado(s): ADI 169
                           </div>
                         </div>
                         <div class="col-xs-12 col-md-7 m-b-8">
@@ -147,10 +150,10 @@
                          
                         </div>
                       </div>
-                      <div class="card-processo linha-2">
+                      <div class="linha-2 row">
                         <div class="col-md-5"></div>
                         <div class="col-md-7 processo-link p-t-8">
-                            <a id="todas-partes" href="#">Todas as partes</a>
+                            <a id="todas-partes" href="#partes">Todas as partes</a>
                           </div>
                       </div>
                       <div class="col-md-12 row">
@@ -164,12 +167,24 @@
                         </ul>
                       </div>
                       <div class="tab-content col-md-12">
-                        <%- include src/includes/processo-informacoes.html %>
-                        <%- include src/includes/processo-partes.html %>
-                        <%- include src/includes/processo-andamentos.html %>
-                        <%- include src/includes/processo-deslocamento.html %>
-                        <%- include src/includes/processo-peticoes.html %>
-                        <%- include src/includes/processo-recursos.html %>
+                          <div id="informacoes" class="tab-pane fade">
+                              <%- include src/includes/processo-informacoes.html %>
+                          </div>
+                          <div id="partes" class="tab-pane fade">
+                              <%- include src/includes/processo-partes.html %>
+                          </div>
+                          <div id="andamentos" class="tab-pane fade in active">
+                              <%- include src/includes/processo-andamentos.html %>
+                          </div>
+                          <div id="deslocamento" class="tab-pane fade">
+                              <%- include src/includes/processo-deslocamento.html %>
+                          </div>
+                          <div id="peticoes" class="tab-pane fade">
+                              <%- include src/includes/processo-peticoes.html %>
+                          </div>
+                          <div id="recursos" class="tab-pane fade">
+                              <%- include src/includes/processo-recursos.html %>
+                          </div>
                       </div>
                     </div>
                 </div>

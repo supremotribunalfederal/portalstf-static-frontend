@@ -1,5 +1,15 @@
 @import "../../variaveis/cores";
 
+@media only print {
+  .container-processo {
+    overflow: visible;
+  }
+}
+
+.container-processo {
+  width: 940px;
+}
+
 .btn-primary-spacing {
 margin-right: 5px;
 margin-bottom: 5px !important;
@@ -11,7 +21,7 @@ font-size: 0.8rem;
   display: none;
 }
 
-.processo-titulo {   
+.processo-titulo {
   font-size: 1.1rem;
   font-weight: bold;
   span {
@@ -54,11 +64,10 @@ font-size: 0.8rem;
   }
   .processo-partes {
     font-size: 0.8rem;
-    // font-weight: bold;
   }
   .processo-classe {
     font-size: 0.8rem;
-    font-weight: bold;
+    font-weight: 700;
   }
   .processo-link {
     font-size: 0.7rem;
@@ -74,6 +83,15 @@ font-size: 0.8rem;
   padding-bottom: 10px;
   background-color:#41b5ec;
   color: white;
+  font-weight: bold;
+  font-size: 0.85rem;
+  margin: auto;
+  a {
+    color: white;
+  }
+  .processo-link {
+    padding-left: 45px;
+  }
 }
 
 .processo-partes {
@@ -94,10 +112,26 @@ font-size: 0.8rem;
 }
 
 .processo-informacoes {
+  margin: 24px 0 12px 8px;
+  padding-top: 16px;
+  border-top: solid 2px $stfCinzaEscuro;
+  font-size: 1.1rem;
+  font-weight: bold;
+
   .processo-detalhes-bold {
     margin-bottom: 6px;
     margin-left: -20px;
   }
+}
+
+.gerais {
+  border-top: none;
+  margin-top: 0px;
+}
+
+.cabecalho {
+  margin-left: 20px;
+  margin-right: -12px;
 }
 
 .processo-quadro {
@@ -210,6 +244,16 @@ ul .nav-tabs {
 .ajustar-menu{
     top: 178px;
     background-color: #fff; 
+}
+
+// informações
+
+#informacoes {
+  .processo-informacoes {
+    margin-top: -8px;
+    margin-left: -15px;
+    border-top: none;
+  }
 }
 
 // andamentos
