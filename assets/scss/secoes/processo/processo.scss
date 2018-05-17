@@ -195,8 +195,7 @@ font-size: 0.8rem;
 
 //processo abas
 
-.btn-peticao {
-  margin: 0 auto;
+.btn-peticao {margin: 0 auto;
   width: 40%;
   min-width: 128px;
 }
@@ -420,4 +419,8 @@ text-align: right;
 color: #777;
 font-size: 12px;
 line-height: 22px;
+}
+
+.andamento-indevido {
+  text-decoration: line-through;
 }
