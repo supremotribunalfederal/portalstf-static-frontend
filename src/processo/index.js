@@ -47,8 +47,8 @@ $(document).ready(function(){
 });
 //expandir informações ao clicar no icone 
 $('.icone-expandir').click(function () {
-    $('.menu-processo').removeClass('ajustar-menu').css('background', 'white');
     $('.card-processo, .linha-2').fadeIn("fast", function () {
+        $('.menu-processo').removeClass('ajustar-menu').css('background', 'white').css('top', '350px');
         $('#btn-todas-partes, .icone-expandir').fadeOut('fast');
     });
 });
@@ -82,7 +82,7 @@ $(window).scroll(function (e) {
     }
 });
 
-$('#btn-todas-partes, .processo-link').click(function (e) {
+$('#btn-todas-partes, .li-partes').click(function (e) {
     e.preventDefault();
     $('.li-info-geral, .li-andamentos, .li-deslocamento, .li-peticoes, .li-recursos').removeClass('active');
     $('#partes').addClass('tab-pane fade active in');
@@ -90,14 +90,6 @@ $('#btn-todas-partes, .processo-link').click(function (e) {
     $('#informacoes, #peticoes, #andamentos, #recursos, #deslocamento').removeClass('active in');
     $(window).scrollTop(300);
 });
-
-
-
-
-
-
-
-
 
 
 
