@@ -1,0 +1,259 @@
+<section id="pesquisa" class="pesquisa pesquisa-padrao row m-0 m-t-96 p-l-0 p-r-0">
+    <div class="container center-block">
+      <div class="hidden-xs pull-right m-t-16 collapse multi-collapse">
+        <p class="__stf-branco m-0">
+          <span class="m-r-16 label-peticione">Peticione e acompanhe processos:</span> <a href="//sistemas.stf.jus.br/peticionamento/" target="_blank" class="btn ">Peticionamento eletrônico</a>
+        </p>
+      </div>
+      <div class="pesquisa-conteudo clearfix">
+        <div class="pesquisa-titulo m-t-40 m-b-16">
+          <h3 class="m-0 collapse multi-collapse">O que você procura?</h3>
+        </div>
+        <!--<h3 class="pesquisa-titulo-expandida m-b-24 campo-texto">O que você procura?</h3>-->
+        <div class="pesquisa-campos">
+          <div class="hidden-md hidden-lg hidden-xl campo-container">
+            <select id="menu-pesquisa-mobile" class="pesquisa-select full-width">
+              <option value="">Selecione o tipo de pesquisa</option>
+              <option data-aba="abaProcesso" value="abaProcesso">Processos</option>
+              <option data-aba="abaJurisprudencia" value="abaJurisprudencia">Jurisprudência</option>
+              <option data-aba="abaNoticias" value="abaNoticias">Notícias e Textos</option>
+              <option data-aba="abaRepercussao" value="abaRepercussao">Repercussão Geral</option>
+            </select>
+          </div>
+          <div class="form-inline">
+            <div class="campo-container">
+                <form id="pesquisa-principal" action="javascript:void(0);">
+                  <div class="seletores-campo collapse multi-collapse">
+                    <input type="hidden" name="tipo-pesquisa" id="tipo-pesquisa">
+                    <ul class="seletores hidden-xs hidden-sm" id="menuPesquisa">
+                      <li>
+                          <span class="ativo" id="abaProcesso">Processos</span>
+                      </li>
+                      <li>
+                          <span id="abaJurisprudencia">Jurisprudência</span>
+                      </li>
+                      <li>
+                          <span id="abaNoticias">Notícias</span>
+                      </li>
+                      <li>
+                          <span id="abaRepercussao">Repercussão Geral</span>
+                      </li>
+                    </ul>
+                    <input type="hidden" value="3" id="abaSelecionada" />
+                  </div>
+  
+  
+                  <div class="col-md-12 col-xs-12 col-sm-12 pesquisa-processo aba-pesquisa">
+                    <select class="campo-texto tipo-pesquisa-processo">
+                      <option value="CLASSE_E_NUMERO">Por Classe e Número</option>
+                      <option value="NUMERO_ORIGEM">Por Número na Origem</option>
+                      <option value="NUMERO_UNICO">Por Número Único</option>
+                      <option value="PARTE_OU_ADVOGADO">Por Parte ou Advogado</option>
+                    </select>
+                    <div class="campo-pesquisa-processo pesquisa-processo-classe">
+                      <select class="campo-texto processo-classe">
+                        <option value="">Classe</option>
+                        <option value="AC">AC</option>
+                        <option value="ACO">ACO</option>
+                        <option value="ADC">ADC</option>
+                        <option value="ADI">ADI</option>
+                        <option value="ADO">ADO</option>
+                        <option value="ADPF">ADPF</option>
+                        <option value="AI">AI</option>
+                        <option value="AImp">AImp</option>
+                        <option value="AO">AO</option>
+                        <option value="AOE">AOE</option>
+                        <option value="AP">AP</option>
+                        <option value="AR">AR</option>
+                        <option value="ARE">ARE</option>
+                        <option value="AS">AS</option>
+                        <option value="CC">CC</option>
+                        <option value="Cm">Cm</option>
+                        <option value="EI">EI</option>
+                        <option value="EL">EL</option>
+                        <option value="Ext">Ext</option>
+                        <option value="HC">HC</option>
+                        <option value="HD">HD</option>
+                        <option value="IF">IF</option>
+                        <option value="Inq">Inq</option>
+                        <option value="MI">MI</option>
+                        <option value="MS">MS</option>
+                        <option value="OACO">OACO</option>
+                        <option value="Pet">Pet</option>
+                        <option value="PPE">PPE</option>
+                        <option value="PSV">PSV</option>
+                        <option value="RC">RC</option>
+                        <option value="Rcl">Rcl</option>
+                        <option value="RE">RE</option>
+                        <option value="RHC">RHC</option>
+                        <option value="RHD">RHD</option>
+                        <option value="RMI">RMI</option>
+                        <option value="RMS">RMS</option>
+                        <option value="RvC">RvC</option>
+                        <option value="SL">SL</option>
+                        <option value="SS">SS</option>
+                        <option value="STA">STA</option>
+                      </select>
+                      <div class="campo-pesquisa-numero">
+                        <input type="text" name="pesquisaPrincipalClasseNumero" id="pesquisaPrincipalClasseNumero" class="campo-texto" placeholder="Digite o número do processo (ex: 100)">
+                      </div>
+                    </div>
+                    <div class="campo-pesquisa-processo pesquisa-numero-unico" style="display: none;">
+                      <input type="text" name="pesquisaPrincipalNumeroUnico" id="pesquisaPrincipalNumeroUnico" class="campo-texto" placeholder="Digite o número único">
+                    </div>
+                    <div class="campo-pesquisa-processo pesquisa-parte-advogado" style="display: none;">
+                      <input type="text" name="pesquisaPrincipalParteAdvogado" id="pesquisaPrincipalParteAdvogado" class="campo-texto" placeholder="Digite o nome da parte ou advogado">
+                    </div>
+                    <div class="campo-pesquisa-processo pesquisa-numero-origem" style="display: none;">
+                      <input type="text" name="pesquisaPrincipalNumeroOrigem" id="pesquisaPrincipalNumeroOrigem" class="campo-texto" placeholder="Digite o número na origem">
+                    </div>
+                  </div>
+  
+                  <div class="col-md-12 col-xs-12 col-sm-12 pesquisa-jurisprudencia aba-pesquisa" style="display: none;">
+                    <div class="col-md-7 col-xs-12 col-sm-12 no-padding">
+                      <input type="text" name="pesquisaJurisprudencia" id="pesquisaJurisprudencia" class="campo-texto" placeholder="Digite um termo para a pesquisa de jurisprudência...">
+                    </div>
+  
+                    <div class="hidden-sm hidden-xs botoes-pesquisa-jurisprudencia col-md-5">
+                      <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador E" data-content="Procura todas as palavras desejadas em qualquer lugar do documento. Ex: ICMS e SUBSTITUIÇÃO." data-value="e" id="jurisprudencia-e" class="pull-left">e</span>
+                      <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador OU" data-content="Procura por qualquer uma das palavras. Pode utilizar o parênteses para combinar a pesquisa com outros operadores. Ex: aposentadoria e (deputado ou parlamentar ou congressista)." data-value="ou" class="pull-left">ou</span>
+                      <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador ADJ" data-content="Busca palavras aproximadas, na mesma ordem colocada na expressão de busca. Ex: MINISTÉRIO adj2 PÚBLICO e TEMPO adj2 SERVIÇO (O número após o 'adj' indica delimitação de distância entre palavras, podendo ser escolhido livremente)." data-value="adj" class="pull-left">adj</span>
+                      <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador NÃO" data-content="Recupera documentos que contenham a primeira, mas não a segunda palavra. Ex: Parlamentar não penal" data-value="não" class="pull-left">não</span>
+                      <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador PROX" data-content="Procura palavras aproximadas em qualquer ordem. Ex: extraordinário prox5 admissibilidade. (O número após o 'PROX' indica delimitação de distância entre palavras, podendo ser escolhido livremente)." data-value="prox" class="pull-left">prox</span>
+                      <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador MESMO" data-content="Operador utilizado para pesquisar no mesmo parágrafo; sua utilização principal é para pesquisa no campo legislação. Ex: aposentadoria mesmo parlamentar (Obs.: Consulte o Ajuda para pesquisa por legislaççao na base de Súmulas)." data-value="mesmo"class="pull-left">mesmo</span>
+                      <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Operador $" data-content="Este operador substitui qualquer parte da palavra desejada, ou seja, prefixo, radical ou sufixo. Ex: $constitucional$ / militar$ / octavio ga$otti" data-value="$" class="pull-left">$</span>
+                    </div>
+  
+                  </div>
+  
+                  <div class="col-md-12 col-xs-12 col-sm-12 pesquisa-noticias-e-textos aba-pesquisa" style="display: none;">
+                    <input type="text" name="pesquisaNoticiasTextos" id="pesquisaNoticiasTextos" class="campo-texto" placeholder="Informe um assunto sobre uma notícia...">
+                  </div>
+  
+                  <div class="col-md-12 col-xs-12 col-sm-12 pesquisa-repercussao aba-pesquisa" style="display: none;">
+                    <input type="text" name="pesquisaRepercussao" id="pesquisaRepercussao" class="campo-texto" placeholder="Informe uma palavra-chave...">
+                  </div>
+  
+                  <button form="pesquisa-principal" id="btnPesquisar" class="btn btn-default pull-right">
+                    <i class="glyphicon glyphicon-search hidden-md hidden-lg"></i>
+                    <span class="hidden-xs hidden-sm">Pesquisar</span>
+                  </button>
+  
+                  <!-- Pesquisa Avançada -->
+                  <div class="hidden-sm hidden-xs pesquisa-rg-avancada">
+                    <div class="collapse in multi-collapse">
+                      <div class="container container-filtros-rg m-b-16 p-b-8">
+                        
+                        <!-- Filtros -->
+                        <div class="row m-l-8">
+                          <label class="__stf-branco"> Filtrar por Ministros: </label>
+                        </div>
+                        <div class="row filtro-por-ministros">
+                          <div class="p-0 m-r-16 m-l-16 p-b-10 m-t-0 text-center">
+  
+                            <ul class="lista-de-ministros p-l-0">
+                              <li><a id="MIN. CÁRMEN LÚCIA" class="min-carmen-lucia card-imagem-ministros cinza">Ministra Cármen Lúcia</a></li>
+                              <li><a id="MIN. DIAS TOFFOLI" class="min-dias-toffoli card-imagem-ministros cinza">Ministro Dias Toffoli</a></li>
+                              <li><a id="MIN. CELSO DE MELLO" class="min-celso-melo card-imagem-ministros cinza">Ministro Celso de Melo</a></li>
+                              <li><a id="MIN. MARCO AURÉLIO" class="min-marco-aurelio card-imagem-ministros cinza">Ministro Marco Aurélio</a></li>
+                              <li><a id="MIN. GILMAR MENDES" class="min-gilmar-mendes card-imagem-ministros cinza">Ministro Gilmar Mendes</a></li>
+                              <li><a id="MIN. RICARDO LEWANDOWSKI" class="min-ricardo-lewandowski card-imagem-ministros cinza">Ministro Ricardo Lewandowski</a></li>
+                              <li><a id="MIN. LUIZ FUX" class="min-luiz-fux card-imagem-ministros cinza">Ministro Luiz Fux</a></li>
+                              <li><a id="MIN. ROSA WEBER" class="min-rosa-weber card-imagem-ministros cinza">Ministra Rosa Weber</a></li>
+                              <li><a id="MIN. ROBERTO BARROSO" class="min-roberto-barroso card-imagem-ministros cinza">Ministro Roberto Barroso</a></li>
+                              <li><a id="MIN. EDSON FACHIN" class="min-edson-fachin card-imagem-ministros cinza">Ministro Edson Fachin</a></li>
+                              <li><a id="MIN. ALEXANDRE DE MORAES" class="min-alexandre-moraes card-imagem-ministros cinza">Ministro Alexandre de Moraes</a></li>
+                              <li><a id="MIN. PRESIDENTE" class="min-presidente card-imagem-ministros cinza">Ministro Presidente</a></li>
+                            </ul>
+  
+                          </div>
+                        </div>         
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <select class="box-opcoes-filtros form-control" style="width: 100%;" required>
+                            </select>
+                            <label class="titulo-opcao-filtro">Relatores Antigos</label>
+                          </div>
+                          <div class="col-lg-6">
+                            <select class="box-opcoes-filtros form-control" style="width: 100%;" required>
+                            </select>
+                            <label class="titulo-opcao-filtro">Situação da Preliminar da RG</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <select class="box-opcoes-filtros form-control" style="width: 100%;" required>
+                            </select>
+                            <label class="titulo-opcao-filtro">Pesquisas Prontas</label>
+                          </div>
+                          <div class="col-lg-6">
+                            <select class="box-opcoes-filtros form-control" style="width: 100%;" required>
+                            </select>                
+                            <label class="titulo-opcao-filtro">Situação Julgamento Mérito RG</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <select class="box-opcoes-filtros form-control" style="width: 100%;" required>
+                            </select>
+                            <label class="titulo-opcao-filtro">Número Tema</label>
+                          </div>
+                          <div class="col-lg-6">
+                            <select class="box-opcoes-filtros form-control" style="width: 100%;" required>
+                            </select>
+                            <label class="titulo-opcao-filtro">Situação Processo Paradigma</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <select class="box-opcoes-filtros form-control" style="width: 100%;" required>
+                            </select>
+                            <label class="titulo-opcao-filtro">Ramo do Direito</label>
+                          </div>
+                          <div class="col-lg-3">
+                            <input type="text" id="data_inicial" class="form-control data-rg box-opcoes-filtros" placeholder="De" onfocus="(this.type='date')" style="width:100%"/>
+                            <label class="titulo-opcao-filtro">Período</label>
+                          </div>
+                          <div class="col-lg-3">
+                            <input type="text" id="data_final" class="form-control data-rg box-opcoes-filtros" placeholder="Até" onfocus="(this.type='date')" style="width:100%"/>
+                          </div>	
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-4 esconder-filtros">
+                            <a href=".multi-collapse" data-toggle="collapse">
+                              Pesquisa avançada <i class="material-icons icones-pesquisa-avancada seta" title="Fechar Filtros">expand_less</i>
+                            </a>
+                          </div>
+                        </div>
+                          
+                      </div>
+                    </div>
+                    <a class="hidden-sm hidden-xs link-pesquisa-avancada-rg" href=".multi-collapse" data-toggle="collapse">
+                      Pesquisa avançada <i class="material-icons icones-pesquisa-avancada seta" title="Mais Filtros">expand_more</i>
+                    </a>  
+                  </div>
+                  <!-- Fim Pesquisa avançada -->
+  
+                  <div class="hidden-sm hidden-xs pesquisa-rg-links-inferiores">
+                    Na pesquisa com dois ou mais termos, é considerada a presença de todos os termos separados.
+                  </div>
+
+                  <div class="hidden-sm hidden-xs pesquisa-jurisprudencia-links-inferiores">
+                    <a href="http://www.stf.jus.br/portal/jurisprudencia/pesquisarVocabularioJuridico.asp">Vocabulário jurídico (Tesauro)</a>
+                    <span>ou</span>
+                    <a target="_blank" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaPesquisaGeral&pagina=ajudaPesquisaJurisprudencia&popup=S">Dicas de pesquisa</a>
+                  </div>
+  
+                  <div class="hidden-md hidden-lg hidden-xl pesquisa-jurisprudencia-links-inferiores">
+                    <a href="http://www.stf.jus.br/portal/jurisprudencia/pesquisarVocabularioJuridico.asp">Vocabulário</a>
+                    <span>|</span>
+                    <a target="_blank" href="http://www.stf.jus.br/portal/cms/verTexto.asp?servico=jurisprudenciaPesquisaGeral&pagina=ajudaPesquisaJurisprudencia&popup=S">Dicas</a>
+                  </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

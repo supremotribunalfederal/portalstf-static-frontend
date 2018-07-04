@@ -1,13 +1,13 @@
 <section id="pesquisa" class="pesquisa pesquisa-padrao row m-0 m-t-96 p-l-0 p-r-0">
   <div class="container center-block">
-    <div class="hidden-xs pull-right m-t-16 collapse multi-collapse">
+    <div class="hidden-xs pull-right m-t-16">
       <p class="__stf-branco m-0">
         <span class="m-r-16 label-peticione">Peticione e acompanhe processos:</span> <a href="//sistemas.stf.jus.br/peticionamento/" target="_blank" class="btn ">Peticionamento eletrônico</a>
       </p>
     </div>
     <div class="pesquisa-conteudo clearfix">
       <div class="pesquisa-titulo m-t-40 m-b-16">
-        <h3 class="m-0 collapse multi-collapse">O que você procura?</h3>
+        <h3 class="m-0">O que você procura?</h3>
       </div>
       <!--<h3 class="pesquisa-titulo-expandida m-b-24 campo-texto">O que você procura?</h3>-->
       <div class="pesquisa-campos">
@@ -23,7 +23,7 @@
         <div class="form-inline">
           <div class="campo-container">
               <form id="pesquisa-principal" action="javascript:void(0);">
-                <div class="seletores-campo collapse multi-collapse">
+                <div class="seletores-campo">
                   <input type="hidden" name="tipo-pesquisa" id="tipo-pesquisa">
                   <ul class="seletores hidden-xs hidden-sm" id="menuPesquisa">
                     <li>
@@ -138,113 +138,7 @@
                   <i class="glyphicon glyphicon-search hidden-md hidden-lg"></i>
                   <span class="hidden-xs hidden-sm">Pesquisar</span>
                 </button>
-
-                <!-- Pesquisa Avançada -->
-                <div class="hidden-sm hidden-xs pesquisa-rg-avancada">
-                  <div class="collapse in multi-collapse">
-                    <div class="container container-filtros-rg m-b-16 p-b-8">
-                      
-                      <!-- Filtros -->
-                      <div class="row m-l-8">
-                        <label class="__stf-branco"> Filtrar por Ministros: </label>
-                      </div>
-                      <div class="row filtro-por-ministros">
-                        <div class="p-0 m-r-16 m-l-16 p-b-10 m-t-0 text-center">
-
-                          <ul class="lista-de-ministros p-l-0">
-                            <li><a id="MIN. CÁRMEN LÚCIA" class="min-carmen-lucia card-imagem-ministros cinza">Ministra Cármen Lúcia</a></li>
-                            <li><a id="MIN. DIAS TOFFOLI" class="min-dias-toffoli card-imagem-ministros cinza">Ministro Dias Toffoli</a></li>
-                            <li><a id="MIN. CELSO DE MELLO" class="min-celso-melo card-imagem-ministros cinza">Ministro Celso de Melo</a></li>
-                            <li><a id="MIN. MARCO AURÉLIO" class="min-marco-aurelio card-imagem-ministros cinza">Ministro Marco Aurélio</a></li>
-                            <li><a id="MIN. GILMAR MENDES" class="min-gilmar-mendes card-imagem-ministros cinza">Ministro Gilmar Mendes</a></li>
-                            <li><a id="MIN. RICARDO LEWANDOWSKI" class="min-ricardo-lewandowski card-imagem-ministros cinza">Ministro Ricardo Lewandowski</a></li>
-                            <li><a id="MIN. LUIZ FUX" class="min-luiz-fux card-imagem-ministros cinza">Ministro Luiz Fux</a></li>
-                            <li><a id="MIN. ROSA WEBER" class="min-rosa-weber card-imagem-ministros cinza">Ministra Rosa Weber</a></li>
-                            <li><a id="MIN. ROBERTO BARROSO" class="min-roberto-barroso card-imagem-ministros cinza">Ministro Roberto Barroso</a></li>
-                            <li><a id="MIN. EDSON FACHIN" class="min-edson-fachin card-imagem-ministros cinza">Ministro Edson Fachin</a></li>
-                            <li><a id="MIN. ALEXANDRE DE MORAES" class="min-alexandre-moraes card-imagem-ministros cinza">Ministro Alexandre de Moraes</a></li>
-                          </ul>
-
-                        </div>
-                      </div>         
-                      <div class="row">
-                        <div class="col-lg-6">
-                          <select class="box-opcoes-filtros form-control" style="width: 100%;" required>
-                          </select>
-                          <label class="titulo-opcao-filtro">Filtros Pré-Configurados</label>
-                        </div>
-                        <div class="col-lg-6">
-                          <select class="box-opcoes-filtros form-control" style="width: 100%;" required>
-                          </select>
-                          <label class="titulo-opcao-filtro">Situação Reconhecimento RG</label>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-lg-6">
-                          <select class="box-opcoes-filtros form-control" style="width: 100%;" required>
-                          </select>
-                          <label class="titulo-opcao-filtro">Número do Tema</label>
-                        </div>
-                        <div class="col-lg-6">
-                          <select class="box-opcoes-filtros form-control" style="width: 100%;" required>
-                          </select>                
-                          <label class="titulo-opcao-filtro">Situação Julgamento Mérito RG</label>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-lg-6">
-                          <select class="box-opcoes-filtros form-control" style="width: 100%;" required>
-                          </select>
-                          <label class="titulo-opcao-filtro">Situação Processo Paradigma</label>
-                        </div>
-                        <div class="col-lg-6">
-                          <select class="box-opcoes-filtros form-control" style="width: 100%;" required>
-                          </select>
-                          <label class="titulo-opcao-filtro">Número Processo Paradigma</label>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-lg-6">
-                          <select class="box-opcoes-filtros form-control" style="width: 100%;" required>
-                          </select>
-                          <label class="titulo-opcao-filtro">Classe Processo Paradigma</label>
-                        </div>
-                        <div class="col-lg-6">
-                          <select class="box-opcoes-filtros form-control" style="width: 100%;" required>
-                          </select>
-                          <label class="titulo-opcao-filtro">Ramo do Direito</label>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-lg-6">
-                          <select class="box-opcoes-filtros form-control" style="width: 100%;" required>
-                          </select>
-                          <label class="titulo-opcao-filtro">Situação da Repercussão Geral</label>
-                        </div>
-                        <div class="col-lg-3">
-                          <input type="text" id="data_inicial" class="form-control data-rg box-opcoes-filtros" placeholder="De" onfocus="(this.type='date')" style="width:100%"/>
-                          <label class="titulo-opcao-filtro">Período</label>
-                        </div>
-                        <div class="col-lg-3">
-                          <input type="text" id="data_final" class="form-control data-rg box-opcoes-filtros" placeholder="Até" onfocus="(this.type='date')" style="width:100%"/>
-                        </div>	
-                      </div>
-                      <div class="row">
-                        <div class="col-lg-4 esconder-filtros">
-                          <a href=".multi-collapse" data-toggle="collapse">
-                            Pesquisa avançada <i class="material-icons icones-pesquisa-avancada seta" title="Fechar Filtros">expand_less</i>
-                          </a>
-                        </div>
-                      </div>
-                        
-                    </div>
-                  </div>
-                  <a class="hidden-sm hidden-xs link-pesquisa-avancada-rg" href=".multi-collapse" data-toggle="collapse">
-                    Pesquisa avançada <i class="material-icons icones-pesquisa-avancada seta" title="Mais Filtros">expand_more</i>
-                  </a>  
-                </div>
-                <!-- Fim Pesquisa avançada -->
-
+                
                 <div class="hidden-sm hidden-xs pesquisa-jurisprudencia-links-inferiores">
                   <a href="http://www.stf.jus.br/portal/jurisprudencia/pesquisarVocabularioJuridico.asp">Vocabulário jurídico (Tesauro)</a>
                   <span>ou</span>

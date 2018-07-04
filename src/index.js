@@ -16,6 +16,8 @@ $(document).ready(function(){
     if(pesquisaSelecionada != 4){
         $('.botoes-pesquisa-jurisprudencia span').hide();
         $('.pesquisa-jurisprudencia-links-inferiores').hide();
+    } else if(pesquisaSelecionada != 7) {
+        $('.pesquisa-rg-links-inferiores').hide();
     }
 
     $('[data-toggle="popover"]').popover({
@@ -55,6 +57,7 @@ $("#menuPesquisa li span").on("click", function() {
     $('.botoes-pesquisa-jurisprudencia span').hide();
     $('.pesquisa-jurisprudencia-links-inferiores').hide();
     $('.link-pesquisa-avancada-rg').hide();
+    $('.pesquisa-rg-links-inferiores').hide();
 
     //Ativa a aba clicada.
     $(this).addClass("ativo");
@@ -102,7 +105,7 @@ $("#menuPesquisa li span").on("click", function() {
             placeholder = "Digite um tema para pesquisar...";
             $("#abaSelecionada").val("7");
             $('.pesquisa-repercussao').show();
-            $('.link-pesquisa-avancada-rg').show();
+            $('.pesquisa-rg-links-inferiores').show();
             campoInputPesquisa = 'pesquisaRepercussao';
             break;
     }
@@ -260,7 +263,8 @@ function realizarPesquisa(id){
     } else if (assunto == "3") { // Processo
         pesquisarProcesso();
     } else if (assunto == "7") { // Repercussão Geral
-        window.open("//stf.jus.br/portal/jurisprudenciaRepercussao/listarProcesso.asp?PesquisaEm=tema&PesquisaEm=controversia&PesquisaEm=ambos&situacaoRG=TODAS&situacaoAtual=S&txtTituloTema=" + encodeURIComponent(termoPesquisa) + "&numeroTemaInicial=&numeroTemaFinal=&acao=pesquisarProcesso&dataInicialJulgPV=&dataFinalJulgPV=&classeProcesso=&numeroProcesso=&ministro=&ordenacao=asc&botao=", '_blank');
+        window.open("//localhost:3000/pesquisaavancada/?termo=" + termoPesquisa);
+        // window.open("//stf.jus.br/portal/jurisprudenciaRepercussao/listarProcesso.asp?PesquisaEm=tema&PesquisaEm=controversia&PesquisaEm=ambos&situacaoRG=TODAS&situacaoAtual=S&txtTituloTema=" + encodeURIComponent(termoPesquisa) + "&numeroTemaInicial=&numeroTemaFinal=&acao=pesquisarProcesso&dataInicialJulgPV=&dataFinalJulgPV=&classeProcesso=&numeroProcesso=&ministro=&ordenacao=asc&botao=", '_blank');
     }else if (assunto == "2") {
         location.href = window.location.origin + "/listagem/listarNoticias.asp?termoPesquisa=" + termoPesquisa;
     }
@@ -506,11 +510,14 @@ $(function() {
 	$('.link-pesquisa-avancada-rg').click(function(e){
 		e.preventDefault();
 		$(this).hide();
-	});
-	$('.esconder-filtros').click(function(e){
-		e.preventDefault();
-		$('.link-pesquisa-avancada-rg').show();
-	});
+    });
+    var parametros = ['#abaRepercussao', '.esconder-filtros'];
+    parametros.forEach(function(e){
+        $(e).click(function(e){
+            e.preventDefault();
+            $('.link-pesquisa-avancada-rg').show();
+        });
+    });
 })
 // selecionar background por página
 
