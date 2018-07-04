@@ -18,27 +18,15 @@
     <%- include src/includes/header.html %>
     <%- include src/includes/pesquisa.html %>
 
-    <section id="conteudo-principal" class="container-fluid m-0 p-0">
-		<div class="container center-block container-temas">
-			
+    <section id="conteudo" class="container-fluid m-0 p-0 m-r-8 m-l-8">
+		<div class="container center-block m-t-8 p-0 primeiros-cards">
 			<div class="cards-principais">
-				<div class="col-sm-3 card card-filtros-selecionados p-0 m-r-8">
-					<h5 class="card-titulo m-t-0" style="height: 47px;">
-						<span class="titulo-filtros-selecionados">Filtros Selecionados</span>
-						<div class="limpar-filtro m-t-8">
-							<a class="link-limpar-filtro" onclick="clickTodoTribunal()"><i class="material-icons ">clear</i></a>
-						</div>
-					</h5>        
-					<div class="painel-filtros-selecionados">
-						<ul class="p-l-8 p-r-8"></ul>
-					</div>
-				</div>
-				<div class="col-sm-8 card card-de-temas p-0">
+				
+				<div class="col-xs-10 col-sm-11 col-md-6 card card-de-temas p-0 m-r-48 m-l-16">
 					<h5 class="card-titulo m-t-0">Temas</h5>
 					<div class="col-lg-2 col-xs-4 m-b-8">
 						<div class="qlik-numero">
-							<!-- Código para importar objeto do Qlik Sense no projeto que está no SVN -->
-							<!-- <div class="embeddedArea qlik-autoload" data-qlik-objid="QUANTIDADE_REPERCUSSAO_GERAL_RECONHECIDA" data-qlik-app-name="REPERCUSSAOGERAL"></div> -->
+							<div class="embeddedArea qlik-autoload" data-qlik-objid="QUANTIDADE_REPERCUSSAO_GERAL_RECONHECIDA" data-qlik-app-name="REPERCUSSAOGERAL"></div>
 						</div>
 						<div class="rotulo-qlik-numero">
 							<a href="" id="situacaoRGReconhecida">Reconhecida</a>
@@ -46,8 +34,7 @@
 					</div>
 					<div class="col-lg-2 col-xs-4 m-b-8">
 						<div class="qlik-numero">
-							<!-- Código para importar objeto do Qlik Sense no projeto que está no SVN -->
-							<!-- <div class="embeddedArea qlik-autoload" data-qlik-objid="QUANTIDADE_REPERCUSSAO_GERAL_NEGADA" data-qlik-app-name="REPERCUSSAOGERAL"></div> -->
+							<div class="embeddedArea qlik-autoload" data-qlik-objid="QUANTIDADE_REPERCUSSAO_GERAL_NEGADA" data-qlik-app-name="REPERCUSSAOGERAL"></div>
 						</div>
 						<div class="rotulo-qlik-numero">
 							<a href=""  id="situacaoRGNegada">Negada</a>
@@ -55,26 +42,23 @@
 					</div>
 					<div class="col-lg-2 col-xs-4 m-b-8">
 						<div class="qlik-numero">
-							<!-- Código para importar objeto do Qlik Sense no projeto que está no SVN -->
-							<!-- <div class="embeddedArea qlik-autoload" data-qlik-objid="QUANTIDADE_REPERCUSSAO_GERAL_EM_ANALISE" data-qlik-app-name="REPERCUSSAOGERAL"></div> -->
+							<div class="embeddedArea qlik-autoload" data-qlik-objid="QUANTIDADE_REPERCUSSAO_GERAL_EM_ANALISE" data-qlik-app-name="REPERCUSSAOGERAL"></div>
 						</div>
 						<div class="rotulo-qlik-numero">
-							<a href="" id="situacaoRGEmAnalise">Em análise</a>
+							<a href="" id="situacaoRGEmAnalise">Análise</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-xs-4 m-b-8">
 						<div class="qlik-numero">
-							<!-- Código para importar objeto do Qlik Sense no projeto que está no SVN -->
-							<!-- <div class="embeddedArea qlik-autoload" data-qlik-objid="QUANTIDADE_REPERCUSSAO_GERAL_TOTAL" data-qlik-app-name="REPERCUSSAOGERAL"></div> -->
+							<div class="embeddedArea qlik-autoload" data-qlik-objid="QUANTIDADE_REPERCUSSAO_GERAL_TOTAL" data-qlik-app-name="REPERCUSSAOGERAL"></div>
 						</div>
 						<div class="rotulo-qlik-numero m-b-8  p-t-4">
-							<a href="#temas-repercussao"> Total</a>
+							<a href="#temas-repercussao" id="totalRG"> Total</a>
 						</div>
 					</div>
 					<div class="col-lg-2 col-xs-4 m-b-8 __borda-l-cinza">
 						<div class="qlik-numero">
-							<!-- Código para importar objeto do Qlik Sense no projeto que está no SVN -->
-							<!-- <div class="embeddedArea qlik-autoload" data-qlik-objid="QUANTIDADE_TEMAS_MERITO_JULGADO" data-qlik-app-name="REPERCUSSAOGERAL"></div> -->
+							<div class="embeddedArea qlik-autoload" data-qlik-objid="QUANTIDADE_TEMAS_MERITO_JULGADO" data-qlik-app-name="REPERCUSSAOGERAL"></div>
 						</div>
 						<div class="rotulo-qlik-numero">
 							<a href="" id="situacaoMeritoJulgado">Julgado</a>
@@ -82,16 +66,27 @@
 					</div>
 					<div class="col-lg-2 col-xs-4 m-b-8">
 						<div class="qlik-numero">
-							<!-- Código para importar objeto do Qlik Sense no projeto que está no SVN -->
-							<!-- <div class="embeddedArea qlik-autoload" data-qlik-objid="QUANTIDADE_TEMAS_MERITO_NAO_JULGADO" data-qlik-app-name="REPERCUSSAOGERAL"></div> -->
+							<div class="embeddedArea qlik-autoload" data-qlik-objid="QUANTIDADE_TEMAS_MERITO_NAO_JULGADO" data-qlik-app-name="REPERCUSSAOGERAL"></div>
 						</div>
 						<div class="rotulo-qlik-numero">
 							<a href="" id="situacaoMeritoPendente">Pendente</a>
 						</div>
 					</div>
 				</div>
-			</div>
 
+				<div class="hidden-sm hidden-xs col-sm-5 card card-filtros-selecionados p-0">
+					<h5 class="card-titulo m-t-0" style="height: 47px;">
+						<span class="titulo-filtros-selecionados">Filtros Selecionados</span>
+					</h5>
+					<div class="card-conteudo p-8" id="painel-filtros-selecionados">
+					</div>
+					<div class="m-t-8 text-center">
+						<a class="link-limpar-filtro" onclick="clickTodoTribunal()">
+							<i class="material-icons delete">delete</i> Limpar Filtro<!--<i class="material-icons">clear</i> -->
+						</a>
+					</div>
+				</div>
+			</div>
 		</div>
 		
 		<div class="container center-block p-0 container-tabela-e-graficos">
@@ -103,34 +98,33 @@
 							<li role="presentation"><a data-toggle="tab" href="#graficos-de-temas">Gráficos</a></li>
 						</ul>
 					</nav>
-
-					<%- include src/includes/pesquisa-avancada/modais.html %>
-					<div class="tab-content col-md-12">
+					<div class="tab-content col-md-12 p-0">
 						<div id="tabela-de-temas" class="tab-pane fade in active">
-							<!-- Código referente a pesquisa no modo mobile -->
 							<div class="hidden-lg pesquisa-temas-mobile text-center p-t-8 p-b-8 m-t-16 m-b-16">
-								<input type="text" name="pesquisa-geral" placeholder="Digite a palavra chave ...">
-								<button id="btnPesquisar" form="pesquisa-modo-mobile" class="btn btn-default pull-right" data-toggle="modal" data-target=".modal-pesquisa-mobile">
-									<i class="material-icons">search</i>
-								</button>
+								<form id="pesquisa-modo-mobile">
+									<div class="qs-search-container row m-l-16 m-r-16">
+										<input class="qs-search col-xs-11" type="text" placeholder="Digite a palavra chave ...">
+										<button id="btnPesquisar" form="pesquisa-modo-mobile" class="btn-pesquisa-mobile btn btn-default pull-right col-xs-1" data-toggle="modal" data-target="#modal-pesquisa-mobile">
+											<i class="material-icons">search</i>
+										</button>
+									</div>
+								</form>
 							</div>
-
 							<div class="hidden-xs hidden-sm tabela-temas">
-								<!-- Código para importar objeto do Qlik Sense no projeto que está no SVN -->
-								<!-- <div class="embeddedArea qlik-autoload" data-qlik-objid="TABELA_PESQUISA_AVANCADA_TEMAS" data-qlik-app-name="REPERCUSSAOGERAL"></div> -->
+								<div class="qlik-tabela">
+									<div class="embeddedArea qlik-autoload" data-qlik-objid="TABELA_PESQUISA_AVANCADA_TEMAS" data-qlik-app-name="REPERCUSSAOGERAL"></div>
+								</div>
 							</div>
 						</div>
-						
-						<div class="tab-pane fade p-t-16" id="graficos-de-temas">
-							<!-- Código para importar objeto do Qlik Sense no projeto que está no SVN -->
-							<!-- [escolher gráficos] -->
+						<div id="graficos-de-temas" class="tab-pane fade p-t-16">
+							<div class="">
+								<iframe src='http://transparencia.stf.jus.br/single/?appid=b88460cb-8745-4fbc-973b-ddfee50c02aa&sheet=6dc3950d-5a97-4a3a-8331-11ecd77be865&opt=nointeraction&select=clearall' style='border:none;height: 100%; width: 100%'></iframe>
+							</div>
 						</div>
 					</div>
-					
 				</div>  
 			</div> 
 		</div>
-		
 	</section>
 	
     <%- include src/includes/mapa-do-site.html %>
