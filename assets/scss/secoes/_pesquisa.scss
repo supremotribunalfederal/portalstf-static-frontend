@@ -366,3 +366,30 @@ CONFIGURAÇÃO DO FILTRO DE PESQUISA AVANCADA
 .esconder-filtros a:hover,.limpar-filtros a:hover{font-weight: 600;text-decoration: none;}
 
 .icones-pesquisa-avancada {top: 7px; position: relative;}
+
+.pesquisa-rg-links-inferiores {color:#fff;}
+
+.qs-search-results {
+  position: absolute;
+  top: 66px;
+  left: 135.5px;
+  background: #FFF;
+  display: grid;
+  width: 49.8rem;
+  margin-left: 0px;
+  max-height: 36em;
+  overflow-y: scroll;
+}
+.qs-search-results-fechado{
+  top:208px;
+}
+.qs-search-results ul li{
+list-style: none;
+}
+.qs-search-item-identifier {
+  font-size: 14px;
+}
+.hr-pesquisa-livre{
+  border-top: 1px solid #c5bdbd;
+  margin-top: -5px
+}
