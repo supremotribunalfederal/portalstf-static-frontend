@@ -7,7 +7,6 @@
   <title>Supremo Tribunal Federal</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="icon" type="imagem/png" href="<%= require('assets/img/favicon.ico') %>" />
-
 </head>
 <body>
   <div id="main" class="container-fluid p-0">
@@ -77,39 +76,5 @@
     <%- include src/includes/footer.html %>
 
   </div>
-  <script>
-  var config = {
-              host: 'transparencia.stf.jus.br',
-              prefix: '/',
-              port: 443,
-              isSecure: true
-          };
-          require.config({
-              baseUrl: (config.isSecure ? "https://" : "http://") + config.host + (config.port ? ":" + config.port : "") + config.prefix + "resources"
-          });
-          var qlikApps = [];
-
-          require(["js/qlik"], function (qlik) {
-              qlik.setOnError(function (error) {
-                  alert(error.message);
-              });
-              function attach(elem) {
-                  var appid = elem.dataset.qlikAppid;
-                  var objid = elem.dataset.qlikObjid;
-                  var app = qlikApps[appid];
-                  if (!app) {
-                      app = qlik.openApp(appid, config);
-                      qlikApps[appid] = app;
-                  }
-                  app.getObject(elem, objid);
-              }
-              var elems = document.getElementsByClassName('embeddedArea');
-              var ix = 0;
-              for (; ix < elems.length; ++ix) {
-                  attach(elems[ix]);
-              }
-          });
-
-  </script>
 </body>
 </html>

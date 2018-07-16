@@ -316,7 +316,7 @@ CONFIGURAÇÃO DO FILTRO DE PESQUISA AVANCADA
     
     .min-carmen-lucia {background-image: url('../img/ministros/ministra_carmen_lucia.jpg');}
     .min-dias-toffoli {background-image: url('../img/ministros/ministro_dias_toffoli.jpg');}
-    .min-celso-melo {background-image: url('../img/ministros/ministro_celo_melo.jpg');}
+    .min-celso-melo {background-image: url('../img/ministros/ministro_celso_mello.jpg');}
     .min-marco-aurelio {background-image: url('../img/ministros/ministro_marco_aurelio.jpg');}
     .min-gilmar-mendes {background-image: url('../img/ministros/ministro_mendes.jpg');}
     .min-ricardo-lewandowski {background-image: url('../img/ministros/ministro_lewandowski.jpg');}
@@ -347,49 +347,28 @@ CONFIGURAÇÃO DO FILTRO DE PESQUISA AVANCADA
 * ANIMAÇÃO DOS INPUTS
 */
 .box-opcoes-filtros {border: none;position: relative;top: 15px;margin-top: 17px;}
-
 .box-opcoes-filtros:focus {outline: none;}
-
 .box-opcoes-filtros:focus ~ .titulo-opcao-filtro,.box-opcoes-filtros:valid ~ .titulo-opcao-filtro {top: 7px;margin-top: 5px;font-size: 12px;color: $stfBranco;}
-
 .titulo-opcao-filtro {pointer-events: none;transition:0.2s ease all;-moz-transition:0.2s ease all;-webkit-transition:0.2s ease all;position: absolute;top: 39px;left: 20px;font-size: 16px;font-weight: 600;color: #979696;}
 
 /**
 * LINKS DA PESQUISA AVANÇADA
 */
 .link-pesquisa-avancada-rg{color:black; right: 10px;font-size: 14px;float: right; position: relative; bottom: 43px;}
-
 .esconder-filtros a,.limpar-filtros a{color: $stfBranco;font-size: 16px;}
-
 .esconder-filtros {float: right;a{float: right;}}
-
 .esconder-filtros a:hover,.limpar-filtros a:hover{font-weight: 600;text-decoration: none;}
-
 .icones-pesquisa-avancada {top: 7px; position: relative;}
+.pesquisa-rg-links-inferiores {
+  a{text-decoration: underline; color: white;}
+  color:#fff;
+}
 
-.pesquisa-rg-links-inferiores {color:#fff;}
-
-.qs-search-results {
-  position: absolute;
-  top: 66px;
-  left: 135.5px;
-  background: #FFF;
-  display: grid;
-  width: 49.8rem;
-  margin-left: 0px;
-  max-height: 36em;
-  overflow-y: scroll;
-}
-.qs-search-results-fechado{
-  top:208px;
-}
-.qs-search-results ul li{
-list-style: none;
-}
-.qs-search-item-identifier {
-  font-size: 14px;
-}
-.hr-pesquisa-livre{
-  border-top: 1px solid #c5bdbd;
-  margin-top: -5px
-}
+/**
+* PESQUISA LIVRE
+*/
+.qs-search-results {position: absolute;top: 66px;left: 135.5px;background: #FFF;display: grid;width: 49.8rem;margin-left: 0px;max-height: 36em;overflow-y: scroll;}
+.qs-search-results-fechado{top:208px;}
+.qs-search-results ul li{list-style: none;}
+.qs-search-item-identifier {font-size: 14px;}
+.hr-pesquisa-livre{border-top: 1px solid #c5bdbd;margin-top: -5px;}

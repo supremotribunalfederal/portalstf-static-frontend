@@ -1,8 +1,9 @@
-import 'jquery.maskedinput';
+import 'jquery.maskedinput/src/jquery.maskedinput.js';
 import $ from 'jquery';
 import './index-ga';
 import moment from 'moment';
-import validation from 'jquery-validation';
+import validation from 'jquery-validation/dist/jquery.validate.js';
+import 'bootstrap/dist/css/bootstrap.css';
 
 $('.dropdown-toggle').hover(function() {
     $(this).find('.dropdown-menu').stop(true, true).delay(0).fadeIn(100);
@@ -263,8 +264,7 @@ function realizarPesquisa(id){
     } else if (assunto == "3") { // Processo
         pesquisarProcesso();
     } else if (assunto == "7") { // Repercussão Geral
-        window.open("//localhost:3000/pesquisaavancada/?termo=" + termoPesquisa);
-        // window.open("//stf.jus.br/portal/jurisprudenciaRepercussao/listarProcesso.asp?PesquisaEm=tema&PesquisaEm=controversia&PesquisaEm=ambos&situacaoRG=TODAS&situacaoAtual=S&txtTituloTema=" + encodeURIComponent(termoPesquisa) + "&numeroTemaInicial=&numeroTemaFinal=&acao=pesquisarProcesso&dataInicialJulgPV=&dataFinalJulgPV=&classeProcesso=&numeroProcesso=&ministro=&ordenacao=asc&botao=", '_blank');
+        window.open("//stf.jus.br/portal/jurisprudenciaRepercussao/listarProcesso.asp?PesquisaEm=tema&PesquisaEm=controversia&PesquisaEm=ambos&situacaoRG=TODAS&situacaoAtual=S&txtTituloTema=" + encodeURIComponent(termoPesquisa) + "&numeroTemaInicial=&numeroTemaFinal=&acao=pesquisarProcesso&dataInicialJulgPV=&dataFinalJulgPV=&classeProcesso=&numeroProcesso=&ministro=&ordenacao=asc&botao=", '_blank');
     }else if (assunto == "2") {
         location.href = window.location.origin + "/listagem/listarNoticias.asp?termoPesquisa=" + termoPesquisa;
     }
@@ -525,16 +525,26 @@ $(function() {
     var url = window.location.pathname;
     if (url.match(/^\/sobmedidaestudantes\/?.*/)) {
         $(".pesquisa").css({"background":"linear-gradient(135deg, rgba(0, 73, 119, 1), rgba(0, 73, 119, 0.6), rgba(0, 73, 119, 1))", 
-        "background-image":"url(/assets/img/interface/bg-sob-medida.jpg)", 
+        "background-image":"url(/assets/img/interface/bg-sob-medida-estudantes.jpg)", 
         "background-position":"center -210px", 
         "background-repeat":"no-repeat",
         "background-attachment":"fixed", 
         "-webkit-background-size":"cover"});
     } else if (url.match(/(^\/sobmedidaadvogados\/?.*|^\/sobmedidaorgaos\/?.*)/)) {
-        $('.pesquisa').css('background-image', 'url(/assets/img/bg-sob-medida.jpg)');
+        $(".pesquisa").css({"background":"linear-gradient(135deg, rgba(0, 73, 119, 1), rgba(0, 73, 119, 0.6), rgba(0, 73, 119, 1))", 
+        "background-image":"url(/assets/img/interface/bg-sob-medida.jpg)", 
+        "background-position":"center -210px", 
+        "background-repeat":"no-repeat",
+        "background-attachment":"fixed", 
+        "-webkit-background-size":"cover"});
     } else if (url.match(/^\/sobmedidacidadaos\/?.*/)) {
-        $('.pesquisa').css('background-image', 'url(/assets/img/interface/bg-cidadaos.jpg)');
-    } else  {
+        $(".pesquisa").css({"background":"linear-gradient(135deg, rgba(0, 73, 119, 1), rgba(0, 73, 119, 0.6), rgba(0, 73, 119, 1))", 
+        "background-image":"url(/assets/img/interface/bg-sob-medida-cidadaos.jpg)", 
+        "background-position":"center -210px", 
+        "background-repeat":"no-repeat",
+        "background-attachment":"fixed", 
+        "-webkit-background-size":"cover"});
+    //} else  {
        // $('.pesquisa').css('background-image', 'url(/assets/img/top-bg.jpg)');
     }
 })();

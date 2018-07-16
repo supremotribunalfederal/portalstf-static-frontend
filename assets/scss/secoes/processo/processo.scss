@@ -1,5 +1,11 @@
 @import "../../variaveis/cores";
 
+@media only print {
+  .processo-impressao {
+    overflow: visible;
+  }
+}
+
 .btn-primary-spacing {
 margin-right: 5px;
 margin-bottom: 5px !important;
@@ -7,36 +13,80 @@ padding: 0 16px;
 font-size: 0.8rem;
 }
 
-
+.btn-escondido{
+  display: none;
+}
 
 .processo-titulo {
   font-size: 1.1rem;
   font-weight: bold;
   span {
-    font-size: 0.6rem;
+     font-size: 0.6rem;
   }
-}
+ }
 
 .processo-rotulo {
   font-size: 0.6rem;
+  float: left;
 }
 
+.icone-expandir > a{
+  font-size: 0.7rem;
+  float: right;
+  margin-right: 20px;
+  margin-top: 5px;
+  cursor: pointer;
+  color: white;
+
+  &:hover{
+    font-weight: 600;
+    text-decoration-line: none;
+  }
+}
+
+.titulo-processo{
+  background-color:#41b5ec !important;
+  color: #fff;
+  padding: 5px;
+  text-transform: uppercase;
+}
 .card-processo {
-  min-height: 175px;
-  background-color: $stfAzulCinza;
+  min-height: 135px;
+  padding-bottom: 10px;
+  background-color:#41b5ec;
+  color: white;
   .processo-dados {
     font-size: 0.8rem;
   }
   .processo-partes {
     font-size: 0.8rem;
-    // font-weight: bold;
   }
   .processo-classe {
     font-size: 0.8rem;
-    font-weight: bold;
+    font-weight: 700;
   }
   .processo-link {
     font-size: 0.7rem;
+  }
+  a#todas-partes{
+    color: white;
+    font-weight: 700;
+    font-size: 1.2em;
+  }
+}
+.linha-2 {
+  min-height: 36px;
+  padding-bottom: 10px;
+  background-color:#41b5ec;
+  color: white;
+  font-weight: bold;
+  font-size: 0.85rem;
+  margin: auto;
+  a {
+    color: white;
+  }
+  .processo-link {
+    padding-left: 45px;
   }
 }
 
@@ -52,16 +102,27 @@ font-size: 0.8rem;
 }
 
 .processo-informacoes-cabecalho {
-  background-color: $stfCinzaClaro;
-  margin-left: -20px;
-  margin-right: -20px;
+    background-color: #efefef;
+    margin-left: -20px;
+    margin-right: -20px;
 }
 
 .processo-informacoes {
+  margin: 24px 0 12px 8px;
+  padding-top: 16px;
+  border-top: solid 2px $stfCinzaEscuro;
+  font-size: 1.1rem;
+  font-weight: bold;
+
   .processo-detalhes-bold {
     margin-bottom: 6px;
     margin-left: -20px;
   }
+}
+
+.cabecalho {
+  margin-left: 20px;
+  margin-right: -12px;
 }
 
 .processo-quadro {
@@ -143,18 +204,30 @@ ul .nav-tabs {
   transform: scale(1);
 }
 
-.tab-nav > li > a::after {
+//.tab-nav > li > a::after {
   // background: $stfAzulEscuro none repeat scroll 0% 0%;
   // color: $stfBranco;
   // 21527d
-}
+//}
 
 .tab-pane {
   padding: 0;
 }
 
 .tab-content {
-  padding: 0;
+  height: 600px;
+  overflow: auto;
+  padding: 10px 20px;
+}
+
+// informações
+
+#informacoes {
+  .processo-informacoes {
+    margin-top: -8px;
+    margin-left: -15px;
+    border-top: none;
+  }
 }
 
 // andamentos
@@ -168,7 +241,7 @@ position: relative;
 background: #fff;
 border: 1px solid #ddd;
 border-radius: 3px;
-padding: 5px 10px;
+padding: 5px 5px 0px 5px;
 position: relative;
 }
 .andamento-item .andamento-inner:before {
@@ -204,7 +277,7 @@ bottom: -30px;
 box-shadow: 0 0 3px rgba(0,0,0,0.2);
 content: "";
 height: 100%;
-left: -30px;
+left: -34px;
 position: absolute;
 width: 3px;
 }
@@ -215,17 +288,61 @@ border-radius: 50%;
 box-shadow: 0 0 5px rgba(0,0,0,0.1);
 content: "";
 height: 15px;
-left: -36px;
+left: -40px;
 position: absolute;
 top: 10px;
 width: 15px;
 }
+
+// se tiver orgão julgador 
+.julgador:after{
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 45px;
+    left: -56px;    
+    top: -6px;
+    width: 45px;
+}
+.presidente:after{
+    background-image: url('../../img/ministros/presidente.jpg');
+}
+.marco-aurelio:after{
+    background-image: url('../../img/ministros/ministro_marco_aurelio.jpg');
+}
+.dias-toffoli:after{
+    background-image: url('../../img/ministros/ministro_dias_toffoli.jpg');
+}
+.fachin:after{
+    background-image: url('../../img/ministros/ministro_fachin.jpg');
+}
+.lewandowski:after{
+    background-image: url('../../img/ministros/ministro_lewandowski.jpg');
+}
+.luiz-fux:after{
+    background-image: url('../../img/ministros/ministro_luiz_fux.jpg');
+}
+.alexandre-moraes:after{
+    background-image: url('../../img/ministros/ministro_moraes.jpg');
+}
+.celso-mello:after{
+    background-image: url('../../img/ministros/ministro_celso_mello.jpg');
+}
+.rosa-weber:after{
+    background-image: url('../../img/ministros/ministra_rosa_weber.jpg');
+}
+.gilmar-mendes:after{
+    background-image: url('../../img/ministros/ministro_mendes.jpg');
+}
+.roberto-barroso:after{
+    background-image: url('../../img/ministros/ministro_roberto_barroso.jpg');
+}
+
 .clearfix:before, .clearfix:after {
 content: " ";
 display: table;
 }
 .andamento-item .message-head {
-padding-bottom: 8px;
+padding-bottom: 2px;
 }
 .andamento-item .message-head .andamento-detalhe {
 overflow: hidden;
@@ -268,10 +385,7 @@ color: #333;
 font-weight: bold;
 text-align: right;
 }
-.andamento-julgador {
-  font-size: 0.7rem;
-  font-weight: bold;
-}
+
 .post-meta > div {
 color: #777;
 font-size: 12px;
