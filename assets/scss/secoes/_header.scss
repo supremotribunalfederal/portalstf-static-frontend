@@ -73,3 +73,34 @@
     color: $stfAzulCinza;
   }
 }
+
+@media (max-width:1440px) and (min-width:1025px){
+  .img-header-stf{
+    width: 9rem;
+  }
+  .opcoes-menu-cabecalho li{
+    font-size: 0.75rem;
+  }
+} 
+@media (max-width:1024px) and (min-width:769px){
+  .img-header-stf{
+    width: 8rem;
+  }
+  .opcoes-menu-cabecalho li{
+    font-size: 0.65rem;
+  }
+}
+@media (max-width:768px) and (min-width:500px){
+  .img-header-stf, 
+  .opcoes-menu-cabecalho li{
+    zoom: 68%;
+  }
+}
+@media (max-width:1024px){
+  .container-filtros-rg{
+    width: 82%;
+  }
+  .filtro-por-ministros{
+    width: 106%;
+  }
+}
