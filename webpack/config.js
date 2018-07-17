@@ -32,7 +32,9 @@ const secoes = [
   'listarpartes',
   'processo',
   'estatistica',
-  'documento'
+  'documento',
+  'detalheorcamento',
+  'restoapagar'
 ];
 
 const secoesChunks = secoes.reduce((prev, cur) => {
