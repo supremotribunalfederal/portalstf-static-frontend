@@ -34,7 +34,11 @@ const secoes = [
   'estatistica',
   'documento',
   'detalheorcamento',
-  'restoapagar'
+  'restoapagar',
+  'descentralizacaocreditos',
+  'despesasdiarias',
+  'auxiliosindenizacoes',
+  'recursotesouro'
 ];
 
 const secoesChunks = secoes.reduce((prev, cur) => {
